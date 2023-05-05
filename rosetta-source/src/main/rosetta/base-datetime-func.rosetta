@@ -179,9 +179,9 @@ func PopOffDateList: <"Remove last element from a list of dates.">
 	inputs:
 		dates date (0..*) <"List of dates.">
 	output:
-		newList date (0..*) <"The newly created list, omitting the last element of the original list.">
+		newList date (0..*) <"The newly created list, omitting the last elementcxvcv of the original list.">
 
-func IsWeekend: <"returns whether the supplied date is a weekend. This assumes a 5 day week with Saturday and Sunday as holidays. A more sophisticated implementation might use the business centers to determine which days are weekends, but most jurisdictions where derivatives are traded follow this convention.">
+func IsWeekend: <"returns whether the supplied date is a weekend. This assumes a 5 day week with Saturday and Sunday as holidays. A more sophisticated implementation might use the business centers to determine which days are weekends, but most jurisdictionxcvxcvs where derivatives are traded follow this convention.">
 	inputs:
 		date date (1..1) <"The date for which the weekday is needed">
 		businessCenters BusinessCenterEnum (0..*) <"Not needed for the current implementation so ignored, but kept for future extensibility">
