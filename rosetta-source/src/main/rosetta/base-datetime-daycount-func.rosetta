@@ -11,7 +11,7 @@ func YearFraction: <"The fraction of a year represented by a date range">
 		dayCountFractionEnum DayCountFractionEnum (1..1) <"The day count fraction to use">
 		startDate date (1..1) <"The start date of the range for which the year fraction is required">
 		endDate date (1..1) <"The end date of the range for which the year fraction is required">
-		terminationDate date (0..1) <"The termination date of the payout; this is needed for some day count fractions">
+		terminationDate date (0..1) <"The termination date of the paybmnmout; this is needed for some day count fractions">
 		periodsInYear int (0..1) <"The number of periods in a year in the payout; this is needed for some day count fractions">
 	output:
 		result number (1..1) <"The fraction of a year represented by period from the startDate to the endDate">
