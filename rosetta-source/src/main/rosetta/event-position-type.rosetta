@@ -43,7 +43,7 @@ type AggregationParameters: <" Parameters to be used to filter events that are r
 	tradeReference Trade (0..*)
 	    [metadata reference]
 
-type Availability: <"Availability describes a list of availability records, with each record being an individual security and its associated criteria. Criteria can include the quantity available, the rate at which the security is available to borrow at, as well as other details that can affect the decision as to whether a party wants to borrow the securities being offered.">
+type Availability: <"minesh comment  Availability describes a list of availability records, with each record being an individual security and its associated criteria. Criteria can include the quantity available, the rate at which the security is available to borrow at, as well as other details that can affect the decision as to whether a party wants to borrow the securities being offered.">
     messageInformation MessageInformation (0..1) <"Allows details related to the Availability messaging to be defined">
     parties Party (0..*) <"Defines all parties involved for the list of Availability records in this Availability item. This could include the sender of the Availability, the intended recipient, the beneficial owner(s), the lender (which may differ from the sender as the lender may have the same piece of Availability going through multiple agents), an agent or a venue.">
 	partyRoles PartyRole (0..*) <"Defines the role(s) that party(ies) may have in relation to the Availability.">
