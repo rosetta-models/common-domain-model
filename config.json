@@ -5,6 +5,12 @@
   "documentPath": ".",
   "permissions": [],
   "ownerPermission": "cdm_owner",
+  "fixedVersions": [
+    {
+      "id": "v4",
+      "version": "5.0.0"
+    }
+  ],
   "versionLimits": [
     {
       "lowestVersion": "3.5.0",
