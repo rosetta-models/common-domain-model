@@ -8,7 +8,7 @@
   "versionLimits": [
     {
       "lowestVersion": "3.5.0",
-      "upmostVersion": "4.0.0"
+      "upmostVersion": "3.999.999"
     },
     {
       "lowestVersion": "4.0.0",
