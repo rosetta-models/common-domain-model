@@ -1,67 +1,30 @@
 {
-  "name": "COMMON-DOMAIN-MODEL",
-  "description": "Common Domain Model",
-  "modelPath": "rosetta-source/src/main",
-  "documentPath": ".",
+  "id": "cdm",
+  "name": "cdm",
+  "description": "International Swaps and Derivatives Association - CDM",
+  "modelPath": "src/main",
+  "documentPath": "src/main/resources/documents",
   "permissions": [],
-  "ownerPermission": "cdm_owner",
-  "fixedVersions": [
-    {
-      "id": "v4",
-      "version": "5.0.1"
-    }
-  ],
-  "versionLimits": [
-    {
-      "lowestVersion": "3.5.0",
-      "upmostVersion": "4.0.0"
-    },
-    {
-      "lowestVersion": "4.0.0-dev.999",
-      "upmostVersion": "4.999.999"
-    },
-    {
-      "lowestVersion": "4.1.0",
-      "upmostVersion": "5.0.0"
-    },
-    {
-      "lowestVersion": "5.0.0-dev.44",
-      "upmostVersion": "5.999.999"
-    }
-  ],
-  "links": [
-    {
-      "name": "CDM Portal",
-      "url": "https://portal.cdm.rosetta-technology.io/"
-    },
-    {
-      "name": "Model Documentation",
-      "url": "https://cdm.docs.rosetta-technology.io/"
-    }
-  ],
+  "lowestVersion": "2.55.5",
+  "privacyStatementLink": "https://www.isda.org/general/isda-member-and-non-member-representative-privacy-notice/",
   "documents": [
     {
-      "documentId": "CDM-LICENCE",
-      "modelId": "COMMON-DOMAIN-MODEL",
-      "displayName": "License",
-      "version": "1.0.0",
-      "filename": "LICENSE.md"
+      "documentId": "CDM-1",
+      "modelId": "CDM",
+      "displayName": "License Terms",
+      "version": "2.0.0",
+      "filename": "license-terms.md"
     }
   ],
   "dependencyArtifact": {
     "groupId": "com.regnosys",
-    "artifactId": "core-cdm-dependencies"
+    "artifactId": "core-cdm-dependencies",
+    "version": "2.55.5"
   },
   "modelArtifacts": [
-    {
-      "groupId": "org.finos.cdm",
-      "artifactId": "cdm-java"
-    },
     {
       "groupId": "com.isda",
       "artifactId": "cdm"
     }
-  ],
-  "primaryColor": "#32007C",
-  "shortname": "CDM"
+  ]
 }
