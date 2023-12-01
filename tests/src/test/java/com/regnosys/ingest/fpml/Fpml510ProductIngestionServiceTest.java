@@ -1,9 +1,12 @@
 package com.regnosys.ingest.fpml;
 
 import cdm.event.common.TradeState;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.regnosys.ingest.test.framework.ingestor.IngestionReport;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.ingest.test.framework.ingestor.testing.Expectation;
 import org.finos.cdm.CdmRuntimeModule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
@@ -33,6 +36,11 @@ public class Fpml510ProductIngestionServiceTest extends IngestionTest<TradeState
 	@Override
 	protected IngestionService ingestionService() {
 		return ingestionService;
+	}
+
+	@Override
+	protected void assertExpectations(Expectation expectation, IngestionReport<TradeState> ingestionReport) throws JsonProcessingException {
+
 	}
 
 	@SuppressWarnings("unused")//used by the junit parameterized test

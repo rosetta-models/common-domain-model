@@ -1,0 +1,3 @@
+[
+{"fileName":"cdm-sample-files/fpml-5-10/products/bond-forwards/ir-fwd-debt-ex01.xml","excludedPaths":0,"externalPaths":113,"outstandingMappings":73,"validationFailures":9,"qualificationExpectation":{"success":false,"qualifyResults":[],"qualifiableObjectCount":1}},
+{"fileName":"cdm-sample-files/fpml-5-10/products/bond-forwards/ir-fwd-debt-ex02.xml","excludedPaths":0,"externalPaths":115,"outstandingMappings":75,"validationFailures":9,"qualificationExpectation":{"success":false,"qualifyResults":[],"qualifiableObjectCount":1}}]

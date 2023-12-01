@@ -2170,7 +2170,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             // Swap Stream
             [value "notionalStepSchedule" path "notionalSchedule" meta "initialValue"]
             [meta "initialValue"]
-            // FRA and FX Variance Swap
+            // FRA and FX Variance Swap and generic product
             [value "notional" meta "amount"]
             // Equity Swap - Only mapping the notional amount in the payout, not the no. shares
             [value "notionalAmount" meta "amount"]
@@ -2311,7 +2311,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			// For Swap Stream:
 			[value "calculation" path "calculationPeriodAmount"]
 			[value "fxLinkedNotionalSchedule" path "calculationPeriodAmount->calculation"]
-            // For FRAs:
+            // For FRAs and generic product:
 			[hint "notional"]
 			// For the interest leg of Equity Swap:
 			[value "notional"]
@@ -2372,6 +2372,12 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
         - priceQuantity
         + priceQuantity
             [value "ignore"]
+        + underlier
+            [value "underlyer"] // set when "genericProduct->underlyer->bond" exists
+            [hint "exchangedCurrency1"]
+            [hint "exchangedCurrency2"]
+            [hint "exchangeRate"]
+            [hint "tenorPeriod"]
         + delivery
             [value "ignore"]
 
@@ -2505,6 +2511,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[hint "buyerPartyReference"]
 			[hint "sellerPartyReference"]
 			[value "generalTerms"]
+			[value "underlyer"]
 		+ priceQuantity
 			// For Swap Stream and FRA: moved to InterestRatePayout
 			[value "knownAmountSchedule" path "calculationPeriodAmount"]
@@ -2541,6 +2548,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[value "interestLeg"]
 			// For Repo:
 			[value "repo"]
+			[value "genericProduct"] // set when "genericProduct->underlyer->fixedRate" exists
 		+ creditDefaultPayout
 			[value "creditDefaultSwap"]
 			[value "generalTerms" path "creditDefaultSwap"]
@@ -2561,6 +2569,9 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[value "fxSingleLeg"]
 			[value "nearLeg"]
 			[value "farLeg"]
+			//[value "genericProduct" set when "genericProduct->productId" = "InterestRate:Forward:Debt"]
+			//[value "underlyer" path "genericProduct" set when "genericProduct->underlyer->bond" exists]
+			[value "genericProduct"]
 		+ securityPayout
 			[value "repo"]
 		+ cashflow
@@ -2711,6 +2722,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			// Other
 			[value "repo"]
 			[value "floatingLeg"]
+			[value "genericProduct"]
 			// Additional payment
 			// Options: Quantity and Observable (Except Swaption, Credit Default Swaption)
 			[hint "underlyer"] // Equity Option
@@ -2760,6 +2772,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[hint "commodityOption"]
 			[value "commoditySwap" path "commoditySwaption"]
 			[hint "repo"]
+			[hint "genericProduct"]
 		+ adjustment
 			[value "notionalAdjustments" path "returnSwap->returnLeg", "notionalAdjustments" path "equitySwapTransactionSupplement->returnLeg"]
 

@@ -1,0 +1,304 @@
+{
+  "trade" : {
+    "tradeIdentifier" : [ {
+      "issuer" : {
+        "value" : "1070247694",
+        "meta" : {
+          "scheme" : "http://www.fpml.org/coding-scheme/external/issuer-identifier"
+        }
+      },
+      "assignedIdentifier" : [ {
+        "identifier" : {
+          "value" : "FI-STARBR-585125839",
+          "meta" : {
+            "scheme" : "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
+          }
+        }
+      } ],
+      "meta" : {
+        "globalKey" : "4c31b0d1"
+      },
+      "identifierType" : "UniqueTransactionIdentifier"
+    }, {
+      "issuerReference" : {
+        "globalReference" : "1e91ffc8",
+        "externalReference" : "sourceParty"
+      },
+      "assignedIdentifier" : [ {
+        "identifier" : {
+          "value" : "FI-STARBR-585125839",
+          "meta" : {
+            "scheme" : "http://www.dtcc.com/internal-reference-id"
+          }
+        }
+      } ],
+      "meta" : {
+        "globalKey" : "1ebfd8d0"
+      }
+    } ],
+    "tradeDate" : {
+      "value" : "2023-11-15",
+      "meta" : {
+        "globalKey" : "3f3acf"
+      }
+    },
+    "tradableProduct" : {
+      "product" : {
+        "contractualProduct" : {
+          "productTaxonomy" : [ {
+            "primaryAssetClass" : {
+              "value" : "InterestRate"
+            }
+          } ],
+          "productIdentifier" : [ {
+            "value" : {
+              "identifier" : {
+                "value" : "JP1700161P53",
+                "meta" : {
+                  "scheme" : "http://www.dtcc.com/coding-scheme/external/product-id/ISIN"
+                }
+              },
+              "source" : "ISIN",
+              "meta" : {
+                "globalKey" : "9aeb4cbd"
+              }
+            }
+          } ],
+          "economicTerms" : {
+            "effectiveDate" : {
+              "adjustableDate" : {
+                "unadjustedDate" : "2023-11-15",
+                "dateAdjustments" : {
+                  "businessDayConvention" : "NONE",
+                  "meta" : {
+                    "globalKey" : "24a738"
+                  }
+                },
+                "meta" : {
+                  "globalKey" : "ed806a47"
+                }
+              },
+              "meta" : {
+                "globalKey" : "ed806a47"
+              }
+            },
+            "terminationDate" : {
+              "adjustableDate" : {
+                "unadjustedDate" : "2029-11-15",
+                "dateAdjustments" : {
+                  "businessDayConvention" : "NONE",
+                  "meta" : {
+                    "globalKey" : "24a738"
+                  }
+                },
+                "meta" : {
+                  "globalKey" : "ee349a47"
+                }
+              },
+              "meta" : {
+                "globalKey" : "ee349a47"
+              }
+            },
+            "payout" : {
+              "interestRatePayout" : [ {
+                "payerReceiver" : {
+                  "payer" : "Party2",
+                  "receiver" : "Party1"
+                },
+                "dayCountFraction" : {
+                  "value" : "30/360"
+                },
+                "meta" : {
+                  "globalKey" : "722ed5c9"
+                }
+              } ],
+              "forwardPayout" : [ {
+                "payerReceiver" : {
+                  "payer" : "Party1",
+                  "receiver" : "Party2"
+                },
+                "settlementTerms" : {
+                  "settlementType" : "Physical",
+                  "meta" : {
+                    "globalKey" : "f3b1d0d7"
+                  }
+                },
+                "underlier" : {
+                  "security" : {
+                    "productIdentifier" : [ {
+                      "value" : {
+                        "identifier" : {
+                          "value" : "5369692",
+                          "meta" : {
+                            "scheme" : "http://www.bnpparibas.com/sierra/instrument-id"
+                          }
+                        },
+                        "source" : "Other",
+                        "meta" : {
+                          "globalKey" : "343fa73e"
+                        }
+                      }
+                    }, {
+                      "value" : {
+                        "identifier" : {
+                          "value" : "JP1700161P53",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/coding-scheme/external/instrument-id-ISIN"
+                          }
+                        },
+                        "source" : "ISIN",
+                        "meta" : {
+                          "globalKey" : "9aeb4cbd"
+                        }
+                      }
+                    } ],
+                    "securityType" : "Debt"
+                  },
+                  "meta" : {
+                    "globalKey" : "c0db6ef8"
+                  }
+                },
+                "meta" : {
+                  "globalKey" : "7ced5260"
+                }
+              } ],
+              "meta" : {
+                "globalKey" : "d56dadf7"
+              }
+            }
+          },
+          "meta" : {
+            "globalKey" : "4c11c64f"
+          }
+        },
+        "meta" : {
+          "globalKey" : "4c11c64f"
+        }
+      },
+      "tradeLot" : [ {
+        "priceQuantity" : [ {
+          "quantity" : [ {
+            "value" : {
+              "value" : 1000000,
+              "unit" : {
+                "currency" : {
+                  "value" : "JPY"
+                }
+              }
+            },
+            "meta" : {
+              "location" : [ {
+                "scope" : "DOCUMENT",
+                "value" : "quantity-1"
+              } ]
+            }
+          } ],
+          "meta" : {
+            "globalKey" : "d473a37e"
+          }
+        } ]
+      } ],
+      "counterparty" : [ {
+        "role" : "Party1",
+        "partyReference" : {
+          "globalReference" : "1e91ffc8",
+          "externalReference" : "sourceParty"
+        }
+      }, {
+        "role" : "Party2",
+        "partyReference" : {
+          "globalReference" : "92da1b46",
+          "externalReference" : "counterParty"
+        }
+      } ]
+    },
+    "party" : [ {
+      "partyId" : [ {
+        "identifier" : {
+          "value" : "2ae25",
+          "meta" : {
+            "scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
+          }
+        },
+        "identifierType" : "LEI",
+        "meta" : {
+          "globalKey" : "73d9a89"
+        }
+      } ],
+      "name" : {
+        "value" : "CITI BANK"
+      },
+      "contactInformation" : {
+        "address" : [ {
+          "country" : {
+            "value" : "US"
+          }
+        } ]
+      },
+      "meta" : {
+        "globalKey" : "1e91ffc8",
+        "externalKey" : "sourceParty"
+      }
+    }, {
+      "partyId" : [ {
+        "identifier" : {
+          "value" : "88c95",
+          "meta" : {
+            "scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
+          }
+        },
+        "identifierType" : "LEI",
+        "meta" : {
+          "globalKey" : "77f7daf"
+        }
+      } ],
+      "name" : {
+        "value" : "HSBC"
+      },
+      "contactInformation" : {
+        "address" : [ {
+          "country" : {
+            "value" : "BM"
+          }
+        } ]
+      },
+      "meta" : {
+        "globalKey" : "92da1b46",
+        "externalKey" : "counterParty"
+      }
+    }, {
+      "partyId" : [ {
+        "identifier" : {
+          "value" : "XOFF",
+          "meta" : {
+            "scheme" : "http://www.fpml.org/coding-scheme/external/mifir/extension-iso10383"
+          }
+        },
+        "meta" : {
+          "globalKey" : "2931f7"
+        }
+      } ],
+      "meta" : {
+        "globalKey" : "2931f7",
+        "externalKey" : "ExecutionFacility"
+      }
+    } ],
+    "partyRole" : [ {
+      "partyReference" : {
+        "globalReference" : "1e91ffc8",
+        "externalReference" : "sourceParty"
+      },
+      "role" : "ReportingParty",
+      "ownershipPartyReference" : {
+        "globalReference" : "1e91ffc8",
+        "externalReference" : "sourceParty"
+      }
+    } ],
+    "meta" : {
+      "globalKey" : "47b9ca84"
+    }
+  },
+  "meta" : {
+    "globalKey" : "47b9ca84"
+  }
+}
