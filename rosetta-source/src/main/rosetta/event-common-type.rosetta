@@ -194,6 +194,8 @@ type TradeState: <"Defines the fundamental financial information that can be cha
 	transferHistory TransferState (0..*) <"Represents the updated Trade attributes which can change as the result of a transfer event.">
 	observationHistory ObservationEvent (0..*) <"Represents the observed events related to a particular product or process, such as credit events or corporate actions.">
     valuationHistory Valuation (0..*)
+    test string (0..1)
+    test2 string (0..1)
 
 type CounterpartyPositionState: <"Defines the fundamental financial information that can be changed by a Primitive Event and by extension any business or life-cycle event. Each PositionState specifies where a Position is in its life-cycle. PositionState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.">
 	[metadata key]

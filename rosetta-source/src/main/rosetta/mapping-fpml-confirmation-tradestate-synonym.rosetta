@@ -1836,19 +1836,21 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
      //       [hint "code"]
 
     TaxonomyValue:
+        - name
         + name
             [value "productType"]
             [value "productType" path "fra"]
             [value "productType" path "creditDefaultSwapOption"]
             [value "productType" path "bondOption"]
             [value "productType" path "commoditySwaption"]
+            [value "code" path "commodityClassification"]
      //   + classification
       //      [hint "code"]
-
+/*
     TaxonomyClassification:
         + value
             [value "code" path "commodityClassification"]
-
+*/
 	Security:
 		+ productIdentifier
 			[value "bond" meta "instrumentId" mapper "BasketConstituent"]
@@ -2091,6 +2093,10 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[value "trade"]
 		+ observationHistory
 			[value "ignore"]
+        + test
+            [value "type" path "trade->commoditySwap->oilPhysicalLeg->oil"]
+        + test2
+            [value "masterAgreementPaymentDates" path "trade->commoditySwap->floatingLeg"]
 
 	Trade:
 		+ tradeIdentifier
@@ -2411,6 +2417,8 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             [hint "calculationPeriods"]
         + delivery
             [value "ignore"]
+//        + test
+//            [value "code" path "commodityClassification"]
 
 	CommodityPriceReturnTerms:
 		+ spread
@@ -2573,7 +2581,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 		+ cashflow
 			[value "ignore"]
 		+ commodityPayout
-			[value "commoditySwap", "floatingLeg" path "commoditySwap"]
+			[value "commoditySwap", "floatingLeg" path "commoditySwap", "oilPhysicalLeg" path "commoditySwap"]
 		+ fixedPricePayout
 			[value "fixedLeg" path "commoditySwap"]
 			[value "fixedPayment" path "fixedLeg", "dividendPeriod" path "dividendLeg" mapper "DividendFixedLeg"]
@@ -2681,8 +2689,12 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 			[value "commodity"]
 		+ description
             [value "description" path "commodity"]
-        + productTaxonomy
-            [hint "commodityClassification"]
+//        + descriptionList
+//            [value "code"]
+           // [value "code" path "commodityClassification"]
+        //+ productTaxonomy
+        //    [hint "commodityClassification"]
+        - productTaxonomy
 
 	DeliveryDateParameters:
 		+ deliveryNearby
