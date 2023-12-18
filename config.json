@@ -17,11 +17,11 @@
       "upmostVersion": "3.999.999"
     },
     {
-      "lowestVersion": "4.0.0",
+      "lowestVersion": "4.3.0",
       "upmostVersion": "4.999.999"
     },
     {
-      "lowestVersion": "5.0.0-dev.44",
+      "lowestVersion": "5.0.0-dev.53",
       "upmostVersion": "5.999.999"
     },
     {
