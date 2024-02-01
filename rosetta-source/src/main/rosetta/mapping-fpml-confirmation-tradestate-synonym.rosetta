@@ -718,6 +718,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             [hint "bond" , "convertibleBond"]
             // For Commodity Swap Floating Leg
             [hint "commodity"]
+            [hint "oilPhysicalLeg"]
 			// Other
 			[value "underlyer"]
         + settlementTerms
@@ -1840,6 +1841,10 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             [value "productType" path "commoditySwaption"]
             [value "productType" path "genericProduct"]
 
+    TaxonomyClassification:
+        + value
+            [value "code" path "commodityClassification"]
+
     Security:
         + productIdentifier
             [value "bond" meta "instrumentId" mapper "BasketConstituent"]
@@ -2015,6 +2020,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
 
     Observable:
         + commodity
+            [value "oilPhysicalLeg"]
             [hint "commodity"]
         + productIdentifier
             [hint "equity"]
@@ -2387,6 +2393,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             [value "pricingDates" path "calculation"]
         + underlier
             [value "commodity"]
+            [value "oilPhysicalLeg"]
         + paymentDates
             [value "paymentDates"]
             [value "relativePaymentDates"]
@@ -2643,6 +2650,7 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
         + commodity
             [value "commodity"]
             [meta "specifiedPrice"]
+            [value "commodityClassification" meta "code"]
         + security
 			[value "underlyer"]
             [hint "bond" , "equity" , "mortgage" , "convertibleBond"]
@@ -2703,6 +2711,8 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             [value "nearLeg"]
             [value "farLeg"]
             [value "fxSingleLeg"]
+            // Commodity
+            [hint "oilPhysicalLeg"]
             // Other
             [value "repo"]
             [value "floatingLeg"]

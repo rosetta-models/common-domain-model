@@ -190,6 +190,50 @@
                   "observable" : {
                     "commodity" : {
                       "value" : {
+                        "productTaxonomy" : [ {
+                          "value" : {
+                            "classification" : [ {
+                              "value" : "Energy"
+                            } ]
+                          }
+                        }, {
+                          "value" : {
+                            "classification" : [ {
+                              "value" : "Oil"
+                            }, {
+                              "value" : "NRGY"
+                            }, {
+                              "value" : "OILP"
+                            }, {
+                              "value" : "WTIO"
+                            } ]
+                          }
+                        }, {
+                          "value" : {
+                            "classification" : [ {
+                              "value" : "OilWTI"
+                            } ]
+                          }
+                        } ]
+                      },
+                      "meta" : {
+                        "location" : [ {
+                          "scope" : "DOCUMENT",
+                          "value" : "commodity-2"
+                        } ]
+                      }
+                    },
+                    "meta" : {
+                      "globalKey" : "db74be7"
+                    }
+                  },
+                  "meta" : {
+                    "globalKey" : "db74be7"
+                  }
+                }, {
+                  "observable" : {
+                    "commodity" : {
+                      "value" : {
                         "productIdentifier" : [ {
                           "value" : {
                             "identifier" : {
@@ -288,11 +332,11 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "2b8f3da2"
+              "globalKey" : "73b181d"
             }
           },
           "meta" : {
-            "globalKey" : "2b8f3da2"
+            "globalKey" : "73b181d"
           }
         }
       }
@@ -325,6 +369,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "90fd7ae7"
+    "globalKey" : "922b3e5c"
   }
 }

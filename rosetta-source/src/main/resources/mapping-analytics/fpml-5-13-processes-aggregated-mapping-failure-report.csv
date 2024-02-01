@@ -1,4 +1,4 @@
-Mapping Coverage,46.34
+Mapping Coverage,53.66
 
 Input Path,Failed Mapping Count
 trade.commoditySwap.oilPhysicalLeg.deliveryQuantity.physicalQuantity.quantityUnit,1
@@ -6,7 +6,6 @@ trade.tradeHeader.partyTradeInformation.reportingRegime.directlyLinkedActivity,1
 trade.tradeHeader.partyTradeInformation.reportingRegime.supervisorRegistration.supervisoryBody,1
 trade.commoditySwap.oilPhysicalLeg.payerPartyReference.href,1
 trade.commoditySwap.oilPhysicalLeg.deliveryPeriods.periodsSchedule.id,1
-trade.commoditySwap.oilPhysicalLeg.commodityClassification.code,6
 trade.tradeHeader.partyTradeIdentifier.partyReference.href,1
 trade.tradeHeader.partyTradeInformation.partyReference.href,1
 trade.commoditySwap.oilPhysicalLeg.deliveryConditions.pipeline.withdrawalPoint,1
