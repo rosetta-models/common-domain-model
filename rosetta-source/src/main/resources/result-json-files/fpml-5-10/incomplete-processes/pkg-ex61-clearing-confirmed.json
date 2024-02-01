@@ -1,28 +1,4 @@
 {
-  "counterpartyPositionBusinessEvent" : {
-    "packageInformation" : {
-      "componentId" : [ {
-        "issuerReference" : {
-          "globalReference" : "78f17bdb",
-          "externalReference" : "sef"
-        },
-        "assignedIdentifier" : [ {
-          "identifier" : {
-            "value" : "1",
-            "meta" : {
-              "scheme" : "http://www.sefco.com/swaps/trade-id"
-            }
-          }
-        } ],
-        "meta" : {
-          "globalKey" : "c9faf35d"
-        }
-      } ],
-      "meta" : {
-        "globalKey" : "c9faf35d"
-      }
-    }
-  },
   "proposedEvent" : {
     "intent" : "ContractFormation",
     "instruction" : [ {
@@ -687,6 +663,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "a6e4635e"
+    "globalKey" : "a35015c1"
   }
 }
