@@ -19,10 +19,10 @@ import java.util.stream.Stream;
 class CMEClearedConfirmTest extends IngestionTest<WorkflowStep> {
 
 
-	private static final String CME_CLEARED_1_17_FILES_DIR =  IngestPaths.getDefault().getInputRelativePath().toString() + "/cme-cleared-confirm-1-17/";
+	private static final String CME_CLEARED_1_17_FILES_DIR =  "/cme-cleared-confirm-1-17/";
 
 	private static final ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(CME_CLEARED_1_17_FILES_DIR + "expectations.json"))
+			.add(expectationsFilesURL(CME_CLEARED_1_17_FILES_DIR))
 			.build();
 
 	private static IngestionService ingestionService;

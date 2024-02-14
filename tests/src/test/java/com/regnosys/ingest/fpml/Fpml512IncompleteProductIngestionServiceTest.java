@@ -14,7 +14,7 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToTradeSt
 
 public class Fpml512IncompleteProductIngestionServiceTest extends IngestionTest<TradeState> {
 
-	private static final String INCOMPLETE_BASE = "cdm-sample-files/fpml-5-12/incomplete-products/";
+	private static final String INCOMPLETE_BASE = "/fpml-5-12/incomplete-products/";
 
 	private static IngestionService ingestionService;
 

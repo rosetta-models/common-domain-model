@@ -14,7 +14,7 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToTradeSt
 
 public class Fpml510ProductIngestionServiceTest extends IngestionTest<TradeState> {
 
-	private static final String BASE_DIR = "cdm-sample-files/fpml-5-10/products/";
+	private static final String BASE_DIR = "/fpml-5-10/products/";
 
 	private static IngestionService ingestionService;
 

@@ -17,10 +17,10 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToWorkflo
 
 public class NativeCdmEventsIngestionServiceTest extends IngestionTest<WorkflowStep> {
 
-	private static final String BASE_DIR = "cdm-sample-files/native-cdm-events/";
+	private static final String BASE_DIR = "/native-cdm-events/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-		.add(Resources.getResource(BASE_DIR + "expectations.json"))
+		.add(expectationsFilesURL(BASE_DIR))
 		.build();
 
 	private static IngestionService ingestionService;

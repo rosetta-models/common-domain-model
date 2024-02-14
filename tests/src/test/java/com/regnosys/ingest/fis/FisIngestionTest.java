@@ -7,11 +7,13 @@ import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.finos.cdm.CdmRuntimeModule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.net.URL;
+import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
@@ -19,11 +21,14 @@ import java.util.stream.Stream;
 public class FisIngestionTest extends IngestionTest<WorkflowStep> {
 
 	private static final String ENV_INSTANCE_NAME = "target/ISLA";
-	private static final List<URL> ENV_FILE = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
-	private static final String SAMPLE_FILES_DIR = "cdm-sample-files/fis/";
+    private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+    private static final Path CONFIG_PATH = ingestPaths.getConfigRelativePath();
+
+    private static final List<URL> ENV_FILE = Collections.singletonList(Resources.getResource(CONFIG_PATH.toString() + "/isla-ingestions.json"));
+	private static final String SAMPLE_FILES_DIR = "/fis/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-            .add(Resources.getResource(SAMPLE_FILES_DIR + "expectations.json"))
+            .add(expectationsFilesURL(SAMPLE_FILES_DIR))
             .build();
 
     private static IngestionService ingestionService;

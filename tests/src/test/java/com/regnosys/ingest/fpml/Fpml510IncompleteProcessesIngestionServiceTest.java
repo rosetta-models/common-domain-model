@@ -17,10 +17,10 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToWorkflo
 
 public class Fpml510IncompleteProcessesIngestionServiceTest extends IngestionTest<WorkflowStep> {
 
-	private static final String INCOMPLETE_PROCESSES = "cdm-sample-files/fpml-5-10/incomplete-processes/";
+	private static final String INCOMPLETE_PROCESSES = "/fpml-5-10/incomplete-processes/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(INCOMPLETE_PROCESSES + "expectations.json"))
+			.add(expectationsFilesURL(INCOMPLETE_PROCESSES))
 			.build();
 
 	private static IngestionService ingestionService;

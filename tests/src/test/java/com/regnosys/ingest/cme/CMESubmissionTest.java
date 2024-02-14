@@ -16,10 +16,10 @@ import java.util.stream.Stream;
 
 class CMESubmissionTest extends IngestionTest<WorkflowStep>{
 
-	private static final String CME_SUBMISSION_1_17_FILES_DIR = "cdm-sample-files/cme-submission-irs-1-0/";
+	private static final String CME_SUBMISSION_1_17_FILES_DIR = "/cme-submission-irs-1-0/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(CME_SUBMISSION_1_17_FILES_DIR + "expectations.json"))
+			.add(expectationsFilesURL(CME_SUBMISSION_1_17_FILES_DIR))
 			.build();
 	
 	private static IngestionService ingestionService;

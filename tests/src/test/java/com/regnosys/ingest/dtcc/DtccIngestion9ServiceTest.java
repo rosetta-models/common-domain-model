@@ -25,10 +25,10 @@ import java.util.stream.Stream;
 class DtccIngestion9ServiceTest extends IngestionTest<WorkflowStep> {
     private static final Logger LOGGER = LoggerFactory.getLogger(DtccIngestion9ServiceTest.class);
 
-	private static final String DTCC_9_0_FILES_DIR = "cdm-sample-files/dtcc-9-0/";
+	private static final String DTCC_9_0_FILES_DIR = "/dtcc-9-0/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(DTCC_9_0_FILES_DIR + "expectations.json"))
+			.add(expectationsFilesURL(DTCC_9_0_FILES_DIR))
 			.build();
 
 	private static IngestionService dtcc9IngestionService;

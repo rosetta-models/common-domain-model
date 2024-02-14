@@ -17,7 +17,7 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToTradeSt
 
 class InvalidProductTest extends IngestionTest<TradeState> {
 
-	private static final String SAMPLE_FILES_DIR = "cdm-sample-files/fpml-5-10/invalid-products/";
+	private static final String SAMPLE_FILES_DIR = "/fpml-5-10/invalid-products/";
 
 	/*
 	 * Validation logic is supposed to result in a False outcome.
@@ -25,7 +25,7 @@ class InvalidProductTest extends IngestionTest<TradeState> {
 	 * The file names correspond to the data rules that are being tested.
 	 */
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(SAMPLE_FILES_DIR + "expectations.json"))
+			.add(expectationsFilesURL(SAMPLE_FILES_DIR))
 			.build();
 
 	private static IngestionService ingestionService;

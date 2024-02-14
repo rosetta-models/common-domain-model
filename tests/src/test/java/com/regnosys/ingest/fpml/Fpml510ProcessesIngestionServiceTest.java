@@ -17,10 +17,10 @@ import static com.regnosys.ingest.IngestionEnvUtil.getFpml5ConfirmationToWorkflo
 
 public class Fpml510ProcessesIngestionServiceTest extends IngestionTest<WorkflowStep> {
 
-	private static final String PROCESSES = "cdm-sample-files/fpml-5-10/processes/";
+	private static final String PROCESSES = "/fpml-5-10/processes/";
 
 	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
-			.add(Resources.getResource(PROCESSES + "expectations.json"))
+			.add(expectationsFilesURL(PROCESSES))
 			.build();
 
 	private static IngestionService ingestionService;
