@@ -18,7 +18,7 @@
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": [
-          "cdm-sample-files/fis"
+          "fis"
         ]
       },
       "default": true,

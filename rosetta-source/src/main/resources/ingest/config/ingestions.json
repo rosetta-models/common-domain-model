@@ -56,15 +56,15 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/FpML.excluded-paths.txt",
+      "xmlExclusionsFilePath": "FpML.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "TradeState": [
-          "cdm-sample-files/fpml-5-10/products",
-          "cdm-sample-files/fpml-5-10/incomplete-products",
-          "cdm-sample-files/fpml-5-10/invalid-products",
-          "cdm-sample-files/fpml-5-12/incomplete-products",
-          "cdm-sample-files/fpml-5-12/products"
+          "fpml-5-10/products",
+          "fpml-5-10/incomplete-products",
+          "fpml-5-10/invalid-products",
+          "fpml-5-12/incomplete-products",
+          "fpml-5-12/products"
         ]
       },
       "default": true,
@@ -97,13 +97,13 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/FpML.excluded-paths.txt",
+      "xmlExclusionsFilePath": "FpML.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": [
-          "cdm-sample-files/fpml-5-10/processes",
-          "cdm-sample-files/fpml-5-10/incomplete-processes",
-          "cdm-sample-files/native-cdm-events"
+          "fpml-5-10/processes",
+          "fpml-5-10/incomplete-processes",
+          "native-cdm-events"
         ]
       },
       "default": false,
@@ -125,9 +125,9 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/ORE_1_0_39.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ORE_1_0_39.excluded-paths.txt",
       "cdmClassesDir": "",
-      "integrationTestRoots": { "TradeState": ["cdm-sample-files/ore-1-0-39"] },
+      "integrationTestRoots": { "TradeState": ["ore-1-0-39"] },
       "default": false,
       "childPackageName": { "TradeState": "ore" },
       "fullClassnames": { "TradeState": "cdm.event.common.TradeState" }
@@ -149,10 +149,10 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/CME_ClearedConfirm_1_17.excluded-paths.txt",
+      "xmlExclusionsFilePath": "CME_ClearedConfirm_1_17.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
-        "WorkflowStep": ["cdm-sample-files/cme-cleared-confirm-1-17"]
+        "WorkflowStep": ["cme-cleared-confirm-1-17"]
       },
       "default": false,
       "childPackageName": { "WorkflowStep": "cme" },
@@ -175,9 +175,9 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/DTCC_9_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "DTCC_9_0.excluded-paths.txt",
       "cdmClassesDir": "",
-      "integrationTestRoots": { "WorkflowStep": ["cdm-sample-files/dtcc-9-0"] },
+      "integrationTestRoots": { "WorkflowStep": ["dtcc-9-0"] },
       "default": false,
       "childPackageName": { "WorkflowStep": "event" },
       "fullClassnames": { "WorkflowStep": "cdm.event.workflow.WorkflowStep" }
@@ -199,10 +199,10 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/DTCC_11_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "DTCC_11_0.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
-        "WorkflowStep": ["cdm-sample-files/dtcc-11-0"]
+        "WorkflowStep": ["dtcc-11-0"]
       },
       "default": false,
       "childPackageName": { "WorkflowStep": "event" },
@@ -225,10 +225,10 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "config/CME_SubmissionIRS_1_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "CME_SubmissionIRS_1_0.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
-        "WorkflowStep": ["cdm-sample-files/cme-submission-irs-1-0"]
+        "WorkflowStep": ["cme-submission-irs-1-0"]
       },
       "default": false,
       "childPackageName": { "WorkflowStep": "cme" },
