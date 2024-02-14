@@ -7,18 +7,21 @@ import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.finos.cdm.CdmRuntimeModule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.net.URL;
+import java.nio.file.Path;
 import java.util.stream.Stream;
 
 class CMEClearedConfirmTest extends IngestionTest<WorkflowStep> {
 
-	private static final String CME_CLEARED_1_17_FILES_DIR = "cdm-sample-files/cme-cleared-confirm-1-17/";
 
-	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
+	private static final String CME_CLEARED_1_17_FILES_DIR =  IngestPaths.getDefault().getInputRelativePath().toString() + "/cme-cleared-confirm-1-17/";
+
+	private static final ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
 			.add(Resources.getResource(CME_CLEARED_1_17_FILES_DIR + "expectations.json"))
 			.build();
 

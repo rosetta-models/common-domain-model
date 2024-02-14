@@ -350,7 +350,7 @@
             <dependency>
                 <groupId>com.regnosys</groupId>
                 <artifactId>rosetta-common</artifactId>
-                <version>${rosetta.bundle.version}</version>
+                <version>0.0.0.master</version>
             </dependency>
             <dependency>
                 <groupId>com.regnosys.rosetta.code-generators</groupId>
