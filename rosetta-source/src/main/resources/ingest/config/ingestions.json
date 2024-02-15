@@ -56,7 +56,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "FpML.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/FpML.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "TradeState": [
@@ -97,7 +97,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "FpML.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/FpML.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": [
@@ -125,7 +125,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "ORE_1_0_39.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/ORE_1_0_39.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": { "TradeState": ["ore-1-0-39"] },
       "default": false,
@@ -149,7 +149,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "CME_ClearedConfirm_1_17.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/CME_ClearedConfirm_1_17.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": ["cme-cleared-confirm-1-17"]
@@ -175,7 +175,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "DTCC_9_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/DTCC_9_0.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": { "WorkflowStep": ["dtcc-9-0"] },
       "default": false,
@@ -199,7 +199,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "DTCC_11_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/DTCC_11_0.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": ["dtcc-11-0"]
@@ -225,7 +225,7 @@
       "verbose": false,
       "clean": false,
       "json": false,
-      "xmlExclusionsFilePath": "CME_SubmissionIRS_1_0.excluded-paths.txt",
+      "xmlExclusionsFilePath": "ingest/excluded/CME_SubmissionIRS_1_0.excluded-paths.txt",
       "cdmClassesDir": "",
       "integrationTestRoots": {
         "WorkflowStep": ["cme-submission-irs-1-0"]
