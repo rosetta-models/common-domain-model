@@ -1,2 +1,2 @@
 [
-{"fileName":"ingest/inputdtcc-9-0/SamplePayment.xml","excludedPaths":0,"externalPaths":60,"outstandingMappings":36,"validationFailures":5,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]
+{"fileName":"dtcc-9-0/SamplePayment.xml","excludedPaths":0,"externalPaths":60,"outstandingMappings":36,"validationFailures":5,"qualificationExpectation":{"success":true,"qualifyResults":[],"qualifiableObjectCount":0}}]
