@@ -2,18 +2,15 @@ package com.regnosys.ingest.cme;
 
 import cdm.event.workflow.WorkflowStep;
 import com.google.common.collect.ImmutableList;
-import com.google.common.io.Resources;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
-import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.finos.cdm.CdmRuntimeModule;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.net.URL;
-import java.nio.file.Path;
 import java.util.stream.Stream;
 
 class CMEClearedConfirmTest extends IngestionTest<WorkflowStep> {
