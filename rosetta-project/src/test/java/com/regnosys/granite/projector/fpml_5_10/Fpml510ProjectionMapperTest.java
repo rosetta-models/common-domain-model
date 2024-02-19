@@ -12,6 +12,7 @@ import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
 import com.regnosys.ingest.test.framework.ingestor.synonym.MappingResult;
 import com.regnosys.rosetta.RosettaRuntimeModule;
 import com.regnosys.rosetta.RosettaStandaloneSetup;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.rosetta.common.util.UrlUtils;
 import com.rosetta.model.lib.path.RosettaPath;
@@ -47,8 +48,11 @@ class Fpml510ProjectionMapperTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Fpml510ProjectionMapperTest.class);
 
+	private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+	private static final Path inputPath = ingestPaths.getInputRelativePath();
+
 	private static final String INSTANCE_NAME = "target/FpML_5_10";
-	private static final String RATES_DIR = "cdm-sample-files/fpml-5-10/products/rates/";
+	private static final String RATES_DIR = inputPath + "/fpml-5-10/products/rates/";
 	private static final String LCH_DIR = "available-samples/lch-samples/";
 
 	private static final List<Expectations> FPML_DOCUMENT_FILES = List.of(

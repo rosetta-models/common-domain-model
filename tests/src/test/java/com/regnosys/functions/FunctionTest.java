@@ -8,6 +8,7 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 import com.regnosys.ingest.test.framework.ingestor.ExpectationUtil;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.postprocess.WorkflowPostProcessor;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.rosetta.common.testing.ExecutionDescriptor;
@@ -41,13 +42,15 @@ class FunctionTest {
 
 	private static final ObjectMapper ROSETTA_OBJECT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper();
 
+	private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+	private static final Path inputPath = ingestPaths.getInputRelativePath();
 	private static final List<String> EXECUTION_DESCRIPTOR_PATHS = List.of(
-			"cdm-sample-files/functions/execution-descriptor.json",
-			"cdm-sample-files/functions/sec-lending-execution-descriptor.json",
-			"cdm-sample-files/functions/fpml-processes-execution-descriptor.json",
-			"cdm-sample-files/functions/cme-cleared-confirm-1-17-execution-descriptor.json",
-			"cdm-sample-files/functions/dtcc-11-0-execution-descriptor.json",
-			"cdm-sample-files/functions/repo-and-bond-execution-descriptor.json");
+			getPathsFor("functions/execution-descriptor.json"),
+			getPathsFor("functions/sec-lending-execution-descriptor.json"),
+			getPathsFor("functions/fpml-processes-execution-descriptor.json"),
+			getPathsFor("functions/cme-cleared-confirm-1-17-execution-descriptor.json"),
+			getPathsFor("functions/dtcc-11-0-execution-descriptor.json"),
+			getPathsFor("functions/repo-and-bond-execution-descriptor.json"));
 
 	private static Injector injector;
 
@@ -97,5 +100,9 @@ class FunctionTest {
 		Files.createDirectories(actualOutputFile.getParent());
 		Files.write(actualOutputFile, run.getJsonActual().getBytes());
 		LOGGER.info("Wrote test output to {}", actualOutputFile.toAbsolutePath());
+	}
+
+	private static String getPathsFor(String fileName){
+		return inputPath.resolve(fileName).toString();
 	}
 }

@@ -80,10 +80,10 @@ class SecLendingFunctionInputCreationTest {
 
     // ALLOCATION AND REALLOCATION EXAMPLES ARE BASED ON THIS EXECUTION INSTRUCTION.
     // This is the execution instruction between an agent lender and a borrower
-    public static final String EXECUTION_INSTRUCTION_JSON = getInputResourceName("functions/sec-lending/block-execution-instruction.json");
+    public static final String EXECUTION_INSTRUCTION_JSON = "/" + getInputResourceName("functions/sec-lending/block-execution-instruction.json");
 
     // SETTLEMENT AND RETURN WORKFLOWS ARE BASED OF THIS..
-    public static final String SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON = getInputResourceName("functions/sec-lending/new-settlement-workflow-func-input.json");
+    public static final String SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON = "/" + getInputResourceName("functions/sec-lending/new-settlement-workflow-func-input.json");
 
     private static Injector injector;
 
@@ -127,7 +127,7 @@ class SecLendingFunctionInputCreationTest {
         );
 
         assertJsonEquals(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), actual);
-        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
+        assertJsonConformsToRosettaType("/" + getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
     }
 
     @Test
@@ -146,7 +146,7 @@ class SecLendingFunctionInputCreationTest {
                 Date.of(2020, 10, 21));
 
         assertJsonEquals(getInputResourceName("functions/sec-lending/full-return-settlement-workflow-func-input.json"), actual);
-        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/full-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
+        assertJsonConformsToRosettaType("/" + getInputResourceName("functions/sec-lending/full-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
     }
 
     @Test
@@ -242,7 +242,7 @@ class SecLendingFunctionInputCreationTest {
 
     @Test
     void validateCreateSecurityLendingInvoiceFuncInputJson() throws IOException {
-        RunReturnSettlementWorkflowInput input = assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
+        RunReturnSettlementWorkflowInput input = assertJsonConformsToRosettaType("/" + getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
         Workflow part = injector.getInstance(RunReturnSettlementWorkflow.class).execute(input);
 
         TradeState fullReturnAfterTradeState = getTransferTradeState();
@@ -324,7 +324,7 @@ class SecLendingFunctionInputCreationTest {
                 .build();
 
         assertJsonEquals(getInputResourceName("functions/sec-lending/create-security-lending-invoice-func-input.json"), actualBillingInstruction);
-        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/create-security-lending-invoice-func-input.json"), BillingInstruction.class);
+        assertJsonConformsToRosettaType("/" + getInputResourceName("functions/sec-lending/create-security-lending-invoice-func-input.json"), BillingInstruction.class);
     }
 
     private BillingRecordInstruction createBillingRecordInstruction(TradeState transferTradeState, Date billingStartDate, Date billingEndDate, Date settlementDate, List<Observation> observations) {

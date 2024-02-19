@@ -20,6 +20,7 @@ import com.regnosys.rosetta.RosettaStandaloneSetup;
 import com.regnosys.rosetta.common.hashing.GlobalKeyProcessStep;
 import com.regnosys.rosetta.common.hashing.NonNullHashCollector;
 import com.regnosys.rosetta.common.hashing.ReKeyProcessStep;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.postprocess.qualify.QualifyProcessorStep;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.rosetta.common.util.UrlUtils;
@@ -50,7 +51,9 @@ public class GenerateTemplateExampleJsonWriter {
 	@Inject QualifyProcessorStep qualifyProcessorStep;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GenerateTemplateExampleJsonWriter.class);
-	private static final String SAMPLE_PATH = "cdm-sample-files/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.xml";
+	private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+	private static final Path inputPath = ingestPaths.getInputRelativePath();
+	private static final String SAMPLE_PATH = inputPath + "/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.xml";
 	private Injector injector;
 
 	public static void main(String[] args) throws IOException {

@@ -1,6 +1,7 @@
 package com.regnosys.granite.projector.fpml_5_10;
 
 import com.google.common.io.Resources;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.fpml.fpml_5.confirmation.DataDocument;
 import org.fpml.fpml_5.confirmation.Party;
 import org.fpml.fpml_5.confirmation.Trade;
@@ -26,13 +27,14 @@ import java.util.stream.Stream;
 public class Fpml510RecordKeepingSampleWriter {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Fpml510RecordKeepingSampleWriter.class);
-
+	private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+	private static final Path inputPath = ingestPaths.getInputRelativePath();
 	private static final String FPML_5_CONFIRMATION_PACKAGE = "org.fpml.fpml_5.confirmation";
 	private static final String XML_DECLARATION_PROPERTY = "com.sun.xml.bind.xmlDeclaration";
 
 	@Test
 	void generate() throws URISyntaxException, IOException {
-		Path baseFolder = Paths.get(Resources.getResource("cdm-sample-files/fpml-5-10/products").toURI());
+		Path baseFolder = Paths.get(Resources.getResource(inputPath + "/fpml-5-10/products").toURI());
 
 		try (Stream<Path> walk = Files.walk(baseFolder)) {
 			walk.filter(Files::isRegularFile)
@@ -55,12 +57,12 @@ public class Fpml510RecordKeepingSampleWriter {
 
 	private Path toOutFile(Path inFile) {
 		return Paths.get(inFile.toString()
-			.replace("cdm-sample-files", "generated-sample-files"));
+			.replace(inputPath.toString(), "generated-sample-files"));
 	}
 
 	private String toResourcesPath(Path inFile) {
 		return inFile.toString()
-			.substring(inFile.toString().lastIndexOf("cdm-sample-files"));
+			.substring(inFile.toString().lastIndexOf(inputPath.toString()));
 	}
 
 	private String writeFileContent(DataDocument dataDocument) throws JAXBException {

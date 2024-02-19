@@ -1,17 +1,23 @@
 package com.regnosys.granite.projector.fpml_5_10;
 
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.fpml.fpml_5.confirmation.DataDocument;
 import org.fpml.fpml_5.confirmation.RequestClearing;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;
 
+import java.nio.file.Path;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 
 public class Fpml510MarshallerTest {
 
-	private static final String RATES_SAMPLE = "cdm-sample-files/fpml-5-10/products/rates/EUR-Vanilla-uti.xml";
+	private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+	private static final Path inputPath = ingestPaths.getInputRelativePath();
+
+	private static final String RATES_SAMPLE = inputPath + "/fpml-5-10/products/rates/EUR-Vanilla-uti.xml";
 	private static final String LCH_SAMPLE = "available-samples/lch-samples/ClearLink-requestClearingSample.xml";
 
 	@Test
