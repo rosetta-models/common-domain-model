@@ -2,6 +2,7 @@ package com.regnosys.cdm.example;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 

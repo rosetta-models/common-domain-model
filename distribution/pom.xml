@@ -162,7 +162,7 @@
                                     <outputDirectory>${project.build.directory}/cdm-json/fpml-5-10</outputDirectory>
                                     <resources>
                                         <resource>
-                                            <directory>${project.parent.basedir}/rosetta-source/src/main/resources/result-json-files/fpml-5-10</directory>
+                                            <directory>${project.parent.basedir}/rosetta-source/src/main/resources/ingest/output/fpml-5-10</directory>
                                         </resource>
                                     </resources>
                                 </configuration>
@@ -177,7 +177,7 @@
                                     <outputDirectory>${project.build.directory}/cdm-json/isda-create</outputDirectory>
                                     <resources>
                                         <resource>
-                                            <directory>${project.parent.basedir}/rosetta-source/src/main/resources/result-json-files/isda-create</directory>
+                                            <directory>${project.parent.basedir}/rosetta-source/src/main/resources/ingest/output//isda-create</directory>
                                         </resource>
                                     </resources>
                                 </configuration>

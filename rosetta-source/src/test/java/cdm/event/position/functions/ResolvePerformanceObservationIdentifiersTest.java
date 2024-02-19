@@ -6,6 +6,7 @@ import cdm.observable.common.DeterminationMethodEnum;
 import cdm.observable.event.ObservationIdentifier;
 import cdm.product.template.PerformancePayout;
 import com.google.inject.Inject;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.rosetta.model.lib.records.Date;
 import org.isda.cdm.functions.AbstractFunctionTest;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,12 +22,14 @@ public class ResolvePerformanceObservationIdentifiersTest extends AbstractFuncti
     @Inject
     private ResolvePerformanceObservationIdentifiers func;
 
+    private static IngestPaths ingestPaths = IngestPaths.getDefault();
+
     private PerformancePayout performancePayout;
 
     @BeforeEach
     void setUpTestData() throws IOException {
         TradeState tradeState = getObjectAndResolveReferences(TradeState.class,
-                "result-json-files/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json");
+                ingestPaths.getOutputRelativePath().resolve("fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json").toString());
         performancePayout = tradeState.getTrade().getTradableProduct().getProduct().getContractualProduct().getEconomicTerms().getPayout().getPerformancePayout().get(0);
     }
 

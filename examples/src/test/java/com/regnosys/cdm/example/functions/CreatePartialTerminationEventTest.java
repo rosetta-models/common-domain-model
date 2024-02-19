@@ -17,6 +17,7 @@ import cdm.product.common.settlement.PriceQuantity;
 import com.google.inject.Inject;
 import com.regnosys.cdm.example.AbstractExampleTest;
 import com.regnosys.cdm.example.util.ResourcesUtils;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.postprocess.WorkflowPostProcessor;
 import com.rosetta.model.lib.RosettaModelObject;
 import com.rosetta.model.lib.RosettaModelObjectBuilder;
@@ -40,6 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class CreatePartialTerminationEventTest extends AbstractExampleTest {
 
     private static final String CURRENCY_SCHEME = "http://www.fpml.org/coding-scheme/external/iso4217";
+    private static IngestPaths ingestPaths = IngestPaths.getDefault();
 
     @Inject
     Create_AcceptedWorkflowStepFromInstruction createWorkflowStep;
@@ -68,7 +70,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
      */
     private WorkflowStep getWorkflowStepInstruction() throws IOException {
         // Trade to be partially terminated.  Note that all references are resolved here.
-        TradeState beforeTradeState = ResourcesUtils.getObjectAndResolveReferences(TradeState.class, "result-json-files/fpml-5-10/products/rates/USD-Vanilla-swap.json");
+        TradeState beforeTradeState = ResourcesUtils.getObjectAndResolveReferences(TradeState.class, ingestPaths.getOutputRelativePath().resolve("fpml-5-10/products/rates/USD-Vanilla-swap.json").toString());
 
         Date eventDate = Date.of(2013, 2, 12);
 

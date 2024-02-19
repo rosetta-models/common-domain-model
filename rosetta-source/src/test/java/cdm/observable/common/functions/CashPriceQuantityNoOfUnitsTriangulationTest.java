@@ -8,6 +8,7 @@ import cdm.observable.asset.metafields.FieldWithMetaPriceSchedule;
 import cdm.product.common.settlement.PriceQuantity;
 import cdm.product.template.TradableProduct;
 import com.google.inject.Inject;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import org.isda.cdm.functions.AbstractFunctionTest;
 import org.junit.jupiter.api.Test;
 
@@ -21,8 +22,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static util.ResourcesUtils.getObject;
 
 public class CashPriceQuantityNoOfUnitsTriangulationTest extends AbstractFunctionTest {
+	private static IngestPaths ingestPaths = IngestPaths.getDefault();
 
-	private static final String EQUITY_DIR = "result-json-files/fpml-5-10/products/equity/";
+	private static final String EQUITY_DIR = ingestPaths.getOutputRelativePath() + "/fpml-5-10/products/equity/";
 	
 	@Inject
 	private CashPriceQuantityNoOfUnitsTriangulation func;

@@ -5,6 +5,7 @@ import cdm.product.asset.InterestRatePayout;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.rosetta.common.util.ClassPathUtils;
 import com.rosetta.model.lib.records.Date;
@@ -28,12 +29,14 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  */
 public class SerialisationTest {
 
+    private static IngestPaths ingestPaths = IngestPaths.getDefault();
+
     @Test
     void shouldDeserialiseCdmSampleFileWithClassLoader() throws IOException {
         // Get the classLoader from any class in CDM
         ClassLoader classLoader = TradeState.class.getClassLoader();
         Path sampleFilePath = ClassPathUtils
-                .loadFromClasspath("result-json-files/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json", classLoader)
+                .loadFromClasspath(ingestPaths.getOutputRelativePath().resolve("fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json").toString(), classLoader)
                 .findFirst()
                 .orElseThrow();
         assertNotNull(sampleFilePath);
@@ -48,7 +51,7 @@ public class SerialisationTest {
     @Test
     void shouldDeserialiseCdmSampleFileWithResources() throws IOException {
         // Get the classLoader from any class in CDM
-        URL sampleFilePath = Resources.getResource("result-json-files/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json");
+        URL sampleFilePath = Resources.getResource(ingestPaths.getOutputRelativePath().resolve("fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json").toString());
         assertNotNull(sampleFilePath);
 
         TradeState deserializedTradeState =

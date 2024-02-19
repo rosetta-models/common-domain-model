@@ -3,7 +3,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade1",
     "description": "DDL_NewTrade1",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade1.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade1.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade1-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -12,7 +12,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade2",
     "description": "DDL_NewTrade2",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade2.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade2.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade2-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -21,7 +21,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade3",
     "description": "DDL_NewTrade3",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade3.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade3.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade3-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -30,7 +30,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade4",
     "description": "DDL_NewTrade4",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade4.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade4.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade4-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -39,7 +39,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade5",
     "description": "DDL_NewTrade5",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade5.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade5.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade5-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -48,7 +48,7 @@
     "group": "dtcc-11-0",
     "name": "DDL_NewTrade6",
     "description": "DDL_NewTrade6",
-    "inputFile": "result-json-files/dtcc-11-0/DDL_NewTrade6.json",
+    "inputFile": "ingest/output/dtcc-11-0/DDL_NewTrade6.json",
     "expectedOutputFile": "functions/dtcc-11-0/DDL_NewTrade6-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true

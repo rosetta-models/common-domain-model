@@ -28,6 +28,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.postprocess.WorkflowPostProcessor;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.rosetta.model.lib.process.PostProcessor;
@@ -64,7 +65,9 @@ class SecLendingFunctionInputCreationTest {
     private static final Optional<Path> TEST_WRITE_BASE_PATH =
             Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
     private static final Logger LOGGER = LoggerFactory.getLogger(SecLendingFunctionInputCreationTest.class);
-
+    private static final IngestPaths ingestPaths = IngestPaths.getDefault();
+    private static final Path inputPath = ingestPaths.getInputRelativePath();
+    private static final Path outputPath = ingestPaths.getOutputRelativePath();
 
     private static final ObjectMapper STRICT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
@@ -77,10 +80,10 @@ class SecLendingFunctionInputCreationTest {
 
     // ALLOCATION AND REALLOCATION EXAMPLES ARE BASED ON THIS EXECUTION INSTRUCTION.
     // This is the execution instruction between an agent lender and a borrower
-    public static final String EXECUTION_INSTRUCTION_JSON = "/cdm-sample-files/functions/sec-lending/block-execution-instruction.json";
+    public static final String EXECUTION_INSTRUCTION_JSON = getInputResourceName("functions/sec-lending/block-execution-instruction.json");
 
     // SETTLEMENT AND RETURN WORKFLOWS ARE BASED OF THIS..
-    public static final String SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON = "/cdm-sample-files/functions/sec-lending/new-settlement-workflow-func-input.json";
+    public static final String SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON = getInputResourceName("functions/sec-lending/new-settlement-workflow-func-input.json");
 
     private static Injector injector;
 
@@ -123,8 +126,8 @@ class SecLendingFunctionInputCreationTest {
                 Date.of(2020, 10, 8)
         );
 
-        assertJsonEquals("cdm-sample-files/functions/sec-lending/part-return-settlement-workflow-func-input.json", actual);
-        assertJsonConformsToRosettaType("/cdm-sample-files/functions/sec-lending/part-return-settlement-workflow-func-input.json", RunReturnSettlementWorkflowInput.class);
+        assertJsonEquals(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), actual);
+        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
     }
 
     @Test
@@ -142,15 +145,15 @@ class SecLendingFunctionInputCreationTest {
                 returnInstruction,
                 Date.of(2020, 10, 21));
 
-        assertJsonEquals("cdm-sample-files/functions/sec-lending/full-return-settlement-workflow-func-input.json", actual);
-        assertJsonConformsToRosettaType("/cdm-sample-files/functions/sec-lending/full-return-settlement-workflow-func-input.json", RunReturnSettlementWorkflowInput.class);
+        assertJsonEquals(getInputResourceName("functions/sec-lending/full-return-settlement-workflow-func-input.json"), actual);
+        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/full-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
     }
 
     @Test
     void validateCreateAllocationFuncInputJson() throws IOException {
         CreateBusinessEventInput actual = getAllocationInput();
 
-        assertJsonEquals("cdm-sample-files/functions/sec-lending/allocation/allocation-sec-lending-func-input.json", actual);
+        assertJsonEquals(getInputResourceName("functions/sec-lending/allocation/allocation-sec-lending-func-input.json"), actual);
     }
 
 
@@ -234,12 +237,12 @@ class SecLendingFunctionInputCreationTest {
                 Date.of(2020, 9, 21),
                 null);
 
-        assertJsonEquals("cdm-sample-files/functions/sec-lending/reallocation/reallocation-pre-settled-func-input.json", actual);
+        assertJsonEquals(getInputResourceName("functions/sec-lending/reallocation/reallocation-pre-settled-func-input.json"), actual);
     }
 
     @Test
     void validateCreateSecurityLendingInvoiceFuncInputJson() throws IOException {
-        RunReturnSettlementWorkflowInput input = assertJsonConformsToRosettaType("/cdm-sample-files/functions/sec-lending/part-return-settlement-workflow-func-input.json", RunReturnSettlementWorkflowInput.class);
+        RunReturnSettlementWorkflowInput input = assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/part-return-settlement-workflow-func-input.json"), RunReturnSettlementWorkflowInput.class);
         Workflow part = injector.getInstance(RunReturnSettlementWorkflow.class).execute(input);
 
         TradeState fullReturnAfterTradeState = getTransferTradeState();
@@ -320,8 +323,8 @@ class SecLendingFunctionInputCreationTest {
                         )))
                 .build();
 
-        assertJsonEquals("cdm-sample-files/functions/sec-lending/create-security-lending-invoice-func-input.json", actualBillingInstruction);
-        assertJsonConformsToRosettaType("/cdm-sample-files/functions/sec-lending/create-security-lending-invoice-func-input.json", BillingInstruction.class);
+        assertJsonEquals(getInputResourceName("functions/sec-lending/create-security-lending-invoice-func-input.json"), actualBillingInstruction);
+        assertJsonConformsToRosettaType(getInputResourceName("functions/sec-lending/create-security-lending-invoice-func-input.json"), BillingInstruction.class);
     }
 
     private BillingRecordInstruction createBillingRecordInstruction(TradeState transferTradeState, Date billingStartDate, Date billingEndDate, Date settlementDate, List<Observation> observations) {
@@ -495,5 +498,13 @@ class SecLendingFunctionInputCreationTest {
                 LOGGER.error("Failed to write expectation file {}", expectationFilePath.toAbsolutePath(), e);
             }
         });
+    }
+
+    private static String getInputResourceName(String fileName){
+        return inputPath.resolve(fileName).toString();
+    }
+
+    private String getOutputResourceName(String fileName){
+        return outputPath.resolve(fileName).toString();
     }
 }

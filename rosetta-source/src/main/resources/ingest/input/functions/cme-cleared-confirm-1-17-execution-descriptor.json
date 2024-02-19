@@ -3,7 +3,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "Basis-ex01-LIBOR-vs-SOFR",
     "description": "Basis-ex01-LIBOR-vs-SOFR",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/Basis-ex01-LIBOR-vs-SOFR.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/Basis-ex01-LIBOR-vs-SOFR.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/Basis-ex01-LIBOR-vs-SOFR-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -12,7 +12,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "FRA-ex01",
     "description": "FRA-ex01",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/FRA-ex01.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/FRA-ex01.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/FRA-ex01-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -21,7 +21,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "FRA-ex02",
     "description": "FRA-ex02",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/FRA-ex02.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/FRA-ex02.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/FRA-ex02-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -30,7 +30,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex01-Fixed-Float",
     "description": "IRS-ex01-Fixed-Float",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex01-Fixed-Float.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex01-Fixed-Float.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex01-Fixed-Float-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -39,7 +39,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex02-Fixed-Float",
     "description": "IRS-ex02-Fixed-Float",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex02-Fixed-Float.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex02-Fixed-Float.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex02-Fixed-Float-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -48,7 +48,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex03-Fixed-Float-with-Amortizing-Schedule",
     "description": "IRS-ex03-Fixed-Float-with-Amortizing-Schedule",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex03-Fixed-Float-with-Amortizing-Schedule.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex03-Fixed-Float-with-Amortizing-Schedule.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex03-Fixed-Float-with-Amortizing-Schedule-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -57,7 +57,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex04-Fixed-Float-with-Compounding",
     "description": "IRS-ex04-Fixed-Float-with-Compounding",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex04-Fixed-Float-with-Compounding.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex04-Fixed-Float-with-Compounding.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex04-Fixed-Float-with-Compounding-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -66,7 +66,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex05-Fixed-Float-with-Long-Stub",
     "description": "IRS-ex05-Fixed-Float-with-Long-Stub",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex05-Fixed-Float-with-Long-Stub.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex05-Fixed-Float-with-Long-Stub.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex05-Fixed-Float-with-Long-Stub-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -75,7 +75,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex06-Fixed-Float-Non-Deliverable",
     "description": "IRS-ex06-Fixed-Float-Non-Deliverable",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex06-Fixed-Float-Non-Deliverable.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex06-Fixed-Float-Non-Deliverable.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex06-Fixed-Float-Non-Deliverable-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -84,7 +84,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex07-Fixed-Float-Zero-Coupon-BRL-CDI",
     "description": "IRS-ex07-Fixed-Float-Zero-Coupon-BRL-CDI",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex07-Fixed-Float-Zero-Coupon-BRL-CDI.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex07-Fixed-Float-Zero-Coupon-BRL-CDI.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex07-Fixed-Float-Zero-Coupon-BRL-CDI-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -93,7 +93,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex08-Fixed-Float-Zero",
     "description": "IRS-ex08-Fixed-Float-Zero",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex08-Fixed-Float-Zero.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex08-Fixed-Float-Zero.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex08-Fixed-Float-Zero-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -102,7 +102,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex09-OIS",
     "description": "IRS-ex09-OIS",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex09-OIS.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex09-OIS.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex09-OIS-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -111,7 +111,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex10-OIS",
     "description": "IRS-ex10-OIS",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex10-OIS.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex10-OIS.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex10-OIS-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -120,7 +120,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "IRS-ex11-OIS",
     "description": "IRS-ex11-OIS",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/IRS-ex11-OIS.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/IRS-ex11-OIS.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/IRS-ex11-OIS-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -129,7 +129,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "SWAP_CREATED_DUE_TO_EXERCISE",
     "description": "SWAP_CREATED_DUE_TO_EXERCISE",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/SWAP_CREATED_DUE_TO_EXERCISE.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/SWAP_CREATED_DUE_TO_EXERCISE.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/SWAP_CREATED_DUE_TO_EXERCISE-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -138,7 +138,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "Swaption-ex01",
     "description": "Swaption-ex01",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/Swaption-ex01.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/Swaption-ex01.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/Swaption-ex01-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -147,7 +147,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "Swaption-ex02",
     "description": "Swaption-ex02",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/Swaption-ex02.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/Swaption-ex02.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/Swaption-ex02-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -156,7 +156,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "Swaption-ex03-Straddle-Physical-Exercise",
     "description": "Swaption-ex03-Straddle-Physical-Exercise",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/Swaption-ex03-Straddle-Physical-Exercise.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/Swaption-ex03-Straddle-Physical-Exercise.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/Swaption-ex03-Straddle-Physical-Exercise-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true
@@ -165,7 +165,7 @@
     "group": "cme-cleared-confirm-1-17",
     "name": "SWAPTION_TERMINATED_DUE_TO_EXERCISE",
     "description": "SWAPTION_TERMINATED_DUE_TO_EXERCISE",
-    "inputFile": "result-json-files/cme-cleared-confirm-1-17/SWAPTION_TERMINATED_DUE_TO_EXERCISE.json",
+    "inputFile": "ingest/output/cme-cleared-confirm-1-17/SWAPTION_TERMINATED_DUE_TO_EXERCISE.json",
     "expectedOutputFile": "functions/cme-cleared-confirm-1-17/SWAPTION_TERMINATED_DUE_TO_EXERCISE-func-output.json",
     "executableFunctionClass": "cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction",
     "nativeFunction": true

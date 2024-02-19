@@ -4,6 +4,7 @@ import cdm.event.common.TradeState;
 import com.google.common.io.Resources;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.regnosys.rosetta.common.ingest.IngestPaths;
 import com.regnosys.rosetta.common.postprocess.qualify.QualificationReport;
 import com.regnosys.rosetta.common.postprocess.qualify.QualificationResult;
 import com.regnosys.rosetta.common.postprocess.qualify.QualifyProcessorStep;
@@ -15,13 +16,14 @@ import java.net.URL;
 import java.util.Collection;
 
 public class QualificationReportExample {
+    private static IngestPaths ingestPaths = IngestPaths.getDefault();
 
     public QualificationReportExample() {
     }
 
     public static void main(String[] args) throws IOException {
 
-        URL resource = Resources.getResource("result-json-files/fpml-5-10/products/rates/bond-option-uti.json");
+        URL resource = Resources.getResource(ingestPaths.getOutputRelativePath().resolve("fpml-5-10/products/rates/bond-option-uti.json").toString());
         TradeState tradeState = RosettaObjectMapper.getNewRosettaObjectMapper().readValue(resource, TradeState.class);
 
 
