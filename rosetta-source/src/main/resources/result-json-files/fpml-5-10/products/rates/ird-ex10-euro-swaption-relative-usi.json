@@ -44,92 +44,6 @@
                   "buyer" : "Party1",
                   "seller" : "Party2"
                 },
-                "exerciseTerms" : {
-                  "optionStyle" : {
-                    "europeanExercise" : {
-                      "expirationDate" : [ {
-                        "adjustableDate" : {
-                          "unadjustedDate" : "2001-08-28",
-                          "dateAdjustments" : {
-                            "businessDayConvention" : "FOLLOWING",
-                            "businessCenters" : {
-                              "businessCenter" : [ {
-                                "value" : "EUTA"
-                              }, {
-                                "value" : "GBLO"
-                              } ],
-                              "meta" : {
-                                "globalKey" : "4158421"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "da3b6050"
-                            }
-                          },
-                          "meta" : {
-                            "globalKey" : "770e7eb4"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "770e7eb4"
-                        }
-                      } ],
-                      "relevantUnderlyingDate" : {
-                        "relativeDates" : {
-                          "periodMultiplier" : 2,
-                          "period" : "D",
-                          "meta" : {
-                            "globalKey" : "954e996c"
-                          },
-                          "dayType" : "Business",
-                          "businessDayConvention" : "NONE",
-                          "businessCenters" : {
-                            "businessCenter" : [ {
-                              "value" : "EUTA"
-                            } ],
-                            "meta" : {
-                              "globalKey" : "20a71d"
-                            }
-                          },
-                          "dateRelativeTo" : {
-                            "globalReference" : "4e313b99",
-                            "externalReference" : "europeanExercise0"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "954e996c"
-                        }
-                      },
-                      "earliestExerciseTime" : {
-                        "hourMinuteTime" : "09:00:00",
-                        "businessCenter" : {
-                          "value" : "BEBR"
-                        }
-                      },
-                      "expirationTime" : {
-                        "hourMinuteTime" : "11:00:00",
-                        "businessCenter" : {
-                          "value" : "BEBR"
-                        }
-                      },
-                      "meta" : {
-                        "globalKey" : "4e313b99",
-                        "externalKey" : "europeanExercise0"
-                      }
-                    }
-                  },
-                  "exerciseProcedure" : {
-                    "manualExercise" : {
-                      "exerciseNotice" : {
-                        "exerciseNoticeGiver" : "Seller",
-                        "businessCenter" : {
-                          "value" : "GBLO"
-                        }
-                      }
-                    },
-                    "followUpConfirmation" : true
-                  }
-                },
                 "underlier" : {
                   "contractualProduct" : {
                     "productTaxonomy" : [ {
@@ -220,7 +134,6 @@
                               "businessDayConvention" : "MODFOLLOWING",
                               "businessCenters" : {
                                 "businessCentersReference" : {
-                                  "globalReference" : "20a71d",
                                   "externalReference" : "accrualBusinessCenters0"
                                 },
                                 "meta" : {
@@ -355,7 +268,6 @@
                               "businessDayConvention" : "MODFOLLOWING",
                               "businessCenters" : {
                                 "businessCentersReference" : {
-                                  "globalReference" : "20a71d",
                                   "externalReference" : "accrualBusinessCenters1"
                                 },
                                 "meta" : {
@@ -409,7 +321,6 @@
                           },
                           "resetDates" : {
                             "calculationPeriodDatesReference" : {
-                              "globalReference" : "d6b3d162",
                               "externalReference" : "CalcPeriodDates1"
                             },
                             "resetRelativeTo" : "CalculationPeriodStartDate",
@@ -431,7 +342,6 @@
                                 }
                               },
                               "dateRelativeTo" : {
-                                "globalReference" : "3ab5f4ad",
                                 "externalReference" : "resetDates0"
                               }
                             },
@@ -446,7 +356,6 @@
                               "businessDayConvention" : "MODFOLLOWING",
                               "businessCenters" : {
                                 "businessCentersReference" : {
-                                  "globalReference" : "20a71d",
                                   "externalReference" : "paymentBusinessCenters1"
                                 },
                                 "meta" : {
@@ -479,12 +388,95 @@
                     "globalKey" : "6b0bb378"
                   }
                 },
+                "exerciseTerms" : {
+                  "style" : "European",
+                  "expirationDate" : [ {
+                    "adjustableDate" : {
+                      "unadjustedDate" : "2001-08-28",
+                      "dateAdjustments" : {
+                        "businessDayConvention" : "FOLLOWING",
+                        "businessCenters" : {
+                          "businessCenter" : [ {
+                            "value" : "EUTA"
+                          }, {
+                            "value" : "GBLO"
+                          } ],
+                          "meta" : {
+                            "globalKey" : "4158421"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "da3b6050"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "770e7eb4"
+                      }
+                    },
+                    "meta" : {
+                      "globalKey" : "770e7eb4",
+                      "externalKey" : "europeanExercise0"
+                    }
+                  } ],
+                  "relevantUnderlyingDate" : {
+                    "relativeDates" : {
+                      "periodMultiplier" : 2,
+                      "period" : "D",
+                      "meta" : {
+                        "globalKey" : "954e996c"
+                      },
+                      "dayType" : "Business",
+                      "businessDayConvention" : "NONE",
+                      "businessCenters" : {
+                        "businessCenter" : [ {
+                          "value" : "EUTA"
+                        } ],
+                        "meta" : {
+                          "globalKey" : "20a71d"
+                        }
+                      },
+                      "dateRelativeTo" : {
+                        "externalReference" : "europeanExercise0"
+                      }
+                    },
+                    "meta" : {
+                      "globalKey" : "954e996c"
+                    }
+                  },
+                  "earliestExerciseTime" : {
+                    "hourMinuteTime" : "09:00:00",
+                    "businessCenter" : {
+                      "value" : "BEBR"
+                    }
+                  },
+                  "expirationTime" : {
+                    "hourMinuteTime" : "11:00:00",
+                    "businessCenter" : {
+                      "value" : "BEBR"
+                    }
+                  },
+                  "exerciseProcedure" : {
+                    "manualExercise" : {
+                      "exerciseNotice" : {
+                        "exerciseNoticeGiver" : "Seller",
+                        "businessCenter" : {
+                          "value" : "GBLO"
+                        }
+                      }
+                    },
+                    "followUpConfirmation" : true
+                  },
+                  "meta" : {
+                    "globalKey" : "59831528",
+                    "externalKey" : "europeanExercise0"
+                  }
+                },
                 "meta" : {
-                  "globalKey" : "e2be0d01"
+                  "globalKey" : "6de5fc5e"
                 }
               } ],
               "meta" : {
-                "globalKey" : "e2be0d01"
+                "globalKey" : "6de5fc5e"
               }
             },
             "calculationAgent" : {
@@ -492,11 +484,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "77bab9ab"
+            "globalKey" : "d8a445c8"
           }
         },
         "meta" : {
-          "globalKey" : "77bab9ab"
+          "globalKey" : "d8a445c8"
         }
       },
       "tradeLot" : [ {
@@ -592,20 +584,17 @@
       "counterparty" : [ {
         "role" : "Party1",
         "partyReference" : {
-          "globalReference" : "33f59567",
           "externalReference" : "party1"
         }
       }, {
         "role" : "Party2",
         "partyReference" : {
-          "globalReference" : "33f59568",
           "externalReference" : "party2"
         }
       } ],
       "ancillaryParty" : [ {
         "role" : "CalculationAgentIndependent",
         "partyReference" : [ {
-          "globalReference" : "33f59568",
           "externalReference" : "party2"
         } ]
       } ]
@@ -644,7 +633,7 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "8adc5907"
+      "globalKey" : "f8482f7e"
     }
   },
   "transferHistory" : [ {
@@ -659,11 +648,9 @@
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "globalReference" : "33f59567",
           "externalReference" : "party1"
         },
         "receiverPartyReference" : {
-          "globalReference" : "33f59568",
           "externalReference" : "party2"
         }
       },
@@ -693,6 +680,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "1e5321aa"
+    "globalKey" : "23f2cb93"
   }
 }

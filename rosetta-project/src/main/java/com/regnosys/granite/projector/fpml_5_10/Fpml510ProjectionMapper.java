@@ -30,7 +30,6 @@ import cdm.product.common.schedule.metafields.ReferenceWithMetaPaymentDates;
 import cdm.product.common.settlement.PhysicalSettlementTerms;
 import cdm.product.common.settlement.ValuationDate;
 import cdm.product.common.settlement.*;
-import cdm.product.template.OptionExercise;
 import cdm.product.template.Product;
 import cdm.product.template.*;
 import com.google.common.base.CaseFormat;
@@ -552,13 +551,12 @@ public class Fpml510ProjectionMapper {
 			});
 	}
 
-	private Optional<EuropeanExercise> getEuropeanExercise(OptionExercise cdmOptionExercise) {
-		return Optional.ofNullable(cdmOptionExercise)
-			.map(OptionExercise::getOptionStyle)
-			.map(OptionStyle::getEuropeanExercise)
-			.map(e -> {
+	private Optional<EuropeanExercise> getEuropeanExercise(ExerciseTerms exerciseTerms) {
+		return Optional.ofNullable(exerciseTerms)
+			   .filter(et-> et.getStyle().equals(OptionExerciseStyleEnum.EUROPEAN))
+				.map(e -> {
 				EuropeanExercise europeanExercise = objectFactory.createEuropeanExercise();
-				getExternalKey(e.getMeta()).ifPresent(europeanExercise::setId);
+				getGlobalKey(e.getMeta()).ifPresent(europeanExercise::setId);
 				getBusinessCenterTime(e.getEarliestExerciseTime()).ifPresent(europeanExercise::setEarliestExerciseTime);
 				// TODO ExerciseFee
 
@@ -1617,5 +1615,9 @@ public class Fpml510ProjectionMapper {
 
 	private Optional<String> getExternalKey(GlobalKeyFields meta) {
 		return Optional.ofNullable(meta).map(GlobalKeyFields::getExternalKey);
+	}
+
+	private Optional<String> getGlobalKey(GlobalKeyFields meta) {
+		return Optional.ofNullable(meta).map(GlobalKeyFields::getGlobalKey);
 	}
 }

@@ -1,4 +1,4 @@
-Mapping Coverage,95.53
+Mapping Coverage,95.44
 
 Input Path,Failed Mapping Count
 onBehalfOf.partyReference.href,2
@@ -28,6 +28,7 @@ trade.tradeHeader.partyTradeInformation.reportingRegime.entityClassification,2
 party.organizationType,6
 header.sendTo.messageAddressScheme,1
 trade.swap.extendibleProvision.exerciseNotice.partyReference.href,1
+trade.bondOption.americanExercise.id,1
 trade.genericProduct.underlyer.dayCountFraction,2
 header.creationTimestamp,3
 trade.genericProduct.underlyer.payerPartyReference.href,2
@@ -35,6 +36,7 @@ trade.tradeHeader.partyTradeInformation.reportingRegime.entityClassification.ent
 trade.tradeHeader.partyTradeIdentifier.blockTradeId.issuer,1
 trade.tradeHeader.partyTradeInformation.intentToClear,3
 trade.tradeHeader.partyTradeInformation.relatedBusinessUnit.role,1
+trade.swaption.americanExercise.id,2
 trade.tradeHeader.partyTradeInformation.executionVenueType,3
 header.messageId,3
 trade.tradeHeader.partyTradeIdentifier.blockTradeId.tradeId,1
@@ -48,6 +50,7 @@ quote.quoteUnits,2
 quote.time,2
 trade.genericProduct.underlyer.bond.maturity,2
 trade.tradeHeader.partyTradeInformation.reportingRegime.supervisorRegistration.supervisoryBody,4
+trade.swaption.europeanExercise.id,4
 quote.value,6
 trade.tradeHeader.partyTradeIdentifier.partyReference.href,3
 trade.tradeHeader.partyTradeInformation.executionType,1

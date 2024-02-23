@@ -1,10 +1,11 @@
-Mapping Coverage,95.62
+Mapping Coverage,95.49
 
 Input Path,Failed Mapping Count
 trade.bondOption.bond.clearanceSystem,1
 trade.tradeHeader.partyTradeInformation.reportingRegime.supervisorRegistration.supervisoryBody,3
 trade.swap.swapStream.id,12
 trade.tradeHeader.partyTradeInformation.category,3
+trade.swaption.europeanExercise.id,2
 trade.tradeHeader.partyTradeIdentifier.partyReference.href,1
 trade.swap.earlyTerminationProvision.optionalEarlyTermination.cashSettlement.midMarketValuation.indicativeQuotations.cashSettlementCurrency,1
 trade.bondOption.convertibleBond.paymentFrequency.periodMultiplier,1
@@ -30,6 +31,7 @@ trade.bondOption.convertibleBond.currency,1
 trade.bondOption.convertibleBond.clearanceSystem,1
 trade.bondOption.bond.couponRate,1
 header.sendTo.messageAddressScheme,1
+trade.bondOption.americanExercise.id,1
 header.sendTo,3
 trade.swap.earlyTerminationProvision.optionalEarlyTermination.cashSettlement.replacementValue.firmQuotations.cashSettlementCurrency,1
 trade.tradeHeader.partyTradeInformation.timestamps.timestamp.type,3

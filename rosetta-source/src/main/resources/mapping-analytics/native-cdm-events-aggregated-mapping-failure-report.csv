@@ -1,4 +1,4 @@
-Mapping Coverage,74.16
+Mapping Coverage,74.12
 
 Input Path,Failed Mapping Count
 onBehalfOf.partyReference.href,15
@@ -6,6 +6,7 @@ trade.tradeHeader.partyTradeInformation.reportingRegime.supervisorRegistration.s
 trade.tradeHeader.partyTradeInformation.collateralPortfolio.portfolioNameScheme,2
 trade.swaption.swaptionAdjustedDates.exerciseEvent.adjustedRelevantSwapEffectiveDate,1
 trade.tradeHeader.partyTradeInformation.collateralPortfolio,2
+trade.swaption.europeanExercise.id,1
 trade.tradeHeader.partyTradeInformation.reportingRole,2
 trade.tradeHeader.partyTradeInformation.executionType,15
 trade.tradeHeader.partyTradeInformation.reportingRegime.exceedsClearingThreshold,2

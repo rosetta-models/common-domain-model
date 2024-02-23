@@ -7,7 +7,6 @@
           "trade" : {
             "tradeIdentifier" : [ {
               "issuerReference" : {
-                "globalReference" : "7ffa3ef",
                 "externalReference" : "partyA"
               },
               "assignedIdentifier" : [ {
@@ -23,7 +22,6 @@
               }
             }, {
               "issuerReference" : {
-                "globalReference" : "d18c5c37",
                 "externalReference" : "partyB"
               },
               "assignedIdentifier" : [ {
@@ -39,7 +37,6 @@
               }
             }, {
               "issuerReference" : {
-                "globalReference" : "5b6941a5",
                 "externalReference" : "partyC"
               },
               "assignedIdentifier" : [ {
@@ -77,55 +74,6 @@
                         "buyerSeller" : {
                           "buyer" : "Party1",
                           "seller" : "Party2"
-                        },
-                        "exerciseTerms" : {
-                          "optionStyle" : {
-                            "europeanExercise" : {
-                              "expirationDate" : [ {
-                                "adjustableDate" : {
-                                  "unadjustedDate" : "2018-11-30",
-                                  "dateAdjustments" : {
-                                    "businessDayConvention" : "PRECEDING",
-                                    "businessCenters" : {
-                                      "businessCenter" : [ {
-                                        "value" : "GBLO"
-                                      }, {
-                                        "value" : "USNY"
-                                      } ],
-                                      "meta" : {
-                                        "globalKey" : "42f910b"
-                                      }
-                                    },
-                                    "meta" : {
-                                      "globalKey" : "7aafea48"
-                                    }
-                                  },
-                                  "meta" : {
-                                    "globalKey" : "6ffd81aa"
-                                  }
-                                },
-                                "meta" : {
-                                  "globalKey" : "6ffd81aa"
-                                }
-                              } ],
-                              "earliestExerciseTime" : {
-                                "hourMinuteTime" : "09:00:00",
-                                "businessCenter" : {
-                                  "value" : "USNY"
-                                }
-                              },
-                              "expirationTime" : {
-                                "hourMinuteTime" : "11:00:00",
-                                "businessCenter" : {
-                                  "value" : "USNY"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "cfbec037",
-                                "externalKey" : "exercisePeriod"
-                              }
-                            }
-                          }
                         },
                         "underlier" : {
                           "contractualProduct" : {
@@ -280,7 +228,6 @@
                                   },
                                   "resetDates" : {
                                     "calculationPeriodDatesReference" : {
-                                      "globalReference" : "607eff13",
                                       "externalReference" : "floatingLegCalcPeriodDates"
                                     },
                                     "resetRelativeTo" : "CalculationPeriodStartDate",
@@ -301,7 +248,6 @@
                                         }
                                       },
                                       "dateRelativeTo" : {
-                                        "globalReference" : "7b8857fc",
                                         "externalReference" : "floatingLegResetDates"
                                       }
                                     },
@@ -491,21 +437,68 @@
                             "globalKey" : "56a84f21"
                           }
                         },
+                        "exerciseTerms" : {
+                          "style" : "European",
+                          "expirationDate" : [ {
+                            "adjustableDate" : {
+                              "unadjustedDate" : "2018-11-30",
+                              "dateAdjustments" : {
+                                "businessDayConvention" : "PRECEDING",
+                                "businessCenters" : {
+                                  "businessCenter" : [ {
+                                    "value" : "GBLO"
+                                  }, {
+                                    "value" : "USNY"
+                                  } ],
+                                  "meta" : {
+                                    "globalKey" : "42f910b"
+                                  }
+                                },
+                                "meta" : {
+                                  "globalKey" : "7aafea48"
+                                }
+                              },
+                              "meta" : {
+                                "globalKey" : "6ffd81aa"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "6ffd81aa",
+                              "externalKey" : "exercisePeriod"
+                            }
+                          } ],
+                          "earliestExerciseTime" : {
+                            "hourMinuteTime" : "09:00:00",
+                            "businessCenter" : {
+                              "value" : "USNY"
+                            }
+                          },
+                          "expirationTime" : {
+                            "hourMinuteTime" : "11:00:00",
+                            "businessCenter" : {
+                              "value" : "USNY"
+                            }
+                          },
+                          "meta" : {
+                            "globalKey" : "ba2f7bc6",
+                            "externalKey" : "exercisePeriod"
+                          }
+                        },
                         "meta" : {
-                          "globalKey" : "62ae83d6"
+                          "globalKey" : "24421a69"
                         }
                       } ],
                       "meta" : {
-                        "globalKey" : "62ae83d6"
+                        "globalKey" : "24421a69"
                       }
                     }
                   },
                   "meta" : {
-                    "globalKey" : "62ae83d6"
+                    "globalKey" : "24421a69"
                   }
                 },
                 "meta" : {
-                  "globalKey" : "62ae83d6"
+                  "globalKey" : "24421a69"
                 }
               },
               "tradeLot" : [ {
@@ -601,13 +594,11 @@
               "counterparty" : [ {
                 "role" : "Party1",
                 "partyReference" : {
-                  "globalReference" : "7ffa3ef",
                   "externalReference" : "partyA"
                 }
               }, {
                 "role" : "Party2",
                 "partyReference" : {
-                  "globalReference" : "d18c5c37",
                   "externalReference" : "partyB"
                 }
               } ]
@@ -659,7 +650,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "92868142"
+              "globalKey" : "b3bb41cd"
             }
           },
           "transferHistory" : [ {
@@ -674,11 +665,9 @@
               },
               "payerReceiver" : {
                 "payerPartyReference" : {
-                  "globalReference" : "7ffa3ef",
                   "externalReference" : "partyA"
                 },
                 "receiverPartyReference" : {
-                  "globalReference" : "d18c5c37",
                   "externalReference" : "partyB"
                 }
               },
@@ -710,7 +699,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "8d14890f"
+            "globalKey" : "51605c24"
           }
         }
       }
@@ -782,6 +771,6 @@
     } ]
   },
   "meta" : {
-    "globalKey" : "ffaea183"
+    "globalKey" : "f7583a46"
   }
 }
