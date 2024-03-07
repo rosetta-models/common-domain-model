@@ -44,12 +44,10 @@
       "filename": "LICENSE.md"
     }
   ],
-  "modelArtifacts": [
-    {
-      "groupId": "org.finos.cdm",
-      "artifactId": "cdm-java"
-    }
-  ],
+  "modelArtifact": {
+    "groupId": "org.finos.cdm",
+    "artifactId": "cdm-java"
+  },
   "primaryColor": "#32007C",
   "shortname": "CDM"
 }
