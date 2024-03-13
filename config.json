@@ -31,12 +31,8 @@
   ],
   "links": [
     {
-      "name": "CDM Portal",
-      "url": "https://portal.cdm.rosetta-technology.io/"
-    },
-    {
       "name": "Model Documentation",
-      "url": "https://cdm.docs.rosetta-technology.io/"
+      "url": "https://cdm.finos.org/docs/home"
     }
   ],
   "documents": [
@@ -48,20 +44,10 @@
       "filename": "LICENSE.md"
     }
   ],
-  "dependencyArtifact": {
-    "groupId": "com.regnosys",
-    "artifactId": "core-cdm-dependencies"
+  "modelArtifact": {
+    "groupId": "org.finos.cdm",
+    "artifactId": "cdm-java"
   },
-  "modelArtifacts": [
-    {
-      "groupId": "org.finos.cdm",
-      "artifactId": "cdm-java"
-    },
-    {
-      "groupId": "com.isda",
-      "artifactId": "cdm"
-    }
-  ],
   "primaryColor": "#32007C",
   "shortname": "CDM"
 }
