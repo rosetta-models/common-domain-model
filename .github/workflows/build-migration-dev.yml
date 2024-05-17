@@ -95,14 +95,14 @@ jobs:
           CI_DEPLOY_PASSWORD: ${{secrets.CI_DEPLOY_PASSWORD}}
           
   build:
-   name: CSharp8 build
+   name: CSharp9 build
    shell: bash
    runs-on: ubuntu-latest
-   working-directory: ./rosetta-source/target/classes/cdm/csharp8/NetStandard.2.1
-   with: dotnet-version '2.1'
+   working-directory: ./rosetta-source/target/classes/cdm/csharp9/Net.5.0
+   with: dotnet-version '5.0'
    strategy:
       fail-fast: false
-   image: mcr.microsoft.com/dotnet/core/sdk:3.1
+   image: mcr.microsoft.com/dotnet/sdk:5.0
    steps:
        - name: build
          run: dotnet build Cdm/Cdm.csproj
