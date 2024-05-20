@@ -95,38 +95,20 @@ jobs:
           CI_DEPLOY_PASSWORD: ${{secrets.CI_DEPLOY_PASSWORD}}
 
   build:
-   name: CSharp8 build
+   name: JSON Schema deploy
    shell: bash
    runs-on: ubuntu-latest
-   working-directory: ./rosetta-source/target/classes/cdm/csharp8/NetStandard.2.1
-   with: dotnet-version '2.1'
-   strategy:
-      fail-fast: false
-   image: mcr.microsoft.com/dotnet/core/sdk:3.1
-   steps:
-       - name: build
-         run: dotnet build Cdm/Cdm.csproj
-       - name: test
-         run: dotnet test Test/Test.csproj
-       - name: publish
-         run: dotnet publish Cdm/Cdm.csproj -c release -o ./app
-         
-  build:
-   name: CSharp9 build
-   shell: bash
-   runs-on: ubuntu-latest
-   working-directory: ./rosetta-source/target/classes/cdm/csharp9/Net.5.0
+   working-directory: ./rosetta-source/
    with: dotnet-version '5.0'
    strategy:
       fail-fast: false
-   image: mcr.microsoft.com/dotnet/sdk:5.0
+   image: maven:3.8.2-jdk-11
    steps:
-       - name: build
-         run: dotnet build Cdm/Cdm.csproj
-       - name: test
-         run: dotnet test Test/Test.csproj
-       - name: publish
-         run: dotnet publish Cdm/Cdm.csproj -c release -o ./app
+      - bash -c "${{GPG_IMPORT_COMMAND}}"
+      - cd src/generated
+      - tar -cvzf cdm-json-schema-${{RELEASE_NAME}}.zip jsonschema
+      - ${{GEN_DEPLOY_POM_SCRIPT}} cdm-json-schema ${{RELEASE_NAME}} zip
+      - mvn org.apache.maven.plugins:maven-gpg-plugin:3.1.0:sign-and-deploy-file ${{MVN_DEPLOY_FILE_FLAGS}} -Dfile=cdm-json-schema-${{RELEASE_NAME}}.zip -DgroupId=org.finos.cdm -DartifactId=cdm-json-schema -Dversion=${{RELEASE_NAME}} -DpomFile=cdm-json-schema-${{RELEASE_NAME}}.pom
   
   distribute:
     needs: build
