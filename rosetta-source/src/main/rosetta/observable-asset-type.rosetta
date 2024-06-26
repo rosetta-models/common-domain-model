@@ -173,15 +173,15 @@ type Price extends PriceSchedule: <"Specifies a price as a single value to be as
 type Basket extends AssetIdentifier: <"Defines a custom basket by referencing an identifier and its consituents.">
     basketConstituent Observable (1..*) <"Identifies the constituents of the basket">
 
-choice NObservable:
-    Asset 
-    Basket 
+//  choice NObservable:
+//      Asset
+//      Basket
 //    QuotedCurrencyPair 
 //        [metadata location]
-    ProductIdentifier 
+//      ProductIdentifier
     // FloatingRateOption 
     //     [metadata location]
-    Index
+ //     Index
 
 type Observable:
     asset Asset (0..1)

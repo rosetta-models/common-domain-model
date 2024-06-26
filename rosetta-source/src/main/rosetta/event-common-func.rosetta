@@ -229,8 +229,7 @@ func ResolvePerformanceObservationIdentifiers: <"Defines which attributes on the
         ResolvePerformanceValuationTime(
                 valuationDates -> valuationTime,
                 valuationDates -> valuationTimeType,
-            //    empty,
-		 identifiers -> observable -> asset ->> identifier only-element,
+           identifiers -> observable -> asset ->> identifier only-element,
                 valuationDates -> determinationMethod
             )
     set identifiers -> determinationMethodology -> determinationMethod: <"Identifies a more specific price should multiple prices for the underlier be available at the given date time, for example bid or ask prices.">
