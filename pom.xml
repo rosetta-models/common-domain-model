@@ -81,10 +81,10 @@
 
         <repoServerHost>oss.sonatype.org</repoServerHost>
         <stagingTimeoutInMinutes>10</stagingTimeoutInMinutes>
-        <rosetta.bundle.version>0.0.0.translate-syntax-SNAPSHOT</rosetta.bundle.version>
+        <rosetta.bundle.version>0.0.0.translate-syntax-3-SNAPSHOT</rosetta.bundle.version>
         <rosetta.code-gen.version>${rosetta.bundle.version}</rosetta.code-gen.version>
-        <rosetta.dsl.version>0.0.0.translate-syntax-SNAPSHOT</rosetta.dsl.version>
-        <fpml.version>0.0.0.translate-syntax-SNAPSHOT</fpml.version>
+        <rosetta.dsl.version>0.0.0.translate-syntax-3-SNAPSHOT</rosetta.dsl.version>
+        <fpml.version>0.0.0.translate-syntax-3-SNAPSHOT</fpml.version>
 
         <xtext.version>2.27.0</xtext.version>
         <opengamma.strata.version>1.7.0</opengamma.strata.version>
