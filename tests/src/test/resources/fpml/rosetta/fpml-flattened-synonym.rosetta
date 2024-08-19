@@ -1,12 +1,10 @@
 namespace fpml.flattened
 version "${project.version}"
 
-import cdm.base.staticdata.party.PartyIdentifierTypeEnum
 import cdm.base.staticdata.party.TelephoneTypeEnum
 
-translate source FpML {
-
-    //Need to look at how we are going to call this from the level above. All the payer/receiver account and party references come from different products. Will this still require a custom mapper?
+/*
+ //Need to look at how we are going to call this from the level above. All the payer/receiver account and party references come from different products. Will this still require a custom mapper?
     cdm.base.staticdata.party.Party from party Party, account Account, relatedPerson RelatedPerson, payerAccountReference AccountReference, payerPartyReference PartyReference, receiverAccountReference AccountReference, receiverPartyReference PartyReference:
         [meta key from party -> id]
         + name
@@ -162,4 +160,121 @@ translate source FpML {
         + role
             [from role -> value to-enum cdm.base.staticdata.party.NaturalPersonRoleEnum]
             [meta scheme from role -> personRoleScheme]
+*/
+
+translate source FpML {
+
+    translate party Party, account Account, relatedPerson RelatedPerson, payerAccountReference AccountReference, payerPartyReference PartyReference, receiverAccountReference AccountReference, receiverPartyReference PartyReference to cdm.base.staticdata.party.Party {
+        //[meta key from party -> id]
+        name: party -> partyName -> value,
+        partyId: party -> partyId extract translate item to cdm.base.staticdata.party.PartyIdentifier,
+        person: party -> person extract translate item to cdm.base.staticdata.party.NaturalPerson,
+        account: translate account, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference to cdm.base.staticdata.party.Account,
+        contactInformation: translate party -> contactInfo, party -> country to cdm.base.staticdata.party.ContactInformation,
+        businessUnit: party -> businessUnit extract translate item to cdm.base.staticdata.party.BusinessUnit,
+        personRole: translate relatedPerson to cdm.base.staticdata.party.NaturalPersonRole
+    }
+
+    translate partyId PartyId to cdm.base.staticdata.party.PartyIdentifier {
+        identifier: partyId -> value,
+        // [meta scheme from partyIdScheme]
+        identifierType: partyId -> partyIdScheme to-string switch
+                "http://www.fpml.org/coding-scheme/external/iso17442" then LEI,
+                "http://www.fpml.org/coding-scheme/external/iso9362" then BIC,
+                "http://www.fpml.org/coding-scheme/external/iso10383" then MIC
+    }
+
+    translate person Person to cdm.base.staticdata.party.NaturalPerson {
+        honorific: person -> honorific,
+        firstName: person -> firstName,
+        middleName: person -> middleName,
+        initial: person -> initial,
+        surname: person -> surname,
+        suffix: person -> suffix,
+        dateOfBirth: person -> dateOfBirth,
+        contactInformation: empty,
+        personId: empty
+    }
+
+    translate account Account, payerAccountReference AccountReference, payerPartyReference PartyReference, receiverAccountReference AccountReference, receiverPartyReference PartyReference
+        to cdm.base.staticdata.party.Account {
+            //[meta key from id]
+            partyReference: empty, //needs meta then call MapPartyReference
+            accountNumber: account -> accountId only-element -> value,
+            //[meta scheme from accountId only-element -> accountIdScheme ]
+            accountName: account -> accountName -> value,
+            //[meta scheme from accountName -> accountNameScheme]
+            accountType: account -> accountType -> value to-enum cdm.base.staticdata.party.AccountTypeEnum,
+            //[meta scheme from accountType -> accountTypeScheme]
+            accountBeneficiary: empty, //needs meta: [meta reference from accountBeneficiary -> href]
+            servicingParty: empty //needs meta: [meta reference from servicingParty -> href]
+    }
+
+    func MapPartyReference:
+        inputs:
+            accountId string (1..1)
+            payerAccountReference AccountReference (1..1)
+            payerPartyReference PartyReference (1..1)
+            receiverAccountReference AccountReference (1..1)
+            receiverPartyReference PartyReference (1..1)
+        output:
+            partyReference string (1..1)
+
+        set partyReference: if payerAccountReference -> href = accountId
+            then payerPartyReference -> href
+            else if receiverAccountReference -> href = accountId
+            then receiverPartyReference -> href
+            else accountId
+
+
+    translate contactInformation ContactInformation, country CountryCode to cdm.base.staticdata.party.ContactInformation {
+        telephone: contactInformation -> telephone extract translate item to cdm.base.staticdata.party.TelephoneNumber,
+        address: translate contactInformation -> address, country to cdm.base.staticdata.party.Address,
+        email: contactInformation -> email,
+        ...
+    }
+
+    translate telephoneNumber TelephoneNumber to cdm.base.staticdata.party.TelephoneNumber {
+        number: telephoneNumber -> number,
+        telephoneNumberType: telephoneNumber -> telephoneNumberType switch
+            FpmlTelephoneTypeEnum -> WORK then TelephoneTypeEnum -> Work,
+            FpmlTelephoneTypeEnum -> MOBILE then TelephoneTypeEnum -> Mobile,
+            FpmlTelephoneTypeEnum -> FAX then TelephoneTypeEnum -> Fax,
+            FpmlTelephoneTypeEnum -> PERSONAL then TelephoneTypeEnum -> Personal
+    }
+
+    translate address Address, countryOverride CountryCode to cdm.base.staticdata.party.Address {
+        street: address -> streetAddress -> streetLine,
+        city: address -> city,
+        state: address -> state,
+        country: countryOverride -> value default address -> country -> value,
+        //[meta scheme from countryOverride -> countryScheme default address -> country -> countryScheme]
+        postalCode: address -> postalCode
+    }
+
+    translate businessUnit BusinessUnit to cdm.base.staticdata.party.BusinessUnit {
+        name: businessUnit -> name,
+        contactInformation: translate businessUnit -> contactInfo, businessUnit -> country to cdm.base.staticdata.party.ContactInformation,
+        identifier: translate businessUnit to cdm.base.staticdata.identifier.Identifier
+    }
+
+    translate businessUnit BusinessUnit to cdm.base.staticdata.identifier.Identifier {
+        issuerReference: empty, //needs meta
+        issuer: empty, //needs meta
+        assignedIdentifier: translate businessUnit -> businessUnitId to cdm.base.staticdata.identifier.AssignedIdentifier
+
+    }
+
+    translate unit Unit to cdm.base.staticdata.identifier.AssignedIdentifier {
+        identifier: unit -> value,
+        //[meta scheme from unitScheme]
+        version: empty
+    }
+
+    translate relatedPerson RelatedPerson to cdm.base.staticdata.party.NaturalPersonRole {
+        personReference: empty, //needs meta: [meta reference from personReference -> href]
+        role: relatedPerson -> role -> value to-enum cdm.base.staticdata.party.NaturalPersonRoleEnum
+        //role [meta scheme from role -> personRoleScheme]
+    }
+
 }
