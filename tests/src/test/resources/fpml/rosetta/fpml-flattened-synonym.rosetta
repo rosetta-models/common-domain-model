@@ -1,6 +1,10 @@
 namespace fpml.flattened
 version "${project.version}"
 
+import cdm.fpml.flattened.* as fpml
+import cdm.base.staticdata.party.*
+import cdm.base.staticdata.identifier.*
+
 import cdm.base.staticdata.party.TelephoneTypeEnum
 
 /*
@@ -164,18 +168,18 @@ import cdm.base.staticdata.party.TelephoneTypeEnum
 
 translate source FpML {
 
-    translate party Party, account Account, relatedPerson RelatedPerson, payerAccountReference AccountReference, payerPartyReference PartyReference, receiverAccountReference AccountReference, receiverPartyReference PartyReference to cdm.base.staticdata.party.Party {
+    translate party fpml.Party, account fpml.Account, relatedPerson fpml.RelatedPerson, payerAccountReference fpml.AccountReference, payerPartyReference fpml.PartyReference, receiverAccountReference fpml.AccountReference, receiverPartyReference fpml.PartyReference to cdm.base.staticdata.party.Party {
         //[meta key from party -> id]
         name: party -> partyName -> value,
-        partyId: party -> partyId extract translate item to cdm.base.staticdata.party.PartyIdentifier,
-        person: party -> person extract translate item to cdm.base.staticdata.party.NaturalPerson,
-        account: translate account, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference to cdm.base.staticdata.party.Account,
-        contactInformation: translate party -> contactInfo, party -> country to cdm.base.staticdata.party.ContactInformation,
-        businessUnit: party -> businessUnit extract translate item to cdm.base.staticdata.party.BusinessUnit,
-        personRole: translate relatedPerson to cdm.base.staticdata.party.NaturalPersonRole
+        partyId: party -> partyId extract translate item to PartyIdentifier,
+        person: party -> person extract translate item to NaturalPerson,
+        account: translate account, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference to Account,
+        contactInformation: translate party -> contactInfo, party -> country to ContactInformation,
+        businessUnit: party -> businessUnit extract translate item to BusinessUnit,
+        personRole: translate relatedPerson to NaturalPersonRole
     }
 
-    translate partyId PartyId to cdm.base.staticdata.party.PartyIdentifier {
+    translate partyId fpml.PartyId to PartyIdentifier {
         identifier: partyId -> value,
         // [meta scheme from partyIdScheme]
         identifierType: partyId -> partyIdScheme to-string switch
@@ -184,7 +188,7 @@ translate source FpML {
                 "http://www.fpml.org/coding-scheme/external/iso10383" then MIC
     }
 
-    translate person Person to cdm.base.staticdata.party.NaturalPerson {
+    translate person fpml.Person to NaturalPerson {
         honorific: person -> honorific,
         firstName: person -> firstName,
         middleName: person -> middleName,
@@ -196,8 +200,8 @@ translate source FpML {
         personId: empty
     }
 
-    translate account Account, payerAccountReference AccountReference, payerPartyReference PartyReference, receiverAccountReference AccountReference, receiverPartyReference PartyReference
-        to cdm.base.staticdata.party.Account {
+    translate account fpml.Account, payerAccountReference fpml.AccountReference, payerPartyReference fpml.PartyReference, receiverAccountReference fpml.AccountReference, receiverPartyReference fpml.PartyReference
+        to Account {
             //[meta key from id]
             partyReference: empty, //needs meta then call MapPartyReference
             accountNumber: account -> accountId only-element -> value,
@@ -213,10 +217,10 @@ translate source FpML {
     func MapPartyReference:
         inputs:
             accountId string (1..1)
-            payerAccountReference AccountReference (1..1)
-            payerPartyReference PartyReference (1..1)
-            receiverAccountReference AccountReference (1..1)
-            receiverPartyReference PartyReference (1..1)
+            payerAccountReference fpml.AccountReference (1..1)
+            payerPartyReference fpml.PartyReference (1..1)
+            receiverAccountReference fpml.AccountReference (1..1)
+            receiverPartyReference fpml.PartyReference (1..1)
         output:
             partyReference string (1..1)
 
@@ -227,23 +231,23 @@ translate source FpML {
             else accountId
 
 
-    translate contactInformation ContactInformation, country CountryCode to cdm.base.staticdata.party.ContactInformation {
-        telephone: contactInformation -> telephone extract translate item to cdm.base.staticdata.party.TelephoneNumber,
-        address: translate contactInformation -> address, country to cdm.base.staticdata.party.Address,
+    translate contactInformation fpml.ContactInformation, country fpml.CountryCode to ContactInformation {
+        telephone: contactInformation -> telephone extract translate item to TelephoneNumber,
+        address: translate contactInformation -> address, country to Address,
         email: contactInformation -> email,
         ...
     }
 
-    translate telephoneNumber TelephoneNumber to cdm.base.staticdata.party.TelephoneNumber {
+    translate telephoneNumber fpml.TelephoneNumber to TelephoneNumber {
         number: telephoneNumber -> number,
         telephoneNumberType: telephoneNumber -> telephoneNumberType switch
-            FpmlTelephoneTypeEnum -> WORK then TelephoneTypeEnum -> Work,
-            FpmlTelephoneTypeEnum -> MOBILE then TelephoneTypeEnum -> Mobile,
-            FpmlTelephoneTypeEnum -> FAX then TelephoneTypeEnum -> Fax,
-            FpmlTelephoneTypeEnum -> PERSONAL then TelephoneTypeEnum -> Personal
+            WORK then TelephoneTypeEnum -> Work,
+            MOBILE then TelephoneTypeEnum -> Mobile,
+            FAX then TelephoneTypeEnum -> Fax,
+            PERSONAL then TelephoneTypeEnum -> Personal
     }
 
-    translate address Address, countryOverride CountryCode to cdm.base.staticdata.party.Address {
+    translate address fpml.Address, countryOverride fpml.CountryCode to Address {
         street: address -> streetAddress -> streetLine,
         city: address -> city,
         state: address -> state,
@@ -252,28 +256,28 @@ translate source FpML {
         postalCode: address -> postalCode
     }
 
-    translate businessUnit BusinessUnit to cdm.base.staticdata.party.BusinessUnit {
+    translate businessUnit fpml.BusinessUnit to BusinessUnit {
         name: businessUnit -> name,
-        contactInformation: translate businessUnit -> contactInfo, businessUnit -> country to cdm.base.staticdata.party.ContactInformation,
-        identifier: translate businessUnit to cdm.base.staticdata.identifier.Identifier
+        contactInformation: translate businessUnit -> contactInfo, businessUnit -> country to ContactInformation,
+        identifier: translate businessUnit to Identifier
     }
 
-    translate businessUnit BusinessUnit to cdm.base.staticdata.identifier.Identifier {
+    translate businessUnit fpml.BusinessUnit to Identifier {
         issuerReference: empty, //needs meta
         issuer: empty, //needs meta
-        assignedIdentifier: translate businessUnit -> businessUnitId to cdm.base.staticdata.identifier.AssignedIdentifier
+        assignedIdentifier: translate businessUnit -> businessUnitId to AssignedIdentifier
 
     }
 
-    translate unit Unit to cdm.base.staticdata.identifier.AssignedIdentifier {
+    translate unit fpml.Unit to AssignedIdentifier {
         identifier: unit -> value,
         //[meta scheme from unitScheme]
         version: empty
     }
 
-    translate relatedPerson RelatedPerson to cdm.base.staticdata.party.NaturalPersonRole {
+    translate relatedPerson fpml.RelatedPerson to NaturalPersonRole {
         personReference: empty, //needs meta: [meta reference from personReference -> href]
-        role: relatedPerson -> role -> value to-enum cdm.base.staticdata.party.NaturalPersonRoleEnum
+        role: relatedPerson -> role -> value to-enum NaturalPersonRoleEnum
         //role [meta scheme from role -> personRoleScheme]
     }
 
