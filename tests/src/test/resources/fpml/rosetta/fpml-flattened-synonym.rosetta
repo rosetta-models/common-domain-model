@@ -1,11 +1,10 @@
-namespace fpml.flattened
+namespace cdm.fpml.flattened
 version "${project.version}"
 
 import cdm.fpml.flattened.* as fpml
-import cdm.base.staticdata.party.*
-import cdm.base.staticdata.identifier.*
-
-import cdm.base.staticdata.party.TelephoneTypeEnum
+import cdm.fpml.rewrite.common.*
+import cdm.fpml.rewrite.party.*
+import cdm.fpml.rewrite.identifier.*
 
 /*
  //Need to look at how we are going to call this from the level above. All the payer/receiver account and party references come from different products. Will this still require a custom mapper?
@@ -168,50 +167,65 @@ import cdm.base.staticdata.party.TelephoneTypeEnum
 
 translate source FpML {
 
-    translate party fpml.Party, account fpml.Account, relatedPerson fpml.RelatedPerson, payerAccountReference fpml.AccountReference, payerPartyReference fpml.PartyReference, receiverAccountReference fpml.AccountReference, receiverPartyReference fpml.PartyReference to cdm.base.staticdata.party.Party {
-        //[meta key from party -> id]
-        name: party -> partyName -> value,
-        partyId: party -> partyId extract translate item to PartyIdentifier,
-        person: party -> person extract translate item to NaturalPerson,
-        account: translate account, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference to Account,
-        contactInformation: translate party -> contactInfo, party -> country to ContactInformation,
-        businessUnit: party -> businessUnit extract translate item to BusinessUnit,
-        personRole: translate relatedPerson to NaturalPersonRole
+    translate party fpml.Party, account fpml.Account, relatedPerson fpml.RelatedPerson,
+              payerAccountReference fpml.AccountReference, payerPartyReference fpml.PartyReference,
+              receiverAccountReference fpml.AccountReference, receiverPartyReference fpml.PartyReference
+        to Party {
+            id:                 party -> id,
+            name:               StringWithScheme [party -> partyName] {
+                                    scheme: party -> partyName -> partyNameScheme
+                                },
+            partyId:            translate party -> partyId to PartyIdentifier,
+            person:             translate party -> person to NaturalPerson,
+            account:            translate account, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference to Account,
+            contactInformation: translate party -> contactInfo, party -> country to ContactInformation,
+            businessUnit:       translate party -> businessUnit to BusinessUnit,
+            personRole:         translate relatedPerson to NaturalPersonRole
     }
 
     translate partyId fpml.PartyId to PartyIdentifier {
-        identifier: partyId -> value,
-        // [meta scheme from partyIdScheme]
-        identifierType: partyId -> partyIdScheme to-string switch
-                "http://www.fpml.org/coding-scheme/external/iso17442" then LEI,
-                "http://www.fpml.org/coding-scheme/external/iso9362" then BIC,
-                "http://www.fpml.org/coding-scheme/external/iso10383" then MIC
+        identifier:     StringWithScheme [partyId] {
+                            scheme: partyId -> partyIdScheme
+                        },
+        identifierType: partyId -> partyIdScheme switch
+                            "http://www.fpml.org/coding-scheme/external/iso17442"   then LEI,
+                            "http://www.fpml.org/coding-scheme/external/iso9362"    then BIC,
+                            "http://www.fpml.org/coding-scheme/external/iso10383"   then MIC,
+                            default empty
     }
 
-    translate person fpml.Person to NaturalPerson {
-        honorific: person -> honorific,
-        firstName: person -> firstName,
-        middleName: person -> middleName,
-        initial: person -> initial,
-        surname: person -> surname,
-        suffix: person -> suffix,
-        dateOfBirth: person -> dateOfBirth,
-        contactInformation: empty,
-        personId: empty
+    translate fpml.Person to NaturalPerson {
+        id:                 id,
+        honorific:          honorific,
+        firstName:          firstName,
+        middleName:         middleName,
+        initial:            initial,
+        surname:            surname,
+        suffix:             suffix,
+        dateOfBirth:        dateOfBirth,
+        contactInformation: translate contactInfo, country to ContactInformation,
+        personId:           empty
     }
 
     translate account fpml.Account, payerAccountReference fpml.AccountReference, payerPartyReference fpml.PartyReference, receiverAccountReference fpml.AccountReference, receiverPartyReference fpml.PartyReference
         to Account {
-            //[meta key from id]
-            partyReference: empty, //needs meta then call MapPartyReference
-            accountNumber: account -> accountId only-element -> value,
-            //[meta scheme from accountId only-element -> accountIdScheme ]
-            accountName: account -> accountName -> value,
-            //[meta scheme from accountName -> accountNameScheme]
-            accountType: account -> accountType -> value to-enum cdm.base.staticdata.party.AccountTypeEnum,
-            //[meta scheme from accountType -> accountTypeScheme]
-            accountBeneficiary: empty, //needs meta: [meta reference from accountBeneficiary -> href]
-            servicingParty: empty //needs meta: [meta reference from servicingParty -> href]
+            id:                 account -> id,
+            partyReference:
+                                MapPartyReference(account -> id, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference)
+                                    as-reference,
+            accountNumber:
+                                account -> accountId only-element
+                                    then extract accountId [
+                                        StringWithScheme [accountId] { scheme: accountId -> accountIdScheme }
+                                    ],
+            accountName:        StringWithScheme [account -> accountName] {
+                                    scheme: account -> accountName -> accountNameScheme
+                                },
+            accountType:        AccountTypeEnumWithScheme [account -> accountType to-enum AccountTypeEnum] {
+                                    scheme: account -> accountType -> accountTypeScheme
+                                },
+            accountBeneficiary: account -> accountBeneficiary -> href as-reference,
+            servicingParty:     account -> servicingParty -> href as-reference
     }
 
     func MapPartyReference:
@@ -224,61 +238,67 @@ translate source FpML {
         output:
             partyReference string (1..1)
 
-        set partyReference: if payerAccountReference -> href = accountId
+        set partyReference:
+            if payerAccountReference -> href = accountId
             then payerPartyReference -> href
             else if receiverAccountReference -> href = accountId
             then receiverPartyReference -> href
             else accountId
 
 
-    translate contactInformation fpml.ContactInformation, country fpml.CountryCode to ContactInformation {
-        telephone: contactInformation -> telephone extract translate item to TelephoneNumber,
-        address: translate contactInformation -> address, country to Address,
-        email: contactInformation -> email,
+    translate contactInformation fpml.ContactInformation, countryOverride fpml.CountryCode to ContactInformation {
+        telephone:  contactInformation -> telephone extract translate item to TelephoneNumber,
+        address:    translate contactInformation -> address, countryOverride to Address,
+        email:      contactInformation -> email,
         ...
     }
 
-    translate telephoneNumber fpml.TelephoneNumber to TelephoneNumber {
-        number: telephoneNumber -> number,
-        telephoneNumberType: telephoneNumber -> telephoneNumberType switch
-            WORK then TelephoneTypeEnum -> Work,
-            MOBILE then TelephoneTypeEnum -> Mobile,
-            FAX then TelephoneTypeEnum -> Fax,
-            PERSONAL then TelephoneTypeEnum -> Personal
+    translate fpml.TelephoneNumber to TelephoneNumber {
+        number:                 number,
+        telephoneNumberType:    telephoneNumberType switch
+                                    WORK        then TelephoneTypeEnum -> Work,
+                                    MOBILE      then TelephoneTypeEnum -> Mobile,
+                                    FAX         then TelephoneTypeEnum -> Fax,
+                                    PERSONAL    then TelephoneTypeEnum -> Personal
     }
 
     translate address fpml.Address, countryOverride fpml.CountryCode to Address {
-        street: address -> streetAddress -> streetLine,
-        city: address -> city,
-        state: address -> state,
-        country: countryOverride -> value default address -> country -> value,
-        //[meta scheme from countryOverride -> countryScheme default address -> country -> countryScheme]
+        street:     address -> streetAddress -> streetLine,
+        city:       address -> city,
+        state:      address -> state,
+        country:    StringWithScheme [countryOverride default address -> country] {
+                        scheme: (countryOverride default address -> country) -> countryScheme
+                    },
         postalCode: address -> postalCode
     }
 
-    translate businessUnit fpml.BusinessUnit to BusinessUnit {
-        name: businessUnit -> name,
-        contactInformation: translate businessUnit -> contactInfo, businessUnit -> country to ContactInformation,
-        identifier: translate businessUnit to Identifier
+    translate fpml.BusinessUnit to BusinessUnit {
+        id:                 id,
+        name:               name,
+        contactInformation: translate contactInfo, country to ContactInformation,
+        identifier:         translate item to Identifier
     }
 
-    translate businessUnit fpml.BusinessUnit to Identifier {
-        issuerReference: empty, //needs meta
-        issuer: empty, //needs meta
-        assignedIdentifier: translate businessUnit -> businessUnitId to AssignedIdentifier
+    translate fpml.BusinessUnit to Identifier {
+        id:                 empty,
+        issuerReference:    empty,
+        issuer:             empty,
+        assignedIdentifier: translate businessUnitId to AssignedIdentifier
 
     }
 
     translate unit fpml.Unit to AssignedIdentifier {
-        identifier: unit -> value,
-        //[meta scheme from unitScheme]
-        version: empty
+        identifier: StringWithScheme [unit] {
+                        scheme: unit -> unitScheme
+                    },
+        version:    empty
     }
 
-    translate relatedPerson fpml.RelatedPerson to NaturalPersonRole {
-        personReference: empty, //needs meta: [meta reference from personReference -> href]
-        role: relatedPerson -> role -> value to-enum NaturalPersonRoleEnum
-        //role [meta scheme from role -> personRoleScheme]
+    translate fpml.RelatedPerson to NaturalPersonRole {
+        personReference:    personReference -> href as-reference,
+        role:               NaturalPersonRoleEnumWithScheme [role to-enum NaturalPersonRoleEnum] {
+                                scheme: role -> personRoleScheme
+                            }
     }
 
 }

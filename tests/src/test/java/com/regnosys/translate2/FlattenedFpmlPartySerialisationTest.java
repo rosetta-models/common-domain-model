@@ -1,6 +1,10 @@
 package com.regnosys.translate2;
 
 
+import cdm.base.staticdata.party.NaturalPersonRole;
+import cdm.base.staticdata.party.NaturalPersonRoleEnum;
+import cdm.base.staticdata.party.metafields.FieldWithMetaNaturalPersonRoleEnum;
+import cdm.base.staticdata.party.metafields.ReferenceWithMetaParty;
 import cdm.event.common.TradeState;
 import cdm.event.workflow.WorkflowStep;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,14 +22,17 @@ import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
 import com.regnosys.ingest.test.framework.ingestor.service.TranslatorOptionsFactory;
 import com.regnosys.rosetta.RosettaRuntimeModule;
 import com.regnosys.rosetta.RosettaStandaloneSetup;
+import com.regnosys.rosetta.common.hashing.ReferenceResolverProcessStep;
 import com.regnosys.rosetta.common.postprocess.WorkflowPostProcessor;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapperCreator;
 import com.regnosys.rosetta.common.util.UrlUtils;
 import com.regnosys.rosetta.common.validation.RosettaTypeValidator;
 import com.rosetta.model.lib.process.PostProcessStep;
 import com.rosetta.model.lib.process.PostProcessor;
-import fpml.flattened.*;
-import fpml.flattened.translate.TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML;
+import cdm.fpml.flattened.*;
+import cdm.fpml.flattened.translate.TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML;
+import com.rosetta.model.metafields.FieldWithMetaString;
+import com.rosetta.model.metafields.MetaFields;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.xtext.common.TerminalsStandaloneSetup;
 import org.finos.cdm.CdmRuntimeModule;
@@ -55,7 +62,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FlattenedFpmlPartySerialisationTest {
 
-    public static final String FPML_FLATTENED_PACKAGE = "fpml.flattened";
+    public static final String FPML_FLATTENED_PACKAGE = "cdm.fpml.flattened";
     private static Injector injector;
     private static Module runtimeModule;
 
@@ -91,7 +98,7 @@ public class FlattenedFpmlPartySerialisationTest {
         assertThat(party.getPartyName().getValue(), equalTo("PARTYA"));
 
         TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML translateFunc = injector.getInstance(TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML.class);
-        cdm.base.staticdata.party.Party cdmParty = translateFunc.evaluate(party, null, null, null, null, null, null);
+        cdm.fpml.rewrite.party.Party cdmParty = translateFunc.evaluate(party, null, null, null, null, null, null);
         System.out.println(cdmParty);
         assertThat(cdmParty.getName().getValue(), equalTo("PARTYA"));
         assertThat(cdmParty.getPartyId().get(0).getIdentifier().getValue(), equalTo("549300VBWWV6BYQOWM67"));
@@ -111,21 +118,21 @@ public class FlattenedFpmlPartySerialisationTest {
         Party party = dataDocument.getParty().stream().filter(p -> p.getId().equals("party3")).findFirst().orElseThrow();
         Account account = dataDocument.getAccount().stream().filter(a -> a.getId().equals("primaryAct1")).findFirst().orElseThrow();
         AccountReference payerAccountReference = AccountReference.builder().setHref("primaryAct1").build();
-        PartyReference payerPartyReference = PartyReference.builder().setHref("payerPartyReferenceHrefValue").build();
+        PartyReference payerPartyReference = PartyReference.builder().setHref("party3").build();
         AccountReference receiverAccountReference = AccountReference.builder().setHref("someOtherAccount").build();
         PartyReference receiverPartyReference = PartyReference.builder().setHref("receiverPartyReferenceHrefValue").build();
         RelatedPerson relatedPerson = RelatedPerson.builder()
-                .setPersonReference(PersonReference.builder().setHref("personReferenceHrefValue"))
+                .setPersonReference(PersonReference.builder().setHref("person1"))
                 .setRole(PersonRole.builder()
                         .setPersonRoleScheme("personRoleSchemeValue")
                         .setValue("Broker"))
                 .build();
 
         TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML translateFunc = injector.getInstance(TranslatePaAndAcAndReAndAcAndPaAndAcAndPaToPartyUsingFpML.class);
-        cdm.base.staticdata.party.Party cdmParty = translateFunc.evaluate(party, account, relatedPerson, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference);
+        cdm.fpml.rewrite.party.Party cdmParty = translateFunc.evaluate(party, account, relatedPerson, payerAccountReference, payerPartyReference, receiverAccountReference, receiverPartyReference);
 
         List<PostProcessStep> postProcessors = IngestionTestUtil.getPostProcessors(runtimeModule);
-        cdmParty = (cdm.base.staticdata.party.Party) new PostProcessorRunner(new ArrayList<>(postProcessors)).postProcess(cdmParty.getClass(), cdmParty.toBuilder()).build();
+        cdmParty = (cdm.fpml.rewrite.party.Party) new PostProcessorRunner(new ArrayList<>(postProcessors)).postProcess(cdmParty.getClass(), cdmParty.toBuilder()).build();
 
         ObjectMapper jsonObjectMapper = RosettaObjectMapperCreator.forJSON().create();
         String translate2Result = jsonObjectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(cdmParty);
@@ -134,6 +141,26 @@ public class FlattenedFpmlPartySerialisationTest {
 
         // compare with translate 1
         cdm.base.staticdata.party.Party translate1CdmParty = ingest(xmlPath, postProcessors).stream().filter(p -> "party3".equals(p.getMeta().getExternalKey())).findFirst().orElseThrow();
+        // add manually constructed Translate 2 inputs to translate 1 output
+        translate1CdmParty =
+                translate1CdmParty.toBuilder()
+                        .addPersonRole(
+                                NaturalPersonRole.builder()
+                                        .addRole(
+                                                FieldWithMetaNaturalPersonRoleEnum.builder()
+                                                        .setValue(NaturalPersonRoleEnum.BROKER)
+                                                        .setMeta(MetaFields.builder().setScheme("personRoleSchemeValue"))))
+                        .setAccount(
+                                cdm.base.staticdata.party.Account.builder()
+                                        .setPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party3"))
+                                        .setAccountNumberValue("PRIM_450")
+                                        .setAccountNameValue("PRIMARY_ACCOUNT")
+                                        .setAccountBeneficiary(ReferenceWithMetaParty.builder().setExternalReference("party1"))
+                                        .setServicingParty(ReferenceWithMetaParty.builder().setExternalReference("fcm1")))
+                        .setMeta(MetaFields.builder().setExternalKey("primaryAct1"))
+                        .build();
+        // Post-process again for manual features
+        translate1CdmParty = (cdm.base.staticdata.party.Party) new PostProcessorRunner(new ArrayList<>(postProcessors)).postProcess(translate1CdmParty.getClass(), translate1CdmParty.toBuilder(), new ArrayList<>(), new ArrayList<>()).build();
         String translate1Result = jsonObjectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(translate1CdmParty);
         assertEquals(translate1Result, translate2Result);
     }

@@ -1,0 +1,5 @@
+namespace cdm.fpml.rewrite.common
+version "${project.version}"
+
+type StringWithScheme extends string:
+    scheme string (1..1)

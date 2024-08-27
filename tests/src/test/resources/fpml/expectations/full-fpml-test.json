@@ -1,33 +1,25 @@
 {
+  "id" : "party3",
   "partyId" : [ {
     "identifier" : {
       "value" : "abc123",
-      "meta" : {
-        "scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
-      }
+      "scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
     },
-    "identifierType" : "LEI",
-    "meta" : {
-      "globalKey" : "b802a560"
-    }
+    "identifierType" : "LEI"
   } ],
   "name" : {
     "value" : "PARTYC"
   },
   "businessUnit" : [ {
+    "id" : "desk1",
     "name" : "NY Swaps Desk",
     "identifier" : {
       "assignedIdentifier" : [ {
         "identifier" : {
           "value" : "FRONTSYSTEM",
-          "meta" : {
-            "scheme" : "http://www.abcbank.com/coding-scheme/abcbank/business-unit-id-1-0"
-          }
+          "scheme" : "http://www.abcbank.com/coding-scheme/abcbank/business-unit-id-1-0"
         }
-      } ],
-      "meta" : {
-        "globalKey" : "4c03e178"
-      }
+      } ]
     },
     "contactInformation" : {
       "address" : [ {
@@ -39,13 +31,10 @@
         },
         "postalCode" : "10017"
       } ]
-    },
-    "meta" : {
-      "globalKey" : "79fc090d",
-      "externalKey" : "desk1"
     }
   } ],
   "person" : [ {
+    "id" : "person1",
     "honorific" : "Mr",
     "firstName" : "John",
     "surname" : "Doe",
@@ -64,26 +53,18 @@
         "postalCode" : "123456"
       } ],
       "email" : [ "person1@email.com" ]
-    },
-    "meta" : {
-      "globalKey" : "b29f7e79",
-      "externalKey" : "person1"
     }
   } ],
   "personRole" : [ {
-    "personReference" : {
-      "externalReference" : "personReferenceHrefValue"
-    },
     "role" : [ {
       "value" : "Broker",
-      "meta" : {
-        "scheme" : "personRoleSchemeValue"
-      }
+      "scheme" : "personRoleSchemeValue"
     } ]
   } ],
   "account" : {
+    "id" : "primaryAct1",
     "partyReference" : {
-      "externalReference" : "payerPartyReferenceHrefValue"
+      "@referenceKey" : "party3"
     },
     "accountNumber" : {
       "value" : "PRIM_450"
@@ -91,15 +72,12 @@
     "accountName" : {
       "value" : "PRIMARY_ACCOUNT"
     },
+    "accountType" : { },
     "accountBeneficiary" : {
-      "externalReference" : "party1"
+      "@referenceKey" : "party1"
     },
     "servicingParty" : {
-      "externalReference" : "fcm1"
-    },
-    "meta" : {
-      "globalKey" : "1011337e",
-      "externalKey" : "primaryAct1"
+      "@referenceKey" : "fcm1"
     }
   },
   "contactInformation" : {
@@ -116,9 +94,5 @@
       "postalCode" : "10017"
     } ],
     "email" : [ "swap_trading@bankx.com" ]
-  },
-  "meta" : {
-    "globalKey" : "8caa86ce",
-    "externalKey" : "party3"
   }
 }

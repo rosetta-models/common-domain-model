@@ -5,6 +5,7 @@ import com.regnosys.rosetta.common.util.ClassPathUtils;
 import com.regnosys.rosetta.common.util.UrlUtils;
 import com.regnosys.rosetta.rosetta.RosettaModel;
 import com.regnosys.rosetta.transgest.ModelLoader;
+import com.regnosys.rosetta.utils.ModelIdProvider;
 import com.regnosys.testing.RosettaTestingInjectorProvider;
 import org.eclipse.xtext.testing.InjectWith;
 import org.eclipse.xtext.testing.extensions.InjectionExtension;
@@ -24,6 +25,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class UnusedModelElementFinderTest {
     @Inject
     private ModelLoader modelLoader;
+    @Inject
+    private ModelIdProvider modelIdProvider;
 
     @Test
     public void getlistOfOrphanedTypes() {
@@ -32,7 +35,7 @@ public class UnusedModelElementFinderTest {
                         ClassPathUtils.findPathsFromClassPath(ImmutableList.of("model", "rosetta"), ".*\\.rosetta", Optional.empty(), ClassPathUtils.class.getClassLoader())
                                 .stream()
                                 .map(UrlUtils::toUrl));
-        UnusedModelElementFinder unusedModelElementFinder = new UnusedModelElementFinder(models);
+        UnusedModelElementFinder unusedModelElementFinder = new UnusedModelElementFinder(models, modelIdProvider);
 
         unusedModelElementFinder.run();
         assertEquals(7, unusedModelElementFinder.getListOfTypes().size(), unusedModelElementFinder.getListOfTypes().toString());

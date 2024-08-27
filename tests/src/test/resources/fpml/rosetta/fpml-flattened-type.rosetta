@@ -1,4 +1,4 @@
-namespace fpml.flattened
+namespace cdm.fpml.flattened
 version "${project.version}"
 
 typeAlias NonEmptyScheme: <"The base class for all types which define coding schemes that must be populated.">
@@ -50,14 +50,12 @@ type Party: <"A type defining a legal entity or a subdivision of a legal entity.
     partyReference PartyReference (0..*) <"Reference to a party that is a member of the group of entities that are acting together as a single party in a transaction.">
     id string (1..1) <"The id uniquely identifying the Party within the document.">
 
-type PartyId: <"The data type used for party identifiers.">
+type PartyId extends NonEmptyScheme: <"The data type used for party identifiers.">
 
-    value NonEmptyScheme (1..1)
     partyIdScheme NonEmptyURI (1..1)
 
-type PartyName: <"The data type used for the legal name of an organization.">
+type PartyName extends Scheme: <"The data type used for the legal name of an organization.">
 
-    value Scheme (1..1)
     partyNameScheme NonEmptyURI (0..1)
 
 type ContactInformation: <"A type that represents how to contact an individual or organization.">
@@ -74,33 +72,27 @@ type BusinessUnit: <"A type that represents information about a unit within an o
     country CountryCode (0..1) <"The ISO 3166 standard code for the country where the individual works.">
     id string (0..1)
 
-type IndustryClassification: <"A party\'s industry sector classification.">
-    value Scheme (1..1)
+type IndustryClassification extends Scheme: <"A party\'s industry sector classification.">
     industryClassificationScheme NonEmptyURI (0..1)
 
-type CreditRating: <"A party\'s credit rating.">
+type CreditRating extends Scheme: <"A party\'s credit rating.">
 
-    value Scheme (1..1)
     creditRatingScheme NonEmptyURI (0..1)
 
-type CountryCode: <"The code representation of a country or an area of special sovereignty. By default it is a valid 2 character country code as defined by the ISO standard 3166-1 alpha-2 - Codes for representation of countries http://www.niso.org/standards/resources/3166.html.">
+type CountryCode extends Token: <"The code representation of a country or an area of special sovereignty. By default it is a valid 2 character country code as defined by the ISO standard 3166-1 alpha-2 - Codes for representation of countries http://www.niso.org/standards/resources/3166.html.">
 
-    value Token (1..1)
     countryScheme NonEmptyURI (0..1)
 
-type Region: <"A code that describes the world region of a counterparty. For example, NorthAmerica, Europe, Asia.">
+type Region extends Scheme: <"A code that describes the world region of a counterparty. For example, NorthAmerica, Europe, Asia.">
 
-    value Scheme (1..1)
     regionScheme NonEmptyURI (0..1)
 
-type GoverningLaw: <"Identification of the law governing the transaction.">
+type GoverningLaw extends Scheme: <"Identification of the law governing the transaction.">
 
-    value Scheme (1..1)
     governingLawScheme NonEmptyURI (0..1)
 
-type OrganizationType: <"A code that describes what type of role an organization plays, for example a SwapsDealer, a Major Swaps Participant, or Other">
+type OrganizationType extends Token: <"A code that describes what type of role an organization plays, for example a SwapsDealer, a Major Swaps Participant, or Other">
 
-    value Token (1..1)
     organizationTypeScheme NonEmptyURI (0..1)
 
 type TelephoneNumber: <"A type that represents a telephonic contact.">
@@ -110,9 +102,8 @@ type TelephoneNumber: <"A type that represents a telephonic contact.">
     telephoneNumberType FpmlTelephoneTypeEnum (0..1)
     number NonEmptyToken (1..1) <"A telephonic contact.">
 
-type Unit: <"A type used to record information about a unit, subdivision, desk, or other similar business entity.">
+type Unit extends Scheme: <"A type used to record information about a unit, subdivision, desk, or other similar business entity.">
 
-    value Scheme (1..1)
     unitScheme NonEmptyURI (0..1)
 
 type Person: <"A type that represents information about a person connected with a trade or business process.">
@@ -129,9 +120,8 @@ type Person: <"A type that represents information about a person connected with 
     country CountryCode (0..1) <"The ISO 3166 standard code for the country where the individual works.">
     id string (0..1)
 
-type PersonId: <"An identifier used to identify an individual person.">
+type PersonId extends NonEmptyScheme: <"An identifier used to identify an individual person.">
 
-    value NonEmptyScheme (1..1)
     personIdScheme NonEmptyURI (0..1)
 
 type BusinessUnitReference extends Reference: <"Reference to an organizational unit.">
@@ -147,9 +137,8 @@ type PersonReference extends Reference: <"Reference to an individual.">
 
 	href string (1..1)
 
-type PersonRole: <"A type describing a role played by a person in one or more transactions. Examples include roles such as Trader, Broker, MiddleOffice, Legal, etc. This can be extended to provide custom roles.">
+type PersonRole extends Scheme: <"A type describing a role played by a person in one or more transactions. Examples include roles such as Trader, Broker, MiddleOffice, Legal, etc. This can be extended to provide custom roles.">
 
-	value Scheme (1..1)
 	personRoleScheme NonEmptyURI (0..1)
 
 
@@ -158,9 +147,8 @@ type PartySequence:
     groupType PartyGroupType (1..1) <"Party Group Type, e.g. JointAndSeveralLiability">
     partyReference PartyReference (2..*) <"Reference to a party that is a member of the group of entities that are acting together as a single party in a transaction.">
 
-type PartyGroupType: <"The data type used for party group classification.">
+type PartyGroupType extends Scheme: <"The data type used for party group classification.">
 
-    value Scheme (1..1)
     partyGroupTypeScheme NonEmptyURI (0..1)
 
 type PartyReference extends Reference: <"Reference to a party.">
@@ -188,19 +176,16 @@ type Account: <"A generic account that represents any party\'s account at anothe
 	servicingParty PartyReference (0..1) <"A reference to the party that services/supports the account.">
 	id string (1..1) <"The unique identifier for the account within the document.">
 
-type AccountId: <"The data type used for account identifiers.">
+type AccountId extends NonEmptyScheme: <"The data type used for account identifiers.">
 
-	value NonEmptyScheme (1..1)
 	accountIdScheme NonEmptyURI (0..1) <"The identifier scheme used with this accountId. A unique URI to determine the authoritative issuer of these identifiers.">
 
-type AccountName: <"The data type used for the name of the account.">
+type AccountName extends Scheme: <"The data type used for the name of the account.">
 
-	value Scheme (1..1)
 	accountNameScheme NonEmptyURI (0..1) <"The identifier scheme used with this accountName. A unique URI to determine the source of the account name.">
 
-type AccountType: <"The data type used for account type.">
+type AccountType extends Scheme: <"The data type used for account type.">
 
-	value Scheme (1..1)
 	accountTypeScheme NonEmptyURI (0..1) <"The identifier scheme used with this accountType. A unique URI to determine the the type of account.">
 
 type AccountReference extends Reference: <"Reference to an account.">

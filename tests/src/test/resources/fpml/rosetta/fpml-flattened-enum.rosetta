@@ -1,5 +1,6 @@
-namespace fpml.flattened
+namespace cdm.fpml.flattened
 version "${project.version}"
+
 
 enum FpmlTelephoneTypeEnum:
 
