@@ -14,7 +14,7 @@
   "versionLimits": [
     {
       "lowestVersion": "5.13.0",
-      "upmostVersion": "5.14.0"
+      "upmostVersion": "5.14.1"
     },
     {
       "lowestVersion": "6.0.0-dev.56",
