@@ -14,11 +14,11 @@
   "versionLimits": [
     {
       "lowestVersion": "5.13.0",
-      "upmostVersion": "5.999.999"
+      "upmostVersion": "5.14.1"
     },
     {
       "lowestVersion": "6.0.0-dev.56",
-      "upmostVersion": "6.999.999"
+      "upmostVersion": "6.0.0-dev.63"
     }
   ],
   "links": [
