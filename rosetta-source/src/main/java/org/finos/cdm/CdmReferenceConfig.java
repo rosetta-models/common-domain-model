@@ -1,4 +1,4 @@
-package org.finos.cdm.processor;
+package org.finos.cdm;
 
 import cdm.event.common.TradeState;
 import com.regnosys.rosetta.common.hashing.ReferenceConfig;

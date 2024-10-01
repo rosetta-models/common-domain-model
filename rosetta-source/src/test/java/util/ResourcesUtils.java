@@ -13,7 +13,7 @@ import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.rosetta.model.lib.RosettaModelObject;
 import com.rosetta.model.lib.RosettaModelObjectBuilder;
 import com.rosetta.model.lib.process.PostProcessStep;
-import org.finos.cdm.processor.CdmReferenceConfig;
+import org.finos.cdm.CdmReferenceConfig;
 
 import java.io.IOException;
 import java.net.URL;
