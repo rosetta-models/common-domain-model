@@ -57,7 +57,7 @@
                                 </goals>
                                 <configuration>
                                     <classpathScope>test</classpathScope>
-                                    <mainClass>org.isda.cdm.documentation.DocumentationCodeValidator</mainClass>
+                                    <mainClass>org.finos.cdm.documentation.DocumentationCodeValidator</mainClass>
                                 </configuration>
                             </execution>
                         </executions>
@@ -880,7 +880,7 @@
                         </goals>
                         <configuration>
                             <classpathScope>test</classpathScope>
-                            <mainClass>org.isda.cdm.documentation.DocumentationCodeValidator</mainClass>
+                            <mainClass>org.finos.cdm.documentation.DocumentationCodeValidator</mainClass>
                         </configuration>
                     </execution>
                 </executions>
