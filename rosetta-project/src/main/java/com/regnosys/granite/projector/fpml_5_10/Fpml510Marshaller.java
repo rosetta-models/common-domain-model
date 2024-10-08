@@ -1,9 +1,9 @@
 package com.regnosys.granite.projector.fpml_5_10;
 
-import org.fpml.fpml_5.confirmation.DataDocument;
-import org.fpml.fpml_5.confirmation.Document;
-import org.fpml.fpml_5.confirmation.ObjectFactory;
-import org.fpml.fpml_5.confirmation.RequestClearing;
+import org.fpml.fpml_5.merged.DataDocument;
+import org.fpml.fpml_5.merged.Document;
+import org.fpml.fpml_5.merged.ObjectFactory;
+import org.fpml.fpml_5.merged.RequestClearing;
 
 import javax.xml.bind.*;
 import javax.xml.transform.stream.StreamSource;
@@ -11,7 +11,7 @@ import java.io.StringWriter;
 
 public class Fpml510Marshaller {
 
-	private static final String FPML_5_CONFIRMATION_PACKAGE = "org.fpml.fpml_5.confirmation";
+	private static final String FPML_5_CONFIRMATION_PACKAGE = "org.fpml.fpml_5.merged";
 	private static final String XML_DECLARATION_PROPERTY = "com.sun.xml.bind.xmlDeclaration";
 
 	public static <T extends Document> T unmarshal(Class<T> clazz, String path) throws JAXBException {

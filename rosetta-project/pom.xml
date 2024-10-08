@@ -143,6 +143,16 @@
                                     <bindingFiles>classpath:/schemas/fpml-5-10/confirmation/bindings.xjb</bindingFiles>
                                     <extension>true</extension>
                                 </xsdOption>
+<!--                                <xsdOption>-->
+<!--                                    <xsd>classpath:/schemas/fpml-5-10/recordkeeping/fpml-main-5-10.xsd</xsd>-->
+<!--                                    <bindingFiles>classpath:/schemas/fpml-5-10/recordkeeping/bindings.xjb</bindingFiles>-->
+<!--                                    <extension>true</extension>-->
+<!--                                </xsdOption>-->
+<!--                                <xsdOption>-->
+<!--                                    <xsd>classpath:/schemas/fiml/fiml-main-5-4.xsd</xsd>-->
+<!--                                    <bindingFiles>classpath:/schemas/fiml/bindings.xjb</bindingFiles>-->
+<!--                                    <extension>true</extension>-->
+<!--                                </xsdOption>-->
                             </xsdOptions>
                         </configuration>
                     </execution>

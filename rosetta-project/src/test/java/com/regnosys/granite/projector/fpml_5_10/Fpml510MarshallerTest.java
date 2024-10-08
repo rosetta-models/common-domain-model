@@ -1,7 +1,7 @@
 package com.regnosys.granite.projector.fpml_5_10;
 
-import org.fpml.fpml_5.confirmation.DataDocument;
-import org.fpml.fpml_5.confirmation.RequestClearing;
+import org.fpml.fpml_5.merged.DataDocument;
+import org.fpml.fpml_5.merged.RequestClearing;
 import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXBException;

@@ -1,9 +1,9 @@
 package com.regnosys.granite.projector.fpml_5_10;
 
 import com.google.common.io.Resources;
-import org.fpml.fpml_5.confirmation.DataDocument;
-import org.fpml.fpml_5.confirmation.Party;
-import org.fpml.fpml_5.confirmation.Trade;
+import org.fpml.fpml_5.merged.DataDocument;
+import org.fpml.fpml_5.merged.Party;
+import org.fpml.fpml_5.merged.Trade;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ public class Fpml510RecordKeepingSampleWriter {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Fpml510RecordKeepingSampleWriter.class);
 
-	private static final String FPML_5_CONFIRMATION_PACKAGE = "org.fpml.fpml_5.confirmation";
+	private static final String FPML_5_CONFIRMATION_PACKAGE = "org.fpml.fpml_5.merged";
 	private static final String XML_DECLARATION_PROPERTY = "com.sun.xml.bind.xmlDeclaration";
 
 	@Test

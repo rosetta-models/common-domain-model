@@ -49,7 +49,7 @@ venv/
 # Oxygen XML files
 *.xpr
 
-**/src/generated
+rosetta-source/src/generated
 **/src/test/generated
 /tests/cdm-sample-files/
 /.metadata/

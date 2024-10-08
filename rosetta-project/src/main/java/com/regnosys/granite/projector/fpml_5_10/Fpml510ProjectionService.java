@@ -7,9 +7,9 @@ import com.regnosys.granite.projector.ProjectionService;
 import com.regnosys.rosetta.common.validation.RosettaTypeValidator;
 import com.regnosys.rosetta.common.validation.ValidationReport;
 import com.rosetta.model.lib.RosettaModelObject;
-import org.fpml.fpml_5.confirmation.DataDocument;
-import org.fpml.fpml_5.confirmation.Document;
-import org.fpml.fpml_5.confirmation.RequestClearing;
+import org.fpml.fpml_5.merged.DataDocument;
+import org.fpml.fpml_5.merged.Document;
+import org.fpml.fpml_5.merged.RequestClearing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

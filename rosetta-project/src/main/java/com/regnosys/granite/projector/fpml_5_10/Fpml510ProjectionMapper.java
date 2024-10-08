@@ -46,22 +46,22 @@ import com.rosetta.model.metafields.FieldWithMetaDate;
 import com.rosetta.model.metafields.FieldWithMetaString;
 import com.rosetta.model.metafields.MetaFields;
 import com.rosetta.model.metafields.ReferenceWithMetaDate;
-import org.fpml.fpml_5.confirmation.CalculationAgent;
-import org.fpml.fpml_5.confirmation.Currency;
-import org.fpml.fpml_5.confirmation.EuropeanExercise;
-import org.fpml.fpml_5.confirmation.ExerciseNotice;
-import org.fpml.fpml_5.confirmation.ExerciseProcedure;
-import org.fpml.fpml_5.confirmation.FxFixingDate;
-import org.fpml.fpml_5.confirmation.InformationSource;
-import org.fpml.fpml_5.confirmation.ManualExercise;
-import org.fpml.fpml_5.confirmation.Money;
-import org.fpml.fpml_5.confirmation.Party;
-import org.fpml.fpml_5.confirmation.QuotationRateTypeEnum;
-import org.fpml.fpml_5.confirmation.RateObservation;
-import org.fpml.fpml_5.confirmation.SettlementProvision;
-import org.fpml.fpml_5.confirmation.SettlementRateOption;
-import org.fpml.fpml_5.confirmation.Strike;
-import org.fpml.fpml_5.confirmation.*;
+import org.fpml.fpml_5.merged.CalculationAgent;
+import org.fpml.fpml_5.merged.Currency;
+import org.fpml.fpml_5.merged.EuropeanExercise;
+import org.fpml.fpml_5.merged.ExerciseNotice;
+import org.fpml.fpml_5.merged.ExerciseProcedure;
+import org.fpml.fpml_5.merged.FxFixingDate;
+import org.fpml.fpml_5.merged.InformationSource;
+import org.fpml.fpml_5.merged.ManualExercise;
+import org.fpml.fpml_5.merged.Money;
+import org.fpml.fpml_5.merged.Party;
+import org.fpml.fpml_5.merged.QuotationRateTypeEnum;
+import org.fpml.fpml_5.merged.RateObservation;
+import org.fpml.fpml_5.merged.SettlementProvision;
+import org.fpml.fpml_5.merged.SettlementRateOption;
+import org.fpml.fpml_5.merged.Strike;
+import org.fpml.fpml_5.merged.*;
 import org.isda.cdm.processor.CdmReferenceConfig;
 
 import javax.xml.bind.JAXBElement;
@@ -781,7 +781,7 @@ public class Fpml510ProjectionMapper {
 	private Optional<IdentifiedPayerReceiver> getIdentifiedPayerReceiver(cdm.base.staticdata.party.PayerReceiverEnum cdmPayerReceiverEnum) {
 		return Optional.ofNullable(cdmPayerReceiverEnum)
 			.map(Enum::name)
-			.map(org.fpml.fpml_5.confirmation.PayerReceiverEnum::fromValue)
+			.map(org.fpml.fpml_5.merged.PayerReceiverEnum::fromValue)
 			.map(e -> {
 				IdentifiedPayerReceiver identifiedPayerReceiver = objectFactory.createIdentifiedPayerReceiver();
 				identifiedPayerReceiver.setValue(e);

@@ -3,6 +3,11 @@
               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
               jxb:extensionBindingPrefixes="xjc"
               xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <jxb:bindings schemaLocation="fpml-main-5-10.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.fpml.fpml_5.merged"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
     <jxb:bindings schemaLocation="fpml-loan-5-10.xsd">
         <jxb:bindings node="//xsd:complexType[@name='Prepayment']">
             <jxb:class name="LoanPrepayment"/>

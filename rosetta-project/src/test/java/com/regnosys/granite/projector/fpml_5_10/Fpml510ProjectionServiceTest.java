@@ -8,8 +8,8 @@ import com.regnosys.granite.projector.AbstractTest;
 import com.regnosys.granite.projector.ProjectionReport;
 import com.regnosys.granite.projector.ProjectionService;
 import com.regnosys.rosetta.common.validation.RosettaTypeValidator;
-import org.fpml.fpml_5.confirmation.Acknowledgement;
-import org.fpml.fpml_5.confirmation.DataDocument;
+import org.fpml.fpml_5.merged.Acknowledgement;
+import org.fpml.fpml_5.merged.DataDocument;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.hasItems;
