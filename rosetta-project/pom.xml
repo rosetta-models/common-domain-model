@@ -63,6 +63,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
         </dependency>
@@ -126,37 +130,30 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-xjc-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <id>xjc</id>
-                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>xsdtojava</goal>
+                            <goal>xjc</goal>
                         </goals>
-                        <configuration>
-                            <sourceRoot>${basedir}/src/generated/java</sourceRoot>
-                            <xsdOptions>
-                                <xsdOption>
-                                    <xsd>classpath:/schemas/fpml-5-10/confirmation/fpml-main-5-10.xsd</xsd>
-                                    <bindingFiles>classpath:/schemas/fpml-5-10/confirmation/bindings.xjb</bindingFiles>
-                                    <extension>true</extension>
-                                </xsdOption>
-<!--                                <xsdOption>-->
-<!--                                    <xsd>classpath:/schemas/fpml-5-10/recordkeeping/fpml-main-5-10.xsd</xsd>-->
-<!--                                    <bindingFiles>classpath:/schemas/fpml-5-10/recordkeeping/bindings.xjb</bindingFiles>-->
-<!--                                    <extension>true</extension>-->
-<!--                                </xsdOption>-->
-<!--                                <xsdOption>-->
-<!--                                    <xsd>classpath:/schemas/fiml/fiml-main-5-4.xsd</xsd>-->
-<!--                                    <bindingFiles>classpath:/schemas/fiml/bindings.xjb</bindingFiles>-->
-<!--                                    <extension>true</extension>-->
-<!--                                </xsdOption>-->
-                            </xsdOptions>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <packageName>org.fpml.fpml_5.merged</packageName>
+                    <xjbSources>
+                        <xjbSource>src/main/resources/global.xjb</xjbSource>
+                    </xjbSources>
+                    <sources>
+                        <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/confirmation/fpml-main-5-10.xsd</source>
+                    </sources>
+                    <outputDirectory>${basedir}/src/generated/java</outputDirectory>
+                    <clearOutputDir>true</clearOutputDir>
+<!--                    <verbose>true</verbose>-->
+                    <extension>true</extension>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
