@@ -144,17 +144,79 @@
                 <configuration>
                     <packageName>org.fpml.fpml_5.merged</packageName>
                     <xjbSources>
-                        <xjbSource>src/main/resources/global.xjb</xjbSource>
+<!--                        <xjbSource>src/main/resources/global.xjb</xjbSource>-->
+<!--                        <xjbSource>src/main/resources/episode_xjc.xjb</xjbSource>-->
+                        
+                        <xjbSource>src/main/resources/fpml-confirmation.xjb</xjbSource>
+<!--                        <xjbSource>src/main/resources/fpml-recordkeeping.xjb</xjbSource>-->
                     </xjbSources>
                     <sources>
                         <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/confirmation/fpml-main-5-10.xsd</source>
+<!--                        <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/recordkeeping/fpml-main-5-10.xsd</source>-->
                     </sources>
+<!--                    <xjcSourceExcludeFilters>-->
+<!--                        <filter implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">-->
+<!--                            <patternPrefix>.*</patternPrefix>-->
+<!--                            <patterns>-->
+<!--                                <pattern>xmldsig-core-schema\.xsd</pattern>-->
+<!--                            </patterns>-->
+<!--                        </filter>-->
+<!--                    </xjcSourceExcludeFilters>-->
+<!--                    <arguments>-->
+<!--                        <argument>-XautoNameResolution</argument>-->
+<!--                    </arguments>-->
                     <outputDirectory>${basedir}/src/generated/java</outputDirectory>
-                    <clearOutputDir>true</clearOutputDir>
-<!--                    <verbose>true</verbose>-->
+                    <clearOutputDir>false</clearOutputDir>
                     <extension>true</extension>
                 </configuration>
             </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.codehaus.mojo</groupId>-->
+            <!--                <artifactId>jaxb2-maven-plugin</artifactId>-->
+            <!--                <version>3.1.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>xjc-fpml-recordkeeping</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>xjc</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <sources>-->
+            <!--                        <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/recordkeeping/fpml-main-5-10.xsd</source>-->
+            <!--                    </sources>-->
+            <!--                    <outputDirectory>${basedir}/src/generated/java</outputDirectory>-->
+            <!--                    <clearOutputDir>true</clearOutputDir>-->
+            <!--                    <extension>true</extension>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.codehaus.mojo</groupId>-->
+            <!--                <artifactId>jaxb2-maven-plugin</artifactId>-->
+            <!--                <version>3.1.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>xjc</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>xjc</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <packageName>org.fpml.fpml_5.merged</packageName>-->
+            <!--                    <xjbSources>-->
+            <!--                        <xjbSource>src/main/resources/global.xjb</xjbSource>-->
+            <!--                    </xjbSources>-->
+            <!--                    <sources>-->
+            <!--                        <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/confirmation/fpml-main-5-10.xsd</source>-->
+            <!--                        <source>${project.parent.basedir}/rosetta-source/src/main/resources/schemas/fpml-5-10/recordkeeping/fpml-main-5-10.xsd</source>-->
+            <!--                    </sources>-->
+            <!--                    <outputDirectory>${basedir}/src/generated/java</outputDirectory>-->
+            <!--                    <clearOutputDir>true</clearOutputDir>-->
+            <!--                    <extension>true</extension>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>

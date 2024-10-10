@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="3.0" xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               jaxb:extensionBindingPrefixes="xjc">
+<!--
+    <jaxb:bindings scd="x-schema::tns" xmlns:tns="http://www.w3.org/2000/09/xmldsig#">
+        <jaxb:schemaBindings map="false">
+          <jaxb:package name="org.w3._2000._09.xmldsig_"/>
+        </jaxb:schemaBindings>
+        <jaxb:bindings scd="~tns:SignatureType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignatureType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SignatureValueType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignatureValueType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SignedInfoType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignedInfoType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:CanonicalizationMethodType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.CanonicalizationMethodType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SignatureMethodType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignatureMethodType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:ReferenceType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.ReferenceType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:TransformsType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.TransformsType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:TransformType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.TransformType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:DigestMethodType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.DigestMethodType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:KeyInfoType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.KeyInfoType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:KeyValueType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.KeyValueType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:RetrievalMethodType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.RetrievalMethodType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:X509DataType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.X509DataType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:PGPDataType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.PGPDataType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SPKIDataType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SPKIDataType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:ObjectType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.ObjectType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:ManifestType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.ManifestType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SignaturePropertiesType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignaturePropertiesType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:SignaturePropertyType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.SignaturePropertyType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:DSAKeyValueType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.DSAKeyValueType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:RSAKeyValueType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.RSAKeyValueType"/>
+        </jaxb:bindings>
+        <jaxb:bindings scd="~tns:X509IssuerSerialType">
+          <jaxb:class ref="org.w3._2000._09.xmldsig_.X509IssuerSerialType"/>
+        </jaxb:bindings>
+      </jaxb:bindings>
+-->
+
+</jaxb:bindings>
