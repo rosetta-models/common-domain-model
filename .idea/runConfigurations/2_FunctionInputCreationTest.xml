@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="2-FunctionInputCreationTest" type="JUnit" factoryName="JUnit">
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.isda.cdm.functions.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="zulu-11 (2)" />
+    <option name="PACKAGE_NAME" value="org.isda.cdm.functions" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="pattern" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <patterns>
+      <pattern testClass="org.isda.cdm.functions.FunctionInputCreationTest" />
+      <pattern testClass="org.isda.cdm.functions.SecLendingFunctionInputCreationTest" />
+    </patterns>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
