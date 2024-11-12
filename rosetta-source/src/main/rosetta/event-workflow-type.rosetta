@@ -1,6 +1,8 @@
 namespace cdm.event.workflow : <"Workflow concepts (orthogonal to business event): time stamp, credit limit, trade warehouse info and associated function specifications.">
 version "${project.version}"
 
+//test
+
 import cdm.base.datetime.*
 
 import cdm.base.staticdata.party.*
