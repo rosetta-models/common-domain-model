@@ -1,14 +1,16 @@
-# _CDM Model - CapacityUnit Enum_
+# _Business Events - Cancelled workflow step_
 
 _Background_
-In has been seen that in the ExternalUnitOfMeasure1Code from the 2Q2024 ISO External CodeSets v1, the unity Joule is supported in the Enum. However, in CDM this is not the case, as it does not appear anywhere in the CapacityUnitEnum. Therefore, the Joule unit of measure will be added to the CapacityUnitEnum for completeness and to align with 2Q2024 ISO External CodeSets v1, for versions 5 and 6 of CDM.
+In CDM, there is the function `Create_AcceptedWorkflowStepFromInstruction` under `cdm.event.workflow:func` for creating default accepted workflow steps. This function is currently being used in DRR, along with an analog function for the cancelled workflow steps, `Create_CancelledWorkflowStepFromInstruction`, which is located in DRR. This contribution adds the `Create_CancelledWorkflowStepFromInstruction` function from DRR to CDM, since it fits the `cdm.event.workflow:func` namespace better and allows to have all these workflowStep functions located in a single place in CDM, while also making it available for CDM-only usage if necessary.
 
 _What is being released?_
 
-- Updated `CapacityUnitEnum` in cdm.base.math
+_Functions_
 
-_Enumerations_
+- Added new `Create_CancelledWorkflowStepFromInstruction` function.
 
-- Updated `CapacityUnitEnum` by adding 'J' to support Joule unit
+_Review directions_
 
-The changes can be reviewed in PR: [#3198](https://github.com/finos/common-domain-model/pull/3198)
+In CDM, select the Textual Browser and inspect each of the changes identified above.
+
+The changes can be reviewed in PR: [#3195](https://github.com/finos/common-domain-model/pull/3195)
