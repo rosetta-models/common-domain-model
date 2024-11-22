@@ -698,9 +698,18 @@
                 "globalReference" : "afd6aeeb",
                 "externalReference" : "party1"
               }
+            }, {
+              "partyReference" : {
+                "globalReference" : "afd6aeeb",
+                "externalReference" : "party1"
+              },
+              "ownershipPartyReference" : {
+                "globalReference" : "afd6aeeb",
+                "externalReference" : "party1"
+              }
             } ],
             "meta" : {
-              "globalKey" : "429e7986"
+              "globalKey" : "1f6df014"
             }
           },
           "transferHistory" : [ {
@@ -759,7 +768,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "ae5b5a3f"
+            "globalKey" : "35843af1"
           }
         }
       }
@@ -798,6 +807,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "c87d0b83"
+    "globalKey" : "b499ec0f"
   }
 }

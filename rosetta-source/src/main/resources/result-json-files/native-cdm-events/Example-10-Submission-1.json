@@ -703,13 +703,22 @@
                 "globalReference" : "afd6aeeb",
                 "externalReference" : "party1"
               }
+            }, {
+              "partyReference" : {
+                "globalReference" : "afd6aeeb",
+                "externalReference" : "party1"
+              },
+              "ownershipPartyReference" : {
+                "globalReference" : "afd6aeeb",
+                "externalReference" : "party1"
+              }
             } ],
             "meta" : {
-              "globalKey" : "4f751874"
+              "globalKey" : "ad1c72e6"
             }
           },
           "meta" : {
-            "globalKey" : "4f751874"
+            "globalKey" : "ad1c72e6"
           }
         }
       }
@@ -748,6 +757,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "c336f897"
+    "globalKey" : "6ea6d6e3"
   }
 }

@@ -1009,6 +1009,17 @@
                 "externalKey" : "trade_source"
               }
             } ],
+            "partyRole" : [ {
+              "partyReference" : {
+                "globalReference" : "66b48bac",
+                "externalReference" : "trade_source"
+              },
+              "role" : "DataSubmitter",
+              "ownershipPartyReference" : {
+                "globalReference" : "ba4f",
+                "externalReference" : "clearing_firm"
+              }
+            } ],
             "clearedDate" : "2018-10-31",
             "account" : [ {
               "partyReference" : {
@@ -1031,7 +1042,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "e331052"
+              "globalKey" : "c095e118"
             }
           },
           "transferHistory" : [ {
@@ -1090,7 +1101,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "ad517ff8"
+            "globalKey" : "a5586372"
           }
         }
       }
@@ -1227,6 +1238,6 @@
     "workflowStatus" : "Cleared"
   },
   "meta" : {
-    "globalKey" : "5c7e6cf3"
+    "globalKey" : "457b8bed"
   }
 }

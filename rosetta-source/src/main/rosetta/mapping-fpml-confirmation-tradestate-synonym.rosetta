@@ -2085,6 +2085,9 @@ synonym source FpML_5_Confirmation_To_TradeState extends FpML
             // For FX Options
             [value "expiryTime" path "europeanExercise"]
         + expirationTimeType
+            [value "equityExpirationTimeType" path "equityEuropeanExercise"]
+            [value "equityExpirationTimeType" path "equityAmericanExercise"]
+            [value "equityExpirationTimeType" path "equityBermudaExercise"]
             [value "equityExpirationTimeType" path "equityExercise->equityEuropeanExercise"]
             [value "equityExpirationTimeType" path "equityExercise->equityAmericanExercise"]
             [value "equityExpirationTimeType" path "equityExercise->equityBermudaExercise"]

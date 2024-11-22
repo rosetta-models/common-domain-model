@@ -1464,6 +1464,17 @@
                 "externalKey" : "trade_source"
               }
             } ],
+            "partyRole" : [ {
+              "partyReference" : {
+                "globalReference" : "902a6db3",
+                "externalReference" : "trade_source"
+              },
+              "role" : "DataSubmitter",
+              "ownershipPartyReference" : {
+                "globalReference" : "1693c0",
+                "externalReference" : "clearing_firm"
+              }
+            } ],
             "clearedDate" : "2015-01-13",
             "account" : [ {
               "partyReference" : {
@@ -1486,7 +1497,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "bf5833c"
+              "globalKey" : "fbd60842"
             }
           },
           "transferHistory" : [ {
@@ -1545,7 +1556,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "428d34f9"
+            "globalKey" : "a467bc33"
           }
         }
       }
@@ -1584,6 +1595,6 @@
     "workflowStatus" : "Cleared"
   },
   "meta" : {
-    "globalKey" : "4c6565ac"
+    "globalKey" : "d2166a66"
   }
 }
