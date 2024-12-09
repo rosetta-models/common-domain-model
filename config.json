@@ -13,11 +13,11 @@
   ],
   "versionLimits": [
     {
-      "lowestVersion": "5.15.0",
+      "lowestVersion": "5.19.0",
       "upmostVersion": "5.999.999"
     },
     {
-      "lowestVersion": "6.0.0-dev.79",
+      "lowestVersion": "6.0.0-dev.84",
       "upmostVersion": "6.999.999"
     }
   ],
