@@ -8,7 +8,7 @@
   "fixedVersions": [
     {
       "id": "v4",
-      "upmostVersion": "5.999.999"
+      "upmostVersion": "6.999.999"
     }
   ],
   "versionLimits": [
@@ -17,7 +17,7 @@
       "upmostVersion": "5.999.999"
     },
     {
-      "lowestVersion": "6.0.0-dev.85",
+      "lowestVersion": "6.0.0-dev.92",
       "upmostVersion": "6.999.999"
     }
   ],
