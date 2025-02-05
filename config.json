@@ -8,7 +8,7 @@
   "fixedVersions": [
     {
       "id": "v4",
-      "upmostVersion": "6.999.999"
+      "upmostVersion": "5.999.999"
     }
   ],
   "versionLimits": [
