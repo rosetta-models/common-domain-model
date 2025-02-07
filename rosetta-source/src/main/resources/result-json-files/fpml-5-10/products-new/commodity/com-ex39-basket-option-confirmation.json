@@ -84,7 +84,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -107,7 +107,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

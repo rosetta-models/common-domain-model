@@ -14,7 +14,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2012-09-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "265adeac"
@@ -25,7 +25,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2012-09-30",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "265b4b89"
@@ -35,8 +35,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -45,7 +45,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -55,7 +55,7 @@
                     "periodMultiplier" : 5,
                     "period" : "D",
                     "@key" : "5951832e",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "MODFOLLOWING",
                     "@type" : "cdm.base.datetime.RelativeDateOffset"
                   }
@@ -66,8 +66,8 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "observationTerms" : {
               "calculationPeriodDates" : {
@@ -83,11 +83,11 @@
               },
               "observationDates" : {
                 "parametricDates" : {
-                  "dayType" : "BUSINESS",
-                  "dayDistribution" : "LAST",
+                  "dayType" : "Business",
+                  "dayDistribution" : "Last",
                   "businessCenters" : {
                     "commodityBusinessCalendar" : [ {
-                      "@data" : "GAS_DAILY_PRICE_GUIDE"
+                      "@data" : "GAS-DAILY-PRICE-GUIDE"
                     } ],
                     "@key" : "3c9a52fa"
                   }
@@ -99,15 +99,15 @@
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "PUT",
+            "optionType" : "Put",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "relativeDate" : {
                   "periodMultiplier" : 0,
                   "period" : "D",
                   "@key" : "95ec4b9b",
-                  "businessDayConvention" : "NOT_APPLICABLE",
+                  "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
                     "@ref:external" : "PricingDate"
                   },
@@ -133,7 +133,7 @@
                 "perUnitOf" : {
                   "capacityUnit" : "USMMBTU"
                 },
-                "priceType" : "ASSET_PRICE",
+                "priceType" : "AssetPrice",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -142,7 +142,7 @@
           "@key" : "13b9648"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "10cd274f"
@@ -179,7 +179,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "MID",
+              "priceQuoteType" : "Mid",
               "@type" : "cdm.base.staticdata.asset.common.Commodity"
             }
           },
@@ -189,20 +189,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "fc9b469a",
         "@ref:external" : "partyB"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "1bf2f883",
         "@ref:external" : "partyA"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "1bf2f883",
         "@ref:external" : "partyA"
@@ -260,9 +260,9 @@
         "agreementDate" : "2010-11-10",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           }
         },
@@ -278,11 +278,11 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2000"
             }, {
-              "@data" : "ISDA_2005_COMMODITY"
+              "@data" : "ISDA2005Commodity"
             } ]
           }
         },
@@ -318,7 +318,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -341,7 +341,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

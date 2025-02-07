@@ -13,8 +13,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -23,14 +23,14 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementDate" : {
                 "adjustableOrRelativeDate" : {
                   "relativeDate" : {
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "51144452",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -57,7 +57,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2007-01-05",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "@key" : "3a4b88ab"
                       },
                       "@key" : "25bd43b0"
@@ -73,7 +73,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2009-12-19",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "2603dafe"
@@ -97,7 +97,7 @@
                 "expectedN" : 120,
                 "correlationStrikePrice" : {
                   "value" : 0.60123,
-                  "priceType" : "CORRELATION",
+                  "priceType" : "Correlation",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "boundedCorrelation" : {
@@ -117,7 +117,7 @@
           "@key" : "59b65713"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "11c8c73d"
@@ -145,12 +145,12 @@
                         "@data" : "IBM.N",
                         "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                       },
-                      "identifierType" : "OTHER"
+                      "identifierType" : "Other"
                     }, {
                       "identifier" : {
                         "@data" : "International Business Machines Common Share"
                       },
-                      "identifierType" : "NAME"
+                      "identifierType" : "Name"
                     } ],
                     "isExchangeListed" : true,
                     "exchange" : {
@@ -159,7 +159,7 @@
                       },
                       "@key" : "293090"
                     },
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -175,12 +175,12 @@
                         "@data" : "MSFT.O",
                         "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                       },
-                      "identifierType" : "OTHER"
+                      "identifierType" : "Other"
                     }, {
                       "identifier" : {
                         "@data" : "Microsoft Common Share"
                       },
-                      "identifierType" : "NAME"
+                      "identifierType" : "Name"
                     } ],
                     "isExchangeListed" : true,
                     "exchange" : {
@@ -189,7 +189,7 @@
                       },
                       "@key" : "292da8"
                     },
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -205,12 +205,12 @@
                         "@data" : "B.N",
                         "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                       },
-                      "identifierType" : "OTHER"
+                      "identifierType" : "Other"
                     }, {
                       "identifier" : {
                         "@data" : "Barnes and Noble Common Share"
                       },
-                      "identifierType" : "NAME"
+                      "identifierType" : "Name"
                     } ],
                     "isExchangeListed" : true,
                     "exchange" : {
@@ -219,7 +219,7 @@
                       },
                       "@key" : "293090"
                     },
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -235,20 +235,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "kom722"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "kow029"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "33f59567",
         "@ref:external" : "kom722"
@@ -310,9 +310,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 2002
@@ -329,11 +329,11 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2000"
             }, {
-              "@data" : "ISDA_2002_EQUITY_DERIVATIVES"
+              "@data" : "ISDA2002EquityDerivatives"
             } ]
           }
         },

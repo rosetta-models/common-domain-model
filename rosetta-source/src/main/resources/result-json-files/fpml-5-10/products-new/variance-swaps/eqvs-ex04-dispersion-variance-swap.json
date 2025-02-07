@@ -53,8 +53,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -63,7 +63,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "EUR"
               },
@@ -74,7 +74,7 @@
                     "period" : "D",
                     "@key" : "7a08418",
                     "@key:external" : "csd",
-                    "dayType" : "CALENDAR",
+                    "dayType" : "Calendar",
                     "businessDayConvention" : "MODFOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -141,7 +141,7 @@
                   },
                   "@key" : "a4838f25"
                 },
-                "valuationTimeType" : "CLOSE",
+                "valuationTimeType" : "Close",
                 "@key" : "efc23b53"
               }
             },
@@ -158,7 +158,7 @@
                 "initialLevel" : 0.8,
                 "varianceStrikePrice" : {
                   "value" : 0.3,
-                  "priceType" : "VARIANCE",
+                  "priceType" : "Variance",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "@type" : "cdm.product.asset.VarianceReturnTerms"
@@ -170,8 +170,8 @@
         }, {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -192,7 +192,7 @@
                 "initialLevel" : 0.8,
                 "varianceStrikePrice" : {
                   "value" : 0.35,
-                  "priceType" : "VARIANCE",
+                  "priceType" : "Variance",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "@type" : "cdm.product.asset.VarianceReturnTerms"
@@ -204,8 +204,8 @@
         }, {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -226,7 +226,7 @@
                 "initialLevel" : 0.8,
                 "varianceStrikePrice" : {
                   "value" : 0.4,
-                  "priceType" : "VARIANCE",
+                  "priceType" : "Variance",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "@type" : "cdm.product.asset.VarianceReturnTerms"
@@ -237,7 +237,7 @@
           "@key" : "df0b5611"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "f77a7fdc"
@@ -262,9 +262,9 @@
                   "@data" : "STOXX50E",
                   "@scheme" : "http://www.dowjones.com/coding-scheme/instrument-id"
                 },
-                "identifierType" : "OTHER"
+                "identifierType" : "Other"
               } ],
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -291,12 +291,12 @@
                     "@data" : "AH.AS",
                     "@scheme" : "uri:ticker"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "Ahold"
                   },
-                  "identifierType" : "NAME"
+                  "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
                 "exchange" : {
@@ -305,7 +305,7 @@
                   },
                   "@key" : "28fefb"
                 },
-                "instrumentType" : "EQUITY",
+                "instrumentType" : "Equity",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -333,12 +333,12 @@
                     "@data" : "RDSA.AS",
                     "@scheme" : "uri:ticker"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "Royal Dutch Shell A"
                   },
-                  "identifierType" : "NAME"
+                  "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
                 "exchange" : {
@@ -347,7 +347,7 @@
                   },
                   "@key" : "28fefb"
                 },
-                "instrumentType" : "EQUITY",
+                "instrumentType" : "Equity",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -358,20 +358,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "74597c1f",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "76d32c17",
         "@ref:external" : "party2"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "74597c1f",
         "@ref:external" : "party1"
@@ -422,9 +422,9 @@
         "agreementDate" : "2002-03-15",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 2002

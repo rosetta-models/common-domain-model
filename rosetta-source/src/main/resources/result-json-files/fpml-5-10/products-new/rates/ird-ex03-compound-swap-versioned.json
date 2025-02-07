@@ -13,8 +13,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -29,14 +29,14 @@
                 },
                 "@key" : "5c38cb89",
                 "finalRateRounding" : {
-                  "roundingDirection" : "NEAREST",
+                  "roundingDirection" : "Nearest",
                   "precision" : 7
                 },
                 "@type" : "cdm.product.asset.FloatingRateSpecification"
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -85,7 +85,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f7a",
-                "rollConvention" : "_27",
+                "rollConvention" : "27",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "c239cad3",
@@ -97,12 +97,12 @@
                 "period" : "M",
                 "@key" : "107"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -123,12 +123,12 @@
                 "@ref" : "c239cad3",
                 "@ref:external" : "floatingCalcPeriodDates"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : -2,
                 "period" : "D",
                 "@key" : "eff6d356",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -162,7 +162,7 @@
               "@key" : "924ca9c3",
               "@key:external" : "resetDates"
             },
-            "compoundingMethod" : "FLAT",
+            "compoundingMethod" : "Flat",
             "cashflowRepresentation" : {
               "cashflowsMatchParameters" : true,
               "paymentCalculationPeriod" : [ {
@@ -293,8 +293,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -313,7 +313,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "_30_360"
+              "@data" : "30/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -360,7 +360,7 @@
                 "periodMultiplier" : 6,
                 "period" : "M",
                 "@key" : "18abd",
-                "rollConvention" : "_27",
+                "rollConvention" : "27",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "d54cd385",
@@ -372,12 +372,12 @@
                 "period" : "M",
                 "@key" : "107"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -468,10 +468,10 @@
                   "identifier" : {
                     "@data" : "USD-LIBOR-BBA"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "USD_LIBOR_BBA"
+                  "@data" : "USD-LIBOR-BBA"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 3,
@@ -499,7 +499,7 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -517,13 +517,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "165d4199",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f69a01",
         "@ref:external" : "party1"

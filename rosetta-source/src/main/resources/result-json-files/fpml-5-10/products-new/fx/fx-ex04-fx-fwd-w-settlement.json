@@ -13,8 +13,8 @@
         "payout" : [ {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -59,7 +59,7 @@
               "@data" : "GBP"
             }
           },
-          "priceType" : "EXCHANGE_RATE",
+          "priceType" : "ExchangeRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -89,7 +89,7 @@
                 "identifier" : {
                   "@data" : "GBP"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -100,13 +100,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "6c7f6e62",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "6b3b6af3",
         "@ref:external" : "party2"

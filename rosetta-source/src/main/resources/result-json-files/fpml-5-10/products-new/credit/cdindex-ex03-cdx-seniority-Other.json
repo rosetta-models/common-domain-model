@@ -27,8 +27,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -42,18 +42,18 @@
                   "identifier" : {
                     "@data" : "Dow Jones CDX NA IG.2"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "name" : {
                   "@data" : "Dow Jones CDX NA IG.2"
                 },
-                "assetClass" : "CREDIT",
+                "assetClass" : "Credit",
                 "indexSeries" : 2,
                 "indexAnnexDate" : "2004-07-06",
                 "indexAnnexSource" : {
-                  "@data" : "PUBLISHER"
+                  "@data" : "Publisher"
                 },
-                "seniority" : "OTHER",
+                "seniority" : "Other",
                 "@key" : "623b0707",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
@@ -64,8 +64,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -104,7 +104,7 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -124,13 +124,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
@@ -148,7 +148,7 @@
         }
       } ],
       "@key" : "1ecdb5a5",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -189,9 +189,9 @@
         "agreementDate" : "2004-10-18",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "DJ_CDX_NA"
+              "@data" : "DJ.CDX.NA"
             }
           }
         },
@@ -227,7 +227,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -243,7 +243,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "UPFRONT"
+        "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
     },

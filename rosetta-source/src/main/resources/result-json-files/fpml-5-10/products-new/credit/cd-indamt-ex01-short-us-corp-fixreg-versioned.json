@@ -27,8 +27,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -59,7 +59,7 @@
                       },
                       "identifierType" : "CUSIP"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   },
                   "primaryObligorReference" : {
@@ -78,7 +78,7 @@
                 "restructuring" : {
                   "applicable" : true,
                   "restructuringType" : {
-                    "@data" : "MOD_R"
+                    "@data" : "ModR"
                   },
                   "multipleHolderObligation" : true
                 },
@@ -93,8 +93,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -118,7 +118,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "204d",
-                "rollConvention" : "_6",
+                "rollConvention" : "6",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "204d"
@@ -153,7 +153,7 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -173,13 +173,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "e1326d8",
         "@ref:external" : "nf4f5"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "4f580caa",
         "@ref:external" : "koy4rt1"
@@ -238,9 +238,9 @@
         "agreementDate" : "2003-06-06",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "ISDA_2003_CREDIT_NORTH_AMERICAN"
+              "@data" : "ISDA2003CreditNorthAmerican"
             }
           }
         },

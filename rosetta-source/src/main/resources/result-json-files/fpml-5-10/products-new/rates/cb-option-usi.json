@@ -13,8 +13,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -23,7 +23,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "settlementCurrency" : {
                 "@data" : "CHF"
               },
@@ -33,7 +33,7 @@
                     "periodMultiplier" : 8,
                     "period" : "D",
                     "@key" : "1003a5c1",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -56,17 +56,17 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Observable" : {
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "AMERICAN",
+              "style" : "American",
               "commencementDate" : {
                 "adjustableDate" : {
                   "unadjustedDate" : "2006-01-19",
@@ -118,11 +118,11 @@
                   "@data" : "GBLO"
                 }
               },
-              "expirationTimeType" : "SPECIFIC_TIME",
+              "expirationTimeType" : "SpecificTime",
               "exerciseProcedure" : {
                 "manualExercise" : {
                   "exerciseNotice" : {
-                    "exerciseNoticeGiver" : "SELLER",
+                    "exerciseNoticeGiver" : "Seller",
                     "businessCenter" : {
                       "@data" : "GBLO"
                     }
@@ -137,20 +137,20 @@
             "strike" : {
               "referenceSwapCurve" : {
                 "swapUnwindValue" : {
-                  "floatingRateIndex" : "EUR_LIBOR_BBA",
+                  "floatingRateIndex" : "EUR-LIBOR-BBA",
                   "indexTenor" : {
                     "periodMultiplier" : 6,
                     "period" : "M",
                     "@key" : "107"
                   },
                   "spread" : 85,
-                  "side" : "BID"
+                  "side" : "Bid"
                 },
                 "makeWholeAmount" : {
-                  "floatingRateIndex" : "EUR_LIBOR_BBA",
+                  "floatingRateIndex" : "EUR-LIBOR-BBA",
                   "spread" : 85,
-                  "side" : "BID",
-                  "interpolationMethod" : "LINEAR_ZERO_YIELD",
+                  "side" : "Bid",
+                  "interpolationMethod" : "LinearZeroYield",
                   "earlyCallDate" : {
                     "@data" : "2006-07-19",
                     "@key" : "3eb1d3"
@@ -164,7 +164,7 @@
           "@key" : "2f4610e0"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "c25141ca"
@@ -174,7 +174,7 @@
         "quantity" : [ {
           "value" : 1,
           "unit" : {
-            "financialUnit" : "CONTRACT"
+            "financialUnit" : "Contract"
           },
           "multiplier" : {
             "value" : 1100000,
@@ -199,7 +199,7 @@
                   },
                   "identifierType" : "ISIN"
                 } ],
-                "instrumentType" : "DEBT",
+                "instrumentType" : "Debt",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -210,20 +210,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4abe1874",
         "@ref:external" : "fdkhjbgr"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "4abe1855",
         "@ref:external" : "jhf45s"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "4abe1855",
         "@ref:external" : "jhf45s"
@@ -241,7 +241,7 @@
         }
       } ],
       "@key" : "af42d69a",
-      "identifierType" : "UNIQUE_SWAP_IDENTIFIER",
+      "identifierType" : "UniqueSwapIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {

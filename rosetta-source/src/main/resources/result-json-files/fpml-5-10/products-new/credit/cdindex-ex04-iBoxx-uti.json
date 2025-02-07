@@ -27,8 +27,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -42,7 +42,7 @@
                   "identifier" : {
                     "@data" : "iBoxx EUR Corporates"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "DE0006301161",
@@ -53,7 +53,7 @@
                 "name" : {
                   "@data" : "iBoxx EUR Corporates"
                 },
-                "assetClass" : "CREDIT",
+                "assetClass" : "Credit",
                 "@key" : "451af30d",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
@@ -64,8 +64,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -97,7 +97,7 @@
                       "@data" : "USD"
                     }
                   },
-                  "priceType" : "INTEREST_RATE",
+                  "priceType" : "InterestRate",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "@type" : "cdm.product.asset.FloatingRateSpecification"
@@ -110,7 +110,7 @@
               "finalFixingDate" : {
                 "unadjustedDate" : "2019-03-20",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "NOT_APPLICABLE",
+                  "businessDayConvention" : "NotApplicable",
                   "@key" : "3a4b88ab"
                 },
                 "@key" : "2727bc7f"
@@ -138,8 +138,8 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -161,10 +161,10 @@
                   "identifier" : {
                     "@data" : "USD-LIBOR-BBA"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "USD_LIBOR_BBA",
+                  "@data" : "USD-LIBOR-BBA",
                   "@scheme" : "http://www.fpml.org/coding-scheme/floating-rate-index"
                 },
                 "@type" : "cdm.observable.asset.FloatingRateIndex"
@@ -190,13 +190,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
@@ -214,7 +214,7 @@
         }
       } ],
       "@key" : "c6afb4da",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -254,7 +254,7 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2006",
               "@scheme" : "http://www.fpml.org/coding-scheme/contractual-definitions"
@@ -293,7 +293,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -309,7 +309,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "UPFRONT"
+        "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
     },

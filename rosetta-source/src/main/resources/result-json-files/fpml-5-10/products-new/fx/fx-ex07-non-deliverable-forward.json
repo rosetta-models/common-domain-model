@@ -13,8 +13,8 @@
         "payout" : [ {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -26,7 +26,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -45,12 +45,12 @@
                       "currency2" : {
                         "@data" : "INR"
                       },
-                      "quoteBasis" : "CURRENCY_2_PER_CURRENCY_1"
+                      "quoteBasis" : "Currency2PerCurrency1"
                     },
                     "informationSource" : {
                       "primarySource" : {
                         "sourceProvider" : {
-                          "@data" : "REUTERS"
+                          "@data" : "Reuters"
                         },
                         "sourcePage" : {
                           "@data" : "RBIB"
@@ -108,12 +108,12 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "EXCHANGE_RATE",
+          "priceType" : "ExchangeRate",
           "composite" : {
             "baseValue" : 43.35,
             "operand" : 0.05,
-            "arithmeticOperator" : "ADD",
-            "operandType" : "FORWARD_POINT"
+            "arithmeticOperator" : "Add",
+            "operandType" : "ForwardPoint"
           },
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
@@ -144,7 +144,7 @@
                 "identifier" : {
                   "@data" : "USD"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -155,13 +155,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "45bde65c",
         "@ref:external" : "party2"

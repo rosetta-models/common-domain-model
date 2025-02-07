@@ -6,11 +6,11 @@
     "product" : {
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "COMMODITY"
+          "@data" : "Commodity"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "Commodity:Energy:Oil:Option:Cash"
@@ -48,8 +48,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -58,7 +58,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -68,7 +68,7 @@
                     "periodMultiplier" : 5,
                     "period" : "D",
                     "@key" : "5f333497",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "@type" : "cdm.base.datetime.RelativeDateOffset"
                   }
@@ -79,8 +79,8 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "observationTerms" : {
               "calculationPeriodDates" : {
@@ -96,8 +96,8 @@
               },
               "observationDates" : {
                 "parametricDates" : {
-                  "dayType" : "BUSINESS",
-                  "dayDistribution" : "LAST"
+                  "dayType" : "Business",
+                  "dayDistribution" : "Last"
                 }
               }
             },
@@ -106,14 +106,14 @@
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2013-01-31",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "2671d54a"
@@ -123,7 +123,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2013-02-28",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "2672ba47"
@@ -133,7 +133,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2013-03-31",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "2673b5ca"
@@ -186,7 +186,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "SETTLEMENT",
+              "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "periodMultiplier" : 1,
@@ -204,13 +204,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4041c228",
         "@ref:external" : "PartyB"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "7fd57548",
         "@ref:external" : "PartyA"
@@ -285,7 +285,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -295,7 +295,7 @@
           "periodMultiplier" : 2,
           "period" : "D",
           "@key" : "63993681",
-          "dayType" : "BUSINESS",
+          "dayType" : "Business",
           "businessDayConvention" : "NONE",
           "businessCenters" : {
             "businessCenter" : [ {
@@ -321,7 +321,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

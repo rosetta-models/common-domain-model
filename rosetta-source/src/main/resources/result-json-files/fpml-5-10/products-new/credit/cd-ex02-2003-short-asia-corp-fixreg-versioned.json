@@ -27,8 +27,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -57,7 +57,7 @@
                       },
                       "identifierType" : "ISIN"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   },
                   "primaryObligorReference" : {
@@ -88,8 +88,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -112,7 +112,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "204c",
-                "rollConvention" : "_5",
+                "rollConvention" : "5",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "204c"
@@ -152,7 +152,7 @@
               "@data" : "JPY"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -172,13 +172,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "e1326d8",
         "@ref:external" : "zgr5867g"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
@@ -237,9 +237,9 @@
         "agreementDate" : "2003-06-06",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "ISDA_2003_CREDIT_JAPAN"
+              "@data" : "ISDA2003CreditJapan"
             }
           }
         },

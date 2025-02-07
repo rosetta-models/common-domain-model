@@ -14,7 +14,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2007-11-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25c6972c"
@@ -25,7 +25,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2010-06-17",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "261c39fc"
@@ -35,8 +35,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -46,7 +46,7 @@
               "@key:external" : "gu5gh"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -86,7 +86,7 @@
                       },
                       "identifierType" : "BBGID"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "borrower" : [ {
                       "name" : {
                         "@data" : "BorrowerName1"
@@ -111,7 +111,7 @@
             },
             "protectionTerms" : [ {
               "obligations" : {
-                "category" : "LOAN",
+                "category" : "Loan",
                 "fullFaithAndCreditObLiability" : true,
                 "designatedPriority" : {
                   "@data" : "FirstLienLoan",
@@ -129,8 +129,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -154,7 +154,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f78",
-                "rollConvention" : "_25",
+                "rollConvention" : "25",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "17f78"
@@ -173,7 +173,7 @@
           "@key" : "af3c7811"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "82780dce"
@@ -194,7 +194,7 @@
               "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -215,20 +215,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "8e102e2b",
         "@ref:external" : "e54t5"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "8e102e2c",
         "@ref:external" : "fhgtd3"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "8e102e2b",
         "@ref:external" : "e54t5"
@@ -279,9 +279,9 @@
         "agreementDate" : "2007-12-12",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 1992
@@ -298,16 +298,16 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualTermsSupplement" : [ {
               "contractualTermsSupplementType" : {
-                "@data" : "STANDARD_LCDS"
+                "@data" : "StandardLCDS"
               },
               "publicationDate" : "2007-12-12"
             } ],
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }

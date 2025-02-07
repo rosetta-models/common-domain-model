@@ -5,7 +5,7 @@
   "trade" : {
     "product" : {
       "taxonomy" : [ {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "Equity:Option:PriceReturnBasicPerformance:SingleIndex"
@@ -21,8 +21,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -31,7 +31,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "CHF"
               },
@@ -41,7 +41,7 @@
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "2c4c46fb",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "dateRelativeTo" : {
                       "@ref:external" : "valuation"
@@ -55,17 +55,17 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Observable" : {
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2004-12-19",
@@ -94,9 +94,9 @@
                   }
                 },
                 "perUnitOf" : {
-                  "financialUnit" : "INDEX_UNIT"
+                  "financialUnit" : "IndexUnit"
                 },
-                "priceType" : "ASSET_PRICE",
+                "priceType" : "AssetPrice",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -105,7 +105,7 @@
           "@key" : "e4c22de1"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "b903f80"
@@ -115,12 +115,12 @@
         "quantity" : [ {
           "value" : 2500,
           "unit" : {
-            "financialUnit" : "CONTRACT"
+            "financialUnit" : "Contract"
           },
           "multiplier" : {
             "value" : 1,
             "unit" : {
-              "financialUnit" : "INDEX_UNIT"
+              "financialUnit" : "IndexUnit"
             },
             "@type" : "cdm.base.math.Measure"
           },
@@ -135,7 +135,7 @@
                   "@data" : ".SSMI",
                   "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                 },
-                "identifierType" : "OTHER"
+                "identifierType" : "Other"
               } ],
               "isExchangeListed" : true,
               "exchange" : {
@@ -148,7 +148,7 @@
               "name" : {
                 "@data" : "Swiss Market Index"
               },
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -158,20 +158,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
@@ -220,9 +220,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 2002
@@ -239,7 +239,7 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2000"
             } ]
@@ -280,7 +280,7 @@
             "identifier" : {
               "@data" : "CHF"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -303,7 +303,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

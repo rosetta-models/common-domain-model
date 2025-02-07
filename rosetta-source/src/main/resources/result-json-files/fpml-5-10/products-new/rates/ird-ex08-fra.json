@@ -13,8 +13,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -33,7 +33,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -90,8 +90,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -109,7 +109,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -154,7 +154,7 @@
                 "periodMultiplier" : -2,
                 "period" : "D",
                 "@key" : "ce01227d",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -194,7 +194,7 @@
               "@data" : "CHF"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -228,11 +228,11 @@
                   "identifier" : {
                     "@data" : "CHF-LIBOR-BBA"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
-                "assetClass" : "INTEREST_RATE",
+                "assetClass" : "InterestRate",
                 "floatingRateIndex" : {
-                  "@data" : "CHF_LIBOR_BBA"
+                  "@data" : "CHF-LIBOR-BBA"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 6,
@@ -250,13 +250,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "be44d3fb",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a887a4ca",
         "@ref:external" : "party2"

@@ -9,12 +9,12 @@
           "@data" : "InterestRate:IRSwap:FixedFloat",
           "@scheme" : "http://www.fpml.org/coding-scheme/product-taxonomy"
         },
-        "source" : "OTHER",
+        "source" : "Other",
         "@key" : "44520a9a"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "INTEREST_RATE",
+          "@data" : "InterestRate",
           "@scheme" : "http://www.fpml.org/coding-scheme/asset-class-simple"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
@@ -36,8 +36,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -46,7 +46,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -56,7 +56,7 @@
                   "valuationSource" : {
                     "settlementRateOption" : {
                       "settlementRateOption" : {
-                        "@data" : "KRW_KFTC18_KRW02"
+                        "@data" : "KRW.KFTC18/KRW02"
                       }
                     }
                   }
@@ -66,7 +66,7 @@
                     "periodMultiplier" : -2,
                     "period" : "D",
                     "@key" : "1a66f7c0",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -100,7 +100,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -149,7 +149,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f73",
-                "rollConvention" : "_20",
+                "rollConvention" : "20",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "c9e60c9b",
@@ -161,7 +161,7 @@
                 "period" : "M",
                 "@key" : "aa"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -183,8 +183,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -193,7 +193,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -203,7 +203,7 @@
                   "valuationSource" : {
                     "settlementRateOption" : {
                       "settlementRateOption" : {
-                        "@data" : "KRW_KFTC18_KRW02"
+                        "@data" : "KRW.KFTC18/KRW02"
                       }
                     }
                   }
@@ -213,7 +213,7 @@
                     "periodMultiplier" : -2,
                     "period" : "D",
                     "@key" : "1a66f7c1",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -246,7 +246,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -295,7 +295,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f73",
-                "rollConvention" : "_20",
+                "rollConvention" : "20",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "c9e60c9b",
@@ -307,7 +307,7 @@
                 "period" : "M",
                 "@key" : "aa"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -328,12 +328,12 @@
                 "@ref" : "c9e60c9b",
                 "@ref:external" : "floatingCalcPeriodDates2"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : -1,
                 "period" : "D",
                 "@key" : "a8b38ff8",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -389,7 +389,7 @@
               "@data" : "KRW"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -423,10 +423,10 @@
                   "identifier" : {
                     "@data" : "KRW-CD-KSDA-Bloomberg"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "KRW_CD_KSDA_BLOOMBERG"
+                  "@data" : "KRW-CD-KSDA-Bloomberg"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 3,
@@ -444,13 +444,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
@@ -468,7 +468,7 @@
         }
       } ],
       "@key" : "3eac3060",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -508,9 +508,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER",
+              "@data" : "ISDAMaster",
               "@scheme" : "http://www.fpml.org/coding-scheme/master-agreement-type"
             }
           }
@@ -527,7 +527,7 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2006",
               "@scheme" : "http://www.fpml.org/coding-scheme/contractual-definitions"

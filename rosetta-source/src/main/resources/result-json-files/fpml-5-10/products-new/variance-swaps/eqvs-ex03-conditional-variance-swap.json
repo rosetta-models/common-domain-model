@@ -13,8 +13,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -23,7 +23,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "@key" : "1f7333",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -33,7 +33,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2004-07-21",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "25690940"
@@ -60,12 +60,12 @@
                 },
                 "varianceStrikePrice" : {
                   "value" : 18.135,
-                  "priceType" : "VARIANCE",
+                  "priceType" : "Variance",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "varianceCapFloor" : {
                   "boundedVariance" : {
-                    "realisedVarianceMethod" : "PREVIOUS",
+                    "realisedVarianceMethod" : "Previous",
                     "daysInRangeAdjustment" : true,
                     "upperBarrier" : 101,
                     "lowerBarrier" : 94
@@ -89,7 +89,7 @@
                             "@data" : ".IBM",
                             "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                           },
-                          "identifierType" : "OTHER"
+                          "identifierType" : "Other"
                         } ],
                         "isExchangeListed" : true,
                         "exchange" : {
@@ -106,7 +106,7 @@
                           },
                           "@key" : "290478"
                         } ],
-                        "instrumentType" : "LISTED_DERIVATIVE",
+                        "instrumentType" : "ListedDerivative",
                         "@type" : "cdm.base.staticdata.asset.common.ListedDerivative"
                       }
                     }
@@ -143,12 +143,12 @@
                     "@data" : "IBM",
                     "@scheme" : "http://www.fpml.org/schemes/4.1/instrumentId"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "IBM ordinary shares"
                   },
-                  "identifierType" : "NAME"
+                  "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
                 "exchange" : {
@@ -158,7 +158,7 @@
                   },
                   "@key" : "293090"
                 },
-                "instrumentType" : "EQUITY",
+                "instrumentType" : "Equity",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -169,13 +169,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"

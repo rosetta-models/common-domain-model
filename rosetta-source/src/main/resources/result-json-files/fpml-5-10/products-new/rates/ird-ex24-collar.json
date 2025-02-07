@@ -13,8 +13,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -31,16 +31,16 @@
                   "price" : {
                     "@ref:scoped" : "price-2"
                   },
-                  "buyer" : "RECEIVER",
-                  "seller" : "PAYER",
+                  "buyer" : "Receiver",
+                  "seller" : "Payer",
                   "@type" : "cdm.product.template.StrikeSchedule"
                 },
                 "floorRateSchedule" : {
                   "price" : {
                     "@ref:scoped" : "price-1"
                   },
-                  "buyer" : "PAYER",
-                  "seller" : "RECEIVER",
+                  "buyer" : "Payer",
+                  "seller" : "Receiver",
                   "@type" : "cdm.product.template.StrikeSchedule"
                 },
                 "@key" : "685c4c74",
@@ -48,7 +48,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -97,7 +97,7 @@
                 "periodMultiplier" : 6,
                 "period" : "M",
                 "@key" : "18ad5",
-                "rollConvention" : "_30",
+                "rollConvention" : "30",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "e5232a3f",
@@ -109,7 +109,7 @@
                 "period" : "M",
                 "@key" : "107"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -130,12 +130,12 @@
                 "@ref" : "e5232a3f",
                 "@ref:external" : "CalcPeriodDates0"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : -2,
                 "period" : "D",
                 "@key" : "a5cb919",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -208,8 +208,8 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "MIN",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Min",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-2"
         }, {
@@ -241,8 +241,8 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "MAX",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Max",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -264,10 +264,10 @@
                   "identifier" : {
                     "@data" : "EUR-EURIBOR-Telerate"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "EUR_EURIBOR_TELERATE"
+                  "@data" : "EUR-EURIBOR-Telerate"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 6,
@@ -285,13 +285,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"

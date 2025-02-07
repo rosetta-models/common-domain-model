@@ -13,8 +13,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -23,7 +23,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -33,7 +33,7 @@
                     "periodMultiplier" : 5,
                     "period" : "D",
                     "@key" : "60481a18",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -53,22 +53,22 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Observable" : {
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "PUT",
+            "optionType" : "Put",
             "exerciseTerms" : {
-              "style" : "AMERICAN",
+              "style" : "American",
               "commencementDate" : {
                 "adjustableDate" : {
                   "unadjustedDate" : "2008-10-27",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "25e41086"
@@ -79,7 +79,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2009-01-12",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "25f96df7"
@@ -106,7 +106,7 @@
                 "perUnitOf" : {
                   "capacityUnit" : "BBL"
                 },
-                "priceType" : "ASSET_PRICE",
+                "priceType" : "AssetPrice",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -115,7 +115,7 @@
           "@key" : "ae56ee94"
         } ],
         "calculationAgent" : {
-          "calculationAgentPartyEnum" : "AS_SPECIFIED_IN_MASTER_AGREEMENT"
+          "calculationAgentPartyEnum" : "AsSpecifiedInMasterAgreement"
         }
       },
       "@key" : "e35c713f"
@@ -159,7 +159,7 @@
                 },
                 "@key" : "223e8d"
               },
-              "priceQuoteType" : "SETTLEMENT",
+              "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "period" : "M",
@@ -170,7 +170,7 @@
                   "periodMultiplier" : 1,
                   "period" : "D",
                   "@key" : "ea4abbbd",
-                  "dayType" : "BUSINESS",
+                  "dayType" : "Business",
                   "@type" : "cdm.base.datetime.Offset"
                 }
               },
@@ -183,13 +183,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "7766c429",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "d53e12f6",
         "@ref:external" : "partyB"
@@ -257,9 +257,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           }
         },
@@ -275,9 +275,9 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2005_COMMODITY"
+              "@data" : "ISDA2005Commodity"
             } ]
           }
         },
@@ -313,7 +313,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -321,7 +321,7 @@
       "settlementDate" : {
         "unadjustedDate" : "2008-10-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NOT_APPLICABLE",
+          "businessDayConvention" : "NotApplicable",
           "@key" : "3a4b88ab"
         }
       },
@@ -336,7 +336,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

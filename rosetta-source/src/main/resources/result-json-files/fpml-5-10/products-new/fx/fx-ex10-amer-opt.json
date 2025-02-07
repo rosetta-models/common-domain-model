@@ -5,7 +5,7 @@
   "trade" : {
     "product" : {
       "taxonomy" : [ {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "FxOption",
@@ -22,8 +22,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -40,17 +40,17 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Observable" : {
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "PUT",
+            "optionType" : "Put",
             "exerciseTerms" : {
-              "style" : "AMERICAN",
+              "style" : "American",
               "commencementDate" : {
                 "adjustableDate" : {
                   "unadjustedDate" : "2001-12-04",
@@ -84,7 +84,7 @@
                   "@data" : "USNY"
                 }
               },
-              "expirationTimeType" : "SPECIFIC_TIME",
+              "expirationTimeType" : "SpecificTime",
               "@key" : "fd6cf567"
             },
             "strike" : {
@@ -100,7 +100,7 @@
                     "@data" : "AUD"
                   }
                 },
-                "priceType" : "EXCHANGE_RATE",
+                "priceType" : "ExchangeRate",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -139,7 +139,7 @@
                 "identifier" : {
                   "@data" : "AUD"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -150,13 +150,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b406781a",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "2fb569c6",
         "@ref:external" : "party2"
@@ -242,7 +242,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -265,7 +265,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

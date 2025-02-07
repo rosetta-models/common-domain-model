@@ -39,8 +39,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -51,7 +51,7 @@
               "@key:external" : "equityNotionalAmount"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -60,12 +60,12 @@
             },
             "valuationDates" : {
               "interimValuationDate" : {
-                "determinationMethod" : "VALUATION_TIME",
+                "determinationMethod" : "ValuationTime",
                 "valuationDates" : {
                   "adjustableDates" : {
                     "unadjustedDate" : [ "2009-01-01" ],
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "25f944ac"
@@ -76,7 +76,7 @@
                 "@key:external" : "equityValuationDates"
               },
               "finalValuationDate" : {
-                "determinationMethod" : "VALUATION_TIME",
+                "determinationMethod" : "ValuationTime",
                 "@key" : "524b126b"
               }
             },
@@ -87,7 +87,7 @@
                     "periodMultiplier" : 3,
                     "period" : "D",
                     "@key" : "7e0a5d94",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "NONE",
                     "dateRelativeTo" : {
                       "@ref" : "f85ffd21",
@@ -102,7 +102,7 @@
                     "periodMultiplier" : 3,
                     "period" : "D",
                     "@key" : "7e0a5d94",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "NONE",
                     "dateRelativeTo" : {
                       "@ref" : "f85ffd21",
@@ -124,7 +124,7 @@
             },
             "returnTerms" : {
               "priceReturnTerms" : {
-                "returnType" : "PRICE"
+                "returnType" : "Price"
               }
             },
             "@type" : "cdm.product.template.PerformancePayout"
@@ -133,8 +133,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -163,7 +163,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -203,7 +203,7 @@
                   "adjustableDates" : {
                     "unadjustedDate" : [ "2009-01-01" ],
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "25f944ac"
@@ -218,7 +218,7 @@
                 "@ref" : "adeb53f2",
                 "@ref:external" : "floatingCalculationPeriodDates"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "@key" : "8c441872"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
@@ -246,9 +246,9 @@
             }
           },
           "perUnitOf" : {
-            "financialUnit" : "SHARE"
+            "financialUnit" : "Share"
           },
-          "priceType" : "ASSET_PRICE",
+          "priceType" : "AssetPrice",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -287,7 +287,7 @@
                 },
                 "@key" : "fd81"
               } ],
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -307,8 +307,8 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-2"
         } ],
@@ -320,10 +320,10 @@
                   "identifier" : {
                     "@data" : "USD-LIBOR-BBA"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "USD_LIBOR_BBA"
+                  "@data" : "USD-LIBOR-BBA"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
@@ -341,19 +341,19 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "3cfd166",
         "@ref:external" : "BankB"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "3cfd165",
         "@ref:external" : "BankA"
       }
     } ],
-    "adjustment" : "STANDARD",
+    "adjustment" : "Standard",
     "tradeIdentifier" : [ {
       "issuerReference" : {
         "@ref" : "3cfd166",
@@ -398,9 +398,9 @@
         "agreementDate" : "2002-06-20",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "EQUITY_AMERICAS"
+              "@data" : "EquityAmericas"
             }
           }
         },

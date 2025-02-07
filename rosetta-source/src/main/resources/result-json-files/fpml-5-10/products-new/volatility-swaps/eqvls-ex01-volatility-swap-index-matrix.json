@@ -13,8 +13,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -36,7 +36,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2015-03-30",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "@key" : "3a4b88ab"
                       },
                       "@key" : "26afc209"
@@ -52,7 +52,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2015-04-07",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "26b05bf2"
@@ -72,7 +72,7 @@
                 "expectedN" : 5,
                 "volatilityStrikePrice" : {
                   "value" : 299,
-                  "priceType" : "VOLATILITY",
+                  "priceType" : "Volatility",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "volatilityCapFloor" : {
@@ -127,7 +127,7 @@
                 },
                 "@key" : "292711"
               } ],
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -137,13 +137,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
@@ -206,9 +206,9 @@
         "agreementDate" : "2003-10-01",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER",
+              "@data" : "ISDAMaster",
               "@scheme" : "http://dtcc.com/coding-scheme/master-agreement-type"
             }
           }
@@ -225,18 +225,18 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2011_EQUITY_DERIVATIVES",
+              "@data" : "ISDA2011EquityDerivatives",
               "@scheme" : "http://www.fpml.org/coding-scheme/contractual-definitions"
             } ],
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "EQUITY_DERIVATIVES_MATRIX",
+                "@data" : "EquityDerivativesMatrix",
                 "@scheme" : "http://www.fpml.org/coding-scheme/matrix-type"
               },
               "matrixTerm" : {
-                "@data" : "IVS_1_OPEN_MARKETS",
+                "@data" : "IVS1OpenMarkets",
                 "@scheme" : "http://www.fpml.org/coding-scheme/equity-matrix-transaction-type"
               }
             } ]

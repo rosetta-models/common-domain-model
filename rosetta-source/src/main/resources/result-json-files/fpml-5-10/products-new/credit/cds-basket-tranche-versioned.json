@@ -35,8 +35,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -45,7 +45,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -85,7 +85,7 @@
                             },
                             "identifierType" : "CUSIP"
                           } ],
-                          "instrumentType" : "DEBT",
+                          "instrumentType" : "Debt",
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
@@ -94,7 +94,7 @@
                         }
                       },
                       "entityType" : {
-                        "@data" : "NORTH_AMERICAN_INVESTMENT_GRADE"
+                        "@data" : "NorthAmericanInvestmentGrade"
                       }
                     }
                   }, {
@@ -119,7 +119,7 @@
                             },
                             "identifierType" : "CUSIP"
                           } ],
-                          "instrumentType" : "DEBT",
+                          "instrumentType" : "Debt",
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
@@ -128,7 +128,7 @@
                         }
                       },
                       "entityType" : {
-                        "@data" : "NORTH_AMERICAN_INVESTMENT_GRADE"
+                        "@data" : "NorthAmericanInvestmentGrade"
                       }
                     }
                   } ]
@@ -165,7 +165,7 @@
                   }
                 },
                 "creditEventNotice" : {
-                  "notifyingParty" : [ "PARTY_2", "PARTY_1" ],
+                  "notifyingParty" : [ "Party2", "Party1" ],
                   "publiclyAvailableInformation" : {
                     "standardPublicSources" : true,
                     "specifiedNumber" : 2
@@ -174,7 +174,7 @@
                 "@key" : "f8d2401"
               },
               "obligations" : {
-                "category" : "BOND_OR_LOAN"
+                "category" : "BondOrLoan"
               },
               "@key" : "90a9b011"
             } ],
@@ -184,8 +184,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -204,7 +204,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_ACT_ISDA"
+              "@data" : "ACT/ACT.ISDA"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
           },
@@ -227,7 +227,7 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -257,13 +257,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "61f9c816",
         "@ref:external" : "tif563d"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "dddf17a3",
         "@ref:external" : "fyure4"
@@ -321,18 +321,18 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2003_CREDIT_DERIVATIVES"
+              "@data" : "ISDA2003CreditDerivatives"
             } ],
             "contractualTermsSupplement" : [ {
               "contractualTermsSupplementType" : {
-                "@data" : "ISDA_2003_CREDIT_MAY_2003"
+                "@data" : "ISDA2003CreditMay2003"
               }
             } ],
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }

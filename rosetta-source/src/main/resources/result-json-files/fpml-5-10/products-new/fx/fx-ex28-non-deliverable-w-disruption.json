@@ -13,8 +13,8 @@
         "payout" : [ {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -26,7 +26,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -40,7 +40,7 @@
                   "valuationSource" : {
                     "settlementRateOption" : {
                       "settlementRateOption" : {
-                        "@data" : "BRL_PTAX_BRL09"
+                        "@data" : "BRL.PTAX/BRL09"
                       }
                     }
                   }
@@ -92,12 +92,12 @@
               "@data" : "BRL"
             }
           },
-          "priceType" : "EXCHANGE_RATE",
+          "priceType" : "ExchangeRate",
           "composite" : {
             "baseValue" : 0.7645,
             "operand" : 0.0045,
-            "arithmeticOperator" : "ADD",
-            "operandType" : "FORWARD_POINT"
+            "arithmeticOperator" : "Add",
+            "operandType" : "ForwardPoint"
           },
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
@@ -128,7 +128,7 @@
                 "identifier" : {
                   "@data" : "BRL"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -139,13 +139,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "d26b18a8",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "733fed68",
         "@ref:external" : "party2"

@@ -5,7 +5,7 @@
   "trade" : {
     "product" : {
       "taxonomy" : [ {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "CommoditySwap",
@@ -23,7 +23,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2006-07-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25a4ce2c"
@@ -34,7 +34,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2006-07-31",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25a53eca"
@@ -44,8 +44,8 @@
         "payout" : [ {
           "CommodityPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -54,7 +54,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -63,11 +63,11 @@
             },
             "pricingDates" : {
               "parametricDates" : {
-                "dayType" : "BUSINESS",
-                "dayDistribution" : "LAST",
+                "dayType" : "Business",
+                "dayDistribution" : "Last",
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
-                    "@data" : "NYMEX_NATURAL_GAS"
+                    "@data" : "NYMEX-NATURAL-GAS"
                   } ],
                   "@key" : "acc66859"
                 }
@@ -85,12 +85,12 @@
               "@key" : "11e9"
             },
             "paymentDates" : {
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -116,8 +116,8 @@
         }, {
           "FixedPricePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -126,12 +126,12 @@
               "@key" : "0"
             },
             "paymentDates" : {
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -170,9 +170,9 @@
           "perUnitOf" : {
             "capacityUnit" : "USMMBTU"
           },
-          "priceType" : "CASH_PRICE",
+          "priceType" : "CashPrice",
           "cashPrice" : {
-            "cashPriceType" : "FEE"
+            "cashPriceType" : "Fee"
           },
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
@@ -229,7 +229,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "SETTLEMENT",
+              "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "periodMultiplier" : 1,
@@ -247,13 +247,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "10fb089c",
         "@ref:external" : "partyA"
@@ -323,9 +323,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           }
         },
@@ -341,9 +341,9 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2005_COMMODITY"
+              "@data" : "ISDA2005Commodity"
             } ]
           }
         },

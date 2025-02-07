@@ -20,8 +20,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -35,12 +35,12 @@
                   "identifier" : {
                     "@data" : "Dow Jones iTraxx Europe Consumers Series 2 Version 1"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "name" : {
                   "@data" : "Dow Jones iTraxx Europe Consumers Series 2 Version 1"
                 },
-                "assetClass" : "CREDIT",
+                "assetClass" : "Credit",
                 "indexSeries" : 2,
                 "indexAnnexVersion" : 1,
                 "tranche" : {
@@ -49,7 +49,7 @@
                 },
                 "settledEntityMatrix" : {
                   "matrixSource" : {
-                    "@data" : "NOT_APPLICABLE"
+                    "@data" : "NotApplicable"
                   }
                 },
                 "@key" : "f97d484f",
@@ -79,13 +79,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"
@@ -144,9 +144,9 @@
         "agreementDate" : "2004-10-11",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "DJ_I_TRAXX_EUROPE"
+              "@data" : "DJ.iTraxx.Europe"
             }
           }
         },
@@ -182,7 +182,7 @@
             "identifier" : {
               "@data" : "EUR"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -198,7 +198,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "UPFRONT"
+        "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
     },

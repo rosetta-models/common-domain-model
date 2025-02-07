@@ -14,7 +14,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-08-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25e1ce6c"
@@ -24,8 +24,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -34,7 +34,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -44,7 +44,7 @@
                     "periodMultiplier" : 5,
                     "period" : "D",
                     "@key" : "5f333497",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "@type" : "cdm.base.datetime.RelativeDateOffset"
                   }
@@ -55,8 +55,8 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "observationTerms" : {
               "calculationPeriodDates" : {
@@ -72,8 +72,8 @@
               },
               "observationDates" : {
                 "parametricDates" : {
-                  "dayType" : "BUSINESS",
-                  "dayDistribution" : "ALL"
+                  "dayType" : "Business",
+                  "dayDistribution" : "All"
                 }
               }
             },
@@ -82,14 +82,14 @@
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2008-08-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "25e23b49"
@@ -99,7 +99,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2008-09-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "25e32b89"
@@ -109,7 +109,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2008-10-31",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "25e41f8a"
@@ -129,7 +129,7 @@
                 "perUnitOf" : {
                   "capacityUnit" : "MT"
                 },
-                "priceType" : "ASSET_PRICE",
+                "priceType" : "AssetPrice",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -172,7 +172,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "SETTLEMENT",
+              "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "periodMultiplier" : 1,
@@ -196,13 +196,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
@@ -272,9 +272,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           }
         },
@@ -290,9 +290,9 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2005_COMMODITY"
+              "@data" : "ISDA2005Commodity"
             } ]
           }
         },
@@ -328,7 +328,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -336,7 +336,7 @@
       "settlementDate" : {
         "unadjustedDate" : "2008-02-07",
         "dateAdjustments" : {
-          "businessDayConvention" : "NOT_APPLICABLE",
+          "businessDayConvention" : "NotApplicable",
           "@key" : "3a4b88ab"
         }
       },
@@ -351,7 +351,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

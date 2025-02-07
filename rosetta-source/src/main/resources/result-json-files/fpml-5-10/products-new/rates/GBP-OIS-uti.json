@@ -9,12 +9,12 @@
           "@data" : "InterestRate:IRSwap:OIS",
           "@scheme" : "http://www.fpml.org/coding-scheme/product-taxonomy"
         },
-        "source" : "OTHER",
+        "source" : "Other",
         "@key" : "2f961685"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "INTEREST_RATE",
+          "@data" : "InterestRate",
           "@scheme" : "http://www.fpml.org/coding-scheme/asset-class-simple"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
@@ -36,8 +36,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -56,7 +56,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -101,7 +101,7 @@
                 "periodMultiplier" : 1,
                 "period" : "Y",
                 "@key" : "17949",
-                "rollConvention" : "_13",
+                "rollConvention" : "13",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "ce9d3691",
@@ -113,7 +113,7 @@
                 "period" : "Y",
                 "@key" : "78"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -133,8 +133,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -152,7 +152,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -197,7 +197,7 @@
                 "periodMultiplier" : 1,
                 "period" : "Y",
                 "@key" : "17949",
-                "rollConvention" : "_13",
+                "rollConvention" : "13",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "ce9d3691",
@@ -209,7 +209,7 @@
                 "period" : "Y",
                 "@key" : "78"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -228,7 +228,7 @@
                 "@ref" : "ce9d3691",
                 "@ref:external" : "floatingCalcPeriodDates2"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "resetRelativeTo" : "CalculationPeriodEndDate",
               "fixingDates" : {
                 "periodMultiplier" : 0,
                 "period" : "D",
@@ -286,7 +286,7 @@
               "@data" : "GBP"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -320,10 +320,10 @@
                   "identifier" : {
                     "@data" : "GBP-SONIA-COMPOUND"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "GBP_SONIA_COMPOUND"
+                  "@data" : "GBP-SONIA-COMPOUND"
                 },
                 "@type" : "cdm.observable.asset.FloatingRateIndex"
               },
@@ -336,13 +336,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
@@ -360,7 +360,7 @@
         }
       } ],
       "@key" : "3eac3060",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -400,9 +400,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER",
+              "@data" : "ISDAMaster",
               "@scheme" : "http://www.fpml.org/coding-scheme/master-agreement-type"
             }
           }
@@ -419,7 +419,7 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2006",
               "@scheme" : "http://www.fpml.org/coding-scheme/contractual-definitions"
@@ -458,7 +458,7 @@
             "identifier" : {
               "@data" : "GBP"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -487,7 +487,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "UPFRONT"
+        "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
     },

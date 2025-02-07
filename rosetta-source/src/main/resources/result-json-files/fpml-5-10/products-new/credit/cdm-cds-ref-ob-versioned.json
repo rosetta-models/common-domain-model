@@ -9,7 +9,7 @@
           "@data" : "Credit_SingleName_Corporate_StandardEuropeanCorporate",
           "@scheme" : "http://www.dtcc.com/coding-scheme/external/GTR-Product-Id"
         },
-        "source" : "OTHER",
+        "source" : "Other",
         "@key" : "668f2457"
       }, {
         "identifier" : {
@@ -21,7 +21,7 @@
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "CREDIT"
+          "@data" : "Credit"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
@@ -34,7 +34,7 @@
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "SNDB",
@@ -52,7 +52,7 @@
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "Untranched",
@@ -119,8 +119,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -129,7 +129,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -167,7 +167,7 @@
                       },
                       "identifierType" : "CUSIP"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 } ],
@@ -183,7 +183,7 @@
                       "@data" : "EUR"
                     }
                   },
-                  "priceType" : "ASSET_PRICE",
+                  "priceType" : "AssetPrice",
                   "@type" : "cdm.observable.asset.Price"
                 }
               }
@@ -192,12 +192,12 @@
               "creditEvents" : {
                 "bankruptcy" : false,
                 "creditEventNotice" : {
-                  "notifyingParty" : [ "PARTY_2" ]
+                  "notifyingParty" : [ "Party2" ]
                 },
                 "@key" : "fb9ab88e"
               },
               "obligations" : {
-                "category" : "PAYMENT"
+                "category" : "Payment"
               },
               "@key" : "7bb68af4"
             } ],
@@ -207,8 +207,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -227,7 +227,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "firstPeriodStartDate" : {
@@ -275,7 +275,7 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -305,13 +305,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "9a911e55",
         "@ref:external" : "g4789"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "ac439d9e",
         "@ref:external" : "xdf45"
@@ -364,10 +364,10 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }

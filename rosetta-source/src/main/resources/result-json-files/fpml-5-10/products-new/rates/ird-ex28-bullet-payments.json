@@ -13,11 +13,11 @@
             }
           },
           "perUnitOf" : {
-            "financialUnit" : "CONTRACTUAL_PRODUCT"
+            "financialUnit" : "ContractualProduct"
           },
-          "priceType" : "CASH_PRICE",
+          "priceType" : "CashPrice",
           "cashPrice" : {
-            "cashPriceType" : "FEE"
+            "cashPriceType" : "Fee"
           },
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"

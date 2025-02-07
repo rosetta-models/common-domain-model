@@ -48,8 +48,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantityReference" : {
@@ -74,7 +74,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -125,7 +125,7 @@
                         "periodMultiplier" : 0,
                         "period" : "D",
                         "@key" : "df205212",
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "dateRelativeTo" : {
                           "@ref" : "71e7e7d7",
                           "@ref:external" : "interestEffectiveDate"
@@ -139,7 +139,7 @@
                         "periodMultiplier" : 0,
                         "period" : "D",
                         "@key" : "944b936f",
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "dateRelativeTo" : {
                           "@ref" : "4fbde895",
                           "@ref:external" : "interestTerminationDate"
@@ -152,7 +152,7 @@
                       "periodMultiplier" : 1,
                       "period" : "M",
                       "@key" : "177db",
-                      "rollConvention" : "_19",
+                      "rollConvention" : "19",
                       "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
                     },
                     "periodDatesAdjustments" : {
@@ -181,7 +181,7 @@
                 "periodMultiplier" : -2,
                 "period" : "D",
                 "@key" : "135004c5",
-                "dayType" : "CURRENCY_BUSINESS",
+                "dayType" : "CurrencyBusiness",
                 "businessDayConvention" : "PRECEDING",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -209,8 +209,8 @@
         }, {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -221,7 +221,7 @@
               "@key:external" : "equityNotionalAmount"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "EUR"
               },
@@ -230,7 +230,7 @@
             },
             "valuationDates" : {
               "interimValuationDate" : {
-                "determinationMethod" : "VALUATION_TIME",
+                "determinationMethod" : "ValuationTime",
                 "valuationDates" : {
                   "periodicDates" : {
                     "startDate" : {
@@ -238,7 +238,7 @@
                         "periodMultiplier" : 0,
                         "period" : "D",
                         "@key" : "9229ce57",
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "dateRelativeTo" : {
                           "@ref" : "6e7d8489",
                           "@ref:external" : "equityEffectiveDate"
@@ -252,7 +252,7 @@
                         "periodMultiplier" : 0,
                         "period" : "D",
                         "@key" : "b635d2a0",
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "dateRelativeTo" : {
                           "@ref" : "48e9d409",
                           "@ref:external" : "finalValuationDate"
@@ -265,7 +265,7 @@
                       "periodMultiplier" : 1,
                       "period" : "M",
                       "@key" : "177db",
-                      "rollConvention" : "_19",
+                      "rollConvention" : "19",
                       "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
                     },
                     "periodDatesAdjustments" : {
@@ -282,11 +282,11 @@
                   "@key" : "1cc8abb8",
                   "@key:external" : "interimValuationDate"
                 },
-                "valuationTimeType" : "AS_SPECIFIED_IN_MASTER_CONFIRMATION",
+                "valuationTimeType" : "AsSpecifiedInMasterConfirmation",
                 "@key" : "5ac6f8c7"
               },
               "finalValuationDate" : {
-                "determinationMethod" : "HEDGE_EXECUTION",
+                "determinationMethod" : "HedgeExecution",
                 "valuationDate" : {
                   "adjustableDate" : {
                     "unadjustedDate" : "2009-03-19",
@@ -305,7 +305,7 @@
                   "@key" : "48e9d409",
                   "@key:external" : "finalValuationDate"
                 },
-                "valuationTimeType" : "AS_SPECIFIED_IN_MASTER_CONFIRMATION",
+                "valuationTimeType" : "AsSpecifiedInMasterConfirmation",
                 "@key" : "57b386d"
               }
             },
@@ -316,7 +316,7 @@
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "24ad6927",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -337,7 +337,7 @@
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "fc30271",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -363,7 +363,7 @@
             },
             "returnTerms" : {
               "priceReturnTerms" : {
-                "returnType" : "TOTAL"
+                "returnType" : "Total"
               },
               "dividendReturnTerms" : {
                 "dividendPayoutRatio" : [ {
@@ -371,11 +371,11 @@
                   "cashRatio" : 1,
                   "nonCashRatio" : 1
                 } ],
-                "firstOrSecondPeriod" : "SECOND_PERIOD",
+                "firstOrSecondPeriod" : "SecondPeriod",
                 "dividendPeriod" : [ {
                   "dividendPaymentDate" : {
                     "dividendDateReference" : {
-                      "dateReference" : "CASH_SETTLEMENT_PAYMENT_DATE"
+                      "dateReference" : "CashSettlementPaymentDate"
                     }
                   }
                 } ]
@@ -402,8 +402,8 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -415,10 +415,10 @@
                   "identifier" : {
                     "@data" : "EUR-EURIBOR-Reuters"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "EUR_EURIBOR_REUTERS"
+                  "@data" : "EUR-EURIBOR-Reuters"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
@@ -442,16 +442,16 @@
             }
           },
           "perUnitOf" : {
-            "financialUnit" : "SHARE"
+            "financialUnit" : "Share"
           },
-          "priceType" : "ASSET_PRICE",
+          "priceType" : "AssetPrice",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-2"
         } ],
         "quantity" : [ {
           "value" : 100000,
           "unit" : {
-            "financialUnit" : "INDEX_UNIT"
+            "financialUnit" : "IndexUnit"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
@@ -473,7 +473,7 @@
                   "@data" : ".GDAXI",
                   "@scheme" : "http://www.fpml.org/instrument-id"
                 },
-                "identifierType" : "OTHER"
+                "identifierType" : "Other"
               } ],
               "isExchangeListed" : true,
               "exchange" : {
@@ -486,7 +486,7 @@
               "name" : {
                 "@data" : "GERMAN SE XETRA DAX INDEX"
               },
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -496,19 +496,19 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4666b900",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "c79dbb00",
         "@ref:external" : "partyB"
       }
     } ],
-    "adjustment" : "STANDARD",
+    "adjustment" : "Standard",
     "tradeIdentifier" : [ {
       "issuerReference" : {
         "@ref" : "4666b900",
@@ -572,9 +572,9 @@
         "agreementDate" : "2009-01-01",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "ISDA_2007_EQUITY_EUROPEAN"
+              "@data" : "ISDA2007EquityEuropean"
             }
           }
         },

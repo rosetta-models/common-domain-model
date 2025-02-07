@@ -13,8 +13,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -23,7 +23,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "settlementCurrency" : {
                 "@data" : "JPY"
               },
@@ -47,17 +47,17 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Observable" : {
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2006-06-19",
@@ -87,11 +87,11 @@
                   "@data" : "JPTO"
                 }
               },
-              "expirationTimeType" : "SPECIFIC_TIME",
+              "expirationTimeType" : "SpecificTime",
               "exerciseProcedure" : {
                 "manualExercise" : {
                   "exerciseNotice" : {
-                    "exerciseNoticeGiver" : "BUYER",
+                    "exerciseNoticeGiver" : "Buyer",
                     "businessCenter" : {
                       "@data" : "JPTO"
                     }
@@ -118,7 +118,7 @@
                     "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
                   }
                 },
-                "priceType" : "ASSET_PRICE",
+                "priceType" : "AssetPrice",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -127,7 +127,7 @@
           "@key" : "baf84caa"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "2a63b314"
@@ -147,7 +147,7 @@
         }, {
           "value" : 1,
           "unit" : {
-            "financialUnit" : "CONTRACT"
+            "financialUnit" : "Contract"
           },
           "multiplier" : {
             "value" : 10000000000,
@@ -173,7 +173,7 @@
                   },
                   "identifierType" : "CUSIP"
                 } ],
-                "instrumentType" : "DEBT",
+                "instrumentType" : "Debt",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -184,20 +184,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
@@ -215,7 +215,7 @@
         }
       } ],
       "@key" : "3eac3060",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -274,7 +274,7 @@
               "@data" : "JPY",
               "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -303,7 +303,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

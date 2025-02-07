@@ -14,7 +14,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-06-02",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25dff1ad"
@@ -25,7 +25,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-06-04",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25dff92f"
@@ -35,8 +35,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -58,7 +58,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -123,7 +123,7 @@
                       "periodMultiplier" : 1,
                       "period" : "M",
                       "@key" : "18c9",
-                      "rollConvention" : "_4",
+                      "rollConvention" : "4",
                       "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
                     },
                     "periodDatesAdjustments" : {
@@ -162,8 +162,8 @@
         }, {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -174,7 +174,7 @@
               "@key:external" : "equityNotionalAmount"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "EUR"
               },
@@ -183,7 +183,7 @@
             },
             "valuationDates" : {
               "interimValuationDate" : {
-                "determinationMethod" : "VALUATION_TIME",
+                "determinationMethod" : "ValuationTime",
                 "valuationDates" : {
                   "relativeDates" : {
                     "periodMultiplier" : -2,
@@ -202,12 +202,12 @@
                 "@key" : "100bc215"
               },
               "finalValuationDate" : {
-                "determinationMethod" : "HEDGE_EXECUTION",
+                "determinationMethod" : "HedgeExecution",
                 "valuationDate" : {
                   "adjustableDate" : {
                     "unadjustedDate" : "2009-06-02",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "25fdf9ad"
@@ -225,7 +225,7 @@
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "24ad6927",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -246,7 +246,7 @@
                     "periodMultiplier" : 2,
                     "period" : "D",
                     "@key" : "fc30271",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -272,7 +272,7 @@
             },
             "returnTerms" : {
               "priceReturnTerms" : {
-                "returnType" : "PRICE"
+                "returnType" : "Price"
               }
             },
             "@type" : "cdm.product.template.PerformancePayout"
@@ -292,10 +292,10 @@
                   "identifier" : {
                     "@data" : "EUR-EURIBOR-Reuters"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "EUR_EURIBOR_REUTERS"
+                  "@data" : "EUR-EURIBOR-Reuters"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
@@ -319,9 +319,9 @@
             }
           },
           "perUnitOf" : {
-            "financialUnit" : "SHARE"
+            "financialUnit" : "Share"
           },
-          "priceType" : "ASSET_PRICE",
+          "priceType" : "AssetPrice",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -355,7 +355,7 @@
                   "identifier" : {
                     "@data" : "PHILIPS BUY BACK ORD"
                   },
-                  "identifierType" : "NAME"
+                  "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
                 "exchange" : {
@@ -365,7 +365,7 @@
                   },
                   "@key" : "28fe4f"
                 },
-                "instrumentType" : "EQUITY",
+                "instrumentType" : "Equity",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -376,19 +376,19 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "72ad7ed7",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "72ad8d67",
         "@ref:external" : "party2"
       }
     } ],
-    "adjustment" : "STANDARD",
+    "adjustment" : "Standard",
     "tradeIdentifier" : [ {
       "issuerReference" : {
         "@ref" : "72ad7ed7",

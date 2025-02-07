@@ -9,12 +9,12 @@
           "@data" : "InterestRate:IRSwap:Basis",
           "@scheme" : "http://www.fpml.org/coding-scheme/product-taxonomy"
         },
-        "source" : "OTHER",
+        "source" : "Other",
         "@key" : "aba3dd40"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "INTEREST_RATE",
+          "@data" : "InterestRate",
           "@scheme" : "http://www.fpml.org/coding-scheme/asset-class-simple"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
@@ -36,8 +36,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -55,7 +55,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -103,7 +103,7 @@
                 "@key" : "365a772a"
               },
               "firstRegularPeriodStartDate" : "2021-03-15",
-              "stubPeriodType" : "LONG_INITIAL",
+              "stubPeriodType" : "LongInitial",
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 3,
                 "period" : "M",
@@ -120,7 +120,7 @@
                 "period" : "M",
                 "@key" : "aa"
               },
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -139,7 +139,7 @@
                 "@ref" : "e56e795c",
                 "@ref:external" : "floatingCalcPeriodDates1"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : 0,
                 "period" : "D",
@@ -182,8 +182,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -207,7 +207,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_365_FIXED"
+              "@data" : "ACT/365.FIXED"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -255,7 +255,7 @@
                 "@key" : "365a772a"
               },
               "firstRegularPeriodStartDate" : "2021-01-18",
-              "stubPeriodType" : "LONG_INITIAL",
+              "stubPeriodType" : "LongInitial",
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 1,
                 "period" : "M",
@@ -273,7 +273,7 @@
                 "@key" : "aa"
               },
               "firstPaymentDate" : "2021-03-15",
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -292,7 +292,7 @@
                 "@ref" : "1020ac37",
                 "@ref:external" : "floatingCalcPeriodDates2"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : 0,
                 "period" : "D",
@@ -329,7 +329,7 @@
               "@key" : "16ef084a",
               "@key:external" : "resetDates2"
             },
-            "compoundingMethod" : "FLAT",
+            "compoundingMethod" : "Flat",
             "@type" : "cdm.product.asset.InterestRatePayout"
           },
           "@key" : "6db725d4"
@@ -357,10 +357,10 @@
                   "identifier" : {
                     "@data" : "CAD-BA-CDOR"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "CAD_BA_CDOR"
+                  "@data" : "CAD-BA-CDOR"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 3,
@@ -388,8 +388,8 @@
               "@data" : "CAD"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -411,10 +411,10 @@
                   "identifier" : {
                     "@data" : "CAD-BA-CDOR"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "CAD_BA_CDOR"
+                  "@data" : "CAD-BA-CDOR"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
@@ -432,13 +432,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "27b20a6a",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "cc892602",
         "@ref:external" : "party2"
@@ -488,9 +488,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER",
+              "@data" : "ISDAMaster",
               "@scheme" : "http://www.fpml.org/coding-scheme/master-agreement-type"
             }
           }
@@ -507,7 +507,7 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2006",
               "@scheme" : "http://www.fpml.org/coding-scheme/contractual-definitions"

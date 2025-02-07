@@ -14,7 +14,7 @@
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
-          "@data" : "INTEREST_RATE"
+          "@data" : "InterestRate"
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
@@ -36,7 +36,7 @@
         },
         "@type" : "cdm.base.staticdata.asset.common.ProductTaxonomy"
       }, {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "X",
@@ -84,8 +84,8 @@
         "payout" : [ {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -94,7 +94,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "@key" : "f3b1d0d7",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -125,7 +125,7 @@
               "@data" : "JPY"
             }
           },
-          "priceType" : "ASSET_PRICE",
+          "priceType" : "AssetPrice",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -148,7 +148,7 @@
                     "@data" : "5369692",
                     "@scheme" : "http://www.bankx.com/instrument-id"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "JP1700161P53",
@@ -156,7 +156,7 @@
                   },
                   "identifierType" : "ISIN"
                 } ],
-                "instrumentType" : "DEBT",
+                "instrumentType" : "Debt",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -167,13 +167,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "c2aaa304",
         "@ref:external" : "partyB"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"
@@ -191,7 +191,7 @@
         }
       } ],
       "@key" : "4396cc77",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
@@ -269,7 +269,7 @@
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"
       },
-      "role" : "REPORTING_PARTY",
+      "role" : "ReportingParty",
       "ownershipPartyReference" : {
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"
@@ -279,7 +279,7 @@
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"
       },
-      "role" : "BENEFICIARY",
+      "role" : "Beneficiary",
       "ownershipPartyReference" : {
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"
@@ -289,7 +289,7 @@
         "@ref" : "2931f7",
         "@ref:external" : "ExecutionFacility"
       },
-      "role" : "EXECUTION_FACILITY",
+      "role" : "ExecutionFacility",
       "ownershipPartyReference" : {
         "@ref" : "47c725f9",
         "@ref:external" : "partyA"

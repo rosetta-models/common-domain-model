@@ -13,8 +13,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -31,8 +31,8 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "observationTerms" : {
               "observationTime" : {
@@ -44,7 +44,7 @@
               "informationSource" : {
                 "primarySource" : {
                   "sourceProvider" : {
-                    "@data" : "REUTERS"
+                    "@data" : "Reuters"
                   },
                   "sourcePage" : {
                     "@data" : "BNBX"
@@ -150,9 +150,9 @@
                 "@ref:scoped" : "observable-1"
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "adjustedDate" : {
@@ -169,7 +169,7 @@
                   "@data" : "MXMC"
                 }
               },
-              "expirationTimeType" : "SPECIFIC_TIME",
+              "expirationTimeType" : "SpecificTime",
               "@key" : "82cb011d"
             },
             "strike" : {
@@ -185,7 +185,7 @@
                     "@data" : "USD"
                   }
                 },
-                "priceType" : "EXCHANGE_RATE",
+                "priceType" : "ExchangeRate",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -224,7 +224,7 @@
                 "identifier" : {
                   "@data" : "USD"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -235,13 +235,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "a41bc6e9",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "5b0baa7d",
         "@ref:external" : "party1"
@@ -321,7 +321,7 @@
             "identifier" : {
               "@data" : "USD"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -344,7 +344,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

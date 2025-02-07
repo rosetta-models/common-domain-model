@@ -13,8 +13,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -33,7 +33,7 @@
               "@key" : "4076a9c"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -43,7 +43,7 @@
                   "valuationSource" : {
                     "settlementRateOption" : {
                       "settlementRateOption" : {
-                        "@data" : "BRL_PTAX_BRL09"
+                        "@data" : "BRL.PTAX/BRL09"
                       }
                     }
                   }
@@ -54,7 +54,7 @@
                     "period" : "D",
                     "@key" : "1483817f",
                     "@key:external" : "fixedLegFxFixingDates",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -88,7 +88,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "CAL_252"
+              "@data" : "CAL/252"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -144,12 +144,12 @@
                 "period" : "T",
                 "@key" : "73"
               },
-              "payRelativeTo" : "VALUATION_DATE",
+              "payRelativeTo" : "ValuationDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 1,
                 "period" : "D",
                 "@key" : "ea4abbbd",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -170,8 +170,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -180,7 +180,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -190,7 +190,7 @@
                   "valuationSource" : {
                     "settlementRateOption" : {
                       "settlementRateOption" : {
-                        "@data" : "BRL_PTAX_BRL09"
+                        "@data" : "BRL.PTAX/BRL09"
                       }
                     }
                   }
@@ -201,7 +201,7 @@
                     "period" : "D",
                     "@key" : "ffa86191",
                     "@key:external" : "floatingLegFxFixingDates",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -242,14 +242,14 @@
                       "@data" : "BRL"
                     }
                   },
-                  "priceType" : "INTEREST_RATE",
+                  "priceType" : "InterestRate",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "@type" : "cdm.product.asset.FloatingRateSpecification"
               }
             },
             "dayCountFraction" : {
-              "@data" : "CAL_252"
+              "@data" : "CAL/252"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -307,12 +307,12 @@
                 "period" : "T",
                 "@key" : "73"
               },
-              "payRelativeTo" : "VALUATION_DATE",
+              "payRelativeTo" : "ValuationDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 1,
                 "period" : "D",
                 "@key" : "ea4abbbd",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
@@ -336,7 +336,7 @@
                 "periodMultiplier" : -1,
                 "period" : "D",
                 "@key" : "a7117093",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -374,7 +374,7 @@
           "@key" : "ff8dae27"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT",
+          "calculationAgentParty" : "CalculationAgentIndependent",
           "calculationAgentBusinessCenter" : {
             "@data" : "USNY"
           }
@@ -396,7 +396,7 @@
               "@data" : "BRL"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -439,10 +439,10 @@
                   "identifier" : {
                     "@data" : "BRL-CDI"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "BRL_CDI"
+                  "@data" : "BRL-CDI"
                 },
                 "@type" : "cdm.observable.asset.FloatingRateIndex"
               },
@@ -455,20 +455,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "c3ef6b82",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "17861be2",
         "@ref:external" : "partyB"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "c3ef6b82",
         "@ref:external" : "partyA"

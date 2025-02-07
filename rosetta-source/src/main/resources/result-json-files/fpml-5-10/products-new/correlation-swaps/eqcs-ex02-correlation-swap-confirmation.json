@@ -27,8 +27,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -37,14 +37,14 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementDate" : {
                 "adjustableOrRelativeDate" : {
                   "relativeDate" : {
                     "periodMultiplier" : 3,
                     "period" : "D",
                     "@key" : "235d2240",
-                    "dayType" : "BUSINESS",
+                    "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -72,7 +72,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2007-01-05",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "NOT_APPLICABLE",
+                        "businessDayConvention" : "NotApplicable",
                         "@key" : "3a4b88ab"
                       },
                       "@key" : "25bd43b0"
@@ -112,7 +112,7 @@
                 "expectedN" : 30,
                 "correlationStrikePrice" : {
                   "value" : 0.60123,
-                  "priceType" : "CORRELATION",
+                  "priceType" : "Correlation",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "boundedCorrelation" : {
@@ -132,7 +132,7 @@
           "@key" : "b89e2cc0"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "25f3cf70"
@@ -175,7 +175,7 @@
                       },
                       "@key" : "292da8"
                     } ],
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -206,7 +206,7 @@
                       },
                       "@key" : "293090"
                     } ],
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -237,7 +237,7 @@
                       },
                       "@key" : "292da8"
                     } ],
-                    "instrumentType" : "EQUITY",
+                    "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   }
                 }
@@ -253,20 +253,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "8b5fabdb",
         "@ref:external" : "ab9560"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "83102f24",
         "@ref:external" : "gh4903"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "83102f24",
         "@ref:external" : "gh4903"
@@ -323,9 +323,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 2002
@@ -342,11 +342,11 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2000"
             }, {
-              "@data" : "ISDA_2002_EQUITY_DERIVATIVES"
+              "@data" : "ISDA2002EquityDerivatives"
             } ]
           }
         },

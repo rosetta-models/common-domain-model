@@ -13,25 +13,25 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "GBP"
               },
               "@key" : "a9ad5102",
               "physicalSettlementTerms" : {
                 "clearedPhysicalSettlement" : true,
-                "predeterminedClearingOrganizationParty" : "PREDETERMINED_CLEARING_ORGANIZATION_PARTY",
+                "predeterminedClearingOrganizationParty" : "PredeterminedClearingOrganizationParty",
                 "@key" : "5d273b4a"
               },
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Product" : {
@@ -45,8 +45,8 @@
                     "payout" : [ {
                       "PerformancePayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_1",
-                          "receiver" : "PARTY_2"
+                          "payer" : "Party1",
+                          "receiver" : "Party2"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -55,7 +55,7 @@
                           "@key" : "0"
                         },
                         "settlementTerms" : {
-                          "settlementType" : "CASH",
+                          "settlementType" : "Cash",
                           "settlementCurrency" : {
                             "@data" : "GBP"
                           },
@@ -65,8 +65,8 @@
                                 "periodMultiplier" : 2,
                                 "period" : "D",
                                 "@key" : "738dbfce",
-                                "dayType" : "CURRENCY_BUSINESS",
-                                "businessDayConvention" : "NOT_APPLICABLE",
+                                "dayType" : "CurrencyBusiness",
+                                "businessDayConvention" : "NotApplicable",
                                 "dateRelativeTo" : {
                                   "@ref:external" : "valuationDate"
                                 },
@@ -85,7 +85,7 @@
                                 "adjustableDate" : {
                                   "unadjustedDate" : "2009-01-27",
                                   "dateAdjustments" : {
-                                    "businessDayConvention" : "NOT_APPLICABLE",
+                                    "businessDayConvention" : "NotApplicable",
                                     "@key" : "3a4b88ab"
                                   },
                                   "@key" : "25f9a646"
@@ -101,7 +101,7 @@
                               "adjustableDate" : {
                                 "unadjustedDate" : "2011-03-18",
                                 "dateAdjustments" : {
-                                  "businessDayConvention" : "NOT_APPLICABLE",
+                                  "businessDayConvention" : "NotApplicable",
                                   "@key" : "3a4b88ab"
                                 },
                                 "@key" : "263774fd"
@@ -124,7 +124,7 @@
                             "expectedN" : 542,
                             "varianceStrikePrice" : {
                               "value" : 225,
-                              "priceType" : "VARIANCE",
+                              "priceType" : "Variance",
                               "@type" : "cdm.observable.asset.Price"
                             },
                             "varianceCapFloor" : {
@@ -151,14 +151,14 @@
                 }
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2015-03-20",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "26af9c7f"
@@ -220,7 +220,7 @@
               "name" : {
                 "@data" : "FTSE 100 INDEX"
               },
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -230,20 +230,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "7766c429",
         "@ref:external" : "partyB"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "PREDETERMINED_CLEARING_ORGANIZATION_PARTY",
+      "role" : "PredeterminedClearingOrganizationParty",
       "partyReference" : [ {
         "@ref" : "bc8ce9ea",
         "@ref:external" : "clearing-svc"
@@ -326,12 +326,12 @@
         "agreementDate" : "2009-01-07",
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_CONFIRMATION",
+            "agreementType" : "MasterConfirmation",
             "masterConfirmationType" : {
-              "@data" : "ISDA_2007_VARIANCE_SWAP_EUROPEAN_REV_1"
+              "@data" : "ISDA2007VarianceSwapEuropeanRev1"
             },
             "masterConfirmationAnnexType" : {
-              "@data" : "ISDA_2007_VARIANCE_OPTION_EUROPEAN"
+              "@data" : "ISDA2007VarianceOptionEuropean"
             }
           }
         },
@@ -367,7 +367,7 @@
             "identifier" : {
               "@data" : "GBP"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -375,7 +375,7 @@
       "settlementDate" : {
         "unadjustedDate" : "2009-01-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NOT_APPLICABLE",
+          "businessDayConvention" : "NotApplicable",
           "@key" : "3a4b88ab"
         }
       },
@@ -390,7 +390,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

@@ -55,8 +55,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -65,7 +65,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "@key" : "321f92c1",
               "physicalSettlementTerms" : {
                 "physicalSettlementPeriod" : {
@@ -99,7 +99,7 @@
                       },
                       "identifierType" : "BBGID"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   },
                   "primaryObligor" : {
@@ -125,10 +125,10 @@
               "floatingAmountEvents" : {
                 "failureToPayPrincipal" : true,
                 "interestShortfall" : {
-                  "interestShortfallCap" : "FIXED",
+                  "interestShortfallCap" : "Fixed",
                   "compounding" : true,
                   "rateSource" : {
-                    "@data" : "USD_LIBOR_BBA"
+                    "@data" : "USD-LIBOR-BBA"
                   }
                 },
                 "writedown" : true,
@@ -149,7 +149,7 @@
           "@key" : "938f475d"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT",
+          "calculationAgentParty" : "CalculationAgentIndependent",
           "calculationAgentBusinessCenter" : {
             "@data" : "USNY"
           }
@@ -173,20 +173,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "e1326d8",
         "@ref:external" : "zx456j"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
@@ -244,9 +244,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 1992
@@ -263,18 +263,18 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2003_CREDIT_DERIVATIVES"
+              "@data" : "ISDA2003CreditDerivatives"
             } ],
             "contractualTermsSupplement" : [ {
               "contractualTermsSupplementType" : {
-                "@data" : "ISDA_2003_CREDIT_MAY_2003"
+                "@data" : "ISDA2003CreditMay2003"
               }
             } ],
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }

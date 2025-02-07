@@ -47,8 +47,8 @@
         "payout" : [ {
           "CreditDefaultPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -57,7 +57,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "@key" : "41e7ef00",
               "physicalSettlementTerms" : {
                 "physicalSettlementPeriod" : {
@@ -65,7 +65,7 @@
                 },
                 "deliverableObligations" : {
                   "accruedInterest" : false,
-                  "category" : "LOAN",
+                  "category" : "Loan",
                   "notSubordinated" : true,
                   "notContingent" : true,
                   "consentRequiredLoan" : {
@@ -100,9 +100,9 @@
                         "@data" : "23490234",
                         "@scheme" : "http://www.partyA.com/coding-scheme/instrument-id"
                       },
-                      "identifierType" : "OTHER"
+                      "identifierType" : "Other"
                     } ],
-                    "instrumentType" : "DEBT",
+                    "instrumentType" : "Debt",
                     "lien" : {
                       "@data" : "FirstLienLoan"
                     },
@@ -135,7 +135,7 @@
                       "@data" : "USD"
                     }
                   },
-                  "priceType" : "ASSET_PRICE",
+                  "priceType" : "AssetPrice",
                   "@type" : "cdm.observable.asset.Price"
                 },
                 "securedList" : false
@@ -168,7 +168,7 @@
                   "@type" : "cdm.observable.asset.Money"
                 },
                 "creditEventNotice" : {
-                  "notifyingParty" : [ "PARTY_1", "PARTY_2" ],
+                  "notifyingParty" : [ "Party1", "Party2" ],
                   "publiclyAvailableInformation" : {
                     "publicSource" : [ "Standard Public Sources" ],
                     "specifiedNumber" : 2
@@ -177,7 +177,7 @@
                 "@key" : "a015b08d"
               },
               "obligations" : {
-                "category" : "BORROWED_MONEY",
+                "category" : "BorrowedMoney",
                 "notSubordinated" : true,
                 "excluded" : "true",
                 "othReferenceEntityObligations" : "true",
@@ -193,8 +193,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -213,14 +213,14 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f73",
-                "rollConvention" : "_20",
+                "rollConvention" : "20",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "17f73"
@@ -240,7 +240,7 @@
           "@key" : "5e1fca3e"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT",
+          "calculationAgentParty" : "CalculationAgentIndependent",
           "calculationAgentBusinessCenter" : {
             "@data" : "USNY"
           }
@@ -262,7 +262,7 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -292,20 +292,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
@@ -323,7 +323,7 @@
         }
       } ],
       "@key" : "c6afb4da",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -363,9 +363,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 1992
@@ -382,18 +382,18 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2003_CREDIT_DERIVATIVES"
+              "@data" : "ISDA2003CreditDerivatives"
             } ],
             "contractualTermsSupplement" : [ {
               "contractualTermsSupplementType" : {
-                "@data" : "ISDA_2003_CREDIT_MAY_2003"
+                "@data" : "ISDA2003CreditMay2003"
               }
             } ],
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }

@@ -13,8 +13,8 @@
         "payout" : [ {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -33,7 +33,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "_30_360"
+              "@data" : "30/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -101,7 +101,7 @@
                 "periodMultiplier" : 1,
                 "period" : "Y",
                 "@key" : "17965",
-                "rollConvention" : "_20",
+                "rollConvention" : "20",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "98d93d41",
@@ -114,7 +114,7 @@
                 "@key" : "78"
               },
               "firstPaymentDate" : "2004-11-20",
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -136,7 +136,7 @@
                   },
                   "identifierType" : "ISIN"
                 } ],
-                "instrumentType" : "DEBT",
+                "instrumentType" : "Debt",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               },
               "conditionPrecedentBond" : true
@@ -147,8 +147,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -177,14 +177,14 @@
                   "@scheme" : "http://www.fpml.org/coding-scheme/inflation-main-publication-1-0"
                 },
                 "interpolationMethod" : {
-                  "@data" : "LINEAR_ZERO_YIELD"
+                  "@data" : "LinearZeroYield"
                 },
                 "fallbackBondApplicable" : true,
                 "@type" : "cdm.product.asset.InflationRateSpecification"
               }
             },
             "dayCountFraction" : {
-              "@data" : "_1_1"
+              "@data" : "1/1"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -252,7 +252,7 @@
                 "periodMultiplier" : 3,
                 "period" : "M",
                 "@key" : "17f73",
-                "rollConvention" : "_20",
+                "rollConvention" : "20",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
               "@key" : "98d9434f",
@@ -265,7 +265,7 @@
                 "@key" : "78"
               },
               "firstPaymentDate" : "2004-11-20",
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
                 "businessCenters" : {
@@ -287,7 +287,7 @@
                 "periodMultiplier" : -2,
                 "period" : "D",
                 "@key" : "ed9c4f15",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
@@ -320,13 +320,13 @@
               "@key" : "cd37984b",
               "@key:external" : "resetDates"
             },
-            "compoundingMethod" : "NONE",
+            "compoundingMethod" : "None",
             "@type" : "cdm.product.asset.InterestRatePayout"
           },
           "@key" : "23f52e0f"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "87f9e99f"
@@ -345,7 +345,7 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -379,11 +379,11 @@
                   "identifier" : {
                     "@data" : "USA-CPI-U"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
-                "assetClass" : "INTEREST_RATE",
+                "assetClass" : "InterestRate",
                 "inflationRateIndex" : {
-                  "@data" : "USA_CPI_U",
+                  "@data" : "USA-CPI-U",
                   "@scheme" : "http://www.fpml.org/coding-scheme/inflation-index-description-2-0"
                 },
                 "indexTenor" : {
@@ -402,20 +402,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "312ceee",
         "@ref:external" : "party2"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "2ca0033",
         "@ref:external" : "party1"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "2ca0033",
         "@ref:external" : "party1"
@@ -520,7 +520,7 @@
             "identifier" : {
               "@data" : "EUR"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -549,7 +549,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "UPFRONT"
+        "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
     },

@@ -13,8 +13,8 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantityReference" : {
@@ -24,13 +24,13 @@
               "@key" : "8d28d340"
             },
             "settlementTerms" : {
-              "settlementType" : "PHYSICAL",
+              "settlementType" : "Physical",
               "@key" : "f3b1d0d7",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Product" : {
@@ -70,8 +70,8 @@
                     "payout" : [ {
                       "CreditDefaultPayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_1",
-                          "receiver" : "PARTY_2"
+                          "payer" : "Party1",
+                          "receiver" : "Party2"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -81,7 +81,7 @@
                           "@key:external" : "NOTIONAL"
                         },
                         "settlementTerms" : {
-                          "settlementType" : "PHYSICAL",
+                          "settlementType" : "Physical",
                           "settlementCurrency" : {
                             "@data" : "USD"
                           },
@@ -92,7 +92,7 @@
                             },
                             "deliverableObligations" : {
                               "accruedInterest" : false,
-                              "category" : "BOND_OR_LOAN",
+                              "category" : "BondOrLoan",
                               "notSubordinated" : true,
                               "notContingent" : true,
                               "assignableLoan" : {
@@ -120,17 +120,17 @@
                               "identifier" : {
                                 "@data" : "Dow Jones iTraxx Europe Consumers Series 2 Version 1"
                               },
-                              "identifierType" : "OTHER"
+                              "identifierType" : "Other"
                             } ],
                             "name" : {
                               "@data" : "Dow Jones iTraxx Europe Consumers Series 2 Version 1"
                             },
-                            "assetClass" : "CREDIT",
+                            "assetClass" : "Credit",
                             "indexSeries" : 2,
                             "indexAnnexVersion" : 1,
                             "indexAnnexDate" : "2006-11-01",
                             "indexAnnexSource" : {
-                              "@data" : "PUBLISHER"
+                              "@data" : "Publisher"
                             },
                             "excludedReferenceEntity" : [ {
                               "referenceEntity" : {
@@ -161,7 +161,7 @@
                               }
                             },
                             "creditEventNotice" : {
-                              "notifyingParty" : [ "PARTY_2", "PARTY_1" ],
+                              "notifyingParty" : [ "Party2", "Party1" ],
                               "publiclyAvailableInformation" : {
                                 "publicSource" : [ "Standard" ],
                                 "specifiedNumber" : 2
@@ -170,7 +170,7 @@
                             "@key" : "a7a0f33d"
                           },
                           "obligations" : {
-                            "category" : "BORROWED_MONEY"
+                            "category" : "BorrowedMoney"
                           },
                           "@key" : "ba3951f2"
                         } ],
@@ -180,8 +180,8 @@
                     }, {
                       "InterestRatePayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_2",
-                          "receiver" : "PARTY_1"
+                          "payer" : "Party2",
+                          "receiver" : "Party1"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -200,14 +200,14 @@
                           }
                         },
                         "dayCountFraction" : {
-                          "@data" : "ACT_360"
+                          "@data" : "ACT/360"
                         },
                         "calculationPeriodDates" : {
                           "calculationPeriodFrequency" : {
                             "periodMultiplier" : 3,
                             "period" : "M",
                             "@key" : "17f73",
-                            "rollConvention" : "_20",
+                            "rollConvention" : "20",
                             "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
                           },
                           "@key" : "17f73"
@@ -231,9 +231,9 @@
                 }
               }
             },
-            "optionType" : "RECEIVER",
+            "optionType" : "Receiver",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2006-12-20",
@@ -263,7 +263,7 @@
                   "@data" : "GBLO"
                 }
               },
-              "expirationTimeType" : "SPECIFIC_TIME",
+              "expirationTimeType" : "SpecificTime",
               "exerciseProcedure" : {
                 "manualExercise" : {
                   "fallbackExercise" : false
@@ -285,8 +285,8 @@
                     "@data" : "EUR"
                   }
                 },
-                "priceType" : "INTEREST_RATE",
-                "arithmeticOperator" : "ADD",
+                "priceType" : "InterestRate",
+                "arithmeticOperator" : "Add",
                 "@type" : "cdm.observable.asset.Price"
               }
             },
@@ -295,7 +295,7 @@
           "@key" : "4889c99b"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "9989b7c5"
@@ -314,7 +314,7 @@
               "@data" : "EUR"
             }
           },
-          "priceType" : "INTEREST_RATE",
+          "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -344,20 +344,20 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "a14913ec",
         "@ref:external" : "party2"
@@ -375,7 +375,7 @@
         }
       } ],
       "@key" : "3eac3060",
-      "identifierType" : "UNIQUE_TRANSACTION_IDENTIFIER",
+      "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
@@ -416,10 +416,10 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualMatrix" : [ {
               "matrixType" : {
-                "@data" : "CREDIT_DERIVATIVES_PHYSICAL_SETTLEMENT_MATRIX"
+                "@data" : "CreditDerivativesPhysicalSettlementMatrix"
               }
             } ]
           }
@@ -456,7 +456,7 @@
             "identifier" : {
               "@data" : "EUR"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -466,7 +466,7 @@
           "periodMultiplier" : 3,
           "period" : "D",
           "@key" : "968fbf5",
-          "dayType" : "BUSINESS",
+          "dayType" : "Business",
           "businessDayConvention" : "NONE",
           "dateRelativeTo" : {
             "@ref" : "3eb050",
@@ -486,7 +486,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

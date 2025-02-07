@@ -5,7 +5,7 @@
   "trade" : {
     "product" : {
       "taxonomy" : [ {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "Equity:Swap:PriceReturnBasicPerformance:SingleName"
@@ -23,8 +23,8 @@
             "periodMultiplier" : 3,
             "period" : "D",
             "@key" : "fed6ed42",
-            "dayType" : "EXCHANGE_BUSINESS",
-            "businessDayConvention" : "NOT_APPLICABLE",
+            "dayType" : "ExchangeBusiness",
+            "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
               "@ref" : "3e8a58",
               "@ref:external" : "TradeDate"
@@ -39,7 +39,7 @@
             "periodMultiplier" : 0,
             "period" : "D",
             "@key" : "edf02740",
-            "businessDayConvention" : "NOT_APPLICABLE",
+            "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
               "@ref" : "bb917ef4",
               "@ref:external" : "FinalEquityPaymentDate"
@@ -52,8 +52,8 @@
         "payout" : [ {
           "PerformancePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -64,7 +64,7 @@
               "@key:external" : "EquityNotionalAmount"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -73,12 +73,12 @@
             },
             "valuationDates" : {
               "interimValuationDate" : {
-                "determinationMethod" : "VALUATION_TIME",
+                "determinationMethod" : "ValuationTime",
                 "valuationDates" : {
                   "adjustableDates" : {
                     "unadjustedDate" : [ "2001-10-12", "2001-11-13", "2001-12-12", "2002-01-14", "2002-02-12", "2002-03-12", "2002-04-12", "2002-05-13", "2002-06-12", "2002-07-12", "2002-08-12" ],
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "e80e5233"
@@ -86,16 +86,16 @@
                   "@key" : "e80e5233",
                   "@key:external" : "InterimValuationDate"
                 },
-                "valuationTimeType" : "CLOSE",
+                "valuationTimeType" : "Close",
                 "@key" : "2276b670"
               },
               "finalValuationDate" : {
-                "determinationMethod" : "HEDGE_EXECUTION",
+                "determinationMethod" : "HedgeExecution",
                 "valuationDate" : {
                   "adjustableDate" : {
                     "unadjustedDate" : "2002-09-24",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NOT_APPLICABLE",
+                      "businessDayConvention" : "NotApplicable",
                       "@key" : "3a4b88ab"
                     },
                     "@key" : "252ee503"
@@ -113,7 +113,7 @@
                     "periodMultiplier" : 3,
                     "period" : "D",
                     "@key" : "dfe60714",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCenters" : {
                       "businessCenter" : [ {
@@ -136,7 +136,7 @@
                     "periodMultiplier" : 3,
                     "period" : "D",
                     "@key" : "bb917ef4",
-                    "dayType" : "CURRENCY_BUSINESS",
+                    "dayType" : "CurrencyBusiness",
                     "businessDayConvention" : "FOLLOWING",
                     "businessCentersReference" : {
                       "@ref" : "27e4e9",
@@ -162,18 +162,18 @@
             },
             "returnTerms" : {
               "priceReturnTerms" : {
-                "returnType" : "TOTAL"
+                "returnType" : "Total"
               },
               "dividendReturnTerms" : {
                 "dividendPayoutRatio" : [ {
                   "totalRatio" : 1
                 } ],
                 "dividendReinvestment" : false,
-                "dividendEntitlement" : "EX_DATE",
-                "extraordinaryDividendsParty" : "EXTRAORDINARY_DIVIDENDS_PARTY",
-                "excessDividendAmount" : "RECORD_AMOUNT",
+                "dividendEntitlement" : "ExDate",
+                "extraordinaryDividendsParty" : "ExtraordinaryDividendsParty",
+                "excessDividendAmount" : "RecordAmount",
                 "dividendCurrency" : {
-                  "determinationMethod" : "DIVIDEND_CURRENCY"
+                  "determinationMethod" : "DividendCurrency"
                 },
                 "dividendPeriod" : [ {
                   "startDate" : {
@@ -190,7 +190,7 @@
                   },
                   "dividendPaymentDate" : {
                     "dividendDateReference" : {
-                      "dateReference" : "EQUITY_PAYMENT_DATE"
+                      "dateReference" : "EquityPaymentDate"
                     }
                   }
                 } ]
@@ -202,8 +202,8 @@
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -231,7 +231,7 @@
               }
             },
             "dayCountFraction" : {
-              "@data" : "ACT_360"
+              "@data" : "ACT/360"
             },
             "calculationPeriodDates" : {
               "effectiveDate" : {
@@ -239,8 +239,8 @@
                   "periodMultiplier" : 3,
                   "period" : "D",
                   "@key" : "fed6ed42",
-                  "dayType" : "EXCHANGE_BUSINESS",
-                  "businessDayConvention" : "NOT_APPLICABLE",
+                  "dayType" : "ExchangeBusiness",
+                  "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
                     "@ref" : "3e8a58",
                     "@ref:external" : "TradeDate"
@@ -254,7 +254,7 @@
                   "periodMultiplier" : 0,
                   "period" : "D",
                   "@key" : "edf02740",
-                  "businessDayConvention" : "NOT_APPLICABLE",
+                  "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
                     "@ref" : "bb917ef4",
                     "@ref:external" : "FinalEquityPaymentDate"
@@ -273,7 +273,7 @@
                     "periodMultiplier" : 0,
                     "period" : "D",
                     "@key" : "97fde1d6",
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "dateRelativeTo" : {
                       "@ref" : "56b8bd08",
                       "@ref:external" : "EquityPaymentDate"
@@ -290,7 +290,7 @@
                 "@ref" : "f0f22bbe",
                 "@ref:external" : "InterestLegPeriodDates"
               },
-              "resetRelativeTo" : "CALCULATION_PERIOD_START_DATE",
+              "resetRelativeTo" : "CalculationPeriodStartDate",
               "@key" : "fc6e6273"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
@@ -298,7 +298,7 @@
           "@key" : "587f1069"
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CALCULATION_AGENT_INDEPENDENT"
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "@key" : "8873b7af"
@@ -313,16 +313,16 @@
             }
           },
           "perUnitOf" : {
-            "financialUnit" : "SHARE"
+            "financialUnit" : "Share"
           },
-          "priceType" : "ASSET_PRICE",
+          "priceType" : "AssetPrice",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
         "quantity" : [ {
           "value" : 760400,
           "unit" : {
-            "financialUnit" : "SHARE"
+            "financialUnit" : "Share"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
@@ -345,12 +345,12 @@
                     "@data" : "SHPGY.O",
                     "@scheme" : "http://www.abc.com/instrumentId"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 }, {
                   "identifier" : {
                     "@data" : "Shire Pharmeceuticals Group - American Depositary Receipts"
                   },
-                  "identifierType" : "NAME"
+                  "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
                 "exchange" : {
@@ -360,7 +360,7 @@
                   },
                   "@key" : "247344"
                 },
-                "instrumentType" : "EQUITY",
+                "instrumentType" : "Equity",
                 "@type" : "cdm.base.staticdata.asset.common.Security"
               }
             }
@@ -381,8 +381,8 @@
               "@data" : "USD"
             }
           },
-          "priceType" : "INTEREST_RATE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "InterestRate",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-2"
         } ],
@@ -394,10 +394,10 @@
                   "identifier" : {
                     "@data" : "USD-LIBOR-BBA"
                   },
-                  "identifierType" : "OTHER"
+                  "identifierType" : "Other"
                 } ],
                 "floatingRateIndex" : {
-                  "@data" : "USD_LIBOR_BBA"
+                  "@data" : "USD-LIBOR-BBA"
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
@@ -415,32 +415,32 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     } ],
     "ancillaryParty" : [ {
-      "role" : "EXTRAORDINARY_DIVIDENDS_PARTY",
+      "role" : "ExtraordinaryDividendsParty",
       "partyReference" : [ {
         "@ref" : "33f59569",
         "@ref:external" : "party3"
       } ]
     }, {
-      "role" : "CALCULATION_AGENT_INDEPENDENT",
+      "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
         "@ref" : "33f59569",
         "@ref:external" : "party3"
       } ]
     } ],
-    "adjustment" : "EXECUTION",
+    "adjustment" : "Execution",
     "tradeIdentifier" : [ {
       "issuerReference" : {
         "@ref" : "33f59567",
@@ -508,9 +508,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           },
           "vintage" : 2002
@@ -527,11 +527,11 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
               "@data" : "ISDA2000"
             }, {
-              "@data" : "ISDA_2002_EQUITY_DERIVATIVES"
+              "@data" : "ISDA2002EquityDerivatives"
             } ]
           }
         },

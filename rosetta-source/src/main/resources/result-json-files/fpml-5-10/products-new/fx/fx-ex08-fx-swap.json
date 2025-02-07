@@ -5,7 +5,7 @@
   "trade" : {
     "product" : {
       "taxonomy" : [ {
-        "source" : "OTHER",
+        "source" : "Other",
         "value" : {
           "name" : {
             "@data" : "FxSwap",
@@ -22,8 +22,8 @@
         "payout" : [ {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -53,8 +53,8 @@
         }, {
           "SettlementPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -99,7 +99,7 @@
               "@data" : "GBP"
             }
           },
-          "priceType" : "EXCHANGE_RATE",
+          "priceType" : "ExchangeRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -129,7 +129,7 @@
                 "identifier" : {
                   "@data" : "GBP"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -150,7 +150,7 @@
               "@data" : "GBP"
             }
           },
-          "priceType" : "EXCHANGE_RATE",
+          "priceType" : "ExchangeRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-2"
         } ],
@@ -180,7 +180,7 @@
                 "identifier" : {
                   "@data" : "GBP"
                 },
-                "identifierType" : "CURRENCY_CODE"
+                "identifierType" : "CurrencyCode"
               } ],
               "@type" : "cdm.base.staticdata.asset.common.Cash"
             }
@@ -191,13 +191,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "a41bc6e9",
         "@ref:external" : "party2"

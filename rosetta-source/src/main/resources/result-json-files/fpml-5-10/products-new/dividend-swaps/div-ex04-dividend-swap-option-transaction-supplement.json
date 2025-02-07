@@ -13,11 +13,11 @@
         "payout" : [ {
           "OptionPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -25,8 +25,8 @@
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
-              "buyer" : "PARTY_1",
-              "seller" : "PARTY_2"
+              "buyer" : "Party1",
+              "seller" : "Party2"
             },
             "underlier" : {
               "Product" : {
@@ -40,8 +40,8 @@
                     "payout" : [ {
                       "PerformancePayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_1",
-                          "receiver" : "PARTY_2"
+                          "payer" : "Party1",
+                          "receiver" : "Party2"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -50,7 +50,7 @@
                           "@key" : "0"
                         },
                         "settlementTerms" : {
-                          "settlementType" : "CASH",
+                          "settlementType" : "Cash",
                           "settlementCurrency" : {
                             "@data" : "USD"
                           },
@@ -103,7 +103,7 @@
                                     "periodMultiplier" : 3,
                                     "period" : "D",
                                     "@key" : "815062c0",
-                                    "dayType" : "CALENDAR",
+                                    "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
                                       "@ref:external" : "e1"
@@ -149,7 +149,7 @@
                                     "periodMultiplier" : 3,
                                     "period" : "D",
                                     "@key" : "815062c1",
-                                    "dayType" : "CALENDAR",
+                                    "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
                                       "@ref:external" : "e2"
@@ -169,8 +169,8 @@
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_2",
-                          "receiver" : "PARTY_1"
+                          "payer" : "Party2",
+                          "receiver" : "Party1"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -185,7 +185,7 @@
                                 "periodMultiplier" : 3,
                                 "period" : "D",
                                 "@key" : "815062c0",
-                                "dayType" : "CALENDAR",
+                                "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
                                   "@ref:external" : "e1"
@@ -201,7 +201,7 @@
                         "fixedPrice" : {
                           "price" : {
                             "value" : 0.045,
-                            "priceType" : "DIVIDEND",
+                            "priceType" : "Dividend",
                             "@type" : "cdm.observable.asset.PriceSchedule"
                           }
                         },
@@ -211,8 +211,8 @@
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
-                          "payer" : "PARTY_2",
-                          "receiver" : "PARTY_1"
+                          "payer" : "Party2",
+                          "receiver" : "Party1"
                         },
                         "priceQuantity" : {
                           "quantitySchedule" : {
@@ -227,7 +227,7 @@
                                 "periodMultiplier" : 3,
                                 "period" : "D",
                                 "@key" : "815062c1",
-                                "dayType" : "CALENDAR",
+                                "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
                                   "@ref:external" : "e2"
@@ -243,7 +243,7 @@
                         "fixedPrice" : {
                           "price" : {
                             "value" : 0.045,
-                            "priceType" : "DIVIDEND",
+                            "priceType" : "Dividend",
                             "@type" : "cdm.observable.asset.PriceSchedule"
                           }
                         },
@@ -256,14 +256,14 @@
                 }
               }
             },
-            "optionType" : "CALL",
+            "optionType" : "Call",
             "exerciseTerms" : {
-              "style" : "EUROPEAN",
+              "style" : "European",
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2015-03-20",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NOT_APPLICABLE",
+                    "businessDayConvention" : "NotApplicable",
                     "@key" : "3a4b88ab"
                   },
                   "@key" : "26af9c7f"
@@ -290,7 +290,7 @@
         "quantity" : [ {
           "value" : 1000,
           "unit" : {
-            "financialUnit" : "INDEX_UNIT"
+            "financialUnit" : "IndexUnit"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
@@ -303,7 +303,7 @@
                   "@data" : ".FCHI",
                   "@scheme" : "http://example.com/instrumentId"
                 },
-                "identifierType" : "OTHER"
+                "identifierType" : "Other"
               } ],
               "isExchangeListed" : true,
               "exchange" : {
@@ -326,7 +326,7 @@
               "name" : {
                 "@data" : "France CAC 40 Index"
               },
-              "assetClass" : "EQUITY",
+              "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
@@ -357,13 +357,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "7766c429",
         "@ref:external" : "partyB"
@@ -447,7 +447,7 @@
             "identifier" : {
               "@data" : "GBP"
             },
-            "identifierType" : "CURRENCY_CODE"
+            "identifierType" : "CurrencyCode"
           } ],
           "@type" : "cdm.base.staticdata.asset.common.Cash"
         }
@@ -455,7 +455,7 @@
       "settlementDate" : {
         "unadjustedDate" : "2009-01-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NOT_APPLICABLE",
+          "businessDayConvention" : "NotApplicable",
           "@key" : "3a4b88ab"
         }
       },
@@ -470,7 +470,7 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "PREMIUM"
+        "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
     },

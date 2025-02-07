@@ -14,7 +14,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-07-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25e0de2c"
@@ -25,7 +25,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-07-31",
             "dateAdjustments" : {
-              "businessDayConvention" : "NOT_APPLICABLE",
+              "businessDayConvention" : "NotApplicable",
               "@key" : "3a4b88ab"
             },
             "@key" : "25e14eca"
@@ -35,8 +35,8 @@
         "payout" : [ {
           "CommodityPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_1",
-              "receiver" : "PARTY_2"
+              "payer" : "Party1",
+              "receiver" : "Party2"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -45,7 +45,7 @@
               "@key" : "0"
             },
             "settlementTerms" : {
-              "settlementType" : "CASH",
+              "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
@@ -62,11 +62,11 @@
             },
             "pricingDates" : {
               "parametricDates" : {
-                "dayType" : "BUSINESS",
-                "dayDistribution" : "LAST",
+                "dayType" : "Business",
+                "dayDistribution" : "Last",
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
-                    "@data" : "NYMEX_NATURAL_GAS"
+                    "@data" : "NYMEX-NATURAL-GAS"
                   } ],
                   "@key" : "acc66859"
                 }
@@ -84,16 +84,16 @@
               "@key" : "11e9"
             },
             "paymentDates" : {
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "NOT_APPLICABLE",
+                "businessDayConvention" : "NotApplicable",
                 "@key" : "3a4b88ab"
               },
               "@key" : "2c4cb386"
@@ -109,8 +109,8 @@
         }, {
           "CommodityPayout" : {
             "payerReceiver" : {
-              "payer" : "PARTY_2",
-              "receiver" : "PARTY_1"
+              "payer" : "Party2",
+              "receiver" : "Party1"
             },
             "priceQuantity" : {
               "quantitySchedule" : {
@@ -121,7 +121,7 @@
             "averagingFeature" : {
               "averagingMethod" : {
                 "isWeighted" : false,
-                "calculationMethod" : "ARITHMETIC"
+                "calculationMethod" : "Arithmetic"
               }
             },
             "commodityPriceReturnTerms" : {
@@ -129,27 +129,27 @@
             },
             "pricingDates" : {
               "parametricDates" : {
-                "dayType" : "CALENDAR",
-                "dayDistribution" : "ALL",
+                "dayType" : "Calendar",
+                "dayDistribution" : "All",
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
-                    "@data" : "DOW_JONES_POWER"
+                    "@data" : "DowJonesPower"
                   } ],
                   "@key" : "e1cbae2a"
                 }
               }
             },
             "paymentDates" : {
-              "payRelativeTo" : "CALCULATION_PERIOD_END_DATE",
+              "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
                 "@key" : "ea4acac1",
-                "dayType" : "BUSINESS",
+                "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "NOT_APPLICABLE",
+                "businessDayConvention" : "NotApplicable",
                 "@key" : "3a4b88ab"
               },
               "@key" : "2c4cb386"
@@ -178,8 +178,8 @@
           "perUnitOf" : {
             "capacityUnit" : "USMMBTU"
           },
-          "priceType" : "ASSET_PRICE",
-          "arithmeticOperator" : "ADD",
+          "priceType" : "AssetPrice",
+          "arithmeticOperator" : "Add",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
         } ],
@@ -213,7 +213,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "SETTLEMENT",
+              "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "periodMultiplier" : 1,
@@ -259,7 +259,7 @@
                 },
                 "identifierType" : "ISDACRP"
               } ],
-              "priceQuoteType" : "MEAN_OF_HIGH_AND_LOW",
+              "priceQuoteType" : "MeanOfHighAndLow",
               "@type" : "cdm.base.staticdata.asset.common.Commodity"
             }
           },
@@ -269,13 +269,13 @@
       } ]
     } ],
     "counterparty" : [ {
-      "role" : "PARTY_1",
+      "role" : "Party1",
       "partyReference" : {
         "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       }
     }, {
-      "role" : "PARTY_2",
+      "role" : "Party2",
       "partyReference" : {
         "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
@@ -345,9 +345,9 @@
       "documentation" : [ {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "MASTER_AGREEMENT",
+            "agreementType" : "MasterAgreement",
             "masterAgreementType" : {
-              "@data" : "ISDA_MASTER"
+              "@data" : "ISDAMaster"
             }
           }
         },
@@ -363,9 +363,9 @@
       }, {
         "legalAgreementIdentification" : {
           "agreementName" : {
-            "agreementType" : "CONFIRMATION",
+            "agreementType" : "Confirmation",
             "contractualDefinitionsType" : [ {
-              "@data" : "ISDA_2005_COMMODITY"
+              "@data" : "ISDA2005Commodity"
             } ]
           }
         },
