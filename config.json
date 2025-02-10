@@ -7,7 +7,11 @@
   "ownerPermission": "cdm_owner",
   "fixedVersions": [
     {
-      "id": "v4",
+      "id": "prod",
+      "upmostVersion": "5.18.0"
+    },
+    {
+      "id": "prod-alt",
       "upmostVersion": "5.999.999"
     }
   ],
