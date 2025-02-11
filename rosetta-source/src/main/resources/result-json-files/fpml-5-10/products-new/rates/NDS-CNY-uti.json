@@ -9,8 +9,7 @@
           "@data" : "InterestRate:IRSwap:FixedFloat",
           "@scheme" : "http://www.fpml.org/coding-scheme/product-taxonomy"
         },
-        "source" : "Other",
-        "@key" : "44520a9a"
+        "source" : "Other"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
@@ -42,15 +41,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "77913cbb",
               "cashSettlementTerms" : [ {
                 "valuationMethod" : {
                   "valuationSource" : {
@@ -65,7 +62,6 @@
                   "fxFixingDate" : {
                     "periodMultiplier" : -2,
                     "period" : "D",
-                    "@key" : "c0f47555",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
@@ -73,19 +69,16 @@
                         "@data" : "CNBE"
                       }, {
                         "@data" : "USNY"
-                      } ],
-                      "@key" : "3fc80bb"
+                      } ]
                     },
                     "dateRelativeToPaymentDates" : {
                       "paymentDatesReference" : [ {
-                        "@ref" : "857b09dc",
                         "@ref:external" : "paymentDates1"
                       } ]
                     },
                     "@type" : "cdm.product.common.settlement.FxFixingDate"
                   }
-                },
-                "@key" : "4083e762"
+                }
               } ],
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -95,8 +88,7 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "dayCountFraction" : {
@@ -107,12 +99,9 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2018-05-15",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NONE",
-                    "@key" : "24a738"
-                  },
-                  "@key" : "ece4a0c7"
-                },
-                "@key" : "ece4a0c7"
+                    "businessDayConvention" : "NONE"
+                  }
+                }
               },
               "terminationDate" : {
                 "adjustableDate" : {
@@ -124,14 +113,10 @@
                         "@data" : "CNBE"
                       }, {
                         "@data" : "USNY"
-                      } ],
-                      "@key" : "3fc80bb"
-                    },
-                    "@key" : "9785d44c"
-                  },
-                  "@key" : "ae45741d"
-                },
-                "@key" : "ae45741d"
+                      } ]
+                    }
+                  }
+                }
               },
               "calculationPeriodDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
@@ -140,26 +125,21 @@
                     "@data" : "CNBE"
                   }, {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "3fc80bb"
-                },
-                "@key" : "9785d44c"
+                  } ]
+                }
               },
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 3,
                 "period" : "M",
-                "@key" : "17f59",
                 "rollConvention" : "15",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
-              "@key" : "6f898701",
               "@key:external" : "fixedCalcPeriodDates1"
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 3,
-                "period" : "M",
-                "@key" : "aa"
+                "period" : "M"
               },
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
@@ -169,17 +149,13 @@
                     "@data" : "CNBE"
                   }, {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "3fc80bb"
-                },
-                "@key" : "9785d44c"
+                  } ]
+                }
               },
-              "@key" : "857b09dc",
               "@key:external" : "paymentDates1"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "e80387d"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -189,15 +165,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "77913cbc",
               "cashSettlementTerms" : [ {
                 "valuationMethod" : {
                   "valuationSource" : {
@@ -212,7 +186,6 @@
                   "fxFixingDate" : {
                     "periodMultiplier" : -2,
                     "period" : "D",
-                    "@key" : "c0f47556",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
@@ -220,19 +193,16 @@
                         "@data" : "CNBE"
                       }, {
                         "@data" : "USNY"
-                      } ],
-                      "@key" : "3fc80bb"
+                      } ]
                     },
                     "dateRelativeToPaymentDates" : {
                       "paymentDatesReference" : [ {
-                        "@ref" : "19de04d7",
                         "@ref:external" : "paymentDates2"
                       } ]
                     },
                     "@type" : "cdm.product.common.settlement.FxFixingDate"
                   }
-                },
-                "@key" : "4083e763"
+                }
               } ],
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -241,7 +211,6 @@
                 "rateOption" : {
                   "@ref:scoped" : "InterestRateIndex-1"
                 },
-                "@key" : "0",
                 "@type" : "cdm.product.asset.FloatingRateSpecification"
               }
             },
@@ -253,12 +222,9 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2018-05-15",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NONE",
-                    "@key" : "24a738"
-                  },
-                  "@key" : "ece4a0c7"
-                },
-                "@key" : "ece4a0c7"
+                    "businessDayConvention" : "NONE"
+                  }
+                }
               },
               "terminationDate" : {
                 "adjustableDate" : {
@@ -270,14 +236,10 @@
                         "@data" : "CNBE"
                       }, {
                         "@data" : "USNY"
-                      } ],
-                      "@key" : "3fc80bb"
-                    },
-                    "@key" : "9785d44c"
-                  },
-                  "@key" : "ae45741d"
-                },
-                "@key" : "ae45741d"
+                      } ]
+                    }
+                  }
+                }
               },
               "calculationPeriodDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
@@ -286,26 +248,21 @@
                     "@data" : "CNBE"
                   }, {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "3fc80bb"
-                },
-                "@key" : "9785d44c"
+                  } ]
+                }
               },
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 7,
                 "period" : "D",
-                "@key" : "18d46",
                 "rollConvention" : "15",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
-              "@key" : "6f8994ee",
               "@key:external" : "floatingCalcPeriodDates2"
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 3,
-                "period" : "M",
-                "@key" : "aa"
+                "period" : "M"
               },
               "firstPaymentDate" : "2018-08-15",
               "payRelativeTo" : "CalculationPeriodEndDate",
@@ -316,31 +273,25 @@
                     "@data" : "CNBE"
                   }, {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "3fc80bb"
-                },
-                "@key" : "9785d44c"
+                  } ]
+                }
               },
-              "@key" : "19de04d7",
               "@key:external" : "paymentDates2"
             },
             "resetDates" : {
               "calculationPeriodDatesReference" : {
-                "@ref" : "6f8994ee",
                 "@ref:external" : "floatingCalcPeriodDates2"
               },
               "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : -1,
                 "period" : "D",
-                "@key" : "9accb2ad",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
                   "businessCenter" : [ {
                     "@data" : "CNBE"
-                  } ],
-                  "@key" : "1fa1ee"
+                  } ]
                 },
                 "dateRelativeTo" : {
                   "@ref" : "2b110b46",
@@ -351,7 +302,6 @@
               "resetFrequency" : {
                 "periodMultiplier" : 7,
                 "period" : "D",
-                "@key" : "11d",
                 "@type" : "cdm.product.common.schedule.ResetFrequency"
               },
               "resetDatesAdjustments" : {
@@ -361,21 +311,16 @@
                     "@data" : "CNBE"
                   }, {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "3fc80bb"
-                },
-                "@key" : "9785d44c"
+                  } ]
+                }
               },
-              "@key" : "2b110b46",
               "@key:external" : "resetDates2"
             },
             "compoundingMethod" : "Flat",
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "727ef5d3"
+          }
         } ]
-      },
-      "@key" : "b074940e"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -404,8 +349,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "61aa6a46"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 28000000,
@@ -432,8 +376,7 @@
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 1,
-                  "period" : "W",
-                  "@key" : "76"
+                  "period" : "W"
                 },
                 "@type" : "cdm.observable.asset.FloatingRateIndex"
               },
@@ -441,20 +384,17 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "b98ea4c"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     } ],
@@ -469,13 +409,11 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/uti"
         }
       } ],
-      "@key" : "3eac3060",
       "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2018-03-27",
-      "@key" : "3f10db"
+      "@data" : "2018-03-27"
     },
     "party" : [ {
       "partyId" : [ {
@@ -483,13 +421,11 @@
           "@data" : "54930084UKLVMY22DS16",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "abf5051b"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "b6bdbfc2",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -497,13 +433,11 @@
           "@data" : "48750084UKLVTR22DS78",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "62694f84"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party B"
       },
-      "@key" : "a14913ec",
       "@key:external" : "party2"
     } ],
     "contractDetails" : {
@@ -518,13 +452,10 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         }, {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         } ],
-        "@key" : "eaa25168",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -537,18 +468,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         }, {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         } ],
-        "@key" : "4c20c4c1",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "b25f8859"
+      } ]
     },
-    "@key" : "235b0531",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "235b0531"

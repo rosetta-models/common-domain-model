@@ -12,10 +12,8 @@
       "economicTerms" : {
         "terminationDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2010-03-20",
-            "@key" : "3ed0d4"
-          },
-          "@key" : "3ed0d4"
+            "unadjustedDate" : "2010-03-20"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -26,8 +24,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "generalTerms" : {
               "indexReferenceInformation" : {
@@ -47,20 +44,16 @@
                   "referenceEntity" : {
                     "name" : {
                       "@data" : "TESCO PLC"
-                    },
-                    "@key" : "43886e95"
+                    }
                   }
                 } ],
-                "@key" : "df6c52dd",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
             },
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "be0acfde"
+          }
         } ]
-      },
-      "@key" : "feec8b8a"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -73,20 +66,17 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8bdc3dd"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "1dd5dd49",
         "@ref:external" : "z45rdfg"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "1733b005",
         "@ref:external" : "yuhge34"
       }
     } ],
@@ -101,13 +91,11 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/usi"
         }
       } ],
-      "@key" : "df285a49",
       "identifierType" : "UniqueSwapIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2004-11-03",
-      "@key" : "3ea2c3"
+      "@data" : "2004-11-03"
     },
     "party" : [ {
       "partyId" : [ {
@@ -115,13 +103,11 @@
           "@data" : "NEWBANKLDNBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "5d953786"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "New Bank, New York"
       },
-      "@key" : "1733b005",
       "@key:external" : "yuhge34"
     }, {
       "partyId" : [ {
@@ -129,13 +115,11 @@
           "@data" : "MASSIVELDNBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "5339cb0e"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "Massive Bank, New York"
       },
-      "@key" : "1dd5dd49",
       "@key:external" : "z45rdfg"
     } ],
     "contractDetails" : {
@@ -150,18 +134,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "1dd5dd49",
           "@ref:external" : "z45rdfg"
         }, {
-          "@ref" : "1733b005",
           "@ref:external" : "yuhge34"
         } ],
-        "@key" : "d538a651",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "d538a651"
+      } ]
     },
-    "@key" : "a2baee57",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -188,11 +167,9 @@
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "1733b005",
           "@ref:external" : "yuhge34"
         },
         "receiverPartyReference" : {
-          "@ref" : "1dd5dd49",
           "@ref:external" : "z45rdfg"
         }
       },
@@ -200,8 +177,7 @@
         "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "d37c0516"
+    }
   } ],
   "@key" : "516f61ed"
 }

@@ -20,14 +20,10 @@
                   "@data" : "GBLO"
                 }, {
                   "@data" : "USNY"
-                } ],
-                "@key" : "42f910b"
-              },
-              "@key" : "da556d3a"
-            },
-            "@key" : "b0cdd84f"
-          },
-          "@key" : "b0cdd84f"
+                } ]
+              }
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
@@ -39,14 +35,10 @@
                   "@data" : "GBLO"
                 }, {
                   "@data" : "USNY"
-                } ],
-                "@key" : "42f910b"
-              },
-              "@key" : "da556d3a"
-            },
-            "@key" : "777d2cc1"
-          },
-          "@key" : "777d2cc1"
+                } ]
+              }
+            }
+          }
         },
         "dateAdjustments" : {
           "businessDayConvention" : "FOLLOWING",
@@ -55,10 +47,8 @@
               "@data" : "GBLO"
             }, {
               "@data" : "USNY"
-            } ],
-            "@key" : "42f910b"
-          },
-          "@key" : "da556d3a"
+            } ]
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -69,18 +59,15 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Physical",
-              "@key" : "321f92c1",
               "physicalSettlementTerms" : {
                 "physicalSettlementPeriod" : {
                   "businessDays" : 5
                 },
-                "escrow" : true,
-                "@key" : "56a"
+                "escrow" : true
               },
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -89,8 +76,7 @@
                 "referenceEntity" : {
                   "name" : {
                     "@data" : "New Century Home Equity Loan Trust 2005-4"
-                  },
-                  "@key" : "5df00e1c"
+                  }
                 },
                 "referenceObligation" : [ {
                   "security" : {
@@ -120,8 +106,7 @@
                 "distressedRatingsDowngrade" : true,
                 "maturityExtension" : false,
                 "writedown" : true,
-                "impliedWritedown" : false,
-                "@key" : "7aa2fc2c"
+                "impliedWritedown" : false
               },
               "floatingAmountEvents" : {
                 "failureToPayPrincipal" : true,
@@ -142,12 +127,10 @@
                   "principalShortfallReimbursement" : true,
                   "writedownReimbursement" : true
                 }
-              },
-              "@key" : "46e6cc75"
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "20e6ff88"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -157,8 +140,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -166,34 +148,28 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "calculationPeriodDates" : {
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 1,
                 "period" : "M",
-                "@key" : "177d3",
                 "rollConvention" : "11",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
-              },
-              "@key" : "177d3"
+              }
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 1,
-                "period" : "M",
-                "@key" : "6c"
+                "period" : "M"
               },
               "firstPaymentDate" : "2006-11-01",
-              "lastRegularPaymentDate" : "2035-06-01",
-              "@key" : "7d8d44c"
+              "lastRegularPaymentDate" : "2035-06-01"
             },
             "paymentDelay" : true,
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "bd1adfef"
+          }
         } ],
         "calculationAgent" : {
           "calculationAgentParty" : "CalculationAgentIndependent",
@@ -201,8 +177,7 @@
             "@data" : "USNY"
           }
         }
-      },
-      "@key" : "4ee89934"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -231,8 +206,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "e3639930"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 15000000,
@@ -243,33 +217,28 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a10c1e7e"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "e1326d8",
         "@ref:external" : "yt67d"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "4f580caa",
         "@ref:external" : "gf4t5"
       }
     } ],
     "ancillaryParty" : [ {
       "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
-        "@ref" : "4f580caa",
         "@ref:external" : "gf4t5"
       } ]
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "e1326d8",
         "@ref:external" : "yt67d"
       },
       "assignedIdentifier" : [ {
@@ -279,12 +248,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "b6f0aca",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2006-10-05",
-      "@key" : "3eb285"
+      "@data" : "2006-10-05"
     },
     "party" : [ {
       "partyId" : [ {
@@ -292,13 +259,11 @@
           "@data" : "XYZBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "2dfac9c7"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "XYZ Bank"
       },
-      "@key" : "4f580caa",
       "@key:external" : "gf4t5"
     }, {
       "partyId" : [ {
@@ -306,13 +271,11 @@
           "@data" : "ABCBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "94009ede"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "ABC Bank"
       },
-      "@key" : "e1326d8",
       "@key:external" : "yt67d"
     } ],
     "contractDetails" : {
@@ -327,13 +290,10 @@
           "vintage" : 1992
         },
         "contractualParty" : [ {
-          "@ref" : "e1326d8",
           "@ref:external" : "yt67d"
         }, {
-          "@ref" : "4f580caa",
           "@ref:external" : "gf4t5"
         } ],
-        "@key" : "9a7fe90f",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -355,18 +315,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "e1326d8",
           "@ref:external" : "yt67d"
         }, {
-          "@ref" : "4f580caa",
           "@ref:external" : "gf4t5"
         } ],
-        "@key" : "d4b2125c",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "6cf096d"
+      } ]
     },
-    "@key" : "791cbb08",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "791cbb08"

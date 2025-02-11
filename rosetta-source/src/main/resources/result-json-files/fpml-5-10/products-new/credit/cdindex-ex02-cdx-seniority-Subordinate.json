@@ -12,17 +12,13 @@
       "economicTerms" : {
         "effectiveDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2004-03-23",
-            "@key" : "3ea0d7"
-          },
-          "@key" : "3ea0d7"
+            "unadjustedDate" : "2004-03-23"
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2009-03-20",
-            "@key" : "3ec8d4"
-          },
-          "@key" : "3ec8d4"
+            "unadjustedDate" : "2009-03-20"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -33,8 +29,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "generalTerms" : {
               "indexReferenceInformation" : {
@@ -54,13 +49,11 @@
                   "@data" : "Publisher"
                 },
                 "seniority" : "SubTier1",
-                "@key" : "c93cfc2a",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
             },
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "4c4a5b09"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -70,8 +63,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -79,16 +71,13 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "5a5ff79f"
+          }
         } ]
-      },
-      "@key" : "5a09162b"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -107,8 +96,7 @@
           "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
-        } ],
-        "@key" : "d9370b83"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 25000000,
@@ -119,20 +107,17 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8bdc3dd"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     } ],
@@ -147,13 +132,11 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/uti"
         }
       } ],
-      "@key" : "1ecdb5a5",
       "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2005-01-24",
-      "@key" : "3ea858"
+      "@data" : "2005-01-24"
     },
     "party" : [ {
       "partyId" : [ {
@@ -161,13 +144,11 @@
           "@data" : "54930084UKLVMY22DS16",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "abf5051b"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "b6bdbfc2",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -175,13 +156,11 @@
           "@data" : "48750084UKLVTR22DS78",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "62694f84"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party B"
       },
-      "@key" : "a14913ec",
       "@key:external" : "party2"
     } ],
     "contractDetails" : {
@@ -196,18 +175,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         }, {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         } ],
-        "@key" : "d281eb53",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "d281eb53"
+      } ]
     },
-    "@key" : "4fa163d7",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -234,11 +208,9 @@
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         },
         "receiverPartyReference" : {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         }
       },
@@ -246,8 +218,7 @@
         "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "ddda3d95"
+    }
   } ],
   "@key" : "ce624fec"
 }

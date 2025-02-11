@@ -22,8 +22,7 @@
               },
               "priceSchedule" : [ {
                 "@ref:scoped" : "price-1"
-              } ],
-              "@key" : "0"
+              } ]
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
@@ -31,10 +30,8 @@
                 "@data" : "USD"
               },
               "settlementDate" : {
-                "valueDate" : "2002-04-11",
-                "@key" : "3e910b"
+                "valueDate" : "2002-04-11"
               },
-              "@key" : "85bd5321",
               "cashSettlementTerms" : [ {
                 "valuationMethod" : {
                   "valuationSource" : {
@@ -61,13 +58,10 @@
                 },
                 "valuationDate" : {
                   "fxFixingDate" : {
-                    "@key" : "3e9109",
                     "fxFixingDate" : {
                       "adjustableDate" : {
-                        "unadjustedDate" : "2002-04-09",
-                        "@key" : "3e9109"
-                      },
-                      "@key" : "3e9109"
+                        "unadjustedDate" : "2002-04-09"
+                      }
                     },
                     "@type" : "cdm.product.common.settlement.FxFixingDate"
                   }
@@ -77,8 +71,7 @@
                   "businessCenter" : {
                     "@data" : "INMU"
                   }
-                },
-                "@key" : "264e8d45"
+                }
               } ],
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -88,11 +81,9 @@
               }
             },
             "@type" : "cdm.product.template.SettlementPayout"
-          },
-          "@key" : "a30a161e"
+          }
         } ]
-      },
-      "@key" : "a30a161e"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -150,26 +141,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "74901093"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "45bde65c",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -178,11 +165,9 @@
           "@scheme" : "http://www.partyA.com/fx/trade-id"
         }
       } ],
-      "@key" : "d1241fee",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "45bde65c",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -191,12 +176,10 @@
           "@scheme" : "http://www.csfb.com/fx/trade-id"
         }
       } ],
-      "@key" : "673ef37d",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2002-01-09",
-      "@key" : "3e9049"
+      "@data" : "2002-01-09"
     },
     "party" : [ {
       "partyId" : [ {
@@ -204,10 +187,8 @@
           "@data" : "549300VBWWV6BYQOWM67",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "4a5d2d9f"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "4a5d2d9f",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -215,13 +196,10 @@
           "@data" : "391200ZGI3FROE0WYF22",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "45bde65c"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "45bde65c",
       "@key:external" : "party2"
     } ],
-    "@key" : "b72762e1",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "b72762e1"

@@ -21,7 +21,6 @@
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -46,15 +45,13 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-2"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementType" : "Cash",
                           "settlementCurrency" : {
                             "@data" : "USD"
                           },
-                          "@key" : "7610bbd9",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "underlier" : {
@@ -72,19 +69,15 @@
                               "startDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2010-12-20",
-                                    "@key" : "3ed314"
-                                  },
-                                  "@key" : "3ed314"
+                                    "unadjustedDate" : "2010-12-20"
+                                  }
                                 }
                               },
                               "endDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2011-12-19",
-                                    "@key" : "3edb13"
-                                  },
-                                  "@key" : "3edb13"
+                                    "unadjustedDate" : "2011-12-19"
+                                  }
                                 }
                               },
                               "dateAdjustments" : {
@@ -92,17 +85,14 @@
                                 "businessCenters" : {
                                   "businessCenter" : [ {
                                     "@data" : "EUTA"
-                                  } ],
-                                  "@key" : "20a71d"
-                                },
-                                "@key" : "211dc30c"
+                                  } ]
+                                }
                               },
                               "dividendPaymentDate" : {
                                 "dividendDate" : {
                                   "relativeDate" : {
                                     "periodMultiplier" : 3,
                                     "period" : "D",
-                                    "@key" : "815062c0",
                                     "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
@@ -110,7 +100,6 @@
                                     },
                                     "@type" : "cdm.base.datetime.AdjustedRelativeDateOffset"
                                   },
-                                  "@key" : "815062c0",
                                   "@key:external" : "p1"
                                 }
                               }
@@ -118,19 +107,15 @@
                               "startDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2011-12-20",
-                                    "@key" : "3edb14"
-                                  },
-                                  "@key" : "3edb14"
+                                    "unadjustedDate" : "2011-12-20"
+                                  }
                                 }
                               },
                               "endDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2012-12-19",
-                                    "@key" : "3ee313"
-                                  },
-                                  "@key" : "3ee313"
+                                    "unadjustedDate" : "2012-12-19"
+                                  }
                                 }
                               },
                               "dateAdjustments" : {
@@ -138,17 +123,14 @@
                                 "businessCenters" : {
                                   "businessCenter" : [ {
                                     "@data" : "EUTA"
-                                  } ],
-                                  "@key" : "20a71d"
-                                },
-                                "@key" : "211dc30c"
+                                  } ]
+                                }
                               },
                               "dividendPaymentDate" : {
                                 "dividendDate" : {
                                   "relativeDate" : {
                                     "periodMultiplier" : 3,
                                     "period" : "D",
-                                    "@key" : "815062c1",
                                     "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
@@ -156,7 +138,6 @@
                                     },
                                     "@type" : "cdm.base.datetime.AdjustedRelativeDateOffset"
                                   },
-                                  "@key" : "815062c1",
                                   "@key:external" : "p2"
                                 }
                               }
@@ -164,8 +145,7 @@
                           }
                         },
                         "@type" : "cdm.product.template.PerformancePayout"
-                      },
-                      "@key" : "bf312a39"
+                      }
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
@@ -175,8 +155,7 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-1"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementDate" : {
@@ -184,7 +163,6 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 3,
                                 "period" : "D",
-                                "@key" : "815062c0",
                                 "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
@@ -192,10 +170,8 @@
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "815062c0"
+                            }
                           },
-                          "@key" : "815062c0",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "fixedPrice" : {
@@ -206,8 +182,7 @@
                           }
                         },
                         "@type" : "cdm.product.template.FixedPricePayout"
-                      },
-                      "@key" : "3ea988bb"
+                      }
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
@@ -217,8 +192,7 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-3"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementDate" : {
@@ -226,7 +200,6 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 3,
                                 "period" : "D",
-                                "@key" : "815062c1",
                                 "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
@@ -234,10 +207,8 @@
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "815062c1"
+                            }
                           },
-                          "@key" : "815062c1",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "fixedPrice" : {
@@ -248,11 +219,9 @@
                           }
                         },
                         "@type" : "cdm.product.template.FixedPricePayout"
-                      },
-                      "@key" : "405e615a"
+                      }
                     } ]
-                  },
-                  "@key" : "9797fbce"
+                  }
                 }
               }
             },
@@ -263,27 +232,21 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2015-03-20",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NotApplicable",
-                    "@key" : "3a4b88ab"
-                  },
-                  "@key" : "26af9c7f"
-                },
-                "@key" : "26af9c7f"
+                    "businessDayConvention" : "NotApplicable"
+                  }
+                }
               } ],
               "expirationTimeType" : "OSP",
               "exerciseProcedure" : {
                 "automaticExercise" : {
                   "isApplicable" : true
                 }
-              },
-              "@key" : "573a56f3"
+              }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "f431ab6c"
+          }
         } ]
-      },
-      "@key" : "f431ab6c"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -309,19 +272,16 @@
               "exchange" : {
                 "name" : {
                   "@data" : "XPAR"
-                },
-                "@key" : "293529"
+                }
               },
               "relatedExchange" : [ {
                 "name" : {
                   "@data" : "XMAT"
-                },
-                "@key" : "2929e8"
+                }
               }, {
                 "name" : {
                   "@data" : "XMON"
-                },
-                "@key" : "292b94"
+                }
               } ],
               "name" : {
                 "@data" : "France CAC 40 Index"
@@ -331,8 +291,7 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "84141f73"
+        }
       }, {
         "quantity" : [ {
           "value" : 50000,
@@ -352,26 +311,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-3"
-        } ],
-        "@key" : "aab17b18"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyB"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -380,11 +335,9 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec318949",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -393,41 +346,34 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec31fda8",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2009-01-27",
-      "@key" : "3ec85b"
+      "@data" : "2009-01-27"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC1",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c2f"
+        }
       } ],
       "name" : {
         "@data" : "SwapsWire Ltd (LE)"
       },
-      "@key" : "d53e12f6",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC6",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c34"
+        }
       } ],
       "name" : {
         "@data" : "Rusty"
       },
-      "@key" : "7766c429",
       "@key:external" : "partyB"
     } ],
-    "@key" : "dd24bcb3",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -455,17 +401,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2009-01-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NotApplicable",
-          "@key" : "3a4b88ab"
+          "businessDayConvention" : "NotApplicable"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyA"
         },
         "receiverPartyReference" : {
-          "@ref" : "7766c429",
           "@ref:external" : "partyB"
         }
       },
@@ -473,8 +416,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "98017e97"
+    }
   } ],
   "@key" : "2f78124a"
 }

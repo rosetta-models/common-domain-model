@@ -27,8 +27,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
@@ -36,10 +35,8 @@
                 "@data" : "USD"
               },
               "settlementDate" : {
-                "valueDate" : "2001-04-11",
-                "@key" : "3e890b"
+                "valueDate" : "2001-04-11"
               },
-              "@key" : "2b89fe0a",
               "cashSettlementTerms" : [ {
                 "valuationMethod" : {
                   "valuationSource" : {
@@ -66,13 +63,10 @@
                 },
                 "valuationDate" : {
                   "fxFixingDate" : {
-                    "@key" : "3e8909",
                     "fxFixingDate" : {
                       "adjustableDate" : {
-                        "unadjustedDate" : "2001-04-09",
-                        "@key" : "3e8909"
-                      },
-                      "@key" : "3e8909"
+                        "unadjustedDate" : "2001-04-09"
+                      }
                     },
                     "@type" : "cdm.product.common.settlement.FxFixingDate"
                   }
@@ -82,8 +76,7 @@
                   "businessCenter" : {
                     "@data" : "VECA"
                   }
-                },
-                "@key" : "96b4302e"
+                }
               } ],
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -102,12 +95,9 @@
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "adjustedDate" : {
-                    "@data" : "2001-04-09",
-                    "@key" : "3e8909"
-                  },
-                  "@key" : "0"
-                },
-                "@key" : "0"
+                    "@data" : "2001-04-09"
+                  }
+                }
               } ],
               "expirationTime" : {
                 "hourMinuteTime" : "10:00:00",
@@ -115,8 +105,7 @@
                   "@data" : "USNY"
                 }
               },
-              "expirationTimeType" : "SpecificTime",
-              "@key" : "26f843e5"
+              "expirationTimeType" : "SpecificTime"
             },
             "strike" : {
               "strikePrice" : {
@@ -136,11 +125,9 @@
               }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "7128cef7"
+          }
         } ]
-      },
-      "@key" : "ad41e1dd"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -176,26 +163,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "85abc997"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "b406781a",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "2fb569c6",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "b406781a",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -204,11 +187,9 @@
           "@scheme" : "http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0"
         }
       } ],
-      "@key" : "bcd03f83",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "2fb569c6",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -217,12 +198,10 @@
           "@scheme" : "http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0"
         }
       } ],
-      "@key" : "bcd0b3e2",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2001-01-15",
-      "@key" : "3e884f"
+      "@data" : "2001-01-15"
     },
     "party" : [ {
       "partyId" : [ {
@@ -230,13 +209,11 @@
           "@data" : "549300VBWWV6BYQOWM67",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "4a5d2d9f"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "PARTYA"
       },
-      "@key" : "b406781a",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -244,16 +221,13 @@
           "@data" : "BFXS5XCH7N0Y05NIXW11",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "a887a4ca"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "ABN Amro"
       },
-      "@key" : "2fb569c6",
       "@key:external" : "party2"
     } ],
-    "@key" : "5acf789b",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -281,17 +255,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2001-01-17",
         "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "@key" : "24a738"
+          "businessDayConvention" : "NONE"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "b406781a",
           "@ref:external" : "party1"
         },
         "receiverPartyReference" : {
-          "@ref" : "2fb569c6",
           "@ref:external" : "party2"
         }
       },
@@ -299,8 +270,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "1eb54bee"
+    }
   } ],
   "@key" : "69db6389"
 }

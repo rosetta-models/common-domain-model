@@ -12,17 +12,13 @@
       "economicTerms" : {
         "effectiveDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2002-12-04",
-            "@key" : "3e9304"
-          },
-          "@key" : "3e9304"
+            "unadjustedDate" : "2002-12-04"
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2007-09-06",
-            "@key" : "3eba46"
-          },
-          "@key" : "3eba46"
+            "unadjustedDate" : "2007-09-06"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -34,7 +30,6 @@
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
               },
-              "@key" : "0",
               "@key:external" : "notional"
             },
             "generalTerms" : {
@@ -47,7 +42,6 @@
                   "name" : {
                     "@data" : "Tenet Healthcare Corporation"
                   },
-                  "@key" : "92cc27",
                   "@key:external" : "jg45d"
                 },
                 "referenceObligation" : [ {
@@ -63,7 +57,6 @@
                     "@type" : "cdm.base.staticdata.asset.common.Security"
                   },
                   "primaryObligorReference" : {
-                    "@ref" : "92cc27",
                     "@ref:external" : "jg45d"
                   }
                 } ]
@@ -82,14 +75,11 @@
                   },
                   "multipleHolderObligation" : true
                 },
-                "governmentalIntervention" : true,
-                "@key" : "702698a4"
-              },
-              "@key" : "702698a4"
+                "governmentalIntervention" : true
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "c44c7ba"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -100,7 +90,6 @@
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
               },
-              "@key" : "0",
               "@key:external" : "notional"
             },
             "rateSpecification" : {
@@ -109,35 +98,28 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "calculationPeriodDates" : {
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 3,
                 "period" : "M",
-                "@key" : "204d",
                 "rollConvention" : "6",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
-              },
-              "@key" : "204d"
+              }
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 3,
-                "period" : "M",
-                "@key" : "aa"
+                "period" : "M"
               },
-              "firstPaymentDate" : "2003-03-06",
-              "@key" : "3ead5c"
+              "firstPaymentDate" : "2003-03-06"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "70d9f20e"
+          }
         } ]
-      },
-      "@key" : "e1a5dbc6"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -156,8 +138,7 @@
           "priceType" : "InterestRate",
           "@type" : "cdm.observable.asset.PriceSchedule",
           "@key:scoped" : "price-1"
-        } ],
-        "@key" : "20e98d8a"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 5000000,
@@ -168,26 +149,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "280b774f"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "e1326d8",
         "@ref:external" : "nf4f5"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "4f580caa",
         "@ref:external" : "koy4rt1"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "4f580caa",
         "@ref:external" : "koy4rt1"
       },
       "assignedIdentifier" : [ {
@@ -197,12 +174,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "3207a896",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2002-12-03",
-      "@key" : "3e9303"
+      "@data" : "2002-12-03"
     },
     "party" : [ {
       "partyId" : [ {
@@ -210,13 +185,11 @@
           "@data" : "XYZBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "2dfac9c7"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "XYZ Bank"
       },
-      "@key" : "4f580caa",
       "@key:external" : "koy4rt1"
     }, {
       "partyId" : [ {
@@ -224,13 +197,11 @@
           "@data" : "ABCBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "94009ede"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "ABC Bank"
       },
-      "@key" : "e1326d8",
       "@key:external" : "nf4f5"
     } ],
     "contractDetails" : {
@@ -245,25 +216,19 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "e1326d8",
           "@ref:external" : "nf4f5"
         }, {
-          "@ref" : "4f580caa",
           "@ref:external" : "koy4rt1"
         } ],
-        "@key" : "5f2781eb",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "5f2781eb"
+      } ]
     },
     "collateral" : {
       "independentAmount" : {
         "payerPartyReference" : {
-          "@ref" : "e1326d8",
           "@ref:external" : "nf4f5"
         },
         "receiverPartyReference" : {
-          "@ref" : "4f580caa",
           "@ref:external" : "koy4rt1"
         },
         "paymentDetail" : [ {
@@ -275,14 +240,11 @@
                 "@ref:external" : "notional"
               }
             }
-          },
-          "@key" : "b30a47c0"
+          }
         } ],
         "@type" : "cdm.product.collateral.IndependentAmount"
-      },
-      "@key" : "c462525b"
+      }
     },
-    "@key" : "36cd1e19",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "36cd1e19"

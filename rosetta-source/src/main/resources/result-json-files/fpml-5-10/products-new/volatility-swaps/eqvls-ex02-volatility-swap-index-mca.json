@@ -19,14 +19,12 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementCurrency" : {
                 "@data" : "GBP"
               },
-              "@key" : "112d5",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "observationTerms" : {
@@ -36,12 +34,9 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2015-03-30",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "NotApplicable",
-                        "@key" : "3a4b88ab"
-                      },
-                      "@key" : "26afc209"
-                    },
-                    "@key" : "26afc209"
+                        "businessDayConvention" : "NotApplicable"
+                      }
+                    }
                   }
                 }
               }
@@ -52,14 +47,10 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2015-04-07",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NotApplicable",
-                      "@key" : "3a4b88ab"
-                    },
-                    "@key" : "26b05bf2"
-                  },
-                  "@key" : "26b05bf2"
-                },
-                "@key" : "26b05bf2"
+                      "businessDayConvention" : "NotApplicable"
+                    }
+                  }
+                }
               }
             },
             "underlier" : {
@@ -87,11 +78,9 @@
               }
             },
             "@type" : "cdm.product.template.PerformancePayout"
-          },
-          "@key" : "de38b816"
+          }
         } ]
-      },
-      "@key" : "de38b816"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -120,41 +109,35 @@
                 "name" : {
                   "@data" : "XLIF",
                   "@scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC-1-0"
-                },
-                "@key" : "292711"
+                }
               },
               "relatedExchange" : [ {
                 "name" : {
                   "@data" : "XLIF",
                   "@scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC-1-0"
-                },
-                "@key" : "292711"
+                }
               } ],
               "assetClass" : "Equity",
               "@type" : "cdm.observable.asset.EquityIndex"
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "8e0eaa82"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -163,11 +146,9 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "19836e0c",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -176,32 +157,26 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "1983e26b",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2015-03-30",
-      "@key" : "3ef8de"
+      "@data" : "2015-03-30"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party A",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59567"
+        }
       } ],
-      "@key" : "33f59567",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party B",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59568"
+        }
       } ],
-      "@key" : "33f59568",
       "@key:external" : "party2"
     } ],
     "contractDetails" : {
@@ -217,13 +192,10 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "33f59567",
           "@ref:external" : "party1"
         }, {
-          "@ref" : "33f59568",
           "@ref:external" : "party2"
         } ],
-        "@key" : "2de7efa",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -236,18 +208,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "33f59567",
           "@ref:external" : "party1"
         }, {
-          "@ref" : "33f59568",
           "@ref:external" : "party2"
         } ],
-        "@key" : "7001fb4f",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "7c49b595"
+      } ]
     },
-    "@key" : "ab68388f",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "ab68388f"

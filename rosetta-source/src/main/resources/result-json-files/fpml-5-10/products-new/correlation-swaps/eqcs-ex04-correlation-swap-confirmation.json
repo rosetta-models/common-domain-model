@@ -14,15 +14,13 @@
           "relativeDate" : {
             "periodMultiplier" : 0,
             "period" : "D",
-            "@key" : "538ca0c6",
             "businessDayConvention" : "NONE",
             "dateRelativeTo" : {
               "@ref" : "75ac6e3",
               "@ref:external" : "sd2344"
             },
             "@type" : "cdm.base.datetime.AdjustedRelativeDateOffset"
-          },
-          "@key" : "538ca0c6"
+          }
         },
         "payout" : [ {
           "PerformancePayout" : {
@@ -33,8 +31,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
@@ -43,14 +40,12 @@
                   "relativeDate" : {
                     "periodMultiplier" : 3,
                     "period" : "D",
-                    "@key" : "75ac6e3",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
                         "@data" : "EUTA"
-                      } ],
-                      "@key" : "20a71d"
+                      } ]
                     },
                     "dateRelativeTo" : {
                       "@ref" : "25c21a7a",
@@ -59,10 +54,8 @@
                     "@type" : "cdm.base.datetime.RelativeDateOffset"
                   }
                 },
-                "@key" : "75ac6e3",
                 "@key:external" : "sd2344"
               },
-              "@key" : "31000596",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "observationTerms" : {
@@ -72,12 +65,9 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2006-11-07",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "NotApplicable",
-                        "@key" : "3a4b88ab"
-                      },
-                      "@key" : "25a8a5b2"
-                    },
-                    "@key" : "25a8a5b2"
+                        "businessDayConvention" : "NotApplicable"
+                      }
+                    }
                   }
                 }
               }
@@ -88,15 +78,11 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2007-06-15",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "NotApplicable",
-                      "@key" : "3a4b88ab"
-                    },
-                    "@key" : "25c21a7a"
+                      "businessDayConvention" : "NotApplicable"
+                    }
                   },
-                  "@key" : "25c21a7a",
                   "@key:external" : "vd8290"
-                },
-                "@key" : "25c21a7a"
+                }
               }
             },
             "underlier" : {
@@ -125,14 +111,12 @@
               }
             },
             "@type" : "cdm.product.template.PerformancePayout"
-          },
-          "@key" : "daf9d72f"
+          }
         } ],
         "calculationAgent" : {
           "calculationAgentParty" : "CalculationAgentIndependent"
         }
-      },
-      "@key" : "58ea539f"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -168,14 +152,12 @@
                     "exchange" : {
                       "name" : {
                         "@data" : "XAMS"
-                      },
-                      "@key" : "28fe4f"
+                      }
                     },
                     "relatedExchange" : [ {
                       "name" : {
                         "@data" : "XLIF"
-                      },
-                      "@key" : "292711"
+                      }
                     } ],
                     "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
@@ -204,14 +186,12 @@
                     "exchange" : {
                       "name" : {
                         "@data" : "XAMS"
-                      },
-                      "@key" : "28fe4f"
+                      }
                     },
                     "relatedExchange" : [ {
                       "name" : {
                         "@data" : "XLIF"
-                      },
-                      "@key" : "292711"
+                      }
                     } ],
                     "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
@@ -240,14 +220,12 @@
                     "exchange" : {
                       "name" : {
                         "@data" : "XPAR"
-                      },
-                      "@key" : "293529"
+                      }
                     },
                     "relatedExchange" : [ {
                       "name" : {
                         "@data" : "XLIF"
-                      },
-                      "@key" : "292711"
+                      }
                     } ],
                     "instrumentType" : "Equity",
                     "@type" : "cdm.base.staticdata.asset.common.Security"
@@ -260,33 +238,28 @@
             "@type" : "cdm.observable.asset.Basket"
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "b9e8ffb7"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "8b5fabdb",
         "@ref:external" : "ab9560"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "83102f24",
         "@ref:external" : "gh4903"
       }
     } ],
     "ancillaryParty" : [ {
       "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
-        "@ref" : "83102f24",
         "@ref:external" : "gh4903"
       } ]
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "83102f24",
         "@ref:external" : "gh4903"
       },
       "assignedIdentifier" : [ {
@@ -295,12 +268,10 @@
           "@scheme" : "http://www.partyA.com/coding-scheme/trade-id"
         }
       } ],
-      "@key" : "fde00dd4",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2006-11-07",
-      "@key" : "3eb2c7"
+      "@data" : "2006-11-07"
     },
     "party" : [ {
       "partyId" : [ {
@@ -308,26 +279,22 @@
           "@data" : "959800NKRMZ8NEKQ0A23",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "3d4a07f0"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Client"
       },
-      "@key" : "8b5fabdb",
       "@key:external" : "ab9560"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party A",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59567"
+        }
       } ],
       "name" : {
         "@data" : "Bank A"
       },
-      "@key" : "83102f24",
       "@key:external" : "gh4903"
     } ],
     "contractDetails" : {
@@ -342,13 +309,10 @@
           "vintage" : 2002
         },
         "contractualParty" : [ {
-          "@ref" : "8b5fabdb",
           "@ref:external" : "ab9560"
         }, {
-          "@ref" : "83102f24",
           "@ref:external" : "gh4903"
         } ],
-        "@key" : "2b8477bd",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -362,19 +326,15 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "8b5fabdb",
           "@ref:external" : "ab9560"
         }, {
-          "@ref" : "83102f24",
           "@ref:external" : "gh4903"
         } ],
-        "@key" : "a9aa77b",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       } ],
       "governingLaw" : {
         "@data" : "USNY"
-      },
-      "@key" : "53295d07"
+      }
     },
     "account" : [ {
       "accountNumber" : {
@@ -382,13 +342,10 @@
         "@scheme" : "http://www.partyA.com/coding-scheme/account-id"
       },
       "servicingParty" : {
-        "@ref" : "83102f24",
         "@ref:external" : "gh4903"
       },
-      "@key" : "a173333d",
       "@key:external" : "gh4903-uw2992"
     } ],
-    "@key" : "69437eff",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "69437eff"

@@ -9,15 +9,13 @@
           "@data" : "Credit_SingleName_Corporate_StandardEuropeanCorporate",
           "@scheme" : "http://www.dtcc.com/coding-scheme/external/GTR-Product-Id"
         },
-        "source" : "Other",
-        "@key" : "668f2457"
+        "source" : "Other"
       }, {
         "identifier" : {
           "@data" : "USP7807HAV70",
           "@scheme" : "http://www.dtcc.com/coding-scheme/external/underlying-id/ISIN"
         },
-        "source" : "ISIN",
-        "@key" : "78bb9e13"
+        "source" : "ISIN"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
@@ -75,14 +73,10 @@
                 "businessCentersReference" : {
                   "@ref" : "428533f",
                   "@ref:external" : "e789456"
-                },
-                "@key" : "3fdfc202"
-              },
-              "@key" : "e93f2fca"
-            },
-            "@key" : "d0db0fc6"
-          },
-          "@key" : "d0db0fc6"
+                }
+              }
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
@@ -97,12 +91,9 @@
                 } ],
                 "@key" : "428533f",
                 "@key:external" : "e789456"
-              },
-              "@key" : "d3636f07"
-            },
-            "@key" : "d7cc5d73"
-          },
-          "@key" : "d7cc5d73"
+              }
+            }
+          }
         },
         "dateAdjustments" : {
           "businessDayConvention" : "FOLLOWING",
@@ -113,8 +104,7 @@
               "@data" : "EUTA"
             } ],
             "@key" : "428533f"
-          },
-          "@key" : "da4e2f6e"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -125,15 +115,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "generalTerms" : {
@@ -149,8 +137,7 @@
                   "name" : {
                     "@data" : "Petróleos de Venezuela, S.A.",
                     "@scheme" : "http://www.fpml.org/spec/2003/entity-name-RED"
-                  },
-                  "@key" : "4ac1c48e"
+                  }
                 },
                 "referenceObligation" : [ {
                   "security" : {
@@ -193,17 +180,14 @@
                 "bankruptcy" : false,
                 "creditEventNotice" : {
                   "notifyingParty" : [ "Party2" ]
-                },
-                "@key" : "fb9ab88e"
+                }
               },
               "obligations" : {
                 "category" : "Payment"
-              },
-              "@key" : "7bb68af4"
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "93165079"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -213,8 +197,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -222,8 +205,7 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "dayCountFraction" : {
@@ -232,34 +214,26 @@
             "calculationPeriodDates" : {
               "firstPeriodStartDate" : {
                 "adjustableDate" : {
-                  "unadjustedDate" : "2018-09-20",
-                  "@key" : "3f1254"
-                },
-                "@key" : "3f1254"
+                  "unadjustedDate" : "2018-09-20"
+                }
               },
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 3,
                 "period" : "M",
-                "@key" : "aa",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
-              },
-              "@key" : "abb5ddd6"
+              }
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 3,
-                "period" : "M",
-                "@key" : "aa"
+                "period" : "M"
               },
-              "firstPaymentDate" : "2018-12-20",
-              "@key" : "3f27aa"
+              "firstPaymentDate" : "2018-12-20"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "d0224dd3"
+          }
         } ]
-      },
-      "@key" : "1ab0f419"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -288,8 +262,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "cc63fc45"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 1000000,
@@ -300,26 +273,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "d4716f8f"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "9a911e55",
         "@ref:external" : "g4789"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "ac439d9e",
         "@ref:external" : "xdf45"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "9a911e55",
         "@ref:external" : "g4789"
       },
       "assignedIdentifier" : [ {
@@ -329,12 +298,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "da91262d",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
       "@data" : "2018-10-02",
-      "@key" : "3f1282",
       "@key:external" : "tradeDate"
     },
     "party" : [ {
@@ -343,10 +310,8 @@
           "@data" : "894500DM8LVOSCMP9T34",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "9a911e55"
+        "identifierType" : "BIC"
       } ],
-      "@key" : "9a911e55",
       "@key:external" : "g4789"
     }, {
       "partyId" : [ {
@@ -354,10 +319,8 @@
           "@data" : "549300JZDC6K840D7F79",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "ac439d9e"
+        "identifierType" : "BIC"
       } ],
-      "@key" : "ac439d9e",
       "@key:external" : "xdf45"
     } ],
     "contractDetails" : {
@@ -373,18 +336,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "9a911e55",
           "@ref:external" : "g4789"
         }, {
-          "@ref" : "ac439d9e",
           "@ref:external" : "xdf45"
         } ],
-        "@key" : "8f6a8b83",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "8f6a8b83"
+      } ]
     },
-    "@key" : "ddf0afef",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "ddf0afef"

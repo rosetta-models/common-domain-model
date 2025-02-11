@@ -14,23 +14,17 @@
           "adjustableDate" : {
             "unadjustedDate" : "2004-03-23",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "eb3e6e4f"
-          },
-          "@key" : "eb3e6e4f"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2009-03-20",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "ebd48b0c"
-          },
-          "@key" : "ebd48b0c"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -41,15 +35,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "generalTerms" : {
@@ -76,7 +68,6 @@
                         "name" : {
                           "@data" : "Agrium Inc."
                         },
-                        "@key" : "6b99b4c1",
                         "@key:external" : "agriumEntity"
                       },
                       "referenceObligation" : {
@@ -92,7 +83,6 @@
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
-                          "@ref" : "6b99b4c1",
                           "@ref:external" : "agriumEntity"
                         }
                       },
@@ -113,7 +103,6 @@
                         "name" : {
                           "@data" : "Tenet Healthcare Corporation"
                         },
-                        "@key" : "92cc27",
                         "@key:external" : "tenetEntity"
                       },
                       "referenceObligation" : {
@@ -129,7 +118,6 @@
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
-                          "@ref" : "92cc27",
                           "@ref:external" : "tenetEntity"
                         }
                       },
@@ -152,7 +140,6 @@
                     "gracePeriod" : {
                       "periodMultiplier" : 0,
                       "period" : "D",
-                      "@key" : "44",
                       "@type" : "cdm.base.datetime.Offset"
                     }
                   },
@@ -163,7 +150,6 @@
                         "@data" : "GBP"
                       }
                     },
-                    "@key" : "48eae7c4",
                     "@type" : "cdm.observable.asset.Money"
                   }
                 },
@@ -173,17 +159,14 @@
                     "standardPublicSources" : true,
                     "specifiedNumber" : 2
                   }
-                },
-                "@key" : "f8d2401"
+                }
               },
               "obligations" : {
                 "category" : "BondOrLoan"
-              },
-              "@key" : "90a9b011"
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "9705da0a"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -193,8 +176,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -202,19 +184,16 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "dayCountFraction" : {
               "@data" : "ACT/ACT.ISDA"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "28d6c3e0"
+          }
         } ]
-      },
-      "@key" : "92a94a07"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -243,8 +222,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "28ce4efa"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 25000000,
@@ -255,20 +233,17 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8bdc3dd"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     } ],
@@ -283,13 +258,11 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/uti"
         }
       } ],
-      "@key" : "c6afb4da",
       "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2004-01-24",
-      "@key" : "3ea058"
+      "@data" : "2004-01-24"
     },
     "party" : [ {
       "partyId" : [ {
@@ -297,13 +270,11 @@
           "@data" : "54930084UKLVMY22DS16",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "abf5051b"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "b6bdbfc2",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -311,13 +282,11 @@
           "@data" : "48750084UKLVTR22DS78",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "62694f84"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party B"
       },
-      "@key" : "a14913ec",
       "@key:external" : "party2"
     } ],
     "contractDetails" : {
@@ -341,18 +310,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         }, {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         } ],
-        "@key" : "8f493f4f",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "8f493f4f"
+      } ]
     },
-    "@key" : "d74775d3",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "d74775d3"

@@ -19,8 +19,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -28,8 +27,7 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "dayCountFraction" : {
@@ -40,12 +38,9 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2001-08-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NONE",
-                    "@key" : "24a738"
-                  },
-                  "@key" : "eae921d6"
-                },
-                "@key" : "eae921d6"
+                    "businessDayConvention" : "NONE"
+                  }
+                }
               },
               "terminationDate" : {
                 "adjustableDate" : {
@@ -58,12 +53,9 @@
                       } ],
                       "@key" : "20a71d",
                       "@key:external" : "accrualBusinessCenters0"
-                    },
-                    "@key" : "365baaee"
-                  },
-                  "@key" : "9ead9b90"
-                },
-                "@key" : "9ead9b90"
+                    }
+                  }
+                }
               },
               "calculationPeriodDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
@@ -71,26 +63,21 @@
                   "businessCentersReference" : {
                     "@ref" : "20a71d",
                     "@ref:external" : "accrualBusinessCenters0"
-                  },
-                  "@key" : "622268e1"
-                },
-                "@key" : "985d6cb2"
+                  }
+                }
               },
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 1,
                 "period" : "Y",
-                "@key" : "17984",
                 "rollConvention" : "30",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
-              "@key" : "d6a5a890",
               "@key:external" : "CalcPeriodDates0"
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 1,
-                "period" : "Y",
-                "@key" : "78"
+                "period" : "Y"
               },
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
@@ -101,10 +88,8 @@
                   } ],
                   "@key" : "20a71d",
                   "@key:external" : "paymentBusinessCenters0"
-                },
-                "@key" : "365baaee"
-              },
-              "@key" : "b34971cc"
+                }
+              }
             },
             "cashflowRepresentation" : {
               "cashflowsMatchParameters" : true,
@@ -113,61 +98,50 @@
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2001-08-30",
                   "adjustedEndDate" : "2002-08-30",
-                  "@key" : "a1ae6f32",
                   "notionalAmount" : 100000000,
                   "fixedRate" : 0.05,
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "5ddc099e"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2003-08-29",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2002-08-28",
                   "adjustedEndDate" : "2003-08-29",
-                  "@key" : "a56e82b3",
                   "notionalAmount" : 100000000,
                   "fixedRate" : 0.05,
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "17bcb2b6"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2004-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2003-08-29",
                   "adjustedEndDate" : "2005-08-30",
-                  "@key" : "a94e02d3",
                   "notionalAmount" : 100000000,
                   "fixedRate" : 0.05,
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "c4160375"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2005-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2004-08-30",
                   "adjustedEndDate" : "2005-08-30",
-                  "@key" : "acf16f32",
                   "notionalAmount" : 100000000,
                   "fixedRate" : 0.05,
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "6e7e67d4"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2006-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2005-08-30",
                   "adjustedEndDate" : "2006-08-30",
-                  "@key" : "b0b26f32",
                   "notionalAmount" : 100000000,
                   "fixedRate" : 0.05,
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "19045fd4"
+                } ]
               } ]
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "fe9ba1d1"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -177,15 +151,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FloatingRateSpecification" : {
                 "rateOption" : {
                   "@ref:scoped" : "InterestRateIndex-1"
                 },
-                "@key" : "0",
                 "@type" : "cdm.product.asset.FloatingRateSpecification"
               }
             },
@@ -197,12 +169,9 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2001-08-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NONE",
-                    "@key" : "24a738"
-                  },
-                  "@key" : "eae921d6"
-                },
-                "@key" : "eae921d6"
+                    "businessDayConvention" : "NONE"
+                  }
+                }
               },
               "terminationDate" : {
                 "adjustableDate" : {
@@ -215,12 +184,9 @@
                       } ],
                       "@key" : "20a71d",
                       "@key:external" : "accrualBusinessCenters1"
-                    },
-                    "@key" : "365baaee"
-                  },
-                  "@key" : "9ead9b90"
-                },
-                "@key" : "9ead9b90"
+                    }
+                  }
+                }
               },
               "calculationPeriodDatesAdjustments" : {
                 "businessDayConvention" : "MODFOLLOWING",
@@ -228,26 +194,21 @@
                   "businessCentersReference" : {
                     "@ref" : "20a71d",
                     "@ref:external" : "accrualBusinessCenters1"
-                  },
-                  "@key" : "622268e2"
-                },
-                "@key" : "985d6cb3"
+                  }
+                }
               },
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 6,
                 "period" : "M",
-                "@key" : "18ad5",
                 "rollConvention" : "30",
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
               },
-              "@key" : "d6b3d162",
               "@key:external" : "CalcPeriodDates1"
             },
             "paymentDates" : {
               "paymentFrequency" : {
                 "periodMultiplier" : 6,
-                "period" : "M",
-                "@key" : "107"
+                "period" : "M"
               },
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
@@ -258,21 +219,17 @@
                   } ],
                   "@key" : "20a71d",
                   "@key:external" : "paymentBusinessCenters1"
-                },
-                "@key" : "365baaee"
-              },
-              "@key" : "3fe48b1b"
+                }
+              }
             },
             "resetDates" : {
               "calculationPeriodDatesReference" : {
-                "@ref" : "d6b3d162",
                 "@ref:external" : "CalcPeriodDates1"
               },
               "resetRelativeTo" : "CalculationPeriodStartDate",
               "fixingDates" : {
                 "periodMultiplier" : -2,
                 "period" : "D",
-                "@key" : "a5cb919",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
                 "businessCenters" : {
@@ -291,7 +248,6 @@
               "resetFrequency" : {
                 "periodMultiplier" : 6,
                 "period" : "M",
-                "@key" : "107",
                 "@type" : "cdm.product.common.schedule.ResetFrequency"
               },
               "resetDatesAdjustments" : {
@@ -300,12 +256,9 @@
                   "businessCentersReference" : {
                     "@ref" : "20a71d",
                     "@ref:external" : "paymentBusinessCenters1"
-                  },
-                  "@key" : "e30c2739"
-                },
-                "@key" : "19472b0a"
+                  }
+                }
               },
-              "@key" : "3ab5f4ad",
               "@key:external" : "resetDates0"
             },
             "cashflowRepresentation" : {
@@ -315,176 +268,145 @@
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2001-08-30",
                   "adjustedEndDate" : "2002-02-28",
-                  "@key" : "429b7c98",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2001-08-28",
-                      "observationWeight" : 1,
-                      "@key" : "792b965"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "fcfdb134"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2002-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2002-02-28",
                   "adjustedEndDate" : "2002-08-30",
-                  "@key" : "43ff9596",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2002-02-26",
-                      "observationWeight" : 1,
-                      "@key" : "79382a7"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "8d9129b4"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2003-02-28",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2002-08-30",
                   "adjustedEndDate" : "2003-02-28",
-                  "@key" : "1b3b7498",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2002-08-28",
-                      "observationWeight" : 1,
-                      "@key" : "793b165"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "f915b134"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2003-08-29",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2003-02-28",
                   "adjustedEndDate" : "2003-08-29",
-                  "@key" : "1aeab4f7",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2003-02-26",
-                      "observationWeight" : 1,
-                      "@key" : "7947aa7"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "f3afe214"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2004-02-27",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2003-08-29",
                   "adjustedEndDate" : "2004-02-27",
-                  "@key" : "bd405899",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2003-08-27",
-                      "observationWeight" : 1,
-                      "@key" : "794a946"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "2a4e2e34"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2004-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2004-02-27",
                   "adjustedEndDate" : "2005-08-30",
-                  "@key" : "671e4236",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2004-02-25",
-                      "observationWeight" : 1,
-                      "@key" : "7957288"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "f79fe654"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2005-02-28",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2004-08-30",
                   "adjustedEndDate" : "2005-02-28",
-                  "@key" : "cc7b6479",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2004-08-27",
-                      "observationWeight" : 1,
-                      "@key" : "795a146"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "f145b115"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2005-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2005-02-28",
                   "adjustedEndDate" : "2005-08-30",
-                  "@key" : "cddf7d58",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2005-02-24",
-                      "observationWeight" : 1,
-                      "@key" : "7966a69"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "81d92976"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2006-02-28",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2005-08-30",
                   "adjustedEndDate" : "2006-02-28",
-                  "@key" : "a51b5c5a",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2005-08-26",
-                      "observationWeight" : 1,
-                      "@key" : "7969927"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "ed5db0f6"
+                } ]
               }, {
                 "adjustedPaymentDate" : "2006-08-30",
                 "calculationPeriod" : [ {
                   "adjustedStartDate" : "2006-02-28",
                   "adjustedEndDate" : "2006-08-30",
-                  "@key" : "a67f7558",
                   "notionalAmount" : 100000000,
                   "floatingRateDefinition" : {
                     "rateObservation" : [ {
                       "adjustedFixingDate" : "2006-02-24",
-                      "observationWeight" : 1,
-                      "@key" : "7976269"
+                      "observationWeight" : 1
                     } ]
                   },
                   "@type" : "cdm.product.common.schedule.CalculationPeriod"
-                } ],
-                "@key" : "7df12976"
+                } ]
               } ]
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "f99e0739"
+          }
         } ],
         "terminationProvision" : {
           "earlyTerminationProvision" : {
@@ -513,17 +435,12 @@
                           "@data" : "GBLO"
                         }, {
                           "@data" : "EUTA"
-                        } ],
-                        "@key" : "428533f"
-                      },
-                      "@key" : "da4e2f6e"
-                    },
-                    "@key" : "d0222bae"
+                        } ]
+                      }
+                    }
                   },
-                  "@key" : "d0222bae",
                   "@key:external" : "cashSettlementPayment0"
                 },
-                "@key" : "5f211704",
                 "cashSettlementTerms" : [ {
                   "cashSettlementMethod" : "CashPriceMethod",
                   "valuationMethod" : {
@@ -533,7 +450,6 @@
                     "valuationDate" : {
                       "periodMultiplier" : -2,
                       "period" : "D",
-                      "@key" : "4de1387",
                       "dayType" : "Business",
                       "businessDayConvention" : "NONE",
                       "businessCenters" : {
@@ -541,8 +457,7 @@
                           "@data" : "GBLO"
                         }, {
                           "@data" : "EUTA"
-                        } ],
-                        "@key" : "428533f"
+                        } ]
                       },
                       "dateRelativeTo" : {
                         "@ref" : "d0222bae",
@@ -556,8 +471,7 @@
                     "businessCenter" : {
                       "@data" : "EUTA"
                     }
-                  },
-                  "@key" : "1a029ddd"
+                  }
                 } ],
                 "@type" : "cdm.product.common.settlement.SettlementTerms"
               },
@@ -566,14 +480,12 @@
                   "adjustedExerciseDate" : "2003-08-25",
                   "adjustedEarlyTerminationDate" : "2003-09-01",
                   "adjustedCashSettlementValuationDate" : "2003-08-28",
-                  "adjustedCashSettlementPaymentDate" : "2003-09-01",
-                  "@key" : "67e2d4ed"
+                  "adjustedCashSettlementPaymentDate" : "2003-09-01"
                 }, {
                   "adjustedExerciseDate" : "2004-08-23",
                   "adjustedEarlyTerminationDate" : "2004-08-30",
                   "adjustedCashSettlementValuationDate" : "2004-08-26",
-                  "adjustedCashSettlementPaymentDate" : "2004-08-30",
-                  "@key" : "6ba3686b"
+                  "adjustedCashSettlementPaymentDate" : "2004-08-30"
                 } ]
               },
               "exerciseTerms" : {
@@ -582,7 +494,6 @@
                   "relativeDates" : {
                     "periodMultiplier" : -5,
                     "period" : "D",
-                    "@key" : "ff947ba6",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
@@ -590,30 +501,26 @@
                         "@data" : "EUTA"
                       }, {
                         "@data" : "GBLO"
-                      } ],
-                      "@key" : "4158421"
+                      } ]
                     },
                     "dateRelativeTo" : {
                       "@ref" : "d0222bae",
                       "@ref:external" : "cashSettlementPayment0"
                     },
                     "@type" : "cdm.base.datetime.RelativeDates"
-                  },
-                  "@key" : "ff947ba6"
+                  }
                 },
                 "relevantUnderlyingDate" : {
                   "relativeDates" : {
                     "periodMultiplier" : 0,
                     "period" : "D",
-                    "@key" : "5119563a",
                     "businessDayConvention" : "NONE",
                     "dateRelativeTo" : {
                       "@ref" : "d0222bae",
                       "@ref:external" : "cashSettlementPayment0"
                     },
                     "@type" : "cdm.base.datetime.RelativeDates"
-                  },
-                  "@key" : "5119563a"
+                  }
                 },
                 "earliestExerciseTime" : {
                   "hourMinuteTime" : "09:00:00",
@@ -627,15 +534,12 @@
                     "@data" : "BEBR"
                   }
                 },
-                "expirationTimeType" : "SpecificTime",
-                "@key" : "b655fe91"
+                "expirationTimeType" : "SpecificTime"
               }
-            },
-            "@key" : "58802f1c"
+            }
           }
         }
-      },
-      "@key" : "f6c99792"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -664,8 +568,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "d62a0181"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 100000000,
@@ -692,8 +595,7 @@
                 },
                 "indexTenor" : {
                   "periodMultiplier" : 6,
-                  "period" : "M",
-                  "@key" : "107"
+                  "period" : "M"
                 },
                 "@type" : "cdm.observable.asset.FloatingRateIndex"
               },
@@ -701,26 +603,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "2960e3a4"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -729,11 +627,9 @@
           "@scheme" : "http://www.partyA.com/trade-id"
         }
       } ],
-      "@key" : "957b3c47",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -742,35 +638,28 @@
           "@scheme" : "http://www.partyB.com/trade-id"
         }
       } ],
-      "@key" : "957bb0a6",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2001-04-29",
-      "@key" : "3e891d"
+      "@data" : "2001-04-29"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party A",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59567"
+        }
       } ],
-      "@key" : "33f59567",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party B",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59568"
+        }
       } ],
-      "@key" : "33f59568",
       "@key:external" : "party2"
     } ],
-    "@key" : "2c5d1d95",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "2c5d1d95"

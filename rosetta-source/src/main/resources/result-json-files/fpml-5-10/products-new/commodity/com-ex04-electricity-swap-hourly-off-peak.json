@@ -14,23 +14,17 @@
           "adjustableDate" : {
             "unadjustedDate" : "2009-01-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NotApplicable",
-              "@key" : "3a4b88ab"
-            },
-            "@key" : "25f944ac"
-          },
-          "@key" : "25f944ac"
+              "businessDayConvention" : "NotApplicable"
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2009-12-31",
             "dateAdjustments" : {
-              "businessDayConvention" : "NotApplicable",
-              "@key" : "3a4b88ab"
-            },
-            "@key" : "2604080a"
-          },
-          "@key" : "2604080a"
+              "businessDayConvention" : "NotApplicable"
+            }
+          }
         },
         "payout" : [ {
           "CommodityPayout" : {
@@ -41,15 +35,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "averagingFeature" : {
@@ -65,8 +57,7 @@
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
                     "@data" : "DowJonesPower"
-                  } ],
-                  "@key" : "e1cbae2a"
+                  } ]
                 }
               }
             },
@@ -74,19 +65,16 @@
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 1,
                 "period" : "M",
-                "@key" : "11e9",
                 "@key:external" : "floatingLegCalculationPeriods",
                 "balanceOfFirstPeriod" : false,
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
-              },
-              "@key" : "11e9"
+              }
             },
             "paymentDates" : {
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
-                "@key" : "ea4acac1",
                 "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
@@ -95,12 +83,9 @@
                 "businessCenters" : {
                   "businessCenter" : [ {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "27e4e9"
-                },
-                "@key" : "a98752b1"
-              },
-              "@key" : "ff6175f6"
+                  } ]
+                }
+              }
             },
             "underlier" : {
               "Observable" : {
@@ -108,8 +93,7 @@
               }
             },
             "@type" : "cdm.product.asset.CommodityPayout"
-          },
-          "@key" : "3385b5bd"
+          }
         }, {
           "FixedPricePayout" : {
             "payerReceiver" : {
@@ -119,15 +103,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "paymentDates" : {
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
-                "@key" : "ea4acac1",
                 "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
@@ -136,12 +118,9 @@
                 "businessCenters" : {
                   "businessCenter" : [ {
                     "@data" : "USNY"
-                  } ],
-                  "@key" : "27e4e9"
-                },
-                "@key" : "a98752b1"
-              },
-              "@key" : "ff6175f6"
+                  } ]
+                }
+              }
             },
             "fixedPrice" : {
               "price" : {
@@ -149,11 +128,9 @@
               }
             },
             "@type" : "cdm.product.template.FixedPricePayout"
-          },
-          "@key" : "6310740b"
+          }
         } ]
-      },
-      "@key" : "6d13eccc"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -181,8 +158,7 @@
           },
           "frequency" : {
             "periodMultiplier" : 1,
-            "period" : "C",
-            "@key" : "62"
+            "period" : "C"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-4"
@@ -193,8 +169,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "b21b693"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 17,
@@ -203,8 +178,7 @@
           },
           "frequency" : {
             "periodMultiplier" : 1,
-            "period" : "C",
-            "@key" : "62"
+            "period" : "C"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-3"
@@ -231,26 +205,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "b1c2c6f3"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -259,11 +229,9 @@
           "@scheme" : "http://www.PartyA.com/com-trade-id"
         }
       } ],
-      "@key" : "9598cc47",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -272,12 +240,10 @@
           "@scheme" : "http://www.PartyB.com/com-trade-id"
         }
       } ],
-      "@key" : "9599b8e6",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2006-07-28",
-      "@key" : "3eb1dc"
+      "@data" : "2006-07-28"
     },
     "party" : [ {
       "partyId" : [ {
@@ -285,13 +251,11 @@
           "@data" : "549300KFSLY4U7N3LL12",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "22ea1e40"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Bank"
       },
-      "@key" : "10fb089c",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
@@ -299,13 +263,11 @@
           "@data" : "549300AJRHKBLY9GM262",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "b2c862a5"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Energy Co."
       },
-      "@key" : "f0466d0f",
       "@key:external" : "partyB"
     } ],
     "contractDetails" : {
@@ -319,13 +281,10 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "f0466d0f",
           "@ref:external" : "partyB"
         }, {
-          "@ref" : "10fb089c",
           "@ref:external" : "partyA"
         } ],
-        "@key" : "eaa25386",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -337,18 +296,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "f0466d0f",
           "@ref:external" : "partyB"
         }, {
-          "@ref" : "10fb089c",
           "@ref:external" : "partyA"
         } ],
-        "@key" : "4f182a1d",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "e8d46d57"
+      } ]
     },
-    "@key" : "8a020cf9",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "8a020cf9"

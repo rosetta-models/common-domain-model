@@ -21,7 +21,6 @@
               "settlementCurrency" : {
                 "@data" : "GBP"
               },
-              "@key" : "76108548",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -46,8 +45,7 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-1"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementType" : "Cash",
@@ -59,7 +57,6 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 2,
                                 "period" : "D",
-                                "@key" : "738dbfce",
                                 "dayType" : "CurrencyBusiness",
                                 "businessDayConvention" : "NotApplicable",
                                 "dateRelativeTo" : {
@@ -67,10 +64,8 @@
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "738dbfce"
+                            }
                           },
-                          "@key" : "abeaab86",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "observationTerms" : {
@@ -80,12 +75,9 @@
                                 "adjustableDate" : {
                                   "unadjustedDate" : "2009-01-27",
                                   "dateAdjustments" : {
-                                    "businessDayConvention" : "NotApplicable",
-                                    "@key" : "3a4b88ab"
-                                  },
-                                  "@key" : "25f9a646"
-                                },
-                                "@key" : "25f9a646"
+                                    "businessDayConvention" : "NotApplicable"
+                                  }
+                                }
                               }
                             }
                           }
@@ -96,14 +88,10 @@
                               "adjustableDate" : {
                                 "unadjustedDate" : "2011-03-18",
                                 "dateAdjustments" : {
-                                  "businessDayConvention" : "NotApplicable",
-                                  "@key" : "3a4b88ab"
-                                },
-                                "@key" : "263774fd"
-                              },
-                              "@key" : "263774fd"
-                            },
-                            "@key" : "263774fd"
+                                  "businessDayConvention" : "NotApplicable"
+                                }
+                              }
+                            }
                           }
                         },
                         "underlier" : {
@@ -138,11 +126,9 @@
                           }
                         },
                         "@type" : "cdm.product.template.PerformancePayout"
-                      },
-                      "@key" : "a179e32"
+                      }
                     } ]
-                  },
-                  "@key" : "a179e32"
+                  }
                 }
               }
             },
@@ -153,27 +139,21 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2015-03-20",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NotApplicable",
-                    "@key" : "3a4b88ab"
-                  },
-                  "@key" : "26af9c7f"
-                },
-                "@key" : "26af9c7f"
+                    "businessDayConvention" : "NotApplicable"
+                  }
+                }
               } ],
               "expirationTimeType" : "OSP",
               "exerciseProcedure" : {
                 "automaticExercise" : {
                   "isApplicable" : true
                 }
-              },
-              "@key" : "573a56f3"
+              }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "c2d0cf41"
+          }
         } ]
-      },
-      "@key" : "c2d0cf41"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -202,15 +182,13 @@
                 "name" : {
                   "@data" : "XLON",
                   "@scheme" : "http://www.fpml.org/spec/2002/exchangeId"
-                },
-                "@key" : "2927d3"
+                }
               },
               "relatedExchange" : [ {
                 "name" : {
                   "@data" : "XLIF",
                   "@scheme" : "http://www.fpml.org/spec/2002/exchangeId"
-                },
-                "@key" : "292711"
+                }
               } ],
               "name" : {
                 "@data" : "FTSE 100 INDEX"
@@ -220,26 +198,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "b29b3867"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyB"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -248,11 +222,9 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec318949",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -261,38 +233,32 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec31fda8",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2009-01-27",
-      "@key" : "3ec85b"
+      "@data" : "2009-01-27"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC1",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c2f"
+        }
       } ],
       "name" : {
         "@data" : "SwapsWire Ltd (LE)"
       },
-      "@key" : "d53e12f6",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC6",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c34"
+        }
       } ],
       "name" : {
         "@data" : "Rusty"
       },
-      "@key" : "7766c429",
       "@key:external" : "partyB"
     } ],
     "contractDetails" : {
@@ -310,18 +276,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyA"
         }, {
-          "@ref" : "7766c429",
           "@ref:external" : "partyB"
         } ],
-        "@key" : "d945be9e",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "d945be9e"
+      } ]
     },
-    "@key" : "64fdd11a",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -349,17 +310,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2009-01-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NotApplicable",
-          "@key" : "3a4b88ab"
+          "businessDayConvention" : "NotApplicable"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyA"
         },
         "receiverPartyReference" : {
-          "@ref" : "7766c429",
           "@ref:external" : "partyB"
         }
       },
@@ -367,8 +325,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "98017e97"
+    }
   } ],
   "@key" : "f1c421b1"
 }

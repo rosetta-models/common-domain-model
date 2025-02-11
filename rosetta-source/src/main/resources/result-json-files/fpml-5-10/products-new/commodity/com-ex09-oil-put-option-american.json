@@ -19,8 +19,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
@@ -32,24 +31,20 @@
                   "relativeDate" : {
                     "periodMultiplier" : 5,
                     "period" : "D",
-                    "@key" : "60481a18",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
                     "businessCenters" : {
                       "businessCenter" : [ {
                         "@data" : "USNY"
-                      } ],
-                      "@key" : "27e4e9"
+                      } ]
                     },
                     "dateRelativeTo" : {
                       "@ref:external" : "exerciseDate"
                     },
                     "@type" : "cdm.base.datetime.RelativeDateOffset"
                   }
-                },
-                "@key" : "60481a18"
+                }
               },
-              "@key" : "2128d871",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -68,23 +63,17 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2008-10-27",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NotApplicable",
-                    "@key" : "3a4b88ab"
-                  },
-                  "@key" : "25e41086"
-                },
-                "@key" : "25e41086"
+                    "businessDayConvention" : "NotApplicable"
+                  }
+                }
               },
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "unadjustedDate" : "2009-01-12",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NotApplicable",
-                    "@key" : "3a4b88ab"
-                  },
-                  "@key" : "25f96df7"
+                    "businessDayConvention" : "NotApplicable"
+                  }
                 },
-                "@key" : "25f96df7",
                 "@key:external" : "expirationDate"
               } ],
               "exerciseProcedure" : {
@@ -92,8 +81,7 @@
                   "isApplicable" : true
                 },
                 "followUpConfirmation" : false
-              },
-              "@key" : "514df6b7"
+              }
             },
             "strike" : {
               "strikePrice" : {
@@ -111,14 +99,12 @@
               }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "ae56ee94"
+          }
         } ],
         "calculationAgent" : {
           "calculationAgentPartyEnum" : "AsSpecifiedInMasterAgreement"
         }
-      },
-      "@key" : "e35c713f"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -129,8 +115,7 @@
           },
           "frequency" : {
             "periodMultiplier" : 1,
-            "period" : "C",
-            "@key" : "62"
+            "period" : "C"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
@@ -156,20 +141,17 @@
               "exchange" : {
                 "name" : {
                   "@data" : "IFEU"
-                },
-                "@key" : "223e8d"
+                }
               },
               "priceQuoteType" : "Settlement",
               "deliveryDateReference" : {
                 "deliveryNearby" : {
                   "period" : "M",
-                  "@key" : "4d",
                   "@type" : "cdm.base.datetime.Offset"
                 },
                 "deliveryDateRollConvention" : {
                   "periodMultiplier" : 1,
                   "period" : "D",
-                  "@key" : "ea4abbbd",
                   "dayType" : "Business",
                   "@type" : "cdm.base.datetime.Offset"
                 }
@@ -178,26 +160,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "2a5f812c"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyB"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "7766c429",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -206,11 +184,9 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec3028aa",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "d53e12f6",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -219,38 +195,32 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec309d09",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2008-10-27",
-      "@key" : "3ec29b"
+      "@data" : "2008-10-27"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC6",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c34"
+        }
       } ],
       "name" : {
         "@data" : "Rusty"
       },
-      "@key" : "7766c429",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "ABC1",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1e8c2f"
+        }
       } ],
       "name" : {
         "@data" : "SwapsWire Ltd (LE)"
       },
-      "@key" : "d53e12f6",
       "@key:external" : "partyB"
     } ],
     "contractDetails" : {
@@ -264,13 +234,10 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "7766c429",
           "@ref:external" : "partyA"
         }, {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyB"
         } ],
-        "@key" : "eaa25368",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -282,18 +249,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "7766c429",
           "@ref:external" : "partyA"
         }, {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyB"
         } ],
-        "@key" : "4f1829ff",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "48392b97"
+      } ]
     },
-    "@key" : "5b823c9e",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -321,17 +283,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2008-10-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NotApplicable",
-          "@key" : "3a4b88ab"
+          "businessDayConvention" : "NotApplicable"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "7766c429",
           "@ref:external" : "partyA"
         },
         "receiverPartyReference" : {
-          "@ref" : "d53e12f6",
           "@ref:external" : "partyB"
         }
       },
@@ -339,8 +298,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "4735d60"
+    }
   } ],
   "@key" : "61d11ffe"
 }

@@ -22,8 +22,7 @@
               },
               "priceSchedule" : [ {
                 "@ref:scoped" : "price-1"
-              } ],
-              "@key" : "0"
+              } ]
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
@@ -31,10 +30,8 @@
                 "@data" : "USD"
               },
               "settlementDate" : {
-                "valueDate" : "2013-10-01",
-                "@key" : "3eea81"
+                "valueDate" : "2013-10-01"
               },
-              "@key" : "78df60d7",
               "cashSettlementTerms" : [ {
                 "valuationMethod" : {
                   "valuationSource" : {
@@ -47,22 +44,17 @@
                 },
                 "valuationDate" : {
                   "fxFixingDate" : {
-                    "@key" : "ec526e55",
                     "fxFixingDate" : {
                       "adjustableDate" : {
                         "unadjustedDate" : "2013-09-29",
                         "dateAdjustments" : {
-                          "businessDayConvention" : "NONE",
-                          "@key" : "24a738"
-                        },
-                        "@key" : "ec526e55"
-                      },
-                      "@key" : "ec526e55"
+                          "businessDayConvention" : "NONE"
+                        }
+                      }
                     },
                     "@type" : "cdm.product.common.settlement.FxFixingDate"
                   }
-                },
-                "@key" : "afa87ab1"
+                }
               } ],
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -72,11 +64,9 @@
               }
             },
             "@type" : "cdm.product.template.SettlementPayout"
-          },
-          "@key" : "86a935a8"
+          }
         } ]
-      },
-      "@key" : "86a935a8"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -134,26 +124,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "3aa70e14"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "d26b18a8",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "733fed68",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "d26b18a8",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -162,11 +148,9 @@
           "@scheme" : "urn:hsbc:trade-id"
         }
       } ],
-      "@key" : "26887e99",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "733fed68",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -175,35 +159,28 @@
           "@scheme" : "run:bnpp/trade-id"
         }
       } ],
-      "@key" : "12f63b93",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2013-04-01",
-      "@key" : "3ee901"
+      "@data" : "2013-04-01"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "HSBCGB01",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "d26b18a8"
+        }
       } ],
-      "@key" : "d26b18a8",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "BNPPGB01",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "733fed68"
+        }
       } ],
-      "@key" : "733fed68",
       "@key:external" : "party2"
     } ],
-    "@key" : "6649a5a8",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "6649a5a8"

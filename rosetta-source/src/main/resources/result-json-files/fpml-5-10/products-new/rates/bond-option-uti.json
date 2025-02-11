@@ -19,8 +19,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Physical",
@@ -35,15 +34,11 @@
                     "businessCenters" : {
                       "businessCenter" : [ {
                         "@data" : "JPTO"
-                      } ],
-                      "@key" : "22da41"
-                    },
-                    "@key" : "211ff630"
+                      } ]
+                    }
                   }
-                },
-                "@key" : "a15ed25a"
+                }
               },
-              "@key" : "35f85f44",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -66,14 +61,10 @@
                     "businessCenters" : {
                       "businessCenter" : [ {
                         "@data" : "JPTO"
-                      } ],
-                      "@key" : "22da41"
-                    },
-                    "@key" : "211ff630"
-                  },
-                  "@key" : "9c40487d"
-                },
-                "@key" : "9c40487d"
+                      } ]
+                    }
+                  }
+                }
               } ],
               "earliestExerciseTime" : {
                 "hourMinuteTime" : "09:00:00",
@@ -100,8 +91,7 @@
                 "followUpConfirmation" : true,
                 "limitedRightToConfirm" : false,
                 "splitTicket" : false
-              },
-              "@key" : "1b11de5f"
+              }
             },
             "strike" : {
               "strikePrice" : {
@@ -123,14 +113,12 @@
               }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "baf84caa"
+          }
         } ],
         "calculationAgent" : {
           "calculationAgentParty" : "CalculationAgentIndependent"
         }
-      },
-      "@key" : "2a63b314"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -179,27 +167,23 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "2f386d63"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "a14913ec",
         "@ref:external" : "party2"
       }
     } ],
     "ancillaryParty" : [ {
       "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
-        "@ref" : "b6bdbfc2",
         "@ref:external" : "party1"
       } ]
     } ],
@@ -214,13 +198,11 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/uti"
         }
       } ],
-      "@key" : "3eac3060",
       "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
       "@data" : "2006-05-10",
-      "@key" : "3eb14a",
       "@key:external" : "TRADEDATE"
     },
     "party" : [ {
@@ -229,13 +211,11 @@
           "@data" : "54930084UKLVMY22DS16",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "abf5051b"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "b6bdbfc2",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -243,16 +223,13 @@
           "@data" : "48750084UKLVTR22DS78",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "62694f84"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party B"
       },
-      "@key" : "a14913ec",
       "@key:external" : "party2"
     } ],
-    "@key" : "65a4f4a8",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -286,19 +263,15 @@
           "businessCenters" : {
             "businessCenter" : [ {
               "@data" : "JPTO"
-            } ],
-            "@key" : "22da41"
-          },
-          "@key" : "211ff630"
+            } ]
+          }
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "b6bdbfc2",
           "@ref:external" : "party1"
         },
         "receiverPartyReference" : {
-          "@ref" : "a14913ec",
           "@ref:external" : "party2"
         }
       },
@@ -306,8 +279,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "20780545"
+    }
   } ],
   "@key" : "9887679d"
 }

@@ -20,25 +20,18 @@
                   "@data" : "GBLO"
                 }, {
                   "@data" : "USNY"
-                } ],
-                "@key" : "42f910b"
-              },
-              "@key" : "da556d3a"
-            },
-            "@key" : "18601d49"
-          },
-          "@key" : "18601d49"
+                } ]
+              }
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2046-07-12",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "f02f5604"
-          },
-          "@key" : "f02f5604"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "dateAdjustments" : {
           "businessDayConvention" : "FOLLOWING",
@@ -47,10 +40,8 @@
               "@data" : "GBLO"
             }, {
               "@data" : "USNY"
-            } ],
-            "@key" : "42f910b"
-          },
-          "@key" : "da556d3a"
+            } ]
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -61,18 +52,15 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Physical",
-              "@key" : "321f92c1",
               "physicalSettlementTerms" : {
                 "physicalSettlementPeriod" : {
                   "businessDays" : 5
                 },
-                "escrow" : true,
-                "@key" : "56a"
+                "escrow" : true
               },
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
@@ -81,8 +69,7 @@
                 "referenceEntity" : {
                   "name" : {
                     "@data" : "MERRILL LYNCH/COUNTRYWIDE COMM, 2006-3"
-                  },
-                  "@key" : "65eff19"
+                  }
                 },
                 "referenceObligation" : [ {
                   "security" : {
@@ -105,8 +92,7 @@
                   "primaryObligor" : {
                     "name" : {
                       "@data" : "MERRILL LYNCH/COUNTRYWIDE COMM, 2006-3"
-                    },
-                    "@key" : "65eff19"
+                    }
                   }
                 } ],
                 "allGuarantees" : false
@@ -119,8 +105,7 @@
                 "distressedRatingsDowngrade" : true,
                 "maturityExtension" : false,
                 "writedown" : true,
-                "impliedWritedown" : true,
-                "@key" : "7af7892c"
+                "impliedWritedown" : true
               },
               "floatingAmountEvents" : {
                 "failureToPayPrincipal" : true,
@@ -141,12 +126,10 @@
                   "principalShortfallReimbursement" : true,
                   "writedownReimbursement" : true
                 }
-              },
-              "@key" : "2b4fd275"
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "938f475d"
+          }
         } ],
         "calculationAgent" : {
           "calculationAgentParty" : "CalculationAgentIndependent",
@@ -154,8 +137,7 @@
             "@data" : "USNY"
           }
         }
-      },
-      "@key" : "6240ae51"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -168,33 +150,28 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a10c1e7e"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "e1326d8",
         "@ref:external" : "zx456j"
       }
     } ],
     "ancillaryParty" : [ {
       "role" : "CalculationAgentIndependent",
       "partyReference" : [ {
-        "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
       } ]
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "4f580caa",
         "@ref:external" : "trg6836"
       },
       "assignedIdentifier" : [ {
@@ -204,12 +181,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "16dc98d0",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2006-11-14",
-      "@key" : "3eb2ce"
+      "@data" : "2006-11-14"
     },
     "party" : [ {
       "partyId" : [ {
@@ -217,13 +192,11 @@
           "@data" : "XYZBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "2dfac9c7"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "XYZ Bank"
       },
-      "@key" : "4f580caa",
       "@key:external" : "trg6836"
     }, {
       "partyId" : [ {
@@ -231,13 +204,11 @@
           "@data" : "ABCBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "94009ede"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "ABC Bank"
       },
-      "@key" : "e1326d8",
       "@key:external" : "zx456j"
     } ],
     "contractDetails" : {
@@ -252,13 +223,10 @@
           "vintage" : 1992
         },
         "contractualParty" : [ {
-          "@ref" : "4f580caa",
           "@ref:external" : "trg6836"
         }, {
-          "@ref" : "e1326d8",
           "@ref:external" : "zx456j"
         } ],
-        "@key" : "e9f69606",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -280,18 +248,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "4f580caa",
           "@ref:external" : "trg6836"
         }, {
-          "@ref" : "e1326d8",
           "@ref:external" : "zx456j"
         } ],
-        "@key" : "2428bf53",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "10de9c8d"
+      } ]
     },
-    "@key" : "ce88314",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -310,7 +273,6 @@
       },
       "@type" : "cdm.event.common.Transfer"
     },
-    "@key" : "4a08d846",
     "@key:external" : "iey785"
   } ],
   "@key" : "ecc08bb2"

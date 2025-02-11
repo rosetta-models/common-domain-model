@@ -21,7 +21,6 @@
               "settlementCurrency" : {
                 "@data" : "EUR"
               },
-              "@key" : "76108015",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -61,24 +60,20 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 2,
                                 "period" : "D",
-                                "@key" : "aadcf9f2",
                                 "dayType" : "Business",
                                 "businessDayConvention" : "NONE",
                                 "businessCenters" : {
                                   "businessCenter" : [ {
                                     "@data" : "EUTA"
-                                  } ],
-                                  "@key" : "20a71d"
+                                  } ]
                                 },
                                 "dateRelativeTo" : {
                                   "@ref:external" : "valuationDate"
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "aadcf9f2"
+                            }
                           },
-                          "@key" : "9ced0287",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "underlier" : {
@@ -96,19 +91,15 @@
                               "startDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2015-12-20",
-                                    "@key" : "3efb14"
-                                  },
-                                  "@key" : "3efb14"
+                                    "unadjustedDate" : "2015-12-20"
+                                  }
                                 }
                               },
                               "endDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2016-03-19",
-                                    "@key" : "3f00d3"
-                                  },
-                                  "@key" : "3f00d3"
+                                    "unadjustedDate" : "2016-03-19"
+                                  }
                                 }
                               },
                               "dateAdjustments" : {
@@ -116,17 +107,14 @@
                                 "businessCenters" : {
                                   "businessCenter" : [ {
                                     "@data" : "EUTA"
-                                  } ],
-                                  "@key" : "20a71d"
-                                },
-                                "@key" : "211dc30c"
+                                  } ]
+                                }
                               },
                               "dividendPaymentDate" : {
                                 "dividendDate" : {
                                   "relativeDate" : {
                                     "periodMultiplier" : 3,
                                     "period" : "D",
-                                    "@key" : "815062c0",
                                     "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
@@ -134,7 +122,6 @@
                                     },
                                     "@type" : "cdm.base.datetime.AdjustedRelativeDateOffset"
                                   },
-                                  "@key" : "815062c0",
                                   "@key:external" : "p1"
                                 }
                               }
@@ -142,19 +129,15 @@
                               "startDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2016-03-19",
-                                    "@key" : "3f00d3"
-                                  },
-                                  "@key" : "3f00d3"
+                                    "unadjustedDate" : "2016-03-19"
+                                  }
                                 }
                               },
                               "endDate" : {
                                 "dividendDate" : {
                                   "adjustableDate" : {
-                                    "unadjustedDate" : "2016-06-20",
-                                    "@key" : "3f0194"
-                                  },
-                                  "@key" : "3f0194"
+                                    "unadjustedDate" : "2016-06-20"
+                                  }
                                 }
                               },
                               "dateAdjustments" : {
@@ -162,17 +145,14 @@
                                 "businessCenters" : {
                                   "businessCenter" : [ {
                                     "@data" : "EUTA"
-                                  } ],
-                                  "@key" : "20a71d"
-                                },
-                                "@key" : "211dc30c"
+                                  } ]
+                                }
                               },
                               "dividendPaymentDate" : {
                                 "dividendDate" : {
                                   "relativeDate" : {
                                     "periodMultiplier" : 3,
                                     "period" : "D",
-                                    "@key" : "815062c1",
                                     "dayType" : "Calendar",
                                     "businessDayConvention" : "FOLLOWING",
                                     "dateRelativeTo" : {
@@ -180,7 +160,6 @@
                                     },
                                     "@type" : "cdm.base.datetime.AdjustedRelativeDateOffset"
                                   },
-                                  "@key" : "815062c1",
                                   "@key:external" : "p2"
                                 }
                               }
@@ -188,8 +167,7 @@
                           }
                         },
                         "@type" : "cdm.product.template.PerformancePayout"
-                      },
-                      "@key" : "29efa045"
+                      }
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
@@ -199,8 +177,7 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-1"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementDate" : {
@@ -208,7 +185,6 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 3,
                                 "period" : "D",
-                                "@key" : "815062c0",
                                 "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
@@ -216,10 +192,8 @@
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "815062c0"
+                            }
                           },
-                          "@key" : "815062c0",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "fixedPrice" : {
@@ -230,8 +204,7 @@
                           }
                         },
                         "@type" : "cdm.product.template.FixedPricePayout"
-                      },
-                      "@key" : "cac1849d"
+                      }
                     }, {
                       "FixedPricePayout" : {
                         "payerReceiver" : {
@@ -241,8 +214,7 @@
                         "priceQuantity" : {
                           "quantitySchedule" : {
                             "@ref:scoped" : "quantity-2"
-                          },
-                          "@key" : "0"
+                          }
                         },
                         "settlementTerms" : {
                           "settlementDate" : {
@@ -250,7 +222,6 @@
                               "relativeDate" : {
                                 "periodMultiplier" : 3,
                                 "period" : "D",
-                                "@key" : "815062c1",
                                 "dayType" : "Calendar",
                                 "businessDayConvention" : "FOLLOWING",
                                 "dateRelativeTo" : {
@@ -258,10 +229,8 @@
                                 },
                                 "@type" : "cdm.base.datetime.RelativeDateOffset"
                               }
-                            },
-                            "@key" : "815062c1"
+                            }
                           },
-                          "@key" : "815062c1",
                           "@type" : "cdm.product.common.settlement.SettlementTerms"
                         },
                         "fixedPrice" : {
@@ -272,11 +241,9 @@
                           }
                         },
                         "@type" : "cdm.product.template.FixedPricePayout"
-                      },
-                      "@key" : "cc765d3c"
+                      }
                     } ]
-                  },
-                  "@key" : "9617a89e"
+                  }
                 }
               }
             },
@@ -287,27 +254,21 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2015-03-20",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "NotApplicable",
-                    "@key" : "3a4b88ab"
-                  },
-                  "@key" : "26af9c7f"
-                },
-                "@key" : "26af9c7f"
+                    "businessDayConvention" : "NotApplicable"
+                  }
+                }
               } ],
               "expirationTimeType" : "OSP",
               "exerciseProcedure" : {
                 "automaticExercise" : {
                   "isApplicable" : true
                 }
-              },
-              "@key" : "573a56f3"
+              }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "b7b2ca26"
+          }
         } ]
-      },
-      "@key" : "b7b2ca26"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -326,8 +287,7 @@
                 "name" : {
                   "@data" : "XEUR",
                   "@scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                },
-                "@key" : "290e4a"
+                }
               },
               "name" : {
                 "@data" : "STOXX 50 Euro"
@@ -337,8 +297,7 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "5586d526"
+        }
       }, {
         "quantity" : [ {
           "value" : 50000,
@@ -358,26 +317,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "3cec7ea0"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "3815f38",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "da4ebf86",
         "@ref:external" : "partyB"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "3815f38",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -386,11 +341,9 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec318949",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "da4ebf86",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -399,25 +352,21 @@
           "@scheme" : "http://www.swapswire.com/spec/2001/trade-id-1-0"
         }
       } ],
-      "@key" : "ec31fda8",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2012-01-27",
-      "@key" : "3ee05b"
+      "@data" : "2012-01-27"
     },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
           "@data" : "CPTY",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "1fabb2"
+        }
       } ],
       "name" : {
         "@data" : "Counterparty Inc."
       },
-      "@key" : "3815f38",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
@@ -425,16 +374,13 @@
           "@data" : "S81F8KH474EY7PUWI149",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "17a5017e"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Goldman Sachs International"
       },
-      "@key" : "da4ebf86",
       "@key:external" : "partyB"
     } ],
-    "@key" : "9ac59c9d",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -462,17 +408,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2012-01-29",
         "dateAdjustments" : {
-          "businessDayConvention" : "NotApplicable",
-          "@key" : "3a4b88ab"
+          "businessDayConvention" : "NotApplicable"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "3815f38",
           "@ref:external" : "partyA"
         },
         "receiverPartyReference" : {
-          "@ref" : "da4ebf86",
           "@ref:external" : "partyB"
         }
       },
@@ -480,8 +423,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "64e6eeb7"
+    }
   } ],
   "@key" : "c137c454"
 }

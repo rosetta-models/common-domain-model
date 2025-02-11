@@ -5,7 +5,6 @@
   "trade" : {
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "7fd57548",
         "@ref:external" : "PartyA"
       },
       "assignedIdentifier" : [ {
@@ -14,11 +13,9 @@
           "@scheme" : "http://www.PartyA.com/com-trade-id"
         }
       } ],
-      "@key" : "86a58769",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "4041c228",
         "@ref:external" : "PartyB"
       },
       "assignedIdentifier" : [ {
@@ -27,12 +24,10 @@
           "@scheme" : "http://www.PartyB.com/com-trade-id"
         }
       } ],
-      "@key" : "cfd508",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2013-04-01",
-      "@key" : "3ee901"
+      "@data" : "2013-04-01"
     },
     "party" : [ {
       "partyId" : [ {
@@ -40,8 +35,7 @@
           "@data" : "95980020140005196564",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "a1b94faa"
+        "identifierType" : "LEI"
       } ],
       "contactInformation" : {
         "address" : [ {
@@ -50,7 +44,6 @@
           }
         } ]
       },
-      "@key" : "7fd57548",
       "@key:external" : "PartyA"
     }, {
       "partyId" : [ {
@@ -58,13 +51,10 @@
           "@data" : "549300XQFX97CITUR430",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "4041c228"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "4041c228",
       "@key:external" : "PartyB"
     } ],
-    "@key" : "c9c5c06f",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -92,17 +82,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2013-01-03",
         "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "@key" : "24a738"
+          "businessDayConvention" : "NONE"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "7fd57548",
           "@ref:external" : "PartyA"
         },
         "receiverPartyReference" : {
-          "@ref" : "4041c228",
           "@ref:external" : "PartyB"
         }
       },
@@ -110,8 +97,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "7e55dd89"
+    }
   } ],
   "@key" : "13cd00f8"
 }

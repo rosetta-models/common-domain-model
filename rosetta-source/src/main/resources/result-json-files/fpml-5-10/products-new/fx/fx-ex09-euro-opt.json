@@ -28,15 +28,12 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementDate" : {
-                "valueDate" : "2002-06-06",
-                "@key" : "3e9186"
+                "valueDate" : "2002-06-06"
               },
-              "@key" : "3e9186",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -54,12 +51,9 @@
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "adjustedDate" : {
-                    "@data" : "2002-06-04",
-                    "@key" : "3e9184"
-                  },
-                  "@key" : "0"
-                },
-                "@key" : "0"
+                    "@data" : "2002-06-04"
+                  }
+                }
               } ],
               "expirationTime" : {
                 "hourMinuteTime" : "14:00:00",
@@ -67,8 +61,7 @@
                   "@data" : "USNY"
                 }
               },
-              "expirationTimeType" : "SpecificTime",
-              "@key" : "20f9f42c"
+              "expirationTimeType" : "SpecificTime"
             },
             "strike" : {
               "strikePrice" : {
@@ -88,11 +81,9 @@
               }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "cfd56c84"
+          }
         } ]
-      },
-      "@key" : "1a7ab71"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -128,26 +119,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "2ba74073"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "5bbdd746",
         "@ref:external" : "partyX"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "2fb569c6",
         "@ref:external" : "partyY"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "5bbdd746",
         "@ref:external" : "partyX"
       },
       "assignedIdentifier" : [ {
@@ -156,11 +143,9 @@
           "@scheme" : "http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0"
         }
       } ],
-      "@key" : "bce1f9fc",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "2fb569c6",
         "@ref:external" : "partyY"
       },
       "assignedIdentifier" : [ {
@@ -169,12 +154,10 @@
           "@scheme" : "http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0"
         }
       } ],
-      "@key" : "bce26e5b",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2002-01-04",
-      "@key" : "3e9044"
+      "@data" : "2002-01-04"
     },
     "party" : [ {
       "partyId" : [ {
@@ -182,13 +165,11 @@
           "@data" : "549300VBWWV6BYQOWM67",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "4a5d2d9f"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "5bbdd746",
       "@key:external" : "partyX"
     }, {
       "partyId" : [ {
@@ -196,16 +177,13 @@
           "@data" : "BFXS5XCH7N0Y05NIXW11",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "a887a4ca"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "ABN Amro"
       },
-      "@key" : "2fb569c6",
       "@key:external" : "partyY"
     } ],
-    "@key" : "49822ecf",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -233,17 +211,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2001-12-06",
         "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "@key" : "24a738"
+          "businessDayConvention" : "NONE"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "5bbdd746",
           "@ref:external" : "partyX"
         },
         "receiverPartyReference" : {
-          "@ref" : "2fb569c6",
           "@ref:external" : "partyY"
         }
       },
@@ -251,8 +226,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "e06ab199"
+    }
   } ],
   "@key" : "d4d12368"
 }

@@ -12,10 +12,8 @@
       "economicTerms" : {
         "terminationDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2010-03-20",
-            "@key" : "3ed0d4"
-          },
-          "@key" : "3ed0d4"
+            "unadjustedDate" : "2010-03-20"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -26,8 +24,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "generalTerms" : {
               "indexReferenceInformation" : {
@@ -51,20 +48,16 @@
                   "referenceEntity" : {
                     "name" : {
                       "@data" : "TESCO PLC"
-                    },
-                    "@key" : "43886e95"
+                    }
                   }
                 } ],
-                "@key" : "cf6dff2a",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
             },
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "3ce2d689"
+          }
         } ]
-      },
-      "@key" : "99b16b5d"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -77,26 +70,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8b68721"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "a84be2ec",
         "@ref:external" : "ruytb"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "9c95540c",
         "@ref:external" : "g56bw4"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "9c95540c",
         "@ref:external" : "g56bw4"
       },
       "assignedIdentifier" : [ {
@@ -106,12 +95,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "36c7fbdc",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2005-11-03",
-      "@key" : "3eaac3"
+      "@data" : "2005-11-03"
     },
     "party" : [ {
       "partyId" : [ {
@@ -119,13 +106,11 @@
           "@data" : "PARTYABICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "6625eac5"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "Party A"
       },
-      "@key" : "a84be2ec",
       "@key:external" : "ruytb"
     }, {
       "partyId" : [ {
@@ -133,13 +118,11 @@
           "@data" : "PARTYBBICXXX",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "ce0717a4"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "Party B"
       },
-      "@key" : "9c95540c",
       "@key:external" : "g56bw4"
     } ],
     "contractDetails" : {
@@ -155,13 +138,10 @@
           "vintage" : 1992
         },
         "contractualParty" : [ {
-          "@ref" : "a84be2ec",
           "@ref:external" : "ruytb"
         }, {
-          "@ref" : "9c95540c",
           "@ref:external" : "g56bw4"
         } ],
-        "@key" : "add8bcd5",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -177,16 +157,12 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "a84be2ec",
           "@ref:external" : "ruytb"
         }, {
-          "@ref" : "9c95540c",
           "@ref:external" : "g56bw4"
         } ],
-        "@key" : "5b3d34d7",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "f2a590e2"
+      } ]
     },
     "account" : [ {
       "accountNumber" : {
@@ -194,10 +170,8 @@
         "@scheme" : "http://www.partyA/accountId"
       },
       "servicingParty" : {
-        "@ref" : "a84be2ec",
         "@ref:external" : "ruytb"
       },
-      "@key" : "73a72432",
       "@key:external" : "t7653d"
     }, {
       "accountNumber" : {
@@ -205,13 +179,10 @@
         "@scheme" : "http://partyB/accountId"
       },
       "servicingParty" : {
-        "@ref" : "9c95540c",
         "@ref:external" : "g56bw4"
       },
-      "@key" : "edf1876a",
       "@key:external" : "uyr3fdf"
     } ],
-    "@key" : "ee7daf02",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -238,11 +209,9 @@
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "9c95540c",
           "@ref:external" : "g56bw4"
         },
         "receiverPartyReference" : {
-          "@ref" : "a84be2ec",
           "@ref:external" : "ruytb"
         }
       },
@@ -250,8 +219,7 @@
         "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "5fc95958"
+    }
   } ],
   "@key" : "d6cb735a"
 }

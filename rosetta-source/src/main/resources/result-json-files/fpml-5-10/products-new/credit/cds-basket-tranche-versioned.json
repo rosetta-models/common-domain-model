@@ -14,23 +14,17 @@
           "adjustableDate" : {
             "unadjustedDate" : "2004-03-23",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "eb3e6e4f"
-          },
-          "@key" : "eb3e6e4f"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2009-03-20",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "ebd48b0c"
-          },
-          "@key" : "ebd48b0c"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -41,15 +35,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "generalTerms" : {
@@ -73,7 +65,6 @@
                         "name" : {
                           "@data" : "Agrium Inc."
                         },
-                        "@key" : "6b99b4c1",
                         "@key:external" : "r65hfd"
                       },
                       "referenceObligation" : {
@@ -89,7 +80,6 @@
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
-                          "@ref" : "6b99b4c1",
                           "@ref:external" : "r65hfd"
                         }
                       },
@@ -107,7 +97,6 @@
                         "name" : {
                           "@data" : "Tenet Healthcare Corporation"
                         },
-                        "@key" : "92cc27",
                         "@key:external" : "uiyn4"
                       },
                       "referenceObligation" : {
@@ -123,7 +112,6 @@
                           "@type" : "cdm.base.staticdata.asset.common.Security"
                         },
                         "primaryObligorReference" : {
-                          "@ref" : "92cc27",
                           "@ref:external" : "uiyn4"
                         }
                       },
@@ -149,7 +137,6 @@
                     "gracePeriod" : {
                       "periodMultiplier" : 0,
                       "period" : "D",
-                      "@key" : "44",
                       "@type" : "cdm.base.datetime.Offset"
                     }
                   },
@@ -160,7 +147,6 @@
                         "@data" : "GBP"
                       }
                     },
-                    "@key" : "48eae7c4",
                     "@type" : "cdm.observable.asset.Money"
                   }
                 },
@@ -170,17 +156,14 @@
                     "standardPublicSources" : true,
                     "specifiedNumber" : 2
                   }
-                },
-                "@key" : "f8d2401"
+                }
               },
               "obligations" : {
                 "category" : "BondOrLoan"
-              },
-              "@key" : "90a9b011"
+              }
             } ],
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "96dcca64"
+          }
         }, {
           "InterestRatePayout" : {
             "payerReceiver" : {
@@ -190,8 +173,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "rateSpecification" : {
               "FixedRateSpecification" : {
@@ -199,19 +181,16 @@
                   "price" : {
                     "@ref:scoped" : "price-1"
                   }
-                },
-                "@key" : "0"
+                }
               }
             },
             "dayCountFraction" : {
               "@data" : "ACT/ACT.ISDA"
             },
             "@type" : "cdm.product.asset.InterestRatePayout"
-          },
-          "@key" : "28d6c3e0"
+          }
         } ]
-      },
-      "@key" : "71189521"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -240,8 +219,7 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-2"
-        } ],
-        "@key" : "28ce4efa"
+        } ]
       }, {
         "quantity" : [ {
           "value" : 25000000,
@@ -252,26 +230,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8bdc3dd"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "61f9c816",
         "@ref:external" : "tif563d"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "dddf17a3",
         "@ref:external" : "fyure4"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "dddf17a3",
         "@ref:external" : "fyure4"
       },
       "assignedIdentifier" : [ {
@@ -281,12 +255,10 @@
         },
         "version" : 1
       } ],
-      "@key" : "33d9d70",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2004-01-24",
-      "@key" : "3ea058"
+      "@data" : "2004-01-24"
     },
     "party" : [ {
       "partyId" : [ {
@@ -294,13 +266,11 @@
           "@data" : "MSCSBIC",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "dc662116"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "Morgan Stanley Capital Services"
       },
-      "@key" : "61f9c816",
       "@key:external" : "tif563d"
     }, {
       "partyId" : [ {
@@ -308,13 +278,11 @@
           "@data" : "BGIBIC",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso9362"
         },
-        "identifierType" : "BIC",
-        "@key" : "20a82a24"
+        "identifierType" : "BIC"
       } ],
       "name" : {
         "@data" : "Barclays Global Investors"
       },
-      "@key" : "dddf17a3",
       "@key:external" : "fyure4"
     } ],
     "contractDetails" : {
@@ -338,18 +306,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "61f9c816",
           "@ref:external" : "tif563d"
         }, {
-          "@ref" : "dddf17a3",
           "@ref:external" : "fyure4"
         } ],
-        "@key" : "2458786a",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "2458786a"
+      } ]
     },
-    "@key" : "b2941b62",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "b2941b62"

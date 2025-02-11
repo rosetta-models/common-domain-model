@@ -9,8 +9,7 @@
           "@data" : "JP1700161P53",
           "@scheme" : "http://www.dtcc.com/coding-scheme/external/product-id/ISIN"
         },
-        "source" : "ISIN",
-        "@key" : "1b2f70e1"
+        "source" : "ISIN"
       } ],
       "taxonomy" : [ {
         "primaryAssetClass" : {
@@ -63,23 +62,17 @@
           "adjustableDate" : {
             "unadjustedDate" : "2023-11-15",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "ed806a47"
-          },
-          "@key" : "ed806a47"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2029-11-15",
             "dateAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "@key" : "24a738"
-            },
-            "@key" : "ee349a47"
-          },
-          "@key" : "ee349a47"
+              "businessDayConvention" : "NONE"
+            }
+          }
         },
         "payout" : [ {
           "SettlementPayout" : {
@@ -90,12 +83,10 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Physical",
-              "@key" : "f3b1d0d7",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "underlier" : {
@@ -104,12 +95,10 @@
               }
             },
             "@type" : "cdm.product.template.SettlementPayout"
-          },
-          "@key" : "db41808a"
+          }
         } ],
         "nonStandardisedTerms" : false
-      },
-      "@key" : "7371da47"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -162,20 +151,17 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "b104d071"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "c2aaa304",
         "@ref:external" : "partyB"
       }
     } ],
@@ -190,12 +176,10 @@
           "@scheme" : "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
         }
       } ],
-      "@key" : "4396cc77",
       "identifierType" : "UniqueTransactionIdentifier",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -204,12 +188,10 @@
           "@scheme" : "http://www.dtcc.com/internal-reference-id"
         }
       } ],
-      "@key" : "31fabfda",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2023-11-15",
-      "@key" : "3f3acf"
+      "@data" : "2023-11-15"
     },
     "party" : [ {
       "partyId" : [ {
@@ -217,8 +199,7 @@
           "@data" : "2ae25",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "5ad90877"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party A"
@@ -230,7 +211,6 @@
           }
         } ]
       },
-      "@key" : "47c727bc",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
@@ -238,8 +218,7 @@
           "@data" : "88c95",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "62d38a11"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Party B"
@@ -251,51 +230,41 @@
           }
         } ]
       },
-      "@key" : "c2aaa304",
       "@key:external" : "partyB"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "XOFF",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/mifir/extension-iso10383"
-        },
-        "@key" : "2931f7"
+        }
       } ],
-      "@key" : "2931f7",
       "@key:external" : "ExecutionFacility"
     } ],
     "partyRole" : [ {
       "partyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       },
       "role" : "ReportingParty",
       "ownershipPartyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       }
     }, {
       "partyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       },
       "role" : "Beneficiary",
       "ownershipPartyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       }
     }, {
       "partyReference" : {
-        "@ref" : "2931f7",
         "@ref:external" : "ExecutionFacility"
       },
       "role" : "ExecutionFacility",
       "ownershipPartyReference" : {
-        "@ref" : "47c727bc",
         "@ref:external" : "partyA"
       }
     } ],
-    "@key" : "5fa14708",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "5fa14708"

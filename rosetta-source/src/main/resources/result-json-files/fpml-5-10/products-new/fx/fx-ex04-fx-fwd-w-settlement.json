@@ -22,15 +22,12 @@
               },
               "priceSchedule" : [ {
                 "@ref:scoped" : "price-1"
-              } ],
-              "@key" : "0"
+              } ]
             },
             "settlementTerms" : {
               "settlementDate" : {
-                "valueDate" : "2002-04-01",
-                "@key" : "3e9101"
+                "valueDate" : "2002-04-01"
               },
-              "@key" : "3e9101",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "underlier" : {
@@ -39,11 +36,9 @@
               }
             },
             "@type" : "cdm.product.template.SettlementPayout"
-          },
-          "@key" : "c60128be"
+          }
         } ]
-      },
-      "@key" : "c60128be"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -95,26 +90,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "f564cfe7"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "6c7f6e62",
         "@ref:external" : "party1"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "6b3b6af3",
         "@ref:external" : "party2"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "6c7f6e62",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -123,11 +114,9 @@
           "@scheme" : "http://www.citi.com/fx/trade-id"
         }
       } ],
-      "@key" : "11d75dd4",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "6b3b6af3",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -136,12 +125,10 @@
           "@scheme" : "http://www.ubsw.com/fx/trade-id"
         }
       } ],
-      "@key" : "9a8224ba",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2001-11-12",
-      "@key" : "3e8acc"
+      "@data" : "2001-11-12"
     },
     "party" : [ {
       "partyId" : [ {
@@ -149,10 +136,8 @@
           "@data" : "5493000SCC07UI6DB380",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "6c7f6e62"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "6c7f6e62",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -160,13 +145,10 @@
           "@data" : "BFM8T61CT2L1QCEMIK50",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "6b3b6af3"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "6b3b6af3",
       "@key:external" : "party2"
     } ],
-    "@key" : "b0c0ea82",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "b0c0ea82"

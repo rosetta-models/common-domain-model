@@ -12,10 +12,8 @@
       "economicTerms" : {
         "terminationDate" : {
           "adjustableDate" : {
-            "unadjustedDate" : "2010-03-20",
-            "@key" : "3ed0d4"
-          },
-          "@key" : "3ed0d4"
+            "unadjustedDate" : "2010-03-20"
+          }
         },
         "payout" : [ {
           "CreditDefaultPayout" : {
@@ -26,8 +24,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "generalTerms" : {
               "indexReferenceInformation" : {
@@ -52,16 +49,13 @@
                     "@data" : "NotApplicable"
                   }
                 },
-                "@key" : "f97d484f",
                 "@type" : "cdm.observable.asset.CreditIndex"
               }
             },
             "@type" : "cdm.product.asset.CreditDefaultPayout"
-          },
-          "@key" : "aa708910"
+          }
         } ]
-      },
-      "@key" : "39d209bc"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -74,26 +68,22 @@
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-1"
-        } ],
-        "@key" : "a8bdc3dd"
+        } ]
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "33f59567",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -102,11 +92,9 @@
           "@scheme" : "http://www.newbank.com/trade-id"
         }
       } ],
-      "@key" : "348f2a71",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "33f59568",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -115,7 +103,6 @@
           "@scheme" : "http://www.massivebank.com/trade-id"
         }
       } ],
-      "@key" : "ebf0fa6a",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "party" : [ {
@@ -123,20 +110,16 @@
         "identifier" : {
           "@data" : "Party A",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59567"
+        }
       } ],
-      "@key" : "33f59567",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
         "identifier" : {
           "@data" : "Party B",
           "@scheme" : "http://www.fpml.org/coding-scheme/dummy-party-id"
-        },
-        "@key" : "33f59568"
+        }
       } ],
-      "@key" : "33f59568",
       "@key:external" : "party2"
     } ],
     "contractDetails" : {
@@ -151,18 +134,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "33f59568",
           "@ref:external" : "party2"
         }, {
-          "@ref" : "33f59567",
           "@ref:external" : "party1"
         } ],
-        "@key" : "fb4448f3",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "fb4448f3"
+      } ]
     },
-    "@key" : "5b1fa80e",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -189,11 +167,9 @@
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "33f59567",
           "@ref:external" : "party1"
         },
         "receiverPartyReference" : {
-          "@ref" : "33f59568",
           "@ref:external" : "party2"
         }
       },
@@ -201,8 +177,7 @@
         "priceTransfer" : "Upfront"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "702dc5b4"
+    }
   } ],
   "@key" : "1746dac2"
 }

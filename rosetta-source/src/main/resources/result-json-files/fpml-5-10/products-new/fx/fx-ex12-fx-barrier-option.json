@@ -19,15 +19,12 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementDate" : {
-                "valueDate" : "2002-02-08",
-                "@key" : "3e9088"
+                "valueDate" : "2002-02-08"
               },
-              "@key" : "3e9088",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "buyerSeller" : {
@@ -45,12 +42,9 @@
               "expirationDate" : [ {
                 "adjustableDate" : {
                   "adjustedDate" : {
-                    "@data" : "2002-02-06",
-                    "@key" : "3e9086"
-                  },
-                  "@key" : "0"
-                },
-                "@key" : "0"
+                    "@data" : "2002-02-06"
+                  }
+                }
               } ],
               "expirationTime" : {
                 "hourMinuteTime" : "10:00:00",
@@ -58,8 +52,7 @@
                   "@data" : "USNY"
                 }
               },
-              "expirationTimeType" : "SpecificTime",
-              "@key" : "26f843e5"
+              "expirationTimeType" : "SpecificTime"
             },
             "strike" : {
               "strikePrice" : {
@@ -82,11 +75,9 @@
               }
             },
             "@type" : "cdm.product.template.OptionPayout"
-          },
-          "@key" : "6ab99113"
+          }
         } ]
-      },
-      "@key" : "6ab99113"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -122,26 +113,22 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "9d55c0ab"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "a41bc6e9",
         "@ref:external" : "party2"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "4a5d2d9f",
         "@ref:external" : "party1"
       },
       "assignedIdentifier" : [ {
@@ -150,11 +137,9 @@
           "@scheme" : "http://www.partyA.com/swaps/trade-id"
         }
       } ],
-      "@key" : "cf15004e",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "a41bc6e9",
         "@ref:external" : "party2"
       },
       "assignedIdentifier" : [ {
@@ -163,12 +148,10 @@
           "@scheme" : "http://www.db.com/swaps/trade-id"
         }
       } ],
-      "@key" : "5246e55",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2001-08-16",
-      "@key" : "3e8a10"
+      "@data" : "2001-08-16"
     },
     "party" : [ {
       "partyId" : [ {
@@ -176,10 +159,8 @@
           "@data" : "549300VBWWV6BYQOWM67",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "4a5d2d9f"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "4a5d2d9f",
       "@key:external" : "party1"
     }, {
       "partyId" : [ {
@@ -187,13 +168,10 @@
           "@data" : "213800QILIUD4ROSUO03",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "a41bc6e9"
+        "identifierType" : "LEI"
       } ],
-      "@key" : "a41bc6e9",
       "@key:external" : "party2"
     } ],
-    "@key" : "e480ad47",
     "@type" : "cdm.event.common.Trade"
   },
   "transferHistory" : [ {
@@ -221,17 +199,14 @@
       "settlementDate" : {
         "unadjustedDate" : "2001-11-06",
         "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "@key" : "24a738"
+          "businessDayConvention" : "NONE"
         }
       },
       "payerReceiver" : {
         "payerPartyReference" : {
-          "@ref" : "a41bc6e9",
           "@ref:external" : "party2"
         },
         "receiverPartyReference" : {
-          "@ref" : "4a5d2d9f",
           "@ref:external" : "party1"
         }
       },
@@ -239,8 +214,7 @@
         "priceTransfer" : "Premium"
       },
       "@type" : "cdm.event.common.Transfer"
-    },
-    "@key" : "b866b164"
+    }
   } ],
   "@key" : "6a55b9ab"
 }

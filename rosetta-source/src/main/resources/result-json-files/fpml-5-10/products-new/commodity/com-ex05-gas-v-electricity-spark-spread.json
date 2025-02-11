@@ -14,23 +14,17 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-07-01",
             "dateAdjustments" : {
-              "businessDayConvention" : "NotApplicable",
-              "@key" : "3a4b88ab"
-            },
-            "@key" : "25e0de2c"
-          },
-          "@key" : "25e0de2c"
+              "businessDayConvention" : "NotApplicable"
+            }
+          }
         },
         "terminationDate" : {
           "adjustableDate" : {
             "unadjustedDate" : "2008-07-31",
             "dateAdjustments" : {
-              "businessDayConvention" : "NotApplicable",
-              "@key" : "3a4b88ab"
-            },
-            "@key" : "25e14eca"
-          },
-          "@key" : "25e14eca"
+              "businessDayConvention" : "NotApplicable"
+            }
+          }
         },
         "payout" : [ {
           "CommodityPayout" : {
@@ -41,15 +35,13 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-2"
-              },
-              "@key" : "0"
+              }
             },
             "settlementTerms" : {
               "settlementType" : "Cash",
               "settlementCurrency" : {
                 "@data" : "USD"
               },
-              "@key" : "7610bbd9",
               "@type" : "cdm.product.common.settlement.SettlementTerms"
             },
             "commodityPriceReturnTerms" : {
@@ -67,8 +59,7 @@
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
                     "@data" : "NYMEX-NATURAL-GAS"
-                  } ],
-                  "@key" : "acc66859"
+                  } ]
                 }
               }
             },
@@ -76,27 +67,22 @@
               "calculationPeriodFrequency" : {
                 "periodMultiplier" : 1,
                 "period" : "M",
-                "@key" : "11e9",
                 "@key:external" : "floatingLeg1CalculationPeriods",
                 "balanceOfFirstPeriod" : false,
                 "@type" : "cdm.base.datetime.CalculationPeriodFrequency"
-              },
-              "@key" : "11e9"
+              }
             },
             "paymentDates" : {
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
-                "@key" : "ea4acac1",
                 "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "NotApplicable",
-                "@key" : "3a4b88ab"
-              },
-              "@key" : "2c4cb386"
+                "businessDayConvention" : "NotApplicable"
+              }
             },
             "underlier" : {
               "Observable" : {
@@ -104,8 +90,7 @@
               }
             },
             "@type" : "cdm.product.asset.CommodityPayout"
-          },
-          "@key" : "324c917c"
+          }
         }, {
           "CommodityPayout" : {
             "payerReceiver" : {
@@ -115,8 +100,7 @@
             "priceQuantity" : {
               "quantitySchedule" : {
                 "@ref:scoped" : "quantity-1"
-              },
-              "@key" : "0"
+              }
             },
             "averagingFeature" : {
               "averagingMethod" : {
@@ -134,8 +118,7 @@
                 "businessCenters" : {
                   "commodityBusinessCalendar" : [ {
                     "@data" : "DowJonesPower"
-                  } ],
-                  "@key" : "e1cbae2a"
+                  } ]
                 }
               }
             },
@@ -144,15 +127,12 @@
               "paymentDaysOffset" : {
                 "periodMultiplier" : 5,
                 "period" : "D",
-                "@key" : "ea4acac1",
                 "dayType" : "Business",
                 "@type" : "cdm.base.datetime.Offset"
               },
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "NotApplicable",
-                "@key" : "3a4b88ab"
-              },
-              "@key" : "2c4cb386"
+                "businessDayConvention" : "NotApplicable"
+              }
             },
             "underlier" : {
               "Observable" : {
@@ -160,11 +140,9 @@
               }
             },
             "@type" : "cdm.product.asset.CommodityPayout"
-          },
-          "@key" : "e6788d6e"
+          }
         } ]
-      },
-      "@key" : "80911714"
+      }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
@@ -190,8 +168,7 @@
           },
           "frequency" : {
             "periodMultiplier" : 1,
-            "period" : "D",
-            "@key" : "63"
+            "period" : "D"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-4"
@@ -218,7 +195,6 @@
                 "deliveryNearby" : {
                   "periodMultiplier" : 1,
                   "period" : "M",
-                  "@key" : "6c",
                   "@type" : "cdm.base.datetime.Offset"
                 }
               },
@@ -226,8 +202,7 @@
             }
           },
           "@key:scoped" : "observable-1"
-        },
-        "@key" : "e4158a12"
+        }
       }, {
         "quantity" : [ {
           "value" : 15000,
@@ -236,8 +211,7 @@
           },
           "frequency" : {
             "periodMultiplier" : 1,
-            "period" : "D",
-            "@key" : "63"
+            "period" : "D"
           },
           "@type" : "cdm.base.math.NonNegativeQuantitySchedule",
           "@key:scoped" : "quantity-3"
@@ -264,26 +238,22 @@
             }
           },
           "@key:scoped" : "observable-2"
-        },
-        "@key" : "98b5f033"
+        }
       } ]
     } ],
     "counterparty" : [ {
       "role" : "Party1",
       "partyReference" : {
-        "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       }
     }, {
       "role" : "Party2",
       "partyReference" : {
-        "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
       }
     } ],
     "tradeIdentifier" : [ {
       "issuerReference" : {
-        "@ref" : "10fb089c",
         "@ref:external" : "partyA"
       },
       "assignedIdentifier" : [ {
@@ -292,11 +262,9 @@
           "@scheme" : "http://www.PartyA.com/com-trade-id"
         }
       } ],
-      "@key" : "9598cc47",
       "@type" : "cdm.event.common.TradeIdentifier"
     }, {
       "issuerReference" : {
-        "@ref" : "f0466d0f",
         "@ref:external" : "partyB"
       },
       "assignedIdentifier" : [ {
@@ -305,12 +273,10 @@
           "@scheme" : "http://www.PartyB.com/com-trade-id"
         }
       } ],
-      "@key" : "9599b8e6",
       "@type" : "cdm.event.common.TradeIdentifier"
     } ],
     "tradeDate" : {
-      "@data" : "2008-06-11",
-      "@key" : "3ec18b"
+      "@data" : "2008-06-11"
     },
     "party" : [ {
       "partyId" : [ {
@@ -318,13 +284,11 @@
           "@data" : "549300KFSLY4U7N3LL12",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "22ea1e40"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Bank"
       },
-      "@key" : "10fb089c",
       "@key:external" : "partyA"
     }, {
       "partyId" : [ {
@@ -332,13 +296,11 @@
           "@data" : "549300AJRHKBLY9GM262",
           "@scheme" : "http://www.fpml.org/coding-scheme/external/iso17442"
         },
-        "identifierType" : "LEI",
-        "@key" : "b2c862a5"
+        "identifierType" : "LEI"
       } ],
       "name" : {
         "@data" : "Energy Co."
       },
-      "@key" : "f0466d0f",
       "@key:external" : "partyB"
     } ],
     "contractDetails" : {
@@ -352,13 +314,10 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "10fb089c",
           "@ref:external" : "partyA"
         }, {
-          "@ref" : "f0466d0f",
           "@ref:external" : "partyB"
         } ],
-        "@key" : "eaa25368",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
       }, {
         "legalAgreementIdentification" : {
@@ -370,18 +329,13 @@
           }
         },
         "contractualParty" : [ {
-          "@ref" : "10fb089c",
           "@ref:external" : "partyA"
         }, {
-          "@ref" : "f0466d0f",
           "@ref:external" : "partyB"
         } ],
-        "@key" : "4f1829ff",
         "@type" : "cdm.legaldocumentation.common.LegalAgreement"
-      } ],
-      "@key" : "48392b97"
+      } ]
     },
-    "@key" : "feb34036",
     "@type" : "cdm.event.common.Trade"
   },
   "@key" : "feb34036"
