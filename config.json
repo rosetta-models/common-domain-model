@@ -23,6 +23,10 @@
     {
       "lowestVersion": "6.0.0-dev.92",
       "upmostVersion": "6.999.999"
+    },
+    {
+      "lowestVersion": "7.0.0-dev.0",
+      "upmostVersion": "7.999.999"
     }
   ],
   "links": [
