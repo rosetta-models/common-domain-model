@@ -23,6 +23,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class RuneSerializationRegressionTest {
     private ObjectMapper oldMapper;
     private ObjectMapper newMapper;
@@ -36,7 +38,11 @@ public class RuneSerializationRegressionTest {
     @ParameterizedTest(name = "{0}")
     @MethodSource("testCases")
     public void testSerializersForRegressions(String fileName, String fileContents, Class<? extends RosettaModelObject> rosettaRootType) {
-        System.out.println(fileName);
+        RosettaModelObject deserializeFromOld = fromJson(fileContents, rosettaRootType, oldMapper);
+        String serializeToNew = toJson(deserializeFromOld, newMapper);
+        RosettaModelObject deserializeFromNew = fromJson(serializeToNew, rosettaRootType, newMapper);
+        String serializeBackToOld = toJson(deserializeFromNew, oldMapper);
+        assertEquals(fileContents, serializeBackToOld);
     }
 
     public static Stream<Arguments> testCases() {
