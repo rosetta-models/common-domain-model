@@ -8,7 +8,7 @@
   "fixedVersions": [
     {
       "id": "fv-1",
-      "upmostVersion": "5.18.0"
+      "upmostVersion": "6.999.999"
     },
     {
       "id": "fv-2",
