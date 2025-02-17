@@ -6,10 +6,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Sets;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapperCreator;
+import com.rosetta.model.lib.GlobalKey;
 import com.rosetta.model.lib.RosettaModelObject;
 import com.rosetta.model.lib.RosettaModelObjectBuilder;
+import com.rosetta.model.lib.meta.GlobalKeyFields;
+import com.rosetta.model.lib.meta.Reference;
+import com.rosetta.model.lib.meta.ReferenceWithMeta;
+import com.rosetta.model.lib.path.RosettaPath;
 import org.finos.rune.mapper.RuneJsonObjectMapper;
 import org.finos.rune.mapper.processor.SerializationPreProcessor;
+import org.finos.rune.mapper.processor.pruner.PreSerializationPruner;
+import org.finos.rune.mapper.processor.pruner.PruningStrategy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -40,7 +47,7 @@ public class RuneSerializationRegressionTest {
     @ParameterizedTest(name = "{0}")
     @MethodSource("testCases")
     public void testSerializersForRegressions(String fileName, String fileContents, Class<? extends RosettaModelObject> rosettaRootType) {
-        String initialContents = prune(fileContents, rosettaRootType);
+        String initialContents = prepareInitial(fileContents, rosettaRootType);
 
         RosettaModelObject deserializeFromOld = fromJson(initialContents, rosettaRootType, oldMapper);
         String serializeToNew = toJson(deserializeFromOld, newMapper);
@@ -79,11 +86,45 @@ public class RuneSerializationRegressionTest {
                 });
     }
 
-    private String prune(String fileContents, Class<? extends RosettaModelObject> rosettaRootType) {
+    /*
+        Prepare the input data so that it has the same conditions as the new serializer.
+        1. All keys and references need to be pruned in the same manner as in the new seralizer
+        2. All key and reference scopes need to be removed
+
+     */
+    private String prepareInitial(String fileContents, Class<? extends RosettaModelObject> rosettaRootType) {
         RosettaModelObject rosettaModelObject = fromJson(fileContents, rosettaRootType, oldMapper);
         SerializationPreProcessor serializationPreProcessor = new SerializationPreProcessor();
         RosettaModelObject processed = serializationPreProcessor.process(rosettaModelObject);
-        return toJson(processed, oldMapper);
+
+        RosettaPath path = RosettaPath.valueOf(rosettaModelObject.getType().getSimpleName());
+        PreSerializationPruner pruner = new PreSerializationPruner(new ScopePruningStrategy());
+        RosettaModelObjectBuilder builder = processed.toBuilder();
+        builder.process(path, pruner);
+        return toJson(builder, oldMapper);
+    }
+
+    private static class ScopePruningStrategy implements PruningStrategy {
+        @Override
+        public void prune(RosettaModelObjectBuilder builder) {
+            if (builder instanceof ReferenceWithMeta.ReferenceWithMetaBuilder) {
+                ReferenceWithMeta.ReferenceWithMetaBuilder<?> referenceWithMetaBuilder =
+                        (ReferenceWithMeta.ReferenceWithMetaBuilder<?>) builder;
+
+                Reference reference = referenceWithMetaBuilder.getReference();
+                if (reference != null) {
+                    reference.toBuilder().setScope(null);
+                    referenceWithMetaBuilder.setReference(reference);
+                }
+            }
+
+            if (builder instanceof GlobalKey) {
+                GlobalKey globalKey = (GlobalKey) builder;
+                if (globalKey.getMeta() != null) {
+                    globalKey.getMeta().getKey().forEach(k -> k.toBuilder().setScope(null));
+                }
+            }
+        }
     }
 
     private static Set<JsonFileGroup> getJsonFileGroups() {
