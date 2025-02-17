@@ -7,8 +7,12 @@
   "ownerPermission": "cdm_owner",
   "fixedVersions": [
     {
-      "id": "v4",
+      "id": "fv-1",
       "upmostVersion": "6.999.999"
+    },
+    {
+      "id": "fv-2",
+      "upmostVersion": "5.999.999"
     }
   ],
   "versionLimits": [
