@@ -45,11 +45,12 @@ public class RuneSerializationRegressionTest {
         RosettaModelObject deserializeFromOld = fromJson(initialContents, rosettaRootType, oldMapper);
         String serializeToNew = toJson(deserializeFromOld, newMapper);
         RosettaModelObject deserializeFromNew = fromJson(serializeToNew, rosettaRootType, newMapper);
-        String serializeBackToOld = toJson(prunedEmpty(deserializeFromNew), oldMapper);
+        //Need to prune empty here because we only prune empties on serialize not deserialize
+        String serializeBackToOld = toJson(pruneEmpty(deserializeFromNew), oldMapper);
         assertEquals(initialContents, serializeBackToOld);
     }
 
-    private static RosettaModelObjectBuilder prunedEmpty(RosettaModelObject deserializeFromNew) {
+    private static RosettaModelObjectBuilder pruneEmpty(RosettaModelObject deserializeFromNew) {
         return deserializeFromNew.toBuilder().prune();
     }
 
