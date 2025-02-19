@@ -218,7 +218,7 @@ type AssetLocation: <"Used to specify where an asset is physically located. For 
 
     condition PartyRoleExists: <"A partyRole can only be defined if we have a party.">
         if partyRole exists then party exists
-    
+
     condition AssetLocationChoice: <"A location can either be a party or a market, not both.">
         optional choice party, domesticMarket
 
