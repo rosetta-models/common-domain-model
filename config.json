@@ -2,6 +2,7 @@
   "name": "COMMON-DOMAIN-MODEL",
   "description": "Common Domain Model",
   "modelPath": "rosetta-source/src/main",
+  "homepage": "README.md",
   "documentPath": ".",
   "permissions": [],
   "ownerPermission": "cdm_owner",
