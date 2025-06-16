@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(x) CMEClearedConfirmTest" type="JUnit" factoryName="JUnit" folderName="Ingestions">
+    <module name="tests" />
+    <option name="PACKAGE_NAME" value="com.regnosys.ingest.cme" />
+    <option name="MAIN_CLASS_NAME" value="com.regnosys.ingest.cme.CMEClearedConfirmTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources/" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

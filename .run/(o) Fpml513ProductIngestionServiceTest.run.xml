@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(o) Fpml513ProductIngestionServiceTest" type="JUnit" factoryName="JUnit" folderName="FpML 5.13">
+    <module name="tests" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.regnosys.ingest.fpml.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="11" />
+    <option name="PACKAGE_NAME" value="com.regnosys.ingest.fpml" />
+    <option name="MAIN_CLASS_NAME" value="com.regnosys.ingest.fpml.Fpml513ProductIngestionServiceTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

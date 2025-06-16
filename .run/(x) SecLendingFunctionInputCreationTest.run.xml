@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(x) SecLendingFunctionInputCreationTest" type="JUnit" factoryName="JUnit" folderName="Functions">
+    <module name="cdm-java" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.isda.cdm.functions.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="org.isda.cdm.functions" />
+    <option name="MAIN_CLASS_NAME" value="org.isda.cdm.functions.SecLendingFunctionInputCreationTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources/" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

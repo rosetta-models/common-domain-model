@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(x) All FpML" type="JUnit" factoryName="JUnit">
+    <module name="tests" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="directory" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources/" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <dir value="$PROJECT_DIR$/tests/src/test/java/com/regnosys/ingest/fpml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

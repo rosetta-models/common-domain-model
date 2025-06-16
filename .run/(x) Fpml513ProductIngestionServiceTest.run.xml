@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(x) Fpml513ProductIngestionServiceTest" type="JUnit" factoryName="JUnit" folderName="FpML 5.13">
+    <module name="tests" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.regnosys.ingest.fpml.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.regnosys.ingest.fpml" />
+    <option name="MAIN_CLASS_NAME" value="com.regnosys.ingest.fpml.Fpml513ProductIngestionServiceTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources/" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

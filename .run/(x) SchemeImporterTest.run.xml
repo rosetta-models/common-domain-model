@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="(x) SchemeImporterTest" type="JUnit" factoryName="JUnit">
+    <module name="tests" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.regnosys.granite.ingestor.schemaimport.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.regnosys.schemeimport" />
+    <option name="MAIN_CLASS_NAME" value="com.regnosys.schemeimport.SchemeImporterTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/rosetta/" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
