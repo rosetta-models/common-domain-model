@@ -32,6 +32,38 @@
     {
       "lowestVersion": "6.0.0-dev.79",
       "upmostVersion": "6.0.0-dev.79"
+    },
+    {
+      "lowestVersion": "5.0.0-dev.14",
+      "upmostVersion": "5.0.0-dev.14"
+    },
+    {
+      "lowestVersion": "5.12.0",
+      "upmostVersion": "5.12.0"
+    },
+    {
+      "lowestVersion": "5.19.0",
+      "upmostVersion": "5.19.0"
+    },
+    {
+      "lowestVersion": "6.0.0-dev.68",
+      "upmostVersion": "6.0.0-dev.68"
+    },
+    {
+      "lowestVersion": "6.0.0-dev.81",
+      "upmostVersion": "6.0.0-dev.84"
+    },
+    {
+      "lowestVersion": "6.0.0-dev.96",
+      "upmostVersion": "6.0.0-dev.96"
+    },
+    {
+      "lowestVersion": "6.5.0",
+      "upmostVersion": "6.5.0"
+    },
+    {
+      "lowestVersion": "5.24.0",
+      "upmostVersion": "5.24.0"
     }
   ],
   "links": [
