@@ -30,6 +30,8 @@
       "upmostVersion": "7.999.999"
     }
   ],
+  "parentReadOnly": true,
+  "parent": "rune-fpml",
   "links": [
     {
       "name": "Model Documentation",
