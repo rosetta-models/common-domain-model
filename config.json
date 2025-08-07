@@ -30,7 +30,6 @@
       "upmostVersion": "7.999.999"
     }
   ],
-  "parentReadOnly": true,
   "links": [
     {
       "name": "Model Documentation",
