@@ -26,12 +26,11 @@
       "upmostVersion": "6.999.999"
     },
     {
-      "lowestVersion": "7.0.0-dev.28",
+      "lowestVersion": "7.0.0-dev.30",
       "upmostVersion": "7.999.999"
     }
   ],
   "parentReadOnly": true,
-  "parent": "rune-fpml",
   "links": [
     {
       "name": "Model Documentation",
@@ -47,10 +46,6 @@
       "filename": "LICENSE.md"
     }
   ],
-  "modelArtifact": {
-    "groupId": "org.finos.cdm",
-    "artifactId": "cdm-java"
-  },
   "primaryColor": "#32007C",
   "shortname": "CDM"
 }
