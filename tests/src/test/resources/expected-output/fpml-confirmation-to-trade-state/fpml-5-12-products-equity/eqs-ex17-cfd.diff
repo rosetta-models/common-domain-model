@@ -1,0 +1,66 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/equity/eqs-ex17-cfd.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-equity/eqs-ex17-cfd.json
+@@ -56,6 +56,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -172,1 +166,1 @@
+-                      "value" : "price-2"
++                      "value" : "price-1"
+@@ -234,5 +228,0 @@
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -242,1 +231,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "PercentageOfNotional"
+@@ -247,1 +237,1 @@
+-              "value" : "price-1"
++              "value" : "price-2"
+@@ -253,13 +243,0 @@
+-            "value" : 48000,
+-            "unit" : {
+-              "financialUnit" : "Share"
+-            }
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "quantity-3"
+-            } ]
+-          }
+-        }, {
+-          "value" : {
+@@ -325,1 +302,1 @@
+-              "value" : "price-2"
++              "value" : "price-1"
+@@ -357,0 +334,1 @@
++                    "assetClass" : "InterestRate",
+@@ -395,1 +373,0 @@
+-    "adjustment" : "Standard",
+@@ -409,0 +386,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "CFD123456789",
++          "meta" : {
++            "scheme" : "http://www.primarybank.com/trade-id"
++          }
++        }
++      } ]
++    }, {
+@@ -420,0 +406,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "CFD123456789",
++          "meta" : {
++            "scheme" : "http://www.crossbank.com/tradeId"
++          }
++        }
++      } ]

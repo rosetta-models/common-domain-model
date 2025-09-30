@@ -1,0 +1,272 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/products/equity/eqs-ex09-compounding-swap.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-equity/eqs-ex09-compounding-swap.json
+@@ -9,5 +9,74 @@
+-        "effectiveDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2008-01-01",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "NONE"
++        "payout" : [ {
++          "InterestRatePayout" : {
++            "payerReceiver" : {
++              "payer" : "Party2",
++              "receiver" : "Party1"
++            },
++            "priceQuantity" : {
++              "quantityReference" : {
++                "externalReference" : "equityNotionalAmount"
++              }
++            },
++            "rateSpecification" : {
++              "FloatingRateSpecification" : {
++                "rateOption" : {
++                  "address" : {
++                    "scope" : "DOCUMENT",
++                    "value" : "InterestRateIndex-1"
++                  }
++                },
++                "spreadSchedule" : {
++                  "price" : {
++                    "address" : {
++                      "scope" : "DOCUMENT",
++                      "value" : "price-1"
++                    }
++                  }
++                }
++              }
++            },
++            "dayCountFraction" : {
++              "value" : "ACT/360"
++            },
++            "calculationPeriodDates" : {
++              "effectiveDate" : {
++                "relativeDate" : {
++                  "periodMultiplier" : 0,
++                  "period" : "D",
++                  "businessDayConvention" : "NONE",
++                  "dateRelativeTo" : {
++                    "externalReference" : "equityEffectiveDate"
++                  }
++                }
++              },
++              "terminationDate" : {
++                "relativeDate" : {
++                  "periodMultiplier" : 0,
++                  "period" : "D",
++                  "businessDayConvention" : "NONE",
++                  "dateRelativeTo" : {
++                    "externalReference" : "finalCashSettlementPaymentDate"
++                  }
++                }
++              },
++              "meta" : {
++                "externalKey" : "floatingCalculationPeriodDates"
++              }
++            },
++            "paymentDates" : {
++              "paymentDateSchedule" : {
++                "interimPaymentDates" : [ {
++                  "adjustableDates" : {
++                    "unadjustedDate" : [ "2009-01-01" ],
++                    "dateAdjustments" : {
++                      "businessDayConvention" : "NotApplicable"
++                    }
++                  }
++                } ]
++              }
++            },
++            "resetDates" : {
++              "calculationPeriodDatesReference" : {
++                "externalReference" : "floatingCalculationPeriodDates"
++              },
++              "resetRelativeTo" : "CalculationPeriodStartDate"
+@@ -15,3 +84,0 @@
+-          },
+-          "meta" : {
+-            "externalKey" : "equityEffectiveDate"
+@@ -19,12 +85,1 @@
+-        },
+-        "terminationDate" : {
+-          "relativeDate" : {
+-            "periodMultiplier" : 0,
+-            "period" : "D",
+-            "businessDayConvention" : "NONE",
+-            "dateRelativeTo" : {
+-              "externalReference" : "finalCashSettlementPaymentDate"
+-            }
+-          }
+-        },
+-        "payout" : [ {
++        }, {
+@@ -48,6 +103,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -64,3 +113,0 @@
+-                },
+-                "meta" : {
+-                  "externalKey" : "equityValuationDates"
+@@ -100,3 +146,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "CashSettlementPaymentDate"
+@@ -119,93 +162,1 @@
+-        }, {
+-          "InterestRatePayout" : {
+-            "payerReceiver" : {
+-              "payer" : "Party2",
+-              "receiver" : "Party1"
+-            },
+-            "priceQuantity" : {
+-              "quantitySchedule" : {
+-                "address" : {
+-                  "scope" : "DOCUMENT",
+-                  "value" : "quantity-1"
+-                }
+-              },
+-              "quantityReference" : {
+-                "externalReference" : "equityNotionalAmount"
+-              }
+-            },
+-            "rateSpecification" : {
+-              "FloatingRateSpecification" : {
+-                "rateOption" : {
+-                  "address" : {
+-                    "scope" : "DOCUMENT",
+-                    "value" : "InterestRateIndex-1"
+-                  }
+-                },
+-                "spreadSchedule" : {
+-                  "price" : {
+-                    "address" : {
+-                      "scope" : "DOCUMENT",
+-                      "value" : "price-2"
+-                    }
+-                  }
+-                },
+-                "meta" : {
+-                  "externalKey" : "floatingRateCalculation"
+-                }
+-              }
+-            },
+-            "dayCountFraction" : {
+-              "value" : "ACT/360"
+-            },
+-            "calculationPeriodDates" : {
+-              "effectiveDate" : {
+-                "relativeDate" : {
+-                  "periodMultiplier" : 0,
+-                  "period" : "D",
+-                  "businessDayConvention" : "NONE",
+-                  "dateRelativeTo" : {
+-                    "externalReference" : "equityEffectiveDate"
+-                  }
+-                }
+-              },
+-              "terminationDate" : {
+-                "relativeDate" : {
+-                  "periodMultiplier" : 0,
+-                  "period" : "D",
+-                  "businessDayConvention" : "NONE",
+-                  "dateRelativeTo" : {
+-                    "externalReference" : "finalCashSettlementPaymentDate"
+-                  }
+-                }
+-              },
+-              "meta" : {
+-                "externalKey" : "floatingCalculationPeriodDates"
+-              }
+-            },
+-            "paymentDates" : {
+-              "paymentDateSchedule" : {
+-                "interimPaymentDates" : [ {
+-                  "adjustableDates" : {
+-                    "unadjustedDate" : [ "2009-01-01" ],
+-                    "dateAdjustments" : {
+-                      "businessDayConvention" : "NotApplicable"
+-                    }
+-                  }
+-                } ]
+-              }
+-            },
+-            "resetDates" : {
+-              "calculationPeriodDatesReference" : {
+-                "externalReference" : "floatingCalculationPeriodDates"
+-              },
+-              "resetRelativeTo" : "CalculationPeriodStartDate"
+-            }
+-          }
+-        } ],
+-        "terminationProvision" : {
+-          "earlyTerminationProvision" : {
+-            "optionalEarlyTermination" : {
+-              "mutualEarlyTermination" : false
+-            }
+-          }
+-        }
++        } ]
+@@ -219,5 +170,0 @@
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -227,1 +173,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "AbsoluteTerms"
+@@ -232,1 +179,1 @@
+-              "value" : "price-1"
++              "value" : "price-2"
+@@ -297,10 +244,0 @@
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+-            "perUnitOf" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -313,1 +250,1 @@
+-              "value" : "price-2"
++              "value" : "price-1"
+@@ -329,0 +266,1 @@
++                    "assetClass" : "InterestRate",
+@@ -367,1 +305,0 @@
+-    "adjustment" : "Standard",
+@@ -380,0 +317,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "TRADEABC",
++          "meta" : {
++            "scheme" : "TradeRefNbr"
++          }
++        }
++      } ]
+@@ -426,20 +372,0 @@
+-    },
+-    "collateral" : {
+-      "independentAmount" : {
+-        "payerPartyReference" : {
+-          "externalReference" : "BankA"
+-        },
+-        "receiverPartyReference" : {
+-          "externalReference" : "BankB"
+-        },
+-        "paymentDetail" : [ {
+-          "paymentRule" : {
+-            "percentageRule" : {
+-              "paymentPercent" : 0.02,
+-              "notionalAmountReference" : {
+-                "externalReference" : "equityNotionalAmount"
+-              }
+-            }
+-          }
+-        } ]
+-      }

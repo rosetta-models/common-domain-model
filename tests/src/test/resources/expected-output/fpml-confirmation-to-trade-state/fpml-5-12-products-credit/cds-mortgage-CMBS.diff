@@ -1,0 +1,64 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/credit/cds-mortgage-CMBS.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-credit/cds-mortgage-CMBS.json
+@@ -92,5 +92,0 @@
+-                  },
+-                  "primaryObligor" : {
+-                    "name" : {
+-                      "value" : "MERRILL LYNCH/COUNTRYWIDE COMM, 2006-3"
+-                    }
+@@ -98,2 +93,1 @@
+-                } ],
+-                "allGuarantees" : false
++                } ]
+@@ -101,26 +95,1 @@
+-            },
+-            "protectionTerms" : [ {
+-              "creditEvents" : {
+-                "failureToPayPrincipal" : true,
+-                "writedown" : true
+-              },
+-              "floatingAmountEvents" : {
+-                "failureToPayPrincipal" : true,
+-                "interestShortfall" : {
+-                  "interestShortfallCap" : "Fixed",
+-                  "compounding" : true,
+-                  "rateSource" : {
+-                    "value" : "USD-LIBOR-BBA"
+-                  }
+-                },
+-                "writedown" : true,
+-                "floatingAmountProvisions" : {
+-                  "wacCapInterestProvision" : true
+-                },
+-                "additionalFixedPayments" : {
+-                  "interestShortfallReimbursement" : true,
+-                  "principalShortfallReimbursement" : true,
+-                  "writedownReimbursement" : true
+-                }
+-              }
+-            } ]
++            }
+@@ -171,2 +140,1 @@
+-            },
+-            "paymentDelay" : false
++            }
+@@ -272,0 +240,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "109257",
++          "meta" : {
++            "scheme" : "http://www.partyA.com/"
++          }
++        }
++      } ]
++    }, {
+@@ -283,0 +260,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1234567",
++          "meta" : {
++            "scheme" : "http://www.partyB.com/"
++          }
++        }
++      } ]

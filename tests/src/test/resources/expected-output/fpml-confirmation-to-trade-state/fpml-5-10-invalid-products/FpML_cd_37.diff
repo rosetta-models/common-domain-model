@@ -1,0 +1,44 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/FpML_cd_37.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_37.json
+@@ -39,26 +39,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              },
+-              "cashSettlementTerms" : [ {
+-                "valuationMethod" : {
+-                  "quotationAmount" : {
+-                    "value" : 40000,
+-                    "unit" : {
+-                      "currency" : {
+-                        "value" : "USD"
+-                      }
+-                    }
+-                  },
+-                  "minimumQuotationAmount" : {
+-                    "value" : 50000,
+-                    "unit" : {
+-                      "currency" : {
+-                        "value" : "USD"
+-                      }
+-                    }
+-                  }
+-                }
+-              } ]
+-            },
+@@ -73,6 +47,0 @@
+-                "basketId" : [ {
+-                  "value" : "BASKET089",
+-                  "meta" : {
+-                    "scheme" : "http://www.barclaysglobal.com/partners/coding-scheme/indexId"
+-                  }
+-                } ],
+@@ -167,7 +135,0 @@
+-                  "gracePeriodExtension" : {
+-                    "applicable" : true,
+-                    "gracePeriod" : {
+-                      "periodMultiplier" : 0,
+-                      "period" : "D"
+-                    }
+-                  },

@@ -1,0 +1,27 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/credit-derivatives/cds-basket.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cds-basket.json
+@@ -39,6 +39,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -138,7 +132,0 @@
+-                  "gracePeriodExtension" : {
+-                    "applicable" : true,
+-                    "gracePeriod" : {
+-                      "periodMultiplier" : 0,
+-                      "period" : "D"
+-                    }
+-                  },
+@@ -282,0 +269,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "DJITRAXXUSDMS5Y",
++          "meta" : {
++            "scheme" : "http://www.barclaysglobal.com/partners/schema/v1-1/schemes/tradeID"
++          }
++        }
++      } ]

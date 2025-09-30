@@ -1,0 +1,171 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/equity/eqs-ex12-on-european-index-underlyer-short-form.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-equity/eqs-ex12-on-european-index-underlyer-short-form.json
+@@ -9,29 +9,0 @@
+-        "effectiveDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2009-01-19",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "FOLLOWING",
+-              "businessCenters" : {
+-                "businessCenter" : [ {
+-                  "value" : "DEFR"
+-                } ]
+-              }
+-            }
+-          },
+-          "meta" : {
+-            "externalKey" : "equityEffectiveDate"
+-          }
+-        },
+-        "terminationDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2009-03-19",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "FOLLOWING",
+-              "businessCenters" : {
+-                "businessCenter" : [ {
+-                  "value" : "DEFR"
+-                } ]
+-              }
+-            }
+-          }
+-        },
+@@ -144,0 +115,3 @@
++                  },
++                  "meta" : {
++                    "externalKey" : "interestLegPaymentDates"
+@@ -185,1 +159,1 @@
+-                  "value" : "quantity-2"
++                  "value" : "quantity-1"
+@@ -188,4 +162,1 @@
+-              "reset" : true,
+-              "meta" : {
+-                "externalKey" : "equityNotionalAmount"
+-              }
++              "reset" : true
+@@ -193,6 +164,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "EUR"
+-              }
+-            },
+@@ -202,40 +167,0 @@
+-                "valuationDates" : {
+-                  "periodicDates" : {
+-                    "startDate" : {
+-                      "relativeDate" : {
+-                        "periodMultiplier" : 0,
+-                        "period" : "D",
+-                        "businessDayConvention" : "NotApplicable",
+-                        "dateRelativeTo" : {
+-                          "externalReference" : "equityEffectiveDate"
+-                        }
+-                      }
+-                    },
+-                    "endDate" : {
+-                      "relativeDate" : {
+-                        "periodMultiplier" : 0,
+-                        "period" : "D",
+-                        "businessDayConvention" : "NotApplicable",
+-                        "dateRelativeTo" : {
+-                          "externalReference" : "finalValuationDate"
+-                        }
+-                      }
+-                    },
+-                    "periodFrequency" : {
+-                      "periodMultiplier" : 1,
+-                      "period" : "M",
+-                      "rollConvention" : "19"
+-                    },
+-                    "periodDatesAdjustments" : {
+-                      "businessDayConvention" : "FOLLOWING",
+-                      "businessCenters" : {
+-                        "businessCenter" : [ {
+-                          "value" : "DEFR"
+-                        } ]
+-                      }
+-                    }
+-                  },
+-                  "meta" : {
+-                    "externalKey" : "interimValuationDate"
+-                  }
+-                },
+@@ -305,1 +230,1 @@
+-                  "value" : "observable-2"
++                  "value" : "observable-1"
+@@ -315,3 +240,1 @@
+-                  "totalRatio" : 1,
+-                  "cashRatio" : 1,
+-                  "nonCashRatio" : 1
++                  "totalRatio" : 1
+@@ -319,1 +242,0 @@
+-                "firstOrSecondPeriod" : "SecondPeriod",
+@@ -338,10 +260,0 @@
+-            "unit" : {
+-              "currency" : {
+-                "value" : "EUR"
+-              }
+-            },
+-            "perUnitOf" : {
+-              "currency" : {
+-                "value" : "EUR"
+-              }
+-            },
+@@ -370,0 +282,1 @@
++                    "assetClass" : "InterestRate",
+@@ -391,1 +304,1 @@
+-              "value" : "observable-1"
++              "value" : "observable-2"
+@@ -407,1 +320,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "AbsoluteTerms"
+@@ -418,13 +332,0 @@
+-            "value" : 100000,
+-            "unit" : {
+-              "financialUnit" : "IndexUnit"
+-            }
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "quantity-1"
+-            } ]
+-          }
+-        }, {
+-          "value" : {
+@@ -441,1 +342,1 @@
+-              "value" : "quantity-2"
++              "value" : "quantity-1"
+@@ -457,0 +358,5 @@
++                }, {
++                  "identifier" : {
++                    "value" : "GERMAN SE XETRA DAX INDEX"
++                  },
++                  "identifierType" : "Name"
+@@ -477,1 +383,1 @@
+-              "value" : "observable-2"
++              "value" : "observable-1"
+@@ -494,1 +400,0 @@
+-    "adjustment" : "Standard",
+@@ -508,0 +413,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1147071",
++          "meta" : {
++            "scheme" : "http://www.tradeIdScheme.com/tradeIdScheme"
++          }
++        }
++      } ]
++    }, {
+@@ -519,0 +433,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1147071",
++          "meta" : {
++            "scheme" : "http://www.tradeIdScheme.com/tradeIdScheme"
++          }
++        }
++      } ]

@@ -1,0 +1,40 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/Obligations_physicalSettlementMatrix-1.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/Obligations_physicalSettlementMatrix-1.json
+@@ -55,3 +55,0 @@
+-                "physicalSettlementPeriod" : {
+-                  "maximumBusinessDays" : 30
+-                },
+@@ -64,5 +61,0 @@
+-                  "notSovereignLender" : false,
+-                  "notDomesticCurrency" : {
+-                    "applicable" : false
+-                  },
+-                  "notDomesticLaw" : true,
+@@ -70,1 +62,0 @@
+-                  "notDomesticIssuance" : true,
+@@ -82,2 +73,1 @@
+-                  "notBearer" : true,
+-                  "fullFaithAndCreditObLiability" : true
++                  "notBearer" : true
+@@ -95,2 +85,0 @@
+-                "noReferenceObligation" : true,
+-                "allGuarantees" : false,
+@@ -110,2 +98,1 @@
+-                },
+-                "securedList" : true
++                }
+@@ -128,4 +115,0 @@
+-                "obligationDefault" : false,
+-                "obligationAcceleration" : false,
+-                "repudiationMoratorium" : true,
+-                "governmentalIntervention" : true,
+@@ -143,1 +126,0 @@
+-                    "publicSource" : [ "Standard Public Sources" ],
+@@ -149,6 +131,1 @@
+-                "category" : "BorrowedMoney",
+-                "excluded" : "true",
+-                "othReferenceEntityObligations" : "true",
+-                "designatedPriority" : {
+-                  "value" : "FirstLienLoan"
+-                }
++                "category" : "BorrowedMoney"

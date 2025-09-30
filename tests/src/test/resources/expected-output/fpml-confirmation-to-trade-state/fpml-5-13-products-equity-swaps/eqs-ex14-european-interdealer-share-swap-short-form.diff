@@ -1,0 +1,157 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/equity-swaps/eqs-ex14-european-interdealer-share-swap-short-form.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex14-european-interdealer-share-swap-short-form.json
+@@ -9,29 +9,0 @@
+-        "effectiveDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2009-09-09",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "FOLLOWING",
+-              "businessCenters" : {
+-                "businessCenter" : [ {
+-                  "value" : "DEFR"
+-                } ]
+-              }
+-            }
+-          },
+-          "meta" : {
+-            "externalKey" : "equityEffectiveDate"
+-          }
+-        },
+-        "terminationDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2009-12-09",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "FOLLOWING",
+-              "businessCenters" : {
+-                "businessCenter" : [ {
+-                  "value" : "DEFR"
+-                } ]
+-              }
+-            }
+-          }
+-        },
+@@ -136,0 +107,3 @@
++                  },
++                  "meta" : {
++                    "externalKey" : "interestLegPaymentDates"
+@@ -177,1 +151,1 @@
+-                  "value" : "quantity-2"
++                  "value" : "quantity-1"
+@@ -180,4 +154,1 @@
+-              "reset" : true,
+-              "meta" : {
+-                "externalKey" : "equityNotionalAmount"
+-              }
++              "reset" : true
+@@ -185,6 +156,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "EUR"
+-              }
+-            },
+@@ -194,40 +159,0 @@
+-                "valuationDates" : {
+-                  "periodicDates" : {
+-                    "startDate" : {
+-                      "relativeDate" : {
+-                        "periodMultiplier" : 0,
+-                        "period" : "D",
+-                        "businessDayConvention" : "NotApplicable",
+-                        "dateRelativeTo" : {
+-                          "externalReference" : "equityEffectiveDate"
+-                        }
+-                      }
+-                    },
+-                    "endDate" : {
+-                      "relativeDate" : {
+-                        "periodMultiplier" : 0,
+-                        "period" : "D",
+-                        "businessDayConvention" : "NotApplicable",
+-                        "dateRelativeTo" : {
+-                          "externalReference" : "finalValuationDate"
+-                        }
+-                      }
+-                    },
+-                    "periodFrequency" : {
+-                      "periodMultiplier" : 1,
+-                      "period" : "M",
+-                      "rollConvention" : "9"
+-                    },
+-                    "periodDatesAdjustments" : {
+-                      "businessDayConvention" : "FOLLOWING",
+-                      "businessCenters" : {
+-                        "businessCenter" : [ {
+-                          "value" : "DEFR"
+-                        } ]
+-                      }
+-                    }
+-                  },
+-                  "meta" : {
+-                    "externalKey" : "interimValuationDate"
+-                  }
+-                },
+@@ -297,1 +222,1 @@
+-                  "value" : "observable-2"
++                  "value" : "observable-1"
+@@ -307,3 +232,1 @@
+-                  "totalRatio" : 1,
+-                  "cashRatio" : 1,
+-                  "nonCashRatio" : 1
++                  "totalRatio" : 1
+@@ -311,1 +234,0 @@
+-                "firstOrSecondPeriod" : "SecondPeriod",
+@@ -317,2 +239,0 @@
+-                "nonCashDividendTreatment" : "PotentialAdjustmentEvent",
+-                "dividendComposition" : "EquityAmountReceiverElection",
+@@ -346,0 +266,1 @@
++                    "assetClass" : "InterestRate",
+@@ -367,1 +288,1 @@
+-              "value" : "observable-1"
++              "value" : "observable-2"
+@@ -383,1 +304,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "AbsoluteTerms"
+@@ -394,13 +316,0 @@
+-            "value" : 100000,
+-            "unit" : {
+-              "financialUnit" : "Share"
+-            }
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "quantity-1"
+-            } ]
+-          }
+-        }, {
+-          "value" : {
+@@ -417,1 +326,1 @@
+-              "value" : "quantity-2"
++              "value" : "quantity-1"
+@@ -465,1 +374,1 @@
+-              "value" : "observable-2"
++              "value" : "observable-1"
+@@ -482,1 +391,0 @@
+-    "adjustment" : "Standard",
+@@ -496,0 +404,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1558488",
++          "meta" : {
++            "scheme" : "http://www.partyA.com/trade-id-1-0"
++          }
++        }
++      } ]
++    }, {
+@@ -507,0 +424,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1558488",
++          "meta" : {
++            "scheme" : "http://www.partyB.com/trade-id-1-0"
++          }
++        }
++      } ]

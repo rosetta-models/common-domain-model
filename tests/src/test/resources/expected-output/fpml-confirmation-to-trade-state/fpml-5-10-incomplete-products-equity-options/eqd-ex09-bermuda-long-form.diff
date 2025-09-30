@@ -1,0 +1,66 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex09-bermuda-long-form.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex09-bermuda-long-form.json
+@@ -51,5 +51,7 @@
+-              "expirationTimeType" : "Close",
+-              "multipleExercise" : {
+-                "integralMultipleAmount" : 1,
+-                "minimumNumberOfOptions" : 1,
+-                "maximumNumberOfOptions" : 500000
++              "commencementDate" : {
++                "adjustableDate" : {
++                  "unadjustedDate" : "2002-01-17",
++                  "dateAdjustments" : {
++                    "businessDayConvention" : "NONE"
++                  }
++                }
+@@ -57,0 +59,20 @@
++              "exerciseDates" : {
++                "adjustableDates" : {
++                  "adjustedDate" : [ {
++                    "value" : "2002-04-21"
++                  }, {
++                    "value" : "2002-05-21"
++                  }, {
++                    "value" : "2002-06-21"
++                  } ]
++                }
++              },
++              "expirationDate" : [ {
++                "adjustableDate" : {
++                  "unadjustedDate" : "2002-06-21",
++                  "dateAdjustments" : {
++                    "businessDayConvention" : "NONE"
++                  }
++                }
++              } ],
++              "expirationTimeType" : "Close",
+@@ -108,13 +130,0 @@
+-            "value" : 31000,
+-            "unit" : {
+-              "financialUnit" : "Share"
+-            }
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "quantity-2"
+-            } ]
+-          }
+-        }, {
+-          "value" : {
+@@ -126,4 +135,1 @@
+-              "value" : 1.00,
+-              "unit" : {
+-                "financialUnit" : "Share"
+-              }
++              "value" : 1.00
+@@ -218,0 +224,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "LN 2962",
++          "meta" : {
++            "scheme" : "http://www.PartyA.com/eqd-trade-id"
++          }
++        }
++      } ]

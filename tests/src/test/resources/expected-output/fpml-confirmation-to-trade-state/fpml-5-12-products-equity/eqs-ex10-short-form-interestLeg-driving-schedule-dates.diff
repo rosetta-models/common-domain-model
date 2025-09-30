@@ -1,0 +1,74 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/equity/eqs-ex10-short-form-interestLeg-driving-schedule-dates.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-equity/eqs-ex10-short-form-interestLeg-driving-schedule-dates.json
+@@ -9,16 +9,0 @@
+-        "effectiveDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2008-06-02",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "NotApplicable"
+-            }
+-          }
+-        },
+-        "terminationDate" : {
+-          "adjustableDate" : {
+-            "unadjustedDate" : "2008-06-04",
+-            "dateAdjustments" : {
+-              "businessDayConvention" : "NotApplicable"
+-            }
+-          }
+-        },
+@@ -32,6 +16,0 @@
+-              "quantitySchedule" : {
+-                "address" : {
+-                  "scope" : "DOCUMENT",
+-                  "value" : "quantity-1"
+-                }
+-              },
+@@ -116,0 +94,3 @@
++                  },
++                  "meta" : {
++                    "externalKey" : "interestLegPaymentDates"
+@@ -151,6 +132,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "EUR"
+-              }
+-            },
+@@ -229,1 +204,1 @@
+-                  "value" : "observable-2"
++                  "value" : "observable-1"
+@@ -256,0 +231,1 @@
++                    "assetClass" : "InterestRate",
+@@ -277,1 +253,1 @@
+-              "value" : "observable-1"
++              "value" : "observable-2"
+@@ -293,1 +269,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "AbsoluteTerms"
+@@ -362,1 +339,1 @@
+-              "value" : "observable-2"
++              "value" : "observable-1"
+@@ -379,1 +356,0 @@
+-    "adjustment" : "Standard",
+@@ -393,0 +369,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "124897",
++          "meta" : {
++            "scheme" : "http://www.swapswire.com/spec/2001/trade-id"
++          }
++        }
++      } ]
++    }, {
+@@ -404,0 +389,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "124897",
++          "meta" : {
++            "scheme" : "http://www.swapswire.com/spec/2001/trade-id"
++          }
++        }
++      } ]

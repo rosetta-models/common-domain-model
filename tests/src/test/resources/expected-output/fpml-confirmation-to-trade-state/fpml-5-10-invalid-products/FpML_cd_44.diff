@@ -1,0 +1,64 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/FpML_cd_44.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_44.json
+@@ -35,1 +35,1 @@
+-                  "value" : "quantity-2"
++                  "value" : "quantity-1"
+@@ -39,6 +39,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -53,6 +47,0 @@
+-                "basketId" : [ {
+-                  "value" : "BASKET089",
+-                  "meta" : {
+-                    "scheme" : "http://www.barclaysglobal.com/partners/coding-scheme/indexId"
+-                  }
+-                } ],
+@@ -217,7 +205,0 @@
+-                  "gracePeriodExtension" : {
+-                    "applicable" : true,
+-                    "gracePeriod" : {
+-                      "periodMultiplier" : 0,
+-                      "period" : "D"
+-                    }
+-                  },
+@@ -243,3 +224,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "protectionTermsOne"
+@@ -252,8 +230,0 @@
+-                  "gracePeriodExtension" : {
+-                    "applicable" : true,
+-                    "gracePeriod" : {
+-                      "periodMultiplier" : 1,
+-                      "period" : "D",
+-                      "dayType" : "Business"
+-                    }
+-                  },
+@@ -279,3 +249,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "protectionTermsTwo"
+@@ -295,1 +262,1 @@
+-                  "value" : "quantity-3"
++                  "value" : "quantity-2"
+@@ -354,1 +321,1 @@
+-              "value" : "quantity-3"
++              "value" : "quantity-2"
+@@ -371,1 +338,1 @@
+-              "value" : "quantity-2"
++              "value" : "quantity-1"
+@@ -374,3 +341,1 @@
+-        } ]
+-      }, {
+-        "quantity" : [ {
++        }, {
+@@ -417,4 +382,1 @@
+-      } ],
+-      "meta" : {
+-        "externalKey" : "tid1"
+-      }
++      } ]

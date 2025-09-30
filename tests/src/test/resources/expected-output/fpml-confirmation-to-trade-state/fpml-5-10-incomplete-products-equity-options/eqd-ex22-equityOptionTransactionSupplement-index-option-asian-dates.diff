@@ -1,0 +1,117 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex22-equityOptionTransactionSupplement-index-option-asian-dates.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex22-equityOptionTransactionSupplement-index-option-asian-dates.json
+@@ -19,1 +19,1 @@
+-                  "value" : "quantity-2"
++                  "value" : "quantity-1"
+@@ -46,49 +46,0 @@
+-            "feature" : {
+-              "averagingFeature" : {
+-                "averagingInOut" : "Out",
+-                "averagingPeriodOut" : {
+-                  "averagingObservations" : {
+-                    "averagingObservation" : [ {
+-                      "dateTime" : "2002-11-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2002-11-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2002-12-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2002-12-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-01-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-01-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-02-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-02-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-03-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-03-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-04-01T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    }, {
+-                      "dateTime" : "2003-04-15T18:08:40.335-05:00",
+-                      "weight" : 10
+-                    } ]
+-                  },
+-                  "marketDisruption" : {
+-                    "value" : "Postponement"
+-                  }
+-                }
+-              }
+-            },
+@@ -137,0 +88,3 @@
++                "perUnitOf" : {
++                  "financialUnit" : "IndexUnit"
++                },
+@@ -146,20 +100,0 @@
+-        "price" : [ {
+-          "value" : {
+-            "value" : 23,
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+-            "perUnitOf" : {
+-              "financialUnit" : "Share"
+-            },
+-            "priceType" : "AssetPrice"
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "price-1"
+-            } ]
+-          }
+-        } ],
+@@ -186,5 +120,0 @@
+-            },
+-            "multiplier" : {
+-              "unit" : {
+-                "financialUnit" : "IndexUnit"
+-              }
+@@ -266,0 +195,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "TW9236",
++          "meta" : {
++            "scheme" : "TradeRefNbr"
++          }
++        }
++      } ]
+@@ -312,20 +250,0 @@
+-    },
+-    "collateral" : {
+-      "independentAmount" : {
+-        "payerPartyReference" : {
+-          "externalReference" : "Party2"
+-        },
+-        "receiverPartyReference" : {
+-          "externalReference" : "Party1"
+-        },
+-        "paymentDetail" : [ {
+-          "paymentRule" : {
+-            "percentageRule" : {
+-              "paymentPercent" : 0.02,
+-              "notionalAmountReference" : {
+-                "externalReference" : "Valuation"
+-              }
+-            }
+-          }
+-        } ]
+-      }

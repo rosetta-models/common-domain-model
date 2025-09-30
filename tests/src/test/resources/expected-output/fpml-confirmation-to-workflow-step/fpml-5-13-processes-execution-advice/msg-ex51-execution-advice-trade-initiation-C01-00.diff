@@ -1,0 +1,70 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/processes/execution-advice/msg-ex51-execution-advice-trade-initiation-C01-00.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex51-execution-advice-trade-initiation-C01-00.json
+@@ -63,3 +63,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "calculationAmount"
+@@ -93,11 +90,0 @@
+-                          },
+-                          "primaryObligor" : {
+-                            "entityId" : [ {
+-                              "value" : "ARW",
+-                              "meta" : {
+-                                "scheme" : "http://www.imgr.com/schemes/entity-id"
+-                              }
+-                            } ],
+-                            "name" : {
+-                              "value" : "ARW"
+-                            }
+@@ -128,3 +114,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "calculationAmount"
+@@ -288,0 +271,18 @@
++            "contractDetails" : {
++              "documentation" : [ {
++                "agreementDate" : "2009-05-22",
++                "legalAgreementIdentification" : {
++                  "agreementName" : {
++                    "agreementType" : "MasterConfirmation",
++                    "masterConfirmationType" : {
++                      "value" : "ISDA2003StandardCreditNorthAmerican"
++                    }
++                  }
++                },
++                "contractualParty" : [ {
++                  "externalReference" : "_fund"
++                }, {
++                  "externalReference" : "_broker"
++                } ]
++              } ]
++            },
+@@ -352,27 +353,1 @@
+-  },
+-  "messageInformation" : {
+-    "messageId" : {
+-      "value" : "IM/5",
+-      "meta" : {
+-        "scheme" : "http://www.imgr.com/schemes/message-id"
+-      }
+-    },
+-    "sentBy" : {
+-      "value" : "IMGRUS6S"
+-    },
+-    "sentTo" : [ {
+-      "value" : "CUSTUS3T"
+-    } ]
+-  },
+-  "timestamp" : [ {
+-    "dateTime" : "2009-06-08T10:03:09-08:00",
+-    "qualification" : "eventCreationDateTime"
+-  } ],
+-  "eventIdentifier" : [ {
+-    "assignedIdentifier" : [ {
+-      "identifier" : {
+-        "value" : "IM/5"
+-      }
+-    } ]
+-  } ],
+-  "action" : "New"
++  }

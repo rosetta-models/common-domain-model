@@ -1,0 +1,56 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex15-basket-passthrough-long-form.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex15-basket-passthrough-long-form.json
+@@ -11,0 +11,3 @@
++      }, {
++        "source" : "ISDA",
++        "productQualifier" : "EquityOption_PriceReturnBasicPerformance_Basket"
+@@ -37,17 +40,0 @@
+-            "feature" : {
+-              "passThrough" : {
+-                "passThroughItem" : [ {
+-                  "payerReceiver" : {
+-                    "payer" : "Party2",
+-                    "receiver" : "Party1"
+-                  },
+-                  "passThroughPercentage" : 0.80
+-                }, {
+-                  "payerReceiver" : {
+-                    "payer" : "Party2",
+-                    "receiver" : "Party1"
+-                  },
+-                  "passThroughPercentage" : 1.20
+-                } ]
+-              }
+-            },
+@@ -160,9 +146,1 @@
+-                  },
+-                  "quantity" : [ {
+-                    "value" : {
+-                      "value" : 0.40,
+-                      "unit" : {
+-                        "financialUnit" : "Weight"
+-                      }
+-                    }
+-                  } ]
++                  }
+@@ -207,9 +185,1 @@
+-                  },
+-                  "quantity" : [ {
+-                    "value" : {
+-                      "value" : 0.60,
+-                      "unit" : {
+-                        "financialUnit" : "Weight"
+-                      }
+-                    }
+-                  } ]
++                  }
+@@ -264,0 +234,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "1234",
++          "meta" : {
++            "scheme" : "http://www.PartyA.com/eqd-trade-id"
++          }
++        }
++      } ]

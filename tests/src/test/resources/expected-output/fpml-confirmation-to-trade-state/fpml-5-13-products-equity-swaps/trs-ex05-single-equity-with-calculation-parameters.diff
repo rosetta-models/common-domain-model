@@ -1,0 +1,125 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/equity-swaps/trs-ex05-single-equity-with-calculation-parameters.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/trs-ex05-single-equity-with-calculation-parameters.json
+@@ -48,4 +48,1 @@
+-              "reset" : true,
+-              "meta" : {
+-                "externalKey" : "NotionalAmount"
+-              }
++              "reset" : true
+@@ -53,6 +50,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -130,3 +121,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "ReturnLegPaymentDates"
+@@ -153,2 +141,0 @@
+-                "dividendAmountType" : "RecordAmount",
+-                "firstOrSecondPeriod" : "SecondPeriod",
+@@ -191,1 +177,1 @@
+-                      "value" : "price-2"
++                      "value" : "price-1"
+@@ -194,11 +180,0 @@
+-                },
+-                "calculationParameters" : {
+-                  "calculationMethod" : "Compounding",
+-                  "lookbackCalculation" : {
+-                    "offsetDays" : 2
+-                  },
+-                  "applicableBusinessDays" : {
+-                    "businessCenter" : [ {
+-                      "value" : "USGS"
+-                    } ]
+-                  }
+@@ -261,5 +236,0 @@
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -269,1 +239,2 @@
+-            "priceType" : "AssetPrice"
++            "priceType" : "AssetPrice",
++            "priceExpression" : "AbsoluteTerms"
+@@ -274,1 +245,1 @@
+-              "value" : "price-1"
++              "value" : "price-2"
+@@ -280,13 +251,0 @@
+-            "value" : 212000.0000,
+-            "unit" : {
+-              "financialUnit" : "Share"
+-            }
+-          },
+-          "meta" : {
+-            "location" : [ {
+-              "scope" : "DOCUMENT",
+-              "value" : "quantity-3"
+-            } ]
+-          }
+-        }, {
+-          "value" : {
+@@ -348,1 +306,1 @@
+-              "value" : "price-2"
++              "value" : "price-1"
+@@ -380,0 +338,1 @@
++                    "assetClass" : "InterestRate",
+@@ -414,1 +373,0 @@
+-    "adjustment" : "Execution",
+@@ -428,0 +386,9 @@
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "TRS-01",
++          "meta" : {
++            "scheme" : "http://www.abc.com/swaps/trade-id"
++          }
++        }
++      } ]
++    }, {
+@@ -439,0 +406,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "total-ret-swap-01",
++          "meta" : {
++            "scheme" : "http://www.hedgeco.com/swaps/trade-id"
++          }
++        }
++      } ]
+@@ -475,32 +451,1 @@
+-    } ],
+-    "collateral" : {
+-      "independentAmount" : {
+-        "payerPartyReference" : {
+-          "externalReference" : "Party_2"
+-        },
+-        "receiverPartyReference" : {
+-          "externalReference" : "Party_1"
+-        },
+-        "paymentDetail" : [ {
+-          "paymentDate" : {
+-            "adjustableDate" : {
+-              "unadjustedDate" : "2005-01-01",
+-              "dateAdjustments" : {
+-                "businessDayConvention" : "NONE"
+-              }
+-            }
+-          },
+-          "paymentAmount" : {
+-            "value" : 1000,
+-            "unit" : {
+-              "currency" : {
+-                "value" : "USD"
+-              }
+-            }
+-          }
+-        } ]
+-      }
+-    }
+-  },
+-  "meta" : {
+-    "externalKey" : "trs-eq1-trade"
++    } ]

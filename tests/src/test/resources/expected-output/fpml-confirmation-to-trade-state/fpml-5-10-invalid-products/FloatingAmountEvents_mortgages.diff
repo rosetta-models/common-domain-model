@@ -1,0 +1,35 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/FloatingAmountEvents_mortgages.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FloatingAmountEvents_mortgages.json
+@@ -107,1 +107,0 @@
+-                "allGuarantees" : true,
+@@ -126,6 +125,0 @@
+-                "failureToPayPrincipal" : true,
+-                "failureToPayInterest" : true,
+-                "distressedRatingsDowngrade" : true,
+-                "maturityExtension" : true,
+-                "writedown" : true,
+-                "impliedWritedown" : true,
+@@ -138,19 +131,0 @@
+-              },
+-              "floatingAmountEvents" : {
+-                "failureToPayPrincipal" : true,
+-                "interestShortfall" : {
+-                  "interestShortfallCap" : "Fixed",
+-                  "compounding" : false,
+-                  "rateSource" : {
+-                    "value" : "USD-LIBOR-BBA"
+-                  }
+-                },
+-                "writedown" : true,
+-                "floatingAmountProvisions" : {
+-                  "stepUpProvision" : true
+-                },
+-                "additionalFixedPayments" : {
+-                  "interestShortfallReimbursement" : true,
+-                  "principalShortfallReimbursement" : true,
+-                  "writedownReimbursement" : true
+-                }
+@@ -203,2 +177,1 @@
+-            },
+-            "paymentDelay" : true
++            }

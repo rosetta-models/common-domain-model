@@ -1,0 +1,151 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/processes/msg-partial-termination-xccy.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-partial-termination-xccy.json
+@@ -3,0 +3,1 @@
++    "intent" : "Clearing",
+@@ -6,80 +7,0 @@
+-      "primitiveInstruction" : {
+-        "quantityChange" : {
+-          "change" : [ {
+-            "quantity" : [ {
+-              "value" : {
+-                "value" : 15000000,
+-                "unit" : {
+-                  "currency" : {
+-                    "value" : "EUR"
+-                  }
+-                }
+-              },
+-              "meta" : {
+-                "location" : [ {
+-                  "scope" : "DOCUMENT",
+-                  "value" : "quantity-2"
+-                } ]
+-              }
+-            } ]
+-          }, {
+-            "quantity" : [ {
+-              "value" : {
+-                "value" : 13500000,
+-                "unit" : {
+-                  "currency" : {
+-                    "value" : "USD"
+-                  }
+-                }
+-              },
+-              "meta" : {
+-                "location" : [ {
+-                  "scope" : "DOCUMENT",
+-                  "value" : "quantity-1"
+-                } ]
+-              }
+-            } ]
+-          } ],
+-          "direction" : "Replace"
+-        },
+-        "transfer" : {
+-          "transferState" : [ {
+-            "transfer" : {
+-              "quantity" : {
+-                "value" : 12345.00,
+-                "unit" : {
+-                  "currency" : {
+-                    "value" : "USD"
+-                  }
+-                }
+-              },
+-              "asset" : {
+-                "Cash" : {
+-                  "identifier" : [ {
+-                    "identifier" : {
+-                      "value" : "USD"
+-                    },
+-                    "identifierType" : "CurrencyCode"
+-                  } ]
+-                }
+-              },
+-              "settlementDate" : {
+-                "adjustedDate" : {
+-                  "value" : "2011-06-03"
+-                }
+-              },
+-              "payerReceiver" : {
+-                "payerPartyReference" : {
+-                  "externalReference" : "party1"
+-                },
+-                "receiverPartyReference" : {
+-                  "externalReference" : "party2"
+-                }
+-              },
+-              "transferExpression" : {
+-                "priceTransfer" : "Termination"
+-              }
+-            }
+-          } ]
+-        }
+-      },
+@@ -105,1 +26,1 @@
+-                          "value" : "quantity-2"
++                          "value" : "quantity-1"
+@@ -116,0 +37,1 @@
++                      "settlementType" : "Cash",
+@@ -129,2 +51,1 @@
+-                } ],
+-                "nonStandardisedTerms" : false
++                } ]
+@@ -169,1 +90,1 @@
+-                      "value" : "quantity-2"
++                      "value" : "quantity-1"
+@@ -184,1 +105,1 @@
+-                      "value" : "quantity-1"
++                      "value" : "quantity-2"
+@@ -213,1 +134,1 @@
+-                "externalReference" : "party1"
++                "externalReference" : "party2"
+@@ -218,1 +139,1 @@
+-                "externalReference" : "party2"
++                "externalReference" : "party1"
+@@ -222,0 +143,10 @@
++              "assignedIdentifier" : [ {
++                "identifier" : {
++                  "value" : "712345678901234567890123456789012",
++                  "meta" : {
++                    "scheme" : "http://www.fpml.org/coding-scheme/external/unique-transaction-identifier"
++                  }
++                }
++              } ],
++              "identifierType" : "UniqueTransactionIdentifier"
++            }, {
+@@ -268,1 +199,0 @@
+-                "firstName" : "jjone",
+@@ -362,30 +292,1 @@
+-  },
+-  "messageInformation" : {
+-    "messageId" : {
+-      "value" : "SEF005",
+-      "meta" : {
+-        "scheme" : "http://www.bankx.com/msg_id"
+-      }
+-    },
+-    "sentBy" : {
+-      "value" : "BANKX"
+-    },
+-    "sentTo" : [ {
+-      "value" : "SDR01"
+-    } ]
+-  },
+-  "timestamp" : [ {
+-    "dateTime" : "2011-06-01T10:13:07Z",
+-    "qualification" : "eventCreationDateTime"
+-  }, {
+-    "dateTime" : "2011-06-01T10:12:34Z",
+-    "qualification" : "executionDateTime"
+-  } ],
+-  "eventIdentifier" : [ {
+-    "assignedIdentifier" : [ {
+-      "identifier" : {
+-        "value" : "SEF005"
+-      }
+-    } ]
+-  } ],
+-  "action" : "New"
++  }

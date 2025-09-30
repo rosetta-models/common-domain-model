@@ -1,0 +1,67 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/processes/msg-ex58-execution-advice-trade-initiation-F01-00.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-ex58-execution-advice-trade-initiation-F01-00.json
+@@ -63,3 +63,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "calculationAmount"
+@@ -72,5 +69,0 @@
+-                            "value" : "CDX-NAIGHVOLS10.5Y"
+-                          },
+-                          "identifierType" : "Other"
+-                        }, {
+-                          "identifier" : {
+@@ -82,1 +74,1 @@
+-                          "identifierType" : "Other"
++                          "identifierType" : "Name"
+@@ -116,3 +108,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "calculationAmount"
+@@ -276,0 +265,18 @@
++            "contractDetails" : {
++              "documentation" : [ {
++                "agreementDate" : "2009-05-22",
++                "legalAgreementIdentification" : {
++                  "agreementName" : {
++                    "agreementType" : "MasterConfirmation",
++                    "masterConfirmationType" : {
++                      "value" : "DJ.CDX.NA"
++                    }
++                  }
++                },
++                "contractualParty" : [ {
++                  "externalReference" : "_fund"
++                }, {
++                  "externalReference" : "_broker"
++                } ]
++              } ]
++            },
+@@ -340,27 +347,1 @@
+-  },
+-  "messageInformation" : {
+-    "messageId" : {
+-      "value" : "IM/60",
+-      "meta" : {
+-        "scheme" : "http://www.imgr.com/schemes/message-id"
+-      }
+-    },
+-    "sentBy" : {
+-      "value" : "IMGRUS6S"
+-    },
+-    "sentTo" : [ {
+-      "value" : "CUSTUS3T"
+-    } ]
+-  },
+-  "timestamp" : [ {
+-    "dateTime" : "2009-09-01T10:03:09-08:00",
+-    "qualification" : "eventCreationDateTime"
+-  } ],
+-  "eventIdentifier" : [ {
+-    "assignedIdentifier" : [ {
+-      "identifier" : {
+-        "value" : "IM/60"
+-      }
+-    } ]
+-  } ],
+-  "action" : "New"
++  }

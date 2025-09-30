@@ -1,0 +1,227 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/processes/execution-advice/msg-ex70-execution-advice-commodity-swap-classification-termination-esma-emir-refit.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex70-execution-advice-commodity-swap-classification-termination-esma-emir-refit.json
+@@ -8,12 +8,7 @@
+-        "quantityChange" : {
+-          "direction" : "Replace"
+-        },
+-        "transfer" : {
+-          "transferState" : [ {
+-            "transfer" : {
+-              "quantity" : {
+-                "value" : 5000.00,
+-                "unit" : {
+-                  "currency" : {
+-                    "value" : "USD"
+-                  }
++        "contractFormation" : {
++          "legalAgreement" : [ {
++            "legalAgreementIdentification" : {
++              "agreementName" : {
++                "agreementType" : "MasterAgreement",
++                "masterAgreementType" : {
++                  "value" : "ISDAMaster"
+@@ -21,26 +16,0 @@
+-              },
+-              "asset" : {
+-                "Cash" : {
+-                  "identifier" : [ {
+-                    "identifier" : {
+-                      "value" : "USD"
+-                    },
+-                    "identifierType" : "CurrencyCode"
+-                  } ]
+-                }
+-              },
+-              "settlementDate" : {
+-                "adjustedDate" : {
+-                  "value" : "2009-05-30"
+-                }
+-              },
+-              "payerReceiver" : {
+-                "payerPartyReference" : {
+-                  "externalReference" : "partyB"
+-                },
+-                "receiverPartyReference" : {
+-                  "externalReference" : "partyA"
+-                }
+-              },
+-              "transferExpression" : {
+-                "priceTransfer" : "Termination"
+@@ -48,1 +17,20 @@
+-            }
++            },
++            "contractualParty" : [ {
++              "externalReference" : "partyA"
++            }, {
++              "externalReference" : "partyB"
++            } ]
++          }, {
++            "legalAgreementIdentification" : {
++              "agreementName" : {
++                "agreementType" : "Confirmation",
++                "contractualDefinitionsType" : [ {
++                  "value" : "ISDA2005Commodity"
++                } ]
++              }
++            },
++            "contractualParty" : [ {
++              "externalReference" : "partyA"
++            }, {
++              "externalReference" : "partyB"
++            } ]
+@@ -99,2 +87,2 @@
+-                      "payer" : "Party1",
+-                      "receiver" : "Party2"
++                      "payer" : "Party2",
++                      "receiver" : "Party1"
+@@ -103,0 +91,1 @@
++                      "settlementType" : "Cash",
+@@ -117,1 +106,1 @@
+-                          "value" : "observable-2"
++                          "value" : "observable-1"
+@@ -125,2 +114,2 @@
+-                      "payer" : "Party2",
+-                      "receiver" : "Party1"
++                      "payer" : "Party1",
++                      "receiver" : "Party2"
+@@ -132,1 +121,1 @@
+-                          "value" : "observable-1"
++                          "value" : "observable-2"
+@@ -142,0 +131,12 @@
++                "price" : [ {
++                  "value" : {
++                    "priceType" : "AssetPrice",
++                    "arithmeticOperator" : "Add"
++                  },
++                  "meta" : {
++                    "location" : [ {
++                      "scope" : "DOCUMENT",
++                      "value" : "price-1"
++                    } ]
++                  }
++                } ],
+@@ -146,0 +147,25 @@
++                        "identifier" : [ {
++                          "identifier" : {
++                            "value" : "OIL-WTI-NYMEX",
++                            "meta" : {
++                              "scheme" : "http://www.fpml.org/spec/2008/commodity-reference-price-1-0"
++                            }
++                          },
++                          "identifierType" : "ISDACRP"
++                        } ],
++                        "priceQuoteType" : "Settlement"
++                      }
++                    }
++                  },
++                  "meta" : {
++                    "location" : [ {
++                      "scope" : "DOCUMENT",
++                      "value" : "observable-1"
++                    } ]
++                  }
++                }
++              }, {
++                "observable" : {
++                  "value" : {
++                    "Asset" : {
++                      "Commodity" : {
+@@ -181,25 +207,0 @@
+-                      "value" : "observable-1"
+-                    } ]
+-                  }
+-                }
+-              }, {
+-                "observable" : {
+-                  "value" : {
+-                    "Asset" : {
+-                      "Commodity" : {
+-                        "identifier" : [ {
+-                          "identifier" : {
+-                            "value" : "OIL-WTI-NYMEX",
+-                            "meta" : {
+-                              "scheme" : "http://www.fpml.org/spec/2008/commodity-reference-price-1-0"
+-                            }
+-                          },
+-                          "identifierType" : "ISDACRP"
+-                        } ],
+-                        "priceQuoteType" : "Settlement"
+-                      }
+-                    }
+-                  },
+-                  "meta" : {
+-                    "location" : [ {
+-                      "scope" : "DOCUMENT",
+@@ -215,1 +216,1 @@
+-                "externalReference" : "partyB"
++                "externalReference" : "partyA"
+@@ -220,1 +221,1 @@
+-                "externalReference" : "partyA"
++                "externalReference" : "partyB"
+@@ -236,0 +237,9 @@
++              "assignedIdentifier" : [ {
++                "identifier" : {
++                  "value" : "1234",
++                  "meta" : {
++                    "scheme" : "http://www.PartyA.com/com-trade-id"
++                  }
++                }
++              } ]
++            }, {
+@@ -247,0 +257,9 @@
++            }, {
++              "assignedIdentifier" : [ {
++                "identifier" : {
++                  "value" : "2345",
++                  "meta" : {
++                    "scheme" : "http://www.PartyB.com/com-trade-id"
++                  }
++                }
++              } ]
+@@ -284,0 +303,8 @@
++            "partyRole" : [ {
++              "partyReference" : {
++                "externalReference" : "partyA"
++              },
++              "ownershipPartyReference" : {
++                "externalReference" : "partyA"
++              }
++            } ],
+@@ -295,2 +322,0 @@
+-                  "externalReference" : "partyB"
+-                }, {
+@@ -298,0 +323,2 @@
++                }, {
++                  "externalReference" : "partyB"
+@@ -309,2 +336,0 @@
+-                  "externalReference" : "partyB"
+-                }, {
+@@ -312,0 +337,2 @@
++                }, {
++                  "externalReference" : "partyB"
+@@ -319,24 +346,1 @@
+-  },
+-  "messageInformation" : {
+-    "messageId" : {
+-      "value" : "COMMODITYFPMLORGPTTRADEREF",
+-      "meta" : {
+-        "scheme" : "http://www.xxx.com/coding-scheme/message-id"
+-      }
+-    },
+-    "sentBy" : {
+-      "value" : "ORIGUS33XXX"
+-    }
+-  },
+-  "timestamp" : [ {
+-    "dateTime" : "2009-05-25T12:01:00Z",
+-    "qualification" : "eventCreationDateTime"
+-  } ],
+-  "eventIdentifier" : [ {
+-    "assignedIdentifier" : [ {
+-      "identifier" : {
+-        "value" : "COMMODITYFPMLORGPTTRADEREF"
+-      }
+-    } ]
+-  } ],
+-  "action" : "New"
++  }

@@ -1,0 +1,24 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/BasketReferenceInformation_nthToDefault_mthToDefault.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/BasketReferenceInformation_nthToDefault_mthToDefault.json
+@@ -39,6 +39,0 @@
+-            "settlementTerms" : {
+-              "settlementType" : "Cash",
+-              "settlementCurrency" : {
+-                "value" : "USD"
+-              }
+-            },
+@@ -53,6 +47,0 @@
+-                "basketId" : [ {
+-                  "value" : "BASKET089",
+-                  "meta" : {
+-                    "scheme" : "http://www.barclaysglobal.com/partners/coding-scheme/indexId"
+-                  }
+-                } ],
+@@ -145,7 +133,0 @@
+-                  "gracePeriodExtension" : {
+-                    "applicable" : true,
+-                    "gracePeriod" : {
+-                      "periodMultiplier" : 0,
+-                      "period" : "D"
+-                    }
+-                  },

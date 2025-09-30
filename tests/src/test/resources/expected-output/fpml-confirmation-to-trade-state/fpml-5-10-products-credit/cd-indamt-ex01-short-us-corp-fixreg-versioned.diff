@@ -1,0 +1,42 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/products/credit/cd-indamt-ex01-short-us-corp-fixreg-versioned.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-credit/cd-indamt-ex01-short-us-corp-fixreg-versioned.json
+@@ -31,3 +31,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "notional"
+@@ -74,3 +71,0 @@
+-                "obligationDefault" : false,
+-                "obligationAcceleration" : true,
+-                "repudiationMoratorium" : true,
+@@ -81,4 +75,2 @@
+-                  },
+-                  "multipleHolderObligation" : true
+-                },
+-                "governmentalIntervention" : true
++                  }
++                }
+@@ -100,3 +92,0 @@
+-              },
+-              "meta" : {
+-                "externalKey" : "notional"
+@@ -256,20 +245,0 @@
+-    },
+-    "collateral" : {
+-      "independentAmount" : {
+-        "payerPartyReference" : {
+-          "externalReference" : "nf4f5"
+-        },
+-        "receiverPartyReference" : {
+-          "externalReference" : "koy4rt1"
+-        },
+-        "paymentDetail" : [ {
+-          "paymentRule" : {
+-            "percentageRule" : {
+-              "paymentPercent" : 0.02,
+-              "notionalAmountReference" : {
+-                "externalReference" : "notional"
+-              }
+-            }
+-          }
+-        } ]
+-      }

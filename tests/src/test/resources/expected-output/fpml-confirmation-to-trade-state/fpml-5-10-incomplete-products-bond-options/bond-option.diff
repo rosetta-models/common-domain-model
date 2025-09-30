@@ -1,0 +1,43 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/bond-options/bond-option.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-bond-options/bond-option.json
+@@ -19,1 +19,1 @@
+-                  "value" : "quantity-2"
++                  "value" : "quantity-1"
+@@ -25,3 +25,0 @@
+-              "settlementCurrency" : {
+-                "value" : "JPY"
+-              },
+@@ -92,3 +89,1 @@
+-                "followUpConfirmation" : true,
+-                "limitedRightToConfirm" : false,
+-                "splitTicket" : false
++                "followUpConfirmation" : true
+@@ -100,10 +95,0 @@
+-                "unit" : {
+-                  "currency" : {
+-                    "value" : "JPY"
+-                  }
+-                },
+-                "perUnitOf" : {
+-                  "currency" : {
+-                    "value" : "JPY"
+-                  }
+-                },
+@@ -134,1 +119,1 @@
+-              "value" : "quantity-2"
++              "value" : "quantity-1"
+@@ -155,1 +140,1 @@
+-              "value" : "quantity-1"
++              "value" : "quantity-2"
+@@ -216,0 +201,9 @@
++    }, {
++      "assignedIdentifier" : [ {
++        "identifier" : {
++          "value" : "Trade234",
++          "meta" : {
++            "scheme" : "http://www.PartyA.com/coding-scheme/trade-id"
++          }
++        }
++      } ]
+@@ -270,1 +264,0 @@
+-        "unadjustedDate" : "2006-05-15",

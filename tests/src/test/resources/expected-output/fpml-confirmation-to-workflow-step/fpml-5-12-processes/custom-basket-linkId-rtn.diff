@@ -1,0 +1,126 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-12/processes/custom-basket-linkId-rtn.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-12-processes/custom-basket-linkId-rtn.json
+@@ -64,1 +64,1 @@
+-                          "value" : "quantity-2"
++                          "value" : "quantity-1"
+@@ -68,6 +68,0 @@
+-                    "settlementTerms" : {
+-                      "settlementType" : "Cash",
+-                      "settlementCurrency" : {
+-                        "value" : "USD"
+-                      }
+-                    },
+@@ -82,6 +76,0 @@
+-                        "basketId" : [ {
+-                          "value" : "BASKET089",
+-                          "meta" : {
+-                            "scheme" : "http://www.barclaysglobal.com/partners/coding-scheme/indexId"
+-                          }
+-                        } ],
+@@ -246,7 +234,0 @@
+-                          "gracePeriodExtension" : {
+-                            "applicable" : true,
+-                            "gracePeriod" : {
+-                              "periodMultiplier" : 0,
+-                              "period" : "D"
+-                            }
+-                          },
+@@ -272,3 +253,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "protectionTermsOne"
+@@ -281,8 +259,0 @@
+-                          "gracePeriodExtension" : {
+-                            "applicable" : true,
+-                            "gracePeriod" : {
+-                              "periodMultiplier" : 1,
+-                              "period" : "D",
+-                              "dayType" : "Business"
+-                            }
+-                          },
+@@ -308,3 +278,0 @@
+-                      },
+-                      "meta" : {
+-                        "externalKey" : "protectionTermsTwo"
+@@ -324,1 +291,1 @@
+-                          "value" : "quantity-1"
++                          "value" : "quantity-2"
+@@ -383,1 +350,1 @@
+-                      "value" : "quantity-1"
++                      "value" : "quantity-2"
+@@ -400,1 +367,1 @@
+-                      "value" : "quantity-2"
++                      "value" : "quantity-1"
+@@ -403,3 +370,1 @@
+-                } ]
+-              }, {
+-                "quantity" : [ {
++                }, {
+@@ -417,1 +382,1 @@
+-                      "value" : "quantity-3"
++                      "value" : "quantity-1"
+@@ -445,1 +410,3 @@
+-              }, {
++              } ]
++            }, {
++              "assignedIdentifier" : [ {
+@@ -447,1 +414,1 @@
+-                  "value" : "USDINDEX",
++                  "value" : "DJITRAXXUSDMS5Y",
+@@ -449,1 +416,1 @@
+-                    "scheme" : "http://www.fpml.org/coding-scheme/external/esma-report-tracking-number"
++                    "scheme" : "http://www.barclaysglobal.com/partners/schema/v1-1/schemes/tradeID"
+@@ -489,1 +456,23 @@
+-            } ]
++            } ],
++            "contractDetails" : {
++              "documentation" : [ {
++                "legalAgreementIdentification" : {
++                  "agreementName" : {
++                    "agreementType" : "Confirmation",
++                    "contractualDefinitionsType" : [ {
++                      "value" : "ISDA2003CreditDerivatives"
++                    } ],
++                    "contractualTermsSupplement" : [ {
++                      "contractualTermsSupplementType" : {
++                        "value" : "ISDA2003CreditMay2003"
++                      }
++                    } ]
++                  }
++                },
++                "contractualParty" : [ {
++                  "externalReference" : "party1"
++                }, {
++                  "externalReference" : "party2"
++                } ]
++              } ]
++            }
+@@ -494,27 +483,1 @@
+-  },
+-  "messageInformation" : {
+-    "messageId" : {
+-      "value" : "GW:0EB40A0q",
+-      "meta" : {
+-        "scheme" : "http://www.barclaysglobal.com/partners/schema/v1-1/schemes/messageID"
+-      }
+-    },
+-    "sentBy" : {
+-      "value" : "BGIAGB2L"
+-    },
+-    "sentTo" : [ {
+-      "value" : "WSSOGB2L"
+-    } ]
+-  },
+-  "timestamp" : [ {
+-    "dateTime" : "2005-01-24T04:36:35-08:00",
+-    "qualification" : "eventCreationDateTime"
+-  } ],
+-  "eventIdentifier" : [ {
+-    "assignedIdentifier" : [ {
+-      "identifier" : {
+-        "value" : "GW:0EB40A0q"
+-      }
+-    } ]
+-  } ],
+-  "action" : "New"
++  }
