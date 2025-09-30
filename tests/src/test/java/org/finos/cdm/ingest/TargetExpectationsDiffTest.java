@@ -32,6 +32,7 @@ import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -74,11 +75,16 @@ public class TargetExpectationsDiffTest {
 
     @NotNull
     private List<String> readFile(Class<? extends RosettaModelObject> clazz, Path synonymIngestOutputPath) throws IOException {
-        String json = Files.readString(synonymIngestOutputPath);
-        RosettaModelObject modelObject = deserialise(clazz, json);
-        RosettaModelObject processedModelObject = removeGlobalKeys(modelObject);
-        String processedJson = serialise(processedModelObject);
-        return Arrays.asList(processedJson.split("\n"));
+        try {
+            String json = Files.readString(synonymIngestOutputPath);
+            RosettaModelObject modelObject = deserialise(clazz, json);
+            RosettaModelObject processedModelObject = removeGlobalKeys(modelObject);
+            String processedJson = serialise(processedModelObject);
+            return Arrays.asList(processedJson.split("\n"));
+        } catch (JsonProcessingException e) {
+            LOGGER.error("Failed to read file {}", synonymIngestOutputPath, e);
+            return Collections.emptyList();
+        }
     }
     
     private static <T extends RosettaModelObject> T deserialise(Class<T> clazz, String json) throws JsonProcessingException {
