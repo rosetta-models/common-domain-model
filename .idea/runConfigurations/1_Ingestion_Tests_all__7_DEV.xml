@@ -1,0 +1,47 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="1-Ingestion-Tests all -7 DEV" type="JUnit" factoryName="JUnit">
+    <module name="tests" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.regnosys.ingest.test.framework.ingestor.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="21" />
+    <option name="PACKAGE_NAME" value="com.regnosys.ingest.test.framework.ingestor" />
+    <option name="MAIN_CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="pattern" />
+    <envs>
+      <env name="TEST_WRITE_BASE_PATH" value="$PROJECT_DIR$/rosetta-source/src/main/resources" />
+      <env name="WRITE_EXPECTATIONS" value="true" />
+      <env name="CREATE_EXPECTATION_FILES" value="true" />
+    </envs>
+    <patterns>
+      <pattern testClass="com.regnosys.ingest.cme.CMEClearedConfirmTest" />
+      <pattern testClass="com.regnosys.ingest.cme.CMESubmissionTest" />
+      <pattern testClass="com.regnosys.ingest.createiq.CreateiQIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.dtcc.DtccIngestion11ServiceTest" />
+      <pattern testClass="com.regnosys.ingest.dtcc.DtccIngestion9ServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fis.FisIngestionTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml510IncompleteProcessesIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml510IncompleteProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml510ProcessesIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml510ProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml512IncompleteProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml512ProcessesIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml512ProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml513IncompleteProcessesIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml513IncompleteProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml513ProcessesIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.Fpml513ProductIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.InvalidProductTest" />
+      <pattern testClass="com.regnosys.ingest.fpml.NativeCdmEventsIngestionServiceTest" />
+      <pattern testClass="com.regnosys.ingest.ore.OreTradeTest" />
+    </patterns>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
