@@ -2,7 +2,7 @@
 title: Download Source Code
 ---
 
-The CDM source code is open source and can be downloaded from [\_CDM
+The CDM source code is open source and can be downloaded from [CDM
 GitHub](https://github.com/finos/common-domain-model). All released versions are tagged and can be downloaded from
 [CDM GitHub Releases](https://github.com/finos/common-domain-model/releases).
 
@@ -34,13 +34,12 @@ the following dependency needs to be added to the project pom.xml:
     <version>LATEST</version>
 
 > _NOTE:_ All current CDM dependencies are available in Maven Central.
-> CDM releases prior to version 4.0.0 can be found in the ISDA repository: <https://europe-west1-maven.pkg.dev/production-208613/isda-maven>.
-> The dependencies of CDM releases prior to version 4.0.0 can be found in the REGnosys repository: <https://europe-west1-maven.pkg.dev/production-208613/public-maven>.
+> CDM releases prior to version 4.0.0 can be found in the [ISDA repository](https://europe-west1-maven.pkg.dev/production-208613/isda-maven).
+> The dependencies of CDM releases prior to version 4.0.0 can be found in the [REGnosys repository](https://europe-west1-maven.pkg.dev/production-208613/public-maven).
 > Add the following snippet to the `<repositories>` section of your project `pom.xml`:
 >
 > ``` xml
 >    <repositories>
->        <!-- remove references to REGnosys Jfrog -->
 >        <repository>
 >            <id>isda-maven</id>
 >            <url>https://europe-west1-maven.pkg.dev/production-208613/isda-maven</url>

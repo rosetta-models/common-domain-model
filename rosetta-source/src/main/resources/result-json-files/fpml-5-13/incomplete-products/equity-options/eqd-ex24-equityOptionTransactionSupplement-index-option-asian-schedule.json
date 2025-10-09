@@ -6,8 +6,8 @@
         "productQualifier" : "EquityOption_PriceReturnBasicPerformance_Index"
       } ],
       "economicTerms" : {
-        "payout" : {
-          "optionPayout" : [ {
+        "payout" : [ {
+          "OptionPayout" : {
             "payerReceiver" : {
               "payer" : "Party2",
               "receiver" : "Party1"
@@ -54,6 +54,28 @@
             "buyerSeller" : {
               "buyer" : "Party1",
               "seller" : "Party2"
+            },
+            "feature" : {
+              "averagingFeature" : {
+                "averagingInOut" : "Out",
+                "averagingPeriodOut" : {
+                  "schedule" : [ {
+                    "startDate" : "2002-11-11",
+                    "endDate" : "2003-11-11",
+                    "averagingPeriodFrequency" : {
+                      "periodMultiplier" : 1,
+                      "period" : "M",
+                      "meta" : {
+                        "globalKey" : "119f7"
+                      },
+                      "rollConvention" : "EOM"
+                    }
+                  } ],
+                  "marketDisruption" : {
+                    "value" : "Postponement"
+                  }
+                }
+              }
             },
             "underlier" : {
               "Observable" : {
@@ -120,19 +142,15 @@
                 "value" : 1088,
                 "priceType" : "AssetPrice"
               }
-            },
-            "meta" : {
-              "globalKey" : "1b7eb5ad",
-              "externalKey" : "equityOption"
             }
-          } ],
+          },
           "meta" : {
-            "globalKey" : "1b7eb5ad"
+            "globalKey" : "1cdab210"
           }
-        }
+        } ]
       },
       "meta" : {
-        "globalKey" : "1b7eb5ad"
+        "globalKey" : "1cdab210"
       }
     },
     "tradeLot" : [ {
@@ -332,7 +350,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "79c0622e"
+      "globalKey" : "dbcbe6d1"
     }
   },
   "transferHistory" : [ {
@@ -361,6 +379,15 @@
           } ]
         }
       },
+      "settlementDate" : {
+        "unadjustedDate" : "2002-11-01",
+        "dateAdjustments" : {
+          "businessDayConvention" : "NONE",
+          "meta" : {
+            "globalKey" : "24a738"
+          }
+        }
+      },
       "payerReceiver" : {
         "payerPartyReference" : {
           "globalReference" : "5d661eab",
@@ -371,24 +398,15 @@
           "externalReference" : "Party2"
         }
       },
-      "settlementDate" : {
-        "unadjustedDate" : "2002-11-01",
-        "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "meta" : {
-            "globalKey" : "24a738"
-          }
-        }
-      },
       "transferExpression" : {
         "priceTransfer" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "a2a4227"
+      "globalKey" : "d304255"
     }
   } ],
   "meta" : {
-    "globalKey" : "82127a55"
+    "globalKey" : "48990626"
   }
 }

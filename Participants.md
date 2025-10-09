@@ -22,8 +22,12 @@ Below is the list of [participants](GOVERNANCE.md#1-roles) in CDM, who have comm
 - Daniel Ivanier, Fragmos Chain, Date of enrollment: 9th Mar 2024
 - Jean-Baptiste Ziade, Fragmos Chain, Date of enrollment: 9th Mar 2024
 - Eleonora Acuna, ISDA, Date of enrollment: 11th Mar 2024
-- Vernon Alden-Smith ISDA, Date of enrolement 13th Mar 2024
-- Brian Lynn, Global Electronic Markets, Date of enrolement: 17 May 2024
+- Vernon Alden-Smith ISDA, Date of enrollment 13th Mar 2024
+- Brian Lynn, Global Electronic Markets, Date of enrollment: 17 May 2024
+- Vassil Verguilov, CLOUDRISK Limited, Date of enrollment: 4th Dec 2024
+- Dimo Rezashki, CLOUDRISK Limited, Date of enrollment: 4th Dec 2024
+- Jason Polis, ISDA, Date of enrollment: 14 Mar 2025
+- Horance Zheng, ISDA, Date of enrollment: 16th Jun 2025
 
 
 ## How to enroll as a participant
@@ -33,7 +37,7 @@ _:question:Please email help@finos.org if you encounter issues or have questions
 
 **Step 1. Go to  the [participants](#participants) file** and make sure you are signed into your {GitHub} account
 
-**Step 2. Click on the :pen: icon at the top right of the the [participants](#participants) file**
+**Step 2. Click on the :pen: icon at the top right of the [participants](#participants) file**
     
 [<img src="https://user-images.githubusercontent.com/51138318/151390328-00e6ac68-6069-493e-b536-d329fa9cc51e.png" width="500">](https://user-images.githubusercontent.com/51138318/151390328-00e6ac68-6069-493e-b536-d329fa9cc51e.png)
     

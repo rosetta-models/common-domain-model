@@ -3,10 +3,9 @@ version "${project.version}"
 
 import cdm.base.datetime.*
 import cdm.base.math.*
-
+import cdm.observable.asset.*
 import cdm.observable.asset.calculatedrate.*
 import cdm.observable.asset.fro.*
-
 import cdm.product.asset.*
 import cdm.product.asset.calculation.*
 import cdm.product.common.schedule.*
@@ -39,7 +38,7 @@ func GetFloatingRateProcessingType: <"Get a classification of  the floating rate
     // look up the floating rate option definition from the metadata
     alias floatingRateDefinition:
         FloatingRateIndexMetadata(
-                rateDef -> rateOption -> InterestRateIndex -> floatingRateIndex
+                rateDef -> rateOption -> FloatingRateIndex -> floatingRateIndex
             )
     alias calcDefaults: floatingRateDefinition -> calculationDefaults
     alias category: calcDefaults -> category
@@ -71,6 +70,7 @@ func GetFloatingRateProcessingType: <"Get a classification of  the floating rate
     set processingType: processingCategory
 
 func ProcessFloatingRateReset: <"Entry point for the function that performs the floating rate resetting operation.  There are different variations depending on the processing type (e.g. screen rate, OIS, modular calculated rate. .">
+    [codeImplementation]
     inputs:
         interestRatePayout InterestRatePayout (1..1) <"Floating rate stream definition.">
         calcPeriod CalculationPeriodBase (1..1) <"The calculation period for which you want the rate.">

@@ -2,7 +2,7 @@
   "mainSidebar": {
     "Main Menu": [
       "home",
-      "cdm-overview",    
+      "cdm-overview",   
       "common-domain-model",
       "product-model",
       "event-model",
@@ -13,20 +13,23 @@
       "namespace",
       "use-cases",
       "eligible-collateral-representation",
+      "standardized-functions",
       "repurchase-agreement-representation",
       "securities-lending",
       "pre-trade-processing",
-      "cdm-guidelines",
-      "contribution",
+      "cdm-java-distribution",
+      "dev-guidelines",
       "download",
-      "cdm-materials", 
+      "cdm-materials",
+      "cdm-demos",
       "get-involved",
       "CDM-Contribution-Review-WG",
       "CDM-Collateral-WG",
       "CDM-Steering-WG",
-      "CDM-Structured-Products-WG",
+      "CDM-Tokenized-Assets-WG",
+      "CDM-Physical-Risk-WG",
       "CDM-Technology-Architecture-WG",
-      "CDM-Derivatives-Product-and-Business-Event-WG"
+      "CDM-Derivatives-WG"
     ]
   }
 }

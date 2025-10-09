@@ -5,7 +5,7 @@ import cdm.event.common.functions.ResolvePerformanceObservationIdentifiers;
 import cdm.observable.common.DeterminationMethodEnum;
 import cdm.observable.event.ObservationIdentifier;
 import cdm.product.template.PerformancePayout;
-import com.google.inject.Inject;
+import javax.inject.Inject;
 import com.rosetta.model.lib.records.Date;
 import org.isda.cdm.functions.AbstractFunctionTest;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,7 +27,7 @@ public class ResolvePerformanceObservationIdentifiersTest extends AbstractFuncti
     void setUpTestData() throws IOException {
         TradeState tradeState = getObjectAndResolveReferences(TradeState.class,
                 "result-json-files/fpml-5-10/products/equity/eqs-ex01-single-underlyer-execution-long-form.json");
-        performancePayout = tradeState.getTrade().getProduct().getEconomicTerms().getPayout().getPerformancePayout().get(0);
+        performancePayout = tradeState.getTrade().getProduct().getEconomicTerms().getPayout().get(0).getPerformancePayout();
     }
 
     @Test

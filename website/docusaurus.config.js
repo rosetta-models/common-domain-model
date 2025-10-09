@@ -67,16 +67,20 @@ module.exports = {
               href: 'https://cdm.finos.org/docs/CDM-Collateral-WG',
             },
             {
-              label: 'Derivatives Product and Business Event Working Group',
-              href: 'https://cdm.finos.org/docs/CDM-Derivatives-Product-and-Business-Event-WG',
+              label: 'Derivatives Working Group',
+              href: 'https://cdm.finos.org/docs/CDM-Derivatives-WG',
             },
             {
               label: 'Technology Architecture Working Group',
               href: 'https://cdm.finos.org/docs/CDM-Technology-Architecture-WG',
             },
+             {
+              label: 'Phsyical Risk Working Group',
+              href: 'https://cdm.finos.org/docs/CDM-Physical-Risk-WG',
+            },
             {
-              label: 'Structured Products Working Group',
-              href: 'https://cdm.finos.org/docs/CDM-Structured-Products-WG',
+              label: 'Tokenized Assets Working Group',
+              href: 'https://cdm.finos.org/docs/CDM-Tokenized-Assets-WG',
             }
           ]
         },
@@ -124,7 +128,7 @@ module.exports = {
             },
             {
               label: 'CDM Java Distribution Guidelines',
-              to: 'docs/cdm-guidelines',
+              to: 'docs/cdm-java-distribution',
             },
             {
               label: 'Download Source Code',

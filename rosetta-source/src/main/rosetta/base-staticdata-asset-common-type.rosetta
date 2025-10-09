@@ -10,7 +10,6 @@ import cdm.observable.asset.*
 choice Asset: <"An Asset is defined as something that can be owned and transferred in the financial markets. As a choice data type, one and only one of the attributes must be used.">
     Cash <"An Asset that consists solely of a monetary holding in a currency.">
     Commodity <"An Asset comprised of raw or refined materials or agricultural products, eg gold, oil or wheat.">
-        [metadata location]
     DigitalAsset <"An Asset that exists only in digital form, eg Bitcoin or Ethereum; excludes the digital representation of other Assets.">
     Instrument <"An asset that is issued by one party to one or more others; Instrument is also a choice data type.">
 
@@ -22,12 +21,10 @@ type AssetBase: <"The base data type to specify common attributes for all Assets
     relatedExchange LegalEntity (0..*) <"Provides the related Exchanges, if applicable.">
 
     condition ExchangeListed: <"If Exchange is specified, it must be an exchange-listed Instrument.">
-        if exchange exists
-        then isExchangeListed  
+        if exchange exists then isExchangeListed
 
     condition RelatedExchange: <"Related Exchange should only be specified if an Exchange is also specified.">
-        if exchange is absent 
-        then relatedExchange is absent 
+        if exchange is absent then relatedExchange is absent
 
 type AssetIdentifier: <"The unique identifier for an Asset, specified using an Asset Identifier Type enumerator.">
     identifier string (1..1) <"The identifier value.">
@@ -35,6 +32,7 @@ type AssetIdentifier: <"The unique identifier for an Asset, specified using an A
     identifierType AssetIdTypeEnum (1..1) <"Defines the symbology source of the Asset Identifier, eg CUSIP, ISIN, etc.">
 
 type InstrumentBase extends AssetBase: <"Defines the common attributes for all Instrument data types.">
+    instrumentType InstrumentTypeEnum (1..1) <"Identifies the type of an instrument using an enumerated list.">
 
 choice Instrument: <"A type of Asset that is issued by one party to one or more others.">
     ListedDerivative <"A securitized derivative on another asset that is created by an exchange.">
@@ -60,20 +58,19 @@ type Taxonomy: <"Defines the taxonomy of an object by combining a taxonomy sourc
     source TaxonomySourceEnum (0..1) <"The source of the taxonomy that defines the rules for classifying the object. The taxonomy source is taken from a enumerated list of taxonomy names. Optional as the taxonomy source may not be provided.">
     value TaxonomyValue (0..1) <"The value according to that taxonomy. Optional as it may not be possible to classify the object in that taxonomy.">
 
+    condition OrdinalExists: <"Requires that, if multiple classification elements are present, they contain an  ordinal so that they can be sorted.">
+        if value -> classification count > 1
+        then value -> classification -> ordinal count = value -> classification count
+
     condition DifferentOrdinals: <"Prevents several identical ordinals from being specified in the same commodity classification, since classification values for each classification layer are mutually exclusive (i.e.: only a value can exist for each layer).">
         if value -> classification -> ordinal exists
-        then DifferentOrdinalsCondition
+        then value -> classification -> ordinal count
+                = value -> classification -> ordinal distinct count
 
-// This is a work around for the following bug in the code generators https://github.com/REGnosys/rosetta-code-generators/issues/246
-func DifferentOrdinalsCondition:
-    inputs:
-        taxonomy Taxonomy (1..1)
-    output:
-        result boolean (1..1)
-    set result:
-        (taxonomy -> value
-            extract [ classification -> ordinal = classification -> ordinal distinct ]
-        = True)
+    condition SequentialOrdinals: <"Requires that, if multiple classfication elements are present, no layers are skipped (i.e.: ordinals 1,2,3 are accepted but 1,3 are not.">
+        if value -> classification count > 1
+        then value -> classification -> ordinal count
+                = value -> classification -> ordinal max
 
 type ProductTaxonomy extends Taxonomy: <"Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.">
     primaryAssetClass AssetClassEnum (0..1) <"Classifies the most important risk class of the trade.">
@@ -96,8 +93,10 @@ type Cash extends AssetBase: <"An Asset that consists solely of a monetary holdi
 
     condition CurrencyExists: <"There must be one and only one currency code and it must be valid (ie in the enumerated list).">
         AssetIdentifierByType(identifier, AssetIdTypeEnum -> CurrencyCode) count = 1
-        and
-        AssetIdentifierByType(identifier, AssetIdTypeEnum -> CurrencyCode) -> identifier first to-enum CurrencyCodeEnum exists  
+            and AssetIdentifierByType(identifier, AssetIdTypeEnum -> CurrencyCode) -> identifier
+                first
+                to-enum CurrencyCodeEnum
+                exists
 
     condition NoTaxonomy: <"Taxonomy is not applicable for a Cash asset.">
         taxonomy is absent
@@ -110,10 +109,6 @@ type Commodity extends AssetBase: <"Identifies a specific commodity by referenci
     priceQuoteType QuotationSideEnum (1..1) <"Describes the required quote type of the underlying price that will be observed. Example values include 'Bid, 'Ask', 'Settlement' (for a futures contract) and 'WeightedAverage' (for some published prices and indices).">
     deliveryDateReference DeliveryDateParameters (0..1) <"Specifies the parameters for identifying the relevant contract date when the commodity reference price is a futures contract.">
     description string (0..1) <"Provides additional information about the commodity underlier.">
-
-    condition OrdinalExists: <"Requires that, if multiple classification elements are present, they contain an  ordinal so that they can be sorted.">
-        if taxonomy -> value -> classification count > 1
-        then taxonomy -> value -> classification -> ordinal exists
 
     condition ValueSource: <"Requires that value and source are present when product taxonomy is present">
         if taxonomy exists
@@ -204,22 +199,29 @@ type CollateralTaxonomyValue: <"Specifies the collateral taxonomy value, either 
 type Security extends InstrumentBase: <"Identifies a security by referencing an identifier and by specifying the sector.">
     [docReference ICMA GMRA namingConvention "Purchased Security"
 		provision "As defined in GMRA paragraph 2(oo) The Purchased Securities are the Securities sold or to be sold and any New Purchased Securities transferred by Seller to Buyer under paragraph 8 (Substitution)."]
-    securityType SecurityTypeEnum (1..1) <"Identifies the type of security using an enumerated list.">
     debtType DebtType (0..1) <"Identifies the type of debt and selected debt economics.">
-    equityType EquityTypeEnum (0..1) <"Identifies the type of equity.">
+    equityType EquityType (0..1) <"Identifies the type of equity.">
     fundType FundProductTypeEnum (0..1) <"Identifies the type of fund.">
 
     condition DebtSubType:
-        if securityType <> SecurityTypeEnum -> Debt
+        if instrumentType <> InstrumentTypeEnum -> Debt
         then debtType is absent
 
     condition EquitySubType:
-        if securityType <> SecurityTypeEnum -> Equity
+        if instrumentType <> InstrumentTypeEnum -> Equity
         then equityType is absent
 
     condition FundSubType:
-        if securityType <> SecurityTypeEnum -> Fund
+        if instrumentType <> InstrumentTypeEnum -> Fund
         then fundType is absent
+
+type EquityType:
+    equityType EquityTypeEnum (0..1)
+    depositaryReceipt DepositaryReceiptTypeEnum (0..1)
+
+    condition DepositaryReceiptSubType:
+        if equityType <> EquityTypeEnum -> DepositaryReceipt
+        then depositaryReceipt is absent
 
 type DebtType: <"Specifies the type of debt instrument.">
     debtClass DebtClassEnum (0..1) <"Specifies the characteristics of a debt instrument.">
@@ -277,9 +279,9 @@ type TaxonomyClassification:
 
 type AssetType: <"Represents a class to allow specification of the asset product type.">
     assetType AssetTypeEnum (1..1) <"Represents a filter based on the type of collateral asset.">
-    securityType SecurityTypeEnum (0..1) <"Represents a filter based on the type of security.">
+    securityType InstrumentTypeEnum (0..1) <"Represents a filter based on the type of security.">
     debtType DebtType (0..1) <"Represents a filter based on the type of bond.">
-    equityType EquityTypeEnum (0..1) <"Represents a filter based on the type of equity.">
+    equityType EquityType (0..1) <"Represents a filter based on the type of equity.">
     fundType FundProductTypeEnum (0..1) <"Represents a filter based on the type of fund.">
     otherAssetType string (0..*) <"Specifies the eligible asset type when not enumerated.">
 
@@ -291,15 +293,15 @@ type AssetType: <"Represents a class to allow specification of the asset product
                 and fundType is absent
 
     condition BondSubType:
-        if securityType <> SecurityTypeEnum -> Debt
+        if securityType <> InstrumentTypeEnum -> Debt
         then debtType is absent
 
     condition EquitySubType:
-        if securityType <> SecurityTypeEnum -> Equity
+        if securityType <> InstrumentTypeEnum -> Equity
         then equityType is absent
 
     condition FundSubType:
-        if securityType <> SecurityTypeEnum -> Fund
+        if securityType <> InstrumentTypeEnum -> Fund
         then fundType is absent
 
     condition OtherAssetSubType:

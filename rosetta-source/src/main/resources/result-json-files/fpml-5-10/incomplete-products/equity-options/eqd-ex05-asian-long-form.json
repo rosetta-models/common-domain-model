@@ -6,8 +6,8 @@
         "productQualifier" : "EquityOption_PriceReturnBasicPerformance_Index"
       } ],
       "economicTerms" : {
-        "payout" : {
-          "optionPayout" : [ {
+        "payout" : [ {
+          "OptionPayout" : {
             "payerReceiver" : {
               "payer" : "Party2",
               "receiver" : "Party1"
@@ -35,6 +35,19 @@
             "buyerSeller" : {
               "buyer" : "Party1",
               "seller" : "Party2"
+            },
+            "feature" : {
+              "averagingFeature" : {
+                "averagingInOut" : "Out",
+                "averagingPeriodOut" : {
+                  "averagingDateTimes" : {
+                    "dateTime" : [ "2000-08-01T08:57:00Z", "2000-09-01T08:57:00Z", "2000-10-01T08:57:00Z", "2000-11-01T08:57:00Z", "2000-12-01T08:57:00Z", "2001-01-04T08:57:00Z", "2001-02-01T08:57:00Z", "2001-03-01T08:57:00Z" ]
+                  },
+                  "marketDisruption" : {
+                    "value" : "ModifiedPostponement"
+                  }
+                }
+              }
             },
             "underlier" : {
               "Observable" : {
@@ -87,21 +100,18 @@
                 },
                 "priceType" : "AssetPrice"
               }
-            },
-            "meta" : {
-              "globalKey" : "d44c6866"
             }
-          } ],
+          },
           "meta" : {
-            "globalKey" : "d44c6866"
+            "globalKey" : "5aa22c4d"
           }
-        },
+        } ],
         "calculationAgent" : {
           "calculationAgentParty" : "CalculationAgentIndependent"
         }
       },
       "meta" : {
-        "globalKey" : "3f1fcfd0"
+        "globalKey" : "871435f7"
       }
     },
     "tradeLot" : [ {
@@ -328,7 +338,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "ca142767"
+      "globalKey" : "51795ea0"
     }
   },
   "transferHistory" : [ {
@@ -351,6 +361,15 @@
           } ]
         }
       },
+      "settlementDate" : {
+        "unadjustedDate" : "2000-07-03",
+        "dateAdjustments" : {
+          "businessDayConvention" : "NONE",
+          "meta" : {
+            "globalKey" : "24a738"
+          }
+        }
+      },
       "payerReceiver" : {
         "payerPartyReference" : {
           "globalReference" : "33f59568",
@@ -361,24 +380,15 @@
           "externalReference" : "party1"
         }
       },
-      "settlementDate" : {
-        "unadjustedDate" : "2000-07-03",
-        "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "meta" : {
-            "globalKey" : "24a738"
-          }
-        }
-      },
       "transferExpression" : {
         "priceTransfer" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "f597bbea"
+      "globalKey" : "e436b154"
     }
   } ],
   "meta" : {
-    "globalKey" : "4ed5de51"
+    "globalKey" : "f5262ff4"
   }
 }
