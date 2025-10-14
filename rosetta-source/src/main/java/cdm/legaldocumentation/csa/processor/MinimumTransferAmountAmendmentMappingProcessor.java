@@ -17,11 +17,11 @@ import static org.isda.cdm.processor.CreateiQMappingProcessorUtils.PARTIES;
 @SuppressWarnings("unused")
 public class MinimumTransferAmountAmendmentMappingProcessor extends MappingProcessor {
 
-	private final ElectiveAmountElectionMappingHelper helper;
+	private final MinimumTransferAmountMappingHelper helper;
 
 	public MinimumTransferAmountAmendmentMappingProcessor(RosettaPath modelPath, List<Path> synonymPaths, MappingContext mappingContext) {
 		super(modelPath, synonymPaths, mappingContext);
-		this.helper = new ElectiveAmountElectionMappingHelper(getModelPath(), getMappings(), mappingContext.getSynonymToEnumMap());
+		this.helper = new MinimumTransferAmountMappingHelper(getModelPath(), getMappings(), mappingContext.getSynonymToEnumMap());
 	}
 
 	@Override
