@@ -9,7 +9,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex19-cds-execution-allocations.json",
     "assertions" : {
       "inputPathCount" : 144,
-      "outputPathCount" : 178,
+      "outputPathCount" : 180,
       "modelValidationFailures" : 11,
       "runtimeError" : false
     }
@@ -86,7 +86,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex61-execution-advice-trade-change-F03-00.json",
     "assertions" : {
       "inputPathCount" : 83,
-      "outputPathCount" : 88,
+      "outputPathCount" : 89,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -97,7 +97,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex62-execution-advice-trade-change-correction-F03-10.json",
     "assertions" : {
       "inputPathCount" : 83,
-      "outputPathCount" : 88,
+      "outputPathCount" : 89,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }

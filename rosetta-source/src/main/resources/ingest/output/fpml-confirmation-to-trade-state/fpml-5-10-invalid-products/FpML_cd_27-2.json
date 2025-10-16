@@ -249,6 +249,9 @@
               "currency" : {
                 "value" : "USD"
               }
+            },
+            "multiplier" : {
+              "value" : 20000000
             }
           },
           "meta" : {
@@ -259,7 +262,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "c0464618"
+          "globalKey" : "7731e61a"
         }
       } ]
     } ],
@@ -404,7 +407,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "68a66c37"
+      "globalKey" : "e13345f5"
     }
   },
   "transferHistory" : [ {
@@ -454,6 +457,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "de936ca8"
+    "globalKey" : "a7f8b5aa"
   }
 }

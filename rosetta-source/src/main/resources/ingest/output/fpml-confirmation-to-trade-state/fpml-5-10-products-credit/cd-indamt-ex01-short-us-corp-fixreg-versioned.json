@@ -206,6 +206,9 @@
               "currency" : {
                 "value" : "USD"
               }
+            },
+            "multiplier" : {
+              "value" : 5000000
             }
           },
           "meta" : {
@@ -216,7 +219,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "280b774f"
+          "globalKey" : "1477d7ba"
         }
       } ]
     } ],
@@ -325,10 +328,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "82f2290b"
+      "globalKey" : "78f1a9c0"
     }
   },
   "meta" : {
-    "globalKey" : "82f2290b"
+    "globalKey" : "78f1a9c0"
   }
 }

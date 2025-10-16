@@ -317,6 +317,9 @@
               "currency" : {
                 "value" : "JPY"
               }
+            },
+            "multiplier" : {
+              "value" : 500000000
             }
           },
           "meta" : {
@@ -327,7 +330,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "790f635e"
+          "globalKey" : "8cd45749"
         }
       }, {
         "quantity" : [ {
@@ -337,6 +340,9 @@
               "currency" : {
                 "value" : "JPY"
               }
+            },
+            "multiplier" : {
+              "value" : 500000000
             }
           },
           "meta" : {
@@ -347,7 +353,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "11fe4b42"
+          "globalKey" : "a5a8d62d"
         }
       } ]
     } ],
@@ -492,10 +498,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "4b688532"
+      "globalKey" : "38991352"
     }
   },
   "meta" : {
-    "globalKey" : "4b688532"
+    "globalKey" : "38991352"
   }
 }

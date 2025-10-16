@@ -339,6 +339,9 @@
               "currency" : {
                 "value" : "USD"
               }
+            },
+            "multiplier" : {
+              "value" : 50000000
             }
           },
           "meta" : {
@@ -349,7 +352,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "68fb68ec"
+          "globalKey" : "83f6f0f1"
         }
       }, {
         "quantity" : [ {
@@ -359,6 +362,9 @@
               "currency" : {
                 "value" : "USD"
               }
+            },
+            "multiplier" : {
+              "value" : 50000000
             }
           },
           "meta" : {
@@ -369,7 +375,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "d75b3635"
+          "globalKey" : "d9988ffa"
         }
       } ]
     } ],
@@ -514,10 +520,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "8f644526"
+      "globalKey" : "14a9e7c6"
     }
   },
   "meta" : {
-    "globalKey" : "8f644526"
+    "globalKey" : "14a9e7c6"
   }
 }

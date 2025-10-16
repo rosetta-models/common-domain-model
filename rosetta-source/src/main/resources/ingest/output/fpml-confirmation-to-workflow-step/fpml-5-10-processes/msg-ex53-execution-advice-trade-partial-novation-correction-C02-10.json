@@ -247,6 +247,9 @@
                       "currency" : {
                         "value" : "USD"
                       }
+                    },
+                    "multiplier" : {
+                      "value" : 70000000.00
                     }
                   },
                   "meta" : {
@@ -257,7 +260,7 @@
                   }
                 } ],
                 "meta" : {
-                  "globalKey" : "e6be80f3"
+                  "globalKey" : "c5dd013a"
                 }
               } ]
             } ],
@@ -437,7 +440,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "3af5c5bf"
+              "globalKey" : "b9fda658"
             }
           },
           "transferHistory" : [ {
@@ -479,13 +482,13 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "af30c6ef"
+            "globalKey" : "c2f36108"
           }
         }
       }
     } ]
   },
   "meta" : {
-    "globalKey" : "53186543"
+    "globalKey" : "b6cba5c"
   }
 }
