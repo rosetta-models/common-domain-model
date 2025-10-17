@@ -1,58 +1,45 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/equity/eqs-ex10-short-form-interestLeg-driving-schedule-dates.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-equity/eqs-ex10-short-form-interestLeg-driving-schedule-dates.json
-@@ -9,16 +9,0 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2008-06-02",
--            "dateAdjustments" : {
--              "businessDayConvention" : "NotApplicable"
--            }
--          }
--        },
--        "terminationDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2008-06-04",
--            "dateAdjustments" : {
--              "businessDayConvention" : "NotApplicable"
--            }
--          }
--        },
-@@ -32,6 +16,0 @@
+@@ -32,6 +32,0 @@
 -              "quantitySchedule" : {
 -                "address" : {
 -                  "scope" : "DOCUMENT",
 -                  "value" : "quantity-1"
 -                }
 -              },
-@@ -116,0 +94,3 @@
+@@ -116,0 +110,3 @@
 +                  },
 +                  "meta" : {
 +                    "externalKey" : "interestLegPaymentDates"
-@@ -151,6 +132,0 @@
+@@ -151,6 +148,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "EUR"
 -              }
 -            },
-@@ -229,1 +204,1 @@
+@@ -229,1 +220,1 @@
 -                  "value" : "observable-2"
 +                  "value" : "observable-1"
-@@ -256,0 +231,1 @@
+@@ -256,0 +247,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -277,1 +253,1 @@
+@@ -277,1 +269,1 @@
 -              "value" : "observable-1"
 +              "value" : "observable-2"
-@@ -293,1 +269,2 @@
+@@ -293,1 +285,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -362,1 +339,1 @@
+@@ -309,0 +302,3 @@
++            },
++            "multiplier" : {
++              "value" : 300000.0
+@@ -362,1 +358,1 @@
 -              "value" : "observable-2"
 +              "value" : "observable-1"
-@@ -379,1 +356,0 @@
+@@ -379,1 +375,0 @@
 -    "adjustment" : "Standard",
-@@ -393,0 +369,9 @@
+@@ -393,0 +388,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "124897",
@@ -62,7 +49,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -404,0 +389,9 @@
+@@ -404,0 +408,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

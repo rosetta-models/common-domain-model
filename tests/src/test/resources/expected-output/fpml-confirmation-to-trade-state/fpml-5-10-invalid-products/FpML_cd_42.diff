@@ -1,13 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/FpML_cd_42.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_42.json
-@@ -126,1 +126,0 @@
--                "allGuarantees" : true,
-@@ -141,2 +140,1 @@
+@@ -141,2 +141,1 @@
 -              },
 -              "substitution" : true
 +              }
-@@ -147,3 +145,1 @@
--                  "applicable" : true,
--                  "multipleHolderObligation" : true,
--                  "multipleCreditEventNotices" : true
-+                  "applicable" : true
+@@ -250,0 +249,3 @@
++            },
++            "multiplier" : {
++              "value" : 500000000
+@@ -267,0 +269,3 @@
++            },
++            "multiplier" : {
++              "value" : 500000000

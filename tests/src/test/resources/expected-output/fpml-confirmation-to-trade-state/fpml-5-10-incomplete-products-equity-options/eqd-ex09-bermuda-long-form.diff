@@ -1,11 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex09-bermuda-long-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex09-bermuda-long-form.json
-@@ -51,5 +51,7 @@
--              "expirationTimeType" : "Close",
--              "multipleExercise" : {
--                "integralMultipleAmount" : 1,
--                "minimumNumberOfOptions" : 1,
--                "maximumNumberOfOptions" : 500000
+@@ -51,0 +51,27 @@
 +              "commencementDate" : {
 +                "adjustableDate" : {
 +                  "unadjustedDate" : "2002-01-17",
@@ -13,7 +8,7 @@
 +                    "businessDayConvention" : "NONE"
 +                  }
 +                }
-@@ -57,0 +59,20 @@
++              },
 +              "exerciseDates" : {
 +                "adjustableDates" : {
 +                  "adjustedDate" : [ {
@@ -33,8 +28,7 @@
 +                  }
 +                }
 +              } ],
-+              "expirationTimeType" : "Close",
-@@ -108,13 +130,0 @@
+@@ -108,13 +135,0 @@
 -            "value" : 31000,
 -            "unit" : {
 -              "financialUnit" : "Share"
@@ -48,13 +42,7 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -126,4 +135,1 @@
--              "value" : 1.00,
--              "unit" : {
--                "financialUnit" : "Share"
--              }
-+              "value" : 1.00
-@@ -218,0 +224,9 @@
+@@ -218,0 +232,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

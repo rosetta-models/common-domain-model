@@ -2,77 +2,17 @@
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-partial-termination.json
 @@ -3,0 +3,1 @@
 +    "intent" : "Clearing",
-@@ -6,63 +7,0 @@
--      "primitiveInstruction" : {
--        "quantityChange" : {
--          "change" : [ {
--            "quantity" : [ {
--              "value" : {
--                "value" : 5000000,
--                "unit" : {
--                  "currency" : {
--                    "value" : "USD"
--                  }
--                }
--              },
--              "meta" : {
--                "location" : [ {
--                  "scope" : "DOCUMENT",
--                  "value" : "quantity-1"
--                } ]
--              }
--            } ]
--          } ],
--          "direction" : "Replace"
--        },
--        "transfer" : {
--          "transferState" : [ {
--            "transfer" : {
--              "quantity" : {
--                "value" : 12345.00,
--                "unit" : {
--                  "currency" : {
--                    "value" : "USD"
--                  }
--                }
--              },
--              "asset" : {
--                "Cash" : {
--                  "identifier" : [ {
--                    "identifier" : {
--                      "value" : "USD"
--                    },
--                    "identifierType" : "CurrencyCode"
--                  } ]
--                }
--              },
--              "settlementDate" : {
--                "adjustedDate" : {
--                  "value" : "2011-06-03"
--                }
--              },
--              "payerReceiver" : {
--                "payerPartyReference" : {
--                  "externalReference" : "party1"
--                },
--                "receiverPartyReference" : {
--                  "externalReference" : "party2"
--                }
+@@ -61,3 +62,0 @@
 -              },
 -              "transferExpression" : {
 -                "priceTransfer" : "Termination"
--              }
--            }
--          } ]
--        }
--      },
-@@ -304,2 +242,1 @@
+@@ -304,2 +302,1 @@
 -                } ],
 -                "nonStandardisedTerms" : false
 +                } ]
-@@ -341,0 +278,1 @@
+@@ -341,0 +338,1 @@
 +                            "assetClass" : "InterestRate",
-@@ -428,0 +366,10 @@
+@@ -428,0 +426,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "712345678901234567890123456789012",
@@ -83,37 +23,9 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -474,1 +422,0 @@
+@@ -474,1 +482,0 @@
 -                "firstName" : "jjone",
-@@ -552,30 +499,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "SEF005",
--      "meta" : {
--        "scheme" : "http://www.bankx.com/msg_id"
--      }
--    },
--    "sentBy" : {
--      "value" : "BANKX"
--    },
--    "sentTo" : [ {
--      "value" : "SDR01"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2011-06-01T10:13:07Z",
--    "qualification" : "eventCreationDateTime"
+@@ -570,3 +577,0 @@
 -  }, {
 -    "dateTime" : "2011-06-01T10:12:34Z",
 -    "qualification" : "executionDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "SEF005"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

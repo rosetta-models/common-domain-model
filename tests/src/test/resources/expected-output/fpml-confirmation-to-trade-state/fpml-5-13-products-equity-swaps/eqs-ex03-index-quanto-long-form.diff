@@ -36,13 +36,17 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -344,0 +323,5 @@
+@@ -320,0 +299,3 @@
++            },
++            "multiplier" : {
++              "value" : 5591987.41
+@@ -344,0 +326,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "France CAC 40 Index"
 +                        },
 +                        "identifierType" : "Name"
-@@ -374,9 +358,1 @@
+@@ -374,9 +361,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -53,13 +57,13 @@
 -                    }
 -                  } ]
 +                  }
-@@ -402,0 +378,5 @@
+@@ -402,0 +381,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "IBEX 35"
 +                        },
 +                        "identifierType" : "Name"
-@@ -417,9 +398,1 @@
+@@ -417,9 +401,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -70,13 +74,13 @@
 -                    }
 -                  } ]
 +                  }
-@@ -445,0 +418,5 @@
+@@ -445,0 +421,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "Hong Kong Hang Seng Index"
 +                        },
 +                        "identifierType" : "Name"
-@@ -460,9 +438,1 @@
+@@ -460,9 +441,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -87,25 +91,12 @@
 -                    }
 -                  } ]
 +                  }
-@@ -490,10 +460,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
-@@ -506,1 +466,1 @@
+@@ -506,1 +479,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -522,0 +482,1 @@
+@@ -522,0 +495,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -566,1 +527,0 @@
--    "adjustment" : "Standard",
-@@ -580,0 +540,9 @@
+@@ -580,0 +554,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "1734",
@@ -115,7 +106,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -591,0 +560,9 @@
+@@ -591,0 +574,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

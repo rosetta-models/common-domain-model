@@ -1,21 +1,27 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/credit/cds-basket.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-credit/cds-basket.json
-@@ -39,6 +39,0 @@
--            "settlementTerms" : {
+@@ -40,4 +40,1 @@
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "USD"
 -              }
--            },
-@@ -138,7 +132,0 @@
--                  "gracePeriodExtension" : {
++              "settlementType" : "Cash"
+@@ -139,5 +136,1 @@
 -                    "applicable" : true,
 -                    "gracePeriod" : {
 -                      "periodMultiplier" : 0,
 -                      "period" : "D"
 -                    }
--                  },
-@@ -282,0 +269,9 @@
++                    "applicable" : true
+@@ -231,0 +224,3 @@
++            },
++            "multiplier" : {
++              "value" : 25000000
+@@ -248,0 +244,3 @@
++            },
++            "multiplier" : {
++              "value" : 25000000
+@@ -282,0 +281,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

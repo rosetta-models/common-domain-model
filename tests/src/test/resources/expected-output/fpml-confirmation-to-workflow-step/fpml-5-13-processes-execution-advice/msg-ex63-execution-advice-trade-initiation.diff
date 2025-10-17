@@ -2,32 +2,3 @@
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex63-execution-advice-trade-initiation.json
 @@ -299,0 +299,1 @@
 +                            "assetClass" : "InterestRate",
-@@ -450,27 +451,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "0482588",
--      "meta" : {
--        "scheme" : "http://www.amag.com/coding-scheme/message-id"
--      }
--    },
--    "sentBy" : {
--      "value" : "AMAGGB22XXX"
--    },
--    "sentTo" : [ {
--      "value" : "CCSTUS6S"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2007-07-27T10:02:00Z",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "0482588"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

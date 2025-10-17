@@ -1,54 +1,24 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-12/products/equity/eqs-ex13-pan-asia-interdealer-share-swap-short-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-equity/eqs-ex13-pan-asia-interdealer-share-swap-short-form.json
-@@ -9,29 +9,0 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2009-09-01",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING",
--              "businessCenters" : {
--                "businessCenter" : [ {
--                  "value" : "KRSE"
--                } ]
--              }
--            }
--          },
--          "meta" : {
--            "externalKey" : "equityEffectiveDate"
--          }
--        },
--        "terminationDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2010-03-02",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING",
--              "businessCenters" : {
--                "businessCenter" : [ {
--                  "value" : "KRSE"
--                } ]
--              }
--            }
--          }
--        },
-@@ -144,0 +115,3 @@
+@@ -144,0 +144,3 @@
 +                  },
 +                  "meta" : {
 +                    "externalKey" : "interestLegPaymentDates"
-@@ -185,1 +159,1 @@
+@@ -185,1 +188,1 @@
 -                  "value" : "quantity-2"
 +                  "value" : "quantity-1"
-@@ -187,3 +161,0 @@
+@@ -187,3 +190,0 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "equityNotionalAmount"
-@@ -192,6 +163,0 @@
+@@ -192,6 +192,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "USD"
 -              }
 -            },
-@@ -201,40 +166,0 @@
+@@ -201,40 +195,0 @@
 -                "valuationDates" : {
 -                  "periodicDates" : {
 -                    "startDate" : {
@@ -89,12 +59,10 @@
 -                    "externalKey" : "interimValuationDate"
 -                  }
 -                },
-@@ -304,1 +229,1 @@
+@@ -304,1 +258,1 @@
 -                  "value" : "observable-2"
 +                  "value" : "observable-1"
-@@ -342,1 +267,0 @@
--                "firstOrSecondPeriod" : "SecondPeriod",
-@@ -346,1 +270,6 @@
+@@ -346,1 +300,6 @@
 -                      "dateReference" : "SharePayment"
 +                      "dateReference" : "SharePayment",
 +                      "paymentDateOffset" : {
@@ -102,49 +70,39 @@
 +                        "period" : "D",
 +                        "dayType" : "CurrencyBusiness"
 +                      }
-@@ -364,10 +293,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
-@@ -396,0 +315,1 @@
+@@ -396,0 +355,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -417,1 +337,1 @@
+@@ -417,1 +377,1 @@
 -              "value" : "observable-1"
 +              "value" : "observable-2"
-@@ -433,1 +353,2 @@
+@@ -433,1 +393,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -444,13 +365,0 @@
--            "value" : 60000,
--            "unit" : {
+@@ -446,1 +407,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
++              "currency" : {
++                "value" : "USD"
++              }
++            },
++            "multiplier" : {
++              "value" : 60000
+@@ -452,1 +418,1 @@
 -              "value" : "quantity-1"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -467,1 +375,1 @@
++              "value" : "quantity-2"
+@@ -462,0 +428,3 @@
++            },
++            "multiplier" : {
++              "value" : 300000
+@@ -467,1 +436,1 @@
 -              "value" : "quantity-2"
 +              "value" : "quantity-1"
-@@ -515,1 +423,1 @@
+@@ -515,1 +484,1 @@
 -              "value" : "observable-2"
 +              "value" : "observable-1"
-@@ -538,1 +446,0 @@
+@@ -538,1 +507,0 @@
 -    "adjustment" : "Standard",
-@@ -552,0 +459,9 @@
+@@ -552,0 +520,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "299442",
@@ -154,7 +112,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -563,0 +479,9 @@
+@@ -563,0 +540,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

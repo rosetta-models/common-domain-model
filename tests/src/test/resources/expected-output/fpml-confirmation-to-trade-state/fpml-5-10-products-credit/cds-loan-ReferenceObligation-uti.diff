@@ -3,19 +3,15 @@
 @@ -6,1 +6,1 @@
 -        "productQualifier" : "CreditDefaultSwap_Loan"
 +        "productQualifier" : "CreditDefaultSwap_SingleName"
-@@ -52,3 +52,0 @@
--                "physicalSettlementPeriod" : {
--                  "maximumBusinessDays" : 30
--                },
-@@ -68,3 +65,1 @@
+@@ -68,3 +68,1 @@
 -                  "notBearer" : true,
 -                  "excluded" : "true",
 -                  "othReferenceEntityObligations" : "true"
 +                  "notBearer" : true
-@@ -82,1 +77,1 @@
+@@ -82,1 +80,1 @@
 -                  "loan" : {
 +                  "security" : {
-@@ -92,16 +87,1 @@
+@@ -92,16 +90,1 @@
 -                    "instrumentType" : "Debt",
 -                    "lien" : {
 -                      "value" : "FirstLienLoan"
@@ -33,15 +29,13 @@
 -                      "value" : "CompanyABC"
 -                    }
 +                    "instrumentType" : "Debt"
-@@ -110,1 +90,0 @@
--                "allGuarantees" : false,
-@@ -124,2 +103,1 @@
+@@ -124,2 +107,1 @@
 -                },
 -                "securedList" : false
 +                }
-@@ -153,1 +131,0 @@
+@@ -153,1 +135,0 @@
 -                    "publicSource" : [ "Standard Public Sources" ],
-@@ -160,6 +137,1 @@
+@@ -160,6 +141,1 @@
 -                "notSubordinated" : true,
 -                "excluded" : "true",
 -                "othReferenceEntityObligations" : "true",
@@ -49,7 +43,15 @@
 -                  "value" : "FirstLienLoan"
 -                }
 +                "notSubordinated" : true
-@@ -300,0 +272,10 @@
+@@ -254,0 +230,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -271,0 +250,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -300,0 +282,10 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "56323",

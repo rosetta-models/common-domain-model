@@ -1,24 +1,19 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/credit-derivatives/cds-loan-SecuredList.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-credit-derivatives/cds-loan-SecuredList.json
-@@ -52,3 +52,0 @@
--                "physicalSettlementPeriod" : {
--                  "maximumBusinessDays" : 30
--                },
-@@ -68,3 +65,1 @@
+@@ -68,3 +68,1 @@
 -                  "notBearer" : true,
 -                  "excluded" : "true",
 -                  "othReferenceEntityObligations" : "true"
 +                  "notBearer" : true
-@@ -81,2 +76,0 @@
+@@ -81,1 +79,0 @@
 -                "noReferenceObligation" : true,
--                "allGuarantees" : false,
-@@ -96,2 +89,1 @@
+@@ -96,2 +93,1 @@
 -                },
 -                "securedList" : true
 +                }
-@@ -125,1 +117,0 @@
+@@ -125,1 +121,0 @@
 -                    "publicSource" : [ "Standard Public Sources" ],
-@@ -132,6 +123,1 @@
+@@ -132,6 +127,1 @@
 -                "notSubordinated" : true,
 -                "excluded" : "true",
 -                "othReferenceEntityObligations" : "true",
@@ -26,7 +21,15 @@
 -                  "value" : "FirstLienLoan"
 -                }
 +                "notSubordinated" : true
-@@ -284,0 +270,9 @@
+@@ -226,0 +216,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000
+@@ -243,0 +236,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000
+@@ -284,0 +280,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "109257",
@@ -36,7 +39,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -295,0 +290,9 @@
+@@ -295,0 +300,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

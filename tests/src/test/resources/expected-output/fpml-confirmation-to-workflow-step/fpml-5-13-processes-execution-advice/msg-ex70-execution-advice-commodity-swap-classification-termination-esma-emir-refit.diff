@@ -1,18 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/processes/execution-advice/msg-ex70-execution-advice-commodity-swap-classification-termination-esma-emir-refit.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex70-execution-advice-commodity-swap-classification-termination-esma-emir-refit.json
-@@ -8,12 +8,7 @@
--        "quantityChange" : {
--          "direction" : "Replace"
--        },
--        "transfer" : {
--          "transferState" : [ {
--            "transfer" : {
--              "quantity" : {
--                "value" : 5000.00,
--                "unit" : {
--                  "currency" : {
--                    "value" : "USD"
--                  }
+@@ -8,0 +8,31 @@
 +        "contractFormation" : {
 +          "legalAgreement" : [ {
 +            "legalAgreementIdentification" : {
@@ -20,35 +8,8 @@
 +                "agreementType" : "MasterAgreement",
 +                "masterAgreementType" : {
 +                  "value" : "ISDAMaster"
-@@ -21,26 +16,0 @@
--              },
--              "asset" : {
--                "Cash" : {
--                  "identifier" : [ {
--                    "identifier" : {
--                      "value" : "USD"
--                    },
--                    "identifierType" : "CurrencyCode"
--                  } ]
--                }
--              },
--              "settlementDate" : {
--                "adjustedDate" : {
--                  "value" : "2009-05-30"
--                }
--              },
--              "payerReceiver" : {
--                "payerPartyReference" : {
--                  "externalReference" : "partyB"
--                },
--                "receiverPartyReference" : {
--                  "externalReference" : "partyA"
--                }
--              },
--              "transferExpression" : {
--                "priceTransfer" : "Termination"
-@@ -48,1 +17,20 @@
--            }
++                }
++              }
 +            },
 +            "contractualParty" : [ {
 +              "externalReference" : "partyA"
@@ -69,25 +30,27 @@
 +            }, {
 +              "externalReference" : "partyB"
 +            } ]
-@@ -99,2 +87,2 @@
++          } ]
++        },
+@@ -99,2 +130,2 @@
 -                      "payer" : "Party1",
 -                      "receiver" : "Party2"
 +                      "payer" : "Party2",
 +                      "receiver" : "Party1"
-@@ -103,0 +91,1 @@
+@@ -103,0 +134,1 @@
 +                      "settlementType" : "Cash",
-@@ -117,1 +106,1 @@
+@@ -117,1 +149,1 @@
 -                          "value" : "observable-2"
 +                          "value" : "observable-1"
-@@ -125,2 +114,2 @@
+@@ -125,2 +157,2 @@
 -                      "payer" : "Party2",
 -                      "receiver" : "Party1"
 +                      "payer" : "Party1",
 +                      "receiver" : "Party2"
-@@ -132,1 +121,1 @@
+@@ -132,1 +164,1 @@
 -                          "value" : "observable-1"
 +                          "value" : "observable-2"
-@@ -142,0 +131,12 @@
+@@ -142,0 +174,12 @@
 +                "price" : [ {
 +                  "value" : {
 +                    "priceType" : "AssetPrice",
@@ -100,7 +63,7 @@
 +                    } ]
 +                  }
 +                } ],
-@@ -146,0 +147,25 @@
+@@ -146,0 +190,25 @@
 +                        "identifier" : [ {
 +                          "identifier" : {
 +                            "value" : "OIL-WTI-NYMEX",
@@ -126,7 +89,7 @@
 +                  "value" : {
 +                    "Asset" : {
 +                      "Commodity" : {
-@@ -181,25 +207,0 @@
+@@ -181,25 +250,0 @@
 -                      "value" : "observable-1"
 -                    } ]
 -                  }
@@ -152,13 +115,13 @@
 -                  "meta" : {
 -                    "location" : [ {
 -                      "scope" : "DOCUMENT",
-@@ -215,1 +216,1 @@
+@@ -215,1 +259,1 @@
 -                "externalReference" : "partyB"
 +                "externalReference" : "partyA"
-@@ -220,1 +221,1 @@
+@@ -220,1 +264,1 @@
 -                "externalReference" : "partyA"
 +                "externalReference" : "partyB"
-@@ -236,0 +237,9 @@
+@@ -236,0 +280,9 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "1234",
@@ -168,7 +131,7 @@
 +                }
 +              } ]
 +            }, {
-@@ -247,0 +257,9 @@
+@@ -247,0 +300,9 @@
 +            }, {
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
@@ -178,7 +141,7 @@
 +                  }
 +                }
 +              } ]
-@@ -284,0 +303,8 @@
+@@ -284,0 +346,8 @@
 +            "partyRole" : [ {
 +              "partyReference" : {
 +                "externalReference" : "partyA"
@@ -187,41 +150,21 @@
 +                "externalReference" : "partyA"
 +              }
 +            } ],
-@@ -295,2 +322,0 @@
+@@ -295,2 +365,0 @@
 -                  "externalReference" : "partyB"
 -                }, {
-@@ -298,0 +323,2 @@
+@@ -298,0 +366,2 @@
 +                }, {
 +                  "externalReference" : "partyB"
-@@ -309,2 +336,0 @@
+@@ -309,2 +379,0 @@
 -                  "externalReference" : "partyB"
 -                }, {
-@@ -312,0 +337,2 @@
+@@ -312,0 +380,2 @@
 +                }, {
 +                  "externalReference" : "partyB"
-@@ -319,24 +346,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "COMMODITYFPMLORGPTTRADEREF",
--      "meta" : {
--        "scheme" : "http://www.xxx.com/coding-scheme/message-id"
--      }
--    },
--    "sentBy" : {
+@@ -328,1 +398,4 @@
 -      "value" : "ORIGUS33XXX"
--    }
--  },
--  "timestamp" : [ {
--    "dateTime" : "2009-05-25T12:01:00Z",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "COMMODITYFPMLORGPTTRADEREF"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }
++      "value" : "ORIGUS33XXX",
++      "meta" : {
++        "scheme" : "http://www.fpml.org/ext/iso9362"
++      }

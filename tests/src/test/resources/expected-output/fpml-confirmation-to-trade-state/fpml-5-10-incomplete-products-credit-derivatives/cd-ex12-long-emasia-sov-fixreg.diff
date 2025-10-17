@@ -1,23 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/credit-derivatives/cd-ex12-long-emasia-sov-fixreg.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-credit-derivatives/cd-ex12-long-emasia-sov-fixreg.json
-@@ -72,2 +72,0 @@
--                  "notSovereignLender" : true,
--                  "notDomesticLaw" : true,
-@@ -75,1 +73,0 @@
--                  "notDomesticIssuance" : true,
-@@ -151,2 +148,0 @@
--                "obligationAcceleration" : true,
--                "repudiationMoratorium" : true,
-@@ -176,7 +171,1 @@
--                "category" : "BondOrLoan",
--                "notSovereignLender" : true,
--                "notDomesticCurrency" : {
--                  "applicable" : true
--                },
--                "notDomesticLaw" : true,
--                "notDomesticIssuance" : true
-+                "category" : "BondOrLoan"
-@@ -328,0 +317,9 @@
+@@ -270,0 +270,3 @@
++            },
++            "multiplier" : {
++              "value" : 20000000.0
+@@ -287,0 +290,3 @@
++            },
++            "multiplier" : {
++              "value" : 20000000.0
+@@ -328,0 +334,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "37205",
@@ -27,7 +18,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -339,0 +337,9 @@
+@@ -339,0 +354,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

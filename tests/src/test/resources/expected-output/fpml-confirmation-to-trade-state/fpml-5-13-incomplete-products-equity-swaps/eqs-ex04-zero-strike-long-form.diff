@@ -12,23 +12,19 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -185,13 +180,0 @@
--            "value" : 31000,
--            "unit" : {
+@@ -187,1 +182,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
--              "value" : "quantity-2"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -271,1 +253,0 @@
--    "adjustment" : "Standard",
-@@ -285,0 +266,9 @@
++              "currency" : {
++                "value" : "USD"
++              }
++            },
++            "multiplier" : {
++              "value" : 31000
+@@ -203,0 +203,3 @@
++            },
++            "multiplier" : {
++              "value" : 55911.60
+@@ -285,0 +288,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "1234",
@@ -38,7 +34,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -296,0 +286,9 @@
+@@ -296,0 +308,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

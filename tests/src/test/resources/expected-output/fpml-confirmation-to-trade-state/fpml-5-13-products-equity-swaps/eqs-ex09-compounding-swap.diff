@@ -1,12 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/equity-swaps/eqs-ex09-compounding-swap.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex09-compounding-swap.json
-@@ -9,5 +9,74 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2008-01-01",
--            "dateAdjustments" : {
--              "businessDayConvention" : "NONE"
-+        "payout" : [ {
+@@ -31,0 +31,76 @@
 +          "InterestRatePayout" : {
 +            "payerReceiver" : {
 +              "payer" : "Party2",
@@ -80,40 +74,25 @@
 +                "externalReference" : "floatingCalculationPeriodDates"
 +              },
 +              "resetRelativeTo" : "CalculationPeriodStartDate"
-@@ -15,3 +84,0 @@
--          },
--          "meta" : {
--            "externalKey" : "equityEffectiveDate"
-@@ -19,12 +85,1 @@
--        },
--        "terminationDate" : {
--          "relativeDate" : {
--            "periodMultiplier" : 0,
--            "period" : "D",
--            "businessDayConvention" : "NONE",
--            "dateRelativeTo" : {
--              "externalReference" : "finalCashSettlementPaymentDate"
--            }
--          }
--        },
--        "payout" : [ {
++            }
++          }
 +        }, {
-@@ -48,6 +103,0 @@
+@@ -48,6 +124,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "USD"
 -              }
 -            },
-@@ -64,3 +113,0 @@
+@@ -64,3 +134,0 @@
 -                },
 -                "meta" : {
 -                  "externalKey" : "equityValuationDates"
-@@ -100,3 +146,0 @@
+@@ -100,3 +167,0 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "CashSettlementPaymentDate"
-@@ -119,93 +162,1 @@
+@@ -119,93 +183,1 @@
 -        }, {
 -          "InterestRatePayout" : {
 -            "payerReceiver" : {
@@ -208,38 +187,29 @@
 -          }
 -        }
 +        } ]
-@@ -219,5 +170,0 @@
+@@ -219,5 +191,0 @@
 -            "unit" : {
 -              "currency" : {
 -                "value" : "USD"
 -              }
 -            },
-@@ -227,1 +173,2 @@
+@@ -227,1 +194,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -232,1 +179,1 @@
+@@ -232,1 +200,1 @@
 -              "value" : "price-1"
 +              "value" : "price-2"
-@@ -297,10 +244,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "USD"
--              }
--            },
-@@ -313,1 +250,1 @@
+@@ -243,0 +211,3 @@
++            },
++            "multiplier" : {
++              "value" : 1000000
+@@ -313,1 +284,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -329,0 +266,1 @@
+@@ -329,0 +300,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -367,1 +305,0 @@
--    "adjustment" : "Standard",
-@@ -380,0 +317,9 @@
+@@ -380,0 +352,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -249,7 +219,7 @@
 +          }
 +        }
 +      } ]
-@@ -426,20 +372,0 @@
+@@ -426,20 +407,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

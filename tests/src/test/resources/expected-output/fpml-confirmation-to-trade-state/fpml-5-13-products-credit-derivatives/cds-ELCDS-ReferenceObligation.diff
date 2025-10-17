@@ -50,7 +50,11 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "calculationAmount"
-@@ -251,0 +218,9 @@
+@@ -211,0 +178,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -251,0 +221,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -60,7 +64,7 @@
 +          }
 +        }
 +      } ]
-@@ -315,20 +291,0 @@
+@@ -315,20 +294,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

@@ -1,50 +1,30 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-swaps/eqs-ex16-forward-starting-post-european-interdealer-share-swap-short-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-swaps/eqs-ex16-forward-starting-post-european-interdealer-share-swap-short-form.json
-@@ -9,19 +9,0 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2009-10-09",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING"
--            }
--          },
--          "meta" : {
--            "externalKey" : "equityEffectiveDate"
--          }
--        },
--        "terminationDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2009-12-09",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING"
--            }
--          }
--        },
-@@ -134,0 +115,3 @@
+@@ -134,0 +134,3 @@
 +                  },
 +                  "meta" : {
 +                    "externalKey" : "interestLegPaymentDates"
-@@ -175,1 +159,1 @@
+@@ -175,1 +178,1 @@
 -                  "value" : "quantity-2"
 +                  "value" : "quantity-1"
-@@ -178,4 +162,1 @@
+@@ -178,4 +181,1 @@
 -              "reset" : true,
 -              "meta" : {
 -                "externalKey" : "equityNotionalAmount"
 -              }
 +              "reset" : true
-@@ -183,6 +164,0 @@
+@@ -183,6 +183,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "EUR"
 -              }
 -            },
-@@ -190,3 +165,0 @@
+@@ -190,3 +184,0 @@
 -              "initialValuationDate" : {
 -                "determinationMethod" : "AgreedInitialPrice"
 -              },
-@@ -195,35 +167,0 @@
+@@ -195,35 +186,0 @@
 -                "valuationDates" : {
 -                  "periodicDates" : {
 -                    "startDate" : {
@@ -80,58 +60,46 @@
 -                    "externalKey" : "interimValuationDate"
 -                  }
 -                },
-@@ -288,1 +225,1 @@
+@@ -288,1 +244,1 @@
 -                  "value" : "observable-2"
 +                  "value" : "observable-1"
-@@ -298,3 +235,1 @@
+@@ -298,3 +254,1 @@
 -                  "totalRatio" : 1,
 -                  "cashRatio" : 1,
 -                  "nonCashRatio" : 1
 +                  "totalRatio" : 1
-@@ -302,1 +237,0 @@
--                "firstOrSecondPeriod" : "SecondPeriod",
-@@ -306,2 +240,0 @@
+@@ -306,2 +260,0 @@
 -                "nonCashDividendTreatment" : "PotentialAdjustmentEvent",
 -                "dividendComposition" : "EquityAmountReceiverElection",
-@@ -326,10 +258,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
-@@ -358,0 +280,1 @@
+@@ -358,0 +310,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -379,1 +302,1 @@
+@@ -379,1 +332,1 @@
 -              "value" : "observable-1"
 +              "value" : "observable-2"
-@@ -395,1 +318,2 @@
+@@ -395,1 +348,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -406,13 +330,0 @@
--            "value" : 100000,
--            "unit" : {
+@@ -408,1 +362,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
++              "currency" : {
++                "value" : "EUR"
++              }
++            },
++            "multiplier" : {
++              "value" : 100000
+@@ -414,1 +373,1 @@
 -              "value" : "quantity-1"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -429,1 +340,1 @@
++              "value" : "quantity-2"
+@@ -424,0 +383,3 @@
++            },
++            "multiplier" : {
++              "value" : 1000000
+@@ -429,1 +391,1 @@
 -              "value" : "quantity-2"
 +              "value" : "quantity-1"
-@@ -477,1 +388,1 @@
+@@ -477,1 +439,1 @@
 -              "value" : "observable-2"
 +              "value" : "observable-1"
-@@ -494,1 +405,0 @@
+@@ -494,1 +456,0 @@
 -    "adjustment" : "Standard",

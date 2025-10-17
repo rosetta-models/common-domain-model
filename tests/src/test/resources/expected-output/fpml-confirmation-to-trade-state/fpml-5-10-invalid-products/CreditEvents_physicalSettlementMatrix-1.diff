@@ -1,30 +1,22 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/CreditEvents_physicalSettlementMatrix-1.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CreditEvents_physicalSettlementMatrix-1.json
-@@ -64,5 +64,0 @@
--                  "notSovereignLender" : false,
+@@ -65,3 +65,0 @@
 -                  "notDomesticCurrency" : {
 -                    "applicable" : false
 -                  },
--                  "notDomesticLaw" : true,
-@@ -70,1 +65,0 @@
--                  "notDomesticIssuance" : true,
-@@ -82,2 +76,1 @@
+@@ -82,2 +79,1 @@
 -                  "notBearer" : true,
 -                  "fullFaithAndCreditObLiability" : true
 +                  "notBearer" : true
-@@ -95,2 +88,0 @@
+@@ -95,1 +91,0 @@
 -                "noReferenceObligation" : true,
--                "allGuarantees" : false,
-@@ -110,2 +101,1 @@
+@@ -110,2 +105,1 @@
 -                },
 -                "securedList" : true
 +                }
-@@ -138,1 +128,0 @@
+@@ -138,1 +132,0 @@
 -                    "publicSource" : [ "Standard Public Sources" ],
-@@ -145,10 +134,1 @@
--                "notSubordinated" : true,
--                "notSovereignLender" : true,
--                "notDomesticLaw" : true,
+@@ -148,7 +141,1 @@
 -                "notDomesticIssuance" : true,
 -                "fullFaithAndCreditObLiability" : true,
 -                "excluded" : "true",
@@ -32,4 +24,12 @@
 -                "designatedPriority" : {
 -                  "value" : "FirstLienLoan"
 -                }
-+                "notSubordinated" : true
++                "notDomesticIssuance" : true
+@@ -243,0 +230,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000
+@@ -260,0 +250,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000

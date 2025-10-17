@@ -1,12 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex01-american-call-stock-long-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex01-american-call-stock-long-form.json
-@@ -135,4 +135,1 @@
--              "value" : 1.00,
--              "unit" : {
--                "financialUnit" : "Share"
--              }
-+              "value" : 1.00
-@@ -219,0 +216,9 @@
+@@ -219,0 +219,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

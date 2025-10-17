@@ -6,7 +6,11 @@
 +                              "value" : "IBM ordinary shares"
 +                            },
 +                            "identifierType" : "Name"
-@@ -198,0 +203,9 @@
+@@ -117,0 +122,3 @@
++            },
++            "multiplier" : {
++              "value" : 350000
+@@ -198,0 +206,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "6234",
@@ -16,7 +20,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -209,0 +223,9 @@
+@@ -209,0 +226,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

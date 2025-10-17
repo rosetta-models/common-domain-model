@@ -20,7 +20,11 @@
 -                      },
 -                      "meta" : {
 -                        "externalKey" : "calculationAmount"
-@@ -288,0 +271,18 @@
+@@ -200,0 +183,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 70000000.00
+@@ -288,0 +274,18 @@
 +            "contractDetails" : {
 +              "documentation" : [ {
 +                "agreementDate" : "2009-05-22",
@@ -39,32 +43,3 @@
 +                } ]
 +              } ]
 +            },
-@@ -352,27 +353,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "IM/5",
--      "meta" : {
--        "scheme" : "http://www.imgr.com/schemes/message-id"
--      }
--    },
--    "sentBy" : {
--      "value" : "IMGRUS6S"
--    },
--    "sentTo" : [ {
--      "value" : "CUSTUS3T"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2009-06-08T10:03:09-08:00",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "IM/5"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

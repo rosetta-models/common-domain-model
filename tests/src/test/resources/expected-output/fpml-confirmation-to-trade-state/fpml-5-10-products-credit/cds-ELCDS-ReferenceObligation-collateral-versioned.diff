@@ -7,17 +7,16 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "gu5gh"
-@@ -42,6 +39,0 @@
--            "settlementTerms" : {
+@@ -43,4 +40,1 @@
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "USD"
 -              }
--            },
-@@ -62,1 +53,1 @@
++              "settlementType" : "Cash"
+@@ -62,1 +56,1 @@
 -                  "loan" : {
 +                  "security" : {
-@@ -88,17 +79,1 @@
+@@ -88,17 +82,1 @@
 -                    "instrumentType" : "Debt",
 -                    "borrower" : [ {
 -                      "name" : {
@@ -36,11 +35,11 @@
 -                    },
 -                    "creditAgreementDate" : "2005-11-04"
 +                    "instrumentType" : "Debt"
-@@ -106,2 +81,1 @@
+@@ -106,2 +84,1 @@
 -                } ],
 -                "securedList" : false
 +                } ]
-@@ -112,11 +86,1 @@
+@@ -112,11 +89,1 @@
 -                "category" : "Loan",
 -                "fullFaithAndCreditObLiability" : true,
 -                "designatedPriority" : {
@@ -53,11 +52,15 @@
 -                "deliveryOfCommitments" : true,
 -                "continuity" : true
 +                "category" : "Loan"
-@@ -138,3 +102,0 @@
+@@ -138,3 +105,0 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "gu5gh"
-@@ -327,20 +288,0 @@
+@@ -217,0 +181,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -327,20 +294,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

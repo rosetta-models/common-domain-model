@@ -1,28 +1,34 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/credit-derivatives/cds-basket-tranche.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cds-basket-tranche.json
-@@ -39,6 +39,0 @@
--            "settlementTerms" : {
+@@ -40,4 +40,1 @@
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "USD"
 -              }
--            },
-@@ -53,6 +47,0 @@
++              "settlementType" : "Cash"
+@@ -53,6 +50,0 @@
 -                "basketId" : [ {
 -                  "value" : "BASKET089",
 -                  "meta" : {
 -                    "scheme" : "http://www.barclaysglobal.com/partners/coding-scheme/indexId"
 -                  }
 -                } ],
-@@ -147,7 +135,0 @@
--                  "gracePeriodExtension" : {
+@@ -148,5 +139,1 @@
 -                    "applicable" : true,
 -                    "gracePeriod" : {
 -                      "periodMultiplier" : 0,
 -                      "period" : "D"
 -                    }
--                  },
-@@ -291,0 +272,9 @@
++                    "applicable" : true
+@@ -240,0 +227,3 @@
++            },
++            "multiplier" : {
++              "value" : 25000000
+@@ -257,0 +247,3 @@
++            },
++            "multiplier" : {
++              "value" : 25000000
+@@ -291,0 +284,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

@@ -1,6 +1,10 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/processes/msg-new-trade-CFTC-clearing.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-new-trade-CFTC-clearing.json
-@@ -258,0 +258,10 @@
+@@ -235,0 +235,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 5000000
+@@ -258,0 +261,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "12345678901234567890123456789012",
@@ -11,7 +15,7 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -274,0 +284,10 @@
+@@ -274,0 +287,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "12345678901234567890123456789012",
@@ -22,11 +26,11 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -352,1 +372,0 @@
+@@ -352,1 +375,0 @@
 -                "firstName" : "person",
-@@ -364,1 +383,0 @@
+@@ -364,1 +386,0 @@
 -                "firstName" : "person",
-@@ -369,7 +387,0 @@
+@@ -369,7 +390,0 @@
 -              "contactInformation" : {
 -                "address" : [ {
 -                  "country" : {
@@ -34,7 +38,7 @@
 -                  }
 -                } ]
 -              },
-@@ -509,0 +520,65 @@
+@@ -509,0 +523,65 @@
 +            "contractDetails" : {
 +              "documentation" : [ {
 +                "agreementDate" : "2002-01-05",
@@ -100,25 +104,7 @@
 +                } ]
 +              } ]
 +            },
-@@ -566,38 +642,0 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "BANKX0001",
--      "meta" : {
--        "scheme" : "http://www.bankx.com/msg_id"
--      }
--    },
--    "sentBy" : {
--      "value" : "BANKX"
--    },
--    "sentTo" : [ {
--      "value" : "SDR01"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2011-03-04T16:42:16Z",
--    "qualification" : "eventCreationDateTime"
+@@ -584,9 +663,0 @@
 -  }, {
 -    "dateTime" : "2011-02-04T16:20:47Z",
 -    "qualification" : "executionDateTime"
@@ -128,14 +114,9 @@
 -  }, {
 -    "dateTime" : "2011-02-04T16:21:27Z",
 -    "qualification" : "clearingDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "BANKX0001"
--      }
--    } ]
--  } ],
+@@ -601,4 +671,1 @@
 -  "action" : "New",
 -  "workflowState" : {
 -    "workflowStatus" : "Cleared"
+-  }
++  "action" : "New"

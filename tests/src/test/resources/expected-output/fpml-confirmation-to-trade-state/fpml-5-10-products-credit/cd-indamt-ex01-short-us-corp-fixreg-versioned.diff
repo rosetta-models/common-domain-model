@@ -4,22 +4,21 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "notional"
-@@ -74,3 +71,0 @@
+@@ -74,1 +71,0 @@
 -                "obligationDefault" : false,
--                "obligationAcceleration" : true,
--                "repudiationMoratorium" : true,
-@@ -81,4 +75,2 @@
--                  },
--                  "multipleHolderObligation" : true
+@@ -83,2 +79,1 @@
 -                },
 -                "governmentalIntervention" : true
-+                  }
 +                }
-@@ -100,3 +92,0 @@
+@@ -100,3 +95,0 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "notional"
-@@ -256,20 +245,0 @@
+@@ -167,0 +159,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000
+@@ -256,20 +251,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

@@ -47,32 +47,13 @@
 -                  "externalKey" : "BACKOFFICE"
 -                }
 -              } ],
-@@ -143,27 +101,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "1234",
--      "meta" : {
--        "scheme" : "http://www.abcbank.com/coding-scheme/abcbank/message-id"
--      }
--    },
--    "sentBy" : {
+@@ -152,1 +110,4 @@
 -      "value" : "FRONTSYSTEM"
--    }
--  },
--  "timestamp" : [ {
--    "dateTime" : "2011-02-04T16:42:16.1Z",
--    "qualification" : "eventCreationDateTime"
++      "value" : "FRONTSYSTEM",
++      "meta" : {
++        "scheme" : "http://www.abcbank.com/coding-scheme/abcbank/business-unit-id-1-0"
++      }
+@@ -158,3 +119,0 @@
 -  }, {
 -    "dateTime" : "2016-08-25T13:00:00.1Z",
 -    "qualification" : "executionDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "1234"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

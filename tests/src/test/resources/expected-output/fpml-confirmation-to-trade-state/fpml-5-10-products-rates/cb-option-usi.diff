@@ -16,7 +16,9 @@
 +              },
 +              "meta" : {
 +                "externalKey" : "f746f"
-@@ -223,0 +218,10 @@
+@@ -164,0 +159,1 @@
++                "financialUnit" : "Contract",
+@@ -223,0 +219,10 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "UITD7895394",

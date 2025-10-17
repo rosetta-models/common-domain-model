@@ -8,13 +8,17 @@
 -                }
 -              }
 +              "expirationTimeType" : "OSP"
-@@ -181,0 +176,5 @@
+@@ -160,0 +155,3 @@
++            },
++            "multiplier" : {
++              "value" : 33333.33
+@@ -181,0 +179,5 @@
 +                }, {
 +                  "identifier" : {
 +                    "value" : "FTSE 100 INDEX"
 +                  },
 +                  "identifierType" : "Name"
-@@ -239,0 +239,9 @@
+@@ -239,0 +242,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "166555",
@@ -24,7 +28,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -250,0 +259,9 @@
+@@ -250,0 +262,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

@@ -14,13 +14,7 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -148,4 +135,1 @@
--              "value" : 1.00,
--              "unit" : {
--                "financialUnit" : "Share"
--              }
-+              "value" : 1.00
-@@ -232,0 +216,9 @@
+@@ -232,0 +219,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

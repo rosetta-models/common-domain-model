@@ -1,25 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/credit-derivatives/cd-ex06-long-emeur-sov-fixreg.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-credit-derivatives/cd-ex06-long-emeur-sov-fixreg.json
-@@ -62,3 +62,0 @@
--                "physicalSettlementPeriod" : {
--                  "businessDaysNotSpecified" : true
--                },
-@@ -72,1 +69,0 @@
--                  "notDomesticLaw" : true,
-@@ -74,1 +70,0 @@
--                  "notDomesticIssuance" : true,
-@@ -143,2 +138,0 @@
--                "obligationAcceleration" : true,
--                "repudiationMoratorium" : true,
-@@ -169,6 +162,1 @@
--                "notSubordinated" : true,
--                "notDomesticCurrency" : {
--                  "applicable" : true
--                },
--                "notDomesticLaw" : true,
--                "notDomesticIssuance" : true
-+                "notSubordinated" : true
-@@ -320,0 +308,9 @@
+@@ -262,0 +262,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000.0
+@@ -279,0 +282,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000.0
+@@ -320,0 +326,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "37261",
@@ -29,7 +18,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -331,0 +328,9 @@
+@@ -331,0 +346,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

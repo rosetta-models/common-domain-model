@@ -1,26 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/invalid-products/CreditEvents_physicalSettlementMatrix-2.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CreditEvents_physicalSettlementMatrix-2.json
-@@ -50,6 +50,1 @@
--              "settlementType" : "Physical",
--              "physicalSettlementTerms" : {
--                "physicalSettlementPeriod" : {
--                  "maximumBusinessDays" : 30
--                }
--              }
-+              "settlementType" : "Physical"
-@@ -64,2 +59,0 @@
+@@ -64,1 +64,0 @@
 -                "noReferenceObligation" : true,
--                "allGuarantees" : false,
-@@ -79,2 +72,1 @@
+@@ -79,2 +78,1 @@
 -                },
 -                "securedList" : true
 +                }
-@@ -107,1 +99,0 @@
+@@ -107,1 +105,0 @@
 -                    "publicSource" : [ "Standard Public Sources" ],
-@@ -114,10 +105,1 @@
--                "notSubordinated" : true,
--                "notSovereignLender" : true,
--                "notDomesticLaw" : true,
+@@ -117,7 +114,1 @@
 -                "notDomesticIssuance" : true,
 -                "fullFaithAndCreditObLiability" : true,
 -                "excluded" : "true",
@@ -28,4 +16,12 @@
 -                "designatedPriority" : {
 -                  "value" : "FirstLienLoan"
 -                }
-+                "notSubordinated" : true
++                "notDomesticIssuance" : true
+@@ -212,0 +203,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000
+@@ -229,0 +223,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000

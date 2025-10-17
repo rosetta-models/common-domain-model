@@ -1,46 +1,26 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/products/equity/eqs-ex14-european-interdealer-share-swap-short-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-equity/eqs-ex14-european-interdealer-share-swap-short-form.json
-@@ -9,19 +9,0 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2009-09-09",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING"
--            }
--          },
--          "meta" : {
--            "externalKey" : "equityEffectiveDate"
--          }
--        },
--        "terminationDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2009-12-09",
--            "dateAdjustments" : {
--              "businessDayConvention" : "FOLLOWING"
--            }
--          }
--        },
-@@ -134,0 +115,3 @@
+@@ -134,0 +134,3 @@
 +                  },
 +                  "meta" : {
 +                    "externalKey" : "interestLegPaymentDates"
-@@ -175,1 +159,1 @@
+@@ -175,1 +178,1 @@
 -                  "value" : "quantity-2"
 +                  "value" : "quantity-1"
-@@ -178,4 +162,1 @@
+@@ -178,4 +181,1 @@
 -              "reset" : true,
 -              "meta" : {
 -                "externalKey" : "equityNotionalAmount"
 -              }
 +              "reset" : true
-@@ -183,6 +164,0 @@
+@@ -183,6 +183,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "EUR"
 -              }
 -            },
-@@ -192,35 +167,0 @@
+@@ -192,35 +186,0 @@
 -                "valuationDates" : {
 -                  "periodicDates" : {
 -                    "startDate" : {
@@ -76,62 +56,50 @@
 -                    "externalKey" : "interimValuationDate"
 -                  }
 -                },
-@@ -285,1 +225,1 @@
+@@ -285,1 +244,1 @@
 -                  "value" : "observable-2"
 +                  "value" : "observable-1"
-@@ -295,3 +235,1 @@
+@@ -295,3 +254,1 @@
 -                  "totalRatio" : 1,
 -                  "cashRatio" : 1,
 -                  "nonCashRatio" : 1
 +                  "totalRatio" : 1
-@@ -299,1 +237,0 @@
--                "firstOrSecondPeriod" : "SecondPeriod",
-@@ -305,2 +242,0 @@
+@@ -305,2 +262,0 @@
 -                "nonCashDividendTreatment" : "PotentialAdjustmentEvent",
 -                "dividendComposition" : "EquityAmountReceiverElection",
-@@ -325,10 +260,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
-@@ -357,0 +282,1 @@
+@@ -357,0 +312,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -378,1 +304,1 @@
+@@ -378,1 +334,1 @@
 -              "value" : "observable-1"
 +              "value" : "observable-2"
-@@ -394,1 +320,2 @@
+@@ -394,1 +350,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -405,13 +332,0 @@
--            "value" : 100000,
--            "unit" : {
+@@ -407,1 +364,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
++              "currency" : {
++                "value" : "EUR"
++              }
++            },
++            "multiplier" : {
++              "value" : 100000
+@@ -413,1 +375,1 @@
 -              "value" : "quantity-1"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -428,1 +342,1 @@
++              "value" : "quantity-2"
+@@ -423,0 +385,3 @@
++            },
++            "multiplier" : {
++              "value" : 1000000
+@@ -428,1 +393,1 @@
 -              "value" : "quantity-2"
 +              "value" : "quantity-1"
-@@ -476,1 +390,1 @@
+@@ -476,1 +441,1 @@
 -              "value" : "observable-2"
 +              "value" : "observable-1"
-@@ -493,1 +407,0 @@
+@@ -493,1 +458,0 @@
 -    "adjustment" : "Standard",
-@@ -507,0 +420,9 @@
+@@ -507,0 +471,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "1558488",
@@ -141,7 +109,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -518,0 +440,9 @@
+@@ -518,0 +491,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

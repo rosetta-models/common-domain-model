@@ -3,20 +3,24 @@
 @@ -104,1 +104,1 @@
 -                          "value" : "quantity-2"
 +                          "value" : "quantity-1"
-@@ -114,3 +114,0 @@
--                        "physicalSettlementPeriod" : {
--                          "maximumBusinessDays" : 30
--                        },
-@@ -241,1 +238,1 @@
+@@ -241,1 +241,1 @@
 -                          "value" : "quantity-1"
 +                          "value" : "quantity-2"
-@@ -320,1 +317,1 @@
+@@ -315,0 +315,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 100000000.0
+@@ -320,1 +323,1 @@
 -                      "value" : "quantity-1"
 +                      "value" : "quantity-2"
-@@ -337,1 +334,1 @@
+@@ -332,0 +335,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 100000000.0
+@@ -337,1 +343,1 @@
 -                      "value" : "quantity-2"
 +                      "value" : "quantity-1"
-@@ -372,0 +369,9 @@
+@@ -372,0 +378,9 @@
 +            }, {
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
@@ -26,7 +30,7 @@
 +                  }
 +                }
 +              } ]
-@@ -449,0 +455,45 @@
+@@ -449,0 +464,45 @@
 +            "contractDetails" : {
 +              "documentation" : [ {
 +                "legalAgreementIdentification" : {
@@ -72,11 +76,11 @@
 +                } ]
 +              } ]
 +            },
-@@ -546,0 +597,3 @@
+@@ -546,0 +606,3 @@
 +              },
 +              "transferExpression" : {
 +                "priceTransfer" : "Upfront"
-@@ -548,0 +602,45 @@
+@@ -548,0 +611,45 @@
 +          }, {
 +            "transfer" : {
 +              "quantity" : {
@@ -122,29 +126,3 @@
 +                "priceTransfer" : "Upfront"
 +              }
 +            }
-@@ -552,24 +651,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "123453212",
--      "meta" : {
--        "scheme" : "http://www.party2.com/message-id"
--      }
--    },
--    "sentBy" : {
--      "value" : "PARTY2US33"
--    }
--  },
--  "timestamp" : [ {
--    "dateTime" : "2002-12-03T09:57:00Z",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "123453212"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

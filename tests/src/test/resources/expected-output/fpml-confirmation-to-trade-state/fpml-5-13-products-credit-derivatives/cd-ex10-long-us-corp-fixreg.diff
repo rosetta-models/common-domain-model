@@ -1,10 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/credit-derivatives/cd-ex10-long-us-corp-fixreg.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-ex10-long-us-corp-fixreg.json
-@@ -62,3 +62,0 @@
--                "physicalSettlementPeriod" : {
--                  "maximumBusinessDays" : 30
--                },
-@@ -321,0 +318,9 @@
+@@ -263,0 +263,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000.0
+@@ -280,0 +283,3 @@
++            },
++            "multiplier" : {
++              "value" : 5000000.0
+@@ -321,0 +327,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "37264",
@@ -14,7 +18,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -332,0 +338,9 @@
+@@ -332,0 +347,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

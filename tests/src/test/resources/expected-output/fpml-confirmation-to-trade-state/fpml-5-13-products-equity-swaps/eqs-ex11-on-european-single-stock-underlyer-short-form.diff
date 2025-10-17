@@ -1,15 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/equity-swaps/eqs-ex11-on-european-single-stock-underlyer-short-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex11-on-european-single-stock-underlyer-short-form.json
-@@ -16,8 +16,77 @@
--        "effectiveDate" : {
--          "relativeDate" : {
--            "periodMultiplier" : 3,
--            "period" : "D",
--            "dayType" : "ExchangeBusiness",
--            "businessDayConvention" : "NotApplicable",
--            "dateRelativeTo" : {
--              "externalReference" : "TradeDate"
-+        "payout" : [ {
+@@ -44,0 +44,79 @@
 +          "InterestRatePayout" : {
 +            "payerReceiver" : {
 +              "payer" : "Party2",
@@ -86,45 +77,25 @@
 +                "externalReference" : "InterestLegPeriodDates"
 +              },
 +              "resetRelativeTo" : "CalculationPeriodStartDate"
-@@ -25,3 +94,0 @@
--          },
--          "meta" : {
--            "externalKey" : "EffectiveDate"
-@@ -29,15 +95,1 @@
--        },
--        "terminationDate" : {
--          "relativeDate" : {
--            "periodMultiplier" : 0,
--            "period" : "D",
--            "businessDayConvention" : "NotApplicable",
--            "dateRelativeTo" : {
--              "externalReference" : "FinalEquityPaymentDate"
--            }
--          },
--          "meta" : {
--            "externalKey" : "TerminationDate"
--          }
--        },
--        "payout" : [ {
++            }
++          }
 +        }, {
-@@ -61,6 +113,0 @@
+@@ -61,6 +140,0 @@
 -            "settlementTerms" : {
 -              "settlementType" : "Cash",
 -              "settlementCurrency" : {
 -                "value" : "EUR"
 -              }
 -            },
-@@ -139,3 +185,0 @@
+@@ -139,3 +212,0 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "EquityPaymentDate"
-@@ -158,2 +201,1 @@
+@@ -158,2 +228,1 @@
 -                  "totalRatio" : 1,
 -                  "cashRatio" : 0.01
 +                  "totalRatio" : 1
-@@ -161,1 +203,0 @@
--                "firstOrSecondPeriod" : "FirstPeriod",
-@@ -172,85 +213,0 @@
+@@ -172,85 +241,0 @@
 -        }, {
 -          "InterestRatePayout" : {
 -            "payerReceiver" : {
@@ -210,46 +181,31 @@
 -              "resetRelativeTo" : "CalculationPeriodStartDate"
 -            }
 -          }
-@@ -276,1 +232,2 @@
+@@ -276,1 +260,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -281,1 +238,1 @@
+@@ -281,1 +266,1 @@
 -              "value" : "price-1"
 +              "value" : "price-2"
-@@ -287,13 +244,0 @@
--            "value" : 760400,
--            "unit" : {
+@@ -289,1 +274,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
--              "value" : "quantity-2"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -358,10 +302,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
-@@ -374,1 +308,1 @@
++              "currency" : {
++                "value" : "EUR"
++              }
++            },
++            "multiplier" : {
++              "value" : 760400
+@@ -305,0 +295,3 @@
++            },
++            "multiplier" : {
++              "value" : 28469376
+@@ -374,1 +367,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -390,0 +324,1 @@
+@@ -390,0 +383,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -434,1 +369,0 @@
--    "adjustment" : "Execution",
-@@ -448,0 +382,9 @@
+@@ -448,0 +442,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "6234",
@@ -259,7 +215,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -459,0 +402,9 @@
+@@ -459,0 +462,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

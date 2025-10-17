@@ -2,9 +2,7 @@
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-partial-termination-xccy-swap.json
 @@ -3,0 +3,1 @@
 +    "intent" : "Clearing",
-@@ -6,154 +7,0 @@
--      "primitiveInstruction" : {
--        "quantityChange" : {
+@@ -8,35 +9,0 @@
 -          "change" : [ {
 -            "quantity" : [ {
 -              "value" : {
@@ -40,7 +38,7 @@
 -              }
 -            } ]
 -          } ],
--          "direction" : "Replace"
+@@ -44,114 +10,0 @@
 -        },
 -        "transfer" : {
 -          "transferState" : [ {
@@ -155,23 +153,21 @@
 -              }
 -            }
 -          } ]
--        }
--      },
-@@ -181,3 +28,0 @@
+@@ -181,3 +33,0 @@
 -                      },
 -                      "meta" : {
 -                        "externalKey" : "notl1"
-@@ -313,3 +157,0 @@
+@@ -313,3 +162,0 @@
 -                      },
 -                      "meta" : {
 -                        "externalKey" : "notl2"
-@@ -393,2 +234,1 @@
+@@ -393,2 +239,1 @@
 -                } ],
 -                "nonStandardisedTerms" : false
 +                } ]
-@@ -427,0 +267,1 @@
+@@ -427,0 +272,1 @@
 +                            "assetClass" : "InterestRate",
-@@ -505,0 +346,10 @@
+@@ -505,0 +351,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "712345678901234567890123456789013",
@@ -182,37 +178,9 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -551,1 +402,0 @@
+@@ -551,1 +407,0 @@
 -                "firstName" : "jjone",
-@@ -629,30 +479,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "SEF005",
--      "meta" : {
--        "scheme" : "http://www.bankx.com/msg_id"
--      }
--    },
--    "sentBy" : {
--      "value" : "BANKX"
--    },
--    "sentTo" : [ {
--      "value" : "SDR01"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2011-06-01T10:13:07Z",
--    "qualification" : "eventCreationDateTime"
+@@ -647,3 +502,0 @@
 -  }, {
 -    "dateTime" : "2011-06-01T10:12:34Z",
 -    "qualification" : "executionDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "SEF005"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

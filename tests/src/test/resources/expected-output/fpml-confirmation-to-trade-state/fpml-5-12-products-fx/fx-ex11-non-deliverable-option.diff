@@ -5,7 +5,15 @@
 +                        "adjustedDate" : {
 +                          "value" : "2001-04-09"
 +                        }
-@@ -210,0 +212,9 @@
+@@ -140,0 +142,3 @@
++            },
++            "multiplier" : {
++              "value" : 17250000
+@@ -155,0 +160,3 @@
++            },
++            "multiplier" : {
++              "value" : 15000000
+@@ -210,0 +218,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "IBFXO-0123456789",
@@ -15,7 +23,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -221,0 +232,9 @@
+@@ -221,0 +238,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

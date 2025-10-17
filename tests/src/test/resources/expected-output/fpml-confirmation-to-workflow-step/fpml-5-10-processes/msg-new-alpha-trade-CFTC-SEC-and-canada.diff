@@ -1,6 +1,10 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/processes/msg-new-alpha-trade-CFTC-SEC-and-canada.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-new-alpha-trade-CFTC-SEC-and-canada.json
-@@ -300,0 +300,10 @@
+@@ -277,0 +277,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 5000000
+@@ -300,0 +303,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "12345678901234567890123456789012",
@@ -11,7 +15,7 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -316,0 +326,10 @@
+@@ -316,0 +329,10 @@
 +              "assignedIdentifier" : [ {
 +                "identifier" : {
 +                  "value" : "12345678901234567890123456789012",
@@ -22,11 +26,11 @@
 +              } ],
 +              "identifierType" : "UniqueTransactionIdentifier"
 +            }, {
-@@ -378,1 +398,0 @@
+@@ -378,1 +401,0 @@
 -                "firstName" : "person",
-@@ -390,1 +409,0 @@
+@@ -390,1 +412,0 @@
 -                "firstName" : "person",
-@@ -568,24 +586,0 @@
+@@ -568,24 +589,0 @@
 -                "externalReference" : "original_sdr"
 -              },
 -              "role" : "PriorTradeRepository",
@@ -51,7 +55,7 @@
 -              }
 -            }, {
 -              "partyReference" : {
-@@ -670,1 +664,103 @@
+@@ -670,1 +667,103 @@
 -            } ]
 +            }, {
 +              "partyReference" : {
@@ -156,35 +160,7 @@
 +                } ]
 +              } ]
 +            }
-@@ -714,30 +810,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "BANKX0001",
--      "meta" : {
--        "scheme" : "http://www.bankx.com/msg_id"
--      }
--    },
--    "sentBy" : {
--      "value" : "BANKX"
--    },
--    "sentTo" : [ {
--      "value" : "SDR01"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2011-02-12T12:21:16Z",
--    "qualification" : "eventCreationDateTime"
+@@ -732,3 +831,0 @@
 -  }, {
 -    "dateTime" : "2011-02-12T12:20:47Z",
 -    "qualification" : "executionDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "BANKX0001"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }

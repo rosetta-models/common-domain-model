@@ -1,29 +1,14 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-13/products/credit-derivatives/cd-ex14-long-emlatin-corp-fixreg.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-ex14-long-emlatin-corp-fixreg.json
-@@ -62,3 +62,0 @@
--                "physicalSettlementPeriod" : {
--                  "businessDaysNotSpecified" : true
--                },
-@@ -72,1 +69,0 @@
--                  "notDomesticLaw" : true,
-@@ -74,1 +70,0 @@
--                  "notDomesticIssuance" : true,
-@@ -139,3 +134,0 @@
--                  "gracePeriodExtension" : {
--                    "applicable" : true
--                  },
-@@ -151,2 +143,0 @@
--                "obligationAcceleration" : true,
--                "repudiationMoratorium" : true,
-@@ -177,6 +167,1 @@
--                "notSubordinated" : true,
--                "notDomesticCurrency" : {
--                  "applicable" : true
--                },
--                "notDomesticLaw" : true,
--                "notDomesticIssuance" : true
-+                "notSubordinated" : true
-@@ -328,0 +313,9 @@
+@@ -270,0 +270,3 @@
++            },
++            "multiplier" : {
++              "value" : 1800000.0
+@@ -287,0 +290,3 @@
++            },
++            "multiplier" : {
++              "value" : 1800000.0
+@@ -328,0 +334,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "37203",
@@ -33,7 +18,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -339,0 +333,9 @@
+@@ -339,0 +354,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

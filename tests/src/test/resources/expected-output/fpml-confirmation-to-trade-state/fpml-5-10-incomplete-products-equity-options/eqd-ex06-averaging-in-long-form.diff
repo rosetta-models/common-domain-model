@@ -1,32 +1,15 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-options/eqd-ex06-averaging-in-long-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-options/eqd-ex06-averaging-in-long-form.json
-@@ -33,13 +33,0 @@
--            "feature" : {
--              "averagingFeature" : {
--                "averagingInOut" : "In",
--                "averagingPeriodIn" : {
--                  "averagingDateTimes" : {
--                    "dateTime" : [ "2000-08-01T08:57:00Z", "2000-09-01T08:57:00Z", "2000-10-01T08:57:00Z", "2000-11-01T08:57:00Z", "2000-12-01T08:57:00Z", "2001-01-04T08:57:00Z", "2001-02-01T08:57:00Z", "2001-03-01T08:57:00Z" ]
--                  },
--                  "marketDisruption" : {
--                    "value" : "ModifiedPostponement"
--                  }
--                }
--              }
--            },
-@@ -122,4 +109,1 @@
--              "value" : 1.00,
--              "unit" : {
+@@ -124,1 +124,1 @@
 -                "financialUnit" : "IndexUnit"
--              }
-+              "value" : 1.00
-@@ -147,0 +131,5 @@
++                "financialUnit" : "Share"
+@@ -147,0 +147,5 @@
 +                }, {
 +                  "identifier" : {
 +                    "value" : "NIKKEI 225 INDEX"
 +                  },
 +                  "identifierType" : "Name"
-@@ -210,0 +199,9 @@
+@@ -210,0 +215,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

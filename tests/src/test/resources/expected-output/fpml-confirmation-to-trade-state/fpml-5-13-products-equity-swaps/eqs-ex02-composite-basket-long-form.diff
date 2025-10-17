@@ -86,7 +86,11 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -415,9 +345,1 @@
+@@ -372,0 +302,3 @@
++            },
++            "multiplier" : {
++              "value" : 19785157.16
+@@ -415,9 +348,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -97,10 +101,10 @@
 -                    }
 -                  } ]
 +                  }
-@@ -428,1 +350,1 @@
+@@ -428,1 +353,1 @@
 -                    "value" : "basketConstituent-6"
 +                    "value" : "basketConstituent-1"
-@@ -462,9 +384,1 @@
+@@ -462,9 +387,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -111,10 +115,10 @@
 -                    }
 -                  } ]
 +                  }
-@@ -475,1 +389,1 @@
+@@ -475,1 +392,1 @@
 -                    "value" : "basketConstituent-1"
 +                    "value" : "basketConstituent-2"
-@@ -509,9 +423,1 @@
+@@ -509,9 +426,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -125,10 +129,10 @@
 -                    }
 -                  } ]
 +                  }
-@@ -522,1 +428,1 @@
+@@ -522,1 +431,1 @@
 -                    "value" : "basketConstituent-2"
 +                    "value" : "basketConstituent-3"
-@@ -556,9 +462,1 @@
+@@ -556,9 +465,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -139,10 +143,10 @@
 -                    }
 -                  } ]
 +                  }
-@@ -569,1 +467,1 @@
+@@ -569,1 +470,1 @@
 -                    "value" : "basketConstituent-3"
 +                    "value" : "basketConstituent-4"
-@@ -603,9 +501,1 @@
+@@ -603,9 +504,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -153,10 +157,10 @@
 -                    }
 -                  } ]
 +                  }
-@@ -616,1 +506,1 @@
+@@ -616,1 +509,1 @@
 -                    "value" : "basketConstituent-4"
 +                    "value" : "basketConstituent-5"
-@@ -650,9 +540,1 @@
+@@ -650,9 +543,1 @@
 -                  },
 -                  "quantity" : [ {
 -                    "value" : {
@@ -167,28 +171,15 @@
 -                    }
 -                  } ]
 +                  }
-@@ -663,1 +545,1 @@
+@@ -663,1 +548,1 @@
 -                    "value" : "basketConstituent-5"
 +                    "value" : "basketConstituent-6"
-@@ -680,10 +562,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "EUR"
--              }
--            },
-@@ -696,1 +568,1 @@
+@@ -696,1 +581,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -712,0 +584,1 @@
+@@ -712,0 +597,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -756,1 +629,0 @@
--    "adjustment" : "Execution",
-@@ -770,0 +642,9 @@
+@@ -770,0 +656,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "1245",
@@ -198,7 +189,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -781,0 +662,9 @@
+@@ -781,0 +676,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

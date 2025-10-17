@@ -6,11 +6,7 @@
 -                    "name" : {
 -                      "value" : "MERRILL LYNCH/COUNTRYWIDE COMM, 2006-3"
 -                    }
-@@ -98,2 +93,1 @@
--                } ],
--                "allGuarantees" : false
-+                } ]
-@@ -101,26 +95,1 @@
+@@ -101,26 +96,1 @@
 -            },
 -            "protectionTerms" : [ {
 -              "creditEvents" : {
@@ -38,11 +34,19 @@
 -              }
 -            } ]
 +            }
-@@ -171,2 +140,1 @@
+@@ -171,2 +141,1 @@
 -            },
 -            "paymentDelay" : false
 +            }
-@@ -272,0 +240,9 @@
+@@ -214,0 +183,3 @@
++            },
++            "multiplier" : {
++              "value" : 15000000
+@@ -231,0 +203,3 @@
++            },
++            "multiplier" : {
++              "value" : 15000000.00
+@@ -272,0 +247,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "109257",
@@ -52,7 +56,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -283,0 +260,9 @@
+@@ -283,0 +267,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

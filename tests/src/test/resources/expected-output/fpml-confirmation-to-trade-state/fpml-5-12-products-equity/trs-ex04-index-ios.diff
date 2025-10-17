@@ -74,11 +74,25 @@
 +                }
 +              }
 +            },
-@@ -280,0 +238,13 @@
+@@ -239,0 +197,3 @@
++            },
++            "multiplier" : {
++              "value" : 31000000
+@@ -280,0 +241,23 @@
 +      }, {
 +        "price" : [ {
 +          "value" : {
 +            "value" : 0.065,
++            "unit" : {
++              "currency" : {
++                "value" : "USD"
++              }
++            },
++            "perUnitOf" : {
++              "currency" : {
++                "value" : "USD"
++              }
++            },
 +            "priceType" : "InterestRate"
 +          },
 +          "meta" : {
@@ -88,9 +102,7 @@
 +            } ]
 +          }
 +        } ]
-@@ -293,1 +264,0 @@
--    "adjustment" : "Standard",
-@@ -307,0 +277,9 @@
+@@ -307,0 +291,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "TRS-01",
@@ -100,7 +112,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -318,0 +297,9 @@
+@@ -318,0 +311,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -110,7 +122,7 @@
 +          }
 +        }
 +      } ]
-@@ -356,3 +344,38 @@
+@@ -356,3 +358,38 @@
 -  "meta" : {
 -    "externalKey" : "trs-ex4-trade"
 -  }

@@ -22,29 +22,13 @@
 -                } ]
 -              }
 -            },
-@@ -160,9 +146,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 0.40,
--                      "unit" : {
--                        "financialUnit" : "Weight"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -207,9 +185,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 0.60,
--                      "unit" : {
--                        "financialUnit" : "Weight"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -264,0 +234,9 @@
+@@ -116,1 +102,4 @@
+-              "value" : 1.00
++              "value" : 1.00,
++              "unit" : {
++                "financialUnit" : "Share"
++              }
+@@ -264,0 +253,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

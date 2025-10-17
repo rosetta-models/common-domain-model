@@ -16,7 +16,9 @@
 +              },
 +              "meta" : {
 +                "externalKey" : "EXERCISE"
-@@ -229,0 +224,9 @@
+@@ -159,0 +154,1 @@
++                "financialUnit" : "Contract",
+@@ -229,0 +225,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

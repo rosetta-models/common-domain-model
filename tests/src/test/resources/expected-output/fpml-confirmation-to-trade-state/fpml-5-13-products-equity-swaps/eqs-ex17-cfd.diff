@@ -23,28 +23,39 @@
 @@ -247,1 +237,1 @@
 -              "value" : "price-1"
 +              "value" : "price-2"
-@@ -253,13 +243,0 @@
--            "value" : 48000,
--            "unit" : {
+@@ -255,1 +245,6 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
--              "value" : "quantity-3"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -325,1 +302,1 @@
++              "currency" : {
++                "value" : "USD"
++              }
++            },
++            "multiplier" : {
++              "value" : 48000
+@@ -271,0 +266,3 @@
++            },
++            "multiplier" : {
++              "value" : 3840000.000000
+@@ -319,0 +317,10 @@
++            "unit" : {
++              "currency" : {
++                "value" : "USD"
++              }
++            },
++            "perUnitOf" : {
++              "currency" : {
++                "value" : "USD"
++              }
++            },
+@@ -325,1 +333,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -357,0 +334,1 @@
+@@ -336,0 +344,3 @@
++            },
++            "multiplier" : {
++              "value" : 3840000.000000
+@@ -357,0 +368,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -395,1 +373,0 @@
--    "adjustment" : "Standard",
-@@ -409,0 +386,9 @@
+@@ -409,0 +421,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "CFD123456789",
@@ -54,7 +65,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -420,0 +406,9 @@
+@@ -420,0 +441,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

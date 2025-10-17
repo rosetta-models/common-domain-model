@@ -1,28 +1,6 @@
 --- rosetta-source/src/main/resources/result-json-files/fpml-5-10/incomplete-products/equity-swaps/eqs-ex19-european-interdealer-fair-value-share-swap-short-form.json
 +++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-incomplete-products-equity-swaps/eqs-ex19-european-interdealer-fair-value-share-swap-short-form.json
-@@ -16,21 +16,0 @@
--        "effectiveDate" : {
--          "adjustableDate" : {
--            "unadjustedDate" : "2010-10-12",
--            "dateAdjustments" : {
--              "businessDayConvention" : "NONE"
--            }
--          },
--          "meta" : {
--            "externalKey" : "equityEffectiveDate"
--          }
--        },
--        "terminationDate" : {
--          "relativeDate" : {
--            "periodMultiplier" : 0,
--            "period" : "D",
--            "businessDayConvention" : "NONE",
--            "dateRelativeTo" : {
--              "externalReference" : "finalCashSettlementPaymentDate"
--            }
--          }
--        },
-@@ -38,135 +17,0 @@
+@@ -38,135 +38,0 @@
 -          "PerformancePayout" : {
 -            "payerReceiver" : {
 -              "payer" : "Party1",
@@ -158,20 +136,20 @@
 -            }
 -          }
 -        }, {
-@@ -195,1 +39,1 @@
+@@ -195,1 +60,1 @@
 -                      "value" : "price-2"
 +                      "value" : "price-1"
-@@ -198,3 +42,0 @@
+@@ -198,3 +63,0 @@
 -                },
 -                "meta" : {
 -                  "externalKey" : "floatingRateCalculation"
-@@ -205,4 +46,1 @@
+@@ -205,4 +67,1 @@
 -              "value" : "ACT/360",
 -              "meta" : {
 -                "scheme" : "http://www.fpml.org/coding-scheme/day-count-fraction"
 -              }
 +              "value" : "ACT/360"
-@@ -254,5 +92,82 @@
+@@ -254,5 +113,82 @@
 -        } ],
 -        "terminationProvision" : {
 -          "earlyTerminationProvision" : {
@@ -259,10 +237,10 @@
 +                  }
 +                } ]
 +              }
-@@ -261,1 +176,1 @@
+@@ -261,1 +197,1 @@
 -        }
 +        } ]
-@@ -269,8 +184,0 @@
+@@ -269,8 +205,0 @@
 -            "unit" : {
 -              "currency" : {
 -                "value" : "USD",
@@ -271,58 +249,40 @@
 -                }
 -              }
 -            },
-@@ -280,1 +187,2 @@
+@@ -280,1 +208,2 @@
 -            "priceType" : "AssetPrice"
 +            "priceType" : "AssetPrice",
 +            "priceExpression" : "AbsoluteTerms"
-@@ -285,1 +193,1 @@
+@@ -285,1 +214,1 @@
 -              "value" : "price-1"
 +              "value" : "price-2"
-@@ -291,13 +199,0 @@
--            "value" : 760400,
--            "unit" : {
+@@ -293,1 +222,9 @@
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
--              "value" : "quantity-2"
--            } ]
--          }
--        }, {
--          "value" : {
-@@ -360,16 +255,0 @@
--            "unit" : {
--              "currency" : {
--                "value" : "USD",
--                "meta" : {
--                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217-2001-08-15"
--                }
--              }
--            },
--            "perUnitOf" : {
--              "currency" : {
--                "value" : "USD",
--                "meta" : {
--                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217-2001-08-15"
--                }
--              }
--            },
-@@ -382,1 +261,1 @@
++              "currency" : {
++                "value" : "USD",
++                "meta" : {
++                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217-2001-08-15"
++                }
++              }
++            },
++            "multiplier" : {
++              "value" : 760400
+@@ -312,0 +249,3 @@
++            },
++            "multiplier" : {
++              "value" : 28469376
+@@ -382,1 +322,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -398,0 +277,1 @@
+@@ -398,0 +338,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -399,4 +279,1 @@
+@@ -399,4 +340,1 @@
 -                      "value" : "USD-LIBOR-BBA",
 -                      "meta" : {
 -                        "scheme" : "http://www.fpml.org/coding-scheme/floating-rate-index"
 -                      }
 +                      "value" : "USD-LIBOR-BBA"
-@@ -439,1 +316,0 @@
--    "adjustment" : "Standard",
-@@ -453,0 +329,9 @@
+@@ -453,0 +391,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "TW9236",
@@ -332,7 +292,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -464,0 +349,9 @@
+@@ -464,0 +411,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -342,7 +302,7 @@
 +          }
 +        }
 +      } ]
-@@ -519,20 +413,0 @@
+@@ -519,20 +475,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

@@ -35,32 +35,3 @@
 +                } ]
 +              } ]
 +            },
-@@ -484,27 +517,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "0483608",
--      "meta" : {
--        "scheme" : "http://www.amag.com/coding-scheme/message-id"
--      }
--    },
--    "sentBy" : {
--      "value" : "AMAGGB22XXX"
--    },
--    "sentTo" : [ {
--      "value" : "CCSTUS6S"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2007-07-27T11:02:00Z",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "0483608"
--      }
--    } ]
--  } ],
--  "action" : "Correct"
-+  }

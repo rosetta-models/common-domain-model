@@ -130,32 +130,7 @@
 -                      },
 -                      "meta" : {
 -                        "externalKey" : "calculationAmount"
-@@ -467,27 +371,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "IM/7",
--      "meta" : {
--        "scheme" : "http://www.imgr.com/schemes/message-id"
--      }
--    },
--    "sentBy" : {
--      "value" : "IMGRUS6S"
--    },
--    "sentTo" : [ {
--      "value" : "CUSTUS3T"
--    } ]
--  },
--  "timestamp" : [ {
--    "dateTime" : "2009-06-15T13:15:09-08:00",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "IM/7"
--      }
--    } ]
--  } ],
--  "action" : "Correct"
-+  }
+@@ -281,0 +185,3 @@
++                    },
++                    "multiplier" : {
++                      "value" : 70000000.00

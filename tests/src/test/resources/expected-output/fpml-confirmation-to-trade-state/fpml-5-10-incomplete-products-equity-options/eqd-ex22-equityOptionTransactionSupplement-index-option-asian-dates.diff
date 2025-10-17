@@ -78,13 +78,17 @@
 -            } ]
 -          }
 -        } ],
-@@ -186,5 +120,0 @@
+@@ -173,0 +107,3 @@
++            },
++            "multiplier" : {
++              "value" : 1234
+@@ -186,5 +123,0 @@
 -            },
 -            "multiplier" : {
 -              "unit" : {
 -                "financialUnit" : "IndexUnit"
 -              }
-@@ -266,0 +195,9 @@
+@@ -266,0 +198,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -94,7 +98,7 @@
 +          }
 +        }
 +      } ]
-@@ -312,20 +250,0 @@
+@@ -312,20 +253,0 @@
 -    },
 -    "collateral" : {
 -      "independentAmount" : {

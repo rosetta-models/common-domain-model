@@ -32,19 +32,21 @@
 -                }
 -              } ]
 +              }
-@@ -115,1 +92,1 @@
+@@ -110,0 +87,3 @@
++            },
++            "multiplier" : {
++              "value" : 3000000
+@@ -115,1 +95,1 @@
 -              "value" : "quantity-2"
 +              "value" : "quantity-1"
-@@ -130,1 +107,1 @@
+@@ -125,0 +105,3 @@
++            },
++            "multiplier" : {
++              "value" : 2307000
+@@ -130,1 +113,1 @@
 -              "value" : "quantity-1"
 +              "value" : "quantity-2"
-@@ -159,1 +136,1 @@
--        "externalReference" : "party1"
-+        "externalReference" : "party2"
-@@ -164,1 +141,1 @@
--        "externalReference" : "party2"
-+        "externalReference" : "party1"
-@@ -180,0 +157,9 @@
+@@ -180,0 +163,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "12345678",
@@ -54,7 +56,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -191,0 +177,9 @@
+@@ -191,0 +183,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

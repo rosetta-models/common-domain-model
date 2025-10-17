@@ -6,7 +6,11 @@
 -                    "name" : {
 -                      "value" : "Sunclipse, Inc."
 -                    }
-@@ -192,0 +187,9 @@
+@@ -157,0 +152,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -192,0 +190,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "xyz1234",
@@ -16,7 +20,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -203,0 +207,9 @@
+@@ -203,0 +210,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {

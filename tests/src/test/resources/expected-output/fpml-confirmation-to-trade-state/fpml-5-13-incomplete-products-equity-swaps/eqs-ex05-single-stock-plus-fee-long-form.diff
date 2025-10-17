@@ -12,26 +12,14 @@
 -              },
 -              "meta" : {
 -                "externalKey" : "EquityPaymentDate"
-@@ -236,14 +227,0 @@
--        "quantity" : [ {
--          "value" : {
--            "value" : 18388000,
+@@ -239,2 +230,2 @@
 -            "unit" : {
 -              "financialUnit" : "Share"
--            }
--          },
--          "meta" : {
--            "location" : [ {
--              "scope" : "DOCUMENT",
--              "value" : "quantity-1"
--            } ]
--          }
--        } ],
-@@ -303,0 +280,1 @@
++            "multiplier" : {
++              "value" : 18388000
+@@ -303,0 +294,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -347,1 +325,0 @@
--    "adjustment" : "Standard",
-@@ -361,0 +338,9 @@
+@@ -361,0 +353,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "1934",
@@ -41,7 +29,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -372,0 +358,9 @@
+@@ -372,0 +373,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
@@ -51,7 +39,7 @@
 +          }
 +        }
 +      } ]
-@@ -456,0 +451,24 @@
+@@ -456,0 +466,24 @@
 +      "settlementDate" : {
 +        "relativeDate" : {
 +          "periodMultiplier" : 0,

@@ -163,29 +163,9 @@
 +                } ]
 +              } ]
 +            }
-@@ -274,24 +344,1 @@
--  },
--  "messageInformation" : {
--    "messageId" : {
--      "value" : "COMMODITYFPMLORGPTTRADEREF",
--      "meta" : {
--        "scheme" : "http://www.xxx.com/coding-scheme/message-id"
--      }
--    },
--    "sentBy" : {
+@@ -283,1 +353,4 @@
 -      "value" : "ORIGUS33XXX"
--    }
--  },
--  "timestamp" : [ {
--    "dateTime" : "2009-05-25T12:01:00Z",
--    "qualification" : "eventCreationDateTime"
--  } ],
--  "eventIdentifier" : [ {
--    "assignedIdentifier" : [ {
--      "identifier" : {
--        "value" : "COMMODITYFPMLORGPTTRADEREF"
--      }
--    } ]
--  } ],
--  "action" : "New"
-+  }
++      "value" : "ORIGUS33XXX",
++      "meta" : {
++        "scheme" : "http://www.fpml.org/ext/iso9362"
++      }

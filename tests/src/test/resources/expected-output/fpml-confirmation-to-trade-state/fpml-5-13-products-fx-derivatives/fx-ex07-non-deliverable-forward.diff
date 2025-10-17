@@ -51,19 +51,21 @@
 -                }
 -              } ]
 +              }
-@@ -134,1 +92,1 @@
+@@ -129,0 +87,3 @@
++            },
++            "multiplier" : {
++              "value" : 10000000
+@@ -134,1 +95,1 @@
 -              "value" : "quantity-2"
 +              "value" : "quantity-1"
-@@ -149,1 +107,1 @@
+@@ -144,0 +105,3 @@
++            },
++            "multiplier" : {
++              "value" : 434000000
+@@ -149,1 +113,1 @@
 -              "value" : "quantity-1"
 +              "value" : "quantity-2"
-@@ -178,1 +136,1 @@
--        "externalReference" : "party1"
-+        "externalReference" : "party2"
-@@ -183,1 +141,1 @@
--        "externalReference" : "party2"
-+        "externalReference" : "party1"
-@@ -199,0 +157,9 @@
+@@ -199,0 +163,9 @@
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
 +          "value" : "PARTYA345",
@@ -73,7 +75,7 @@
 +        }
 +      } ]
 +    }, {
-@@ -210,0 +177,9 @@
+@@ -210,0 +183,9 @@
 +    }, {
 +      "assignedIdentifier" : [ {
 +        "identifier" : {
