@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
@@ -24,7 +25,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.finos.cdm.ingest.diagnostics.IngestUtils.*;
-import static org.finos.cdm.ingest.diagnostics.IngestUtils.getTestName;
 
 public class IngestBasicDiagnosticsTest {
 
@@ -118,18 +118,24 @@ public class IngestBasicDiagnosticsTest {
         printTestPackAndProductDiagnostics();
     }
 
-    private static void printTestPackAndProductDiagnostics() {
-        List<TestPackAndProductDiagnostics> testPackAndProductDiagnostics = TEST_PACK_AND_PRODUCT_SAMPLE_TOTALS.values().stream()
-                .map(Map::values).flatMap(Collection::stream)
-                .sorted(Comparator.comparing(TestPackAndProductDiagnostics::testPack)
-                        .thenComparing(TestPackAndProductDiagnostics::product))
+    private static void printProductDiagnostics() {
+        List<Diagnostics> productDiagnostics = PRODUCT_SAMPLE_TOTALS.values().stream()
+                .sorted(Comparator.comparing((Diagnostics x) -> getCompleteness(x.actual, x.target))
+                        .thenComparing(Diagnostics::samples).reversed())
                 .collect(Collectors.toList());
 
-        System.out.println();
-        System.out.println("testPack|fpmlProduct|samples|completeness");
-        testPackAndProductDiagnostics.forEach(d ->
-                System.out.printf("%s|%s|%s|%s\n",
-                        d.testPack, d.product, d.samples, getFormattedCompleteness(d.actual, d.target)));
+        // Create StringBuilder for the markdown content
+        StringBuilder markdownContent = new StringBuilder();
+        markdownContent.append("# Product Diagnostics\n\n");
+        markdownContent.append("| FpML Product | Samples | Completeness |\n");
+        markdownContent.append("|:-----------------------------------------------|:-------:|:-------:|\n");
+
+        // Add each diagnostic entry
+        productDiagnostics.forEach(d ->
+                markdownContent.append(String.format("| %s | %s | %s |\n",
+                        d.group, d.samples, getFormattedCompleteness(d.actual, d.target))));
+
+        writeDiagnosticsFile("product_diagnostics.md", markdownContent.toString());
     }
 
     private static void printTestPackDiagnostics() {
@@ -137,22 +143,55 @@ public class IngestBasicDiagnosticsTest {
                 .sorted(Comparator.comparing((Diagnostics x) -> getCompleteness(x.actual, x.target))
                         .thenComparing(Diagnostics::samples).reversed())
                 .collect(Collectors.toList());
-        System.out.println();
-        System.out.println("testPack|samples|completeness");
+
+        // Create StringBuilder for the markdown content
+        StringBuilder markdownContent = new StringBuilder();
+        markdownContent.append("# Test Pack Diagnostics\n\n");
+        markdownContent.append("| Test Pack | Samples | Completeness |\n");
+        markdownContent.append("|:-----------------------------------------------------|:-------:|:-------:|\n");
+
         testPackDiagnostics.forEach(d ->
-                System.out.printf("%s|%s|%s\n",
-                        d.group, d.samples, getFormattedCompleteness(d.actual, d.target)));
+                markdownContent.append(String.format("| %s | %s | %s |\n",
+                        d.group, d.samples, getFormattedCompleteness(d.actual, d.target))));
+        
+        writeDiagnosticsFile("test_pack_diagnostics.md", markdownContent.toString());
     }
 
-    private static void printProductDiagnostics() {
-        List<Diagnostics> productDiagnostics = PRODUCT_SAMPLE_TOTALS.values().stream()
-                .sorted(Comparator.comparing((Diagnostics x) -> getCompleteness(x.actual, x.target))
-                        .thenComparing(Diagnostics::samples).reversed())
+    private static void printTestPackAndProductDiagnostics() {
+        List<TestPackAndProductDiagnostics> testPackAndProductDiagnostics = TEST_PACK_AND_PRODUCT_SAMPLE_TOTALS.values().stream()
+                .map(Map::values).flatMap(Collection::stream)
+                .sorted(Comparator.comparing(TestPackAndProductDiagnostics::testPack)
+                        .thenComparing(TestPackAndProductDiagnostics::product))
                 .collect(Collectors.toList());
-        System.out.println("fpmlProduct|samples|completeness");
-        productDiagnostics.forEach(d ->
-                System.out.printf("%s|%s|%s\n",
-                        d.group, d.samples, getFormattedCompleteness(d.actual, d.target)));
+
+        // Create StringBuilder for the markdown content
+        StringBuilder markdownContent = new StringBuilder();
+        markdownContent.append("# Test Pack / Product Diagnostics\n\n");
+        markdownContent.append("| Test Pack | FpML Product | Samples | Completeness |\n");
+        markdownContent.append("|:-----------------------------------------------------|:-----------------------------------------------|:-------:|:-------:|\n");
+        
+        testPackAndProductDiagnostics.forEach(d ->
+                markdownContent.append(String.format("| %s | %s | %s | %s |\n",
+                        d.testPack, d.product, d.samples, getFormattedCompleteness(d.actual, d.target))));
+
+        writeDiagnosticsFile("test_pack_product_diagnostics.md", markdownContent.toString());
+    }
+
+    private static void writeDiagnosticsFile(String fileName, String contents) {
+        Path outputDir = PROJECT_ROOT.resolve("tests/src/test/resources/diagnostics");
+        Path outputFile = outputDir.resolve(fileName);
+
+        try {
+            // Create directory if it doesn't exist
+            if (!Files.exists(outputDir)) {
+                Files.createDirectories(outputDir);
+            }
+            // Write to file
+            Files.writeString(outputFile, contents);
+            LOGGER.info("Product diagnostics written to {}", outputFile);
+        } catch (IOException e) {
+            throw new UncheckedIOException("Failed to write product diagnostics to markdown file", e);
+        }
     }
 
     private static double getCompleteness(int actual, int target) {
