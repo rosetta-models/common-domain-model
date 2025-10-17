@@ -1,16 +1,13 @@
-package org.finos.cdm.ingest;
+package org.finos.cdm.ingest.diagnostics;
 
 import cdm.event.common.TradeState;
 import cdm.event.workflow.WorkflowStep;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.difflib.DiffUtils;
 import com.github.difflib.patch.Patch;
 import com.github.difflib.unifieddiff.UnifiedDiff;
 import com.github.difflib.unifieddiff.UnifiedDiffFile;
 import com.github.difflib.unifieddiff.UnifiedDiffWriter;
-import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
-import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.rosetta.common.util.SimpleBuilderProcessor;
 import com.rosetta.model.lib.GlobalKey;
 import com.rosetta.model.lib.RosettaModelObject;
@@ -38,32 +35,21 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.regnosys.rosetta.common.RegPaths.directoryNameOfDataset;
+import static org.finos.cdm.ingest.diagnostics.IngestUtils.*;
 import static org.finos.cdm.testpack.CdmTestPackCreator.EVENT_TEST_PACKS;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Disabled
-public class TargetExpectationsDiffTest {
+public class IngestTargetExpectationsDiffTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(TargetExpectationsDiffTest.class);
-    private static final Boolean WRITE_EXPECTATIONS = Optional.ofNullable(System.getenv("WRITE_EXPECTATIONS"))
-            .map(Boolean::parseBoolean)
-            .orElse(false);
-    private static final ObjectMapper OBJECT_MAPPER = RosettaObjectMapper.getNewMinimalRosettaObjectMapper();
-
-    private static final Path PROJECT_ROOT = Path.of("").toAbsolutePath().getParent();
-    private static final Path MAIN_RESOURCES_PATH = PROJECT_ROOT.resolve(Path.of("rosetta-source/src/main/resources"));
-    private static final Path INGEST_OUTPUT_PATH = MAIN_RESOURCES_PATH.resolve(TransformType.TRANSLATE.getResourcePath()).resolve("output");
-    private static final Path SYNONYM_INGEST_OUTPUT_BASE_PATH = MAIN_RESOURCES_PATH.resolve("result-json-files");
-    private static final Path FUNCTION_INGEST_DIFF_PATH = PROJECT_ROOT.resolve(Path.of("tests/src/test/resources")).resolve("expected-output");
-    public static final List<String> FPML_GROUPS = Arrays.asList("fpml-5-10", "fpml-5-12", "fpml-5-13");
+    private static final Logger LOGGER = LoggerFactory.getLogger(IngestTargetExpectationsDiffTest.class);
 
     @MethodSource("inputs")
     @ParameterizedTest(name = "{0}")
     void checkTargetOutputDiff(String testName, Class<? extends RosettaModelObject> clazz, Path synonymIngestOutputPath, Path ingestOutputPath, Path diffPath) throws IOException {
         List<String> actualOutputFileContent = readFile(clazz, synonymIngestOutputPath);
         if (!Files.exists(ingestOutputPath)) {
-            LOGGER.warn("No output file found for " + synonymIngestOutputPath);
+            LOGGER.warn("No output file found for {}", synonymIngestOutputPath);
             return;
         }
         List<String> targetOutputFileContent = readFile(clazz, ingestOutputPath);
@@ -71,6 +57,40 @@ public class TargetExpectationsDiffTest {
         String expectedDiff = readFile(diffPath);
         String actualDiff = createPatchFile(actualOutputFileContent, targetOutputFileContent, getRelativePath(synonymIngestOutputPath), getRelativePath(ingestOutputPath));
         assertDiffEquals(expectedDiff, actualDiff, diffPath);
+    }
+
+    private static Stream<Arguments> inputs() throws IOException {
+        List<Arguments> arguments;
+        try (Stream<Path> synonymIngestOutputFileStream = Files.walk(SYNONYM_INGEST_OUTPUT_BASE_PATH)) {
+            arguments = synonymIngestOutputFileStream
+                    .filter(IngestUtils::isFpmlTestPack)
+                    .filter(IngestUtils::isJsonExt)
+                    .map(synonymIngestOutputPath ->
+                    {
+                        
+                        Path fileName = synonymIngestOutputPath.getFileName();
+                        Path relativePath = SYNONYM_INGEST_OUTPUT_BASE_PATH.relativize(synonymIngestOutputPath.getParent());
+                        String testPackName = toTestPackName(relativePath.toString());
+                        Path ingestOutputPath = getIngestOutputPath(testPackName, fileName);
+                        Class<? extends RosettaModelObject> clazz = EVENT_TEST_PACKS.contains(testPackName) ?
+                                WorkflowStep.class : TradeState.class;
+                        return Arguments.of(getTestName(testPackName, fileName),
+                                clazz,
+                                synonymIngestOutputPath,
+                                ingestOutputPath,
+                                getDiffPath(ingestOutputPath));
+                    })
+                    .collect(Collectors.toList());
+        }
+        return arguments.stream();
+    }
+    
+    @NotNull
+    private static Path getDiffPath(Path ingestOutputPath) {
+        return Path.of(ingestOutputPath.toString()
+                .replace("/tests/", "/rosetta-source/")
+                .replace(INGEST_OUTPUT_PATH.toString(), FUNCTION_INGEST_DIFF_PATH.toString())
+                .replace(".json", ".diff"));
     }
 
     @NotNull
@@ -140,66 +160,6 @@ public class TargetExpectationsDiffTest {
         }
         assertEquals(expectedDiff, actualDiff,
                 "The expected diff between actual and target output does not match for path " + diffPath);
-    }
-
-    private static Stream<Arguments> inputs() throws IOException {
-        List<Arguments> arguments;
-        try (Stream<Path> synonymIngestOutputFileStream = Files.walk(SYNONYM_INGEST_OUTPUT_BASE_PATH)) {
-            arguments = synonymIngestOutputFileStream
-                    .filter(TargetExpectationsDiffTest::isFpmlTestPack)
-                    .filter(TargetExpectationsDiffTest::isJsonExt)
-                    .map(synonymIngestOutputPath ->
-                    {
-                        Path fileName = synonymIngestOutputPath.getFileName();
-                        Path relativePath = SYNONYM_INGEST_OUTPUT_BASE_PATH.relativize(synonymIngestOutputPath.getParent());
-                        String testPackName = toTestPackName(relativePath.toString());
-                        Path ingestOutputPath = getIngestOutputPath(testPackName, fileName);
-                        Class<? extends RosettaModelObject> clazz = EVENT_TEST_PACKS.contains(testPackName) ?
-                                WorkflowStep.class : TradeState.class;
-                         return Arguments.of(getTestName(testPackName, fileName),
-                                clazz,
-                                synonymIngestOutputPath,
-                                ingestOutputPath,
-                                getDiffPath(ingestOutputPath));
-                    })
-                    .collect(Collectors.toList());
-        }
-        return arguments.stream();
-    }
-
-    private static boolean isFpmlTestPack(Path synonymIngestOutputPath) {
-        return FPML_GROUPS.stream().anyMatch(x -> String.format("/%s/", synonymIngestOutputPath.toString()).contains(x));
-    }
-
-    private static boolean isJsonExt(Path synonymIngestOutputPath) {
-        return synonymIngestOutputPath.getFileName().toString().endsWith(".json");
-    }
-
-    @NotNull
-    private static String getTestName(String testPackName, Path fileName) {
-        return String.format("%s | %s", testPackName, fileName.toString().replace(".json", ""));
-    }
-
-    @NotNull
-    private static Path getIngestOutputPath(String testPackName, Path fileName) {
-        String functionFolder = EVENT_TEST_PACKS.contains(testPackName) ?
-                "fpml-confirmation-to-workflow-step" : "fpml-confirmation-to-trade-state";
-        return INGEST_OUTPUT_PATH.resolve(functionFolder).resolve(testPackName).resolve(fileName);
-    }
-
-    @NotNull
-    private static String toTestPackName(String synonymIngestOutputPath) {
-        String testPackName = synonymIngestOutputPath.replaceAll("[-._/]+", " ");
-        return directoryNameOfDataset(testPackName);
-    }
-
-
-    @NotNull
-    private static Path getDiffPath(Path ingestOutputPath) {
-        return Path.of(ingestOutputPath.toString()
-                .replace("/tests/", "/rosetta-source/")
-                .replace(INGEST_OUTPUT_PATH.toString(), FUNCTION_INGEST_DIFF_PATH.toString())
-                .replace(".json", ".diff"));
     }
 
     private static class GlobalKeyRemover extends SimpleBuilderProcessor {
