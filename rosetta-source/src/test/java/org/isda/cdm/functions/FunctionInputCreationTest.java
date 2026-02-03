@@ -70,6 +70,8 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import static org.isda.cdm.functions.FunctionUtils.guard;
 import static util.ResourcesUtils.*;
@@ -2092,44 +2094,7 @@ class FunctionInputCreationTest {
         return ResourcesUtils.resolveReferences(removeIsdaProductTaxonomy(executionBusinessEvent.getAfter().get(0)));
     }
 
-    private static PeriodRange getMaturityRange(int lowerBound, int upperBound) {
-        return PeriodRange.builder()
-                .setLowerBound(getMaturityBound(lowerBound, true))
-                .setUpperBound(getMaturityBound(upperBound, false))
-                .build();
-    }
-
-    private static PeriodRange getMaturityRange(int lowerBound) {
-        return PeriodRange.builder()
-                .setLowerBound(getMaturityBound(lowerBound, true))
-                .build();
-    }
-
-    private static PeriodBound.PeriodBoundBuilder getMaturityBound(int years, boolean inclusive) {
-        return PeriodBound.builder()
-                .setInclusive(inclusive)
-                .setPeriod(Period.builder()
-                        .setPeriodMultiplier(years)
-                        .setPeriod(PeriodEnum.Y));
-    }
-
-    private static EligibleCollateralCriteria getVariableCriteria(double haircutPercentage, PeriodRange maturityRange) {
-        return EligibleCollateralCriteria.builder()
-                .setTreatment(CollateralTreatment.builder()
-                        .setIsIncluded(true)
-                        .setValuationTreatment(CollateralValuationTreatment.builder()
-                                .setHaircutPercentage(BigDecimal.valueOf(haircutPercentage))))
-                .setCollateralCriteria(CollateralCriteria.builder()
-                        .setAssetMaturity(AssetMaturity.builder()
-                                .setMaturityType(MaturityTypeEnum.REMAINING_MATURITY)
-                                .setMaturityRange(maturityRange))
-                )
-                .build();
-    }
-
     private void writeExpectation(String writePath,Object actual) {
-
-
         // Add environment variable TEST_WRITE_BASE_PATH to override the base write path, e.g.
         // TEST_WRITE_BASE_PATH=/Users/hugohills/dev/github/REGnosys/rosetta-cdm/rosetta-source/src/main/resources/
         TEST_WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
@@ -2143,5 +2108,37 @@ class FunctionInputCreationTest {
                 LOGGER.error("Failed to write expectation file {}", expectationFilePath.toAbsolutePath(), e);
             }
         });
+    }
+
+    public static void main(String[] args) throws Exception {
+        // Run all @Test methods from a single entry point
+        setup();
+        FunctionInputCreationTest instance = new FunctionInputCreationTest();
+        int total = 0;
+        int failed = 0;
+        List<String> failures = new ArrayList<>();
+
+        for (Method inputFunctions : FunctionInputCreationTest.class.getDeclaredMethods()) {
+            if (inputFunctions.isAnnotationPresent(Test.class) && inputFunctions.getParameterCount() == 0) {
+                total++;
+                try {
+                    inputFunctions.setAccessible(true);
+                    inputFunctions.invoke(instance);
+                    LOGGER.info("{}  method Passed.", inputFunctions.getName() );
+                } catch (Throwable t) {
+                    failed++;
+                    Throwable cause = (t instanceof InvocationTargetException)
+                            ? ((InvocationTargetException) t).getTargetException()
+                            : t;
+                    LOGGER.error("{} method Failed", inputFunctions.getName(), cause);
+                    failures.add(inputFunctions.getName() + ": " + String.valueOf(cause));
+                }
+            }
+        }
+
+        LOGGER.info("Summary: passed = {} failed = {} total = {} ", (total - failed), failed, total);
+        if (failed > 0) {
+            LOGGER.info("{} tests failed: " , failures);
+        }
     }
 }
