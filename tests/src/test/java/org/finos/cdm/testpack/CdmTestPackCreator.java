@@ -2,16 +2,14 @@ package org.finos.cdm.testpack;
 
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToWorkflowStep;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.inject.Injector;
-import com.regnosys.rosetta.common.transform.PipelineModel;
+import com.regnosys.functions.FunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.runefpml.RuneFpmlModelConfig;
 import com.regnosys.testing.pipeline.PipelineConfigWriter;
 import com.regnosys.testing.pipeline.PipelineTestPackFilter;
 import com.regnosys.testing.pipeline.PipelineTreeConfig;
-import fpml.consolidated.doc.Document;
 import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModuleTesting;
 import org.slf4j.Logger;
@@ -46,11 +44,19 @@ public class CdmTestPackCreator {
             injector.injectMembers(testPackConfigCreator);
 
             testPackConfigCreator.run();
+
+            runFunctionInputCreator();
+
             System.exit(0);
         } catch (Exception e) {
             LOGGER.error("Error executing {}.main()", CdmTestPackCreator.class.getName(), e);
             System.exit(1);
         }
+    }
+
+    private static void runFunctionInputCreator() throws Exception {
+        FunctionInputCreator functionInputCreator = new FunctionInputCreator();
+        functionInputCreator.run();
     }
 
     private void run() throws IOException {

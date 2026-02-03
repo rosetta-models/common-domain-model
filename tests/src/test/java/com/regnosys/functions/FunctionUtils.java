@@ -1,4 +1,4 @@
-package org.isda.cdm.functions;
+package com.regnosys.functions;
 
 import cdm.event.common.ExecutionInstruction;
 import cdm.event.common.TradeState;

@@ -1,4 +1,4 @@
-package org.isda.cdm.functions;
+package com.regnosys.functions;
 
 import cdm.event.workflow.WorkflowStep;
 import com.fasterxml.jackson.annotation.JsonProperty;

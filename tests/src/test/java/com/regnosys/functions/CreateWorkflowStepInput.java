@@ -1,4 +1,4 @@
-package org.isda.cdm.functions;
+package com.regnosys.functions;
 
 import cdm.base.staticdata.identifier.Identifier;
 import cdm.base.staticdata.party.Account;
