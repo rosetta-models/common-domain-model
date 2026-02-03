@@ -72,15 +72,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.isda.cdm.functions.FunctionUtils.guard;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.ResourcesUtils.*;
 
 class FunctionInputCreationTest {
 
-    private static final boolean WRITE_EXPECTATIONS =
-            Optional.ofNullable(System.getenv("WRITE_EXPECTATIONS"))
-                    .map(Boolean::parseBoolean).orElse(false);
-    private static final Optional<Path> TEST_WRITE_BASE_PATH =
+     private static final Optional<Path> TEST_WRITE_BASE_PATH =
             Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionInputCreationTest.class);
 
@@ -180,7 +176,7 @@ class FunctionInputCreationTest {
 
         CreateBusinessEventInput actual = getExecutionFuncInputJson(tradeState, eventDate);
 
-        assertJsonEquals(expectedJsonPath, actual);
+        writeExpectation(expectedJsonPath, actual);
     }
 
 
@@ -312,7 +308,7 @@ class FunctionInputCreationTest {
                 eventDate,
                 null);
 
-        assertJsonEquals(expectedJsonPath, actual);
+        writeExpectation(expectedJsonPath, actual);
     }
 
     @Test
@@ -411,13 +407,13 @@ class FunctionInputCreationTest {
     @Test
     void validateIncreaseEquitySwapFuncInputJson() throws IOException {
         CreateBusinessEventInput actual = getIncreaseEquitySwapFuncInputJson();
-        assertJsonEquals("functions/business-event/quantity-change/increase-equity-swap-func-input.json", actual);
+        writeExpectation("functions/business-event/quantity-change/increase-equity-swap-func-input.json", actual);
     }
 
     @Test
     void validateIncreaseEquitySwapExistingTradeLotFuncInputJson() throws IOException {
         CreateBusinessEventInput actual = getIncreaseEquitySwapExistingTradeLotFuncInputJson();
-        assertJsonEquals("functions/business-event/quantity-change/increase-equity-swap-existing-trade-lot-func-input.json", actual);
+        writeExpectation("functions/business-event/quantity-change/increase-equity-swap-existing-trade-lot-func-input.json", actual);
     }
 
     private CreateBusinessEventInput getIncreaseEquitySwapExistingTradeLotFuncInputJson() throws IOException {
@@ -589,7 +585,7 @@ class FunctionInputCreationTest {
                 eventDate,
                 null);
 
-        assertJsonEquals(expectedJsonPath, actual);
+        writeExpectation(expectedJsonPath, actual);
     }
 
 
@@ -664,7 +660,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 4, 3),
                 null);
 
-        assertJsonEquals("functions/business-event/compression/compression-func-input.json", actual);
+        writeExpectation("functions/business-event/compression/compression-func-input.json", actual);
     }
 
     private ExecutionInstruction getCompressionExecutionInstructionInputJson() throws IOException {
@@ -797,7 +793,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 4, 3),
                 null);
 
-        assertJsonEquals("functions/business-event/novation/full-novation-func-input.json", actual);
+        writeExpectation("functions/business-event/novation/full-novation-func-input.json", actual);
     }
 
     @Test
@@ -860,7 +856,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 4, 4),
                 null);
 
-        assertJsonEquals("functions/business-event/novation/partial-novation-func-input.json", actual);
+        writeExpectation("functions/business-event/novation/partial-novation-func-input.json", actual);
     }
 
     @Test
@@ -937,7 +933,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 4, 1),
                 null);
 
-        assertJsonEquals("functions/business-event/clearing/clearing-func-input.json", actual);
+        writeExpectation("functions/business-event/clearing/clearing-func-input.json", actual);
     }
 
     @Test
@@ -1025,7 +1021,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 4, 1),
                 null);
 
-        assertJsonEquals("functions/business-event/allocation/allocation-func-input.json", actual);
+        writeExpectation("functions/business-event/allocation/allocation-func-input.json", actual);
     }
 
     ObservationEvent getCreditEventObservationEvent() {
@@ -1065,7 +1061,7 @@ class FunctionInputCreationTest {
                 Date.of(2022, 2, 4),
                 Date.of(2022, 2, 4));
 
-        assertJsonEquals("functions/business-event/credit-event/credit-event-func-input.json", actual);
+        writeExpectation("functions/business-event/credit-event/credit-event-func-input.json", actual);
     }
 
     @Test
@@ -1104,7 +1100,7 @@ class FunctionInputCreationTest {
                 Date.of(2023, 2, 2),
                 Date.of(2023, 2, 2));
 
-        assertJsonEquals("functions/business-event/credit-event/credit-event-obs-func-input.json", actual);
+        writeExpectation("functions/business-event/credit-event/credit-event-obs-func-input.json", actual);
     }
 
     private ObservationEvent getCorporateActionObservationEvent() {
@@ -1143,7 +1139,7 @@ class FunctionInputCreationTest {
                 Date.of(2009, 2, 1),
                 Date.of(2009, 2, 1));
 
-        assertJsonEquals("functions/business-event/corporate-actions/corporate-actions-func-input.json", actual);
+        writeExpectation("functions/business-event/corporate-actions/corporate-actions-func-input.json", actual);
     }
 
     @Test
@@ -1180,7 +1176,7 @@ class FunctionInputCreationTest {
                 Date.of(2009, 2, 13));
 
 
-        assertJsonEquals("functions/business-event/corporate-actions/corporate-actions-obs-func-input.json", actual);
+        writeExpectation("functions/business-event/corporate-actions/corporate-actions-obs-func-input.json", actual);
     }
 
 
@@ -1210,7 +1206,7 @@ class FunctionInputCreationTest {
                 Date.of(2001, 8, 28),
                 null);
 
-        assertJsonEquals("functions/business-event/exercise/exercise-swaption-full-physical-func-input.json", actual);
+        writeExpectation("functions/business-event/exercise/exercise-swaption-full-physical-func-input.json", actual);
     }
 
     @Test
@@ -1261,7 +1257,7 @@ class FunctionInputCreationTest {
                 Date.of(2019, 4, 1),
                 null);
 
-        assertJsonEquals("functions/business-event/exercise/exercise-cash-settled-func-input.json", actual);
+        writeExpectation("functions/business-event/exercise/exercise-cash-settled-func-input.json", actual);
     }
 
     @Test
@@ -1311,7 +1307,7 @@ class FunctionInputCreationTest {
                 tradeDate,
                 null);
 
-        assertJsonEquals("functions/business-event/exercise/exercise-partial-exercise-func-input.json", actual);
+        writeExpectation("functions/business-event/exercise/exercise-partial-exercise-func-input.json", actual);
     }
 
     @Test
@@ -1365,7 +1361,7 @@ class FunctionInputCreationTest {
                 tradeDate,
                 null);
 
-        assertJsonEquals("functions/business-event/exercise/exercise-cancellable-option-func-input.json", actual);
+        writeExpectation("functions/business-event/exercise/exercise-cancellable-option-func-input.json", actual);
     }
 
 
@@ -1490,7 +1486,7 @@ class FunctionInputCreationTest {
                 Date.of(2000, 10, 1),
                 null);
 
-        assertJsonEquals("functions/business-event/index-transition/index-transition-vanilla-swap-func-input.json", actual);
+        writeExpectation("functions/business-event/index-transition/index-transition-vanilla-swap-func-input.json", actual);
     }
 
     @Test
@@ -1552,7 +1548,7 @@ class FunctionInputCreationTest {
                 Date.of(2018, 6, 17),
                 null);
 
-        assertJsonEquals("functions/business-event/index-transition/index-transition-xccy-swap-func-input.json", actual);
+        writeExpectation("functions/business-event/index-transition/index-transition-xccy-swap-func-input.json", actual);
     }
 
     @Test
@@ -1574,7 +1570,7 @@ class FunctionInputCreationTest {
                 Date.of(2001, 11, 1),
                 null);
 
-        assertJsonEquals("functions/business-event/stock-split/stock-split-equity-swap-func-input.json", actual);
+        writeExpectation("functions/business-event/stock-split/stock-split-equity-swap-func-input.json", actual);
     }
 
     @Test
@@ -1625,7 +1621,7 @@ class FunctionInputCreationTest {
 
         CreateWorkflowInput actual = new CreateWorkflowInput(steps);
 
-        assertJsonEquals("functions/workflow-step/correction/correction-func-input.json", actual);
+        writeExpectation("functions/workflow-step/correction/correction-func-input.json", actual);
     }
 
     @Test
@@ -1690,7 +1686,7 @@ class FunctionInputCreationTest {
 
         CreateWorkflowInput actual = new CreateWorkflowInput(steps);
 
-        assertJsonEquals("functions/workflow-step/cancellation/cancellation-func-input.json", actual);
+        writeExpectation("functions/workflow-step/cancellation/cancellation-func-input.json", actual);
     }
 
     private WorkflowStep getExecutionWorkflowStep(TradeState tradeState,
@@ -1815,7 +1811,7 @@ class FunctionInputCreationTest {
         BusinessEvent businessEvent = reKey(businessEventBuilder).build();
         List<Instruction> instruction = (List<Instruction>) businessEvent.getInstruction();
         CreateBusinessEventInput actual = new CreateBusinessEventInput(instruction, businessEvent.getIntent(), businessEvent.getEventDate(), businessEvent.getEffectiveDate());
-        assertJsonEquals("functions/repo-and-bond/bond-execution-func-input.json", actual);
+        writeExpectation("functions/repo-and-bond/bond-execution-func-input.json", actual);
     }
 
     @Test
@@ -1824,7 +1820,7 @@ class FunctionInputCreationTest {
         BusinessEvent businessEvent = reKey(businessEventBuilder).build();
         List<Instruction> instruction = (List<Instruction>) businessEvent.getInstruction();
         CreateBusinessEventInput actual = new CreateBusinessEventInput(instruction, businessEvent.getIntent(), businessEvent.getEventDate(), businessEvent.getEffectiveDate());
-        assertJsonEquals("functions/repo-and-bond/repo-execution-func-input.json", actual);
+        writeExpectation("functions/repo-and-bond/repo-execution-func-input.json", actual);
     }
 
     @Test
@@ -1848,7 +1844,7 @@ class FunctionInputCreationTest {
         reKey(rollInstructionBuilder);
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(rollInstructionBuilder.build()), null, unadjustedRollDate, unadjustedRollDate);
-        assertJsonEquals("functions/repo-and-bond/roll-input.json", actual);
+        writeExpectation("functions/repo-and-bond/roll-input.json", actual);
     }
 
     @Test
@@ -1868,7 +1864,7 @@ class FunctionInputCreationTest {
         reKey(onDemandRateChangeInstructionBuilder);
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(onDemandRateChangeInstructionBuilder.build()), null, unadjustedEffectiveDate, unadjustedEffectiveDate);
-        assertJsonEquals("functions/repo-and-bond/on-demand-rate-change-input.json", actual);
+        writeExpectation("functions/repo-and-bond/on-demand-rate-change-input.json", actual);
     }
 
     @Test
@@ -1891,7 +1887,7 @@ class FunctionInputCreationTest {
         Date tradeDate = executionTradeState.getTrade().getTradeDate().getValue();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(rekeyedPairOffInstructions, null, tradeDate, tradeDate);
-        assertJsonEquals("functions/repo-and-bond/pair-off-input.json", actual);
+        writeExpectation("functions/repo-and-bond/pair-off-input.json", actual);
     }
 
     @Test
@@ -1910,7 +1906,7 @@ class FunctionInputCreationTest {
 
         Date unadjustedCancellationDate = cancellationDate.getAdjustableDate().getUnadjustedDate();
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(cancellationInstructionBuilder.build()), null, unadjustedCancellationDate, unadjustedCancellationDate);
-        assertJsonEquals("functions/repo-and-bond/cancellation-input.json", actual);
+        writeExpectation("functions/repo-and-bond/cancellation-input.json", actual);
     }
 
     @Test
@@ -1936,7 +1932,7 @@ class FunctionInputCreationTest {
         Date tradeDate = executionTradeState.getTrade().getTradeDate().getValue();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, tradeDate, tradeDate);
-        assertJsonEquals("functions/repo-and-bond/on-demand-interest-payment-input.json", actual);
+        writeExpectation("functions/repo-and-bond/on-demand-interest-payment-input.json", actual);
     }
 
     @Test
@@ -1944,7 +1940,7 @@ class FunctionInputCreationTest {
         String resourceName = "functions/repo-and-bond/shaping-primitive-instruction-trade-lots.json";
         List<TradeLot.TradeLotBuilder> tradeLotBuilders = toBuilder(ResourcesUtils.getObjectList(TradeLot.class, resourceName));
         List<TradeLot> actual = build(reKey(tradeLotBuilders));
-        assertJsonEquals(resourceName, actual);
+        writeExpectation(resourceName, actual);
     }
 
     @Test
@@ -1966,7 +1962,7 @@ class FunctionInputCreationTest {
         Date tradeDate = executionTradeState.getTrade().getTradeDate().getValue();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, tradeDate, tradeDate);
-        assertJsonEquals("functions/repo-and-bond/shaping-input.json", actual);
+        writeExpectation("functions/repo-and-bond/shaping-input.json", actual);
     }
 
     @Test
@@ -1974,7 +1970,7 @@ class FunctionInputCreationTest {
         String resourceName = "functions/repo-and-bond/partial-delivery-delivered-price-quantity.json";
         List<PriceQuantity.PriceQuantityBuilder> priceQuantityBuilder = toBuilder(ResourcesUtils.getObjectList(PriceQuantity.class, resourceName));
         List<PriceQuantity> actual = build(reKey(priceQuantityBuilder));
-        assertJsonEquals(resourceName, actual);
+        writeExpectation(resourceName, actual);
     }
 
     @Test
@@ -1995,7 +1991,7 @@ class FunctionInputCreationTest {
         Date eventDate = effectiveDate.getAdjustableDate().getUnadjustedDate();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, eventDate, eventDate);
-        assertJsonEquals("functions/repo-and-bond/partial-delivery-input.json", actual);
+        writeExpectation("functions/repo-and-bond/partial-delivery-input.json", actual);
     }
 
     @Test
@@ -2017,7 +2013,7 @@ class FunctionInputCreationTest {
         Date eventDate = effectiveDate.getAdjustableDate().getUnadjustedDate();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, eventDate, eventDate);
-        assertJsonEquals("functions/repo-and-bond/repo-reprice-input.json", actual);
+        writeExpectation("functions/repo-and-bond/repo-reprice-input.json", actual);
     }
 
     @Test
@@ -2039,7 +2035,7 @@ class FunctionInputCreationTest {
         Date eventDate = effectiveDate.getAdjustableDate().getUnadjustedDate();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, eventDate, eventDate);
-        assertJsonEquals("functions/repo-and-bond/repo-adjustment-input.json", actual);
+        writeExpectation("functions/repo-and-bond/repo-adjustment-input.json", actual);
     }
 
     @Test
@@ -2047,7 +2043,7 @@ class FunctionInputCreationTest {
         String resourceName = "functions/repo-and-bond/repo-substitution-collateral.json";
         Collateral.CollateralBuilder collateralBuilder = ResourcesUtils.getObject(Collateral.class, resourceName).toBuilder();
         Collateral actual = reKey(collateralBuilder).build();
-        assertJsonEquals(resourceName, actual);
+        writeExpectation(resourceName, actual);
     }
 
     @Test
@@ -2055,7 +2051,7 @@ class FunctionInputCreationTest {
         String resourceName = "functions/repo-and-bond/repo-substitution-price-quantity.json";
         List<TradeLot.TradeLotBuilder> tradeLotBuilders = toBuilder(ResourcesUtils.getObjectList(TradeLot.class, resourceName));
         List<TradeLot> actual = build(reKey(tradeLotBuilders));
-        assertJsonEquals(resourceName, actual);
+        writeExpectation(resourceName, actual);
     }
 
     @Test
@@ -2077,7 +2073,7 @@ class FunctionInputCreationTest {
         Date eventDate = effectiveDate.getAdjustableDate().getUnadjustedDate();
 
         CreateBusinessEventInput actual = new CreateBusinessEventInput(Lists.newArrayList(instructionBuilder.build()), null, eventDate, eventDate);
-        assertJsonEquals("functions/repo-and-bond/repo-substitution-input.json", actual);
+        writeExpectation("functions/repo-and-bond/repo-substitution-input.json", actual);
     }
 
     private TradeState removeIsdaProductTaxonomy(TradeState tradeState) {
@@ -2131,30 +2127,17 @@ class FunctionInputCreationTest {
                 .build();
     }
 
-    private void assertJsonEquals(String expectedJsonPath, Object actual) {
-        try {
-            String actualJson = STRICT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(actual);
-            String expectedJson = ResourcesUtils.getJson(expectedJsonPath);
-            if (!expectedJson.equals(actualJson)) {
-                if (WRITE_EXPECTATIONS) {
-                    writeExpectation(expectedJsonPath, actualJson);
-                }
-            }
-            assertEquals(expectedJson, actualJson,
-                    "The input JSON for " + Paths.get(expectedJsonPath).getFileName() + " has been updated (probably due to a model change). Update the input file");
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
-    }
+    private void writeExpectation(String writePath,Object actual) {
 
-    private void writeExpectation(String writePath, String json) {
+
         // Add environment variable TEST_WRITE_BASE_PATH to override the base write path, e.g.
         // TEST_WRITE_BASE_PATH=/Users/hugohills/dev/github/REGnosys/rosetta-cdm/rosetta-source/src/main/resources/
         TEST_WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
             Path expectationFilePath = basePath.resolve(writePath);
             try {
+                String actualJson = STRICT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(actual);
                 Files.createDirectories(expectationFilePath.getParent());
-                Files.write(expectationFilePath, json.getBytes());
+                Files.write(expectationFilePath, actualJson.getBytes());
                 LOGGER.warn("Updated expectation file {}", expectationFilePath.toAbsolutePath());
             } catch (IOException e) {
                 LOGGER.error("Failed to write expectation file {}", expectationFilePath.toAbsolutePath(), e);
