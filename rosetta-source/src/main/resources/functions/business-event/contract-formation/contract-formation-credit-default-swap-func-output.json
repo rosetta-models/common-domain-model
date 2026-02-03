@@ -137,23 +137,17 @@
                   "generalTerms" : {
                     "referenceInformation" : {
                       "referenceEntity" : {
+                        "entityId" : [ {
+                          "value" : "004CC9",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                          }
+                        } ],
                         "name" : {
                           "value" : "ACOM CO., LTD."
                         },
-                        "entityIdentifier" : [ {
-                          "identifier" : {
-                            "value" : "004CC9",
-                            "meta" : {
-                              "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                            }
-                          },
-                          "identifierType" : "REDID",
-                          "meta" : {
-                            "globalKey" : "44b3e4c7"
-                          }
-                        } ],
                         "meta" : {
-                          "globalKey" : "e447bd4f",
+                          "globalKey" : "e414546d",
                           "externalKey" : "fhjgt43"
                         }
                       },
@@ -171,7 +165,7 @@
                           "instrumentType" : "Debt"
                         },
                         "primaryObligorReference" : {
-                          "globalReference" : "e447bd4f",
+                          "globalReference" : "e414546d",
                           "externalReference" : "fhjgt43"
                         }
                       } ],
@@ -246,7 +240,7 @@
                   } ]
                 },
                 "meta" : {
-                  "globalKey" : "a22d5f25"
+                  "globalKey" : "7a1816a5"
                 }
               }, {
                 "InterestRatePayout" : {
@@ -322,7 +316,7 @@
               }
             },
             "meta" : {
-              "globalKey" : "7b7c54e3"
+              "globalKey" : "4f066063"
             }
           },
           "tradeLot" : [ {
@@ -356,6 +350,9 @@
                     "currency" : {
                       "value" : "JPY"
                     }
+                  },
+                  "multiplier" : {
+                    "value" : 500000000
                   }
                 },
                 "meta" : {
@@ -366,7 +363,7 @@
                 }
               } ],
               "meta" : {
-                "globalKey" : "790f635e"
+                "globalKey" : "8cd45749"
               }
             }, {
               "quantity" : [ {
@@ -376,6 +373,9 @@
                     "currency" : {
                       "value" : "JPY"
                     }
+                  },
+                  "multiplier" : {
+                    "value" : 500000000
                   }
                 },
                 "meta" : {
@@ -386,7 +386,7 @@
                 }
               } ],
               "meta" : {
-                "globalKey" : "11fe4b42"
+                "globalKey" : "a5a8d62d"
               }
             } ]
           } ],
@@ -535,11 +535,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "bc7d21f7"
+            "globalKey" : "3493c2d7"
           }
         },
         "meta" : {
-          "globalKey" : "bc7d21f7"
+          "globalKey" : "3493c2d7"
         }
       }
     }
@@ -679,23 +679,17 @@
               "generalTerms" : {
                 "referenceInformation" : {
                   "referenceEntity" : {
+                    "entityId" : [ {
+                      "value" : "004CC9",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                      }
+                    } ],
                     "name" : {
                       "value" : "ACOM CO., LTD."
                     },
-                    "entityIdentifier" : [ {
-                      "identifier" : {
-                        "value" : "004CC9",
-                        "meta" : {
-                          "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                        }
-                      },
-                      "identifierType" : "REDID",
-                      "meta" : {
-                        "globalKey" : "44b3e4c7"
-                      }
-                    } ],
                     "meta" : {
-                      "globalKey" : "e447bd4f",
+                      "globalKey" : "e414546d",
                       "externalKey" : "fhjgt43"
                     }
                   },
@@ -713,7 +707,7 @@
                       "instrumentType" : "Debt"
                     },
                     "primaryObligorReference" : {
-                      "globalReference" : "e447bd4f",
+                      "globalReference" : "e414546d",
                       "externalReference" : "fhjgt43"
                     }
                   } ],
@@ -788,7 +782,7 @@
               } ]
             },
             "meta" : {
-              "globalKey" : "a22d5f25"
+              "globalKey" : "7a1816a5"
             }
           }, {
             "InterestRatePayout" : {
@@ -864,7 +858,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "7b7c54e3"
+          "globalKey" : "4f066063"
         }
       },
       "tradeLot" : [ {
@@ -898,6 +892,9 @@
                 "currency" : {
                   "value" : "JPY"
                 }
+              },
+              "multiplier" : {
+                "value" : 500000000
               }
             },
             "meta" : {
@@ -908,7 +905,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "790f635e"
+            "globalKey" : "8cd45749"
           }
         }, {
           "quantity" : [ {
@@ -918,6 +915,9 @@
                 "currency" : {
                   "value" : "JPY"
                 }
+              },
+              "multiplier" : {
+                "value" : 500000000
               }
             },
             "meta" : {
@@ -928,7 +928,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "11fe4b42"
+            "globalKey" : "a5a8d62d"
           }
         } ]
       } ],
@@ -1077,17 +1077,17 @@
         }
       },
       "meta" : {
-        "globalKey" : "bc7d21f7"
+        "globalKey" : "3493c2d7"
       }
     },
     "state" : {
       "positionState" : "Formed"
     },
     "meta" : {
-      "globalKey" : "daf6c9a"
+      "globalKey" : "daa1557a"
     }
   } ],
   "meta" : {
-    "globalKey" : "f33c99f1"
+    "globalKey" : "69a353b1"
   }
 }

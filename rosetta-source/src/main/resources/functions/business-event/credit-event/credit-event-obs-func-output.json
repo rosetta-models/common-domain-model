@@ -11,20 +11,14 @@
             "auctionDate" : "2023-03-03",
             "referenceInformation" : {
               "referenceEntity" : {
+                "entityId" : [ {
+                  "value" : "UE2136O97NLB5BYP9H04"
+                } ],
                 "name" : {
                   "value" : "McDonald's Corporation"
                 },
-                "entityIdentifier" : [ {
-                  "identifier" : {
-                    "value" : "UE2136O97NLB5BYP9H04"
-                  },
-                  "identifierType" : "LEI",
-                  "meta" : {
-                    "globalKey" : "43771390"
-                  }
-                } ],
                 "meta" : {
-                  "globalKey" : "24d51450"
+                  "globalKey" : "17442720"
                 }
               },
               "noReferenceObligation" : true
@@ -178,6 +172,9 @@
                     "currency" : {
                       "value" : "USD"
                     }
+                  },
+                  "multiplier" : {
+                    "value" : 25000000
                   }
                 },
                 "meta" : {
@@ -188,7 +185,7 @@
                 }
               } ],
               "meta" : {
-                "globalKey" : "a8bdc3dd"
+                "globalKey" : "2726e6fa"
               }
             } ]
           } ],
@@ -312,7 +309,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "53a13c61"
+            "globalKey" : "3099d57e"
           }
         },
         "transferHistory" : [ {
@@ -360,20 +357,14 @@
             "auctionDate" : "2022-03-03",
             "referenceInformation" : {
               "referenceEntity" : {
+                "entityId" : [ {
+                  "value" : "UE2136O97NLB5BYP9H04"
+                } ],
                 "name" : {
                   "value" : "McDonald's Corporation"
                 },
-                "entityIdentifier" : [ {
-                  "identifier" : {
-                    "value" : "UE2136O97NLB5BYP9H04"
-                  },
-                  "identifierType" : "LEI",
-                  "meta" : {
-                    "globalKey" : "43771390"
-                  }
-                } ],
                 "meta" : {
-                  "globalKey" : "24d51450"
+                  "globalKey" : "17442720"
                 }
               },
               "noReferenceObligation" : true
@@ -381,7 +372,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "f8847c8f"
+          "globalKey" : "399c361c"
         }
       }
     }
@@ -531,6 +522,9 @@
                 "currency" : {
                   "value" : "USD"
                 }
+              },
+              "multiplier" : {
+                "value" : 25000000
               }
             },
             "meta" : {
@@ -541,7 +535,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "a8bdc3dd"
+            "globalKey" : "2726e6fa"
           }
         } ]
       } ],
@@ -665,7 +659,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "53a13c61"
+        "globalKey" : "3099d57e"
       }
     },
     "transferHistory" : [ {
@@ -713,20 +707,14 @@
         "auctionDate" : "2022-03-03",
         "referenceInformation" : {
           "referenceEntity" : {
+            "entityId" : [ {
+              "value" : "UE2136O97NLB5BYP9H04"
+            } ],
             "name" : {
               "value" : "McDonald's Corporation"
             },
-            "entityIdentifier" : [ {
-              "identifier" : {
-                "value" : "UE2136O97NLB5BYP9H04"
-              },
-              "identifierType" : "LEI",
-              "meta" : {
-                "globalKey" : "43771390"
-              }
-            } ],
             "meta" : {
-              "globalKey" : "24d51450"
+              "globalKey" : "17442720"
             }
           },
           "noReferenceObligation" : true
@@ -739,20 +727,14 @@
         "auctionDate" : "2023-03-03",
         "referenceInformation" : {
           "referenceEntity" : {
+            "entityId" : [ {
+              "value" : "UE2136O97NLB5BYP9H04"
+            } ],
             "name" : {
               "value" : "McDonald's Corporation"
             },
-            "entityIdentifier" : [ {
-              "identifier" : {
-                "value" : "UE2136O97NLB5BYP9H04"
-              },
-              "identifierType" : "LEI",
-              "meta" : {
-                "globalKey" : "43771390"
-              }
-            } ],
             "meta" : {
-              "globalKey" : "24d51450"
+              "globalKey" : "17442720"
             }
           },
           "noReferenceObligation" : true
@@ -760,10 +742,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "f58688a8"
+      "globalKey" : "409febc5"
     }
   } ],
   "meta" : {
-    "globalKey" : "47ecd410"
+    "globalKey" : "b993678a"
   }
 }

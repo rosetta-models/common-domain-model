@@ -40,7 +40,7 @@
             },
             "payerReceiver" : {
               "payerPartyReference" : {
-                "globalReference" : "411c1995",
+                "globalReference" : "ff4e8e67",
                 "externalReference" : "party1"
               },
               "receiverPartyReference" : {
@@ -535,7 +535,7 @@
           "counterparty" : [ {
             "role" : "Party1",
             "partyReference" : {
-              "globalReference" : "411c1995",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             }
           }, {
@@ -631,17 +631,8 @@
                 "externalKey" : "trader"
               }
             } ],
-            "personRole" : [ {
-              "personReference" : {
-                "globalReference" : "baeb8c0d",
-                "externalReference" : "trader"
-              },
-              "role" : [ {
-                "value" : "Trader"
-              } ]
-            } ],
             "meta" : {
-              "globalKey" : "411c1995",
+              "globalKey" : "ff4e8e67",
               "externalKey" : "party1"
             }
           }, {
@@ -680,7 +671,7 @@
             },
             "role" : "ClearingOrganization",
             "ownershipPartyReference" : {
-              "globalReference" : "411c1995",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             }
           }, {
@@ -690,26 +681,26 @@
             },
             "role" : "ArrangingBroker",
             "ownershipPartyReference" : {
-              "globalReference" : "411c1995",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             }
           }, {
             "partyReference" : {
-              "globalReference" : "411c1995",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             },
             "role" : "ReportingParty",
             "ownershipPartyReference" : {
-              "globalReference" : "411c1995",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             }
           } ],
           "meta" : {
-            "globalKey" : "ab19df60"
+            "globalKey" : "d2bc53d4"
           }
         },
         "meta" : {
-          "globalKey" : "ab19df60"
+          "globalKey" : "d2bc53d4"
         }
       }
     }

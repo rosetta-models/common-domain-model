@@ -303,73 +303,9 @@
                   "valuationDates" : {
                     "interimValuationDate" : {
                       "determinationMethod" : "ValuationTime",
-                      "valuationDates" : {
-                        "periodicDates" : {
-                          "startDate" : {
-                            "relativeDate" : {
-                              "periodMultiplier" : 0,
-                              "period" : "D",
-                              "meta" : {
-                                "globalKey" : "9229ce57"
-                              },
-                              "businessDayConvention" : "NotApplicable",
-                              "dateRelativeTo" : {
-                                "globalReference" : "6e7d8489",
-                                "externalReference" : "equityEffectiveDate"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "9229ce57"
-                            }
-                          },
-                          "endDate" : {
-                            "relativeDate" : {
-                              "periodMultiplier" : 0,
-                              "period" : "D",
-                              "meta" : {
-                                "globalKey" : "b635d2a0"
-                              },
-                              "businessDayConvention" : "NotApplicable",
-                              "dateRelativeTo" : {
-                                "globalReference" : "48e9d409",
-                                "externalReference" : "finalValuationDate"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "b635d2a0"
-                            }
-                          },
-                          "periodFrequency" : {
-                            "periodMultiplier" : 1,
-                            "period" : "M",
-                            "meta" : {
-                              "globalKey" : "177db"
-                            },
-                            "rollConvention" : "19"
-                          },
-                          "periodDatesAdjustments" : {
-                            "businessDayConvention" : "FOLLOWING",
-                            "businessCenters" : {
-                              "businessCenter" : [ {
-                                "value" : "DEFR"
-                              } ],
-                              "meta" : {
-                                "globalKey" : "1ff50d"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "211d10fc"
-                            }
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "1cc8abb8",
-                          "externalKey" : "interimValuationDate"
-                        }
-                      },
                       "valuationTimeType" : "AsSpecifiedInMasterConfirmation",
                       "meta" : {
-                        "globalKey" : "5ac6f8c7"
+                        "globalKey" : "72f6d5c9"
                       }
                     },
                     "finalValuationDate" : {
@@ -426,7 +362,6 @@
                             }
                           },
                           "dateRelativeTo" : {
-                            "globalReference" : "1cc8abb8",
                             "externalReference" : "interimValuationDate"
                           }
                         },
@@ -479,9 +414,7 @@
                     },
                     "dividendReturnTerms" : {
                       "dividendPayoutRatio" : [ {
-                        "totalRatio" : 1,
-                        "cashRatio" : 1,
-                        "nonCashRatio" : 1
+                        "totalRatio" : 1
                       } ],
                       "firstOrSecondPeriod" : "SecondPeriod",
                       "dividendPeriod" : [ {
@@ -495,12 +428,12 @@
                   }
                 },
                 "meta" : {
-                  "globalKey" : "1cec9b2e"
+                  "globalKey" : "a3aede30"
                 }
               } ]
             },
             "meta" : {
-              "globalKey" : "1778e239"
+              "globalKey" : "85a8da05"
             }
           },
           "tradeLot" : [ {
@@ -601,6 +534,9 @@
                     "currency" : {
                       "value" : "EUR"
                     }
+                  },
+                  "multiplier" : {
+                    "value" : 100000
                   }
                 },
                 "meta" : {
@@ -616,6 +552,9 @@
                     "currency" : {
                       "value" : "EUR"
                     }
+                  },
+                  "multiplier" : {
+                    "value" : 10000000
                   }
                 },
                 "meta" : {
@@ -670,7 +609,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "7b97be9d"
+                "globalKey" : "ed30599f"
               }
             } ]
           } ],
@@ -687,7 +626,6 @@
               "externalReference" : "partyB"
             }
           } ],
-          "adjustment" : "Standard",
           "tradeIdentifier" : [ {
             "issuerReference" : {
               "globalReference" : "4666b900",
@@ -817,7 +755,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "f4aca6ec"
+            "globalKey" : "93c1ce5f"
           }
         },
         "observationHistory" : [ {
@@ -828,7 +766,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "628378e5"
+          "globalKey" : "39cc0152"
         }
       }
     }
@@ -1123,73 +1061,9 @@
               "valuationDates" : {
                 "interimValuationDate" : {
                   "determinationMethod" : "ValuationTime",
-                  "valuationDates" : {
-                    "periodicDates" : {
-                      "startDate" : {
-                        "relativeDate" : {
-                          "periodMultiplier" : 0,
-                          "period" : "D",
-                          "meta" : {
-                            "globalKey" : "9229ce57"
-                          },
-                          "businessDayConvention" : "NotApplicable",
-                          "dateRelativeTo" : {
-                            "globalReference" : "6e7d8489",
-                            "externalReference" : "equityEffectiveDate"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9229ce57"
-                        }
-                      },
-                      "endDate" : {
-                        "relativeDate" : {
-                          "periodMultiplier" : 0,
-                          "period" : "D",
-                          "meta" : {
-                            "globalKey" : "b635d2a0"
-                          },
-                          "businessDayConvention" : "NotApplicable",
-                          "dateRelativeTo" : {
-                            "globalReference" : "48e9d409",
-                            "externalReference" : "finalValuationDate"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "b635d2a0"
-                        }
-                      },
-                      "periodFrequency" : {
-                        "periodMultiplier" : 1,
-                        "period" : "M",
-                        "meta" : {
-                          "globalKey" : "177db"
-                        },
-                        "rollConvention" : "19"
-                      },
-                      "periodDatesAdjustments" : {
-                        "businessDayConvention" : "FOLLOWING",
-                        "businessCenters" : {
-                          "businessCenter" : [ {
-                            "value" : "DEFR"
-                          } ],
-                          "meta" : {
-                            "globalKey" : "1ff50d"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "211d10fc"
-                        }
-                      }
-                    },
-                    "meta" : {
-                      "globalKey" : "1cc8abb8",
-                      "externalKey" : "interimValuationDate"
-                    }
-                  },
                   "valuationTimeType" : "AsSpecifiedInMasterConfirmation",
                   "meta" : {
-                    "globalKey" : "5ac6f8c7"
+                    "globalKey" : "72f6d5c9"
                   }
                 },
                 "finalValuationDate" : {
@@ -1246,7 +1120,6 @@
                         }
                       },
                       "dateRelativeTo" : {
-                        "globalReference" : "1cc8abb8",
                         "externalReference" : "interimValuationDate"
                       }
                     },
@@ -1299,9 +1172,7 @@
                 },
                 "dividendReturnTerms" : {
                   "dividendPayoutRatio" : [ {
-                    "totalRatio" : 1,
-                    "cashRatio" : 1,
-                    "nonCashRatio" : 1
+                    "totalRatio" : 1
                   } ],
                   "firstOrSecondPeriod" : "SecondPeriod",
                   "dividendPeriod" : [ {
@@ -1315,12 +1186,12 @@
               }
             },
             "meta" : {
-              "globalKey" : "1cec9b2e"
+              "globalKey" : "a3aede30"
             }
           } ]
         },
         "meta" : {
-          "globalKey" : "1778e239"
+          "globalKey" : "85a8da05"
         }
       },
       "tradeLot" : [ {
@@ -1421,6 +1292,9 @@
                 "currency" : {
                   "value" : "EUR"
                 }
+              },
+              "multiplier" : {
+                "value" : 100000
               }
             },
             "meta" : {
@@ -1436,6 +1310,9 @@
                 "currency" : {
                   "value" : "EUR"
                 }
+              },
+              "multiplier" : {
+                "value" : 10000000
               }
             },
             "meta" : {
@@ -1490,7 +1367,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "7b97be9d"
+            "globalKey" : "ed30599f"
           }
         } ]
       } ],
@@ -1507,7 +1384,6 @@
           "externalReference" : "partyB"
         }
       } ],
-      "adjustment" : "Standard",
       "tradeIdentifier" : [ {
         "issuerReference" : {
           "globalReference" : "4666b900",
@@ -1637,7 +1513,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "f4aca6ec"
+        "globalKey" : "93c1ce5f"
       }
     },
     "observationHistory" : [ {
@@ -1654,10 +1530,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "905c1218"
+      "globalKey" : "d328c5cb"
     }
   } ],
   "meta" : {
-    "globalKey" : "d96489ce"
+    "globalKey" : "e22ff274"
   }
 }

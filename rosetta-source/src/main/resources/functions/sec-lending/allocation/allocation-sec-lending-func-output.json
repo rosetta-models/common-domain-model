@@ -340,6 +340,9 @@
                     "manufacturedIncomeRequirement" : {
                       "totalRatio" : 1
                     }
+                  },
+                  "meta" : {
+                    "globalKey" : "b78e4420"
                   }
                 },
                 "meta" : {
@@ -514,6 +517,9 @@
                                   "meta" : {
                                     "globalKey" : "fa98fa5b"
                                   }
+                                },
+                                "meta" : {
+                                  "globalKey" : "705a3ef7"
                                 }
                               },
                               "meta" : {
@@ -869,6 +875,9 @@
                 "manufacturedIncomeRequirement" : {
                   "totalRatio" : 1
                 }
+              },
+              "meta" : {
+                "globalKey" : "b78e4420"
               }
             },
             "meta" : {
@@ -1043,6 +1052,9 @@
                               "meta" : {
                                 "globalKey" : "fa98fa5b"
                               }
+                            },
+                            "meta" : {
+                              "globalKey" : "705a3ef7"
                             }
                           },
                           "meta" : {
@@ -1429,6 +1441,9 @@
                 "manufacturedIncomeRequirement" : {
                   "totalRatio" : 1
                 }
+              },
+              "meta" : {
+                "globalKey" : "b78e4420"
               }
             },
             "meta" : {
@@ -1603,6 +1618,9 @@
                               "meta" : {
                                 "globalKey" : "fa98fa5b"
                               }
+                            },
+                            "meta" : {
+                              "globalKey" : "705a3ef7"
                             }
                           },
                           "meta" : {
@@ -1989,6 +2007,9 @@
                 "manufacturedIncomeRequirement" : {
                   "totalRatio" : 1
                 }
+              },
+              "meta" : {
+                "globalKey" : "b78e4420"
               }
             },
             "meta" : {
@@ -2163,6 +2184,9 @@
                               "meta" : {
                                 "globalKey" : "fa98fa5b"
                               }
+                            },
+                            "meta" : {
+                              "globalKey" : "705a3ef7"
                             }
                           },
                           "meta" : {

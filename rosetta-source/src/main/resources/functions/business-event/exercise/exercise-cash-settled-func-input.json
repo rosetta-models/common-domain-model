@@ -48,7 +48,7 @@
             },
             "payerReceiver" : {
               "payerPartyReference" : {
-                "globalReference" : "4f018eab",
+                "globalReference" : "114dc391",
                 "externalReference" : "party1"
               },
               "receiverPartyReference" : {
@@ -657,7 +657,7 @@
           "counterparty" : [ {
             "role" : "Party1",
             "partyReference" : {
-              "globalReference" : "4f018eab",
+              "globalReference" : "114dc391",
               "externalReference" : "party1"
             }
           }, {
@@ -745,17 +745,8 @@
                 "externalKey" : "trader"
               }
             } ],
-            "personRole" : [ {
-              "personReference" : {
-                "globalReference" : "baeb8c0d",
-                "externalReference" : "trader"
-              },
-              "role" : [ {
-                "value" : "Trader"
-              } ]
-            } ],
             "meta" : {
-              "globalKey" : "4f018eab",
+              "globalKey" : "114dc391",
               "externalKey" : "party1"
             }
           }, {
@@ -806,12 +797,12 @@
             },
             "role" : "ArrangingBroker",
             "ownershipPartyReference" : {
-              "globalReference" : "4f018eab",
+              "globalReference" : "114dc391",
               "externalReference" : "party1"
             }
           } ],
           "meta" : {
-            "globalKey" : "1e339f54"
+            "globalKey" : "902bb40a"
           }
         },
         "transferHistory" : [ {
@@ -853,7 +844,7 @@
             },
             "payerReceiver" : {
               "payerPartyReference" : {
-                "globalReference" : "4f018eab",
+                "globalReference" : "114dc391",
                 "externalReference" : "party1"
               },
               "receiverPartyReference" : {
@@ -870,7 +861,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "8ec5244b"
+          "globalKey" : "2afbcdd5"
         }
       }
     }

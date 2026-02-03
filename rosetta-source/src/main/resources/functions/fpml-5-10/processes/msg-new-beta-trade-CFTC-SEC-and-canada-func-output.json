@@ -20,11 +20,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a2c0b72d"
+              "globalKey" : "ace2ec54"
             }
           }, {
             "agreementDate" : "2002-01-07",
@@ -40,11 +40,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a78bb72c"
+              "globalKey" : "88b8a1d3"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -57,11 +57,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "63f2bad7"
+              "globalKey" : "d7e8fe"
             }
           }, {
             "legalAgreementIdentification" : {
@@ -81,11 +81,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "cd57029c"
+              "globalKey" : "12280543"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -99,11 +99,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "110f55ef"
+              "globalKey" : "30f0016"
             }
           } ]
         }
@@ -202,23 +202,17 @@
                     "generalTerms" : {
                       "referenceInformation" : {
                         "referenceEntity" : {
+                          "entityId" : [ {
+                            "value" : "8G836J",
+                            "meta" : {
+                              "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                            }
+                          } ],
                           "name" : {
                             "value" : "TENET HEALTHCARE CORPORATION"
                           },
-                          "entityIdentifier" : [ {
-                            "identifier" : {
-                              "value" : "8G836J",
-                              "meta" : {
-                                "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                              }
-                            },
-                            "identifierType" : "REDID",
-                            "meta" : {
-                              "globalKey" : "13561e6e"
-                            }
-                          } ],
                           "meta" : {
-                            "globalKey" : "15c38ed7",
+                            "globalKey" : "54140007",
                             "externalKey" : "referenceEntity"
                           }
                         },
@@ -243,7 +237,7 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "2c27ab9a"
+                    "globalKey" : "c847dc2a"
                   }
                 }, {
                   "InterestRatePayout" : {
@@ -322,7 +316,7 @@
                 "nonStandardisedTerms" : true
               },
               "meta" : {
-                "globalKey" : "3d4d7903"
+                "globalKey" : "82feed13"
               }
             },
             "tradeLot" : [ {
@@ -360,6 +354,9 @@
                       "currency" : {
                         "value" : "USD"
                       }
+                    },
+                    "multiplier" : {
+                      "value" : 5000000
                     }
                   },
                   "meta" : {
@@ -370,7 +367,7 @@
                   }
                 } ],
                 "meta" : {
-                  "globalKey" : "280b774f"
+                  "globalKey" : "1477d7ba"
                 }
               } ]
             } ],
@@ -383,7 +380,7 @@
             }, {
               "role" : "Party2",
               "partyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             } ],
@@ -529,28 +526,11 @@
                   "externalKey" : "trader"
                 }
               } ],
-              "personRole" : [ {
-                "personReference" : {
-                  "globalReference" : "32d9e6bd",
-                  "externalReference" : "broker"
-                },
-                "role" : [ {
-                  "value" : "Broker"
-                } ]
-              }, {
-                "personReference" : {
-                  "globalReference" : "32d9f260",
-                  "externalReference" : "trader"
-                },
-                "role" : [ {
-                  "value" : "Trader"
-                } ]
-              } ],
               "contactInformation" : {
                 "email" : [ "swap_trading@bankx.com" ]
               },
               "meta" : {
-                "globalKey" : "dd0bba9a",
+                "globalKey" : "7c3b9a93",
                 "externalKey" : "party1"
               }
             }, {
@@ -712,7 +692,7 @@
               },
               "role" : "ClearingOrganization",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -722,7 +702,7 @@
               },
               "role" : "ExecutingBroker",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -732,7 +712,7 @@
               },
               "role" : "ExecutionFacility",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -742,7 +722,7 @@
               },
               "role" : "ReportingPartyUltimateParent",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -752,7 +732,7 @@
               },
               "role" : "ReportingPartyAffiliate",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -762,7 +742,7 @@
               },
               "role" : "ReportingPartyAffiliate",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             }, {
@@ -772,7 +752,7 @@
               },
               "role" : "PriorTradeRepository",
               "ownershipPartyReference" : {
-                "globalReference" : "dd0bba9a",
+                "globalReference" : "7c3b9a93",
                 "externalReference" : "party1"
               }
             } ],
@@ -792,11 +772,11 @@
                   "globalReference" : "a3344cf2",
                   "externalReference" : "clearing-svc"
                 }, {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 } ],
                 "meta" : {
-                  "globalKey" : "a2c0b72d"
+                  "globalKey" : "ace2ec54"
                 }
               }, {
                 "agreementDate" : "2002-01-07",
@@ -812,11 +792,11 @@
                   "globalReference" : "a3344cf2",
                   "externalReference" : "clearing-svc"
                 }, {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 } ],
                 "meta" : {
-                  "globalKey" : "a78bb72c"
+                  "globalKey" : "88b8a1d3"
                 }
               }, {
                 "agreementDate" : "2015-01-04",
@@ -829,11 +809,11 @@
                   "globalReference" : "a3344cf2",
                   "externalReference" : "clearing-svc"
                 }, {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 } ],
                 "meta" : {
-                  "globalKey" : "63f2bad7"
+                  "globalKey" : "d7e8fe"
                 }
               }, {
                 "legalAgreementIdentification" : {
@@ -853,11 +833,11 @@
                   "globalReference" : "a3344cf2",
                   "externalReference" : "clearing-svc"
                 }, {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 } ],
                 "meta" : {
-                  "globalKey" : "cd57029c"
+                  "globalKey" : "12280543"
                 }
               }, {
                 "agreementDate" : "2015-01-04",
@@ -871,19 +851,19 @@
                   "globalReference" : "a3344cf2",
                   "externalReference" : "clearing-svc"
                 }, {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 } ],
                 "meta" : {
-                  "globalKey" : "110f55ef"
+                  "globalKey" : "30f0016"
                 }
               } ],
               "meta" : {
-                "globalKey" : "72925363"
+                "globalKey" : "4ab2be2e"
               }
             },
             "meta" : {
-              "globalKey" : "99bb5a96"
+              "globalKey" : "460c9d5f"
             }
           },
           "transferHistory" : [ {
@@ -917,7 +897,7 @@
               },
               "payerReceiver" : {
                 "payerPartyReference" : {
-                  "globalReference" : "dd0bba9a",
+                  "globalReference" : "7c3b9a93",
                   "externalReference" : "party1"
                 },
                 "receiverPartyReference" : {
@@ -930,11 +910,11 @@
               }
             },
             "meta" : {
-              "globalKey" : "7ea90db"
+              "globalKey" : "d46e1754"
             }
           } ],
           "meta" : {
-            "globalKey" : "a2fa4f71"
+            "globalKey" : "f58fc433"
           }
         }
       }
@@ -1033,23 +1013,17 @@
                 "generalTerms" : {
                   "referenceInformation" : {
                     "referenceEntity" : {
+                      "entityId" : [ {
+                        "value" : "8G836J",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                        }
+                      } ],
                       "name" : {
                         "value" : "TENET HEALTHCARE CORPORATION"
                       },
-                      "entityIdentifier" : [ {
-                        "identifier" : {
-                          "value" : "8G836J",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                          }
-                        },
-                        "identifierType" : "REDID",
-                        "meta" : {
-                          "globalKey" : "13561e6e"
-                        }
-                      } ],
                       "meta" : {
-                        "globalKey" : "15c38ed7",
+                        "globalKey" : "54140007",
                         "externalKey" : "referenceEntity"
                       }
                     },
@@ -1074,7 +1048,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "2c27ab9a"
+                "globalKey" : "c847dc2a"
               }
             }, {
               "InterestRatePayout" : {
@@ -1153,7 +1127,7 @@
             "nonStandardisedTerms" : true
           },
           "meta" : {
-            "globalKey" : "3d4d7903"
+            "globalKey" : "82feed13"
           }
         },
         "tradeLot" : [ {
@@ -1191,6 +1165,9 @@
                   "currency" : {
                     "value" : "USD"
                   }
+                },
+                "multiplier" : {
+                  "value" : 5000000
                 }
               },
               "meta" : {
@@ -1201,7 +1178,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "280b774f"
+              "globalKey" : "1477d7ba"
             }
           } ]
         } ],
@@ -1214,7 +1191,7 @@
         }, {
           "role" : "Party2",
           "partyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         } ],
@@ -1360,28 +1337,11 @@
               "externalKey" : "trader"
             }
           } ],
-          "personRole" : [ {
-            "personReference" : {
-              "globalReference" : "32d9e6bd",
-              "externalReference" : "broker"
-            },
-            "role" : [ {
-              "value" : "Broker"
-            } ]
-          }, {
-            "personReference" : {
-              "globalReference" : "32d9f260",
-              "externalReference" : "trader"
-            },
-            "role" : [ {
-              "value" : "Trader"
-            } ]
-          } ],
           "contactInformation" : {
             "email" : [ "swap_trading@bankx.com" ]
           },
           "meta" : {
-            "globalKey" : "dd0bba9a",
+            "globalKey" : "7c3b9a93",
             "externalKey" : "party1"
           }
         }, {
@@ -1543,7 +1503,7 @@
           },
           "role" : "ClearingOrganization",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1553,7 +1513,7 @@
           },
           "role" : "ExecutingBroker",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1563,7 +1523,7 @@
           },
           "role" : "ExecutionFacility",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1573,7 +1533,7 @@
           },
           "role" : "ReportingPartyUltimateParent",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1583,7 +1543,7 @@
           },
           "role" : "ReportingPartyAffiliate",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1593,7 +1553,7 @@
           },
           "role" : "ReportingPartyAffiliate",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         }, {
@@ -1603,7 +1563,7 @@
           },
           "role" : "PriorTradeRepository",
           "ownershipPartyReference" : {
-            "globalReference" : "dd0bba9a",
+            "globalReference" : "7c3b9a93",
             "externalReference" : "party1"
           }
         } ],
@@ -1623,11 +1583,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a2c0b72d"
+              "globalKey" : "ace2ec54"
             }
           }, {
             "agreementDate" : "2002-01-07",
@@ -1643,11 +1603,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a78bb72c"
+              "globalKey" : "88b8a1d3"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -1660,11 +1620,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "63f2bad7"
+              "globalKey" : "d7e8fe"
             }
           }, {
             "legalAgreementIdentification" : {
@@ -1684,11 +1644,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "cd57029c"
+              "globalKey" : "12280543"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -1702,11 +1662,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "110f55ef"
+              "globalKey" : "30f0016"
             }
           }, {
             "agreementDate" : "2002-01-05",
@@ -1723,11 +1683,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a2c0b72d"
+              "globalKey" : "ace2ec54"
             }
           }, {
             "agreementDate" : "2002-01-07",
@@ -1743,11 +1703,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "a78bb72c"
+              "globalKey" : "88b8a1d3"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -1760,11 +1720,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "63f2bad7"
+              "globalKey" : "d7e8fe"
             }
           }, {
             "legalAgreementIdentification" : {
@@ -1784,11 +1744,11 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "cd57029c"
+              "globalKey" : "12280543"
             }
           }, {
             "agreementDate" : "2015-01-04",
@@ -1802,19 +1762,19 @@
               "globalReference" : "a3344cf2",
               "externalReference" : "clearing-svc"
             }, {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             } ],
             "meta" : {
-              "globalKey" : "110f55ef"
+              "globalKey" : "30f0016"
             }
           } ],
           "meta" : {
-            "globalKey" : "4c511f46"
+            "globalKey" : "a731d85c"
           }
         },
         "meta" : {
-          "globalKey" : "a661ff73"
+          "globalKey" : "641fadcb"
         }
       },
       "state" : {
@@ -1851,7 +1811,7 @@
           },
           "payerReceiver" : {
             "payerPartyReference" : {
-              "globalReference" : "dd0bba9a",
+              "globalReference" : "7c3b9a93",
               "externalReference" : "party1"
             },
             "receiverPartyReference" : {
@@ -1864,19 +1824,19 @@
           }
         },
         "meta" : {
-          "globalKey" : "7ea90db"
+          "globalKey" : "d46e1754"
         }
       } ],
       "meta" : {
-        "globalKey" : "bcbccff1"
+        "globalKey" : "9be0e1c2"
       }
     } ],
     "meta" : {
-      "globalKey" : "c0abdbe3"
+      "globalKey" : "19dfdfd"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "d60fdb8f"
+    "globalReference" : "98fa5eb8"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1978,28 +1938,11 @@
         "externalKey" : "trader"
       }
     } ],
-    "personRole" : [ {
-      "personReference" : {
-        "globalReference" : "32d9e6bd",
-        "externalReference" : "broker"
-      },
-      "role" : [ {
-        "value" : "Broker"
-      } ]
-    }, {
-      "personReference" : {
-        "globalReference" : "32d9f260",
-        "externalReference" : "trader"
-      },
-      "role" : [ {
-        "value" : "Trader"
-      } ]
-    } ],
     "contactInformation" : {
       "email" : [ "swap_trading@bankx.com" ]
     },
     "meta" : {
-      "globalKey" : "dd0bba9a",
+      "globalKey" : "7c3b9a93",
       "externalKey" : "party1"
     }
   }, {
@@ -2155,6 +2098,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "b7a9b59c"
+    "globalKey" : "b99c62fb"
   }
 }

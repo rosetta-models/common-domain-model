@@ -47,7 +47,7 @@
             },
             "payerReceiver" : {
               "payerPartyReference" : {
-                "globalReference" : "35d0b164",
+                "globalReference" : "5cc5d335",
                 "externalReference" : "party1"
               },
               "receiverPartyReference" : {
@@ -60,7 +60,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "25c93c35"
+            "globalKey" : "fcda1a06"
           }
         } ]
       }
@@ -545,7 +545,7 @@
           "counterparty" : [ {
             "role" : "Party1",
             "partyReference" : {
-              "globalReference" : "35d0b164",
+              "globalReference" : "5cc5d335",
               "externalReference" : "party1"
             }
           }, {
@@ -644,17 +644,8 @@
                 "externalKey" : "trader"
               }
             } ],
-            "personRole" : [ {
-              "personReference" : {
-                "globalReference" : "baeb8c0d",
-                "externalReference" : "trader"
-              },
-              "role" : [ {
-                "value" : "Trader"
-              } ]
-            } ],
             "meta" : {
-              "globalKey" : "35d0b164",
+              "globalKey" : "5cc5d335",
               "externalKey" : "party1"
             }
           }, {
@@ -696,7 +687,7 @@
             },
             "role" : "ClearingOrganization",
             "ownershipPartyReference" : {
-              "globalReference" : "35d0b164",
+              "globalReference" : "5cc5d335",
               "externalReference" : "party1"
             }
           }, {
@@ -706,26 +697,26 @@
             },
             "role" : "ArrangingBroker",
             "ownershipPartyReference" : {
-              "globalReference" : "35d0b164",
+              "globalReference" : "5cc5d335",
               "externalReference" : "party1"
             }
           }, {
             "partyReference" : {
-              "globalReference" : "35d0b164",
+              "globalReference" : "5cc5d335",
               "externalReference" : "party1"
             },
             "role" : "ReportingParty",
             "ownershipPartyReference" : {
-              "globalReference" : "35d0b164",
+              "globalReference" : "5cc5d335",
               "externalReference" : "party1"
             }
           } ],
           "meta" : {
-            "globalKey" : "c7d7aff3"
+            "globalKey" : "b30df8d5"
           }
         },
         "meta" : {
-          "globalKey" : "c7d7aff3"
+          "globalKey" : "b30df8d5"
         }
       }
     }
@@ -1210,7 +1201,7 @@
       "counterparty" : [ {
         "role" : "Party1",
         "partyReference" : {
-          "globalReference" : "35d0b164",
+          "globalReference" : "5cc5d335",
           "externalReference" : "party1"
         }
       }, {
@@ -1309,17 +1300,8 @@
             "externalKey" : "trader"
           }
         } ],
-        "personRole" : [ {
-          "personReference" : {
-            "globalReference" : "baeb8c0d",
-            "externalReference" : "trader"
-          },
-          "role" : [ {
-            "value" : "Trader"
-          } ]
-        } ],
         "meta" : {
-          "globalKey" : "35d0b164",
+          "globalKey" : "5cc5d335",
           "externalKey" : "party1"
         }
       }, {
@@ -1361,7 +1343,7 @@
         },
         "role" : "ClearingOrganization",
         "ownershipPartyReference" : {
-          "globalReference" : "35d0b164",
+          "globalReference" : "5cc5d335",
           "externalReference" : "party1"
         }
       }, {
@@ -1371,22 +1353,22 @@
         },
         "role" : "ArrangingBroker",
         "ownershipPartyReference" : {
-          "globalReference" : "35d0b164",
+          "globalReference" : "5cc5d335",
           "externalReference" : "party1"
         }
       }, {
         "partyReference" : {
-          "globalReference" : "35d0b164",
+          "globalReference" : "5cc5d335",
           "externalReference" : "party1"
         },
         "role" : "ReportingParty",
         "ownershipPartyReference" : {
-          "globalReference" : "35d0b164",
+          "globalReference" : "5cc5d335",
           "externalReference" : "party1"
         }
       } ],
       "meta" : {
-        "globalKey" : "f388df71"
+        "globalKey" : "b0c22953"
       }
     },
     "state" : {
@@ -1418,7 +1400,7 @@
         },
         "payerReceiver" : {
           "payerPartyReference" : {
-            "globalReference" : "35d0b164",
+            "globalReference" : "5cc5d335",
             "externalReference" : "party1"
           },
           "receiverPartyReference" : {
@@ -1431,14 +1413,14 @@
         }
       },
       "meta" : {
-        "globalKey" : "25c93c35"
+        "globalKey" : "fcda1a06"
       }
     } ],
     "meta" : {
-      "globalKey" : "7dcce34f"
+      "globalKey" : "a7b23782"
     }
   } ],
   "meta" : {
-    "globalKey" : "e6d455ca"
+    "globalKey" : "344b5ae"
   }
 }

@@ -605,7 +605,7 @@
           "counterparty" : [ {
             "role" : "Party1",
             "partyReference" : {
-              "globalReference" : "73d26145",
+              "globalReference" : "995638b7",
               "externalReference" : "party1"
             }
           }, {
@@ -693,17 +693,8 @@
                 "externalKey" : "trader"
               }
             } ],
-            "personRole" : [ {
-              "personReference" : {
-                "globalReference" : "baeb8c0d",
-                "externalReference" : "trader"
-              },
-              "role" : [ {
-                "value" : "Trader"
-              } ]
-            } ],
             "meta" : {
-              "globalKey" : "73d26145",
+              "globalKey" : "995638b7",
               "externalKey" : "party1"
             }
           }, {
@@ -774,7 +765,7 @@
             },
             "role" : "ClearingOrganization",
             "ownershipPartyReference" : {
-              "globalReference" : "73d26145",
+              "globalReference" : "995638b7",
               "externalReference" : "party1"
             }
           }, {
@@ -784,16 +775,16 @@
             },
             "role" : "ArrangingBroker",
             "ownershipPartyReference" : {
-              "globalReference" : "73d26145",
+              "globalReference" : "995638b7",
               "externalReference" : "party1"
             }
           } ],
           "meta" : {
-            "globalKey" : "6e2ff940"
+            "globalKey" : "5a930d4e"
           }
         },
         "meta" : {
-          "globalKey" : "6e2ff940"
+          "globalKey" : "5a930d4e"
         }
       }
     }

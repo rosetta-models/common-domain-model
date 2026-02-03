@@ -79,30 +79,23 @@
                         }
                       },
                       "meta" : {
-                        "globalKey" : "0",
-                        "externalKey" : "calculationAmount"
+                        "globalKey" : "0"
                       }
                     },
                     "generalTerms" : {
                       "referenceInformation" : {
                         "referenceEntity" : {
+                          "entityId" : [ {
+                            "value" : "0E69A8",
+                            "meta" : {
+                              "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                            }
+                          } ],
                           "name" : {
                             "value" : "0E69A8"
                           },
-                          "entityIdentifier" : [ {
-                            "identifier" : {
-                              "value" : "0E69A8",
-                              "meta" : {
-                                "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                              }
-                            },
-                            "identifierType" : "REDID",
-                            "meta" : {
-                              "globalKey" : "68a1457d"
-                            }
-                          } ],
                           "meta" : {
-                            "globalKey" : "4f9b33ac"
+                            "globalKey" : "717c0b9e"
                           }
                         },
                         "referenceObligation" : [ {
@@ -136,7 +129,7 @@
                     } ]
                   },
                   "meta" : {
-                    "globalKey" : "b73a3017"
+                    "globalKey" : "ab03a8a5"
                   }
                 }, {
                   "InterestRatePayout" : {
@@ -214,7 +207,7 @@
                 } ]
               },
               "meta" : {
-                "globalKey" : "dfbbc260"
+                "globalKey" : "e98b7752"
               }
             },
             "tradeLot" : [ {
@@ -252,6 +245,9 @@
                       "currency" : {
                         "value" : "USD"
                       }
+                    },
+                    "multiplier" : {
+                      "value" : 70000000
                     }
                   },
                   "meta" : {
@@ -262,7 +258,7 @@
                   }
                 } ],
                 "meta" : {
-                  "globalKey" : "e6be80f3"
+                  "globalKey" : "c5dd013a"
                 }
               } ]
             } ],
@@ -422,7 +418,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "218d8115"
+              "globalKey" : "a6b2a360"
             }
           },
           "transferHistory" : [ {
@@ -464,7 +460,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "f4ca45f8"
+            "globalKey" : "dba71583"
           }
         }
       }
@@ -521,30 +517,23 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "0",
-                    "externalKey" : "calculationAmount"
+                    "globalKey" : "0"
                   }
                 },
                 "generalTerms" : {
                   "referenceInformation" : {
                     "referenceEntity" : {
+                      "entityId" : [ {
+                        "value" : "0E69A8",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                        }
+                      } ],
                       "name" : {
                         "value" : "0E69A8"
                       },
-                      "entityIdentifier" : [ {
-                        "identifier" : {
-                          "value" : "0E69A8",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                          }
-                        },
-                        "identifierType" : "REDID",
-                        "meta" : {
-                          "globalKey" : "68a1457d"
-                        }
-                      } ],
                       "meta" : {
-                        "globalKey" : "4f9b33ac"
+                        "globalKey" : "717c0b9e"
                       }
                     },
                     "referenceObligation" : [ {
@@ -578,7 +567,7 @@
                 } ]
               },
               "meta" : {
-                "globalKey" : "b73a3017"
+                "globalKey" : "ab03a8a5"
               }
             }, {
               "InterestRatePayout" : {
@@ -656,7 +645,7 @@
             } ]
           },
           "meta" : {
-            "globalKey" : "dfbbc260"
+            "globalKey" : "e98b7752"
           }
         },
         "tradeLot" : [ {
@@ -694,6 +683,9 @@
                   "currency" : {
                     "value" : "USD"
                   }
+                },
+                "multiplier" : {
+                  "value" : 70000000
                 }
               },
               "meta" : {
@@ -704,7 +696,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "e6be80f3"
+              "globalKey" : "c5dd013a"
             }
           } ]
         } ],
@@ -884,7 +876,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "bd11c628"
+          "globalKey" : "43423e3d"
         }
       },
       "state" : {
@@ -929,15 +921,15 @@
         }
       } ],
       "meta" : {
-        "globalKey" : "8c7f2fee"
+        "globalKey" : "2980183"
       }
     } ],
     "meta" : {
-      "globalKey" : "6dfb82d7"
+      "globalKey" : "31dd4781"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "583236f5"
+    "globalReference" : "b0de6880"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1061,6 +1053,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "81be652b"
+    "globalKey" : "f86940c1"
   }
 }

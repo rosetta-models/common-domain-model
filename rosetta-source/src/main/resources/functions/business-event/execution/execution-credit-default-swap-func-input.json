@@ -134,23 +134,17 @@
                 "generalTerms" : {
                   "referenceInformation" : {
                     "referenceEntity" : {
+                      "entityId" : [ {
+                        "value" : "004CC9",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
+                        }
+                      } ],
                       "name" : {
                         "value" : "ACOM CO., LTD."
                       },
-                      "entityIdentifier" : [ {
-                        "identifier" : {
-                          "value" : "004CC9",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/spec/2003/entity-id-RED-1-0"
-                          }
-                        },
-                        "identifierType" : "REDID",
-                        "meta" : {
-                          "globalKey" : "44b3e4c7"
-                        }
-                      } ],
                       "meta" : {
-                        "globalKey" : "e447bd4f",
+                        "globalKey" : "e414546d",
                         "externalKey" : "fhjgt43"
                       }
                     },
@@ -168,7 +162,7 @@
                         "instrumentType" : "Debt"
                       },
                       "primaryObligorReference" : {
-                        "globalReference" : "e447bd4f",
+                        "globalReference" : "e414546d",
                         "externalReference" : "fhjgt43"
                       }
                     } ],
@@ -243,7 +237,7 @@
                 } ]
               },
               "meta" : {
-                "globalKey" : "1d6e5942"
+                "globalKey" : "dfd917a0"
               }
             }, {
               "InterestRatePayout" : {
@@ -319,7 +313,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "d09d25a0"
+            "globalKey" : "b05abbfe"
           }
         },
         "priceQuantity" : [ {
@@ -352,6 +346,9 @@
                 "currency" : {
                   "value" : "JPY"
                 }
+              },
+              "multiplier" : {
+                "value" : 500000000.0
               }
             },
             "meta" : {
@@ -362,7 +359,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "790f635e"
+            "globalKey" : "8cd45749"
           }
         }, {
           "quantity" : [ {
@@ -372,6 +369,9 @@
                 "currency" : {
                   "value" : "JPY"
                 }
+              },
+              "multiplier" : {
+                "value" : 500000000.0
               }
             },
             "meta" : {
@@ -382,7 +382,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "11fe4b42"
+            "globalKey" : "a5a8d62d"
           }
         } ],
         "counterparty" : [ {

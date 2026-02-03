@@ -60,20 +60,17 @@
               },
               "payerReceiver" : {
                 "payerPartyReference" : {
-                  "globalReference" : "71969616",
+                  "globalReference" : "ff4e8e67",
                   "externalReference" : "party1"
                 },
                 "receiverPartyReference" : {
                   "globalReference" : "67e3087d",
                   "externalReference" : "party2"
                 }
-              },
-              "transferExpression" : {
-                "priceTransfer" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "c2454eb6"
+              "globalKey" : "33072d63"
             }
           } ]
         }
@@ -569,7 +566,7 @@
             "counterparty" : [ {
               "role" : "Party1",
               "partyReference" : {
-                "globalReference" : "71969616",
+                "globalReference" : "ff4e8e67",
                 "externalReference" : "party1"
               }
             }, {
@@ -657,17 +654,8 @@
                   "externalKey" : "trader"
                 }
               } ],
-              "personRole" : [ {
-                "personReference" : {
-                  "globalReference" : "baeb8c0d",
-                  "externalReference" : "trader"
-                },
-                "role" : [ {
-                  "value" : "Trader"
-                } ]
-              } ],
               "meta" : {
-                "globalKey" : "71969616",
+                "globalKey" : "ff4e8e67",
                 "externalKey" : "party1"
               }
             }, {
@@ -738,7 +726,7 @@
               },
               "role" : "ClearingOrganization",
               "ownershipPartyReference" : {
-                "globalReference" : "71969616",
+                "globalReference" : "ff4e8e67",
                 "externalReference" : "party1"
               }
             }, {
@@ -748,16 +736,16 @@
               },
               "role" : "ArrangingBroker",
               "ownershipPartyReference" : {
-                "globalReference" : "71969616",
+                "globalReference" : "ff4e8e67",
                 "externalReference" : "party1"
               }
             } ],
             "meta" : {
-              "globalKey" : "7908e499"
+              "globalKey" : "fc873899"
             }
           },
           "meta" : {
-            "globalKey" : "7908e499"
+            "globalKey" : "fc873899"
           }
         }
       }
@@ -1252,7 +1240,7 @@
         "counterparty" : [ {
           "role" : "Party1",
           "partyReference" : {
-            "globalReference" : "71969616",
+            "globalReference" : "ff4e8e67",
             "externalReference" : "party1"
           }
         }, {
@@ -1340,17 +1328,8 @@
               "externalKey" : "trader"
             }
           } ],
-          "personRole" : [ {
-            "personReference" : {
-              "globalReference" : "baeb8c0d",
-              "externalReference" : "trader"
-            },
-            "role" : [ {
-              "value" : "Trader"
-            } ]
-          } ],
           "meta" : {
-            "globalKey" : "71969616",
+            "globalKey" : "ff4e8e67",
             "externalKey" : "party1"
           }
         }, {
@@ -1421,7 +1400,7 @@
           },
           "role" : "ClearingOrganization",
           "ownershipPartyReference" : {
-            "globalReference" : "71969616",
+            "globalReference" : "ff4e8e67",
             "externalReference" : "party1"
           }
         }, {
@@ -1431,12 +1410,12 @@
           },
           "role" : "ArrangingBroker",
           "ownershipPartyReference" : {
-            "globalReference" : "71969616",
+            "globalReference" : "ff4e8e67",
             "externalReference" : "party1"
           }
         } ],
         "meta" : {
-          "globalKey" : "bb6f215f"
+          "globalKey" : "8f0e335f"
         }
       },
       "transferHistory" : [ {
@@ -1469,32 +1448,29 @@
           },
           "payerReceiver" : {
             "payerPartyReference" : {
-              "globalReference" : "71969616",
+              "globalReference" : "ff4e8e67",
               "externalReference" : "party1"
             },
             "receiverPartyReference" : {
               "globalReference" : "67e3087d",
               "externalReference" : "party2"
             }
-          },
-          "transferExpression" : {
-            "priceTransfer" : "Termination"
           }
         },
         "meta" : {
-          "globalKey" : "c2454eb6"
+          "globalKey" : "33072d63"
         }
       } ],
       "meta" : {
-        "globalKey" : "edddce95"
+        "globalKey" : "341655c2"
       }
     } ],
     "meta" : {
-      "globalKey" : "a0389af4"
+      "globalKey" : "94b41514"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "ff3e03f2"
+    "globalReference" : "904b2368"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1564,17 +1540,8 @@
         "externalKey" : "trader"
       }
     } ],
-    "personRole" : [ {
-      "personReference" : {
-        "globalReference" : "baeb8c0d",
-        "externalReference" : "trader"
-      },
-      "role" : [ {
-        "value" : "Trader"
-      } ]
-    } ],
     "meta" : {
-      "globalKey" : "71969616",
+      "globalKey" : "ff4e8e67",
       "externalKey" : "party1"
     }
   }, {
@@ -1639,6 +1606,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "bbbd5a43"
+    "globalKey" : "28c159f4"
   }
 }

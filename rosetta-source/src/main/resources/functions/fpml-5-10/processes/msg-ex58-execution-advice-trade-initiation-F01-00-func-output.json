@@ -79,8 +79,7 @@
                         }
                       },
                       "meta" : {
-                        "globalKey" : "0",
-                        "externalKey" : "calculationAmount"
+                        "globalKey" : "0"
                       }
                     },
                     "generalTerms" : {
@@ -103,31 +102,25 @@
                         "indexAnnexDate" : "2007-03-06",
                         "excludedReferenceEntity" : [ {
                           "referenceEntity" : {
-                            "entityIdentifier" : [ {
-                              "identifier" : {
-                                "value" : "ABC1234567",
-                                "meta" : {
-                                  "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-1-0"
-                                }
-                              },
-                              "identifierType" : "REDID",
+                            "entityId" : [ {
+                              "value" : "ABC1234567",
                               "meta" : {
-                                "globalKey" : "2c9b87da"
+                                "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-1-0"
                               }
                             } ],
                             "meta" : {
-                              "globalKey" : "2c9b87da"
+                              "globalKey" : "e883dbb2"
                             }
                           }
                         } ],
                         "meta" : {
-                          "globalKey" : "cf5f0162"
+                          "globalKey" : "b368173a"
                         }
                       }
                     }
                   },
                   "meta" : {
-                    "globalKey" : "3cd3d8c1"
+                    "globalKey" : "a8993a59"
                   }
                 }, {
                   "InterestRatePayout" : {
@@ -205,7 +198,7 @@
                 } ]
               },
               "meta" : {
-                "globalKey" : "87334396"
+                "globalKey" : "1b4061be"
               }
             },
             "tradeLot" : [ {
@@ -243,6 +236,9 @@
                       "currency" : {
                         "value" : "USD"
                       }
+                    },
+                    "multiplier" : {
+                      "value" : 70000000
                     }
                   },
                   "meta" : {
@@ -253,7 +249,7 @@
                   }
                 } ],
                 "meta" : {
-                  "globalKey" : "e6be80f3"
+                  "globalKey" : "c5dd013a"
                 }
               } ]
             } ],
@@ -413,7 +409,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "818af8db"
+              "globalKey" : "3bc3395c"
             }
           },
           "transferHistory" : [ {
@@ -455,7 +451,7 @@
             }
           } ],
           "meta" : {
-            "globalKey" : "624e4c3e"
+            "globalKey" : "91af2c7f"
           }
         }
       }
@@ -512,8 +508,7 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "0",
-                    "externalKey" : "calculationAmount"
+                    "globalKey" : "0"
                   }
                 },
                 "generalTerms" : {
@@ -536,31 +531,25 @@
                     "indexAnnexDate" : "2007-03-06",
                     "excludedReferenceEntity" : [ {
                       "referenceEntity" : {
-                        "entityIdentifier" : [ {
-                          "identifier" : {
-                            "value" : "ABC1234567",
-                            "meta" : {
-                              "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-1-0"
-                            }
-                          },
-                          "identifierType" : "REDID",
+                        "entityId" : [ {
+                          "value" : "ABC1234567",
                           "meta" : {
-                            "globalKey" : "2c9b87da"
+                            "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-1-0"
                           }
                         } ],
                         "meta" : {
-                          "globalKey" : "2c9b87da"
+                          "globalKey" : "e883dbb2"
                         }
                       }
                     } ],
                     "meta" : {
-                      "globalKey" : "cf5f0162"
+                      "globalKey" : "b368173a"
                     }
                   }
                 }
               },
               "meta" : {
-                "globalKey" : "3cd3d8c1"
+                "globalKey" : "a8993a59"
               }
             }, {
               "InterestRatePayout" : {
@@ -638,7 +627,7 @@
             } ]
           },
           "meta" : {
-            "globalKey" : "87334396"
+            "globalKey" : "1b4061be"
           }
         },
         "tradeLot" : [ {
@@ -676,6 +665,9 @@
                   "currency" : {
                     "value" : "USD"
                   }
+                },
+                "multiplier" : {
+                  "value" : 70000000
                 }
               },
               "meta" : {
@@ -686,7 +678,7 @@
               }
             } ],
             "meta" : {
-              "globalKey" : "e6be80f3"
+              "globalKey" : "c5dd013a"
             }
           } ]
         } ],
@@ -866,7 +858,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "246c2a12"
+          "globalKey" : "1c7eccb1"
         }
       },
       "state" : {
@@ -911,15 +903,15 @@
         }
       } ],
       "meta" : {
-        "globalKey" : "ad0b66d8"
+        "globalKey" : "ed3165f7"
       }
     } ],
     "meta" : {
-      "globalKey" : "bdee120b"
+      "globalKey" : "97fa2089"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "9474ec4b"
+    "globalReference" : "ecc9b28c"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1043,6 +1035,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "408b61ae"
+    "globalKey" : "42d503f0"
   }
 }
