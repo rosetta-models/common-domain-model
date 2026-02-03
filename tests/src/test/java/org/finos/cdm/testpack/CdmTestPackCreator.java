@@ -5,6 +5,7 @@ import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToW
 import com.google.common.collect.ImmutableMultimap;
 import com.google.inject.Injector;
 import com.regnosys.functions.FunctionInputCreator;
+import com.regnosys.functions.SecLendingFunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.runefpml.RuneFpmlModelConfig;
 import com.regnosys.testing.pipeline.PipelineConfigWriter;
@@ -46,6 +47,7 @@ public class CdmTestPackCreator {
             testPackConfigCreator.run();
 
             runFunctionInputCreator();
+            runSecLendingFunctionInputCreator();
 
             System.exit(0);
         } catch (Exception e) {
@@ -57,6 +59,11 @@ public class CdmTestPackCreator {
     private static void runFunctionInputCreator() throws Exception {
         FunctionInputCreator functionInputCreator = new FunctionInputCreator();
         functionInputCreator.run();
+    }
+
+    private static void runSecLendingFunctionInputCreator() throws Exception {
+        SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
+        secLendingFunctionInputCreator.run();
     }
 
     private void run() throws IOException {
