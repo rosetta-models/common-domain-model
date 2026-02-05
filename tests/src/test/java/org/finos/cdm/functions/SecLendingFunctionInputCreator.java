@@ -1,4 +1,4 @@
-package com.regnosys.functions;
+package org.finos.cdm.functions;
 
 import cdm.base.math.*;
 import cdm.base.math.metafields.FieldWithMetaNonNegativeQuantitySchedule;

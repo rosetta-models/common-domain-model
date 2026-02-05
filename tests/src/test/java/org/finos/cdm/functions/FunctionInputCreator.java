@@ -1,4 +1,4 @@
-package com.regnosys.functions;
+package org.finos.cdm.functions;
 
 import cdm.base.datetime.*;
 import cdm.base.math.*;
@@ -53,7 +53,6 @@ import com.rosetta.model.lib.records.Date;
 import com.rosetta.model.metafields.FieldWithMetaString;
 import com.rosetta.model.metafields.MetaFields;
 import org.finos.cdm.CdmRuntimeModule;
-import org.finos.cdm.CdmRuntimeModuleTesting;
 import org.isda.cdm.functions.CreateBusinessEventInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,7 +69,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.regnosys.functions.FunctionUtils.guard;
+import static org.finos.cdm.functions.FunctionUtils.guard;
 import static util.ResourcesUtils.*;
 
 public class FunctionInputCreator {

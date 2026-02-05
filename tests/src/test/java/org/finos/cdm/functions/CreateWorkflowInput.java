@@ -1,4 +1,4 @@
-package com.regnosys.functions;
+package org.finos.cdm.functions;
 
 import cdm.event.workflow.WorkflowStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
