@@ -1,4 +1,4 @@
-package com.regnosys.functions;
+package org.finos.cdm.functions;
 
 import cdm.base.datetime.AdjustableOrAdjustedOrRelativeDate;
 import cdm.base.datetime.AdjustableOrRelativeDate;
@@ -73,7 +73,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.regnosys.functions.FunctionUtils.guard;
+import static org.finos.cdm.functions.FunctionUtils.guard;
 import static util.ResourcesUtils.*;
 
 public class FunctionInputCreator {
