@@ -5,6 +5,9 @@ import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToW
 import com.google.common.collect.ImmutableMultimap;
 import com.google.inject.Injector;
 import com.regnosys.functions.FunctionCreator;
+import com.regnosys.ingest.createiq.CreateiQIngestionServiceTest;
+import com.regnosys.ingest.fis.FisIngestionTest;
+import com.regnosys.ingest.ore.OreTradeTest;
 import org.finos.cdm.functions.FunctionInputCreator;
 import org.finos.cdm.functions.SecLendingFunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
@@ -49,9 +52,8 @@ public class CdmTestPackCreator {
 
             testPackConfigCreator.run();
 
-            runFunctionInputCreator();
-            runSecLendingFunctionInputCreator();
-            runFunctionCreator();
+            runIngestion();
+            runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
@@ -60,19 +62,28 @@ public class CdmTestPackCreator {
         }
     }
 
-    private static void runFunctionInputCreator() throws Exception {
+    private static void runFunctionCreators() throws Exception {
         FunctionInputCreator functionInputCreator = new FunctionInputCreator();
         functionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
-    }
 
-    private static void runSecLendingFunctionInputCreator() throws Exception {
         SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
         secLendingFunctionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
-    }
 
-    private static void runFunctionCreator() throws Exception {
         FunctionCreator functionCreator = new FunctionCreator();
         functionCreator.run();
+    }
+
+    private static void runIngestion() throws Exception {
+
+        FisIngestionTest fisIngestionTest = new FisIngestionTest();
+
+        fisIngestionTest.run();
+
+        CreateiQIngestionServiceTest createiQIngestionServiceTest = new CreateiQIngestionServiceTest();
+        createiQIngestionServiceTest.run();
+
+        OreTradeTest oreTradeTest = new OreTradeTest();
+        oreTradeTest.run();
     }
 
     private void run() throws IOException {
