@@ -34,8 +34,10 @@ import com.rosetta.model.lib.process.PostProcessor;
 import com.rosetta.model.lib.records.Date;
 import com.rosetta.model.metafields.FieldWithMetaString;
 import com.rosetta.model.metafields.MetaFields;
+import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModule;
-import org.isda.cdm.functions.CreateBusinessEventInput;import org.slf4j.Logger;
+import org.isda.cdm.functions.CreateBusinessEventInput;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import util.ResourcesUtils;
 
@@ -56,16 +58,14 @@ import static util.ResourcesUtils.reKey;
 
 public class SecLendingFunctionInputCreator {
 
-   private static final Optional<Path> TEST_WRITE_BASE_PATH =
-            Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
     private static final Logger LOGGER = LoggerFactory.getLogger(SecLendingFunctionInputCreator.class);
-
-
+    
+    private static final Optional<Path> TEST_WRITE_BASE_PATH =
+            Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
     private static final ObjectMapper STRICT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
             .configure(JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN, true)
             .setNodeFactory(JsonNodeFactory.withExactBigDecimals(true));
-
     public static final ObjectMapper MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper();
 
     // AVOID ADDING MANUALLY CRAFTED JSON
@@ -82,9 +82,16 @@ public class SecLendingFunctionInputCreator {
     public static final String EXECUTION_CASH_BENCHMARK_FUNC_INPUT_JSON = "/functions/sec-lending/execution/execution-cash-benchmark-input.json";
     public static final String EXECUTION_NONCASH_PORTFOLIO_FUNC_INPUT_JSON = "/functions/sec-lending/execution/execution-noncash-portfolio-input.json";
 
-    
-
-    private static Injector injector;
+    @Inject
+    private PostProcessor postProcessor;
+    @Inject
+    private Create_Execution createExecution;
+    @Inject
+    private Create_BusinessEvent createBusinessEvent;
+    @Inject
+    private RunReturnSettlementWorkflow runReturnSettlementWorkflow;
+    @Inject
+    private RunNewSettlementWorkflow runNewSettlementWorkflow;
 
     public static void main(String[] args) {
         try {
@@ -97,6 +104,7 @@ public class SecLendingFunctionInputCreator {
             System.exit(1);
         }
     }
+
     public void run() throws Exception {
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
@@ -105,7 +113,9 @@ public class SecLendingFunctionInputCreator {
                         bind(PostProcessor.class).to(WorkflowPostProcessor.class);
                     }
                 });
-        injector = Guice.createInjector(module);
+        Injector injector = Guice.createInjector(module);
+        injector.injectMembers(this);
+
         updateExecutionInstructionWorkflowFuncOutputJson();
         updatePartReturnSettlementWorkflowFuncInputJson();
         updateFullReturnSettlementWorkflowFuncInputJson();
@@ -117,13 +127,11 @@ public class SecLendingFunctionInputCreator {
     private void updateExecutionInstructionWorkflowFuncOutputJson() throws IOException {
         URL resource = SecLendingFunctionInputCreator.class.getResource(EXECUTION_INSTRUCTION_JSON);
         ExecutionInstruction executionInstruction = STRICT_MAPPER.readValue(resource, ExecutionInstruction.class);
-        Create_Execution createExecution = injector.getInstance(Create_Execution.class);
 
         TradeState.TradeStateBuilder tradeStateBuilder = createExecution.evaluate(executionInstruction).toBuilder();
 
-        PostProcessor postProcessor = injector.getInstance(PostProcessor.class);
         postProcessor.postProcess(TradeState.class, tradeStateBuilder);
-        
+
         writeExpectation(BLOCK_EXECUTION_TRADE_STATE_JSON, tradeStateBuilder.build());
     }
 
@@ -188,7 +196,7 @@ public class SecLendingFunctionInputCreator {
                         CounterpartyRoleEnum.PARTY_1,
                         0.60))
                 // Fund 2 lends 80k SDOL to Borrower CP001
-                .addBreakdown(createAllocationInstruction( blockExecutionTradeState,
+                .addBreakdown(createAllocationInstruction(blockExecutionTradeState,
                         "lender-2",
                         "Fund 2",
                         CounterpartyRoleEnum.PARTY_1,
@@ -260,7 +268,7 @@ public class SecLendingFunctionInputCreator {
 
     private void updateCreateSecurityLendingInvoiceFuncInputJson() throws IOException {
         RunReturnSettlementWorkflowInput input = assertJsonConformsToRosettaType("/functions/sec-lending/part-return-settlement-workflow-func-input.json", RunReturnSettlementWorkflowInput.class);
-        Workflow part = injector.getInstance(RunReturnSettlementWorkflow.class).execute(input);
+        Workflow part = runReturnSettlementWorkflow.execute(input);
 
         TradeState fullReturnAfterTradeState = getTransferTradeState();
 
@@ -366,10 +374,9 @@ public class SecLendingFunctionInputCreator {
                 .build();
     }
 
-    private static TradeState getTransferTradeState() throws IOException {
+    private TradeState getTransferTradeState() throws IOException {
         URL resource = SecLendingFunctionInputCreator.class.getResource(SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON);
         ExecutionInstruction executionInstruction = STRICT_MAPPER.readValue(resource, ExecutionInstruction.class);
-        RunNewSettlementWorkflow runNewSettlementWorkflow = injector.getInstance(RunNewSettlementWorkflow.class);
         Workflow.WorkflowBuilder workflowBuilder = runNewSettlementWorkflow.execute(executionInstruction).toBuilder();
         reKey(workflowBuilder);
         Workflow workflow = workflowBuilder.build();
@@ -449,7 +456,6 @@ public class SecLendingFunctionInputCreator {
 
     private static String readResource(String inputJson) throws IOException {
         URL resource = SecLendingFunctionInputCreator.class.getResource(inputJson);
-        //noinspection UnstableApiUsage
         return Resources.toString(Objects.requireNonNull(resource), StandardCharsets.UTF_8);
     }
 
@@ -465,14 +471,12 @@ public class SecLendingFunctionInputCreator {
     }
 
     private BusinessEvent runCreateBusinessEventFunc(CreateBusinessEventInput input) {
-        Create_BusinessEvent func = injector.getInstance(Create_BusinessEvent.class);
         BusinessEvent.BusinessEventBuilder businessEvent =
-                func.evaluate(input.getInstruction(),
+                createBusinessEvent.evaluate(input.getInstruction(),
                                 input.getIntent(),
                                 input.getEventDate(),
                                 null)
                         .toBuilder();
-        PostProcessor postProcessor = injector.getInstance(PostProcessor.class);
         postProcessor.postProcess(BusinessEvent.class, businessEvent);
         return businessEvent.build();
     }
