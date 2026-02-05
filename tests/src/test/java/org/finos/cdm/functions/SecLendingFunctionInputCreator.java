@@ -37,6 +37,7 @@ import com.rosetta.model.metafields.MetaFields;
 import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModule;
 import org.isda.cdm.functions.CreateBusinessEventInput;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import util.ResourcesUtils;
@@ -59,9 +60,8 @@ import static util.ResourcesUtils.reKey;
 public class SecLendingFunctionInputCreator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SecLendingFunctionInputCreator.class);
-    
-    private static final Optional<Path> TEST_WRITE_BASE_PATH =
-            Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
+
+    private Optional<Path> WRITE_BASE_PATH;
     private static final ObjectMapper STRICT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
             .configure(JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN, true)
@@ -96,7 +96,7 @@ public class SecLendingFunctionInputCreator {
     public static void main(String[] args) {
         try {
             SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
-            secLendingFunctionInputCreator.run();
+            secLendingFunctionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
 
             System.exit(0);
         } catch (Exception e) {
@@ -105,7 +105,7 @@ public class SecLendingFunctionInputCreator {
         }
     }
 
-    public void run() throws Exception {
+    public void run(Optional<Path> writeBasePath) throws Exception {
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
                     @Override
@@ -113,6 +113,7 @@ public class SecLendingFunctionInputCreator {
                         bind(PostProcessor.class).to(WorkflowPostProcessor.class);
                     }
                 });
+        this.WRITE_BASE_PATH = writeBasePath;
         Injector injector = Guice.createInjector(module);
         injector.injectMembers(this);
 
@@ -122,6 +123,32 @@ public class SecLendingFunctionInputCreator {
         updateCreateAllocationFuncInputJson();
         updateCreateReallocationFuncInputJson();
         updateCreateSecurityLendingInvoiceFuncInputJson();
+    }
+
+
+    @Test
+    void executionCash() throws IOException {
+        assertJsonConformsToRosettaType(EXECUTION_CASH_FUNC_INPUT_JSON, CreateBusinessEventInput.class);
+    }
+
+    @Test
+    void executionCashBenchmark() throws IOException {
+        assertJsonConformsToRosettaType(EXECUTION_CASH_BENCHMARK_FUNC_INPUT_JSON, CreateBusinessEventInput.class);
+    }
+
+    @Test
+    void executionNoncashPortfolio() throws IOException {
+        assertJsonConformsToRosettaType(EXECUTION_NONCASH_PORTFOLIO_FUNC_INPUT_JSON, CreateBusinessEventInput.class);
+    }
+
+    @Test
+    void validateNewSettlementWorkflowFuncInputJson() throws IOException {
+        assertJsonConformsToRosettaType(SETTLEMENT_WORKFLOW_FUNC_INPUT_JSON, ExecutionInstruction.class);
+    }
+
+    @Test
+    void validateExecutionInstructionWorkflowFuncInputJson() throws IOException {
+        assertJsonConformsToRosettaType(EXECUTION_INSTRUCTION_JSON, ExecutionInstruction.class);
     }
 
     private void updateExecutionInstructionWorkflowFuncOutputJson() throws IOException {
@@ -484,7 +511,7 @@ public class SecLendingFunctionInputCreator {
     private void writeExpectation(String writePath, Object actual) {
         // Add environment variable TEST_WRITE_BASE_PATH to override the base write path, e.g.
         // TEST_WRITE_BASE_PATH=/Users/hugohills/dev/github/REGnosys/rosetta-cdm/rosetta-source/src/main/resources/
-        TEST_WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
+        WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
             Path expectationFilePath = basePath.resolve(writePath);
             try {
                 String json = STRICT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(actual);

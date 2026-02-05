@@ -78,8 +78,7 @@ import static util.ResourcesUtils.*;
 
 public class FunctionInputCreator {
 
-    private static final Optional<Path> TEST_WRITE_BASE_PATH =
-            Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
+    private Optional<Path> WRITE_BASE_PATH;
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionInputCreator.class);
 
     private static final ObjectMapper STRICT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper()
@@ -117,7 +116,7 @@ public class FunctionInputCreator {
     public static void main(String[] args) {
         try {
             FunctionInputCreator functionInputCreator = new FunctionInputCreator();
-            functionInputCreator.run();
+            functionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
 
             System.exit(0);
         } catch (Exception e) {
@@ -126,7 +125,7 @@ public class FunctionInputCreator {
         }
     }
     
-    public void run() throws Exception {
+    public void run( Optional<Path> writeBasePath) throws Exception {
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
                     @Override
@@ -137,6 +136,7 @@ public class FunctionInputCreator {
         Injector injector = Guice.createInjector(module);
         injector.injectMembers(this);
 
+        this.WRITE_BASE_PATH = writeBasePath;
         updateContractFormationIrSwapFuncInputJson();
         updateExecutionIrSwapFuncInputJson();
         updateExecutionIrSwapWithInitialFeeFuncInputJson();
@@ -2116,7 +2116,7 @@ public class FunctionInputCreator {
     private void writeExpectation(String writePath, Object actual) {
         // Add environment variable TEST_WRITE_BASE_PATH to override the base write path, e.g.
         // TEST_WRITE_BASE_PATH=/Users/hugohills/dev/github/REGnosys/rosetta-cdm/rosetta-source/src/main/resources/
-        TEST_WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
+        WRITE_BASE_PATH.filter(Files::exists).ifPresent(basePath -> {
             Path expectationFilePath = basePath.resolve(writePath);
             try {
                 String actualJson = STRICT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(actual);

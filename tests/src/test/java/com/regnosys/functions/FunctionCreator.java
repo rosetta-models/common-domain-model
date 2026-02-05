@@ -31,7 +31,6 @@ import static com.regnosys.rosetta.common.util.UrlUtils.toUrl;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FunctionCreator {
-    private static final boolean WRITE_TEST_OUTPUT = ExpectationUtil.WRITE_EXPECTATIONS;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionCreator.class);
 

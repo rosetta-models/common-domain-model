@@ -18,7 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Optional;
 
 public class CdmTestPackCreator {
 
@@ -60,12 +62,12 @@ public class CdmTestPackCreator {
 
     private static void runFunctionInputCreator() throws Exception {
         FunctionInputCreator functionInputCreator = new FunctionInputCreator();
-        functionInputCreator.run();
+        functionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
     }
 
     private static void runSecLendingFunctionInputCreator() throws Exception {
         SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
-        secLendingFunctionInputCreator.run();
+        secLendingFunctionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
     }
 
     private static void runFunctionCreator() throws Exception {
