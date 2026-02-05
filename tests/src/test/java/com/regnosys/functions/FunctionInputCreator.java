@@ -1,6 +1,9 @@
 package com.regnosys.functions;
 
-import cdm.base.datetime.*;
+import cdm.base.datetime.AdjustableOrAdjustedOrRelativeDate;
+import cdm.base.datetime.AdjustableOrRelativeDate;
+import cdm.base.datetime.Period;
+import cdm.base.datetime.PeriodEnum;
 import cdm.base.math.*;
 import cdm.base.math.metafields.FieldWithMetaNonNegativeQuantitySchedule;
 import cdm.base.staticdata.asset.common.*;
@@ -27,7 +30,7 @@ import cdm.observable.asset.metafields.FieldWithMetaInterestRateIndex;
 import cdm.observable.asset.metafields.FieldWithMetaPriceSchedule;
 import cdm.product.asset.InterestRatePayout;
 import cdm.product.asset.ReferenceInformation;
-import cdm.product.collateral.*;
+import cdm.product.collateral.Collateral;
 import cdm.product.common.schedule.CalculationPeriodDates;
 import cdm.product.common.settlement.ScheduledTransferEnum;
 import cdm.product.common.settlement.SettlementDate;
@@ -52,8 +55,8 @@ import com.rosetta.model.lib.process.PostProcessor;
 import com.rosetta.model.lib.records.Date;
 import com.rosetta.model.metafields.FieldWithMetaString;
 import com.rosetta.model.metafields.MetaFields;
+import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModule;
-import org.finos.cdm.CdmRuntimeModuleTesting;
 import org.isda.cdm.functions.CreateBusinessEventInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -79,12 +82,37 @@ public class FunctionInputCreator {
             Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get);
     private static final Logger LOGGER = LoggerFactory.getLogger(FunctionInputCreator.class);
 
-    private static Injector injector;
-
     private static final ObjectMapper STRICT_MAPPER = RosettaObjectMapper.getNewRosettaObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
             .configure(JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN, true)
             .setNodeFactory(JsonNodeFactory.withExactBigDecimals(true));
+
+    @Inject
+    private PostProcessor postProcessor;
+    @Inject
+    private Create_BusinessEvent createBusinessEvent;
+    @Inject
+    private Create_WorkflowStep createWorkflowStep;
+    @Inject
+    private Create_RollPrimitiveInstruction createRollPrimitiveInstruction;
+    @Inject
+    private Create_OnDemandRateChangePrimitiveInstruction createOnDemandRateChangePrimitiveInstruction;
+    @Inject
+    private Create_PairOffInstruction createPairOffInstruction;
+    @Inject
+    private Create_CancellationPrimitiveInstruction createCancellationPrimitiveInstruction;
+    @Inject
+    private Create_OnDemandInterestPaymentPrimitiveInstruction createOnDemandInterestPaymentPrimitiveInstruction;
+    @Inject
+    private Create_ShapingInstruction createShapingInstruction;
+    @Inject
+    private Create_PartialDeliveryPrimitiveInstruction createPartialDeliveryPrimitiveInstruction;
+    @Inject
+    private Create_RepricePrimitiveInstruction createRepriceInstruction;
+    @Inject
+    private Create_AdjustmentPrimitiveInstruction createAdjustmentInstruction;
+    @Inject
+    private Create_SubstitutionPrimitiveInstruction createSubstitutionInstruction;
 
     public static void main(String[] args) {
         try {
@@ -99,7 +127,6 @@ public class FunctionInputCreator {
     }
     
     public void run() throws Exception {
-
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
                     @Override
@@ -107,7 +134,8 @@ public class FunctionInputCreator {
                         bind(PostProcessor.class).to(WorkflowPostProcessor.class);
                     }
                 });
-        injector = Guice.createInjector(module);
+        Injector injector = Guice.createInjector(module);
+        injector.injectMembers(this);
 
         updateContractFormationIrSwapFuncInputJson();
         updateExecutionIrSwapFuncInputJson();
@@ -1802,22 +1830,19 @@ public class FunctionInputCreator {
 
 
     private BusinessEvent runCreateBusinessEventFunc(CreateBusinessEventInput input) {
-        Create_BusinessEvent func = injector.getInstance(Create_BusinessEvent.class);
         BusinessEvent.BusinessEventBuilder businessEvent =
-                func.evaluate(input.getInstruction(),
+                createBusinessEvent.evaluate(input.getInstruction(),
                                 input.getIntent(),
                                 input.getEventDate(),
                                 null)
                         .toBuilder();
-        PostProcessor postProcessor = injector.getInstance(PostProcessor.class);
         postProcessor.postProcess(BusinessEvent.class, businessEvent);
         return businessEvent.build();
     }
 
     private WorkflowStep runCreateWorkflowStepFunc(CreateWorkflowStepInput input) {
-        Create_WorkflowStep func = injector.getInstance(Create_WorkflowStep.class);
         WorkflowStep.WorkflowStepBuilder workflowStep =
-                func.evaluate(input.getMessageInformation(),
+                createWorkflowStep.evaluate(input.getMessageInformation(),
                                 input.getTimestamp(),
                                 input.getEventIdentifier(),
                                 input.getParty(),
@@ -1826,7 +1851,6 @@ public class FunctionInputCreator {
                                 input.getAction(),
                                 input.getBusinessEvent())
                         .toBuilder();
-        PostProcessor postProcessor = injector.getInstance(PostProcessor.class);
         postProcessor.postProcess(WorkflowStep.class, workflowStep);
         return workflowStep.build();
     }
@@ -1853,8 +1877,7 @@ public class FunctionInputCreator {
         AdjustableOrRelativeDate terminationDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/roll-primitive-instruction-termination-date.json");
         List<? extends PriceQuantity> priceQuantity = executionTradeState.getTrade().getTradeLot().get(0).getPriceQuantity();
 
-        Create_RollPrimitiveInstruction create_rollPrimitiveInstruction = injector.getInstance(Create_RollPrimitiveInstruction.class);
-        PrimitiveInstruction rollPrimitiveInstruction = create_rollPrimitiveInstruction.evaluate(executionTradeState,
+        PrimitiveInstruction rollPrimitiveInstruction = createRollPrimitiveInstruction.evaluate(executionTradeState,
                 effectiveRollDate,
                 terminationDate,
                 priceQuantity);
@@ -1875,8 +1898,7 @@ public class FunctionInputCreator {
         AdjustableOrRelativeDate effectiveDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/on-demand-rate-change-primitive-instruction-effective-date.json");
         BigDecimal agreedRate = new BigDecimal("0.005");
 
-        Create_OnDemandRateChangePrimitiveInstruction create_onDemandRateChangePrimitiveInstruction = injector.getInstance(Create_OnDemandRateChangePrimitiveInstruction.class);
-        PrimitiveInstruction onDemandRateChangePrimitiveInstruction = create_onDemandRateChangePrimitiveInstruction.evaluate(executionTradeState, effectiveDate, agreedRate);
+        PrimitiveInstruction onDemandRateChangePrimitiveInstruction = createOnDemandRateChangePrimitiveInstruction.evaluate(executionTradeState, effectiveDate, agreedRate);
 
         Date unadjustedEffectiveDate = effectiveDate.getAdjustableDate().getUnadjustedDate();
         Instruction.InstructionBuilder onDemandRateChangeInstructionBuilder = Instruction.builder()
@@ -1896,9 +1918,7 @@ public class FunctionInputCreator {
         pairReferenceIdentifierBuilder.getOrCreateAssignedIdentifier(0)
                 .setIdentifierValue("Package");
 
-        Create_PairOffInstruction create_pairOffInstruction = injector.getInstance(Create_PairOffInstruction.class);
-
-        List<? extends Instruction> pairOffInstruction = create_pairOffInstruction.evaluate(Lists.newArrayList(executionTradeState, executionTradeState), pairReferenceIdentifierBuilder.build());
+        List<? extends Instruction> pairOffInstruction = createPairOffInstruction.evaluate(Lists.newArrayList(executionTradeState, executionTradeState), pairReferenceIdentifierBuilder.build());
         List<Instruction> rekeyedPairOffInstructions = pairOffInstruction.stream()
                 .map(Instruction::toBuilder)
                 .map(b -> reKey(b))
@@ -1915,8 +1935,7 @@ public class FunctionInputCreator {
         TradeState executionTradeState = getRepoExecutionAfterTradeState();
         AdjustableOrRelativeDate cancellationDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/cancellation-primitive-instruction-cancellation-date.json");
 
-        Create_CancellationPrimitiveInstruction create_cancellationPrimitiveInstruction = injector.getInstance(Create_CancellationPrimitiveInstruction.class);
-        PrimitiveInstruction cancellationPrimitiveInstruction = create_cancellationPrimitiveInstruction.evaluate(executionTradeState, null, cancellationDate);
+        PrimitiveInstruction cancellationPrimitiveInstruction = createCancellationPrimitiveInstruction.evaluate(executionTradeState, null, cancellationDate);
 
         Instruction.InstructionBuilder cancellationInstructionBuilder = Instruction.builder()
                 .setBeforeValue(executionTradeState)
@@ -1935,10 +1954,7 @@ public class FunctionInputCreator {
         Money interestAmount = ResourcesUtils.getObject(Money.class, "functions/repo-and-bond/on-demand-interest-payment-primitive-instruction-interest-amount.json");
         SettlementDate settlementDate = ResourcesUtils.getObject(SettlementDate.class, "functions/repo-and-bond/on-demand-interest-payment-primitive-instruction-settlement-date.json");
 
-        Create_OnDemandInterestPaymentPrimitiveInstruction create_onDemandInterestPaymentPrimitiveInstruction =
-                injector.getInstance(Create_OnDemandInterestPaymentPrimitiveInstruction.class);
-
-        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = create_onDemandInterestPaymentPrimitiveInstruction
+        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = createOnDemandInterestPaymentPrimitiveInstruction
                 .evaluate(executionTradeState, interestAmount, settlementDate)
                 .toBuilder();
 
@@ -1967,8 +1983,7 @@ public class FunctionInputCreator {
         List<TradeLot> tradeLots = ResourcesUtils.getObjectList(TradeLot.class, "functions/repo-and-bond/shaping-primitive-instruction-trade-lots.json");
         Identifier shapeIdentifier = ResourcesUtils.getObject(Identifier.class, "functions/repo-and-bond/shaping-primitive-instruction-shape-identifier.json");
 
-        Create_ShapingInstruction create_shapingInstruction = injector.getInstance(Create_ShapingInstruction.class);
-        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = create_shapingInstruction.evaluate(executionTradeState, tradeLots, shapeIdentifier).toBuilder();
+        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = createShapingInstruction.evaluate(executionTradeState, tradeLots, shapeIdentifier).toBuilder();
 
         reKey(primitiveInstructionBuilder);
 
@@ -1994,8 +2009,7 @@ public class FunctionInputCreator {
         AdjustableOrRelativeDate effectiveDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/partial-delivery-effective-date.json");
         List<? extends PriceQuantity> deliveredPriceQuantity = ResourcesUtils.getObjectList(PriceQuantity.class, "functions/repo-and-bond/partial-delivery-delivered-price-quantity.json");
 
-        Create_PartialDeliveryPrimitiveInstruction create_partialDeliveryPrimitiveInstruction = injector.getInstance(Create_PartialDeliveryPrimitiveInstruction.class);
-        PrimitiveInstruction partialDeliveryPrimitiveInstruction = create_partialDeliveryPrimitiveInstruction.evaluate(executionTradeState, deliveredPriceQuantity).toBuilder();
+        PrimitiveInstruction partialDeliveryPrimitiveInstruction = createPartialDeliveryPrimitiveInstruction.evaluate(executionTradeState, deliveredPriceQuantity).toBuilder();
 
         Instruction.InstructionBuilder instructionBuilder = Instruction.builder()
                 .setBeforeValue(executionTradeState)
@@ -2015,8 +2029,7 @@ public class FunctionInputCreator {
         BigDecimal newCashValue = new BigDecimal("9922500.00");
         AdjustableOrRelativeDate effectiveDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/repo-reprice-effective-date.json");
 
-        Create_RepricePrimitiveInstruction create_repriceInstruction = injector.getInstance(Create_RepricePrimitiveInstruction.class);
-        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = create_repriceInstruction.evaluate(executionTradeState, newAllinPrice, newCashValue, effectiveDate).toBuilder();
+        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = createRepriceInstruction.evaluate(executionTradeState, newAllinPrice, newCashValue, effectiveDate).toBuilder();
 
         reKey(primitiveInstructionBuilder);
 
@@ -2036,8 +2049,7 @@ public class FunctionInputCreator {
         BigDecimal newAssetQuantity = new BigDecimal("10151134");
         AdjustableOrRelativeDate effectiveDate = ResourcesUtils.getObject(AdjustableOrRelativeDate.class, "functions/repo-and-bond/repo-adjustment-effective-date.json");
 
-        Create_AdjustmentPrimitiveInstruction create_adjustmentInstruction = injector.getInstance(Create_AdjustmentPrimitiveInstruction.class);
-        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = create_adjustmentInstruction.evaluate(executionTradeState, newAllinPrice, newAssetQuantity, effectiveDate).toBuilder();
+        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = createAdjustmentInstruction.evaluate(executionTradeState, newAllinPrice, newAssetQuantity, effectiveDate).toBuilder();
 
         reKey(primitiveInstructionBuilder);
 
@@ -2071,8 +2083,7 @@ public class FunctionInputCreator {
         CollateralPortfolio newCollateralPortfolio = ResourcesUtils.getObject(CollateralPortfolio.class, "functions/repo-and-bond/repo-substitution-collateral.json");
         List<? extends PriceQuantity> priceQuantity = ResourcesUtils.getObjectList(PriceQuantity.class, "functions/repo-and-bond/repo-substitution-price-quantity.json");
 
-        Create_SubstitutionPrimitiveInstruction create_substitutionInstruction = injector.getInstance(Create_SubstitutionPrimitiveInstruction.class);
-        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = create_substitutionInstruction.evaluate(executionTradeState, effectiveDate, newCollateralPortfolio, priceQuantity).toBuilder();
+        PrimitiveInstruction.PrimitiveInstructionBuilder primitiveInstructionBuilder = createSubstitutionInstruction.evaluate(executionTradeState, effectiveDate, newCollateralPortfolio, priceQuantity).toBuilder();
 
         reKey(primitiveInstructionBuilder);
 
