@@ -2,12 +2,12 @@ package org.finos.cdm.testpack;
 
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToWorkflowStep;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultimap;
+import com.google.common.io.Resources;
 import com.google.inject.Injector;
 import com.regnosys.functions.FunctionCreator;
-import com.regnosys.ingest.createiq.CreateiQIngestionServiceTest;
-import com.regnosys.ingest.fis.FisIngestionTest;
-import com.regnosys.ingest.ore.OreTradeTest;
+import org.finos.cdm.CdmRuntimeModule;
 import org.finos.cdm.functions.FunctionInputCreator;
 import org.finos.cdm.functions.SecLendingFunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
@@ -19,9 +19,12 @@ import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModuleTesting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.CDATASection;
 
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,10 +53,10 @@ public class CdmTestPackCreator {
             Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
             injector.injectMembers(testPackConfigCreator);
 
-            testPackConfigCreator.run();
+            //testPackConfigCreator.run();
 
-            runIngestion();
-            runFunctionCreators();
+           runIngestion();
+       //     runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
@@ -75,15 +78,28 @@ public class CdmTestPackCreator {
 
     private static void runIngestion() throws Exception {
 
-        FisIngestionTest fisIngestionTest = new FisIngestionTest();
+        IngestionTestPackCreator fisIngestionTest = new IngestionTestPackCreator();
+        CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
 
-        fisIngestionTest.run();
+        List<URL> envfile = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
+        String fisSampleFilesDir = "cdm-sample-files/fis/";
+        ImmutableList<URL> fisExpectationFiles = ImmutableList.<URL>builder()
+                .add(Resources.getResource(fisSampleFilesDir + "expectations.json"))
+                .build();
 
-        CreateiQIngestionServiceTest createiQIngestionServiceTest = new CreateiQIngestionServiceTest();
-        createiQIngestionServiceTest.run();
+    //    fisIngestionTest.writeExpectations("target/ISLA", envfile, runtimeModule, "FIS_TRADE" , fisExpectationFiles);
 
-        OreTradeTest oreTradeTest = new OreTradeTest();
-        oreTradeTest.run();
+        IngestionTestPackCreator oreIngestionTest = new IngestionTestPackCreator();
+        envfile = Collections.singletonList(Resources.getResource("ingestions/ingestions.json"));
+
+        String oreSampleFilesDir = "cdm-sample-files/ore-1-0-39/";
+        ImmutableList<URL> oreExpectationFiles = ImmutableList.<URL>builder()
+                .add(Resources.getResource(oreSampleFilesDir + "expectations.json"))
+                .build();
+
+        // Disabled for now due to NPE in underlying framework when env params are null
+         oreIngestionTest.writeExpectations("target/ORE", envfile, runtimeModule, "ORE_1_0_39" , oreExpectationFiles);
+
     }
 
     private void run() throws IOException {

@@ -44,7 +44,6 @@ import static org.hamcrest.core.IsCollectionContaining.hasItem;
 public class CreateiQIngestionServiceTest extends IngestionTest<LegalAgreement> {
 
 	private static final String SAMPLE_DIR = "cdm-sample-files/createiq/";
-	private static final Logger LOGGER = LoggerFactory.getLogger(CreateiQIngestionServiceTest.class);
 
 	private static ImmutableList<String> EXPECTATION_FILES = ImmutableList.<String>builder()
 		.add(SAMPLE_DIR + "test-pack/production/expectations.json")
@@ -63,9 +62,6 @@ public class CreateiQIngestionServiceTest extends IngestionTest<LegalAgreement> 
 		initialiseIngestionFactory(runtimeModule, IngestionTestUtil.getPostProcessors(runtimeModule));
 		ingestionService = IngestionFactory.getInstance().getService("createiQAll");
 		objectMapper = RosettaObjectMapper.getNewRosettaObjectMapper();
-		writeActualExpectations = ExpectationUtil.WRITE_EXPECTATIONS;
-		expectationsManager = new ExpectationManager(writeActualExpectations);
-
 	}
 
 	@Override
@@ -147,36 +143,5 @@ public class CreateiQIngestionServiceTest extends IngestionTest<LegalAgreement> 
 	@SuppressWarnings("unused")//used by the junit parameterized test
 	private static Stream<Arguments> fpMLFiles() {
 		return readExpectationsFromString(EXPECTATION_FILES);
-	}
-
-
-	public static void main(String[] args) {
-		try {
-			CreateiQIngestionServiceTest createiQIngestionServiceTest = new CreateiQIngestionServiceTest();
-			createiQIngestionServiceTest.run();
-
-			System.exit(0);
-		} catch (Exception e) {
-			LOGGER.error("Error executing {}.main()", CreateiQIngestionServiceTest.class.getName(), e);
-			System.exit(1);
-		}
-	}
-
-
-
-	public void run() {
-		setup();
-		fpMLFiles().forEach(arguments -> {
-			Object[] argsArray = arguments.get();
-			String name = (String) argsArray[0];
-			Expectation expectation = (Expectation) argsArray[1];
-			try {
-				LOGGER.error("Updated CreateiQIngestionService sample(s): " + name );
-				this.ingest(name, expectation, name);
-			} catch (Throwable e) {
-				LOGGER.error("Failed: " + name , e);
-				e.printStackTrace();
-			}
-		});
 	}
 }
