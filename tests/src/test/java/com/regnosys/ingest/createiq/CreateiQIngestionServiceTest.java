@@ -123,23 +123,6 @@ public class CreateiQIngestionServiceTest extends IngestionTest<LegalAgreement> 
 			pair -> pair.left == 0 ? 0.0 : 1.0 - (pair.right.doubleValue() / pair.left.doubleValue()));
 	}
 
-	private static void writeFileToDisk(Pair<String, List<MappingCoverage>> expectationFileMappingCoveragesPair) {
-		String url = EXPECTATION_FILES.stream().filter(_url -> expectationFileMappingCoveragesPair.left().endsWith(_url)).findFirst().orElseThrow();
-		String updatedFilename = url.replace("expectations.json", "coverage.json");
-		System.out.println("Writing to disk: " + updatedFilename);
-		try {
-			Path path = Paths.get(updatedFilename);
-			Files.createDirectories(path.getParent());
-			try (BufferedWriter writer = Files.newBufferedWriter(path)) {
-				List<MappingCoverage> mappingCoverages = expectationFileMappingCoveragesPair.right();
-				Collections.sort(mappingCoverages);
-				writer.write(toJson(mappingCoverages));
-			}
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
 	@SuppressWarnings("unused")//used by the junit parameterized test
 	private static Stream<Arguments> fpMLFiles() {
 		return readExpectationsFromString(EXPECTATION_FILES);

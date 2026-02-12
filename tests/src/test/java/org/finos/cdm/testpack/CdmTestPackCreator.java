@@ -19,7 +19,6 @@ import jakarta.inject.Inject;
 import org.finos.cdm.CdmRuntimeModuleTesting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.CDATASection;
 
 import java.io.IOException;
 import java.net.URL;
@@ -55,8 +54,8 @@ public class CdmTestPackCreator {
 
             //testPackConfigCreator.run();
 
-           runIngestion();
-       //     runFunctionCreators();
+            testPackConfigCreator.runIngestion();
+            //     testPackConfigCreator.runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
@@ -65,18 +64,7 @@ public class CdmTestPackCreator {
         }
     }
 
-    private static void runFunctionCreators() throws Exception {
-        FunctionInputCreator functionInputCreator = new FunctionInputCreator();
-        functionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
-
-        SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
-        secLendingFunctionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
-
-        FunctionCreator functionCreator = new FunctionCreator();
-        functionCreator.run();
-    }
-
-    private static void runIngestion() throws Exception {
+    private void runIngestion() throws Exception {
 
         IngestionTestPackCreator fisIngestionTest = new IngestionTestPackCreator();
         CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
@@ -87,7 +75,7 @@ public class CdmTestPackCreator {
                 .add(Resources.getResource(fisSampleFilesDir + "expectations.json"))
                 .build();
 
-    //    fisIngestionTest.writeExpectations("target/ISLA", envfile, runtimeModule, "FIS_TRADE" , fisExpectationFiles);
+        //    fisIngestionTest.writeExpectations("target/ISLA", envfile, runtimeModule, "FIS_TRADE" , fisExpectationFiles);
 
         IngestionTestPackCreator oreIngestionTest = new IngestionTestPackCreator();
         envfile = Collections.singletonList(Resources.getResource("ingestions/ingestions.json"));
@@ -98,9 +86,22 @@ public class CdmTestPackCreator {
                 .build();
 
         // Disabled for now due to NPE in underlying framework when env params are null
-         oreIngestionTest.writeExpectations("target/ORE", envfile, runtimeModule, "ORE_1_0_39" , oreExpectationFiles);
+        oreIngestionTest.writeExpectations("target/ORE", envfile, runtimeModule, "ORE_1_0_39", oreExpectationFiles);
 
     }
+
+
+    private void runFunctionCreators() throws Exception {
+        FunctionInputCreator functionInputCreator = new FunctionInputCreator();
+        functionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
+
+        SecLendingFunctionInputCreator secLendingFunctionInputCreator = new SecLendingFunctionInputCreator();
+        secLendingFunctionInputCreator.run(Optional.ofNullable(System.getenv("TEST_WRITE_BASE_PATH")).map(Paths::get));
+
+        FunctionCreator functionCreator = new FunctionCreator();
+        functionCreator.run();
+    }
+
 
     private void run() throws IOException {
         pipelineConfigWriter.writePipelinesAndTestPacks(createTreeConfig());
