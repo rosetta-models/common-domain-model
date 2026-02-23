@@ -231,7 +231,7 @@
                                   "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-pair-1-0"
                                 }
                               },
-                              "identifierType" : "Other"
+                              "identifierType" : "REDID"
                             } ],
                             "instrumentType" : "Debt"
                           }
@@ -243,7 +243,7 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "2c27ab9a"
+                    "globalKey" : "43ac57be"
                   }
                 }, {
                   "InterestRatePayout" : {
@@ -322,7 +322,7 @@
                 "nonStandardisedTerms" : true
               },
               "meta" : {
-                "globalKey" : "145ea9ff"
+                "globalKey" : "b2d3e323"
               }
             },
             "tradeLot" : [ {
@@ -1000,7 +1000,7 @@
               }
             },
             "meta" : {
-              "globalKey" : "e9ec8692"
+              "globalKey" : "e98365ee"
             }
           },
           "transferHistory" : [ {
@@ -1043,15 +1043,17 @@
                 }
               },
               "transferExpression" : {
-                "priceTransfer" : "Upfront"
+                "unscheduledTransfer" : {
+                  "priceTransfer" : "Upfront"
+                }
               }
             },
             "meta" : {
-              "globalKey" : "879f3aed"
+              "globalKey" : "76c218f"
             }
           } ],
           "meta" : {
-            "globalKey" : "3f0ca7ff"
+            "globalKey" : "159efe1"
           }
         }
       }
@@ -1087,6 +1089,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "efa2444d"
+    "globalKey" : "eeab6b45"
   }
 }

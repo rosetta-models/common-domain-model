@@ -231,7 +231,7 @@
                                   "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-pair-1-0"
                                 }
                               },
-                              "identifierType" : "Other"
+                              "identifierType" : "REDID"
                             } ],
                             "instrumentType" : "Debt"
                           }
@@ -243,7 +243,7 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "2c27ab9a"
+                    "globalKey" : "43ac57be"
                   }
                 }, {
                   "InterestRatePayout" : {
@@ -322,7 +322,7 @@
                 "nonStandardisedTerms" : true
               },
               "meta" : {
-                "globalKey" : "3d4d7903"
+                "globalKey" : "dbc2b227"
               }
             },
             "tradeLot" : [ {
@@ -1000,7 +1000,7 @@
               }
             },
             "meta" : {
-              "globalKey" : "566b9cc9"
+              "globalKey" : "82f0c525"
             }
           },
           "transferHistory" : [ {
@@ -1043,15 +1043,17 @@
                 }
               },
               "transferExpression" : {
-                "priceTransfer" : "Upfront"
+                "unscheduledTransfer" : {
+                  "priceTransfer" : "Upfront"
+                }
               }
             },
             "meta" : {
-              "globalKey" : "1dcee564"
+              "globalKey" : "3731c5f8"
             }
           } ],
           "meta" : {
-            "globalKey" : "f06979ed"
+            "globalKey" : "d9c984b3"
           }
         }
       }
@@ -1179,7 +1181,7 @@
                               "scheme" : "http://www.fpml.org/spec/2003/instrument-id-RED-pair-1-0"
                             }
                           },
-                          "identifierType" : "Other"
+                          "identifierType" : "REDID"
                         } ],
                         "instrumentType" : "Debt"
                       }
@@ -1191,7 +1193,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "2c27ab9a"
+                "globalKey" : "43ac57be"
               }
             }, {
               "InterestRatePayout" : {
@@ -1270,7 +1272,7 @@
             "nonStandardisedTerms" : true
           },
           "meta" : {
-            "globalKey" : "3d4d7903"
+            "globalKey" : "dbc2b227"
           }
         },
         "tradeLot" : [ {
@@ -2048,7 +2050,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "a2604caf"
+          "globalKey" : "16d2c6d3"
         }
       },
       "state" : {
@@ -2094,23 +2096,25 @@
             }
           },
           "transferExpression" : {
-            "priceTransfer" : "Upfront"
+            "unscheduledTransfer" : {
+              "priceTransfer" : "Upfront"
+            }
           }
         },
         "meta" : {
-          "globalKey" : "1dcee564"
+          "globalKey" : "3731c5f8"
         }
       } ],
       "meta" : {
-        "globalKey" : "40652e36"
+        "globalKey" : "c29fbbc2"
       }
     } ],
     "meta" : {
-      "globalKey" : "1ecd200b"
+      "globalKey" : "c9516b57"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "9c537807"
+    "globalReference" : "51340aed"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2446,6 +2450,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "827007f0"
+    "globalKey" : "7389873c"
   }
 }

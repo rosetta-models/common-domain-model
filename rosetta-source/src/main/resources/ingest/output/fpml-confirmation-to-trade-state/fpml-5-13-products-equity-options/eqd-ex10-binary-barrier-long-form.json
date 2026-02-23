@@ -124,20 +124,6 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "price" : [ {
-          "value" : {
-            "perUnitOf" : {
-              "financialUnit" : "Share"
-            },
-            "priceType" : "AssetPrice"
-          },
-          "meta" : {
-            "location" : [ {
-              "scope" : "DOCUMENT",
-              "value" : "price-1"
-            } ]
-          }
-        } ],
         "quantity" : [ {
           "value" : {
             "value" : 1000000,
@@ -210,7 +196,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "4fa3e0c5"
+          "globalKey" : "2b66d740"
         }
       } ]
     } ],
@@ -353,7 +339,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "dcbe5276"
+      "globalKey" : "721a1e71"
     }
   },
   "transferHistory" : [ {
@@ -396,14 +382,16 @@
         }
       },
       "transferExpression" : {
-        "priceTransfer" : "Premium"
+        "unscheduledTransfer" : {
+          "priceTransfer" : "Premium"
+        }
       }
     },
     "meta" : {
-      "globalKey" : "dea0e597"
+      "globalKey" : "2b113ad7"
     }
   } ],
   "meta" : {
-    "globalKey" : "484cb60d"
+    "globalKey" : "b2e28d86"
   }
 }
