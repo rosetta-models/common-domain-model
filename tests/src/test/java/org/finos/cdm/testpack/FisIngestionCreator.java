@@ -1,0 +1,108 @@
+package org.finos.cdm.testpack;
+
+import cdm.event.workflow.WorkflowStep;
+import com.google.common.collect.ImmutableList;
+import com.google.common.io.Resources;
+import com.google.inject.Injector;
+import com.regnosys.ingest.test.framework.ingestor.ExpectationManager;
+import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
+import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
+import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
+import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.ingest.test.framework.ingestor.testing.Expectation;
+import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
+import org.finos.cdm.CdmRuntimeModule;
+import org.finos.cdm.CdmRuntimeModuleTesting;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.params.provider.Arguments;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.net.URL;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class FisIngestionCreator extends IngestionTest<WorkflowStep> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FisIngestionCreator.class);
+
+	private static final String ENV_INSTANCE_NAME = "target/ISLA";
+	private static final List<URL> ENV_FILE = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
+	private static final String SAMPLE_FILES_DIR = "cdm-sample-files/fis/";
+
+	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
+            .add(Resources.getResource(SAMPLE_FILES_DIR + "expectations.json"))
+            .build();
+
+    private static IngestionService ingestionService;
+
+    @BeforeAll
+    static void setup() {
+		CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
+        initialiseIngestionFactory(ENV_INSTANCE_NAME, ENV_FILE, runtimeModule, IngestionTestUtil.getPostProcessors(runtimeModule));
+        ingestionService = IngestionFactory.getInstance(ENV_INSTANCE_NAME).getFis();
+        expectationsManager = new ExpectationManager(writeActualExpectations);
+        objectWriter = RosettaObjectMapper.getNewRosettaObjectMapper().writerWithDefaultPrettyPrinter();
+
+    }
+
+    @Override
+    protected Class<WorkflowStep> getClazz() {
+        return WorkflowStep.class;
+    }
+
+    @Override
+    protected IngestionService ingestionService() {
+        return ingestionService;
+    }
+
+    @SuppressWarnings("unused")//used by the junit parameterized test
+    private static Stream<Arguments> fpMLFiles() {
+        return readExpectationsFrom(EXPECTATION_FILES);
+    }
+
+    /**
+     * Even though this method static, junit calls this one instead of the super class tearDown.
+     * This override is necessary because the super class calls IngestionFactory.getInstance() (i.e. with no param)
+     * which throws an exception because no default instance exists.
+     */
+    @AfterAll
+    static void tearDown() {
+        IngestionFactory.getInstance(ENV_INSTANCE_NAME).clear();
+    }
+
+    public static void main(String[] args) {
+        try {
+            FisIngestionCreator testPackConfigCreator = new FisIngestionCreator();
+            Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
+            injector.injectMembers(testPackConfigCreator);
+
+            testPackConfigCreator.run();
+
+            System.exit(0);
+        } catch (Exception e) {
+            LOGGER.error("Error executing {}.main()", CdmTestPackCreator.class.getName(), e);
+            System.exit(1);
+        }
+    }
+    /**
+     * Programmatically run the JUnit 5 tests defined for this class so it can be executed
+     * from other entry points (e.g. CdmTestPackCreator).
+     */
+    public void run() {
+
+            // Ensure environment is set up
+            setup();
+            fpMLFiles().forEach(e ->{
+                Object[] argsArray = e.get();
+                String expectationFilePath = (String) argsArray[0];
+                Expectation expectation = (Expectation) argsArray[1];
+                try {
+                    writeIngestionExpectation(expectationFilePath, expectation, expectationFilePath);
+                } catch (Throwable ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
+    }
+}

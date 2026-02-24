@@ -2,12 +2,9 @@ package org.finos.cdm.testpack;
 
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToWorkflowStep;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultimap;
-import com.google.common.io.Resources;
 import com.google.inject.Injector;
 import com.regnosys.functions.FunctionCreator;
-import org.finos.cdm.CdmRuntimeModule;
 import org.finos.cdm.functions.FunctionInputCreator;
 import org.finos.cdm.functions.SecLendingFunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
@@ -21,9 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,9 +47,10 @@ public class CdmTestPackCreator {
             Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
             injector.injectMembers(testPackConfigCreator);
 
+           // testPackConfigCreator.runIngestion();
+
             testPackConfigCreator.run();
 
-           // testPackConfigCreator.runIngestion();
             testPackConfigCreator.runFunctionCreators();
 
             System.exit(0);
@@ -64,32 +60,14 @@ public class CdmTestPackCreator {
         }
     }
 
-   /* private void runIngestion() throws Exception {
+    private void runIngestion() throws Exception {
+        FisIngestionCreator fisIngestionCreator = new FisIngestionCreator();
+        Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
+        injector.injectMembers(fisIngestionCreator);
+        fisIngestionCreator.run();
+        // Execute the FIS ingestion JUnit test programmatically via JUnit Platform
 
-        IngestionTestPackCreator fisIngestionTest = new IngestionTestPackCreator();
-        CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
-
-        List<URL> envfile = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
-        String fisSampleFilesDir = "cdm-sample-files/fis/";
-        ImmutableList<URL> fisExpectationFiles = ImmutableList.<URL>builder()
-                .add(Resources.getResource(fisSampleFilesDir + "expectations.json"))
-                .build();
-
-        //    fisIngestionTest.writeExpectations("target/ISLA", envfile, runtimeModule, "FIS_TRADE" , fisExpectationFiles);
-
-        IngestionTestPackCreator oreIngestionTest = new IngestionTestPackCreator();
-        envfile = Collections.singletonList(Resources.getResource("ingestions/ingestions.json"));
-
-        String oreSampleFilesDir = "cdm-sample-files/ore-1-0-39/";
-        ImmutableList<URL> oreExpectationFiles = ImmutableList.<URL>builder()
-                .add(Resources.getResource(oreSampleFilesDir + "expectations.json"))
-                .build();
-
-        // Disabled for now due to NPE in underlying framework when env params are null
-        oreIngestionTest.writeExpectations("target/ORE", envfile, runtimeModule, "ORE_1_0_39", oreExpectationFiles);
-
-    }*/
-
+    }
 
     private void runFunctionCreators() throws Exception {
         FunctionInputCreator functionInputCreator = new FunctionInputCreator();
