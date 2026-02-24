@@ -5,6 +5,7 @@ import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToW
 import com.google.common.collect.ImmutableMultimap;
 import com.google.inject.Injector;
 import com.regnosys.functions.FunctionCreator;
+import com.regnosys.ingest.fis.FisIngestionTest;
 import org.finos.cdm.functions.FunctionInputCreator;
 import org.finos.cdm.functions.SecLendingFunctionInputCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
@@ -61,7 +62,7 @@ public class CdmTestPackCreator {
     }
 
     private void runIngestion() throws Exception {
-        FisIngestionCreator fisIngestionCreator = new FisIngestionCreator();
+        FisIngestionTest fisIngestionCreator = new FisIngestionTest();
         Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
         injector.injectMembers(fisIngestionCreator);
         fisIngestionCreator.run();
