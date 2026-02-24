@@ -97,10 +97,10 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
                 Expectation expectation = (Expectation) argsArray[1];
                 try {
                     if(writeActualExpectations) {
-                        writeIngestionExpectation(expectationFilePath, expectation, expectationFilePath);
+                        writeIngestionExpectation(expectationFilePath, expectation);
                     }
                     else{
-                        assertIngestion(expectationFilePath, expectation, expectationFilePath);
+                        assertIngestion(expectationFilePath, expectation);
                     }
                 } catch (Throwable ex) {
                     throw new RuntimeException(ex);

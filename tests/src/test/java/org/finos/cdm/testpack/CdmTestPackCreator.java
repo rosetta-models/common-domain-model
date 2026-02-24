@@ -52,7 +52,7 @@ public class CdmTestPackCreator {
 
             testPackConfigCreator.run();
 
-            testPackConfigCreator.runFunctionCreators();
+          //  testPackConfigCreator.runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
