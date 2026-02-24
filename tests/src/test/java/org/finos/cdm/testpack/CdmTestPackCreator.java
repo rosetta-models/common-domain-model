@@ -52,10 +52,10 @@ public class CdmTestPackCreator {
             Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
             injector.injectMembers(testPackConfigCreator);
 
-            //testPackConfigCreator.run();
+            testPackConfigCreator.run();
 
-            testPackConfigCreator.runIngestion();
-            //     testPackConfigCreator.runFunctionCreators();
+           // testPackConfigCreator.runIngestion();
+            testPackConfigCreator.runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
@@ -64,7 +64,7 @@ public class CdmTestPackCreator {
         }
     }
 
-    private void runIngestion() throws Exception {
+   /* private void runIngestion() throws Exception {
 
         IngestionTestPackCreator fisIngestionTest = new IngestionTestPackCreator();
         CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
@@ -88,7 +88,7 @@ public class CdmTestPackCreator {
         // Disabled for now due to NPE in underlying framework when env params are null
         oreIngestionTest.writeExpectations("target/ORE", envfile, runtimeModule, "ORE_1_0_39", oreExpectationFiles);
 
-    }
+    }*/
 
 
     private void runFunctionCreators() throws Exception {
