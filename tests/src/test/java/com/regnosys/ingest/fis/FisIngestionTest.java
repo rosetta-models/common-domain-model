@@ -12,6 +12,7 @@ import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
 import com.regnosys.ingest.test.framework.ingestor.testing.Expectation;
 import org.finos.cdm.CdmRuntimeModule;
 import org.finos.cdm.CdmRuntimeModuleTesting;
+import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
@@ -87,6 +88,7 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
      * Programmatically run the JUnit 5 tests defined for this class so it can be executed
      * from other entry points (e.g. CdmTestPackCreator).
      */
+    @Test
     public void run() {
 
             // Ensure environment is set up
