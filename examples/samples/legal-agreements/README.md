@@ -1,6 +1,6 @@
 # Legal Agreement (ISDA CSA) and Eligible Collateral Schedules CDM Samples
 
-| Samples                           | Versiol   | 
+| Samples                           | Version   | 
 |-----------------------------------|-----------|
 | examples/samples/legal-agreements | 7.x.x     | 
 
@@ -24,14 +24,14 @@ This project provides various sets of Legal Agreements examples based on dummy g
 
 
 ## Folder Overview
-- `Isda-Credit-Support-Annex-Docs\`<br>
+- `ISDA-Credit-Support-Annex-Docs\`<br>
 
   - `Legacy-CSA-Samples-Data\`<br>
-This folder contains series of folders within for 10 Legacy CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM json equivalent file
+This folder contains series of folders within for 10 Legacy CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM JSON equivalent file
   - `VM-CSA-Test-Samples-Data\`<br>
-This folder contains series of folders within for 10 VM CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM json equivalent file
+This folder contains series of folders within for 10 VM CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM JSON equivalent file
   - `IM-CSA-Test-Samples-Data\`<br>
-This folder contains series of folders within for 10 IM CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM json equivalent file
+This folder contains series of folders within for 10 IM CSA samples labelled 1 – 10, each individual sample folder contains an original pdf dummy legal document CSA and also the digital CDM JSON equivalent file
 - `Eligible-Collateral-Schedules\`<br>
-This folder contains various samples of eligible collateral schedules, it includes the original sample and also the digital CDM json equivalent file
+This folder contains various samples of eligible collateral schedules, it includes the original sample and also the digital CDM JSON equivalent file
 
