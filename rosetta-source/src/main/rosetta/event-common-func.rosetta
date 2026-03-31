@@ -987,7 +987,7 @@ func Create_QuantityChange: <"A specification of the inputs, outputs and constra
     condition CashPriceOnly: <"Only termination where the termination price is specified as a cash price is supported for now.">
         if instruction -> direction = QuantityChangeDirectionEnum -> Decrease
                 and instruction -> change -> price exists
-        then instruction -> change -> price -> priceType all = PriceTypeEnum -> CashPrice
+        then instruction -> change -> price -> priceType all = PriceTypeEnum -> AssetPrice
 
     set quantityChange: tradeState
 

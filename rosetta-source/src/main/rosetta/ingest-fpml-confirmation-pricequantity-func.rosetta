@@ -1431,8 +1431,7 @@ func MapCommmodityFixedPriceToPriceSchedule:
             value: fpmlCommodityFixedPrice -> price,
             unit: unit,
             perUnitOf: perUnitOf,
-            priceType: CashPrice,
-            priceSubType: Fee,
+            priceType: AssetPrice,
             ...
         }
 
@@ -1470,8 +1469,7 @@ func MapCommmodityFixedPriceScheduleToPriceSchedule:
                         },
             unit: unit,
             perUnitOf: perUnitOf,
-            priceType: CashPrice,
-            priceSubType: Fee,
+            priceType: AssetPrice,
             ...
         }
 

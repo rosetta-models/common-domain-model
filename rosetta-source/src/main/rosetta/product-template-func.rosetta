@@ -103,7 +103,8 @@ func PriceQuantityTriangulation: <"Defines all the scenarios which triangulation
         if tradeLots count > 0
         then tradeLots
                 extract [
-                    if item -> priceQuantity -> price -> priceType contains PriceTypeEnum -> CashPrice
+                    if item -> priceQuantity -> price -> priceType contains PriceTypeEnum -> AssetPrice or item -> priceQuantity -> price -> priceType
+                        contains  PriceTypeEnum -> ExchangeRate
                     then CashPriceQuantityNoOfUnitsTriangulation(
                                 item -> priceQuantity -> quantity,
                                 item -> priceQuantity -> price
@@ -137,11 +138,7 @@ func Create_CashflowFromSettlementPayout: <"Generates two opposite cashflows tha
             asset: payout -> underlier -> Observable -> Asset,
             settlementDate: payout -> settlementTerms -> settlementDate -> adjustableOrRelativeDate,
             payerReceiver: payout -> payerReceiver,
-            cashflowType:
-                CashflowType {
-                    cashflowType: Principal,
-                    ...
-                },
+            cashflowType: Principal,
             ...
         }
 
@@ -185,11 +182,7 @@ func Create_CashflowFromSettlementPayout: <"Generates two opposite cashflows tha
                 },
             settlementDate: payout -> settlementTerms -> settlementDate -> adjustableOrRelativeDate,
             payerReceiver: priceLegPayerReceiver,
-            cashflowType:
-                CashflowType {
-                    cashflowType: Principal,
-                    ...
-                },
+            cashflowType: Principal,
             ...
         }
 

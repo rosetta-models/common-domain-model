@@ -120,19 +120,6 @@ type PriceQuantity: <"Defines a settlement as an exchange between two parties of
     condition InterestRateObservable: <"When the observable is an interest rate index, the price type must be interest rate and the arithmetic operator must be specified.">
         InterestRateObservableCondition
 
-type PremiumExpression: <"This class corresponds to the FpML Premium.model group for representing the option premium when expressed in a way other than an amount.">
-    premiumType PremiumTypeEnum (0..1) <"Forward start premium type">
-    pricePerOption Money (0..1) <"The amount of premium to be paid expressed as a function of the number of options.">
-    percentageOfNotional number (0..1) <"The amount of premium to be paid expressed as a percentage of the notional value of the transaction. A percentage of 5% would be expressed as 0.05.">
-
-type CashPrice: <"Specifies the nature of a cash price either as a fee type, cash price type, or premium expression.">
-    priceSubType PriceSubTypeEnum (1..1) <"Specifies the type of Cash Price.">
-    premiumExpression PremiumExpression (0..1) <"Specifies a premium when expressed in a way other than an amount, and any required forward starting price definition.">
-    feeType FeeTypeEnum (0..1) <"Specifies the event type associated with a fee.">
-
-    condition PremiumType: <"Premium type can only be specified when the cash price type is a premium.">
-        if premiumExpression exists then priceSubType = Premium
-
 type PriceComposite: <"Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers and a simple arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX) etc.">
     baseValue number (1..1) <"The 1st value in the arithmetic operation, which may be non-commutative in some cases: Subtract, Divide). This 1st operand is called 'baseValue' as it refers to the price anchor in the arithmetic operation: e.g. the clean price (Bond) or the spot rate (FX).">
     operand number (1..1) <"The 2nd value in the arithmetic operation, which may be non-commutative in some cases: Subtract, Divide). The 2nd operand is called 'operand' to distinguish it from the 1st one which is the price anchor.">
@@ -172,8 +159,8 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
                 and composite -> baseValue exists
         then composite -> baseValue > 0
 
-    condition PositiveCashPrice: <"Requires that any price expressed as a cash price and generating a cashflow must be positive">
-        if priceType = PriceTypeEnum -> CashPrice
+    condition PositivePremium: <"Requires that any price expressed as a Premium must be positive">
+        if priceType = Premium
         then value > 0 or datedValue -> value all > 0
 
     condition CurrencyUnitForInterestRate: <"Requires that the unit of amount for an interest rate must be a currency.">
@@ -183,11 +170,8 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
     condition Choice: <"The price can be specified mutually exclusively as an operator (e.g. a spread or multiplier) or a composite.">
         optional choice arithmeticOperator, composite
 
-    condition Premium: <"If we are applying a premium to the price then we must define this as a premium in priceSubType.">
-        if premiumType exists then priceSubType = Premium
-
-    condition PremiumSubType: <"If we define this as a premium then the price must be a cash price.">
-        if priceSubType = Premium then priceType = CashPrice
+    condition Premium: <"If we are applying a premium to the price then we must define this as a premium in priceType.">
+        if premiumType exists then priceType = Premium
 
     condition ArithmeticOperator: <"Operator must not be subtract or divide.">
         arithmeticOperator <> ArithmeticOperationEnum -> Subtract
