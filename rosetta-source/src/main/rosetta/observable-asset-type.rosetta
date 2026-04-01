@@ -128,7 +128,6 @@ type PremiumExpression: <"This class corresponds to the FpML Premium.model group
 type CashPrice: <"Specifies the nature of a cash price either as a fee type, cash price type, or premium expression.">
     priceSubType PriceSubTypeEnum (1..1) <"Specifies the type of Cash Price.">
     premiumExpression PremiumExpression (0..1) <"Specifies a premium when expressed in a way other than an amount, and any required forward starting price definition.">
-    feeType FeeTypeEnum (0..1) <"Specifies the event type associated with a fee.">
 
     condition PremiumType: <"Premium type can only be specified when the cash price type is a premium.">
         if premiumExpression exists then priceSubType = Premium
