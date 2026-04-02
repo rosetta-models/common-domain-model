@@ -142,7 +142,15 @@
                   "identifierType" : "RIC"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XLIF"
+                    },
+                    "meta" : {
+                      "globalKey" : "292711"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XLIF",
                     "meta" : {
@@ -150,19 +158,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "292711"
+                    "globalKey" : "9aa4cde2"
                   }
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XLIF"
+                        },
+                        "meta" : {
+                          "globalKey" : "292711"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XLIF",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9aa4cde2"
+                      }
+                    }
+                  },
+                  "role" : "Exchange"
                 },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XLIF",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC"
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XLIF"
+                        },
+                        "meta" : {
+                          "globalKey" : "292711"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XLIF",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9aa4cde2"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "292711"
-                  }
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "assetClass" : "Equity"
@@ -177,7 +222,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "99960104"
+          "globalKey" : "55aa2f2e"
         }
       } ]
     } ],
@@ -356,10 +401,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "323c3678"
+      "globalKey" : "3995674e"
     }
   },
   "meta" : {
-    "globalKey" : "323c3678"
+    "globalKey" : "3995674e"
   }
 }

@@ -247,7 +247,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XLON"
+                    },
+                    "meta" : {
+                      "globalKey" : "2927d3"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XLON",
                     "meta" : {
@@ -255,19 +263,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "2927d3"
+                    "globalKey" : "9aa7a6e6"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XLIF",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XLON"
+                        },
+                        "meta" : {
+                          "globalKey" : "2927d3"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XLON",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9aa7a6e6"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "292711"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XLON"
+                        },
+                        "meta" : {
+                          "globalKey" : "2927d3"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XLON",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9aa7a6e6"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -285,7 +330,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "bbc3dc91"
+          "globalKey" : "ed523e75"
         }
       } ]
     } ],
@@ -461,7 +506,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "7989ac5a"
+      "globalKey" : "45c3e076"
     }
   },
   "transferHistory" : [ {
@@ -515,6 +560,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "eb5800e6"
+    "globalKey" : "3f570a02"
   }
 }

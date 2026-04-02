@@ -169,7 +169,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "KSC"
+                    },
+                    "meta" : {
+                      "globalKey" : "123db"
+                    }
+                  } ],
                   "name" : {
                     "value" : "KSC",
                     "meta" : {
@@ -177,19 +185,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "123db"
+                    "globalKey" : "448bcf6"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "All Exchanges",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "KSC"
+                        },
+                        "meta" : {
+                          "globalKey" : "123db"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "KSC",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "448bcf6"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "fbea4eb1"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "KSC"
+                        },
+                        "meta" : {
+                          "globalKey" : "123db"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "KSC",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "448bcf6"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -207,7 +252,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "59264933"
+          "globalKey" : "95483c9f"
         }
       } ]
     } ],
@@ -347,7 +392,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "50224584"
+      "globalKey" : "b110fe30"
     }
   },
   "transferHistory" : [ {
@@ -401,6 +446,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "ab046b59"
+    "globalKey" : "64f46505"
   }
 }

@@ -159,7 +159,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "TAI"
+                      },
+                      "meta" : {
+                        "globalKey" : "1437c"
+                      }
+                    } ],
                     "name" : {
                       "value" : "TAI",
                       "meta" : {
@@ -167,19 +175,56 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "1437c"
+                      "globalKey" : "4bf97f8"
                     }
-                  },
-                  "relatedExchange" : [ {
-                    "name" : {
-                      "value" : "All Exchanges",
-                      "meta" : {
-                        "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "TAI"
+                          },
+                          "meta" : {
+                            "globalKey" : "1437c"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "TAI",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "4bf97f8"
+                        }
                       }
                     },
-                    "meta" : {
-                      "globalKey" : "fbea4eb1"
-                    }
+                    "role" : "Exchange"
+                  },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "TAI"
+                          },
+                          "meta" : {
+                            "globalKey" : "1437c"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "TAI",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "4bf97f8"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
                   } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
@@ -195,7 +240,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "deba0341"
+          "globalKey" : "584f60ca"
         }
       } ]
     } ],
@@ -335,7 +380,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "12c1b0af"
+      "globalKey" : "3b536838"
     }
   },
   "transferHistory" : [ {
@@ -389,6 +434,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "bf9540f2"
+    "globalKey" : "4422f3b"
   }
 }

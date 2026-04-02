@@ -301,21 +301,63 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XTKS"
+                    },
+                    "meta" : {
+                      "globalKey" : "294564"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XTKS"
                   },
                   "meta" : {
-                    "globalKey" : "294564"
+                    "globalKey" : "9b16c1c8"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XOSE"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XTKS"
+                        },
+                        "meta" : {
+                          "globalKey" : "294564"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XTKS"
+                      },
+                      "meta" : {
+                        "globalKey" : "9b16c1c8"
+                      }
+                    }
                   },
-                  "meta" : {
-                    "globalKey" : "293389"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XTKS"
+                        },
+                        "meta" : {
+                          "globalKey" : "294564"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XTKS"
+                      },
+                      "meta" : {
+                        "globalKey" : "9b16c1c8"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -333,7 +375,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "e5fc5ff7"
+          "globalKey" : "1c590560"
         }
       } ]
     } ],
@@ -448,10 +490,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "ce7fc978"
+      "globalKey" : "b56986a1"
     }
   },
   "meta" : {
-    "globalKey" : "ce7fc978"
+    "globalKey" : "b56986a1"
   }
 }

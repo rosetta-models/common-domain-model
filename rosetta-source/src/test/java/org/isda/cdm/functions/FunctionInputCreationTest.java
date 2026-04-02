@@ -77,6 +77,7 @@ import static util.ResourcesUtils.*;
 
 class FunctionInputCreationTest {
 
+
     private static final boolean WRITE_EXPECTATIONS =
             Optional.ofNullable(System.getenv("WRITE_EXPECTATIONS"))
                     .map(Boolean::parseBoolean).orElse(false);

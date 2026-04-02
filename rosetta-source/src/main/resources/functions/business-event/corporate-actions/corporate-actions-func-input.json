@@ -643,7 +643,15 @@
                         "identifierType" : "Name"
                       } ],
                       "isExchangeListed" : true,
-                      "exchange" : {
+                      "party" : [ {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XEUR"
+                          },
+                          "meta" : {
+                            "globalKey" : "290e4a"
+                          }
+                        } ],
                         "name" : {
                           "value" : "XEUR",
                           "meta" : {
@@ -651,9 +659,57 @@
                           }
                         },
                         "meta" : {
-                          "globalKey" : "290e4a"
+                          "globalKey" : "9a47b214"
                         }
+                      } ],
+                      "partyRole" : {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XEUR"
+                              },
+                              "meta" : {
+                                "globalKey" : "290e4a"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XEUR",
+                              "meta" : {
+                                "scheme" : "http://www.fpml.org/exchange-id"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9a47b214"
+                            }
+                          }
+                        },
+                        "role" : "Exchange"
                       },
+                      "ancillaryPartyRole" : [ {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XEUR"
+                              },
+                              "meta" : {
+                                "globalKey" : "290e4a"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XEUR",
+                              "meta" : {
+                                "scheme" : "http://www.fpml.org/exchange-id"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9a47b214"
+                            }
+                          }
+                        },
+                        "role" : "RelatedExchange"
+                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "GERMAN SE XETRA DAX INDEX"
@@ -670,7 +726,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "aad8ec47"
+                "globalKey" : "802fd4db"
               }
             } ]
           } ],
@@ -817,11 +873,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "14ba1976"
+            "globalKey" : "66bc5a3e"
           }
         },
         "meta" : {
-          "globalKey" : "14ba1976"
+          "globalKey" : "66bc5a3e"
         }
       }
     }

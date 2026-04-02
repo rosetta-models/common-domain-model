@@ -167,7 +167,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XEUR"
+                    },
+                    "meta" : {
+                      "globalKey" : "290e4a"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XEUR",
                     "meta" : {
@@ -175,9 +183,57 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "290e4a"
+                    "globalKey" : "9a47b214"
                   }
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XEUR"
+                        },
+                        "meta" : {
+                          "globalKey" : "290e4a"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XEUR",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9a47b214"
+                      }
+                    }
+                  },
+                  "role" : "Exchange"
                 },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XEUR"
+                        },
+                        "meta" : {
+                          "globalKey" : "290e4a"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XEUR",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9a47b214"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
+                } ],
                 "assetType" : "Other",
                 "name" : {
                   "value" : "STOXX 50 Euro"
@@ -194,7 +250,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "1b287931"
+          "globalKey" : "b1081173"
         }
       } ]
     } ],
@@ -337,7 +393,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "cebb7e53"
+      "globalKey" : "acb929f7"
     }
   },
   "transferHistory" : [ {
@@ -391,6 +447,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "233f8bdd"
+    "globalKey" : "2d1c3281"
   }
 }

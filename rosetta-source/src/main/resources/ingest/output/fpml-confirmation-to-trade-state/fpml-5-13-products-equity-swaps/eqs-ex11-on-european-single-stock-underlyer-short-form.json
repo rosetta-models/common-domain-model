@@ -418,7 +418,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XHEL"
+                      },
+                      "meta" : {
+                        "globalKey" : "291797"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XHEL",
                       "meta" : {
@@ -426,9 +434,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "291797"
+                      "globalKey" : "9a6aa56e"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XHEL"
+                          },
+                          "meta" : {
+                            "globalKey" : "291797"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XHEL",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a6aa56e"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XHEL"
+                          },
+                          "meta" : {
+                            "globalKey" : "291797"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XHEL",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a6aa56e"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -443,7 +499,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "c48b5932"
+          "globalKey" : "1efb044b"
         }
       }, {
         "price" : [ {
@@ -683,10 +739,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "1c7ff387"
+      "globalKey" : "3270fd24"
     }
   },
   "meta" : {
-    "globalKey" : "1c7ff387"
+    "globalKey" : "3270fd24"
   }
 }

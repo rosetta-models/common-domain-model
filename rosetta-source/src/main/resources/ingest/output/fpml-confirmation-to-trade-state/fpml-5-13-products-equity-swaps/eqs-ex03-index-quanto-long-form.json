@@ -425,7 +425,15 @@
                         "identifierType" : "Name"
                       } ],
                       "isExchangeListed" : true,
-                      "exchange" : {
+                      "party" : [ {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XPAR"
+                          },
+                          "meta" : {
+                            "globalKey" : "293529"
+                          }
+                        } ],
                         "name" : {
                           "value" : "XPAR",
                           "meta" : {
@@ -433,29 +441,56 @@
                           }
                         },
                         "meta" : {
-                          "globalKey" : "293529"
+                          "globalKey" : "9ad9c412"
                         }
+                      } ],
+                      "partyRole" : {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XPAR"
+                              },
+                              "meta" : {
+                                "globalKey" : "293529"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XPAR",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9ad9c412"
+                            }
+                          }
+                        },
+                        "role" : "Exchange"
                       },
-                      "relatedExchange" : [ {
-                        "name" : {
-                          "value" : "XMAT",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
+                      "ancillaryPartyRole" : [ {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XPAR"
+                              },
+                              "meta" : {
+                                "globalKey" : "293529"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XPAR",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9ad9c412"
+                            }
                           }
                         },
-                        "meta" : {
-                          "globalKey" : "2929e8"
-                        }
-                      }, {
-                        "name" : {
-                          "value" : "XMON",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "292b94"
-                        }
+                        "role" : "RelatedExchange"
                       } ],
                       "assetType" : "Other",
                       "name" : {
@@ -490,7 +525,15 @@
                         "identifierType" : "Name"
                       } ],
                       "isExchangeListed" : true,
-                      "exchange" : {
+                      "party" : [ {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XMEF"
+                          },
+                          "meta" : {
+                            "globalKey" : "292a56"
+                          }
+                        } ],
                         "name" : {
                           "value" : "XMEF",
                           "meta" : {
@@ -498,9 +541,57 @@
                           }
                         },
                         "meta" : {
-                          "globalKey" : "292a56"
+                          "globalKey" : "9ab1172c"
                         }
+                      } ],
+                      "partyRole" : {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XMEF"
+                              },
+                              "meta" : {
+                                "globalKey" : "292a56"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XMEF",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9ab1172c"
+                            }
+                          }
+                        },
+                        "role" : "Exchange"
                       },
+                      "ancillaryPartyRole" : [ {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XMEF"
+                              },
+                              "meta" : {
+                                "globalKey" : "292a56"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XMEF",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9ab1172c"
+                            }
+                          }
+                        },
+                        "role" : "RelatedExchange"
+                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "IBEX 35"
@@ -534,7 +625,15 @@
                         "identifierType" : "Name"
                       } ],
                       "isExchangeListed" : true,
-                      "exchange" : {
+                      "party" : [ {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XHKG"
+                          },
+                          "meta" : {
+                            "globalKey" : "29184c"
+                          }
+                        } ],
                         "name" : {
                           "value" : "XHKG",
                           "meta" : {
@@ -542,9 +641,57 @@
                           }
                         },
                         "meta" : {
-                          "globalKey" : "29184c"
+                          "globalKey" : "9a6d4d98"
                         }
+                      } ],
+                      "partyRole" : {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XHKG"
+                              },
+                              "meta" : {
+                                "globalKey" : "29184c"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XHKG",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9a6d4d98"
+                            }
+                          }
+                        },
+                        "role" : "Exchange"
                       },
+                      "ancillaryPartyRole" : [ {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XHKG"
+                              },
+                              "meta" : {
+                                "globalKey" : "29184c"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XHKG",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9a6d4d98"
+                            }
+                          }
+                        },
+                        "role" : "RelatedExchange"
+                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "Hong Kong Hang Seng Index"
@@ -570,7 +717,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "9e30afcc"
+          "globalKey" : "752891b5"
         }
       }, {
         "price" : [ {
@@ -812,10 +959,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "fdeb1170"
+      "globalKey" : "c832d471"
     }
   },
   "meta" : {
-    "globalKey" : "fdeb1170"
+    "globalKey" : "c832d471"
   }
 }

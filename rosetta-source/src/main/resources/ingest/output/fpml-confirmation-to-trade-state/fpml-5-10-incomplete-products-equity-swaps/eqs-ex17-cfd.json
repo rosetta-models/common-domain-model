@@ -366,7 +366,15 @@
                     "identifierType" : "RIC"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "NYSE"
+                      },
+                      "meta" : {
+                        "globalKey" : "24cd5d"
+                      }
+                    } ],
                     "name" : {
                       "value" : "NYSE",
                       "meta" : {
@@ -374,9 +382,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "24cd5d"
+                      "globalKey" : "8a4bb77a"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "NYSE"
+                          },
+                          "meta" : {
+                            "globalKey" : "24cd5d"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "NYSE",
+                          "meta" : {
+                            "scheme" : "MARKET_ID"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "8a4bb77a"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "NYSE"
+                          },
+                          "meta" : {
+                            "globalKey" : "24cd5d"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "NYSE",
+                          "meta" : {
+                            "scheme" : "MARKET_ID"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "8a4bb77a"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -391,7 +447,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "741e6e9"
+          "globalKey" : "cec47622"
         }
       }, {
         "price" : [ {
@@ -617,10 +673,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "3639f183"
+      "globalKey" : "361d37ea"
     }
   },
   "meta" : {
-    "globalKey" : "3639f183"
+    "globalKey" : "361d37ea"
   }
 }

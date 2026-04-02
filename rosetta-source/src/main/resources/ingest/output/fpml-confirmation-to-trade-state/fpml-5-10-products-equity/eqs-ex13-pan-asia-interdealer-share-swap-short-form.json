@@ -652,7 +652,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XKRX"
+                      },
+                      "meta" : {
+                        "globalKey" : "292479"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XKRX",
                       "meta" : {
@@ -660,9 +668,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "292479"
+                      "globalKey" : "9a9b0eb2"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XKRX"
+                          },
+                          "meta" : {
+                            "globalKey" : "292479"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XKRX",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a9b0eb2"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XKRX"
+                          },
+                          "meta" : {
+                            "globalKey" : "292479"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XKRX",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a9b0eb2"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -677,7 +733,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "9f5e405b"
+          "globalKey" : "66d80f9c"
         }
       } ]
     } ],
@@ -847,10 +903,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "8f1ad225"
+      "globalKey" : "a887c0c8"
     }
   },
   "meta" : {
-    "globalKey" : "8f1ad225"
+    "globalKey" : "a887c0c8"
   }
 }

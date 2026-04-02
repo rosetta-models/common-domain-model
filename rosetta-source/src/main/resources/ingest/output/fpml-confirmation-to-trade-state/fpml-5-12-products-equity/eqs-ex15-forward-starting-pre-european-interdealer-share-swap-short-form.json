@@ -601,7 +601,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XETR"
+                      },
+                      "meta" : {
+                        "globalKey" : "290e2b"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XETR",
                       "meta" : {
@@ -609,9 +617,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "290e2b"
+                      "globalKey" : "9a473d96"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XETR"
+                          },
+                          "meta" : {
+                            "globalKey" : "290e2b"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XETR",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a473d96"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XETR"
+                          },
+                          "meta" : {
+                            "globalKey" : "290e2b"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XETR",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a473d96"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -626,7 +682,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "84dca848"
+          "globalKey" : "95d26239"
         }
       } ]
     } ],
@@ -761,10 +817,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "15148fe6"
+      "globalKey" : "17f9d061"
     }
   },
   "meta" : {
-    "globalKey" : "15148fe6"
+    "globalKey" : "17f9d061"
   }
 }

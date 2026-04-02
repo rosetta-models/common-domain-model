@@ -147,7 +147,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XWAR"
+                    },
+                    "meta" : {
+                      "globalKey" : "294f70"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XWAR",
                     "meta" : {
@@ -155,19 +163,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "294f70"
+                    "globalKey" : "9b3c82e0"
                   }
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XWAR"
+                        },
+                        "meta" : {
+                          "globalKey" : "294f70"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XWAR",
+                        "meta" : {
+                          "scheme" : "http://www.example.com/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9b3c82e0"
+                      }
+                    }
+                  },
+                  "role" : "Exchange"
                 },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XWAR",
-                    "meta" : {
-                      "scheme" : "http://www.example.com/exchangeId"
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XWAR"
+                        },
+                        "meta" : {
+                          "globalKey" : "294f70"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XWAR",
+                        "meta" : {
+                          "scheme" : "http://www.example.com/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9b3c82e0"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "294f70"
-                  }
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -185,7 +230,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "31f25bcf"
+          "globalKey" : "3a3b609b"
         }
       } ]
     } ],
@@ -334,7 +379,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "a760d801"
+      "globalKey" : "74fa67cd"
     }
   },
   "transferHistory" : [ {
@@ -391,6 +436,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "25a8208"
+    "globalKey" : "87a8aad4"
   }
 }

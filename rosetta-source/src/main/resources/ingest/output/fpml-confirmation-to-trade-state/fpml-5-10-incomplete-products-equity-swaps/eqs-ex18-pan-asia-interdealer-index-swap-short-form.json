@@ -429,7 +429,15 @@
                     "identifierType" : "RIC"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "ALL"
+                      },
+                      "meta" : {
+                        "globalKey" : "fd81"
+                      }
+                    } ],
                     "name" : {
                       "value" : "ALL",
                       "meta" : {
@@ -437,9 +445,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "fd81"
+                      "globalKey" : "3b89ec2"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "ALL"
+                          },
+                          "meta" : {
+                            "globalKey" : "fd81"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "ALL",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchange-id-REC-1-0"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "3b89ec2"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "ALL"
+                          },
+                          "meta" : {
+                            "globalKey" : "fd81"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "ALL",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchange-id-REC-1-0"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "3b89ec2"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -454,7 +510,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "46f567b"
+          "globalKey" : "81e0f864"
         }
       }, {
         "price" : [ {
@@ -689,10 +745,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "2bba1329"
+      "globalKey" : "55930460"
     }
   },
   "meta" : {
-    "globalKey" : "2bba1329"
+    "globalKey" : "55930460"
   }
 }

@@ -474,7 +474,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XAMS"
+                      },
+                      "meta" : {
+                        "globalKey" : "28fe4f"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XAMS",
                       "meta" : {
@@ -482,9 +490,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "28fe4f"
+                      "globalKey" : "9a0ba4de"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XAMS"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fe4f"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XAMS",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0ba4de"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XAMS"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fe4f"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XAMS",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0ba4de"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -499,7 +555,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "c6cbcfee"
+          "globalKey" : "cc4780e7"
         }
       } ]
     } ],
@@ -620,10 +676,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "1e476ca2"
+      "globalKey" : "3164ac2d"
     }
   },
   "meta" : {
-    "globalKey" : "1e476ca2"
+    "globalKey" : "3164ac2d"
   }
 }

@@ -189,14 +189,64 @@
                           "identifierType" : "Name"
                         } ],
                         "isExchangeListed" : true,
-                        "exchange" : {
+                        "party" : [ {
+                          "partyId" : [ {
+                            "identifier" : {
+                              "value" : "XNYS"
+                            },
+                            "meta" : {
+                              "globalKey" : "293090"
+                            }
+                          } ],
                           "name" : {
                             "value" : "XNYS"
                           },
                           "meta" : {
-                            "globalKey" : "293090"
+                            "globalKey" : "9ac87d20"
                           }
+                        } ],
+                        "partyRole" : {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNYS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "293090"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNYS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9ac87d20"
+                              }
+                            }
+                          },
+                          "role" : "Exchange"
                         },
+                        "ancillaryPartyRole" : [ {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNYS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "293090"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNYS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9ac87d20"
+                              }
+                            }
+                          },
+                          "role" : "RelatedExchange"
+                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -229,14 +279,64 @@
                           "identifierType" : "Name"
                         } ],
                         "isExchangeListed" : true,
-                        "exchange" : {
+                        "party" : [ {
+                          "partyId" : [ {
+                            "identifier" : {
+                              "value" : "XNAS"
+                            },
+                            "meta" : {
+                              "globalKey" : "292da8"
+                            }
+                          } ],
                           "name" : {
                             "value" : "XNAS"
                           },
                           "meta" : {
-                            "globalKey" : "292da8"
+                            "globalKey" : "9abd9150"
                           }
+                        } ],
+                        "partyRole" : {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNAS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "292da8"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNAS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9abd9150"
+                              }
+                            }
+                          },
+                          "role" : "Exchange"
                         },
+                        "ancillaryPartyRole" : [ {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNAS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "292da8"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNAS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9abd9150"
+                              }
+                            }
+                          },
+                          "role" : "RelatedExchange"
+                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -269,14 +369,64 @@
                           "identifierType" : "Name"
                         } ],
                         "isExchangeListed" : true,
-                        "exchange" : {
+                        "party" : [ {
+                          "partyId" : [ {
+                            "identifier" : {
+                              "value" : "XNYS"
+                            },
+                            "meta" : {
+                              "globalKey" : "293090"
+                            }
+                          } ],
                           "name" : {
                             "value" : "XNYS"
                           },
                           "meta" : {
-                            "globalKey" : "293090"
+                            "globalKey" : "9ac87d20"
                           }
+                        } ],
+                        "partyRole" : {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNYS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "293090"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNYS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9ac87d20"
+                              }
+                            }
+                          },
+                          "role" : "Exchange"
                         },
+                        "ancillaryPartyRole" : [ {
+                          "partyReference" : {
+                            "value" : {
+                              "partyId" : [ {
+                                "identifier" : {
+                                  "value" : "XNYS"
+                                },
+                                "meta" : {
+                                  "globalKey" : "293090"
+                                }
+                              } ],
+                              "name" : {
+                                "value" : "XNYS"
+                              },
+                              "meta" : {
+                                "globalKey" : "9ac87d20"
+                              }
+                            }
+                          },
+                          "role" : "RelatedExchange"
+                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -300,7 +450,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "6324800a"
+          "globalKey" : "b8795324"
         }
       } ]
     } ],
@@ -471,10 +621,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "66f144eb"
+      "globalKey" : "9e2b5e6b"
     }
   },
   "meta" : {
-    "globalKey" : "66f144eb"
+    "globalKey" : "9e2b5e6b"
   }
 }

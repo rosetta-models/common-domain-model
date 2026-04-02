@@ -369,7 +369,15 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XTAI"
+                      },
+                      "meta" : {
+                        "globalKey" : "294424"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XTAI",
                       "meta" : {
@@ -377,9 +385,57 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "294424"
+                      "globalKey" : "9b120f48"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XTAI"
+                          },
+                          "meta" : {
+                            "globalKey" : "294424"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XTAI",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9b120f48"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XTAI"
+                          },
+                          "meta" : {
+                            "globalKey" : "294424"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XTAI",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
+                        },
+                        "meta" : {
+                          "globalKey" : "9b120f48"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -394,7 +450,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "8767fa92"
+          "globalKey" : "91856104"
         }
       }, {
         "observable" : {
@@ -629,7 +685,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "4c8f624a"
+      "globalKey" : "fbfcb60e"
     }
   },
   "transferHistory" : [ {
@@ -718,6 +774,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "c4da04d9"
+    "globalKey" : "76777e95"
   }
 }

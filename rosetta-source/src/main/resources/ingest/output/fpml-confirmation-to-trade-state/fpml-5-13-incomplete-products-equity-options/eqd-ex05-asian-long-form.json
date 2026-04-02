@@ -155,7 +155,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XTKS"
+                    },
+                    "meta" : {
+                      "globalKey" : "294564"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XTKS",
                     "meta" : {
@@ -163,19 +171,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "294564"
+                    "globalKey" : "9b16c1c8"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XOSE",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XTKS"
+                        },
+                        "meta" : {
+                          "globalKey" : "294564"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XTKS",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9b16c1c8"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "293389"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XTKS"
+                        },
+                        "meta" : {
+                          "globalKey" : "294564"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XTKS",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9b16c1c8"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -193,7 +238,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "452836bf"
+          "globalKey" : "4197ba28"
         }
       } ]
     } ],
@@ -336,7 +381,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "de7bc651"
+      "globalKey" : "4b9edcfa"
     }
   },
   "transferHistory" : [ {
@@ -390,6 +435,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "315590e0"
+    "globalKey" : "76ad3649"
   }
 }

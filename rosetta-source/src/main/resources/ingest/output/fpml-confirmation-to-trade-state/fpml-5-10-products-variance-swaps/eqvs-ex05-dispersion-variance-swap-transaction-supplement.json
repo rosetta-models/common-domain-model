@@ -282,14 +282,64 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XASE"
+                      },
+                      "meta" : {
+                        "globalKey" : "28fefb"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XASE"
                     },
                     "meta" : {
-                      "globalKey" : "28fefb"
+                      "globalKey" : "9a0e2b36"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XASE"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fefb"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XASE"
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0e2b36"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XASE"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fefb"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XASE"
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0e2b36"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -304,7 +354,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "f059216a"
+          "globalKey" : "4b4afbe7"
         }
       }, {
         "quantity" : [ {
@@ -343,14 +393,64 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "exchange" : {
+                  "party" : [ {
+                    "partyId" : [ {
+                      "identifier" : {
+                        "value" : "XASE"
+                      },
+                      "meta" : {
+                        "globalKey" : "28fefb"
+                      }
+                    } ],
                     "name" : {
                       "value" : "XASE"
                     },
                     "meta" : {
-                      "globalKey" : "28fefb"
+                      "globalKey" : "9a0e2b36"
                     }
+                  } ],
+                  "partyRole" : {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XASE"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fefb"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XASE"
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0e2b36"
+                        }
+                      }
+                    },
+                    "role" : "Exchange"
                   },
+                  "ancillaryPartyRole" : [ {
+                    "partyReference" : {
+                      "value" : {
+                        "partyId" : [ {
+                          "identifier" : {
+                            "value" : "XASE"
+                          },
+                          "meta" : {
+                            "globalKey" : "28fefb"
+                          }
+                        } ],
+                        "name" : {
+                          "value" : "XASE"
+                        },
+                        "meta" : {
+                          "globalKey" : "9a0e2b36"
+                        }
+                      }
+                    },
+                    "role" : "RelatedExchange"
+                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -365,7 +465,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "5fc4ff23"
+          "globalKey" : "e57f1bce"
         }
       } ]
     } ],
@@ -481,10 +581,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "997614f"
+      "globalKey" : "c912664b"
     }
   },
   "meta" : {
-    "globalKey" : "997614f"
+    "globalKey" : "c912664b"
   }
 }

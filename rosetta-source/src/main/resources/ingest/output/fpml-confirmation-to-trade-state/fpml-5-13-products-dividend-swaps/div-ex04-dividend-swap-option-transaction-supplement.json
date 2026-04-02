@@ -332,28 +332,63 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XPAR"
+                    },
+                    "meta" : {
+                      "globalKey" : "293529"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XPAR"
                   },
                   "meta" : {
-                    "globalKey" : "293529"
+                    "globalKey" : "9ad9c412"
                   }
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XPAR"
+                        },
+                        "meta" : {
+                          "globalKey" : "293529"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XPAR"
+                      },
+                      "meta" : {
+                        "globalKey" : "9ad9c412"
+                      }
+                    }
+                  },
+                  "role" : "Exchange"
                 },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XMAT"
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XPAR"
+                        },
+                        "meta" : {
+                          "globalKey" : "293529"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XPAR"
+                      },
+                      "meta" : {
+                        "globalKey" : "9ad9c412"
+                      }
+                    }
                   },
-                  "meta" : {
-                    "globalKey" : "2929e8"
-                  }
-                }, {
-                  "name" : {
-                    "value" : "XMON"
-                  },
-                  "meta" : {
-                    "globalKey" : "292b94"
-                  }
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -371,7 +406,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "68534c5a"
+          "globalKey" : "9cfb81ed"
         }
       } ]
     } ],
@@ -491,7 +526,7 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "e21bfd0f"
+      "globalKey" : "6e388bb0"
     }
   },
   "transferHistory" : [ {
@@ -545,6 +580,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "bcf7295b"
+    "globalKey" : "2159c0bc"
   }
 }

@@ -321,7 +321,15 @@
                   "identifierType" : "RIC"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "N"
+                    },
+                    "meta" : {
+                      "globalKey" : "4e"
+                    }
+                  } ],
                   "name" : {
                     "value" : "N",
                     "meta" : {
@@ -329,19 +337,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "4e"
+                    "globalKey" : "1251c"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "ALL",
-                    "meta" : {
-                      "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "N"
+                        },
+                        "meta" : {
+                          "globalKey" : "4e"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "N",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "1251c"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "fd81"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "N"
+                        },
+                        "meta" : {
+                          "globalKey" : "4e"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "N",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "1251c"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "assetClass" : "Equity"
@@ -356,7 +401,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "34a98048"
+          "globalKey" : "a36355eb"
         }
       }, {
         "price" : [ {
@@ -538,10 +583,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "fdfb7c78"
+      "globalKey" : "5a45cddb"
     }
   },
   "meta" : {
-    "globalKey" : "fdfb7c78"
+    "globalKey" : "5a45cddb"
   }
 }

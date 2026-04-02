@@ -91,7 +91,15 @@
                             "identifierType" : "Name"
                           } ],
                           "isExchangeListed" : true,
-                          "exchange" : {
+                          "party" : [ {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XNYS"
+                              },
+                              "meta" : {
+                                "globalKey" : "293090"
+                              }
+                            } ],
                             "name" : {
                               "value" : "XNYS",
                               "meta" : {
@@ -99,19 +107,56 @@
                               }
                             },
                             "meta" : {
-                              "globalKey" : "293090"
+                              "globalKey" : "9ac87d20"
                             }
-                          },
-                          "relatedExchange" : [ {
-                            "name" : {
-                              "value" : "XCBO",
-                              "meta" : {
-                                "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                          } ],
+                          "partyRole" : {
+                            "partyReference" : {
+                              "value" : {
+                                "partyId" : [ {
+                                  "identifier" : {
+                                    "value" : "XNYS"
+                                  },
+                                  "meta" : {
+                                    "globalKey" : "293090"
+                                  }
+                                } ],
+                                "name" : {
+                                  "value" : "XNYS",
+                                  "meta" : {
+                                    "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                                  }
+                                },
+                                "meta" : {
+                                  "globalKey" : "9ac87d20"
+                                }
                               }
                             },
-                            "meta" : {
-                              "globalKey" : "290478"
-                            }
+                            "role" : "Exchange"
+                          },
+                          "ancillaryPartyRole" : [ {
+                            "partyReference" : {
+                              "value" : {
+                                "partyId" : [ {
+                                  "identifier" : {
+                                    "value" : "XNYS"
+                                  },
+                                  "meta" : {
+                                    "globalKey" : "293090"
+                                  }
+                                } ],
+                                "name" : {
+                                  "value" : "XNYS",
+                                  "meta" : {
+                                    "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                                  }
+                                },
+                                "meta" : {
+                                  "globalKey" : "9ac87d20"
+                                }
+                              }
+                            },
+                            "role" : "RelatedExchange"
                           } ],
                           "assetType" : "ListedDerivative"
                         }
@@ -123,7 +168,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "24b5c8f7"
+            "globalKey" : "1c9194ab"
           }
         } ],
         "calculationAgent" : {
@@ -131,7 +176,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "1ab35021"
+        "globalKey" : "8acafed5"
       }
     },
     "tradeLot" : [ {
@@ -171,7 +216,15 @@
                   "identifierType" : "Name"
                 } ],
                 "isExchangeListed" : true,
-                "exchange" : {
+                "party" : [ {
+                  "partyId" : [ {
+                    "identifier" : {
+                      "value" : "XNYS"
+                    },
+                    "meta" : {
+                      "globalKey" : "293090"
+                    }
+                  } ],
                   "name" : {
                     "value" : "XNYS",
                     "meta" : {
@@ -179,19 +232,56 @@
                     }
                   },
                   "meta" : {
-                    "globalKey" : "293090"
+                    "globalKey" : "9ac87d20"
                   }
-                },
-                "relatedExchange" : [ {
-                  "name" : {
-                    "value" : "XCBO",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                } ],
+                "partyRole" : {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XNYS"
+                        },
+                        "meta" : {
+                          "globalKey" : "293090"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XNYS",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9ac87d20"
+                      }
                     }
                   },
-                  "meta" : {
-                    "globalKey" : "290478"
-                  }
+                  "role" : "Exchange"
+                },
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XNYS"
+                        },
+                        "meta" : {
+                          "globalKey" : "293090"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XNYS",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9ac87d20"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
                 } ],
                 "assetType" : "Other",
                 "name" : {
@@ -209,7 +299,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "82c52415"
+          "globalKey" : "6b2fafc9"
         }
       } ]
     } ],
@@ -381,10 +471,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "96be70c5"
+      "globalKey" : "f8660785"
     }
   },
   "meta" : {
-    "globalKey" : "96be70c5"
+    "globalKey" : "f8660785"
   }
 }
