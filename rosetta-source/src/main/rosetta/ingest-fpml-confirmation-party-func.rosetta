@@ -820,7 +820,7 @@ func MapAssetAncillaryPartyRole:
     inputs:
         party Party (1..1)
     output:
-        assetAncillaryPartyRole AssetAncillaryPartyRole (1..1)
+        assetAncillaryPartyRole AssetAncillaryPartyRole (0..1)
 
     set assetAncillaryPartyRole->partyReference:
         party
