@@ -83,8 +83,7 @@
             "perUnitOf" : {
               "capacityUnit" : "USGAL"
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -94,7 +93,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "223c3d1b"
+          "globalKey" : "f16949e2"
         }
       } ]
     } ],
@@ -260,10 +259,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "cbd9a1da"
+      "globalKey" : "ea392eef"
     }
   },
   "meta" : {
-    "globalKey" : "cbd9a1da"
+    "globalKey" : "ea392eef"
   }
 }

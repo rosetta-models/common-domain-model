@@ -74,8 +74,7 @@
       "priceQuantity" : [ {
         "price" : [ {
           "value" : {
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -85,7 +84,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "5d532737"
+          "globalKey" : "a8feac46"
         }
       } ]
     } ],
@@ -207,10 +206,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "1cb3fbf9"
+      "globalKey" : "4e2f2c0c"
     }
   },
   "meta" : {
-    "globalKey" : "1cb3fbf9"
+    "globalKey" : "4e2f2c0c"
   }
 }

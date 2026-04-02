@@ -80,8 +80,7 @@
                 "value" : "EUR"
               }
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -91,7 +90,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "386b804a"
+          "globalKey" : "65bd64d3"
         }
       } ]
     } ],
@@ -238,10 +237,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "5e2d49ca"
+      "globalKey" : "7ead4fa1"
     }
   },
   "meta" : {
-    "globalKey" : "5e2d49ca"
+    "globalKey" : "7ead4fa1"
   }
 }

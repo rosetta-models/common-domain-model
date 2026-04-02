@@ -219,8 +219,7 @@
             "perUnitOf" : {
               "capacityUnit" : "MWH"
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -264,7 +263,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "d1940003"
+          "globalKey" : "8b16810a"
         }
       }, {
         "price" : [ {
@@ -508,10 +507,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "71b9c1bb"
+      "globalKey" : "7bd73ada"
     }
   },
   "meta" : {
-    "globalKey" : "71b9c1bb"
+    "globalKey" : "7bd73ada"
   }
 }

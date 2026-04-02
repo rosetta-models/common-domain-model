@@ -83,8 +83,7 @@
             "perUnitOf" : {
               "capacityUnit" : "GJ"
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -94,7 +93,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "2f987247"
+          "globalKey" : "25bbf36"
         }
       } ]
     } ],
@@ -260,10 +259,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "c953f2e"
+      "globalKey" : "57aa971b"
     }
   },
   "meta" : {
-    "globalKey" : "c953f2e"
+    "globalKey" : "57aa971b"
   }
 }

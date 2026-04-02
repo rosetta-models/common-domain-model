@@ -83,8 +83,7 @@
             "perUnitOf" : {
               "capacityUnit" : "USTHM"
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -94,7 +93,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "b9354af"
+          "globalKey" : "53c6efce"
         }
       } ]
     } ],
@@ -241,10 +240,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "eb14c285"
+      "globalKey" : "38e65386"
     }
   },
   "meta" : {
-    "globalKey" : "eb14c285"
+    "globalKey" : "38e65386"
   }
 }

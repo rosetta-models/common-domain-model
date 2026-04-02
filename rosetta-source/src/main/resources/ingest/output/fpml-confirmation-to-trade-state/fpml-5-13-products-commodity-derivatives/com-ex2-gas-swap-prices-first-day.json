@@ -202,8 +202,7 @@
                 "value" : "USD"
               }
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -247,7 +246,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "e1989998"
+          "globalKey" : "68ef01ef"
         }
       }, {
         "price" : [ {
@@ -491,10 +490,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "b6a8a58b"
+      "globalKey" : "8c5fb9c8"
     }
   },
   "meta" : {
-    "globalKey" : "b6a8a58b"
+    "globalKey" : "8c5fb9c8"
   }
 }

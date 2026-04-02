@@ -83,8 +83,7 @@
             "perUnitOf" : {
               "capacityUnit" : "MT"
             },
-            "priceType" : "CashPrice",
-            "priceSubType" : "Fee"
+            "priceType" : "AssetPrice"
           },
           "meta" : {
             "location" : [ {
@@ -94,7 +93,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "cafb1e7b"
+          "globalKey" : "ee98bc82"
         }
       } ]
     } ],
@@ -216,10 +215,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "fd95061f"
+      "globalKey" : "d9914526"
     }
   },
   "meta" : {
-    "globalKey" : "fd95061f"
+    "globalKey" : "d9914526"
   }
 }
