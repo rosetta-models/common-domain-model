@@ -593,30 +593,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "NASD"
-                                },
-                                "meta" : {
-                                  "globalKey" : "247344"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "NASD",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "88f92588"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -631,7 +607,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "37b92b2f"
+                "globalKey" : "543451f8"
               }
             }, {
               "price" : [ {
@@ -830,30 +806,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "NASD"
-                                },
-                                "meta" : {
-                                  "globalKey" : "247344"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "NASD",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "88f92588"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -868,7 +820,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "37b92b2f"
+                "globalKey" : "543451f8"
               }
             }, {
               "price" : [ {
@@ -1110,11 +1062,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "a04ecc8e"
+            "globalKey" : "dd666a1c"
           }
         },
         "meta" : {
-          "globalKey" : "a04ecc8e"
+          "globalKey" : "dd666a1c"
         }
       }
     }
@@ -1605,30 +1557,6 @@
                       },
                       "role" : "Exchange"
                     },
-                    "ancillaryPartyRole" : [ {
-                      "partyReference" : {
-                        "value" : {
-                          "partyId" : [ {
-                            "identifier" : {
-                              "value" : "NASD"
-                            },
-                            "meta" : {
-                              "globalKey" : "247344"
-                            }
-                          } ],
-                          "name" : {
-                            "value" : "NASD",
-                            "meta" : {
-                              "scheme" : "http://www.abc.com/exchangeId"
-                            }
-                          },
-                          "meta" : {
-                            "globalKey" : "88f92588"
-                          }
-                        }
-                      },
-                      "role" : "RelatedExchange"
-                    } ],
                     "assetType" : "Security",
                     "securityType" : "Equity"
                   }
@@ -1643,7 +1571,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "37b92b2f"
+            "globalKey" : "543451f8"
           }
         }, {
           "price" : [ {
@@ -1842,30 +1770,6 @@
                       },
                       "role" : "Exchange"
                     },
-                    "ancillaryPartyRole" : [ {
-                      "partyReference" : {
-                        "value" : {
-                          "partyId" : [ {
-                            "identifier" : {
-                              "value" : "NASD"
-                            },
-                            "meta" : {
-                              "globalKey" : "247344"
-                            }
-                          } ],
-                          "name" : {
-                            "value" : "NASD",
-                            "meta" : {
-                              "scheme" : "http://www.abc.com/exchangeId"
-                            }
-                          },
-                          "meta" : {
-                            "globalKey" : "88f92588"
-                          }
-                        }
-                      },
-                      "role" : "RelatedExchange"
-                    } ],
                     "assetType" : "Security",
                     "securityType" : "Equity"
                   }
@@ -1880,7 +1784,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "a51a841b"
+            "globalKey" : "517aff8c"
           }
         }, {
           "price" : [ {
@@ -2122,14 +2026,14 @@
         }
       },
       "meta" : {
-        "globalKey" : "18590d38"
+        "globalKey" : "d40b616e"
       }
     },
     "meta" : {
-      "globalKey" : "18590d38"
+      "globalKey" : "d40b616e"
     }
   } ],
   "meta" : {
-    "globalKey" : "ca182b10"
+    "globalKey" : "d64f4c78"
   }
 }

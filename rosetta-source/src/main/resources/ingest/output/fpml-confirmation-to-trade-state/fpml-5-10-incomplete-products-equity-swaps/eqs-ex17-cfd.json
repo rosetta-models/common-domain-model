@@ -409,30 +409,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "NYSE"
-                          },
-                          "meta" : {
-                            "globalKey" : "24cd5d"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "NYSE",
-                          "meta" : {
-                            "scheme" : "MARKET_ID"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "8a4bb77a"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -447,7 +423,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "cec47622"
+          "globalKey" : "d48fdad7"
         }
       }, {
         "price" : [ {
@@ -673,10 +649,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "361d37ea"
+      "globalKey" : "543e3171"
     }
   },
   "meta" : {
-    "globalKey" : "361d37ea"
+    "globalKey" : "543e3171"
   }
 }

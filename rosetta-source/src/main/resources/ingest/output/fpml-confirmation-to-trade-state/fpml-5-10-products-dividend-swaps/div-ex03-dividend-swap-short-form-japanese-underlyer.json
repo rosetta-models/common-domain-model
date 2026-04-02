@@ -343,17 +343,17 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XTKS"
+                          "value" : "XOSE"
                         },
                         "meta" : {
-                          "globalKey" : "294564"
+                          "globalKey" : "293389"
                         }
                       } ],
                       "name" : {
-                        "value" : "XTKS"
+                        "value" : "XOSE"
                       },
                       "meta" : {
-                        "globalKey" : "9b16c1c8"
+                        "globalKey" : "9ad3a8d2"
                       }
                     }
                   },
@@ -375,7 +375,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "1c590560"
+          "globalKey" : "2f8afcea"
         }
       } ]
     } ],
@@ -490,10 +490,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "b56986a1"
+      "globalKey" : "49a4012b"
     }
   },
   "meta" : {
-    "globalKey" : "b56986a1"
+    "globalKey" : "49a4012b"
   }
 }

@@ -644,30 +644,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XETR"
-                          },
-                          "meta" : {
-                            "globalKey" : "290e2b"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XETR",
-                          "meta" : {
-                            "scheme" : "http://www.example.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a473d96"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -682,7 +658,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "95d26239"
+          "globalKey" : "2ae6907c"
         }
       } ]
     } ],
@@ -817,10 +793,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "17f9d061"
+      "globalKey" : "21e75932"
     }
   },
   "meta" : {
-    "globalKey" : "17f9d061"
+    "globalKey" : "21e75932"
   }
 }

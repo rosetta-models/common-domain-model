@@ -473,20 +473,43 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XPAR"
+                                "value" : "XMAT"
                               },
                               "meta" : {
-                                "globalKey" : "293529"
+                                "globalKey" : "2929e8"
                               }
                             } ],
                             "name" : {
-                              "value" : "XPAR",
+                              "value" : "XMAT",
                               "meta" : {
                                 "scheme" : "http://www.abc.com/exchangeId"
                               }
                             },
                             "meta" : {
-                              "globalKey" : "9ad9c412"
+                              "globalKey" : "9aaf79d0"
+                            }
+                          }
+                        },
+                        "role" : "RelatedExchange"
+                      }, {
+                        "partyReference" : {
+                          "value" : {
+                            "partyId" : [ {
+                              "identifier" : {
+                                "value" : "XMON"
+                              },
+                              "meta" : {
+                                "globalKey" : "292b94"
+                              }
+                            } ],
+                            "name" : {
+                              "value" : "XMON",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
+                            },
+                            "meta" : {
+                              "globalKey" : "9ab5c228"
                             }
                           }
                         },
@@ -568,30 +591,6 @@
                         },
                         "role" : "Exchange"
                       },
-                      "ancillaryPartyRole" : [ {
-                        "partyReference" : {
-                          "value" : {
-                            "partyId" : [ {
-                              "identifier" : {
-                                "value" : "XMEF"
-                              },
-                              "meta" : {
-                                "globalKey" : "292a56"
-                              }
-                            } ],
-                            "name" : {
-                              "value" : "XMEF",
-                              "meta" : {
-                                "scheme" : "http://www.abc.com/exchangeId"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "9ab1172c"
-                            }
-                          }
-                        },
-                        "role" : "RelatedExchange"
-                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "IBEX 35"
@@ -668,30 +667,6 @@
                         },
                         "role" : "Exchange"
                       },
-                      "ancillaryPartyRole" : [ {
-                        "partyReference" : {
-                          "value" : {
-                            "partyId" : [ {
-                              "identifier" : {
-                                "value" : "XHKG"
-                              },
-                              "meta" : {
-                                "globalKey" : "29184c"
-                              }
-                            } ],
-                            "name" : {
-                              "value" : "XHKG",
-                              "meta" : {
-                                "scheme" : "http://www.abc.com/exchangeId"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "9a6d4d98"
-                            }
-                          }
-                        },
-                        "role" : "RelatedExchange"
-                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "Hong Kong Hang Seng Index"
@@ -717,7 +692,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "752891b5"
+          "globalKey" : "973742f8"
         }
       }, {
         "price" : [ {
@@ -959,10 +934,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "c832d471"
+      "globalKey" : "4455819c"
     }
   },
   "meta" : {
-    "globalKey" : "c832d471"
+    "globalKey" : "4455819c"
   }
 }

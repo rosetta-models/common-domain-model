@@ -695,30 +695,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XKRX"
-                          },
-                          "meta" : {
-                            "globalKey" : "292479"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XKRX",
-                          "meta" : {
-                            "scheme" : "http://www.example.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a9b0eb2"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -733,7 +709,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "66d80f9c"
+          "globalKey" : "13ffca55"
         }
       } ]
     } ],
@@ -903,10 +879,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "a887c0c8"
+      "globalKey" : "77420eb"
     }
   },
   "meta" : {
-    "globalKey" : "a887c0c8"
+    "globalKey" : "77420eb"
   }
 }

@@ -190,30 +190,6 @@
                   },
                   "role" : "Exchange"
                 },
-                "ancillaryPartyRole" : [ {
-                  "partyReference" : {
-                    "value" : {
-                      "partyId" : [ {
-                        "identifier" : {
-                          "value" : "XWAR"
-                        },
-                        "meta" : {
-                          "globalKey" : "294f70"
-                        }
-                      } ],
-                      "name" : {
-                        "value" : "XWAR",
-                        "meta" : {
-                          "scheme" : "http://www.example.com/exchangeId"
-                        }
-                      },
-                      "meta" : {
-                        "globalKey" : "9b3c82e0"
-                      }
-                    }
-                  },
-                  "role" : "RelatedExchange"
-                } ],
                 "assetType" : "Other",
                 "name" : {
                   "value" : "WIG20 INDEX"
@@ -230,7 +206,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "3a3b609b"
+          "globalKey" : "bd2bf3ae"
         }
       } ]
     } ],
@@ -379,7 +355,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "74fa67cd"
+      "globalKey" : "17d03080"
     }
   },
   "transferHistory" : [ {
@@ -436,6 +412,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "87a8aad4"
+    "globalKey" : "30329c7"
   }
 }

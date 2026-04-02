@@ -210,30 +210,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XNSE"
-                          },
-                          "meta" : {
-                            "globalKey" : "292fc8"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XNSE",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9ac58d90"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -248,7 +224,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "f305a0e"
+          "globalKey" : "63416941"
         }
       } ]
     } ],
@@ -390,7 +366,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "681c1be7"
+      "globalKey" : "d35d6ef8"
     }
   },
   "transferHistory" : [ {
@@ -444,6 +420,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "71864e0f"
+    "globalKey" : "7457fde0"
   }
 }

@@ -319,20 +319,43 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XPAR"
+                          "value" : "XMAT"
                         },
                         "meta" : {
-                          "globalKey" : "293529"
+                          "globalKey" : "2929e8"
                         }
                       } ],
                       "name" : {
-                        "value" : "XPAR",
+                        "value" : "XMAT",
                         "meta" : {
                           "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
                         }
                       },
                       "meta" : {
-                        "globalKey" : "9ad9c412"
+                        "globalKey" : "9aaf79d0"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
+                }, {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XMON"
+                        },
+                        "meta" : {
+                          "globalKey" : "292b94"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XMON",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9ab5c228"
                       }
                     }
                   },
@@ -354,7 +377,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "9cfb81ed"
+          "globalKey" : "251d43ca"
         }
       } ]
     } ],
@@ -469,10 +492,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "31735adb"
+      "globalKey" : "c503b630"
     }
   },
   "meta" : {
-    "globalKey" : "31735adb"
+    "globalKey" : "c503b630"
   }
 }

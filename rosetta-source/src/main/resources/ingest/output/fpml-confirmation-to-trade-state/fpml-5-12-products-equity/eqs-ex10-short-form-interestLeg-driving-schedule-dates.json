@@ -517,30 +517,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XAMS"
-                          },
-                          "meta" : {
-                            "globalKey" : "28fe4f"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XAMS",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a0ba4de"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -555,7 +531,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "e08981d"
+          "globalKey" : "f13b3e60"
         }
       } ]
     } ],
@@ -676,10 +652,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "c3e2a9b7"
+      "globalKey" : "4e559170"
     }
   },
   "meta" : {
-    "globalKey" : "c3e2a9b7"
+    "globalKey" : "4e559170"
   }
 }

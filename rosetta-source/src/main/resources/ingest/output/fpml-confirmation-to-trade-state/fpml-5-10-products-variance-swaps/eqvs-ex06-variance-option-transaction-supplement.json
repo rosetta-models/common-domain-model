@@ -288,20 +288,20 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XLON"
+                          "value" : "XLIF"
                         },
                         "meta" : {
-                          "globalKey" : "2927d3"
+                          "globalKey" : "292711"
                         }
                       } ],
                       "name" : {
-                        "value" : "XLON",
+                        "value" : "XLIF",
                         "meta" : {
                           "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
                         }
                       },
                       "meta" : {
-                        "globalKey" : "9aa7a6e6"
+                        "globalKey" : "9aa4cde2"
                       }
                     }
                   },
@@ -323,7 +323,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "ed523e75"
+          "globalKey" : "7afd3871"
         }
       } ]
     } ],
@@ -472,7 +472,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "3a18f991"
+      "globalKey" : "5a331e8d"
     }
   },
   "transferHistory" : [ {
@@ -526,6 +526,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "b99ba75d"
+    "globalKey" : "5f5d4959"
   }
 }

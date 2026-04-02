@@ -374,17 +374,37 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XPAR"
+                          "value" : "XMAT"
                         },
                         "meta" : {
-                          "globalKey" : "293529"
+                          "globalKey" : "2929e8"
                         }
                       } ],
                       "name" : {
-                        "value" : "XPAR"
+                        "value" : "XMAT"
                       },
                       "meta" : {
-                        "globalKey" : "9ad9c412"
+                        "globalKey" : "9aaf79d0"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
+                }, {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XMON"
+                        },
+                        "meta" : {
+                          "globalKey" : "292b94"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XMON"
+                      },
+                      "meta" : {
+                        "globalKey" : "9ab5c228"
                       }
                     }
                   },
@@ -406,7 +426,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "9cfb81ed"
+          "globalKey" : "251d43ca"
         }
       } ]
     } ],
@@ -526,7 +546,7 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "6e388bb0"
+      "globalKey" : "441597f"
     }
   },
   "transferHistory" : [ {
@@ -580,6 +600,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "2159c0bc"
+    "globalKey" : "58d9cb"
   }
 }

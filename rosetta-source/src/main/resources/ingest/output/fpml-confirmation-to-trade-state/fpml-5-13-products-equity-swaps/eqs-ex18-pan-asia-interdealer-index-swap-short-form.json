@@ -472,30 +472,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "ALL"
-                          },
-                          "meta" : {
-                            "globalKey" : "fd81"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "ALL",
-                          "meta" : {
-                            "scheme" : "http://www.example.com/exchange-id-REC-1-0"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "3b89ec2"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -510,7 +486,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "81e0f864"
+          "globalKey" : "13c3ba9d"
         }
       }, {
         "price" : [ {
@@ -745,10 +721,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "55930460"
+      "globalKey" : "c09f6acb"
     }
   },
   "meta" : {
-    "globalKey" : "55930460"
+    "globalKey" : "c09f6acb"
   }
 }

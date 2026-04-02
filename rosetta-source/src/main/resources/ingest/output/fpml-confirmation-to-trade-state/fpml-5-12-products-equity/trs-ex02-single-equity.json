@@ -483,30 +483,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XNAS"
-                          },
-                          "meta" : {
-                            "globalKey" : "292da8"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XNAS",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9abd9150"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -521,7 +497,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "b50da64f"
+          "globalKey" : "d4697ba0"
         }
       }, {
         "price" : [ {
@@ -730,10 +706,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "a10ec81"
+      "globalKey" : "afdb1a5c"
     }
   },
   "meta" : {
-    "globalKey" : "a10ec81"
+    "globalKey" : "afdb1a5c"
   }
 }

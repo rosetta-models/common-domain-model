@@ -319,27 +319,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XASE"
-                          },
-                          "meta" : {
-                            "globalKey" : "28fefb"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XASE"
-                        },
-                        "meta" : {
-                          "globalKey" : "9a0e2b36"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -354,7 +333,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "4b4afbe7"
+          "globalKey" : "563cacae"
         }
       }, {
         "quantity" : [ {
@@ -430,27 +409,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XASE"
-                          },
-                          "meta" : {
-                            "globalKey" : "28fefb"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XASE"
-                        },
-                        "meta" : {
-                          "globalKey" : "9a0e2b36"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -465,7 +423,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "e57f1bce"
+          "globalKey" : "7674bce7"
         }
       } ]
     } ],
@@ -581,10 +539,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "c912664b"
+      "globalKey" : "61fbab4f"
     }
   },
   "meta" : {
-    "globalKey" : "c912664b"
+    "globalKey" : "61fbab4f"
   }
 }

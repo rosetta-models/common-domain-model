@@ -217,20 +217,20 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "KSC"
+                          "value" : "All Exchanges"
                         },
                         "meta" : {
-                          "globalKey" : "123db"
+                          "globalKey" : "fbea4eb1"
                         }
                       } ],
                       "name" : {
-                        "value" : "KSC",
+                        "value" : "All Exchanges",
                         "meta" : {
                           "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
                         }
                       },
                       "meta" : {
-                        "globalKey" : "448bcf6"
+                        "globalKey" : "a67bb522"
                       }
                     }
                   },
@@ -252,7 +252,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "95483c9f"
+          "globalKey" : "6af363cb"
         }
       } ]
     } ],
@@ -392,7 +392,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "b110fe30"
+      "globalKey" : "46d89d5c"
     }
   },
   "transferHistory" : [ {
@@ -446,6 +446,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "64f46505"
+    "globalKey" : "f3522531"
   }
 }

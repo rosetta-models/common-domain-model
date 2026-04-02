@@ -212,20 +212,20 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "N"
+                          "value" : "A"
                         },
                         "meta" : {
-                          "globalKey" : "4e"
+                          "globalKey" : "41"
                         }
                       } ],
                       "name" : {
-                        "value" : "N",
+                        "value" : "A",
                         "meta" : {
                           "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC"
                         }
                       },
                       "meta" : {
-                        "globalKey" : "1251c"
+                        "globalKey" : "f442"
                       }
                     }
                   },
@@ -244,7 +244,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "f0923581"
+          "globalKey" : "402a01a7"
         }
       } ]
     } ],
@@ -356,7 +356,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "612ea2b8"
+      "globalKey" : "e2b2225e"
     }
   },
   "transferHistory" : [ {
@@ -413,6 +413,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "3b443d84"
+    "globalKey" : "70e7d9aa"
   }
 }

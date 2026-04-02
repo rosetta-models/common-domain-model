@@ -350,6 +350,30 @@
                   },
                   "identifierType" : "Name"
                 } ],
+                "ancillaryPartyRole" : [ {
+                  "partyReference" : {
+                    "value" : {
+                      "partyId" : [ {
+                        "identifier" : {
+                          "value" : "XEUR"
+                        },
+                        "meta" : {
+                          "globalKey" : "290e4a"
+                        }
+                      } ],
+                      "name" : {
+                        "value" : "XEUR",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
+                      },
+                      "meta" : {
+                        "globalKey" : "9a47b214"
+                      }
+                    }
+                  },
+                  "role" : "RelatedExchange"
+                } ],
                 "assetType" : "Other",
                 "name" : {
                   "value" : "STOXX 50 Euro"
@@ -366,7 +390,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "5ac62fb0"
+          "globalKey" : "967286e3"
         }
       } ]
     } ],
@@ -506,7 +530,7 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "108cb58e"
+      "globalKey" : "86175ff9"
     }
   },
   "transferHistory" : [ {
@@ -560,6 +584,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "6534493a"
+    "globalKey" : "6c4073e5"
   }
 }

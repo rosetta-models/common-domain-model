@@ -319,30 +319,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XNSE"
-                          },
-                          "meta" : {
-                            "globalKey" : "292fc8"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XNSE",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9ac58d90"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -357,7 +333,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "9e2f0f4d"
+          "globalKey" : "76690122"
         }
       } ]
     } ],
@@ -530,10 +506,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "cc70523b"
+      "globalKey" : "adc53c76"
     }
   },
   "meta" : {
-    "globalKey" : "cc70523b"
+    "globalKey" : "adc53c76"
   }
 }

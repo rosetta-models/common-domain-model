@@ -475,30 +475,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XMIL"
-                                },
-                                "meta" : {
-                                  "globalKey" : "292ad8"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XMIL",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9ab2ffb0"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -574,30 +550,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XHEL"
-                                },
-                                "meta" : {
-                                  "globalKey" : "291797"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XHEL",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9a6aa56e"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -673,30 +625,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XMIL"
-                                },
-                                "meta" : {
-                                  "globalKey" : "292ad8"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XMIL",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9ab2ffb0"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -772,30 +700,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XMAD"
-                                },
-                                "meta" : {
-                                  "globalKey" : "2929d8"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XMAD",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9aaf3db0"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -871,30 +775,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XCVM"
-                                },
-                                "meta" : {
-                                  "globalKey" : "2906e2"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XCVM",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9a2bdd44"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -970,30 +850,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XLON"
-                                },
-                                "meta" : {
-                                  "globalKey" : "2927d3"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XLON",
-                                "meta" : {
-                                  "scheme" : "http://www.abc.com/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9aa7a6e6"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -1017,7 +873,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "c82f8d09"
+          "globalKey" : "ec72ff33"
         }
       }, {
         "price" : [ {
@@ -1259,10 +1115,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "384074df"
+      "globalKey" : "cce2fdc9"
     }
   },
   "meta" : {
-    "globalKey" : "384074df"
+    "globalKey" : "cce2fdc9"
   }
 }

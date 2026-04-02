@@ -688,30 +688,6 @@
                         },
                         "role" : "Exchange"
                       },
-                      "ancillaryPartyRole" : [ {
-                        "partyReference" : {
-                          "value" : {
-                            "partyId" : [ {
-                              "identifier" : {
-                                "value" : "XEUR"
-                              },
-                              "meta" : {
-                                "globalKey" : "290e4a"
-                              }
-                            } ],
-                            "name" : {
-                              "value" : "XEUR",
-                              "meta" : {
-                                "scheme" : "http://www.fpml.org/exchange-id"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "9a47b214"
-                            }
-                          }
-                        },
-                        "role" : "RelatedExchange"
-                      } ],
                       "assetType" : "Other",
                       "name" : {
                         "value" : "GERMAN SE XETRA DAX INDEX"
@@ -728,7 +704,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "802fd4db"
+                "globalKey" : "d71da3b6"
               }
             } ]
           } ],
@@ -875,11 +851,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "d22a2384"
+            "globalKey" : "f861d0e1"
           }
         },
         "meta" : {
-          "globalKey" : "d22a2384"
+          "globalKey" : "f861d0e1"
         }
       }
     }
@@ -1559,30 +1535,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XEUR"
-                          },
-                          "meta" : {
-                            "globalKey" : "290e4a"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XEUR",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/exchange-id"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a47b214"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Other",
                   "name" : {
                     "value" : "GERMAN SE XETRA DAX INDEX"
@@ -1599,7 +1551,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "802fd4db"
+            "globalKey" : "d71da3b6"
           }
         } ]
       } ],
@@ -1746,7 +1698,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "d22a2384"
+        "globalKey" : "f861d0e1"
       }
     },
     "observationHistory" : [ {
@@ -1757,10 +1709,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "7741b4d"
+      "globalKey" : "b34010"
     }
   } ],
   "meta" : {
-    "globalKey" : "77448efa"
+    "globalKey" : "e938fde2"
   }
 }

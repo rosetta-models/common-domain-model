@@ -461,30 +461,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XHEL"
-                          },
-                          "meta" : {
-                            "globalKey" : "291797"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XHEL",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a6aa56e"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -499,7 +475,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "1efb044b"
+          "globalKey" : "eb44e102"
         }
       }, {
         "price" : [ {
@@ -739,10 +715,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "3270fd24"
+      "globalKey" : "e08b7e57"
     }
   },
   "meta" : {
-    "globalKey" : "3270fd24"
+    "globalKey" : "e08b7e57"
   }
 }

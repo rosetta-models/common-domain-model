@@ -183,30 +183,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XASE"
-                                },
-                                "meta" : {
-                                  "globalKey" : "28fefb"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XASE",
-                                "meta" : {
-                                  "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9a0e2b36"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -290,30 +266,6 @@
                           },
                           "role" : "Exchange"
                         },
-                        "ancillaryPartyRole" : [ {
-                          "partyReference" : {
-                            "value" : {
-                              "partyId" : [ {
-                                "identifier" : {
-                                  "value" : "XASE"
-                                },
-                                "meta" : {
-                                  "globalKey" : "28fefb"
-                                }
-                              } ],
-                              "name" : {
-                                "value" : "XASE",
-                                "meta" : {
-                                  "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "9a0e2b36"
-                              }
-                            }
-                          },
-                          "role" : "RelatedExchange"
-                        } ],
                         "assetType" : "Security",
                         "securityType" : "Equity"
                       }
@@ -345,7 +297,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "72976ac8"
+          "globalKey" : "3a42b9f4"
         }
       } ]
     } ],
@@ -488,7 +440,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "38800f6e"
+      "globalKey" : "4169955a"
     }
   },
   "transferHistory" : [ {
@@ -542,6 +494,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "ea4f7fbd"
+    "globalKey" : "266836a9"
   }
 }

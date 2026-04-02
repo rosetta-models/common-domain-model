@@ -412,30 +412,6 @@
                     },
                     "role" : "Exchange"
                   },
-                  "ancillaryPartyRole" : [ {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XTAI"
-                          },
-                          "meta" : {
-                            "globalKey" : "294424"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XTAI",
-                          "meta" : {
-                            "scheme" : "http://www.abc.com/exchangeId"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9b120f48"
-                        }
-                      }
-                    },
-                    "role" : "RelatedExchange"
-                  } ],
                   "assetType" : "Security",
                   "securityType" : "Equity"
                 }
@@ -450,7 +426,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "91856104"
+          "globalKey" : "d114a43"
         }
       }, {
         "observable" : {
@@ -685,7 +661,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "fbfcb60e"
+      "globalKey" : "298fcc3b"
     }
   },
   "transferHistory" : [ {
@@ -774,6 +750,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "76777e95"
+    "globalKey" : "3fa12e48"
   }
 }

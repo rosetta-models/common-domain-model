@@ -211,30 +211,6 @@
                   },
                   "role" : "Exchange"
                 },
-                "ancillaryPartyRole" : [ {
-                  "partyReference" : {
-                    "value" : {
-                      "partyId" : [ {
-                        "identifier" : {
-                          "value" : "XNYS"
-                        },
-                        "meta" : {
-                          "globalKey" : "293090"
-                        }
-                      } ],
-                      "name" : {
-                        "value" : "XNYS",
-                        "meta" : {
-                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
-                        }
-                      },
-                      "meta" : {
-                        "globalKey" : "9ac87d20"
-                      }
-                    }
-                  },
-                  "role" : "RelatedExchange"
-                } ],
                 "assetType" : "Other",
                 "name" : {
                   "value" : "Swiss Market Index"
@@ -251,7 +227,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "7d097a28"
+          "globalKey" : "30e73389"
         }
       } ]
     } ],
@@ -392,7 +368,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "3f2bdc3e"
+      "globalKey" : "1dedb3df"
     }
   },
   "transferHistory" : [ {
@@ -446,6 +422,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "8646a471"
+    "globalKey" : "a6d544d2"
   }
 }

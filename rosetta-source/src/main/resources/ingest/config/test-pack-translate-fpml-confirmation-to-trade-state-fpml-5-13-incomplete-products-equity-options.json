@@ -9,7 +9,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex-27-equityOptionTransactionSupplement-EMEA-interdealer.json",
     "assertions" : {
       "inputPathCount" : 70,
-      "outputPathCount" : 88,
+      "outputPathCount" : 84,
       "modelValidationFailures" : 9,
       "runtimeError" : false
     }
@@ -20,7 +20,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex01-american-call-stock-long-form.json",
     "assertions" : {
       "inputPathCount" : 88,
-      "outputPathCount" : 94,
+      "outputPathCount" : 90,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
@@ -31,7 +31,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex04-european-call-index-long-form.json",
     "assertions" : {
       "inputPathCount" : 75,
-      "outputPathCount" : 92,
+      "outputPathCount" : 88,
       "modelValidationFailures" : 9,
       "runtimeError" : false
     }
@@ -64,7 +64,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex08-basket-long-form.json",
     "assertions" : {
       "inputPathCount" : 84,
-      "outputPathCount" : 109,
+      "outputPathCount" : 101,
       "modelValidationFailures" : 21,
       "runtimeError" : false
     }
@@ -86,7 +86,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex11-quanto-long-form.json",
     "assertions" : {
       "inputPathCount" : 84,
-      "outputPathCount" : 92,
+      "outputPathCount" : 88,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
@@ -97,7 +97,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex14-american-call-stock-passthrough-long-form.json",
     "assertions" : {
       "inputPathCount" : 93,
-      "outputPathCount" : 95,
+      "outputPathCount" : 91,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
@@ -108,7 +108,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex15-basket-passthrough-long-form.json",
     "assertions" : {
       "inputPathCount" : 94,
-      "outputPathCount" : 109,
+      "outputPathCount" : 101,
       "modelValidationFailures" : 21,
       "runtimeError" : false
     }
@@ -119,7 +119,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex16-equityOptionTransactionSupplement.json",
     "assertions" : {
       "inputPathCount" : 52,
-      "outputPathCount" : 88,
+      "outputPathCount" : 84,
       "modelValidationFailures" : 12,
       "runtimeError" : false
     }
@@ -152,7 +152,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex19-dividend-adjustment.json",
     "assertions" : {
       "inputPathCount" : 102,
-      "outputPathCount" : 92,
+      "outputPathCount" : 88,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
@@ -174,7 +174,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-13-incomplete-products-equity-options\\eqd-ex21-flat-weight-basket.json",
     "assertions" : {
       "inputPathCount" : 98,
-      "outputPathCount" : 123,
+      "outputPathCount" : 117,
       "modelValidationFailures" : 23,
       "runtimeError" : false
     }

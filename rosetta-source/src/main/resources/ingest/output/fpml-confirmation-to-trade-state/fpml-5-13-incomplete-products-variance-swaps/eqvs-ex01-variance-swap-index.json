@@ -139,20 +139,20 @@
                               "value" : {
                                 "partyId" : [ {
                                   "identifier" : {
-                                    "value" : "XNYS"
+                                    "value" : "XCBO"
                                   },
                                   "meta" : {
-                                    "globalKey" : "293090"
+                                    "globalKey" : "290478"
                                   }
                                 } ],
                                 "name" : {
-                                  "value" : "XNYS",
+                                  "value" : "XCBO",
                                   "meta" : {
                                     "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
                                   }
                                 },
                                 "meta" : {
-                                  "globalKey" : "9ac87d20"
+                                  "globalKey" : "9a22caf0"
                                 }
                               }
                             },
@@ -168,7 +168,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "1c9194ab"
+            "globalKey" : "ae8fae7b"
           }
         } ],
         "calculationAgent" : {
@@ -176,7 +176,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "8acafed5"
+        "globalKey" : "95a9e4a5"
       }
     },
     "tradeLot" : [ {
@@ -264,20 +264,20 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XNYS"
+                          "value" : "XCBO"
                         },
                         "meta" : {
-                          "globalKey" : "293090"
+                          "globalKey" : "290478"
                         }
                       } ],
                       "name" : {
-                        "value" : "XNYS",
+                        "value" : "XCBO",
                         "meta" : {
                           "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
                         }
                       },
                       "meta" : {
-                        "globalKey" : "9ac87d20"
+                        "globalKey" : "9a22caf0"
                       }
                     }
                   },
@@ -299,7 +299,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "6b2fafc9"
+          "globalKey" : "39ec6199"
         }
       } ]
     } ],
@@ -471,10 +471,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "f8660785"
+      "globalKey" : "6b6aa185"
     }
   },
   "meta" : {
-    "globalKey" : "f8660785"
+    "globalKey" : "6b6aa185"
   }
 }
