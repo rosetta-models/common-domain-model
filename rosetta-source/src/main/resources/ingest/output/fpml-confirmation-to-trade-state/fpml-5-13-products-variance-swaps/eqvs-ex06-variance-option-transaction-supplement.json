@@ -243,7 +243,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XLON"
+                      "value" : "XLON",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "2927d3"
@@ -264,7 +267,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XLON"
+                          "value" : "XLON",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "2927d3"
@@ -288,7 +294,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XLIF"
+                          "value" : "XLIF",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "292711"

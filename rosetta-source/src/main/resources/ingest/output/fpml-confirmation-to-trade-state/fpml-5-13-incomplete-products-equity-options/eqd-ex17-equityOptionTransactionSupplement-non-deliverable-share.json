@@ -162,7 +162,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "TAI"
+                        "value" : "TAI",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "1437c"
@@ -183,7 +186,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "TAI"
+                            "value" : "TAI",
+                            "meta" : {
+                              "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "1437c"
@@ -207,7 +213,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "All Exchanges"
+                            "value" : "All Exchanges",
+                            "meta" : {
+                              "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "fbea4eb1"

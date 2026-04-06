@@ -324,7 +324,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "N"
+                      "value" : "N",
+                      "meta" : {
+                        "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "4e"
@@ -345,7 +348,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "N"
+                          "value" : "N",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "4e"
@@ -369,7 +375,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "ALL"
+                          "value" : "ALL",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchange-id-REC-1-0"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "fd81"

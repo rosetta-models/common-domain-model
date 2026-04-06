@@ -687,7 +687,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XKRX"
+                        "value" : "XKRX",
+                        "meta" : {
+                          "scheme" : "http://www.example.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "292479"
@@ -708,7 +711,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XKRX"
+                            "value" : "XKRX",
+                            "meta" : {
+                              "scheme" : "http://www.example.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "292479"

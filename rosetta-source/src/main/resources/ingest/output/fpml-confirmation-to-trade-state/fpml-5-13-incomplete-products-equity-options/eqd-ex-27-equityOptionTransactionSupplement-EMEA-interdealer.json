@@ -150,7 +150,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XWAR"
+                      "value" : "XWAR",
+                      "meta" : {
+                        "scheme" : "http://www.example.com/exchangeId"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "294f70"
@@ -171,7 +174,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XWAR"
+                          "value" : "XWAR",
+                          "meta" : {
+                            "scheme" : "http://www.example.com/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "294f70"

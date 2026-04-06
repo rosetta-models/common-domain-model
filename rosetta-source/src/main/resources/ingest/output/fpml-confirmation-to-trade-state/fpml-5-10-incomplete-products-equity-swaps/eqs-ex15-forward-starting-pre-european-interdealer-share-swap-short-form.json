@@ -572,7 +572,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XETR"
+                        "value" : "XETR",
+                        "meta" : {
+                          "scheme" : "http://www.example.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "290e2b"
@@ -593,7 +596,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XETR"
+                            "value" : "XETR",
+                            "meta" : {
+                              "scheme" : "http://www.example.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "290e2b"

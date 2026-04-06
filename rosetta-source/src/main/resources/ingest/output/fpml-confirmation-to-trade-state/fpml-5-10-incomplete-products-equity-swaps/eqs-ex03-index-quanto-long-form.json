@@ -428,7 +428,10 @@
                       "party" : [ {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XPAR"
+                            "value" : "XPAR",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "293529"
@@ -449,7 +452,10 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XPAR"
+                                "value" : "XPAR",
+                                "meta" : {
+                                  "scheme" : "http://www.abc.com/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "293529"
@@ -473,7 +479,10 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XMAT"
+                                "value" : "XMAT",
+                                "meta" : {
+                                  "scheme" : "http://www.abc.com/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "2929e8"
@@ -496,7 +505,10 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XMON"
+                                "value" : "XMON",
+                                "meta" : {
+                                  "scheme" : "http://www.abc.com/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "292b94"
@@ -551,7 +563,10 @@
                       "party" : [ {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XMEF"
+                            "value" : "XMEF",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "292a56"
@@ -572,7 +587,10 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XMEF"
+                                "value" : "XMEF",
+                                "meta" : {
+                                  "scheme" : "http://www.abc.com/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "292a56"
@@ -627,7 +645,10 @@
                       "party" : [ {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XHKG"
+                            "value" : "XHKG",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "29184c"
@@ -648,7 +669,10 @@
                           "value" : {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XHKG"
+                                "value" : "XHKG",
+                                "meta" : {
+                                  "scheme" : "http://www.abc.com/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "29184c"

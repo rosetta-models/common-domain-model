@@ -274,7 +274,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XPAR"
+                      "value" : "XPAR",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "293529"
@@ -295,7 +298,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XPAR"
+                          "value" : "XPAR",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "293529"
@@ -319,7 +325,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XMAT"
+                          "value" : "XMAT",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "2929e8"
@@ -342,7 +351,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XMON"
+                          "value" : "XMON",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "292b94"

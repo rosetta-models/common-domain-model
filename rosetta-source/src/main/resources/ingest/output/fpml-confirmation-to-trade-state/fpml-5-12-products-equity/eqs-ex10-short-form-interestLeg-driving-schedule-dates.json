@@ -477,7 +477,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XAMS"
+                        "value" : "XAMS",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "28fe4f"
@@ -498,7 +501,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XAMS"
+                            "value" : "XAMS",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "28fe4f"

@@ -145,7 +145,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XLIF"
+                      "value" : "XLIF",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "292711"
@@ -166,7 +169,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XLIF"
+                          "value" : "XLIF",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/coding-scheme/external/exchange-id-MIC"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "292711"

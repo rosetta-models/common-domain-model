@@ -94,7 +94,10 @@
                           "party" : [ {
                             "partyId" : [ {
                               "identifier" : {
-                                "value" : "XNYS"
+                                "value" : "XNYS",
+                                "meta" : {
+                                  "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                                }
                               },
                               "meta" : {
                                 "globalKey" : "293090"
@@ -115,7 +118,10 @@
                               "value" : {
                                 "partyId" : [ {
                                   "identifier" : {
-                                    "value" : "XNYS"
+                                    "value" : "XNYS",
+                                    "meta" : {
+                                      "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                                    }
                                   },
                                   "meta" : {
                                     "globalKey" : "293090"
@@ -139,7 +145,10 @@
                               "value" : {
                                 "partyId" : [ {
                                   "identifier" : {
-                                    "value" : "XCBO"
+                                    "value" : "XCBO",
+                                    "meta" : {
+                                      "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                                    }
                                   },
                                   "meta" : {
                                     "globalKey" : "290478"
@@ -219,7 +228,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XNYS"
+                      "value" : "XNYS",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "293090"
@@ -240,7 +252,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XNYS"
+                          "value" : "XNYS",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "293090"
@@ -264,7 +279,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XCBO"
+                          "value" : "XCBO",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "290478"

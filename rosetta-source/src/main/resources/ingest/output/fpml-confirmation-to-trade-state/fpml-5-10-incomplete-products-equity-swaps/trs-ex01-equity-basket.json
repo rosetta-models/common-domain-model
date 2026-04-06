@@ -441,7 +441,10 @@
                         "party" : [ {
                           "partyId" : [ {
                             "identifier" : {
-                              "value" : "XMIL"
+                              "value" : "XMIL",
+                              "meta" : {
+                                "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                              }
                             },
                             "meta" : {
                               "globalKey" : "292ad8"
@@ -462,7 +465,10 @@
                             "value" : {
                               "partyId" : [ {
                                 "identifier" : {
-                                  "value" : "XMIL"
+                                  "value" : "XMIL",
+                                  "meta" : {
+                                    "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                                  }
                                 },
                                 "meta" : {
                                   "globalKey" : "292ad8"
@@ -516,7 +522,10 @@
                         "party" : [ {
                           "partyId" : [ {
                             "identifier" : {
-                              "value" : "XHEL"
+                              "value" : "XHEL",
+                              "meta" : {
+                                "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                              }
                             },
                             "meta" : {
                               "globalKey" : "291797"
@@ -537,7 +546,10 @@
                             "value" : {
                               "partyId" : [ {
                                 "identifier" : {
-                                  "value" : "XHEL"
+                                  "value" : "XHEL",
+                                  "meta" : {
+                                    "scheme" : "http://www.fpml.org/schemes/4-1/exchangeId"
+                                  }
                                 },
                                 "meta" : {
                                   "globalKey" : "291797"

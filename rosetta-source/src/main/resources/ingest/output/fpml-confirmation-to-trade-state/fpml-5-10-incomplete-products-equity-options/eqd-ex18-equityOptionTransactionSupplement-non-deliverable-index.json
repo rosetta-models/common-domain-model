@@ -172,7 +172,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "KSC"
+                      "value" : "KSC",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "123db"
@@ -193,7 +196,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "KSC"
+                          "value" : "KSC",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "123db"
@@ -217,7 +223,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "All Exchanges"
+                          "value" : "All Exchanges",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC-1-0"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "fbea4eb1"

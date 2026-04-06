@@ -632,7 +632,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XEUR"
+                      "value" : "XEUR",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/exchange-id"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "290e4a"
@@ -653,7 +656,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XEUR"
+                          "value" : "XEUR",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/exchange-id"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "290e4a"

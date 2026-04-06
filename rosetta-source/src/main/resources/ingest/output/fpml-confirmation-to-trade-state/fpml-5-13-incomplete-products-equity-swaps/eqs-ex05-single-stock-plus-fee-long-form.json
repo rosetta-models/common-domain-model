@@ -372,7 +372,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XTAI"
+                        "value" : "XTAI",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "294424"
@@ -393,7 +396,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XTAI"
+                            "value" : "XTAI",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "294424"

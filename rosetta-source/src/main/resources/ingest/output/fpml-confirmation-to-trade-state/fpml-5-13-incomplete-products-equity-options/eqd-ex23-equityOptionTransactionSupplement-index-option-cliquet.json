@@ -182,7 +182,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "N"
+                      "value" : "N",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "4e"
@@ -203,7 +206,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "N"
+                          "value" : "N",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "4e"
@@ -227,7 +233,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "A"
+                          "value" : "A",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/spec/2002/exchange-id-REC"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "41"

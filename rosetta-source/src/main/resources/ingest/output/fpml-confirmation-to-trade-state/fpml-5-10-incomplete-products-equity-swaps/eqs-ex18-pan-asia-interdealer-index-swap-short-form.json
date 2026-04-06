@@ -432,7 +432,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "ALL"
+                        "value" : "ALL",
+                        "meta" : {
+                          "scheme" : "http://www.example.com/exchange-id-REC-1-0"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "fd81"
@@ -453,7 +456,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "ALL"
+                            "value" : "ALL",
+                            "meta" : {
+                              "scheme" : "http://www.example.com/exchange-id-REC-1-0"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "fd81"

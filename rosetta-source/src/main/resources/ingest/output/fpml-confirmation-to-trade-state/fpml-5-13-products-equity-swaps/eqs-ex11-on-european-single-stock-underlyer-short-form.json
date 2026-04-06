@@ -421,7 +421,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XHEL"
+                        "value" : "XHEL",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "291797"
@@ -442,7 +445,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XHEL"
+                            "value" : "XHEL",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "291797"

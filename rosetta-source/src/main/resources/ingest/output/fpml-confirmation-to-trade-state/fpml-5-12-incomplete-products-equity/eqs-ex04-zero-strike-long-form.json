@@ -279,7 +279,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XNSE"
+                        "value" : "XNSE",
+                        "meta" : {
+                          "scheme" : "http://www.abc.com/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "292fc8"
@@ -300,7 +303,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XNSE"
+                            "value" : "XNSE",
+                            "meta" : {
+                              "scheme" : "http://www.abc.com/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "292fc8"

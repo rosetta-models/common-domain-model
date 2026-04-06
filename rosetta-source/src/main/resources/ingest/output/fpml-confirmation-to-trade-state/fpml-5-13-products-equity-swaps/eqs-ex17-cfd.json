@@ -385,7 +385,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "NYSE"
+                        "value" : "NYSE",
+                        "meta" : {
+                          "scheme" : "MARKET_ID"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "24cd5d"
@@ -406,7 +409,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "NYSE"
+                            "value" : "NYSE",
+                            "meta" : {
+                              "scheme" : "MARKET_ID"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "24cd5d"

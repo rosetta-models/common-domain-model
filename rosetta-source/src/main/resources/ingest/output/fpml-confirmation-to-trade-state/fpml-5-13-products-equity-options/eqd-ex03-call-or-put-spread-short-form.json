@@ -170,7 +170,10 @@
                   "party" : [ {
                     "partyId" : [ {
                       "identifier" : {
-                        "value" : "XNSE"
+                        "value" : "XNSE",
+                        "meta" : {
+                          "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                        }
                       },
                       "meta" : {
                         "globalKey" : "292fc8"
@@ -191,7 +194,10 @@
                       "value" : {
                         "partyId" : [ {
                           "identifier" : {
-                            "value" : "XNSE"
+                            "value" : "XNSE",
+                            "meta" : {
+                              "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                            }
                           },
                           "meta" : {
                             "globalKey" : "292fc8"

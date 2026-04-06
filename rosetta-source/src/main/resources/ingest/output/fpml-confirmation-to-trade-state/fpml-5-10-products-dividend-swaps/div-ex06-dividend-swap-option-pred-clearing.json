@@ -354,7 +354,10 @@
                 "party" : [ {
                   "partyId" : [ {
                     "identifier" : {
-                      "value" : "XEUR"
+                      "value" : "XEUR",
+                      "meta" : {
+                        "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                      }
                     },
                     "meta" : {
                       "globalKey" : "290e4a"
@@ -375,7 +378,10 @@
                     "value" : {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "XEUR"
+                          "value" : "XEUR",
+                          "meta" : {
+                            "scheme" : "http://www.fpml.org/schemes/4.1/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "290e4a"

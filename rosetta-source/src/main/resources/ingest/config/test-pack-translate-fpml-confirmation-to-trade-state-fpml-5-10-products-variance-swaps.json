@@ -9,7 +9,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-10-products-variance-swaps\\eqvs-ex01-variance-swap-index.json",
     "assertions" : {
       "inputPathCount" : 64,
-      "outputPathCount" : 91,
+      "outputPathCount" : 97,
       "modelValidationFailures" : 16,
       "runtimeError" : false
     }
@@ -20,7 +20,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-10-products-variance-swaps\\eqvs-ex02-variance-swap-single-stock.json",
     "assertions" : {
       "inputPathCount" : 63,
-      "outputPathCount" : 88,
+      "outputPathCount" : 93,
       "modelValidationFailures" : 18,
       "runtimeError" : false
     }
@@ -31,7 +31,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-10-products-variance-swaps\\eqvs-ex03-conditional-variance-swap.json",
     "assertions" : {
       "inputPathCount" : 62,
-      "outputPathCount" : 80,
+      "outputPathCount" : 85,
       "modelValidationFailures" : 17,
       "runtimeError" : false
     }
@@ -64,7 +64,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-10-products-variance-swaps\\eqvs-ex06-variance-option-transaction-supplement.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 100,
+      "outputPathCount" : 103,
       "modelValidationFailures" : 12,
       "runtimeError" : false
     }
@@ -75,7 +75,7 @@
     "outputPath" : "ingest\\output\\fpml-confirmation-to-trade-state\\fpml-5-10-products-variance-swaps\\eqvs-ex07-variance-option-transaction-supplement-pred-clearing.json",
     "assertions" : {
       "inputPathCount" : 85,
-      "outputPathCount" : 109,
+      "outputPathCount" : 112,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
