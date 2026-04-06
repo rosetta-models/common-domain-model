@@ -633,7 +633,10 @@
                         "party" : [ {
                           "partyId" : [ {
                             "identifier" : {
-                              "value" : "NASD"
+                              "value" : "NASD",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
                             },
                             "meta" : {
                               "globalKey" : "247344"
@@ -654,7 +657,10 @@
                             "value" : {
                               "partyId" : [ {
                                 "identifier" : {
-                                  "value" : "NASD"
+                                  "value" : "NASD",
+                                  "meta" : {
+                                    "scheme" : "http://www.abc.com/exchangeId"
+                                  }
                                 },
                                 "meta" : {
                                   "globalKey" : "247344"
@@ -1385,7 +1391,10 @@
                     "party" : [ {
                       "partyId" : [ {
                         "identifier" : {
-                          "value" : "NASD"
+                          "value" : "NASD",
+                          "meta" : {
+                            "scheme" : "http://www.abc.com/exchangeId"
+                          }
                         },
                         "meta" : {
                           "globalKey" : "247344"
@@ -1406,7 +1415,10 @@
                         "value" : {
                           "partyId" : [ {
                             "identifier" : {
-                              "value" : "NASD"
+                              "value" : "NASD",
+                              "meta" : {
+                                "scheme" : "http://www.abc.com/exchangeId"
+                              }
                             },
                             "meta" : {
                               "globalKey" : "247344"
