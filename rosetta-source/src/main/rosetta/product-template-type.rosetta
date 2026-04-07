@@ -7,6 +7,7 @@ import cdm.base.datetime.*
 import cdm.base.staticdata.party.*
 import cdm.base.staticdata.asset.common.*
 import cdm.base.staticdata.identifier.*
+import cdm.base.datetime.daycount.* // FORK_2
 
 import cdm.observable.event.*
 import cdm.observable.asset.*
@@ -113,6 +114,8 @@ type OptionPayout extends PayoutBase: <" The option payout specification terms. 
     observationTerms ObservationTerms (0..1) <"Class containing terms that are associated with observing a price/benchmark/index across either single or multple observations. To be used for option contracts that reference a benchmark price.">
     schedule CalculationSchedule (0..1) <"Allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.">
     delivery AssetDeliveryInformation (0..1) <"Contains the information relative to the delivery of the asset.">
+    paymentDates PaymentDates (0..1) // FORK
+    valuationDates ValuationDates (0..1) // FORK
 
     condition ClearedPhysicalSettlementExists:
         if settlementTerms -> physicalSettlementTerms exists
@@ -205,17 +208,19 @@ type ReturnTerms: <"Specifies the type of return of a performance payout.">
     varianceReturnTerms VarianceReturnTerms (0..1) <"Return terms based upon the observed variance of the underlier's price.">
     volatilityReturnTerms VolatilityReturnTerms (0..1) <"Return terms based upon the observed volatility of the underlier's price.">
     correlationReturnTerms CorrelationReturnTerms (0..1) <"Return terms based upon the observed correlation between the components of the underlying basket.">
+    referenceSecurityReturnTerms ReferenceSecurityReturnTerms (0..1) // FORK_2
 
     condition ReturnTermsExists: <"Checks that the return type label matches the actual return terms structure of the product.">
         if priceReturnTerms -> returnType = ReturnTypeEnum -> Total
-        then (priceReturnTerms, dividendReturnTerms) only exists
+        then priceReturnTerms exists and dividendReturnTerms exists
         else if priceReturnTerms -> returnType = ReturnTypeEnum -> Price
-        then priceReturnTerms only exists
-        else priceReturnTerms only exists
-            or dividendReturnTerms only exists
-            or varianceReturnTerms only exists
-            or volatilityReturnTerms only exists
-            or correlationReturnTerms only exists
+        then dividendReturnTerms is absent // FORK with Changes !
+
+    condition: <"All kinds of returns are excluding each other, except priceReturnTerms and dividendReturnTerms which may exist together. This condition is ensuring that priceReturnTerms cannot exist with other return types else than dividendReturnTerms."> // FORK
+        optional choice priceReturnTerms, varianceReturnTerms, volatilityReturnTerms, correlationReturnTerms
+
+    condition: <"All kinds of returns are excluding each other, except priceReturnTerms and dividendReturnTerms which may exist together. This condition is ensuring that dividendReturnTerms cannot exist with any other return types else than priceReturnTerms."> // FORK
+        optional choice dividendReturnTerms, varianceReturnTerms, volatilityReturnTerms, correlationReturnTerms
 
 type PerformancePayout extends PayoutBase: <"Contains the necessary specifications for all performance payouts, encompassing equity return, dividend, variance, volatility and correlation products. The Performance Payout is either a straight return, or an aggregation of multiple returns, hence a required choice between returnTerms and multiple portfolioReturnTerms.">
     [metadata key]
@@ -233,6 +238,14 @@ type PerformancePayout extends PayoutBase: <"Contains the necessary specificatio
         [metadata address "pointsTo"=PriceQuantity->price]
     finalValuationPrice PriceSchedule (0..1) <"Specifies the net final valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
         [metadata address "pointsTo"=PriceQuantity->price]
+    initialPrice PriceSchedule (0..*) <"Specifies the net initial valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document."> // FORK_5
+        [metadata address "pointsTo"=PriceQuantity->price]
+    interimPrice PriceSchedule (0..*) <"Specifies the net initial valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document."> // FORK_5
+        [metadata address "pointsTo"=PriceQuantity->price]
+    finalPrice PriceSchedule (0..*) <"Specifies the net final valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document."> // FORK_5
+        [metadata address "pointsTo"=PriceQuantity->price]
+    quantity QuantitySchedule (0..*) <"Specifies the net final valuation price(s) of the underlier at Performance Payout level. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document."> // FORK_5
+        [metadata address "pointsTo"=PriceQuantity->quantity]
 
     condition PorfolioOrStraightReturn:
         required choice returnTerms, portfolioReturnTerms
@@ -242,7 +255,7 @@ type PerformancePayout extends PayoutBase: <"Contains the necessary specificatio
         then portfolioReturnTerms count > 1
 
     condition UnderlierOfPortfolioIsBasket:
-    if portfolioReturnTerms -> priceReturnTerms exists
+        if portfolioReturnTerms -> priceReturnTerms exists
         then underlier -> basket only exists
 
     condition Quantity: <"When there is an OptionPayout the quantity can be expressed as part of the payoutQuantity, or as part of the underlier in the case of a Swaption.  For all other payouts that extend PayoutBase the payoutQuantity is a mandatory attribute.">
@@ -281,8 +294,8 @@ type PerformancePayout extends PayoutBase: <"Contains the necessary specificatio
 
 type PortfolioReturnTerms extends ReturnTerms : <"Specifies an individual type of return of a Performance Payout, when such individual return is part of an aggregation of multiple similar returns, at Performance Payout level.">
 
- payerReceiver PayerReceiver (1..1) <"Canonical representation of the payer and receiver parties applicable to each individual return leg.">
- underlier Product (1..1) <"Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.">
+    payerReceiver PayerReceiver (1..1) <"Canonical representation of the payer and receiver parties applicable to each individual return leg.">
+    underlier Product (1..1) <"Defines the product that is the subject of a tradable product definition, an underlying product definition, a physical exercise, a position, or other purposes.">
  quantity NonNegativeQuantitySchedule (0..1 ) <"Notional quantity of the underlier that applies to each individual return leg.">
    [metadata address "pointsTo"=PriceQuantity->quantity]
  initialValuationPrice PriceSchedule (0..1) <"Specifies the initial valuation price(s) of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
@@ -306,6 +319,7 @@ type Payout: <"A class to represent the set of future cashflow methodologies in 
     cashflow Cashflow (0..*) <"A cashflow between the parties to the trade. For interest rate and equity products, this corresponds to the FpML additionalPayment element. For credit default swaps, this corresponds to the FpML initialPayment element and the singlePayment element of the fee leg. For option products, it represents the FpML premium element.">
     performancePayout PerformancePayout (0..*) <"The performance payout, which encompasses the equity price returns, dividend returns, volatility return, variance return and correlation provisions.">
     assetPayout AssetPayout (0..*) <"The security payout when the product involves some form of securities, such as collateral in a securities financing transaction">
+    //netPayout PayoutSpecificFeatures (0..1) // FORK_???
 
     condition ReturnType_Total_Requires_Dividends: <"A total return implies both a price and a dividend return">
         if performancePayout -> returnTerms -> priceReturnTerms -> returnType all = ReturnTypeEnum -> Total
@@ -375,18 +389,18 @@ type Product: <"Defines the product that is the subject of a tradable product de
 type Basket extends ProductBase: <"Defines a custom basket by referencing a product identifier and its consituents.">
     basketConstituent Product (0..*) <"Identifies the constituents of the basket">
     [deprecated] // will be replaced by portfolioBasketConstituent, to be consequently be renamed basketConstituent, also the one-of condition will be removed
-    portfolioBasketConstituent BasketConstituent (0..*) <"Identifies the constituents of the basket">
+    basketComponent BasketConstituent (0..*) <"Identifies the constituents of the basket"> 
+        [metadata reference] // FORK_3
 
-  condition: one-of
-
-type BasketConstituent extends Product :<"Identifies the constituents of the basket">
- quantity NonNegativeQuantitySchedule (0..*) <"Specifies a quantity schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->quantity that this quantity is referencing.">
+type BasketConstituent extends NewObservable: <"Identifies the constituents of the basket"> // FORK ----> FORK_2 (change for )
+        [metadata key] // FORK_3
+    quantity NonNegativeQuantitySchedule (0..*) <"Specifies a quantity schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->quantity that this quantity is referencing.">
     [metadata address "pointsTo"=PriceQuantity->quantity]
- initialValuationPrice PriceSchedule (0..*) <"Specifies an initial price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
+    initialValuationPrice PriceSchedule (0..*) <"Specifies an initial price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
     [metadata address "pointsTo"=PriceQuantity->price]
- interimValuationPrice PriceSchedule (0..*) <"Specifies an interim price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
+    interimValuationPrice PriceSchedule (0..*) <"Specifies an interim price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
     [metadata address "pointsTo"=PriceQuantity->price]
- finalValuationPrice PriceSchedule (0..*) <"Specifies a final price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
+    finalValuationPrice PriceSchedule (0..*) <"Specifies a final price schedule to be associated to an individual underlier that is a basket constituent. The multiple cardinality is aligned to the one of the PriceQuantity->price that this price is referencing.">
     [metadata address "pointsTo"=PriceQuantity->price]
 
 type TradeLot: <"Specifies the price and quantity of a trade lot, where the same product could be traded multiple times with the same counterparty but in different lots (at a different date, in a different quantity and at a different price). One trade lot combined with a product definition specifies the entire economics of a trade. The lifecycle mechanics of each such trade lot (e.g. cashflow payments) is independent of the other lots.">
@@ -488,6 +502,11 @@ type ForwardPayout extends PayoutBase: <"Represents a forward settling payout. T
     deliveryTerm string (0..1) <"Also called contract month or delivery month. However, it's not always a month. It is usually expressed using a code, e.g. Z23 would be the Dec 2023 contract, (Z = December). For crude oil, the corresponding contract might be called CLZ23.">
     delivery AssetDeliveryInformation (0..1) <"Contains the information relative to the delivery of the asset.">
     schedule CalculationSchedule (0..1) <"Allows the full representation of a payout by defining a set of schedule periods. It supports standard schedule customization by expressing all the dates, quantities, and pricing data in a non-parametric way.">
+    fixedPrice PriceSchedule (1..1) // FORK_2
+        [metadata address]
+    observationTerms ObservationTerms (0..1) // FORK_2
+    paymentDates PaymentDates (0..1)  // FORK_2
+    valuationTerms ValuationDates (0..1)  // FORK_2
 
     condition SettlementTerms: <"For foreign exchange contracts, the settlement terms must exist.">
         if underlier -> foreignExchange exists
@@ -503,9 +522,9 @@ type ForwardPayout extends PayoutBase: <"Represents a forward settling payout. T
                     and underlier -> foreignExchange -> exchangedCurrency2 -> settlementTerms -> settlementDate -> adjustableOrRelativeDate exists
                     and underlier -> foreignExchange -> exchangedCurrency1 -> settlementTerms -> settlementDate -> adjustableOrRelativeDate = underlier -> foreignExchange -> exchangedCurrency2 -> settlementTerms -> settlementDate -> adjustableOrRelativeDate)
 
-    condition FxSettlement: <"For foreign exchange contracts, the settlement type must be either fx non-deliverable settlement or not specified, which implies physical settlement in the case of foreign exchange.">
-        if underlier -> foreignExchange exists
-        then settlementTerms -> physicalSettlementTerms is absent
+ //   condition FxSettlement: <"For foreign exchange contracts, the settlement type must be either fx non-deliverable settlement or not specified, which implies physical settlement in the case of foreign exchange.">
+   //     if underlier -> foreignExchange exists
+     //   then settlementTerms -> physicalSettlementTerms is absent
 
     condition DeliveryCapacity: <"Checks that only one of the representations of delivery capacity is present simultaneously.">
         if delivery -> deliveryCapacity exists
@@ -616,10 +635,13 @@ type EarlyTerminationProvision: <"A data defining:  an early termination provisi
     mandatoryEarlyTerminationDateTenor Period (0..1) <"Period after trade date of the mandatory early termination date.">
     optionalEarlyTermination OptionalEarlyTermination (0..1) <"An option for either or both parties to terminate the swap at fair value.">
     optionalEarlyTerminationParameters ExercisePeriod (0..1) <"Definition of the first early termination date and the frequency of the termination dates subsequent to that. American exercise is defined by having a frequency of one day.">
-
+    autocallableProvision AutocallableProvision (0..1) <"Specifies that the existence of the Trade is contigent i.e. the Trade exists unless an embedded Knock-Out condition is activated, that resulting in the Trade being early terminated."> // FORK
+    callableProvision CallableProvision (0..1) <"Describes the conditions according to which a party has a right to call the whole Trade, meaning such party may optionally decide to early terminate the Trade."> // FORK
+   
     condition MandatoryEarlyTermination: <"The FpML MandatoryEarlyTermination.model specifies a required choice node. The choice node associated with the FpML EarlyTerminationProvision is quite complex and using the data rule provides a more flexible approach than adding complexity to the condition grammar.">
         (mandatoryEarlyTermination exists or optionalEarlyTermination exists)
             or (mandatoryEarlyTermination exists and optionalEarlyTermination exists)
+                or autocallableProvision exists or callableProvision exists
 
 type ExercisePeriod: <"This defines the time interval to the start of the exercise period, i.e. the earliest exercise date, and the frequency of subsequent exercise dates (if any).">
     [metadata key]
@@ -773,13 +795,15 @@ type TerminationProvision: <"A class for defining option provisions.">
     condition TerminationProvisionChoice:
         required choice cancelableProvision, extendibleProvision, evergreenProvision, earlyTerminationProvision
 
-type OptionStrike: <"Defines the strike price of an option.">
+type OptionStrike : <"Defines the strike price of an option.">
 
     strikePrice Price (0..1) <"Defines the strike of an option in the form of a price that could be a cash price, interestRate, or other types.">
     strikeReference FixedRateSpecification (0..1) <"Defines the strike of an option in reference to the spread of the underlying swap (typical practice in the case of an option on a credit single name swaps).">
         [metadata reference]
     referenceSwapCurve ReferenceSwapCurve (0..1) <"Defines the strike of an option when expressed by reference to a swap curve (Typically the case for a convertible bond option).">
     averagingStrikeFeature AveragingStrikeFeature (0..1) <"Defines an  option strike that is calculated from an average of observed market prices.">
+        [deprecated] // FORK_2 : floatingStrikePrice below intends to encompass/replace this component - so should be used instead
+    floatingStrikePrice PayoutSpecificFeatures (0..1) // FORK_2
 
     condition:
         one-of
@@ -994,3 +1018,352 @@ type EvergreenProvision: <"Specifies a transaction which automatically extends f
     noticeDeadlineDateTime zonedDateTime (0..1) <"A specific date and time for the notice deadline">
     extensionFrequency AdjustableRelativeOrPeriodicDates (1..1) <"The frequency with which the evergreen contract will be extended if notice is not given.">
     finalPeriodFeeAdjustment Price (0..1) <"An optional adjustment to the rate for the last period of the evergreen i.e. the period from when notice is given to stop rolling the contract through to the termination date.">
+
+type CallableProvision: <"Describes the conditions according to which a party has a right to call the whole Trade, meaning such party may optionally decide to early terminate the Trade."> // FORK
+
+    earlyRedemptionTerminationDate SettlementDate (1..1)  <"The dates on which the Trade and any further parties obligations shall be settled, upon the occurrence of an Early Redemption.">
+    earlyRedemptionPayoutAmount SettlementOrigin (0..*) <"Represents a reference to a Payout Amount that is payable when Early Redemption has occured.">
+    earlyRedemptionPrincipalAmount PrincipalPayment (0..1) <"Represents a Principal Payment that is payable when Early Redemption has occured.">
+    callExerciseObservationDate ObservationDates (1..1) <"The dates on which a party with the right to call may decide to exercise such right.">
+    whoHasRightToCall CounterpartyRoleEnum (1..2) <"The party who has the right to exercise the callable feature ; either one only or both counterparties may has such right">
+    callExerciseNoticeTime TimePeriod (0..1) <"Permits to define time period for the party with a right to call to notify to the counterparty the exercise of such right ; for clarity, the startDate and endDate defined in this provision respectively corresponds to the earliest time and latest time.">
+    callExerciseNoticePeriod RelativeDateOffset (0..1) <"Permits to define the date offset for the party with a right to call to notify to the counterparty the exercise of such right ; for clarity, the offset date defined in this provision corresponds to the latest date for sending notice.">
+    maximumCallableNotionalAmount QuantitySchedule (0..1) <"The maximum notional amount that can be exercised on a given exercise date.">
+        [metadata address]
+    minimumCallableNotionalAmount QuantitySchedule (0..1) <"The minimum notional amount that can be exercised on a given exercise date.">
+        [metadata address]
+    callExerciseFee ExerciseFeeSchedule (0..1) <"The fees associated with an exercise date. The fees are conditional on the exercise occurring. The fees can be specified as actual currency amounts or as percentages of the notional amount being exercised.">
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+
+type AutocallableProvision extends KnockEvent: <"Specifies that the existence of the Trade is contigent i.e. the Trade exists unless an embedded Knock-Out condition is activated, that resulting in the Trade being early terminated."> // FORK --> FORK_2 (because "KnockEvent" mentioned in "type AutocallableProvision extends KnockEvent" is not same component as in prior FORK version)
+    earlyRedemptionTerminationDate SettlementDate (1..1) <"The dates on which the Trade and any further parties obligations shall be settled, upon the occurrence of an Early Redemption.">
+    earlyRedemptionPayoutAmount SettlementOrigin (0..*) <"Indicate via reference which Payout, if any, is payable upon the occurrence of an Early Redemption. For clarity, if no earlyRedemptionPayoutAmount is defined, the, this means the Trade would early terminate and settled with no payment being made between the parties.">
+    earlyRedemptionPrincipalAmount PrincipalPayment (0..1) <"Represents a Principal Payment that is payable upon the occurrence of an Early Redemption.">
+    guaranteedTerms GuaranteedTerms (0..*)
+
+    condition AutocallableMeansKnockOutOnly:
+        knockType = KnockTypeEnum -> KnockOut
+
+    condition DoNotDuplicateKnockOutForPrincipalPayment:
+        earlyRedemptionPrincipalAmount -> knockEvent is absent
+
+type GuaranteedTerms:<"Represent a reference to any terms for which a restriction exists to the effect of early termination provisionfs. The description of the restriction itself is given by context i.e. depends on the description of the component that is precisely being referenced. That is to say GuaranteedTerms is a generic type where to defined any specific type of restriction, which content will vay in accordance with the item being referenced."> // FORK
+// as an indication, today only one business case was raised, but the type is defined in generic manner, so that the list of attributes can be extended as need be with no backward compatibility issues whenever other use cases would be raised. //
+
+    guaranteedCumulationPeriod ObservationPeriodSchedule (0..*)
+     [metadata reference]
+
+type CalculationValue: <"The numerical value which corresponds to the resolved value of the parent object for which this attribute is populated."> // FORK ----> FORK_2
+        [metadata key]
+
+    price PriceSchedule (0..1)
+        [metadata address]
+    quantity QuantitySchedule (0..1)
+        [metadata address]
+
+    condition: required choice price, quantity
+
+type AlgebraicOperationBis:// FORK_3
+
+    baseValue OperatorValue (0..1)
+    operandValue OperatorValue (0..1)
+    algebraicOperator AlgebraicOperationEnum (0..1)
+
+type AlgebraicOperatorAdvanced: // FORK_3
+        [metadata key]
+
+    bespokeExpression BespokeExpression (0..1)
+    baseValue  OperatorValue (0..*)
+    operandValue OperatorValue (0..1)
+    algebraicOperator AlgebraicOperationEnum (0..1)
+    calculationDate DateRelativeToEnum (0..1) <"The enumerated values to specify the type of date to be used as an anchor.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+    condition Operand:<"An operand value only applies by reference to an anchor value, which may be either a base value or a composite value.">
+    if operandValue exists then baseValue exists
+
+    condition NonCommutativeOperation:
+    if (algebraicOperator = AlgebraicOperationEnum  -> Subtract or algebraicOperator = AlgebraicOperationEnum -> Divide)
+        then operandValue exists
+            else operandValue is absent
+    
+  //  condition PairValueOperation: 
+  //  if algebraicOperator = AlgebraicOperationEnum -> CorrelationCoefficient or algebraicOperator = AlgebraicOperationEnum -> Covariance
+   // then baseValue -> value -> observablePrice count = 2 or baseValue -> compositeValue -> baseValue -> value -> observablePrice count = 2 
+
+type ObservablePriceQuantity : // FORK_2
+        [metadata key]
+
+    observationTerms ObservationTerms (0..1)
+        [metadata reference]
+    observablePrice NewObservable (0..1)
+         [metadata reference]
+    price PriceSchedule (0..1)
+        [metadata address]
+    quantity QuantitySchedule (0..1)
+        [metadata address]
+    observationCount ObservationCountEnum (0..1)
+    dayCountFaction DayCountFractionEnum (0..1)
+
+    condition:
+    required choice observationCount, dayCountFaction, price, observablePrice, quantity
+
+type AggregationFeatures : <"The aggregation operation to be applied for resolving multiple values of the object for which this attribute is populated, into one value. The aggregationMethod represents a enumerated list of functional operations, all commutative, of type : [ F(X0, X1, X2, ...Xn) = Y ] where : [X1], [X2], ..., X[Xn] are values of the parent object and [Y] is the unique output value after resolving, and: [F] is the applicable operation e.g. Sum, Multiply, Min, Max, Average. The aggregationMethod is processing either values in array, else dated values in time series. Besides, multiple aggregation or ranking are composable in sorted manner with the compoundedAggregation attribute (considering a matrix of dateValue with observable in row and date in column for instance, then any combination of vertical or horizontal aggreation can be represented). Optionnaly, a rankingMethod may be defined prior to aggregating the values, say for representing so-called 'rainbow' features in some derivatives products (example : net payout consisting in ranking the 1th, the 2nd and the 3rd performance among multiple ones being compared, usually with distinct weight per rank, before being aggregated to calculate the final value)."> // FORK
+      [metadata key]
+
+    aggregationMethod AggregationMethod (1..1) <"Defines the method in which multiple values can be aggregated into a single value. It is a set of commutative functions  e.g. Sum, Multiply, Min, Max, Average. Importantly, two dimensions may be considered when aggregating : value series resulting from an object with unbound cardinality, else multiple value resulting from dateValue series - hence an optional choice below between the attributes which represent each of these two dimentions :  valueSeriesAggregation or datedValueSeriesAggregation.">
+    aggregationCalculationDate DateRelativeToEnum (0..1) <"The enumerated values to specify the type of date to be used as an anchor.">
+    compoundedAggregation AggregationFeatures (0..1) <"Permits to compound valueAggregation series in sorted manner, assuming that sorting order shall be read from the left end-value to the right start-value of the nested series e.g. say aggregationMethod(a) shall be applied first then aggregationMethod(b) shall apply to the calculatedValue(a), then one shall represent such loop as aggregationMethod(b)->aggregationLoop->aggregationMethod(a). As indication, such 'left-to-right' interpretation of nesting series is straight applicaiton of the base set theory interpretation per which the embedded inclusion of parties sets within each others is per se an ordering expression e.g. given sets of parties (a) and ((a),b) then considering embedded inclusions would result in resolving (a) as being the start value and ((a),b) being the subsequent value.">
+    observationTerms ObservationTerms (0..1)
+        [metadata address]
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated e.g. output from valueOperator or aggregationOperator.">
+        [metadata reference]
+
+type StructuringFeatures:  // FORK_3
+    [metadata key]
+
+    knockEvent KnockEvent (0..*) <"Represents the functional operation [ F(X,In) = X * (Boolean) ] or the functional operation [ F(X,Out) = X * (1 - Boolean) ] where : [In] or [Out] designates the knockType, [Boolean] equals [1] when the trigger condition is verified as true, else equals [0], and [X] is the value of the object for which KnockEvent is defined as an attribute. Accordingly, this specifies that the existence of the parent object is contigent, either because it does not exists by default (therefore has no economic effect) until the condition is verified as true, which is defined as the Knock-In type, else because it does exist by default (has economic effect) unless the condition is verified as true, which is defined as the Knock-Out type.">
+            [metadata reference]
+    capFloor CapFloor (0..*) <"Represents the functional operation [ F(X,Cap) = min(X,Cap) ] or the functional operation [ F(X,Floor) = max(X,Floor) ] where : [Cap] or [Floor] is the value of the barrier level, and [X] is the value of the object for which CapFloor is defined as an attribute. As an indication, most use case consits in defining only one Cap or one Floor or both. Howerver, it is permitted to populate more instances based on the condition that some of such instances have knock event attribute meaning some of them are contingent e.g. ladder or lock-in features : cap or floor series are defined on top of observable price, but they are only activated if the price has touched the fixed levels.">
+            [metadata reference]
+    algebraicOperator AlgebraicOperator (0..1)
+            [metadata reference]
+
+type AlgebraicOperator : <"The aggregation operation to be applied for resolving multiple values of the object for which this attribute is populated, into one value. The aggregationMethod represents a enumerated list of functional operations, all commutative, of type : [ F(X0, X1, X2, ...Xn) = Y ] where : [X1], [X2], ..., X[Xn] are values of the parent object and [Y] is the unique output value after resolving, and: [F] is the applicable operation e.g. Sum, Multiply, Min, Max, Average. The aggregationMethod is processing either values in array, else dated values in time series. Besides, multiple aggregation or ranking are composable in sorted manner with the compoundedAggregation attribute (considering a matrix of dateValue with observable in row and date in column for instance, then any combination of vertical or horizontal aggreation can be represented). Optionnaly, a rankingMethod may be defined prior to aggregating the values, say for representing so-called 'rainbow' features in some derivatives products (example : net payout consisting in ranking the 1th, the 2nd and the 3rd performance among multiple ones being compared, usually with distinct weight per rank, before being aggregated to calculate the final value)."> // FORK_3
+      [metadata key]
+
+    baseValue OperatorValue (0..1)
+    operandValue OperatorValue (0..1)
+    operator AlgebraicOperationEnum (0..1)
+    knockEvent KnockEvent (0..1)
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculationDate DateRelativeToEnum (0..1) <"The enumerated values to specify the type of date to be used as an anchor.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+    condition Operand:<"An operand value only applies by reference to an anchor value, which may be either a base value or a composite value.">
+    if operandValue exists then baseValue exists
+
+    condition NonCommutativeOperation:
+    if (operator = AlgebraicOperationEnum  -> Subtract or operator = AlgebraicOperationEnum -> Divide)
+        then operandValue exists
+            else operandValue is absent
+
+type OperatorValue :// FORK_3
+      [metadata key]
+    value ObservablePriceQuantity (0..*)
+    compositeValue AlgebraicOperator (0..*)
+    operator AlgebraicOperationEnum (0..1)
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+    calculationDate DateRelativeToEnum (0..1)
+
+type Lever: // DEPRECATED
+        [metadata key]
+    quantity QuantitySchedule (0..1)
+        [metadata]
+    price PriceSchedule (0..1)
+    observablePrice Observable (0..1)
+    observationCount ObservationCountEnum (0..1)
+    observationTerms ObservationTerms (0..1)
+        [metadata address]
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+    condition :
+    required choice price, quantity, observablePrice, observationCount
+
+    condition ObservationTerms:
+    if observablePrice exists then observationTerms exists 
+    else observationTerms is absent
+
+type PayoutSpecificFeatures: <"....">  // FORK_2
+        [metadata key]
+
+    knockEvent KnockEvent (0..*) <"Represents the functional operation [ F(X,In) = X * (Boolean) ] or the functional operation [ F(X,Out) = X * (1 - Boolean) ] where : [In] or [Out] designates the knockType, [Boolean] equals [1] when the event trigger has occurred, else equals [0] ; and [X] is the object for which this attribute is defined. As an indication, this feature shall also be used for defining any kinds of corridor structure which involves two trigger events: one being the upper barrier and the second one being the lower barrier of the corridor structure.">
+        [metadata reference]
+    capFloor CapFloor (0..*) <"Represents the functional operation [ F(X,Cap) = min(X,Cap) ] or the functional operation [ F(X,Floor) = max(X,Floor) ] where : [Cap] or [Floor] is the numerical value of the barrier level, either a price or a quantity ; and [X] is the value of the object for which this attribute is defined.">
+        [metadata reference]
+    averaging Averaging (0..1) <"Represents the functional operation [ F(X) = MeanType(X(*)) ] where : [MeanType] is either Arithmetic or Geometirc or Harmonic type of averaging, [X(*)] being a collection of multiple objects e.g. X1, X2,...,Xn for instance multiple observables (e.g. basket consituents) or multiple observation dates related to one given observable ; and [X] is the value of the object for which this attribute is defined.">
+        [metadata reference]
+    ranking Ranking (0..1) <"Represents the functional operation [ F(X,Min) = Nth(*)(X(*)) ] or [ F(X,Max) = Nth(*)(X(*)) ] where : [Nth(*)] designate at least one or multiple ranks for selecting respectively one or more values with regards to [X(*)] being a collection of multiple objects e.g. X1, X2,...,Xn for instance multiple observables (e.g. basket consituents) or multiple observation dates related to one given observable, [Min] and [Max] indicating the ranking direction when selecting the values (e.g. selecting the 4th and the 2nd worst values, for instance, would be represented by: rankingDirection=Min, nthRank=4, nthRanknth=2) ; and [X] is the value of the object for which this attribute is defined. The ranking feature is notably used for representing Worst Of or Best Of (when one unique value is selected: either last one or first rank, respectively) but also for representing more sophisticated types such as Rainbow features (when multiple values are selected e.g. 1st, 2nd 3rd, etc. usually with a particular weighting per rank).">
+        [metadata reference]
+    multiplier Leverage (0..*) <"Represents the functional operation [ F(X) = X * N ] or the functional operation [ F(X) = X / D ] where: [N] is a Numerator value, [D] is a Denominator value ; and [X] is the value of the object for which this attribute is defined. If any, multiple instances represent a straight concatenation of such operations e.g. say n+m attributes would be populated: numerator [N1], Numerator [N2], ..., Numerator [Nn] exist, also possiby with Denominator [D1], Denominator [D2], ..., Denominator [Dm] then this would represent [ F(X) = X * N1 * N2 * ... * Nn * 1/D1 * 1/D2 * ... * 1/Dm ]."> // FORK_2
+        [metadata reference]
+    quantityCumulation QuantityCumulation (0..1) <"Specifies cumulation dates i.e. dates on which a given quantity is incremented over time. As an indication, products for which such feature is used are often referred to as Accumulator or Decumulator.">
+        [metadata reference]
+    compoundedFeature PayoutSpecificFeatures (0..1) <"Represents the compounding of multiple features. As an indication, considering the nesting structure of the modelisation tree from left-to-right provides a direct representation of the compounding order based on which features shall be applied for any calculation purposes.">
+        [metadata reference]
+    algebraicOperator AlgebraicOperator (0..1) // Fork_2
+
+type KnockEvent: <"Represents the functional operation [ F(X,In) = X * (Boolean) ] or the functional operation [ F(X,Out) = X * (1 - Boolean) ] where : [In] or [Out] designates the knockType, [Boolean] equals [1] when the triggerCondition is verified as true, else equals [0], and [X] is the value of the object for which KnockCondition is defined as an attribute. Accordingly, this specifies that the existence of the parent object for which KnockBarrier is defined as an attribute is contigent, either because it does not exists until the condition is verified as true, which is defined as the Knock-In type, or because it does exist unless the condition is verified as true, which is defined as the Knock-Out type. As an indication, this feature shall also be used for defining any kinds of corridor structure which involves two trigger events: one being the upper barrier and the second one being the lower barrier of the corridor structure."> // FORK_2
+    [metadata key]
+
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    knockType KnockTypeEnum (1..1) <"Designates the type of barrier: either  [In] or [Out] in the funtional operation [ F(X,In) = X x (Boolean) ] or the functional operation [ F(X,Out) = X x (1 - Boolean) ] where [Boolean] equals [1] when the triggerCondition is verified as true, else equals [0], and [X] is the value of the object for which KnockBarrier is defined as an attribute.">
+    referenceObservable NewObservable (0..1) <"Specifies the object to be observed for a price, it could be an asset or a reference.">
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+    knockDeterminationMethod DeterminationMethodEnum (1..1)
+    knockDeterminationDay ObservationDates (1..2) <"Specifies the dates on which the observable price shall be observed. As an indication, the cardinality permits to populate two instances - based on some conditions - for representing typical use case where the observable price is not only the price for given observation day but is also the price of the prior observation day.">
+    knockValuationTime TimeTypeEnum (1..1)
+    triggerEvent EventTrigger (1..*) <"Specifies the criteria for determining whether the KnockBarrier is activated or not. As an indication, the cardinality permits to populate multiple instances (typicall use case is for defining a corridor structure which involves two instances : one knock level being the upper barrier and the second one being the lower barrier).">
+        [metadata address]
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+    multipleTriggerCompoundingRule LogicalOperationEnum (0..1)
+
+    condition KnockDeterminationDay: <"For avoiding two schedule date series defined in parallel, being possibly inconsistent between them, the condition ensures that at least one of the two dates is a relative date, meaning that at least one will anchor the other date schedule series, if any.">
+        if knockDeterminationDay count = 2
+        then knockDeterminationDay -> relativeDate count >= 1
+
+    condition MultipleEvent:
+        if triggerEvent count > 1 
+        then multipleTriggerCompoundingRule exists 
+        else multipleTriggerCompoundingRule is absent
+
+ //   condition KnockReference: <"The first part and the second part of the condition avoids duplicating the knockReference in both knockEvent and triggerEvent levels by implementing a required choice between their respective attributes. As an exception, the third part of the condition is permitting having knockReference in both knockEvent and triggerEvent levels in one particular case that is when the knockReference is a basket (indeed, it is possible in such case to cumulate in consistent manner knockReference attribute related to the basket considered from a net standpoint, together with granular knockReference attributes related to each basketConstituent considered each from an individual standpoint). "> // FORK_2 
+    
+  //          (referenceObservable exists or referenceCompositeObservable exists)
+    //            and (triggerEvent-> referenceObservable is absent and triggerEvent-> referenceCompositeObservable is absent)
+      //  or 
+        //    (triggerEvent-> referenceObservable exists or triggerEvent-> referenceCompositeObservable exists)
+          //      and (referenceObservable is absent and referenceCompositeObservable is absent)
+  //      or 
+    //        (referenceObservable -> basket exists and triggerEvent-> referenceObservable -> basket exists)
+      //          and (triggerEvent -> referenceCompositeObservable is absent and referenceCompositeObservable is absent)
+//
+   // condition ReferenceObservablePriceType:
+  //      if referenceObservablePriceType exists 
+    //    then referenceObservable exists 
+
+type EventTrigger : <"Specifies the criteria for determining whether the KnockBarrier is activated or not i.e. the triggerLevel as well as the triggerRule which shall specify the relation between the observable value and the triggerLevel value."> // FORK_2
+        [metadata key]
+    
+    bespokeExpression BespokeExpression (0..1)
+    triggerLevel ObservablePriceQuantity (1..1) <"The value of the trigger level.">
+    triggerRule TriggerTypeEnum (1..1) <"Specifies the criteria for determining whether the triggerLevel is deemed to have been knocked or not by the observable value.">
+    calculatedValue DatedValue (0..1) <"The results of the KnockConditions assessments may be recorded as datedValue series with only boolean values i.e. either 0 or 1 per each date.">
+        [metadata reference]
+    referenceObservable NewObservable (0..1) <"Specifies the object to be observed for a price, it could be an asset or a reference.">
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+
+    condition CalculationResult:<"The results of the KnockConditions assessments may be recorded as datedValue series with only boolean values i.e. either 0 or 1 per each date.">
+        if calculatedValue exists
+        then calculatedValue -> value = 0 or calculatedValue -> value = 1
+
+    condition ReferenceObservablePriceType:
+        if referenceObservablePriceType exists 
+        then referenceObservable exists 
+
+type CapFloor : <"Represents the functional operation [ F(X,Cap) = min(X,Cap) ] or the functional operation [ F(X,Floor) = max(X,Floor) ] where : [Cap] or [Floor] is the value of the barrier level for the given barrierType i.e. Cap or Floor and [X] is the value of the object for which CapFloor is defined as an attribute."> // FORK_2
+        [metadata key]
+    
+    referenceObservable NewObservable (0..1)
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    barrierType CapFloorEnum (1..1) <"The enumerated values to specify whether the barrier is a Cap or Floor.">
+    barrierLevel ObservablePriceQuantity (0..1) <"The value of the Cap or Floor level.">
+        [metadata address]
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+    condition ReferenceObservablePriceType:
+        if referenceObservablePriceType exists 
+        then referenceObservable exists 
+
+
+type Averaging : <"Represents the functional operation [ F(X) = MeanType(X(*)) ] where : [MeanType] is either Arithmetic or Geometirc or Harmonic type of averaging, [X(*)] being a collection of multiple objects e.g. X1, X2,...,Xn for instance multiple observables (e.g. basket consituents) or multiple observation dates related to one given observable ; and [X] is the value of the object for which this attribute is defined.">// FORK_2
+    [metadata key]
+
+    referenceObservable NewObservable (0..1)
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+    averagingResetDate DateRelativeToEnum (1..1)
+    averageType AveragingCalculationMethodEnum (0..1)
+    observationTerms ObservationTerms (0..1)
+        [metadata reference]
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified with string values (including values corresponding to mathematical expressions, when any).">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+    condition ReferenceObservablePriceType:
+        if referenceObservablePriceType exists 
+        then referenceObservable exists 
+
+type Ranking : <"....">// FORK_2
+    [metadata key]
+
+    referenceObservable NewObservable (0..1)
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+    rankingDirection ArithmeticOperationEnum (1..1)
+    ranksSelection WeightedRank (0..*)
+    rankingResetDate DateRelativeToEnum (1..1)
+    observationTerms ObservationTerms (0..1)
+        [metadata reference]
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified with string values (including values corresponding to mathematical expressions, when any).">
+    selectedValue RankingObservation (0..*) <"The observable selected with the respective rank, represented by the associated dated quantity value">
+        [metadata reference]
+
+    condition OnlyMinOrMax: 
+        rankingDirection = ArithmeticOperationEnum -> Min 
+        or rankingDirection = ArithmeticOperationEnum -> Max
+        and rankingDirection <> ArithmeticOperationEnum -> Add
+        and rankingDirection <> ArithmeticOperationEnum -> Subtract
+        and rankingDirection <> ArithmeticOperationEnum -> Multiply
+        and rankingDirection <> ArithmeticOperationEnum -> Divide
+
+    condition RanksSelection:  <"This attribute shall be used when there are multiple values being selected ; meaning that when only 1 value is being selected, mainly for representing base features such as straight Worst Of or straight Best Of ranking, then this attributes shall not be populated.">
+        if  ranksSelection exists 
+        then ranksSelection count > 1
+
+    condition ReferenceObservablePriceType:
+        if referenceObservablePriceType exists 
+        then referenceObservable exists 
+
+type WeightedRank: // FORK_2
+
+    nthRank int (1..1)
+    nthRankWeight number (0..1)
+
+    condition Weight: <"The value of gthe weight cannot exceed 100%.">
+    if nthRankWeight exists then nthRankWeight < 1
+
+type RankingObservation extends WeightedRank :// FORK_2
+    [metadata key]
+
+    referenceObservable NewObservable (1..1)
+        [metadata reference]
+    observationDate date (1..1)
+
+type Leverage : <"Represents the functional operation [ F(X) = X * N ] or the functional operation [ F(X) = X / D ] where: [N] is a Numerator value, [D] is a Denominator value ; and [X] is the value of the object for which this attribute is defined. If any, multiple instances represent a straight concatenation of such operations e.g. say n+m attributes would be populated: numerator [N1], Numerator [N2], ..., Numerator [Nn] exist, also possiby with Denominator [D1], Denominator [D2], ..., Denominator [Dm] then this would represent [ F(X) = X * N1 * N2 * ... * Nn * 1/D1 * 1/D2 * ... * 1/Dm ]."> // FORK_2
+    [metadata key]
+
+    referenceObservable NewObservable (0..1)
+        [metadata reference]
+    referenceObservablePriceType PriceTypeEnum (0..1) <"Provides enumerated values for types of prices in order to explain how to interpret it and use it in calculations.">
+    multiplierResetDate DateRelativeToEnum (1..1) // FORK_4 not pushed yet
+    observationTerms ObservationTerms (0..1)
+        [metadata reference]
+    numerator ObservablePriceQuantity (0..*)
+    divisor ObservablePriceQuantity (0..*)
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified with string values (including values corresponding to mathematical expressions, when any).">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]
+
+
+type QuantityCumulation: <"Specifies cumulation dates i.e. dates on which a given quantity is incremented over time. As an indication, products for which such feature is used are often referred to as Accumulator or Decumulator."> // FORK_2
+    [metadata key]
+
+    incrementalQuantity Quantity (1..1) <"Specifies the individual quantity that is being incremented/cumulated over time."> // no metadata address on this one because it is supposed to be fixed over time
+    cumulationResetDate DateRelativeToEnum (1..1) <"Specifies the cumulation dates i.e. dates on which the referenced quantity is incremented over time.">
+    guaranteedCumulationPeriod ObservationPeriodSchedule (0..*) <"The schedule periods for which the cumulation is guarenteed untill the end of the period, notwithstanding the occurrence of an any early termination, elsewhere defined in the trade documentation.">
+    calculatedValue CalculationValue (0..1) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+        [metadata reference]

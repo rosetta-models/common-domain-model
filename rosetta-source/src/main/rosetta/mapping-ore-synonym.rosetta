@@ -172,7 +172,7 @@ synonym source ORE_1_0_39 extends ORE
     Basket:
         + basketConstituent
             [value "ignore"]
-        + portfolioBasketConstituent
+        + basketComponent
             [value "ignore"]
 
     enums

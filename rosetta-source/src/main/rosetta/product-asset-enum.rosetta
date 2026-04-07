@@ -153,3 +153,7 @@ enum FinalPrincipalExchangeCalculationEnum: <"To be specified only for products 
 enum SpreadCalculationMethodEnum: <"Method by which spread is calculated. For example on an asset swap: 'ParPar' or 'Proceeds' may be the method indicated.">
     ParPar
     Proceeds
+
+enum BondQuotationTypeEnum: FORK_2
+    Dirty
+    Clean

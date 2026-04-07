@@ -98,6 +98,7 @@ func ResolveEquityInitialPrice: <"To be replaced by full resolve price function 
                     priceType: item -> priceType,
                     priceExpression: item -> priceExpression,
                     composite: item -> composite,
+                    compositePrice: item -> compositePrice, // FORK
                     arithmeticOperator: item -> arithmeticOperator,
                     cashPrice: item -> cashPrice,
                     datedValue: empty

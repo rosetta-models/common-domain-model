@@ -61,15 +61,32 @@ type MasterConfirmationBase: <"Legal agreement specification for General Terms a
 type TransactionAdditionalTerms: <"Additional specification for the extraordinary events that may affect a trade and the related contractual rights and obligation of the parties when this happens. Such terms are typically required to extend the economics terms, for the purpose of producing the final legal contractual form of the Transaction.">
     equityAdditionalTerms EquityAdditionalTerms (0..1)
     foreignExchangeAdditionalTerms FxAdditionalTerms (0..1)
-    commoditiesAdditionalTerms string (0..1)
-    creditAdditionalTerms string (0..1)
-    interestRateAdditionalTerms string (0..1)
-    digitalAssetAdditionalTerms string (0..1)
+    commoditiesAdditionalTerms CommoditiesAdditionalTerms (0..1) // FORK_4
+    creditAdditionalTerms CreditAdditionalTerms (0..1) // FORK_4
+    interestRateAdditionalTerms InterestRateAdditionalTerms (0..1) // FORK_4
+    digitalAssetAdditionalTerms DigitalAssetAdditionalTerms (0..1) // FORK_4
 
 type EquityAdditionalTerms: <"Transaction AdditionalTerms that apply to Equity asset class.">
     extraordinaryEvents ExtraordinaryEvents (0..1)
     determinationTerms DeterminationRolesAndTerms (1..*)
     substitutionProvision UnderlierSubstitutionProvision (0..1)
+    otherTerms Clause (0..*) // FORK
+
+type InterestRateAdditionalTerms: <"Transaction AdditionalTerms that apply to Rate asset class."> // FORK_4
+    determinationTerms DeterminationRolesAndTerms (0..*)
+    otherTerms Clause (0..*)
+
+type CommoditiesAdditionalTerms: <"Transaction AdditionalTerms that apply to Commodity asset class."> // FORK_4
+    determinationTerms DeterminationRolesAndTerms (0..*)
+    otherTerms Clause (0..*) 
+
+type DigitalAssetAdditionalTerms: <"Transaction AdditionalTerms that apply to Digital asset class."> // FORK_4
+    determinationTerms DeterminationRolesAndTerms (0..*)
+    otherTerms Clause (0..*)
+
+type CreditAdditionalTerms: <"Transaction AdditionalTerms that apply to Credit asset class."> // FORK_4
+    determinationTerms DeterminationRolesAndTerms (0..*)
+    otherTerms Clause (0..*)
 
 type UnderlierSubstitutionProvision: <"Where parties describe any substitution terms.">
     whoMaySubstitute CounterpartyRoleEnum (1..2) <"Designates which Counterparty to the transaction who has the right to trigger a substitution or to provide related determination e.g. for instance to qualify the effectiveness of an Event which may be a trigger for substitution, determine the replacement Share to substitute, etc. ; cardinality of this object is 2, in case parties jointly have this role.">

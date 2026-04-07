@@ -136,6 +136,7 @@ type InterestRatePayout extends PayoutBase: <" A class to specify all of the ter
     [metadata key]
 
     rateSpecification RateSpecification (0..1) <"The specification of the rate value(s) applicable to the contract using either a floating rate calculation, a single fixed rate, a fixed rate schedule, or an inflation rate calculation.">
+    spreadRateSpecification RateSpecification (0..2) // FORK
     dayCountFraction DayCountFractionEnum (0..1) <"The day count fraction. The cardinality has been relaxed when compared with the FpML interest rate swap for the purpose of accommodating standardized credit default swaps which DCF is not explicitly stated as part of the economic terms. The data rule InterestRatePayout_dayCountFraction requires that the DCF be stated for interest rate products.">
         [metadata scheme]
     calculationPeriodDates CalculationPeriodDates (0..1) <"The parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods.">
@@ -151,6 +152,8 @@ type InterestRatePayout extends PayoutBase: <" A class to specify all of the ter
     fixedAmount calculation (0..1) <"Fixed Amount Calculation">
     floatingAmount calculation (0..1) <"Floating Amount Calculation">
     spreadCalculationMethod SpreadCalculationMethodEnum (0..1) <"Method by which spread is calculated. For example on an asset swap: 'ParPar' or 'Proceeds' may be the method indicated.">
+    observationTerms ObservationTerms (0..1) // FORK
+    valuationDates ValuationDates (0..1) // FORK ----> FORK_5 // valuationDates to be renamed valuationTerms
 
     condition Quantity: <"When there is an OptionPayout the quantity can be expressed as part of the payoutQuantity, or as part of the underlier in the case of a Swaption.  For all other payouts that extend PayoutBase the payoutQuantity is a mandatory attribute.">
         priceQuantity exists
@@ -166,9 +169,10 @@ type InterestRatePayout extends PayoutBase: <" A class to specify all of the ter
         if priceQuantity -> futureValueNotional exists
         then priceQuantity -> futureValueNotional -> valueDate = calculationPeriodDates -> terminationDate -> adjustableDate -> adjustedDate
 
-    condition RateSpecification: <"Zero Coupon Swaps with a Known Amount are expressed without the rate specification and the known amount expressed as a price. ">
-        if rateSpecification is absent
-        then priceQuantity -> priceSchedule exists
+    condition RateSpecification: <"Zero Coupon Swaps with a Known Amount are expressed without the rate specification and the known amount expressed as a price. Besides, some particular strategy may involve a spread between two rates.">
+      if rateSpecification is absent
+     then priceQuantity -> priceSchedule exists 
+     or spreadRateSpecification count = 2 // FORK
 
     condition FpML_ird_6: <"FpML validation rule ird-6 - If paymentDates/firstPaymentDate exists, and if calculationPeriodDates/effectiveDate exists, then paymentDates/firstPaymentDate must be after calculationPeriodDates/effectiveDate/unadjustedDate.">
         if paymentDates -> firstPaymentDate exists
@@ -426,9 +430,9 @@ type DividendDateReference: <"A class to specify the dividend date by reference 
     dateReference DividendDateReferenceEnum (1..1) <"Specification of the dividend date using an enumeration, with values such as the pay date, the ex-date or the record date.">
     paymentDateOffset Offset (0..1) <"Only to be used when SharePayment has been specified in the dividendDateReference element. The number of Currency Business Days following the day on which the Issuer of the Shares pays the relevant dividend to holders of record of the Shares.">
 
-    condition PaymentDateOffset: <" FpML specifies that paymentDateOffset is only to be used when SharePayment has been specified in the dividendDateReference element.">
-        if paymentDateOffset exists
-        then dateReference = DividendDateReferenceEnum -> SharePayment
+// FORK //   condition PaymentDateOffset: <" FpML specifies that paymentDateOffset is only to be used when SharePayment has been specified in the dividendDateReference element.">
+      //  if paymentDateOffset exists
+      //  then dateReference = DividendDateReferenceEnum -> SharePayment
 
 type DividendPaymentDate: <"A class describing the date on which the dividend will be paid/received. This class is also used to specify the date on which the FX rate will be determined, when applicable.">
 
@@ -473,15 +477,51 @@ type DividendPeriod: <"Time bounded dividend payment periods, each with a divide
     dividendPaymentDate DividendPaymentDate (1..1) <"Specifies when the dividend will be paid to the receiver of the equity return. Has the meaning as defined in the ISDA 2002 Equity Derivatives Definitions. Is not applicable in the case of a dividend reinvestment election.">
     dividendValuationDate AdjustableOrRelativeDate (0..1) <"Specifies the dividend valuation dates of the swap.">
 
-type PriceReturnTerms:
+type ReferenceSecurityReturnTerms: <"A class describing the conditions governing the payment of coupons or fees or more generally any non-principal distributions to the receiver of a total return swap that is referencing a security other than an Equity, for instance a Bond (for the avoidance of doubts, when related to a Security of type Equity, such terms shall be defined under DividendReturnTerms)"> // FORK_2
+    notionalHolderEquivalentEntitlement boolean (0..1) <"When applicable, means that the buyer of the derivative that is referencing the security is deemed to be entitled to receive from the payer of the swap the same coupons or fees or more generally any non-principal distributions as if the buyer was effectively the notional holder of the Reference Security (this terms is notably referring to the section 991 of the Income Tax Act 2007 within the charge to United Kingdom corporation tax in respect of interest paid on the Reference Obligation).">
+    referenceSecurity Observable (0..1) // left Card as optional because that is obviously the Underlier of the TRS (that is aligned with dividendReturnTerms : there is no representation of the Equity Stock it is referring to, because obviously these are the Underlier of the related TRS)
+        [metadata reference]
+    referencePriceQuotationType BondQuotationTypeEnum (0..1) 
+    extraordinaryInterestEntitlement boolean (0..1)
+    nonCashDistributionTreatment NonCashDividendTreatmentEnum (0..1) <"Specifies the treatment of Non-Cash distribution">
+    potentialAdjustmentEvent string (0..1)
+    feesEntitlement boolean (1..1)
+    feesDistributionTerms ReferenceSecurityCouponOrFee (0..1)
+    couponEntitlement boolean (1..1)
+    couponDistributionTerms ReferenceSecurityCouponOrFee (0..1)
+    
+type ReferenceSecurityCouponOrFee: // FORK_2
+    reinvestmentIntoSwapReturnRate boolean (0..1) <"Boolean element that defines whether the Coupon or Fee will be reinvested or not.">
+    entitlementIsRelativeToDate DividendEntitlementEnum (0..1) <"Defines the date on which the receiver of the TRS return is entitled to the Coupon or the Fee">
+    grossToNetFiscalRatio number (0..1) <"Defines the net percentage of the Coupon or Fee that shall be received the receiver of the TRS return with regards to the gross Coupon or Fee before withholding tax, stamp duties, or transaction commissions.">
+    paymentCurrency DividendCurrency (0..1) <"Specifies the currency in which the Coupon or the Fee will be denominated when being paid to the receiver of the TRS return.">
+    withholdingTaxNetDeduction boolean (0..1) <"Specifies wheter the amount due to the the receiver of the TRS return will be reduced or not, with regards to the gross amount of the Coupon or the Fee e.g. when applicable, then it shall be paid net of any withholding tax.">
+    stampDutiesNetDeduction boolean (0..1) <"Specifies wheter the amount due to the the receiver of the TRS return will be reduced or not, with regards to the gross amount of the Coupon or the Fee e.g. when applicable, then it shall be paid net of any stamp duties.">
+    custodyFeeNetDeduction boolean (0..1) <"Specifies wheter the amount due to the the receiver of the TRS return will be reduced or not, with regards to the gross amount of the Coupon or the Fee e.g. when applicable, then it shall be paid net of any fees payable to the Custodian in respect of its custody of the Reference Security.">
+    eligibleFeeType BondHolderFeesEnum (0..*)
+    couponAmountType BondQuotationTypeEnum (0..1)
+    additionalTerms BespokeExpression (0..1)
 
-    valuationPriceInitial PriceSchedule (0..1) <"Specifies the initial valuation price(s) of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
-        [deprecated] // moved with renaming initialValuationPrice at PerformancePayout level
-    valuationPriceFinal PriceSchedule (0..1) <"2018 ISDA CDM Equity Confirmation for Security Equity Swap: Final Price | Specifies the final valuation price of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
-        [deprecated] // moved with renaming finalValuationPrice at PerformancePayout level
+type PriceReturnTerms:
     returnType ReturnTypeEnum (1..1) <"The type of return associated with the equity swap.">
+    rateOfPriceReturnType PriceTypeEnum (0..1) <"Optionnaly specify the type of price return : whether Gross Return Rate (= Final Price / Initial Price) else Net Return Rate (Gross Return Rate minus 1). As an indication, price return products which do not involve an exchange of the principal amount as part of the payoff structure are mostly applying a Net Return Rate type (example : base return swap), while products which payoff structure involve an exchange of the principal amount are mostly applying a Gross Return Rate type (example : structured note)."> // FORK_2
+    referenceSecurityPriceValuationType BondQuotationTypeEnum (0..1) // FORK_2
+    valuationPriceInitial PriceSchedule (0..1) <"Specifies the initial valuation price(s) of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
+    valuationPriceFinal PriceSchedule (0..1) <"2018 ISDA CDM Equity Confirmation for Security Equity Swap: Final Price | Specifies the final valuation price of the underlier. This price can be expressed either as an actual amount/currency, as a determination method, or by reference to another value specified in the swap document.">
     conversionFactor number (0..1) <"Defines the conversion applied if the quantity unit on contract is different from unit on referenced underlier.">
     performance calculation (0..1) <"Performance calculation, in accordance with Part 1 Section 12 of the 2018 ISDA CDM Equity Confirmation for Security Equity Swap, Para 75. 'Equity Performance'. Cumulative performance is used as a notional multiplier factor on both legs of an Equity Swap.">
+
+ //   condition PriceReturnBespokePayoutFormula: <"The root object of the BespokePayoutFormula shall be restricted in accordance with the core formula of the Payout type it is describing, which for a priceReturnPayout is either straight at source i.e. [ fractionalValue ] or via [ differentialValue ] on at least one of the legs.">
+     //   if bespokePayoutFormula exists
+      //  then bespokePayoutFormula -> fractionalValue exists
+      //  or bespokePayoutFormula -> differentialValue -> long -> fractionalValue exists
+      //  or bespokePayoutFormula -> differentialValue -> short -> fractionalValue exists
+
+    condition RateOfPriceReturnType:
+        if rateOfPriceReturnType exists
+        then rateOfPriceReturnType = PriceTypeEnum -> GrossReturnRate 
+        or rateOfPriceReturnType = PriceTypeEnum -> LongNetReturnRate
+        or rateOfPriceReturnType = PriceTypeEnum -> ShortNetReturnRate
 
 type ReturnTermsBase: <"Contains all common elements in variance, volatility and correlation return Terms.">
 
@@ -643,6 +683,9 @@ type BondReference: <"Reference to a bond underlier to represent an asset swap o
     conditionPrecedentBond boolean (1..1) <"To indicate whether the Condition Precedent Bond is applicable. The swap contract is only valid if the bond is issued and if there is any dispute over the terms of fixed stream then the bond terms would be used.">
     discrepancyClause boolean (0..1) <"To indicate whether the Discrepancy Clause is applicable.">
     couponRate FixedRateSpecification (0..1) <"Specifies the coupon rate (expressed in percentage) of a fixed income security or convertible bond.">
+    couponDistributionTerms ReferenceSecurityCouponOrFee (0..1) // FORK_2
+    feeDistributionTerms ReferenceSecurityCouponOrFee (0..1) // FORK_2
+    notionalHolderEquivalentEntitlement boolean (0..1) <"When applicable, means that the buyer of the derivative that is referencing the security is deemed to be entitled to receive from the payer of the swap the same coupons or fees or more generally any non-principal distributions as if the buyer was effectively the notional holder of the Reference Security (this terms is notably referring to the section 991 of the Income Tax Act 2007 within the charge to United Kingdom corporation tax in respect of interest paid on the Reference Obligation)."> // FORK_2
 
 type CashflowRepresentation: <"A data defining:  the cashflow representation of a swap trade.">
 
@@ -756,3 +799,14 @@ type FixedAmountCalculationDetails: <"Type for reporting the detailed results of
     fixedRate number (1..1) <"The value of the fixed rate that was used.">
     yearFraction number (1..1) <"The fraction of a year that this calculation represents, according to the day count fraction method.">
     calculatedAmount number (1..1) <"The amount of the cash flow that was computed, including any spreads and other processing.">
+
+
+
+ // condition ObservationIsDatedValue: <"DatedValue must be used for the purpose of defining the date of ghe observation together with related value.">
+ // if priceObservation exists 
+ // then priceObservation ->datedValue exists
+
+ // condition Observable: <"An observation must relate to an observable value (there shall be no observation associated with a fixedPrice, since related values are already known).">
+//  if priceObservation exists
+//  then observablePrice exists
+

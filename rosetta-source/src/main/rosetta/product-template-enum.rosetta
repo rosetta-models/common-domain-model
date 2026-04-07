@@ -12,6 +12,8 @@ enum OptionTypeEnum: <"The enumerated values to specify the type of the option. 
     Payer <"A 'payer' option: If you buy a 'payer' option you have the right but not the obligation to enter into the underlying swap transaction as the 'fixed' rate/price payer and receive float.">
     Receiver <"A 'receiver' option: If you buy a 'receiver' option you have the right but not the obligation to enter into the underlying swap transaction as the 'fixed' rate/price receiver and pay float.">
     Straddle <"A straddle strategy, which involves the simultaneous buying of a put and a call of the same underlier, at the same strike and same expiration date">
+      //  [deprecated]
+    Strategy <"Any other strategy, provided it involves (a) the same underlier(s), that  including  basket, and (b) the same expiration date. These are the two conditions required for modelling a strategy within one optionPayout leg. Whenever either (a) or (b) condition cannot be met, then the related strategy shall be broken down into multiple optionPayout legs."> // FORK
 
 enum CallingPartyEnum: <"Identifies a party to the on-demand repo transaction that has a right to demand for termination of the Security Finance transaction.">
     InitialBuyer <"Initial buyer to the repo transaction.">
@@ -49,3 +51,26 @@ enum ExpirationTimeTypeEnum: <"The time of day at which the equity option expire
     XETRA <"The time at which the official settlement price (following the auction by the exchange) is determined by the exchange.">
     DerivativesClose <"The official closing time of the derivatives exchange on which a derivative contract is listed on that security underlier.">
     AsSpecifiedInMasterConfirmation <"The time is determined as provided in the relevant Master Confirmation.">
+
+enum KnockTypeEnum: <"Designates the knockType, either  [In] or [Out] in the funtional operation [ F(X,In) = X x (Boolean) ] or the functional operation [ F(X,Out) = X x (1 - Boolean) ] where [Boolean] equals [1] when the triggerCondition is verified as true, else equals [0], and [X] is the value of the object for which KnockCondition is defined as an attribute."> // FORK
+
+    knockIn <"Designates the funtional operation [ F(X,In) = X x (Boolean) ] where [Boolean] equals [1] when the triggerCondition is verified as true, else equals [0], and [X] is the value of the object for which KnockCondition is defined as an attribute.">
+    KnockOut <"Designates the functional operation [ F(X,Out) = X x (1 - Boolean) ] where [Boolean] equals [1] when the triggerCondition is verified as true, else equals [0], and [X] is the value of the object for which KnockCondition is defined as an attribute.">
+
+enum CapFloorEnum: <"The enumerated values to specify whether the barrier is a Cap or Floor."> // FORK
+ 
+    Cap <"Designates the functional operation [ F(X,Cap) = min(X,Cap) ] where [Cap] is the value of the barrierLevel for the given barrierType and [X] is the value of the object for which CapFloor is defined as an attribute.">
+    Floor <"Represents the functional operation [ F(X,Floor) = max(X,Floor) ] where [Floor] is the value of the barrierLevel for the given barrierType and [X] is the value of the object for which CapFloor is defined as an attribute.">
+    CapStrike <"Designates the functional operation [ F(X,Cap) = (X minus Cap) ] where [CapStrike] is the value of the barrierLevel for the given barrierType and [X] is the value of the object for which CapFloor is defined as an attribute. This function is eventually equivalent to the Strike Differential of an in-the-money Call."> // FORK_2
+    FloorStrike <"Represents the functional operation [ F(X,Floor) = (abs(X) minus Floor) ] where [FloorStrike] is the value of the barrierLevel for the given barrierType and [abs(X)] is the value of the object for which FloorStrike is defined as an attribute. This function is eventually equivalent to the Strike Differential of an in-the-money Put.">  // FORK_2
+
+enum BondHolderFeesEnum:<"The enumerated values to specify the kind of fees that Bond holders may receive from the issuer or trustee "> // FORK_2
+
+    AmendmentFees <"Paid when bondholders agree to modify covenants or terms. ">
+    ConsentFees  <"Paid when bondholders vote in favour of a proposal. ">
+    TenderFees  <"Paid when participating in a tender offer. ">
+    ExchangeFees  <"Paid when swapping old bonds for new ones. ">
+    WaiverFees  <"Paid when bondholders waive a covenant breach. ">
+    AnyOtherFees <"Any other kinds of feesd other than the other ones explicltly mentioned in the enumerative list (populating this value permits to complement the explicit list in an gnostic manner).">
+
+

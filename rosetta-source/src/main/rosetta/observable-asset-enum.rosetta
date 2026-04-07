@@ -277,6 +277,10 @@ enum PartyDeterminationEnum: <"The enumerated values to specify how a calculatio
 enum PriceTypeEnum: <"Provides enumerated values for types of prices in the Price data type in order to explain how to interpret the amount and use it in calculations.">
     AssetPrice <"Denotes a price expressed as a cash amount in a given currency to purchase a unit of an asset (e.g. a security or a commodity).">
     CashPrice <"Denotes a price expressed as a cash amount for an upfront fee or other purposes. For example, {amount, unitOfAmount, PerUnitOfAmount} = [12,500, USD, null] = USD 12,500.">
+    GrossReturnRate <"Denotes a price expressed as a ratio of two asset prices."> // FORK_2
+    LongNetReturnRate <"Denotes a price expressed as bullish performance rate, equal to the Gross Return Rate minus 1."> // FORK_2 ----> FORK_3
+    ShortNetReturnRate <"Denotes a price expressed as bearish performance rate, equal to 1 minus the Gross Return Rate."> // FORK_3
+    Spread <"Denotes a price expressed as differential between two prices."> // FORK_3
     Correlation <"Denotes a price expressed as the weighted average of all pairwise correlation coefficients.">
     Dividend <"Denotes a price expressed as the dividend payment from a index or share.">
     ExchangeRate <"Denotes a rate to convert one currency or other measure of value to another. Foreign Exchange rates are represented in decimals, e.g. {amount, unitOfAmount, PerUnitOfAmount} = [1.23, USD, GBP] = USD 1.23 for every 1 GBP.">
@@ -325,3 +329,10 @@ enum CsaTypeEnum: <"How is the Creadit Support Annex defined for this transactio
 enum OptionReferenceTypeEnum: <"The enumeration values to specify the reference source that determines the final settlement price of the option.">
     Future <"Reference from the price of a future contract.">
     Spot <"Reference from an underlyer spot price.">
+
+enum ObservationCountEnum: <"Represent the sum of an integer number of observations."> // FORK --> FORK_2
+
+  DaysInObservationPeriod <"The number of days in the Observation Period.">
+  DaysInCalculationPeriod <"The number of days in the Calculation Period.">
+  DaysInValuationPeriod <"The number of days in the Valuation Period.">
+  KnockEventTriggerDays<"The number of observations where Knock Conditions were met, that is the count of knock occurrences assessed as 'true' in the Observation Period attached to the related KnockConditons.">

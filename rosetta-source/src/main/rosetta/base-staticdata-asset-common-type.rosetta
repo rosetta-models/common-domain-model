@@ -40,6 +40,9 @@ type ProductBase: <"Serves as an abstract class to specify a product using a pro
     productTaxonomy ProductTaxonomy (0..*) <"Specifies the product taxonomy, which is composed of a taxonomy value and a taxonomy source.">
     productIdentifier ProductIdentifier (0..*) <"Comprises an identifier and a source. The associated metadata key denotes the ability to associate a hash value to the ProductIdentifier instantiations for the purpose of model cross-referencing, in support of functionality such as the event effect and the lineage.">
         [metadata address "pointsTo"=Observable->productIdentifier]
+    exchange string (0..1) // FORK
+    relatedExhange string (0..1) // FORK
+    clearanceSystem string (0..1) // FORK
 
 type TaxonomyValue: <"Defines a taxonomy value as either a simple string or a more granular expression with class names and values for each class.">
 
@@ -211,6 +214,8 @@ type Security extends ProductBase: <"Identifies a security by referencing a prod
 type DebtType: <"Specifies the type of debt instrument.">
     debtClass DebtClassEnum (0..1) <"Specifies the characteristics of a debt instrument.">
     debtEconomics DebtEconomics (0..*) <"Specifies selected financial terms of a debt instrument.">
+    couponRate number (0..1) // FORK_2
+    maturityDate date (0..1) // FORK_2
 
 type DebtEconomics: <"Specifies selected economics of a debt instrument.">
     debtSeniority DebtSeniorityEnum (0..1) <"Specifies the order of repayment in the event of a sale or bankruptcy of the issuer or a related party (eg guarantor).">

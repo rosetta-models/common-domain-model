@@ -111,16 +111,46 @@ enum FinancialUnitEnum: <"Provides enumerated values for financial units, genera
     ValuePerDay <"Denotes a value (expressed in currency units) for a one day change in a valuation date, which is typically used for expressing sensitivity to the passage of time, also known as theta risk, or carry, or other names.">
     ValuePerPercent <"Denotes a value (expressed in currency units) per percent change in the underlying rate which is typically used for expressing sensitivity to volatility changes, also known as vega risk.">
     Weight <"Denotes a quantity (expressed as a decimal value) represented the weight of a component in a basket.">
+    ObservationCount <"Denotes a quantity which counts a number of observations ; typically a number of days in observation periods, calculation periods, else a number of times a given contractual event has occurred e.g. number of knocked observations, etc."> // FORK
+    Scalar <"Denotes a quantity which is pure number, that is to say a number with no arithmetic unit."> // FORK_2
 
 enum ArithmeticOperationEnum: <"An arithmetic operator that can be passed to a function">
-    Add <"Addition of 2 values">
-    Subtract <"Subtraction of 2nd value from 1st value">
-    Multiply <"Multiplication of 2 values">
-    Divide <"Division of 1st value by 2nd value">
-    Max <"Maximum of 2 values">
-    Min <"Minimum of 2 values">
+    Add <"Addition of multiple values.">
+    Subtract <"Subtraction of an operandValue from a baseValue.">
+    Multiply <"Multiplication of multiple values.">
+    Divide <"Division of a baseValue by an operandValue.">
+    Max <"Maximum of multiple values.">
+    Min <"Minimum of multiple values.">
 
 enum QuantityChangeDirectionEnum: <"Specifies whether a quantity change is an increase, a decrease or a replacement, whereby the quantity is always specified as a positive number.">
     Increase <"When the quantity should go up by the specified amount.">
     Decrease <"When the quantity should go down by the specified amount.">
     Replace <"When the quantity should be replaced by the specified amount.">
+
+enum AggregationMethodEnum: <"The basic mathematical functions, all commutative, to determine tthe kind of calculation that applies, for aggregating multiple values into a single value."> // FORK
+// For clarity restricting the list to only commutative operations is aligned with core design of cardinality feature of object, which mean collection of values related to type with unbounded cardinality shall have no ordering signification, hence restricting the Enum list to vaalues corresponding to commutative operators, for ensuring consistent usage accross the model, with generic applicable scope whenever multiple value in array may be considered as an input data to be aggregated.">
+    Min <"The resolved value when processing a set of multiple values shall be the minimum value in the set.">
+    Max <"The resolved value when processing a set of multiple values shall be the maximum value in the set.">
+    Sum <"The resolved value when processing a set of multiple values shall be the arithmetic sum of all the values in the set.">
+    Multiply <"The resolved value when processing a set of multiple values shall be the multiplication of all the values in the set, within each others.">
+    Average <"The resolved value when processing a set of multiple values shall be the relevant mean type of the values, depending on the type of the value. The mean types are described in AveragingCalculationMethodEnum. Say the type of value is a Price involved in linear and commutative Payout such as vanilla priceReturn, then the expected mean type is arithmetic. Now say the Price is Variance Strike, then the expected mean type may be geometric, etc.">
+
+enum AlgebraicOperationEnum extends ArithmeticOperationEnum : <"A basic set of mathematical functions (mostly used when defining the calculation formula for variance return, volatility return or correlation return)."> // FORK ----> FORK_2
+    Exponentiation <"The resolved value shall equal to : [ F(X) = X^N ] where [X] represent the input resolvable value considered as the base being raised to power by [N] that is the exponent value. As an indication, for representing squared root operation, exponent value shall equal to 0.5.">
+    NaturalLogarithm <"The resolved value shall equal to : [ F(X) = Log(X) ] where [X] represent the input resolvable value and [Log] means the Natural Logarithm.">
+    NaturalExponent <"The resolved value shall equal to : [ F(X) = Exp(X) ] where [X] represent the input resolvable value and [Exp] means the Natural Exponent.">
+    AbsoluteValue <"The resolved value shall equal to : [ F(X) = Abs(X) ] where [X] represent the input resolvable value and [Abs] means the Absolute Value.">
+    CorrelationCoefficient <"The resolved value shall equal to : [ F(X,Y) = Covariance(Xi,Yi) / {StandardDeviation(Xi) x StandardDeviation(Yi)} ] where [X] and [Y] represent the resolvable values and [i] represents the observation dates.">
+    Covariance <"The resolved value shall equal to : [ F(X,Y) = Covariance(Xi,Yi) ] where [X] and [Y] represent the resolvable values and [i] represents the observation dates.">
+    ArithmeticAverage  <"The sum of n values divided by n.">  // FORK_2
+    GeometricAverage <"The nth root of the product of n values.">  // FORK_2
+    HarmonicAverage <"The reciprocal of the arithmetic mean of the reciprocals of the values.">  // FORK_2
+    nthRankInValueSeries <"The nth ordinal value(s) of a value series.">  // FORK_2
+
+enum RankingMethodEnum : <"Defines the direction for sorting values in series."> // FORK
+    DecreasingOrder <"The values in series shall be sorted in decreasing order i.e. from the maximum value to the minimum value.">
+    IncreasingOrder <"The values in series shall be sorted in increasing order i.e. from the minimum value to the maximum value.">
+
+enum LogicalOperationEnum : <"Defines the nature of logical condition between multiple attributes defined in array."> // FORK
+    Or <"The condition is additive i.e. when at least one value in series is true, then the condition is true, else it is false.">
+    And <"The condition is cumulative i.e. when all the value in series true, then the condition is true, eles it is false.">

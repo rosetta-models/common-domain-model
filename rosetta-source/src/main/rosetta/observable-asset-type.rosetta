@@ -9,6 +9,7 @@ import cdm.base.staticdata.party.*
 
 import cdm.observable.common.*
 import cdm.mapping.config.*
+import cdm.product.template.* // FORK
 
 type ObservationSource: <"The observation source can be composed of an curve and/or and information source.">
     [deprecated]
@@ -110,6 +111,7 @@ type CashPrice: <"Specifies the nature of a cash price either as a fee type, cas
         then cashPriceType = CashPriceTypeEnum -> Premium
 
 type PriceComposite: <"Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers and a simple arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX) etc.">
+    [deprecated] // to be replaced with new type below CompositePriceQuantity
     baseValue number (1..1) <"The 1st value in the arithmetic operation, which may be non-commutative in some cases: Subtract, Divide). This 1st operand is called 'baseValue' as it refers to the price anchor in the arithmetic operation: e.g. the clean price (Bond) or the spot rate (FX).">
     operand number (1..1) <"The 2nd value in the arithmetic operation, which may be non-commutative in some cases: Subtract, Divide). The 2nd operand is called 'operand' to distinguish it from the 1st one which is the price anchor.">
     arithmeticOperator ArithmeticOperationEnum (1..1) <"Specifies the arithmetic operator via an enumeration.">
@@ -121,12 +123,23 @@ type PriceComposite: <"Defines the inputs required to calculate a price as a sim
         then arithmeticOperator = ArithmeticOperationEnum -> Add
                 or arithmeticOperator = ArithmeticOperationEnum -> Subtract
 
+type CompositePriceQuantity : <"Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers or more and an arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX), etc."> // FORK_2
+    baseValue ObservablePriceQuantity (1..*) <"The input value of an arithmetic operation, with regards of which any other value applied is considered as a parameter. For clarity : GIVEN a baseValue, WHEN the arithmetic operation is commutative, THEN the other values are also considered as baseValue because that makes no difference for calculating the result of such operation (when calculating, say [A multiplied by B], one may consider either [A] as the input and [B] as the parameter by which [A] is multiplied, or vice-versa by reversing [A] and [B] e.g. [A x B = B x A] without affecting the operation result AND such operation may optionnally apply to multiple values in series with no ambiguity e.g. [A x B x [...] x N] ) - hence baseValue having an ounbound cardinality ; ELSE the arithmetic operation is not commutative: THEN the baseValue is an anchor 1st value that must be distinguished from the the other value which is applied to it, such 2nd one being referred to as the operandValue - hence ensuring with a condition that non-commutative operations can only be represented with only one baseValue and only one operandValue (say for representing [A minus B] then [A] shall be represented with the baseValue and [B] with the operandValue).">
+    operandValue ObservablePriceQuantity (0..1) <"The 2nd value involved in a non-commutative operation, which is applied to a 1st acnchor value being referred to as the baseValue.">
+    arithmeticOperator ArithmeticOperationEnum (1..1) <"Specifies the arithmetic operator via an enumeration.">
+    operandType PriceOperandEnum (0..1) <"Optionally qualifies the type of operand: e.g. accrued or forward point.">
+
+    condition NonCommutativeOperator:
+        if arithmeticOperator = ArithmeticOperationEnum -> Divide or arithmeticOperator = ArithmeticOperationEnum -> Subtract
+        then operandValue exists and baseValue count =1 else operandValue is absent 
+
 type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial instrument in a trade as a schedule of measures. A price generically expresses the value of an exchange as a ratio: it measures the amount of one thing needed to be exchanged for 1 unit of another thing (e.g. cash in a specific currency in exchange for a bond or share). This generic representation can be used to support any type of financial price beyond just cash price: e.g. an interest rate, a foreign exchange rate, etc. This data type is generically based on a schedule and can also be used to represent a price as a single value.">
 
     perUnitOf UnitType (0..1) <"Provides an attribute to define the unit of the thing being priced. For example, {amount, unitOfAmount, PerUnitOfAmount} = [10, EUR, Shares] = (10.00 EUR/SHARE) * (300,000 SHARES) = EUR 3,000,000.00 (Shares cancel out in the calculation).">
     priceType PriceTypeEnum (1..1) <"Specifies the price type as an enumeration: interest rate, exchange rate, asset price etc. This attribute is mandatory so that prices can always be clasiffied according to their type. The price type implies some constraints on the price's units.">
     priceExpression PriceExpressionEnum (0..1) <"(Optionally) Specifies whether the price is expressed in absolute or percentage terms.">
     composite PriceComposite (0..1) <"(Optionally) Specifies the underlying price components if the price can be expressed as a composite: e.g. dirty price = clean price + accrued.">
+    compositePrice CompositePriceQuantity (0..1) // FORK_2
     arithmeticOperator ArithmeticOperationEnum (0..1) <"(Optionally) When the price is to be understood as an operator to apply to an observable, i.e. a spread, multiplier or min/max.">
     cashPrice CashPrice (0..1) <"(Optionally when the price type is cash) Additional attributes that further define a cash price, e.g. what type of fee it is.">
 
@@ -156,7 +169,7 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
         then unit -> currency exists
 
     condition Choice: <"The price can be specified mutually exclusively as a cashflow, an operator (e.g. a spread or multiplier), or a composite.">
-        optional choice cashPrice, arithmeticOperator, composite
+        optional choice cashPrice, arithmeticOperator, composite, compositePrice // FORK_2
 
     condition CashPrice: <"If a cash price type is specified, the price type must be cash, otherwise it must be non-cash.">
         if cashPrice exists
@@ -200,6 +213,36 @@ type Observable: <"Specifies the object to be observed for a price, it could be 
     condition ObservableChoice: <"An observable can only be composed of one type any time.">
         required choice rateOption, commodity, productIdentifier, currencyPair
 
+type BaseValue: <"The end-value to be considered as the input for the operation represented with the bespokePayoutFormula, with an optional choice between (a) observable value and (b) fixed value. As an information, [metadata address] notably permits to update these terms which belongs to Payout root via primitiveInstruction such as quantityChange or any other ones where corresponding items would be defined with the relevant [metadata location] for the purpose of resulting in such update.
+    (a) When the value is an observable one, meaning the numerical value is not yet known, then it is required to specify the observablePrice that is of type Observable. At some point, when observation happens and the numerical value is known at some point of the LifeCycle, then observablePriceObservation may be populated in type PriceSchedule.
+    (b) When the numerical value is already fixed upfront to any processing based on Payout terms, then it is either fixedPrice of type PriceSchedule, else it is a quantity of type QuantitySchedule (for instance when used to define trigger level value that is an amount rather than a price, else when used to define a multipler value, etc.)."> // FORK
+
+    fixedPrice PriceSchedule (0..1) <"Define a given Price, that is either single value or multiple value in datedValue series. This is a numerical value already fixed upfront to any LifeCycle Event processing based on Payout terms.">
+        [metadata address]
+    observablePrice NewObservable (0..1) <"Define the Observable of which the Price shall be observed at some point of the LifeCycle Event processing based on Payout terms, in accordance with related Observation Terms.">
+        [metadata address]
+    quantity QuantitySchedule (0..1) <"Define a given Quantity, that is either single value or multiple value in datedValue series. This is a numerical value already fixed upfront to any LifeCycle Event processing based on Payout terms.">
+        [metadata address]
+ //   priceObservation DatedValue (0..*) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated e.g. output from valueOperator or aggregationOperator.">
+   //     [metadata address]
+
+        condition ValueIsObservablePriceOrFixedPriceOrQuantity:
+        one-of
+
+type NewObservable: <"...."> // FORK -----> FORK_2 (change : add Product as attribute instead of an extension) --> FORK_3
+        [metadata key]
+    product Product (0..1)
+        [metadata reference]
+    bespokeExpression BespokeExpression (0..1)
+    rateOption FloatingRateOption (0..*) <"...">
+        [metadata reference] // FORK_3
+    currencyPair QuotedCurrencyPair (0..*) <"...">
+        [metadata reference] // FORK_3
+    priceObservation PriceSchedule (0..*) <"...">
+        [metadata address] // FORK
+    composite PayoutSpecificFeatures (0..1) <"Specifies any observable that is a resolvable value"> // FORK_3
+        [metadata reference]
+
 type InformationSource: <"A class defining the source for a piece of information (e.g. a rate fix or an FX fixing). The attribute names have been adjusted from FpML to address the fact that the information is not limited to rates.">
 
     sourceProvider InformationProviderEnum (1..1) <"An information source for obtaining a market data point. For example Bloomberg, Reuters, Telerate, etc.">
@@ -228,7 +271,8 @@ type FxRateObservable: <"Defines foreign exchange (FX) asset class specific para
     secondaryFxSpotRateSource InformationSource (0..1) <"Specifies an alternative, or secondary, source from which a rate should be observed.">
 
 type QuotedCurrencyPair: <"A class that describes the composition of a rate that has been quoted or is to be quoted. This includes the two currencies and the quotation relationship between the two currencies and is used as a building block throughout the FX specification.">
-
+        [metadata key] // FORK_3
+    
     currency1 string (1..1) <"The first currency specified when a pair of currencies is to be evaluated.">
         [metadata scheme]
     currency2 string (1..1) <"The second currency specified when a pair of currencies is to be evaluated.">
@@ -287,6 +331,8 @@ type SwapCurveValuation: <"A class to specify a valuation swap curve, which is u
 
 type ValuationDates: <"Defines how and when a performance type option or performance type swap is to be valued, including initial, interim and final valuation dates.">
 
+    bespokeExpression BespokeExpression (0..1) // FORK
+    valuationDayType DayTypeEnum (0..1) // FORK_2
     valuationDatesInitial PerformanceValuationDates (0..1) <"Specifies the initial valuation dates of the underlier.">
     valuationDatesInterim PerformanceValuationDates (0..1) <"Specifies the interim valuation dates of the underlier.">
     valuationDatesFinal PerformanceValuationDates (1..1) <"Specifies the final valuation dates of the underlier.">
@@ -299,6 +345,7 @@ type PerformanceValuationDates: <"Defines how and when a performance type option
     valuationDate AdjustableOrRelativeDate (0..1) <"2018 ISDA CDM Equity Confirmation for Security Equity Swap: Pricing Date">
     valuationTime BusinessCenterTime (0..1) <"The specific time of day at which the calculation agent values the underlying. The SpecificTime is the only case when the valuationTime (time + business center location  e.g. 10:00:00 USNY) should be provided. You should be able to provide just the valuationTime without valuationTimeType, which infer that this is a specific time.">
     valuationTimeType TimeTypeEnum (0..1) <"The time of day at which the calculation agent values the underlying, for example the official closing time of the exchange.">
+    valuationDayType DayTypeEnum (0..1) // FORK_2
 
 type FxRateSourceFixing: <"Describes a rate source to be fixed and the date the fixing occurs">
 
@@ -330,6 +377,7 @@ type ValuationPostponement: <"Specifies how long to wait to get a quote from a s
     maximumDaysOfPostponement int (1..1) <"The maximum number of days to wait for a quote from the disrupted settlement rate option before proceeding to the next method.">
 
 type FloatingRateOption: <"Specification of a floating rate option as a floating rate index and tenor.">
+        [metadata key] // FORK_3
     floatingRateIndex FloatingRateIndexEnum (0..1) <"The reference index that is used to specify the floating interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.">
         [metadata scheme]
     inflationRateIndex InflationRateIndexEnum (0..1) <"The reference index that is used to specify the inflation interest rate. The FpML standard maintains the list of such indices, which are positioned as enumeration values as part of the CDM.">
@@ -497,3 +545,25 @@ type DividendApplicability: <"The parameters which define whether dividends are 
     optionsExchangeDividends boolean (0..1) <"If present and true, then options exchange dividends are applicable.">
     additionalDividends boolean (0..1) <"If present and true, then additional dividends are applicable.">
     allDividends boolean (0..1) <"Represents the European Master Confirmation value of 'All Dividends' which, when applicable, signifies that, for a given Ex-Date, the daily observed Share Price for that day is adjusted (reduced) by the cash dividend and/or the cash value of any non cash dividend per Share (including Extraordinary Dividends) declared by the Issuer. All Dividends in accordance with the ISDA 2002 Equity Derivatives Definitions.">
+
+type ObservationCount: <"Specifies the terms relative to a value that is an integer number of observations."> // FORK
+    observationValueType ObservationCountEnum (1..1) <"The type of value which observation shall be counted.">
+    observationCountOffset number (0..1) <"An offset value to adjust the Observation Count.">
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculatedValue DatedValue (0..*) <"The numerical value or dated value which corresponds to the resolved value of the parent object for which this attribute is populated.">
+    dayType DayTypeEnum (0..1)
+
+type BespokeExpression : <"Any bespoke name or description that may be specified with string values (including values corresponding to mathematical expressions, when any)."> // FORK
+        [metadata key] // FORK_2
+    name string (0..1) <"Bespoke term name">
+    description string (0..1) <"Bespoke term description">
+    algebraicName string (0..1) <"Bespoke term algebraic name">
+    algebraicDescription string (0..1) <"Bespoke term algebraic description; this attribnute is a place holder where to record the resulkting value of any functions by implementors that would read the child path structure attached to given parent node for the purpose of converting it into an algebraic formula e.g. when reading AggregationMethod Enum SUM the function would translate with standard sigma sum symbol, etc.">
+    payoutFeatureReference PayoutFeatureReference (0..1) // FORK_2
+    subcomponents BespokeExpression (0..*) <"For the purpose of breaking down bespoke description into sub-components, which permits to represent the nesting of sub-paragraphs in paragraph.">
+        [metadata address] // FORK_2
+
+type PayoutFeatureReference:<"Place holder generic class for holding the list of all payout attribute which may be resolved via metadata reference."> // FORK_3
+    
+
+

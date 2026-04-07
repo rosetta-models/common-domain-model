@@ -406,6 +406,7 @@ func Create_StockSplit: <"Function specification to create the fully-formed busi
             priceType: preSplitPrice -> priceType,
             priceExpression: preSplitPrice -> priceExpression,
             composite: preSplitPrice -> composite,
+            compositePrice: preSplitPrice -> compositePrice, // FOR
             arithmeticOperator: preSplitPrice -> arithmeticOperator,
             cashPrice: preSplitPrice -> cashPrice,
             datedValue: empty
@@ -1566,6 +1567,7 @@ func Create_OnDemandRateChangePriceChangeInstruction: <"Creates a price change i
             priceType: currentRatePrice -> priceType,
             priceExpression: currentRatePrice -> priceExpression,
             composite: currentRatePrice -> composite,
+            compositePrice: currentRatePrice -> compositePrice, // FORK
             arithmeticOperator: currentRatePrice -> arithmeticOperator,
             cashPrice: currentRatePrice -> cashPrice,
             datedValue: empty
@@ -1958,6 +1960,7 @@ func Create_RepricePrimitiveInstruction: <"Creates the primitive instructions fo
             priceType: currentAssetPrice -> priceType,
             priceExpression: currentAssetPrice -> priceExpression,
             composite: currentAssetPrice -> composite,
+            compositePrice: currentAssetPrice -> compositePrice, // FORK
             arithmeticOperator: currentAssetPrice -> arithmeticOperator,
             cashPrice: currentAssetPrice -> cashPrice,
             datedValue: empty
@@ -2026,6 +2029,7 @@ func Create_AdjustmentPrimitiveInstruction: <"Creates the primitive instructions
             priceType: currentAssetPrice -> priceType,
             priceExpression: currentAssetPrice -> priceExpression,
             composite: currentAssetPrice -> composite,
+            compositePrice: currentAssetPrice -> compositePrice, // FORK
             arithmeticOperator: currentAssetPrice -> arithmeticOperator,
             cashPrice: currentAssetPrice -> cashPrice,
             datedValue: empty

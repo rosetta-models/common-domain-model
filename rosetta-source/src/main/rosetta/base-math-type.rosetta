@@ -26,7 +26,7 @@ type Measure extends MeasureBase: <"Defines a concrete measure as a number assoc
 
 type MeasureSchedule extends MeasureBase: <"A set of measures, all in the same unit, where the values are defined through a schedule of steps. The initial value may be defined either as part of the steps, or using the single amount attribute.">
     datedValue DatedValue (0..*) <"A schedule of step date and value pairs. On each step date the associated step value becomes effective. The step dates are used to order the steps by ascending order. This attribute is optional so the data type may be used to define a schedule with a single value.">
-
+    
     condition ValueExists: <"A schedule may be specified as a single value or as a set of date-value pairs. Both attributes may be specified, in which case the single amount number is the initial value.">
         value exists or datedValue exists
 
@@ -110,5 +110,37 @@ type MoneyBound: <"The money bound is defined as a money amount and whether the 
     inclusive boolean (1..1) <"Whether the money amount bound is inclusive, e.g. for a lower bound, false would indicate greater than, whereas true would indicate greater than or equal to.">
 
 type AveragingCalculationMethod: <"Defines the ways in which multiple values can be aggregated into a single value.">
+
     isWeighted boolean (1..1) <"Identifies whether the average values will be weighted or unweighted.">
     calculationMethod AveragingCalculationMethodEnum (1..1) <"Identifies which of the Pythagorean means is being used to compute an average value.">
+
+
+type RankingMethod : <"Defines that one or several values shall be selected in regards of their rank in the value series e.g. the '2nd' and/or the '3rd' and/or the 'nth' when sorting either from lowest to the highest value in the series, or vice-versa (a typical business term to designate such feature is 'rainbow')."> // FORK
+        [metadata key]
+        
+    nthRankInValueSeries int (0..1) <"The indexing of ranks for sorting value series in array i.e. for ranking multiple values multiple values of an object with unbound cardinality into a single value, anchored per each given observation date.">
+    nthRankInDatedValueSeries int (0..1) <"The indexing of ranks for sorting value per per time series i.e. for ranking multiple dated values, anchored per each given observable.">
+    rankingDirection RankingMethodEnum (1..1) <"Defines the direction for sorting values in series i.e. either decreasing or increasing order.">
+    bespokeExpression BespokeExpression (0..1) <"Any bespoke name or description that may be specified.">
+    calculatedValue DatedValue (0..*) <"The reference to the corePayoutValue effectively selected i.e. resolved as per the ranking method.">
+        [metadata reference]
+    
+   condition RankingPerValueOrDatedValue: 
+   required choice nthRankInValueSeries, nthRankInDatedValueSeries
+
+type AggregationMethod :<"Defines the method in which multiple values can be aggregated into a single value. It is a set of commutative functions  e.g. Sum, Multiply, Min, Max, Average. Importantly, two dimensions may be considered, whether aggregating (a) value series related to an object with unbound cardinality, else dated series of the same object - hence an optional choice below between the attributes which represent each of these two dimentions: either (a) valueSeriesAggregation, else (b) datedValueSeriesAggregation."> // FORK
+
+    valueSeriesAggregation AggregationMethodEnum (0..1) <"The aggregation method per value series in array i.e. for aggregating multiple values of an object with unbound cardinality into a single value, anchored per each given observation date.">
+    datedValueSeriesAggregation AggregationMethodEnum (0..1) <"The aggregation method per time series i.e. for aggregating multiple dated values into one single value, anchored per each given observable.">
+    averagingMethod AveragingCalculationMethod (0..1) <"Defines the type of averaging function.">
+    valueRanking RankingMethod (0..1) <"Defines that one or several values shall be selected in regards of their rank in the value series e.g. the '2nd' and/or the '3rd' and/or the 'nth' when sorting either from lowest to the highest value in the series, or vice-versa. "> 
+    // Typical use case is for representing 'rainbow' features.
+        [metadata reference]
+
+    condition AggregationDimension: 
+    optional choice datedValueSeriesAggregation, valueSeriesAggregation
+
+    condition Average: 
+    if datedValueSeriesAggregation = AggregationMethodEnum -> Average 
+    or valueSeriesAggregation = AggregationMethodEnum -> Average
+    then averagingMethod exists

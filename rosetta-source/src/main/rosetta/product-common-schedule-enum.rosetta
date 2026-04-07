@@ -9,6 +9,26 @@ enum PayRelativeToEnum: <"The enumerated values to specify whether payments occu
     LastPricingDate <"Payments will occur relative to the last Pricing Date of each Calculation Period.">
     ResetDate <"Payments will occur relative to the reset date.">
     ValuationDate <"Payments will occur relative to the valuation date.">
+    ObservationDate <"The date is relative to each Observation Date. When relative to a parametric schedule that is resulting in ObservationPeriodStartDate and observationPeriodEndDate in series, then all particular daily date in each period."> // FORK
+    ObservationPeriodStartDate <"The date is relative to each relevant Start Date of the Observation Periods i.e. either every Start Date when frequency of the related date is the same as the Observation Period frequency or each Start Date falling on a related date when respective related frequencies differ."> // FORK
+    ObservationPeriodEndDate <"The date is relative to each relevant End Date of the Observation Periods i.e. either every End Date when frequency of the related date is the same as the Observation Period frequency or each End Date falling on a related date when respective related frequencies differ."> // FORK
+    InitialValuationDate <"The date is relative to the Initial Valuation Date."> // FORK
+    InterimValuationDate <"The date is relative to each Interim Valuation Date."> // FORK
+    FinalValuationDate <"The date is relative to the FinalValuationDate."> // FORK
+    TradeDate <"The date is relative to the Trade Date."> // FORK
+    EffectiveDate <"The date is relative to the Effective Date."> // FORK
+    SettlementDate <"The date is relative to each Settlement Date."> // FORK
+    TerminationDate <"The date is relative to any Termination Date whether being a Termination at Maturity or an Early Termination Settlement Date"> // FORK
+    MaturityTerminationDate <"The date is relative to any Termination Date at Maturity."> // FORK
+    EarlyTerminationDate <"The date is relative to the Early Termination Settlement Date."> // FORK
+    ExerciseDate <"The date is relative to the Exercise Date of any kind of optional right e.g. vanilla option, extendible maturity provision, cancellation, callable, etc."> // FORK
+    KnockDate <"The date is relative to any Knocking date."> // FORK
+    KnockInDate <"The date is relative to any Knocking date that relates to a Knock-In type."> // FORK
+    KnockOutDate <"The date is relative to any Knocking date that relates to a Knock-Out type."> // FORK
+    FixingDate <"The date is relative to the Fixing Date of each Calculation Period."> // FORK
+    PaymentDate <"The date is relative to each Payment Date."> // FORK
+     CashSettlementValuationtDate <"The date is relative to each Cash Settlement Valuation Date as defined in § 18.4.9. 2021 ISDA Interest Rate Derivative Definitions"> // FORK_5
+    CashSettlementPaymentDate <"The date is relative to each Cash Settlement Payment Date as defined in § 18.4.8. 2021 ISDA Interest Rate Derivative Definitions"> // FORK_5
 
 enum ResetRelativeToEnum: <"The enumerated values to specify whether resets occur relative to the first or last day of a calculation period.">
     CalculationPeriodStartDate <"Resets occur relative to the first day of a calculation period.">

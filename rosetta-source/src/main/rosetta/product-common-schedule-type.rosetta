@@ -26,11 +26,71 @@ type StubPeriod: <" A class defining how the initial or final stub calculation p
     initialStub StubValue (0..1) <"Specifies how the initial stub amount is calculated. A single floating rate tenor different to that used for the regular part of the calculation periods schedule may be specified, or two floating tenors may be specified. If two floating rate tenors are specified then Linear Interpolation (in accordance with the 2000 ISDA Definitions, Section 8.3. Interpolation) is assumed to apply. Alternatively, an actual known stub rate or stub amount may be specified.">
     finalStub StubValue (0..1) <"Specifies how the final stub amount is calculated. A single floating rate tenor different to that used for the regular part of the calculation periods schedule may be specified, or two floating tenors may be specified. If two floating rate tenors are specified then Linear Interpolation (in accordance with the 2000 ISDA Definitions, Section 8.3. Interpolation) is assumed to apply. Alternatively, an actual known stub rate or stub amount may be specified.">
 
+type CalculatedSchedule:// FORK_5
+
+    schedulePerPeriod  PeriodBasedSchedule (0..*) <"The schedule where all date information elsewhere given in the payout may be represented as resolved into individual sets of adjusted date values."> 
+    schedulePerDateType DateTypeBasedSchedule (0..1) <"The schedule where all date information elsewhere given in the payout may be represented as resolved into individual sets of adjusted date values.">
+
+type PeriodBasedSchedule: <"Generic class for representing a resolved schedule - all date values adjusted - as a set of period series, where each period, whether an Calculation Period or an Observation Period is defined with Start Date, End Date and Payment Date, and optionnal attributes being other types of date possibly defined for such period e.g. Payment Date, Valuation Date, Fixing Date, Reset Date."> // FORK_5
+    [metadata key]
+
+    valuationDate date (0..1)
+    paymentDate date (0..1)
+    settlementDate date (0..1)
+    calculationPeriod CalculationPeriodBase (0..*)
+    observationPeriod ObservationPeriodSchedule (0..*)
+
+    // FORK_2 ---> FORK_5 = removal of the condition
+        // condition :
+        //  optional choice observationPeriod, calculationPeriod
+
+type DateTypeBasedSchedule: <"Generic class for representing a resolved schedule - all date values adjusted - as a set of date series, meaning that each series being a list of date values corresponding to particular type of date possibly found in schedules e.g. Fixing Date, Reset Date, Start Date, End Date, Valuation Date, Payment Date."> // FORK_2 ---> FORK_5
+
+    fixingDate date (0..*)
+    resetDate date (0..*)
+    lookbackDate date (0..*)
+    lockoutDate date (0..*)
+    observationDate date (0..*)
+    
+    valuationDate date (0..*)
+    paymentDate date (0..*)
+    settlementDate date (0..*)
+
+    calculationPeriodStartDate date (0..*)
+    calculationPeriodEndDate date (0..*)
+    observationPeriodStartDate date (0..*)
+    observationPeriodEndDate date (0..*)
+    observationPeriodShiftStartDate date (0..*)
+    observationPeriodShiftEndDate date (0..*)
+
+
 type CalculationPeriodBase: <"The calculation period adjusted start and end dates, which are the baseline arguments needed to compute an interest accrual calculation.">
     [metadata key]
 
     adjustedStartDate date (0..1) <"The calculation period start date, adjusted according to any relevant business day convention.">
+        [deprecated]  // we do not want to use this one : instead we shall use FORK_5 = calculationPeriodStartDate, see below
     adjustedEndDate date (0..1) <"The calculation period end date, adjusted according to any relevant business day convention.">
+        [deprecated]  // we do not want to use this one : instead we shall use FORK_5 = calculationPeriodEndDate, see below
+
+    // all below = FORK_5 :
+
+    fixingDate date (0..*)
+    resetDate date (0..*)
+    lookbackDate date (0..*)
+    lockoutDate date (0..*)
+    observationDate date (0..*)
+
+    observationPeriodShiftStartDate date (0..1)
+    observationPeriodShiftEndDate date (0..1)
+    numberOfDaysInObservationPeriodShift int (0..1)
+    
+  //  observationPeriodStartDate date (0..1)
+  //  observationPeriodEndDate date (0..1)
+  // numberOfDaysInObservationPeriod int (0..1)
+    
+    calculationPeriodStartDate date (0..1)
+    calculationPeriodEndDate date (0..1)
+    numberOfDaysInCalculationPeriod int (0..1)
 
 type CalculationPeriod extends CalculationPeriodBase: <"A data defining:  the parameters used in the calculation of a fixed or floating rate calculation period amount. This data forms:  part of cashflows representation of a swap stream.">
 
@@ -151,17 +211,39 @@ type RateSchedule: <"A class defining a schedule of rates or amounts in terms of
         [metadata address "pointsTo"=PriceQuantity->price]
 
 type ObservationDates: <"Describes date details for a set of observation dates in parametric or non-parametric form.">
+    bespokeExpression BespokeExpression (0..1) // FORK
     observationSchedule ObservationSchedule (0..1) <"Specifies a schedule of dates (non-parametric) on which market observations take place, and allows for the optional definition of weights where applicable.  When no weight is specified, then weight of each date is assumed to be 1.0">
     periodicSchedule PeriodicDates (0..1) <"Specifies the date range and frequency on which market observations take place.  Weights can be assigned to dates in the schedule by assigning the weight and corresponding observationReference in the observationSchedule.">
     parametricDates ParametricDates (0..1) <"Specifies parametric terms to determine which days within a given calculation period the price would be observed. Typically associated with Commodities. ">
+    relativeDate RelativeDateOffset (0..1) <"The enumerated values to specify the type of date to be used as an anchor."> // FORK
 
-type ObservationSchedule: <"Specifies a single date on which market observations take place and specifies optional associated weighting.">
-    observationDate ObservationDate (0..*) <"Specifies an adjusted or unadjusted date for a market observation.">
+        condition ObservationIsRelativeTo: // FORK
+        if (periodicSchedule exists or parametricDates exists or observationSchedule exists) 
+        and relativeDate exists
+        then relativeDate -> dateIsRelativeTo = DateRelativeToEnum -> ObservationDate 
+        or relativeDate -> dateIsRelativeTo = DateRelativeToEnum -> ObservationPeriodStartDate 
+        or relativeDate -> dateIsRelativeTo = DateRelativeToEnum -> ObservationPeriodEndDate
+
+type ObservationSchedule: <"Specifies a schedule of dates (non-parametric) on which market observations take place, and allows for the optional definition of weights where applicable.  When no weight is specified, then weight of each date is assumed to be 1.0">
+
+    observationDate ObservationDate (0..*) <"Specifies an adjusted or unadjusted date for a market observation, optionaly with a weight associated to each date.">
+    observationPeriod ObservationPeriodSchedule (0..*) <"Specifies manufactured schedule, composed of period series (mostly used when period are irregular, thus unlikely calculable based on periodic parameters)."> // FORK
+        [metadata reference]
     dateAdjustments BusinessDayAdjustments (0..1) <"The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.">
 
     condition AdjustedDate: <"FpML specifies a choice between adjustedDate and [unadjustedDate (required), dateAdjutsments (required), adjustedDate (optional)].">
         if observationDate -> adjustedDate is absent
         then observationDate -> unadjustedDate exists and dateAdjustments exists
+
+    condition ScheduleIsDateOrPeriod: <"Specifies a choice between a schedule made of date series via observationDate, else a schedule made of period series via observationPeriod."> // FORK
+    required choice observationDate, observationPeriod
+
+type ObservationPeriodSchedule: <"Specifies manufactured period (mostly used when period are irregular, thus unlikely calculable as periodic fixed period in series based on frequency parameters)."> // FORK
+         [metadata key]
+
+    startDate AdjustableOrRelativeDate (1..1) <"The start date of the schedule.">
+    endDate AdjustableOrRelativeDate (1..1) <"The end date of the schedule.">
+    numberOfObservationDates int (0..1) <"The number of observation dates between observation start date and observation end date.">
 
 type ObservationDate: <"Specifies a single date on which market observations take place and specifies optional associated weighting.">
     [metadata key]
@@ -174,13 +256,20 @@ type ObservationDate: <"Specifies a single date on which market observations tak
         required choice unadjustedDate, adjustedDate
 
 type ObservationTerms: <"Class containing terms that are associated with observing a price/benchmark/index across either single or multiple observations. ">
+        [metadata key] // FORK_2
 
+    bespokeExpression BespokeExpression (0..1) // FORK
     pricingTime BusinessCenterTime (0..1) <"Defines time in respect to a business calendar location that the price/benchmark/index is observed">
     pricingTimeType TimeTypeEnum (0..1) <"The enumerated values to specify points in the day when option exercise and valuation can occur.">
+        [deprecated]
+    observationTime TimeTypeEnum (0..1) <"The enumerated values to specify points in the day when option exercise and valuation can occur."> // FORK
+    observationMethod DeterminationMethodEnum (0..1) <"The enumerated values to specify the method according to which an amount or a date is determined."> // FORK
     informationSource FxSpotRateSource (0..1) <"The information source where a published or displayed market rate will be obtained, e.g. Telerate Page 3750.">
     precision Rounding (0..1) <"Defines rounding rules and precision to be used in the rounding of observations.">
     calculationPeriodDates CalculationPeriodDates (0..1) <"Defines parameters used to generate the calculation period dates schedule, including the specification of any initial or final stub calculation periods. A calculation period schedule consists of an optional initial stub calculation period, one or more regular calculation periods and an optional final stub calculation period. In the absence of any initial or final stub calculation periods, the regular part of the calculation period schedule is assumed to be between the effective date and the termination date. No implicit stubs are allowed, i.e. stubs must be explicitly specified using an appropriate combination of firstPeriodStartDate, firstRegularPeriodStartDate and lastRegularPeriodEndDate.">
+        [metadata address] // FORK
     observable Observable (0..1) <"Specifies the object to be observed for a price, it could be an asset or a reference.">
+         [deprecated]
     observationDates ObservationDates (1..1) <"Describes date details for a set of observation dates in parametric or non-parametric form.">
     numberOfObservationDates int (0..1) <"The number of observation dates between observation start date and observation end date.">
 
