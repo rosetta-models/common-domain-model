@@ -4,6 +4,7 @@ import cdm.event.common.TradeState;
 import cdm.event.workflow.WorkflowStep;
 import com.regnosys.rosetta.common.postprocess.qualify.QualificationReport;
 import com.regnosys.rosetta.common.validation.ValidationReport;
+import com.regnosys.rosetta.common.util.ClassPathUtils;
 import org.finos.cdm.example.processors.AbstractProcessorTest;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -12,12 +13,12 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.jar.JarFile;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
@@ -61,7 +62,7 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
      * @throws IOException If the input resources cannot be located or read.
      */
     @Test
-    void tradeStateProcessesPerformanceMetrics() throws IOException, URISyntaxException {
+    void tradeStateProcessesPerformanceMetrics() throws IOException {
 
         LOGGER.info("Collecting product-based (TradeState) performance metrics...");
         // Lists to hold performance metrics
@@ -69,13 +70,8 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
         final List<PerformanceMetric> validationMetrics = new ArrayList<>();
         final List<PerformanceMetric> qualificationMetrics = new ArrayList<>();
 
-        // Locate the resources (sample JSON files) within the project dependencies
-        URL url = this.getClass().getClassLoader().getResource(tradeStateTestPackSamples);
-        assertNotNull(url, tradeStateTestPackSamples + " should be resolvable through project dependencies");
-
         // Iterate through each file entry in the specified directory within the jar file
-        Files.walk(Path.of(url.toURI()))
-                .filter(entry -> entry.toString().endsWith(".json"))
+        ClassPathUtils.findPathsFromClassPath(Collections.singletonList(tradeStateTestPackSamples), ".*\\.json", Optional.empty(), this.getClass().getClassLoader())
                 .forEach(entry -> {
                     // Create builders to track serialization and validation metrics
                     PerformanceMetric.PerformanceMetricBuilder serializationMetricBuilder = PerformanceMetric.PerformanceMetricBuilder.newInstance();
@@ -83,11 +79,9 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
                     PerformanceMetric.PerformanceMetricBuilder qualificationMetricBuilder = PerformanceMetric.PerformanceMetricBuilder.newInstance();
 
                     try {
-
                         // Deserialize the JSON file into a TradeState object
-                        File ins = entry.toFile();
                         serializationMetricBuilder.start();
-                        TradeState deserialized = resolveReferences(mapper.readValue(ins, TradeState.class));
+                        TradeState deserialized = resolveReferences(mapper.readValue(entry.toUri().toURL(), TradeState.class));
                         serializationMetricBuilder.end();
                         assertNotNull(deserialized); // Ensure deserialization was successful
 
@@ -150,7 +144,7 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
      * @throws IOException If the input resources cannot be located or read.
      */
     @Test
-    void workflowStepProcessesPerformanceMetrics() throws IOException, URISyntaxException {
+    void workflowStepProcessesPerformanceMetrics() throws IOException {
 
         LOGGER.info("Collecting event-based (WofklowStep) performance metrics...");
 
@@ -160,14 +154,8 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
         final List<PerformanceMetric> qualificationMetrics = new ArrayList<>();
         final List<PerformanceMetric> stateTransitionMetrics = new ArrayList<>();
 
-        // Locate the resources (sample JSON files) within the project dependencies
-        URL url = this.getClass().getClassLoader().getResource(workflowStepTestPackSamples);
-        assertNotNull(url, workflowStepTestPackSamples + " should be resolvable through project dependencies");
-
-
         // Iterate through each file entry in the specified directory within the jar file
-        Files.walk(Path.of(url.toURI()))
-                .filter(entry -> entry.toString().endsWith(".json"))
+        ClassPathUtils.findPathsFromClassPath(Collections.singletonList(workflowStepTestPackSamples), ".*\\.json", Optional.empty(), this.getClass().getClassLoader())
                 .forEach(entry -> {
                     // Create builders to track performance metrics
                     PerformanceMetric.PerformanceMetricBuilder serializationMetricBuilder = PerformanceMetric.PerformanceMetricBuilder.newInstance();
@@ -177,9 +165,8 @@ final class ProcessorPerformanceTests extends AbstractProcessorTest {
 
                     try {
                         // Deserialize the JSON file into a WorkflowStep object
-                        File ins = entry.toFile();
                         serializationMetricBuilder.start();
-                        WorkflowStep deserialized = resolveReferences(mapper.readValue(ins, WorkflowStep.class));
+                        WorkflowStep deserialized = resolveReferences(mapper.readValue(entry.toUri().toURL(), WorkflowStep.class));
                         serializationMetricBuilder.end();
                         assertNotNull(deserialized); // Ensure deserialization was successful
 
