@@ -2036,7 +2036,6 @@ func Create_OnDemandInterestPaymentPrimitiveInstruction: <"An instruction to mak
                     scheduledTransfer:
                         ScheduledTransfer {
                             transferType: NetInterest,
-                            ...
                         },
                     ...
                 },
