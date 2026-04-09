@@ -277,12 +277,12 @@ func MapTerminationToPrimitiveInstruction:
 func MapTransferInstruction:
     inputs:
         fpmlPaymentList fpml.Payment (0..*)
-        cdmFeeType UnscheduledTransferEnum (0..1)
+        transferType UnscheduledTransferEnum (0..1)
     output:
         transferInstruction TransferInstruction (0..1)
     set transferInstruction:
         TransferInstruction {
-            transferState: MapPaymentListToTransferStateList(fpmlPaymentList, cdmFeeType)
+            transferState: MapPaymentListToTransferStateList(fpmlPaymentList, transferType)
         }
 
 func MapQuantityChangeInstruction:
