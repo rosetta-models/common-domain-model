@@ -103,11 +103,11 @@ func PriceQuantityTriangulation: <"Defines all the scenarios which triangulation
         if tradeLots count > 0
         then tradeLots
                 extract [
-                    if item -> priceQuantity -> price -> priceType contains PriceTypeEnum -> AssetPrice or item -> priceQuantity -> price -> priceType
-                        contains  PriceTypeEnum -> ExchangeRate
+                    if priceQuantity -> price -> priceType contains AssetPrice or priceQuantity -> price -> priceType
+                        contains  ExchangeRate
                     then CashPriceQuantityNoOfUnitsTriangulation(
-                                item -> priceQuantity -> quantity,
-                                item -> priceQuantity -> price
+                                priceQuantity -> quantity,
+                                priceQuantity -> price
                             )
                     else True
                 ] all = True
