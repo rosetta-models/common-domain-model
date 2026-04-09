@@ -219,7 +219,7 @@ func MapTaxonomySourceEnum:
         then EMIR
         else Other
 
-func MapFeeTypeEnumWithScheme:
+func MapUnscheduledTransferEnumWithScheme:
     inputs:
         value string (0..1)
         scheme string (0..1)

@@ -1,9 +1,6 @@
 package org.finos.cdm.functions;
 
-import cdm.base.datetime.AdjustableOrAdjustedOrRelativeDate;
-import cdm.base.datetime.AdjustableOrRelativeDate;
-import cdm.base.datetime.Period;
-import cdm.base.datetime.PeriodEnum;
+import cdm.base.datetime.*;
 import cdm.base.math.*;
 import cdm.base.math.metafields.FieldWithMetaNonNegativeQuantitySchedule;
 import cdm.base.staticdata.asset.common.*;
@@ -34,6 +31,7 @@ import cdm.product.collateral.Collateral;
 import cdm.product.common.schedule.CalculationPeriodDates;
 import cdm.product.common.settlement.ScheduledTransferEnum;
 import cdm.product.common.settlement.SettlementDate;
+import cdm.product.common.settlement.UnscheduledTransferEnum;
 import cdm.product.template.NonTransferableProduct;
 import cdm.product.template.Payout;
 import cdm.product.template.TradableProduct;
@@ -51,6 +49,7 @@ import com.google.inject.util.Modules;
 import com.regnosys.rosetta.common.postprocess.WorkflowPostProcessor;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.testing.TestingExpectationUtil;
+import com.regnosys.testing.transform.TransformTestResult;
 import com.rosetta.model.lib.meta.Key;
 import com.rosetta.model.lib.process.PostProcessor;
 import com.rosetta.model.lib.records.Date;
@@ -125,8 +124,8 @@ public class FunctionInputCreator {
             System.exit(1);
         }
     }
-    
-    public void run( Optional<Path> writeBasePath) throws Exception {
+
+    public void run(Optional<Path> writeBasePath) throws Exception {
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
                     @Override
@@ -409,7 +408,7 @@ public class FunctionInputCreator {
                 getTerminationVanillaSwapTradeState(),
                 Date.of(2019, 12, 12),
                 "functions/business-event/quantity-change/full-termination-vanilla-swap-func-input.json",
-                quantityChangeInstruction, FeeTypeEnum.TERMINATION);
+                quantityChangeInstruction, UnscheduledTransferEnum.TERMINATION);
     }
 
     private void updateFullTerminationEquitySwapFuncInputJson() throws IOException {
@@ -431,7 +430,7 @@ public class FunctionInputCreator {
                 tradeState,
                 Date.of(2021, 11, 11),
                 "functions/business-event/quantity-change/full-termination-equity-swap-func-input.json",
-                quantityChangeInstruction, FeeTypeEnum.TERMINATION);
+                quantityChangeInstruction, UnscheduledTransferEnum.TERMINATION);
     }
 
     private void updatePartialTerminationVanillaSwapFuncInputJson() throws IOException {
@@ -451,7 +450,7 @@ public class FunctionInputCreator {
                 getTerminationVanillaSwapTradeState(),
                 Date.of(2019, 12, 12),
                 "functions/business-event/quantity-change/partial-termination-vanilla-swap-func-input.json",
-                quantityChangeInstruction, FeeTypeEnum.PARTIAL_TERMINATION);
+                quantityChangeInstruction, UnscheduledTransferEnum.PARTIAL_TERMINATION);
     }
 
     private void updatePartialTerminationEquitySwapFuncInputJson() throws IOException {
@@ -478,7 +477,7 @@ public class FunctionInputCreator {
                 getQuantityChangeEquitySwapTradeStateWithMultipleTradeLots(),
                 Date.of(2021, 11, 11),
                 "functions/business-event/quantity-change/partial-termination-equity-swap-func-input.json",
-                quantityChangeInstruction, FeeTypeEnum.PARTIAL_TERMINATION);
+                quantityChangeInstruction, UnscheduledTransferEnum.PARTIAL_TERMINATION);
     }
 
     private void updateIncreaseEquitySwapFuncInputJson() throws IOException {
@@ -638,7 +637,7 @@ public class FunctionInputCreator {
                 .setBeforeValue(tradeState)
                 .setPrimitiveInstruction(PrimitiveInstruction.builder()
                         .setQuantityChange(quantityChangeInstructions)
-                        .setTransfer(getTransferInstruction(tradeState, FeeTypeEnum.INCREASE)));
+                        .setTransfer(getTransferInstruction(tradeState, UnscheduledTransferEnum.INCREASE)));
         reKey(instructionBuilder);
         return new CreateBusinessEventInput(
                 Lists.newArrayList(instructionBuilder.build()),
@@ -647,7 +646,7 @@ public class FunctionInputCreator {
                 null);
     }
 
-    private void updateQuantityChangeFuncInputJson(TradeState tradeState, Date eventDate, String expectedJsonPath, QuantityChangeInstruction quantityChangeInstruction, FeeTypeEnum feeType) throws IOException {
+    private void updateQuantityChangeFuncInputJson(TradeState tradeState, Date eventDate, String expectedJsonPath, QuantityChangeInstruction quantityChangeInstruction, UnscheduledTransferEnum feeType) throws IOException {
         Instruction instructionBuilder = Instruction.builder()
                 .setBeforeValue(tradeState)
                 .setPrimitiveInstruction(PrimitiveInstruction.builder()
@@ -664,7 +663,7 @@ public class FunctionInputCreator {
     }
 
 
-    private TransferInstruction.TransferInstructionBuilder getTransferInstruction(TradeState tradeState, FeeTypeEnum feeType) {
+    private TransferInstruction.TransferInstructionBuilder getTransferInstruction(TradeState tradeState, UnscheduledTransferEnum feeType) {
         Trade trade = tradeState.getTrade();
         List<? extends Counterparty> counterparties = trade.getCounterparty();
         UnitType currencyUnitType = trade.getTradeLot().stream()
@@ -680,17 +679,25 @@ public class FunctionInputCreator {
         return TransferInstruction.builder()
                 .addTransferState(TransferState.builder()
                         .setTransfer(Transfer.builder()
-                                .setTransferExpression(TransferExpression.builder()
-                                        .setUnscheduledTransfer(UnscheduledTransfer.builder()
-                                                .setPriceTransfer(feeType).build()))
-                                .setPayerReceiver(PartyReferencePayerReceiver.builder()
-                                        .setPayerPartyReference(counterparties.get(0).getPartyReference())
-                                        .setReceiverPartyReference(counterparties.get(1).getPartyReference()))
-                                .setQuantity(NonNegativeQuantity.builder()
-                                        .setValue(BigDecimal.valueOf(2000.00))
-                                        .setUnit(currencyUnitType))
-                                .setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                                        .setAdjustedDateValue(trade.getTradeDate().getValue()))));
+                                .setUnscheduledTransfer(UnscheduledTransfer.builder()
+                                        .setPayerReceiver(PartyReferencePayerReceiver.builder()
+                                                .setPayerPartyReference(counterparties.get(0).getPartyReference())
+                                                .setReceiverPartyReference(counterparties.get(1).getPartyReference()))
+                                        .setQuantity(NonNegativeQuantity.builder()
+                                                .setValue(BigDecimal.valueOf(2000.00))
+                                                .setUnit(currencyUnitType))
+                                        .setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+                                                .setAdjustedDateValue(trade.getTradeDate().getValue())))
+                                .setScheduledTransfer(ScheduledTransfer.builder()
+                                        .setPayerReceiver(PartyReferencePayerReceiver.builder()
+                                                .setPayerPartyReference(counterparties.get(0).getPartyReference())
+                                                .setReceiverPartyReference(counterparties.get(1).getPartyReference()))
+                                        .setQuantity(NonNegativeQuantity.builder()
+                                                .setValue(BigDecimal.valueOf(2000.00))
+                                                .setUnit(currencyUnitType))
+                                        .setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+                                                .setAdjustedDateValue(trade.getTradeDate().getValue())))
+                        ));
     }
 
     private void updateCompressionFuncInputJson() throws IOException {
@@ -1283,15 +1290,18 @@ public class FunctionInputCreator {
 
         TransferInstruction.TransferInstructionBuilder transferInstructionBuilder = TransferInstruction.builder();
 
-        Transfer.TransferBuilder transferBuilder = transferInstructionBuilder
-                .getOrCreateTransferState(0)
-                .getOrCreateTransfer();
+        TransferState.TransferStateBuilder transferStateBuilder = transferInstructionBuilder
+                .getOrCreateTransferState(0);
 
-        transferBuilder.getOrCreatePayerReceiver()
+        Transfer.TransferBuilder transferBuilder = transferStateBuilder.getOrCreateTransfer();
+
+        ScheduledTransfer.ScheduledTransferBuilder scheduledTransferBuilder = transferBuilder.getOrCreateScheduledTransfer();
+
+        scheduledTransferBuilder.getOrCreatePayerReceiver()
                 .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1").build())
                 .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2").build());
 
-        transferBuilder.getOrCreateQuantity()
+        scheduledTransferBuilder.getOrCreateQuantity()
                 .setValue(BigDecimal.valueOf(2000))
                 .setUnit(UnitType.builder()
                         .setCurrency(FieldWithMetaString.builder()
@@ -1300,12 +1310,10 @@ public class FunctionInputCreator {
                                 .build())
                         .build());
 
-        transferBuilder.getOrCreateSettlementDate()
+        scheduledTransferBuilder.getOrCreateSettlementDate()
                 .setAdjustedDateValue(Date.of(2019, 4, 3));
 
-        transferBuilder.getOrCreateTransferExpression()
-                .getOrCreateScheduledTransfer()
-                .setTransferType(ScheduledTransferEnum.EXERCISE);
+        scheduledTransferBuilder.setTransferType(ScheduledTransferEnum.EXERCISE);
 
         Instruction.InstructionBuilder instructions = Instruction.builder()
                 .setBeforeValue(afterTradeState)
@@ -1387,12 +1395,16 @@ public class FunctionInputCreator {
         Transfer.TransferBuilder transferBuilder = transferInstructionBuilder
                 .getOrCreateTransferState(0)
                 .getOrCreateTransfer();
+        TransferBase.TransferBaseBuilder transfer = transferBuilder.getScheduledTransfer();
+        if (transfer == null) {
+           transfer = transferBuilder.getUnscheduledTransfer();
+        }
 
-        transferBuilder.getOrCreatePayerReceiver()
+        transfer.getOrCreatePayerReceiver()
                 .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
                 .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
 
-        transferBuilder.getOrCreateQuantity()
+        transfer.getOrCreateQuantity()
                 .setValue(BigDecimal.valueOf(2000))
                 .setUnit(UnitType.builder()
                         .setCurrency(FieldWithMetaString.builder()
@@ -1401,13 +1413,9 @@ public class FunctionInputCreator {
                         )
                 );
 
-        transferBuilder.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+        transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
                 .setAdjustedDateValue(Date.of(2019, 4, 3))
         );
-
-        transferBuilder.getOrCreateTransferExpression()
-                .getOrCreateScheduledTransfer()
-                .setTransferType(ScheduledTransferEnum.EXERCISE);
 
         Instruction.InstructionBuilder instruction = Instruction.builder()
                 .setBeforeValue(afterTradeState)

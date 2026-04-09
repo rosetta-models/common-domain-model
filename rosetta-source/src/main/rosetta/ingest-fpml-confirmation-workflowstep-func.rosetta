@@ -139,7 +139,9 @@ func MapAmendmentToPrimitiveInstruction:
 
     alias payment: amendment -> tradeAlterationPaymentModel -> payment
     alias feeType:
-        if payment exists then UnscheduledTransferEnum -> Renegotiation else empty
+        if payment exists
+        then UnscheduledTransferEnum -> Renegotiation
+        else empty
 
     set primitiveInstruction:
         PrimitiveInstruction {

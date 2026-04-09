@@ -15,7 +15,7 @@ import cdm.event.workflow.EventTimestamp;
 import cdm.event.workflow.EventTimestampQualificationEnum;
 import cdm.event.workflow.WorkflowStep;
 import cdm.event.workflow.functions.Create_AcceptedWorkflowStepFromInstruction;
-import cdm.observable.asset.FeeTypeEnum;
+import cdm.observable.asset.UnscheduledTransferEnum;
 import cdm.observable.asset.PriceQuantity;
 import jakarta.inject.Inject;
 import org.finos.cdm.example.AbstractExampleTest;
@@ -95,7 +95,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
                         .setTransfer(Transfer.builder()
                                 .setTransferExpression(TransferExpression.builder()
                                         .setUnscheduledTransfer(UnscheduledTransfer.builder()
-                                                .setPriceTransfer(FeeTypeEnum.PARTIAL_TERMINATION).build()))
+                                                .setPriceTransfer(UnscheduledTransferEnum.PARTIAL_TERMINATION).build()))
                                 .setPayerReceiver(PartyReferencePayerReceiver.builder()
                                         .setPayerPartyReference(payerPartyReference)
                                         .setReceiverPartyReference(receiverPartyReference))
@@ -172,7 +172,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
 
         // Assert transfer fee
         Transfer transfer = afterTradeState.getTransferHistory().get(0).getTransfer();
-        assertEquals(FeeTypeEnum.PARTIAL_TERMINATION, transfer.getTransferExpression().getUnscheduledTransfer().getPriceTransfer());
+        assertEquals(UnscheduledTransferEnum.PARTIAL_TERMINATION, transfer.getTransferExpression().getUnscheduledTransfer().getPriceTransfer());
         assertEquals(new BigDecimal("2000.0"), transfer.getQuantity().getValue());
     }
 
