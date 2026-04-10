@@ -42,7 +42,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-dividend-swaps/div-ex04-dividend-swap-option-transaction-supplement.json",
     "assertions" : {
       "inputPathCount" : 100,
-      "outputPathCount" : 99,
+      "outputPathCount" : 98,
       "modelValidationFailures" : 13,
       "runtimeError" : false
     }
@@ -53,7 +53,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-dividend-swaps/div-ex05-dividend-swap-option-gs-example.json",
     "assertions" : {
       "inputPathCount" : 110,
-      "outputPathCount" : 104,
+      "outputPathCount" : 103,
       "modelValidationFailures" : 14,
       "runtimeError" : false
     }
@@ -64,7 +64,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-dividend-swaps/div-ex06-dividend-swap-option-pred-clearing.json",
     "assertions" : {
       "inputPathCount" : 116,
-      "outputPathCount" : 107,
+      "outputPathCount" : 106,
       "modelValidationFailures" : 16,
       "runtimeError" : false
     }

@@ -1396,26 +1396,44 @@ public class FunctionInputCreator {
                 .getOrCreateTransferState(0)
                 .getOrCreateTransfer();
         TransferBase.TransferBaseBuilder transfer = transferBuilder.getScheduledTransfer();
-        if (transfer == null) {
-           transfer = transferBuilder.getUnscheduledTransfer();
+        if (transfer != null) {
+
+            transfer.getOrCreatePayerReceiver()
+                    .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
+                    .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
+
+            transfer.getOrCreateQuantity()
+                    .setValue(BigDecimal.valueOf(2000))
+                    .setUnit(UnitType.builder()
+                            .setCurrency(FieldWithMetaString.builder()
+                                    .setValue("EUR")
+                                    .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217"))
+                            )
+                    );
+
+            transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+                    .setAdjustedDateValue(Date.of(2019, 4, 3))
+            );
+        } else if (transferBuilder.getUnscheduledTransfer() != null) {
+            transfer = transferBuilder.getUnscheduledTransfer();
+
+            transfer.getOrCreatePayerReceiver()
+                    .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
+                    .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
+
+            transfer.getOrCreateQuantity()
+                    .setValue(BigDecimal.valueOf(2000))
+                    .setUnit(UnitType.builder()
+                            .setCurrency(FieldWithMetaString.builder()
+                                    .setValue("EUR")
+                                    .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217"))
+                            )
+                    );
+
+            transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+                    .setAdjustedDateValue(Date.of(2019, 4, 3))
+            );
         }
-
-        transfer.getOrCreatePayerReceiver()
-                .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
-                .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
-
-        transfer.getOrCreateQuantity()
-                .setValue(BigDecimal.valueOf(2000))
-                .setUnit(UnitType.builder()
-                        .setCurrency(FieldWithMetaString.builder()
-                                .setValue("EUR")
-                                .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217"))
-                        )
-                );
-
-        transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                .setAdjustedDateValue(Date.of(2019, 4, 3))
-        );
 
         Instruction.InstructionBuilder instruction = Instruction.builder()
                 .setBeforeValue(afterTradeState)

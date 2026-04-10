@@ -26,43 +26,71 @@
       "transfer" : {
         "transferState" : [ {
           "transfer" : {
-            "quantity" : {
-              "value" : 2000,
-              "unit" : {
-                "currency" : {
-                  "value" : "USD",
-                  "meta" : {
-                    "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+            "ScheduledTransfer" : {
+              "quantity" : {
+                "value" : 2000,
+                "unit" : {
+                  "currency" : {
+                    "value" : "USD",
+                    "meta" : {
+                      "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                    }
                   }
                 }
-              }
-            },
-            "settlementDate" : {
-              "adjustedDate" : {
-                "value" : "2018-04-01",
-                "meta" : {
-                  "globalKey" : "3f1101"
+              },
+              "settlementDate" : {
+                "adjustedDate" : {
+                  "value" : "2018-04-01",
+                  "meta" : {
+                    "globalKey" : "3f1101"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "35d0b164",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "6f99094c",
+                  "externalReference" : "party2"
                 }
               }
             },
-            "payerReceiver" : {
-              "payerPartyReference" : {
-                "globalReference" : "35d0b164",
-                "externalReference" : "party1"
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 2000,
+                "unit" : {
+                  "currency" : {
+                    "value" : "USD",
+                    "meta" : {
+                      "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                    }
+                  }
+                }
               },
-              "receiverPartyReference" : {
-                "globalReference" : "6f99094c",
-                "externalReference" : "party2"
-              }
-            },
-            "transferExpression" : {
-              "unscheduledTransfer" : {
-                "priceTransfer" : "Termination"
+              "settlementDate" : {
+                "adjustedDate" : {
+                  "value" : "2018-04-01",
+                  "meta" : {
+                    "globalKey" : "3f1101"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "35d0b164",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "6f99094c",
+                  "externalReference" : "party2"
+                }
               }
             }
           },
           "meta" : {
-            "globalKey" : "f043a3b3"
+            "globalKey" : "e269d060"
           }
         } ]
       }
@@ -1401,50 +1429,78 @@
     },
     "transferHistory" : [ {
       "transfer" : {
-        "quantity" : {
-          "value" : 2000,
-          "unit" : {
-            "currency" : {
-              "value" : "USD",
-              "meta" : {
-                "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+        "ScheduledTransfer" : {
+          "quantity" : {
+            "value" : 2000,
+            "unit" : {
+              "currency" : {
+                "value" : "USD",
+                "meta" : {
+                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                }
               }
             }
-          }
-        },
-        "settlementDate" : {
-          "adjustedDate" : {
-            "value" : "2018-04-01",
-            "meta" : {
-              "globalKey" : "3f1101"
+          },
+          "settlementDate" : {
+            "adjustedDate" : {
+              "value" : "2018-04-01",
+              "meta" : {
+                "globalKey" : "3f1101"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "35d0b164",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "6f99094c",
+              "externalReference" : "party2"
             }
           }
         },
-        "payerReceiver" : {
-          "payerPartyReference" : {
-            "globalReference" : "35d0b164",
-            "externalReference" : "party1"
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 2000,
+            "unit" : {
+              "currency" : {
+                "value" : "USD",
+                "meta" : {
+                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                }
+              }
+            }
           },
-          "receiverPartyReference" : {
-            "globalReference" : "6f99094c",
-            "externalReference" : "party2"
-          }
-        },
-        "transferExpression" : {
-          "unscheduledTransfer" : {
-            "priceTransfer" : "Termination"
+          "settlementDate" : {
+            "adjustedDate" : {
+              "value" : "2018-04-01",
+              "meta" : {
+                "globalKey" : "3f1101"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "35d0b164",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "6f99094c",
+              "externalReference" : "party2"
+            }
           }
         }
       },
       "meta" : {
-        "globalKey" : "f043a3b3"
+        "globalKey" : "e269d060"
       }
     } ],
     "meta" : {
-      "globalKey" : "f37c52a9"
+      "globalKey" : "1e20842a"
     }
   } ],
   "meta" : {
-    "globalKey" : "a077fc7a"
+    "globalKey" : "41000686"
   }
 }

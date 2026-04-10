@@ -752,64 +752,61 @@
           },
           "transferHistory" : [ {
             "transfer" : {
-              "quantity" : {
-                "value" : 100000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "EUR"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 100000,
+                  "unit" : {
+                    "currency" : {
                       "value" : "EUR"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "unadjustedDate" : "2018-04-01",
-                "dateAdjustments" : {
-                  "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "value" : "EUTA"
-                    } ],
-                    "meta" : {
-                      "globalKey" : "20a71d"
                     }
-                  },
-                  "meta" : {
-                    "globalKey" : "211dc30c"
                   }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "4f018eab",
-                  "externalReference" : "party1"
                 },
-                "receiverPartyReference" : {
-                  "globalReference" : "be64334",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferExpression" : {
-                "unscheduledTransfer" : {
-                  "priceTransfer" : "Premium"
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "EUR"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "settlementDate" : {
+                  "unadjustedDate" : "2018-04-01",
+                  "dateAdjustments" : {
+                    "businessDayConvention" : "FOLLOWING",
+                    "businessCenters" : {
+                      "businessCenter" : [ {
+                        "value" : "EUTA"
+                      } ],
+                      "meta" : {
+                        "globalKey" : "20a71d"
+                      }
+                    },
+                    "meta" : {
+                      "globalKey" : "211dc30c"
+                    }
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "4f018eab",
+                    "externalReference" : "party1"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "be64334",
+                    "externalReference" : "party2"
+                  }
                 }
               }
             },
             "meta" : {
-              "globalKey" : "e987df4"
+              "globalKey" : "84efbd63"
             }
           } ],
           "meta" : {
-            "globalKey" : "94998a30"
+            "globalKey" : "52fea89f"
           }
         }
       }
@@ -845,6 +842,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "401b2375"
+    "globalKey" : "300c8c66"
   }
 }

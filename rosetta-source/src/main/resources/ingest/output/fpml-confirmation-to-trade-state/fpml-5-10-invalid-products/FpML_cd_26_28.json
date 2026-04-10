@@ -427,39 +427,36 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 20000000,
-        "unit" : {
-          "currency" : {
-            "value" : "USD"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 20000000,
+          "unit" : {
+            "currency" : {
               "value" : "USD"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "unadjustedDate" : "2002-12-03"
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Upfront"
+            }
+          }
+        },
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "USD"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "unadjustedDate" : "2002-12-03"
         }
       }
     },
     "meta" : {
-      "globalKey" : "5a0e6f5"
+      "globalKey" : "c845b6b9"
     }
   } ],
   "meta" : {
-    "globalKey" : "9290ec2d"
+    "globalKey" : "1d65a9f1"
   }
 }

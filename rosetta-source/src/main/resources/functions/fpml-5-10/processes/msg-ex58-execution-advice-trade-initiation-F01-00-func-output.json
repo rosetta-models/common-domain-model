@@ -419,47 +419,44 @@
           },
           "transferHistory" : [ {
             "transfer" : {
-              "quantity" : {
-                "value" : 387300,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 387300,
+                  "unit" : {
+                    "currency" : {
                       "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "a2b7933d",
-                  "externalReference" : "_fund"
+                    }
+                  }
                 },
-                "receiverPartyReference" : {
-                  "globalReference" : "90c956c2",
-                  "externalReference" : "_broker"
-                }
-              },
-              "transferExpression" : {
-                "unscheduledTransfer" : {
-                  "priceTransfer" : "Upfront"
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "a2b7933d",
+                    "externalReference" : "_fund"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "90c956c2",
+                    "externalReference" : "_broker"
+                  }
                 }
               }
             },
             "meta" : {
-              "globalKey" : "10361058"
+              "globalKey" : "f020c036"
             }
           } ],
           "meta" : {
-            "globalKey" : "f7dd153d"
+            "globalKey" : "a31dba5b"
           }
         }
       }
@@ -879,55 +876,52 @@
       },
       "transferHistory" : [ {
         "transfer" : {
-          "quantity" : {
-            "value" : 387300,
-            "unit" : {
-              "currency" : {
-                "value" : "USD"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 387300,
+              "unit" : {
+                "currency" : {
                   "value" : "USD"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "a2b7933d",
-              "externalReference" : "_fund"
+                }
+              }
             },
-            "receiverPartyReference" : {
-              "globalReference" : "90c956c2",
-              "externalReference" : "_broker"
-            }
-          },
-          "transferExpression" : {
-            "unscheduledTransfer" : {
-              "priceTransfer" : "Upfront"
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "a2b7933d",
+                "externalReference" : "_fund"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "90c956c2",
+                "externalReference" : "_broker"
+              }
             }
           }
         },
         "meta" : {
-          "globalKey" : "10361058"
+          "globalKey" : "f020c036"
         }
       } ],
       "meta" : {
-        "globalKey" : "b3359003"
+        "globalKey" : "75c22ea1"
       }
     } ],
     "meta" : {
-      "globalKey" : "430f1b31"
+      "globalKey" : "4e881a2d"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "3c1114bc"
+    "globalReference" : "900c73e4"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1051,6 +1045,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "723b8a48"
+    "globalKey" : "79f92ccc"
   }
 }

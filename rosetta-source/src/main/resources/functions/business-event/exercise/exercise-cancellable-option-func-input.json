@@ -26,45 +26,7 @@
       },
       "transfer" : {
         "transferState" : [ {
-          "transfer" : {
-            "quantity" : {
-              "value" : 2000,
-              "unit" : {
-                "currency" : {
-                  "value" : "EUR",
-                  "meta" : {
-                    "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
-                  }
-                }
-              }
-            },
-            "settlementDate" : {
-              "adjustedDate" : {
-                "value" : "2019-04-03",
-                "meta" : {
-                  "globalKey" : "3f1903"
-                }
-              }
-            },
-            "payerReceiver" : {
-              "payerPartyReference" : {
-                "globalReference" : "4f018eab",
-                "externalReference" : "party1"
-              },
-              "receiverPartyReference" : {
-                "globalReference" : "be64334",
-                "externalReference" : "party2"
-              }
-            },
-            "transferExpression" : {
-              "scheduledTransfer" : {
-                "transferType" : "Exercise"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "1ba4a17d"
-          }
+          "transfer" : { }
         } ]
       }
     },

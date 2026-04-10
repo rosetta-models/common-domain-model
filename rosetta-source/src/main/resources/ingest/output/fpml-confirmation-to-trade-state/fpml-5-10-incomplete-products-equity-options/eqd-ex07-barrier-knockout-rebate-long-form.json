@@ -342,55 +342,52 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 400000,
-        "unit" : {
-          "currency" : {
-            "value" : "EUR"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 400000,
+          "unit" : {
+            "currency" : {
               "value" : "EUR"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "unadjustedDate" : "2002-07-30",
-        "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "meta" : {
-            "globalKey" : "24a738"
+            }
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "33f59568",
-          "externalReference" : "party2"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "33f59567",
-          "externalReference" : "party1"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Premium"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "EUR"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "unadjustedDate" : "2002-07-30",
+          "dateAdjustments" : {
+            "businessDayConvention" : "NONE",
+            "meta" : {
+              "globalKey" : "24a738"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "33f59568",
+            "externalReference" : "party2"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "33f59567",
+            "externalReference" : "party1"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "1cbd1f4a"
+      "globalKey" : "36a08bcd"
     }
   } ],
   "meta" : {
-    "globalKey" : "233f8bdd"
+    "globalKey" : "e5eb0120"
   }
 }

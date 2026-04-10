@@ -621,63 +621,60 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 1242.71,
-        "unit" : {
-          "currency" : {
-            "value" : "USD"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 1242.71,
+          "unit" : {
+            "currency" : {
               "value" : "USD"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "unadjustedDate" : "2017-07-18",
-        "dateAdjustments" : {
-          "businessDayConvention" : "MODFOLLOWING",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "value" : "USNY"
-            } ],
-            "meta" : {
-              "globalKey" : "27e4e9"
             }
-          },
-          "meta" : {
-            "globalKey" : "3662e8ba"
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "a14913ec",
-          "externalReference" : "party2"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "b6bdbfc2",
-          "externalReference" : "party1"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Upfront"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "USD"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "unadjustedDate" : "2017-07-18",
+          "dateAdjustments" : {
+            "businessDayConvention" : "MODFOLLOWING",
+            "businessCenters" : {
+              "businessCenter" : [ {
+                "value" : "USNY"
+              } ],
+              "meta" : {
+                "globalKey" : "27e4e9"
+              }
+            },
+            "meta" : {
+              "globalKey" : "3662e8ba"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "a14913ec",
+            "externalReference" : "party2"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "b6bdbfc2",
+            "externalReference" : "party1"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "c00acf5e"
+      "globalKey" : "91ddcef0"
     }
   } ],
   "meta" : {
-    "globalKey" : "b27e0c47"
+    "globalKey" : "b69d3219"
   }
 }

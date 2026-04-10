@@ -614,60 +614,57 @@
       "transfer" : {
         "transferState" : [ {
           "transfer" : {
-            "quantity" : {
-              "value" : 100000,
-              "unit" : {
-                "currency" : {
-                  "value" : "EUR"
-                }
-              }
-            },
-            "asset" : {
-              "Cash" : {
-                "identifier" : [ {
-                  "identifier" : {
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 100000,
+                "unit" : {
+                  "currency" : {
                     "value" : "EUR"
-                  },
-                  "identifierType" : "CurrencyCode"
-                } ],
-                "assetType" : "Cash"
-              }
-            },
-            "settlementDate" : {
-              "unadjustedDate" : "2000-08-30",
-              "dateAdjustments" : {
-                "businessDayConvention" : "FOLLOWING",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "value" : "EUTA"
-                  } ],
-                  "meta" : {
-                    "globalKey" : "20a71d"
                   }
-                },
-                "meta" : {
-                  "globalKey" : "211dc30c"
                 }
-              }
-            },
-            "payerReceiver" : {
-              "payerPartyReference" : {
-                "globalReference" : "46e3b435",
-                "externalReference" : "party1"
               },
-              "receiverPartyReference" : {
-                "globalReference" : "46e3b454",
-                "externalReference" : "party2"
-              }
-            },
-            "transferExpression" : {
-              "unscheduledTransfer" : {
-                "priceTransfer" : "Premium"
+              "asset" : {
+                "Cash" : {
+                  "identifier" : [ {
+                    "identifier" : {
+                      "value" : "EUR"
+                    },
+                    "identifierType" : "CurrencyCode"
+                  } ],
+                  "assetType" : "Cash"
+                }
+              },
+              "settlementDate" : {
+                "unadjustedDate" : "2000-08-30",
+                "dateAdjustments" : {
+                  "businessDayConvention" : "FOLLOWING",
+                  "businessCenters" : {
+                    "businessCenter" : [ {
+                      "value" : "EUTA"
+                    } ],
+                    "meta" : {
+                      "globalKey" : "20a71d"
+                    }
+                  },
+                  "meta" : {
+                    "globalKey" : "211dc30c"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "46e3b435",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "46e3b454",
+                  "externalReference" : "party2"
+                }
               }
             }
           },
           "meta" : {
-            "globalKey" : "ed60b1ac"
+            "globalKey" : "a722e4ab"
           }
         } ]
       }
@@ -1294,67 +1291,64 @@
     },
     "transferHistory" : [ {
       "transfer" : {
-        "quantity" : {
-          "value" : 100000,
-          "unit" : {
-            "currency" : {
-              "value" : "EUR"
-            }
-          }
-        },
-        "asset" : {
-          "Cash" : {
-            "identifier" : [ {
-              "identifier" : {
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 100000,
+            "unit" : {
+              "currency" : {
                 "value" : "EUR"
-              },
-              "identifierType" : "CurrencyCode"
-            } ],
-            "assetType" : "Cash"
-          }
-        },
-        "settlementDate" : {
-          "unadjustedDate" : "2000-08-30",
-          "dateAdjustments" : {
-            "businessDayConvention" : "FOLLOWING",
-            "businessCenters" : {
-              "businessCenter" : [ {
-                "value" : "EUTA"
-              } ],
-              "meta" : {
-                "globalKey" : "20a71d"
               }
-            },
-            "meta" : {
-              "globalKey" : "211dc30c"
             }
-          }
-        },
-        "payerReceiver" : {
-          "payerPartyReference" : {
-            "globalReference" : "46e3b435",
-            "externalReference" : "party1"
           },
-          "receiverPartyReference" : {
-            "globalReference" : "46e3b454",
-            "externalReference" : "party2"
-          }
-        },
-        "transferExpression" : {
-          "unscheduledTransfer" : {
-            "priceTransfer" : "Premium"
+          "asset" : {
+            "Cash" : {
+              "identifier" : [ {
+                "identifier" : {
+                  "value" : "EUR"
+                },
+                "identifierType" : "CurrencyCode"
+              } ],
+              "assetType" : "Cash"
+            }
+          },
+          "settlementDate" : {
+            "unadjustedDate" : "2000-08-30",
+            "dateAdjustments" : {
+              "businessDayConvention" : "FOLLOWING",
+              "businessCenters" : {
+                "businessCenter" : [ {
+                  "value" : "EUTA"
+                } ],
+                "meta" : {
+                  "globalKey" : "20a71d"
+                }
+              },
+              "meta" : {
+                "globalKey" : "211dc30c"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "46e3b435",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "46e3b454",
+              "externalReference" : "party2"
+            }
           }
         }
       },
       "meta" : {
-        "globalKey" : "ed60b1ac"
+        "globalKey" : "a722e4ab"
       }
     } ],
     "meta" : {
-      "globalKey" : "bfff4434"
+      "globalKey" : "dfd47933"
     }
   } ],
   "meta" : {
-    "globalKey" : "7125d42f"
+    "globalKey" : "47cc9ead"
   }
 }

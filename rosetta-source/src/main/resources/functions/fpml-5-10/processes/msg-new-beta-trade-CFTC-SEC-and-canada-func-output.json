@@ -889,56 +889,53 @@
           },
           "transferHistory" : [ {
             "transfer" : {
-              "quantity" : {
-                "value" : 1000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 1000,
+                  "unit" : {
+                    "currency" : {
                       "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "unadjustedDate" : "2009-03-28",
-                "adjustedDate" : {
-                  "value" : "2009-03-30",
-                  "meta" : {
-                    "globalKey" : "3ec8de"
+                    }
                   }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "dd0bba9a",
-                  "externalReference" : "party1"
                 },
-                "receiverPartyReference" : {
-                  "globalReference" : "a3344cf2",
-                  "externalReference" : "clearing-svc"
-                }
-              },
-              "transferExpression" : {
-                "unscheduledTransfer" : {
-                  "priceTransfer" : "Upfront"
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "settlementDate" : {
+                  "unadjustedDate" : "2009-03-28",
+                  "adjustedDate" : {
+                    "value" : "2009-03-30",
+                    "meta" : {
+                      "globalKey" : "3ec8de"
+                    }
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "dd0bba9a",
+                    "externalReference" : "party1"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "a3344cf2",
+                    "externalReference" : "clearing-svc"
+                  }
                 }
               }
             },
             "meta" : {
-              "globalKey" : "83aaaa5c"
+              "globalKey" : "34ae04b2"
             }
           } ],
           "meta" : {
-            "globalKey" : "8dc55464"
+            "globalKey" : "dbfb90ba"
           }
         }
       }
@@ -1827,64 +1824,61 @@
       },
       "transferHistory" : [ {
         "transfer" : {
-          "quantity" : {
-            "value" : 1000,
-            "unit" : {
-              "currency" : {
-                "value" : "USD"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 1000,
+              "unit" : {
+                "currency" : {
                   "value" : "USD"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "settlementDate" : {
-            "unadjustedDate" : "2009-03-28",
-            "adjustedDate" : {
-              "value" : "2009-03-30",
-              "meta" : {
-                "globalKey" : "3ec8de"
+                }
               }
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "dd0bba9a",
-              "externalReference" : "party1"
             },
-            "receiverPartyReference" : {
-              "globalReference" : "a3344cf2",
-              "externalReference" : "clearing-svc"
-            }
-          },
-          "transferExpression" : {
-            "unscheduledTransfer" : {
-              "priceTransfer" : "Upfront"
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "settlementDate" : {
+              "unadjustedDate" : "2009-03-28",
+              "adjustedDate" : {
+                "value" : "2009-03-30",
+                "meta" : {
+                  "globalKey" : "3ec8de"
+                }
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "dd0bba9a",
+                "externalReference" : "party1"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "a3344cf2",
+                "externalReference" : "clearing-svc"
+              }
             }
           }
         },
         "meta" : {
-          "globalKey" : "83aaaa5c"
+          "globalKey" : "34ae04b2"
         }
       } ],
       "meta" : {
-        "globalKey" : "68240bc0"
+        "globalKey" : "ca186f16"
       }
     } ],
     "meta" : {
-      "globalKey" : "7c1a8ea7"
+      "globalKey" : "f7bcf053"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "3d0aabce"
+    "globalReference" : "f4ff35c"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2163,6 +2157,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "ad375558"
+    "globalKey" : "17d0072c"
   }
 }

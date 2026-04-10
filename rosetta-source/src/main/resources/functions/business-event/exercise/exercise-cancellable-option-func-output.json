@@ -20,49 +20,6 @@
           }
         } ],
         "direction" : "Replace"
-      },
-      "transfer" : {
-        "transferState" : [ {
-          "transfer" : {
-            "quantity" : {
-              "value" : 2000,
-              "unit" : {
-                "currency" : {
-                  "value" : "EUR",
-                  "meta" : {
-                    "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
-                  }
-                }
-              }
-            },
-            "settlementDate" : {
-              "adjustedDate" : {
-                "value" : "2019-04-03",
-                "meta" : {
-                  "globalKey" : "3f1903"
-                }
-              }
-            },
-            "payerReceiver" : {
-              "payerPartyReference" : {
-                "globalReference" : "175cdec0",
-                "externalReference" : "party1"
-              },
-              "receiverPartyReference" : {
-                "globalReference" : "be64334",
-                "externalReference" : "party2"
-              }
-            },
-            "transferExpression" : {
-              "scheduledTransfer" : {
-                "transferType" : "Exercise"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "c4b1946f"
-          }
-        } ]
       }
     },
     "before" : {
@@ -714,7 +671,6 @@
       }
     }
   } ],
-  "eventQualifier" : "Exercise",
   "after" : [ {
     "trade" : {
       "product" : {
@@ -1357,52 +1313,11 @@
         "globalKey" : "c282f3c6"
       }
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "quantity" : {
-          "value" : 2000,
-          "unit" : {
-            "currency" : {
-              "value" : "EUR",
-              "meta" : {
-                "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
-              }
-            }
-          }
-        },
-        "settlementDate" : {
-          "adjustedDate" : {
-            "value" : "2019-04-03",
-            "meta" : {
-              "globalKey" : "3f1903"
-            }
-          }
-        },
-        "payerReceiver" : {
-          "payerPartyReference" : {
-            "globalReference" : "175cdec0",
-            "externalReference" : "party1"
-          },
-          "receiverPartyReference" : {
-            "globalReference" : "be64334",
-            "externalReference" : "party2"
-          }
-        },
-        "transferExpression" : {
-          "scheduledTransfer" : {
-            "transferType" : "Exercise"
-          }
-        }
-      },
-      "meta" : {
-        "globalKey" : "c4b1946f"
-      }
-    } ],
     "meta" : {
-      "globalKey" : "4f73e9"
+      "globalKey" : "c282f3c6"
     }
   } ],
   "meta" : {
-    "globalKey" : "f58ff834"
+    "globalKey" : "76ce2d6a"
   }
 }

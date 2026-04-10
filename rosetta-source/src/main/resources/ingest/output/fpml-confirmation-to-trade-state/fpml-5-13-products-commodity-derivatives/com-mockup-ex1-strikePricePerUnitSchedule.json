@@ -394,55 +394,52 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 452500.00,
-        "unit" : {
-          "currency" : {
-            "value" : "USD"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 452500.00,
+          "unit" : {
+            "currency" : {
               "value" : "USD"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "unadjustedDate" : "2021-12-07",
-        "dateAdjustments" : {
-          "businessDayConvention" : "NotApplicable",
-          "meta" : {
-            "globalKey" : "3a4b88ab"
+            }
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "90d00cc3",
-          "externalReference" : "PartyA"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "90cf9865",
-          "externalReference" : "PartyB"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Premium"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "USD"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "unadjustedDate" : "2021-12-07",
+          "dateAdjustments" : {
+            "businessDayConvention" : "NotApplicable",
+            "meta" : {
+              "globalKey" : "3a4b88ab"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "90d00cc3",
+            "externalReference" : "PartyA"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "90cf9865",
+            "externalReference" : "PartyB"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "c626e08e"
+      "globalKey" : "fd5bf109"
     }
   } ],
   "meta" : {
-    "globalKey" : "efbf5bc0"
+    "globalKey" : "dd90bb"
   }
 }

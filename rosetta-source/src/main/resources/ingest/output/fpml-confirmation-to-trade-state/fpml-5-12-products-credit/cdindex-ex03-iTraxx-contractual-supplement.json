@@ -301,46 +301,43 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 17000,
-        "unit" : {
-          "currency" : {
-            "value" : "EUR"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 17000,
+          "unit" : {
+            "currency" : {
               "value" : "EUR"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "4a735be4",
-          "externalReference" : "party2"
+            }
+          }
         },
-        "receiverPartyReference" : {
-          "globalReference" : "67920033",
-          "externalReference" : "party1"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Upfront"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "EUR"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "4a735be4",
+            "externalReference" : "party2"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "67920033",
+            "externalReference" : "party1"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "dd7a8e19"
+      "globalKey" : "b9ae0215"
     }
   } ],
   "meta" : {
-    "globalKey" : "ee6d0743"
+    "globalKey" : "ac60bdbf"
   }
 }

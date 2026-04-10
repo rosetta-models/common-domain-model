@@ -305,69 +305,66 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 30000.00,
-        "unit" : {
-          "currency" : {
-            "value" : "USD"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 30000.00,
+          "unit" : {
+            "currency" : {
               "value" : "USD"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "relativeDate" : {
-          "periodMultiplier" : 2,
-          "period" : "D",
-          "meta" : {
-            "globalKey" : "63993681"
-          },
-          "dayType" : "Business",
-          "businessDayConvention" : "NONE",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "value" : "USNY"
-            } ],
-            "meta" : {
-              "globalKey" : "27e4e9"
             }
-          },
-          "dateRelativeTo" : {
-            "globalReference" : "3ee2cf",
-            "externalReference" : "TradeDate"
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "4041c228",
-          "externalReference" : "PartyB"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "a1b94faa",
-          "externalReference" : "PartyA"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Premium"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "USD"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "relativeDate" : {
+            "periodMultiplier" : 2,
+            "period" : "D",
+            "meta" : {
+              "globalKey" : "63993681"
+            },
+            "dayType" : "Business",
+            "businessDayConvention" : "NONE",
+            "businessCenters" : {
+              "businessCenter" : [ {
+                "value" : "USNY"
+              } ],
+              "meta" : {
+                "globalKey" : "27e4e9"
+              }
+            },
+            "dateRelativeTo" : {
+              "globalReference" : "3ee2cf",
+              "externalReference" : "TradeDate"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "4041c228",
+            "externalReference" : "PartyB"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "a1b94faa",
+            "externalReference" : "PartyA"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "8b163116"
+      "globalKey" : "8cf9ad81"
     }
   } ],
   "meta" : {
-    "globalKey" : "6fe1320a"
+    "globalKey" : "e6b85b75"
   }
 }

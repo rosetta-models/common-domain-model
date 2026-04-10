@@ -251,7 +251,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-ex18-standard-north-american-corp.json",
     "assertions" : {
       "inputPathCount" : 47,
-      "outputPathCount" : 77,
+      "outputPathCount" : 76,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -262,7 +262,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-ex19-cdx-index-option-pred-clearing.json",
     "assertions" : {
       "inputPathCount" : 85,
-      "outputPathCount" : 119,
+      "outputPathCount" : 118,
       "modelValidationFailures" : 7,
       "runtimeError" : false
     }
@@ -284,7 +284,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-swaption-1.json",
     "assertions" : {
       "inputPathCount" : 101,
-      "outputPathCount" : 127,
+      "outputPathCount" : 126,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -295,7 +295,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cd-swaption-2.json",
     "assertions" : {
       "inputPathCount" : 121,
-      "outputPathCount" : 142,
+      "outputPathCount" : 141,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -306,7 +306,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex01-cdx.json",
     "assertions" : {
       "inputPathCount" : 37,
-      "outputPathCount" : 63,
+      "outputPathCount" : 62,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -317,7 +317,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex02-iTraxx.json",
     "assertions" : {
       "inputPathCount" : 35,
-      "outputPathCount" : 51,
+      "outputPathCount" : 50,
       "modelValidationFailures" : 6,
       "runtimeError" : false
     }
@@ -328,7 +328,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex03-iTraxx-contractual-supplement.json",
     "assertions" : {
       "inputPathCount" : 49,
-      "outputPathCount" : 70,
+      "outputPathCount" : 69,
       "modelValidationFailures" : 7,
       "runtimeError" : false
     }
@@ -339,7 +339,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex04-iBoxx.json",
     "assertions" : {
       "inputPathCount" : 48,
-      "outputPathCount" : 84,
+      "outputPathCount" : 83,
       "modelValidationFailures" : 7,
       "runtimeError" : false
     }
@@ -350,7 +350,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex05-SP.json",
     "assertions" : {
       "inputPathCount" : 49,
-      "outputPathCount" : 75,
+      "outputPathCount" : 74,
       "modelValidationFailures" : 7,
       "runtimeError" : false
     }
@@ -361,7 +361,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdindex-ex06-iBoxx-ois.json",
     "assertions" : {
       "inputPathCount" : 47,
-      "outputPathCount" : 82,
+      "outputPathCount" : 81,
       "modelValidationFailures" : 7,
       "runtimeError" : false
     }
@@ -416,7 +416,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cds-index-tranche.json",
     "assertions" : {
       "inputPathCount" : 37,
-      "outputPathCount" : 53,
+      "outputPathCount" : 52,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }
@@ -471,7 +471,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/cdx-index-option.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 112,
+      "outputPathCount" : 111,
       "modelValidationFailures" : 6,
       "runtimeError" : false
     }
@@ -482,7 +482,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-credit-derivatives/itraxx-index-option.json",
     "assertions" : {
       "inputPathCount" : 96,
-      "outputPathCount" : 122,
+      "outputPathCount" : 121,
       "modelValidationFailures" : 5,
       "runtimeError" : false
     }

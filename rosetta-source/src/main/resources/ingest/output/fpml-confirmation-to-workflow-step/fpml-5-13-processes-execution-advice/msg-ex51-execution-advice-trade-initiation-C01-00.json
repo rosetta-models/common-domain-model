@@ -428,47 +428,44 @@
           },
           "transferHistory" : [ {
             "transfer" : {
-              "quantity" : {
-                "value" : 387300.00,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 387300.00,
+                  "unit" : {
+                    "currency" : {
                       "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "a2b7933d",
-                  "externalReference" : "_fund"
+                    }
+                  }
                 },
-                "receiverPartyReference" : {
-                  "globalReference" : "90c956c2",
-                  "externalReference" : "_broker"
-                }
-              },
-              "transferExpression" : {
-                "unscheduledTransfer" : {
-                  "priceTransfer" : "Upfront"
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "a2b7933d",
+                    "externalReference" : "_fund"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "90c956c2",
+                    "externalReference" : "_broker"
+                  }
                 }
               }
             },
             "meta" : {
-              "globalKey" : "7ef09fab"
+              "globalKey" : "b591a9c3"
             }
           } ],
           "meta" : {
-            "globalKey" : "ee9554db"
+            "globalKey" : "1041eaf3"
           }
         }
       }
@@ -504,6 +501,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "5a4b4c2a"
+    "globalKey" : "91e27512"
   }
 }

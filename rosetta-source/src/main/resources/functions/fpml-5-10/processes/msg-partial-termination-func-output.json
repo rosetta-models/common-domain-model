@@ -32,51 +32,48 @@
         "transfer" : {
           "transferState" : [ {
             "transfer" : {
-              "quantity" : {
-                "value" : 12345,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 12345,
+                  "unit" : {
+                    "currency" : {
                       "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2011-06-03",
-                  "meta" : {
-                    "globalKey" : "3ed983"
+                    }
                   }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "71969616",
-                  "externalReference" : "party1"
                 },
-                "receiverPartyReference" : {
-                  "globalReference" : "67e3087d",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferExpression" : {
-                "unscheduledTransfer" : {
-                  "priceTransfer" : "Termination"
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "settlementDate" : {
+                  "adjustedDate" : {
+                    "value" : "2011-06-03",
+                    "meta" : {
+                      "globalKey" : "3ed983"
+                    }
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "71969616",
+                    "externalReference" : "party1"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "67e3087d",
+                    "externalReference" : "party2"
+                  }
                 }
               }
             },
             "meta" : {
-              "globalKey" : "81a428f5"
+              "globalKey" : "1050538f"
             }
           } ]
         }
@@ -1446,63 +1443,60 @@
       },
       "transferHistory" : [ {
         "transfer" : {
-          "quantity" : {
-            "value" : 12345,
-            "unit" : {
-              "currency" : {
-                "value" : "USD"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 12345,
+              "unit" : {
+                "currency" : {
                   "value" : "USD"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "settlementDate" : {
-            "adjustedDate" : {
-              "value" : "2011-06-03",
-              "meta" : {
-                "globalKey" : "3ed983"
+                }
               }
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "71969616",
-              "externalReference" : "party1"
             },
-            "receiverPartyReference" : {
-              "globalReference" : "67e3087d",
-              "externalReference" : "party2"
-            }
-          },
-          "transferExpression" : {
-            "unscheduledTransfer" : {
-              "priceTransfer" : "Termination"
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "settlementDate" : {
+              "adjustedDate" : {
+                "value" : "2011-06-03",
+                "meta" : {
+                  "globalKey" : "3ed983"
+                }
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "71969616",
+                "externalReference" : "party1"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "67e3087d",
+                "externalReference" : "party2"
+              }
             }
           }
         },
         "meta" : {
-          "globalKey" : "81a428f5"
+          "globalKey" : "1050538f"
         }
       } ],
       "meta" : {
-        "globalKey" : "9cc69be"
+        "globalKey" : "71f43298"
       }
     } ],
     "meta" : {
-      "globalKey" : "7ef5d6dc"
+      "globalKey" : "5fda6d5c"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "c315865f"
+    "globalReference" : "b7ae6ebf"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1647,6 +1641,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "c26f275b"
+    "globalKey" : "aa20db"
   }
 }

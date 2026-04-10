@@ -553,61 +553,58 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 600000,
-        "unit" : {
-          "currency" : {
-            "value" : "EUR"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 600000,
+          "unit" : {
+            "currency" : {
               "value" : "EUR"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "relativeDate" : {
-          "periodMultiplier" : 3,
-          "period" : "D",
-          "meta" : {
-            "globalKey" : "968fbf5"
-          },
-          "dayType" : "Business",
-          "businessDayConvention" : "NONE",
-          "dateRelativeTo" : {
-            "globalReference" : "3eb050",
-            "externalReference" : "d4536d"
+            }
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "b6bdbfc2",
-          "externalReference" : "party1"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "a14913ec",
-          "externalReference" : "party2"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Premium"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "EUR"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "relativeDate" : {
+            "periodMultiplier" : 3,
+            "period" : "D",
+            "meta" : {
+              "globalKey" : "968fbf5"
+            },
+            "dayType" : "Business",
+            "businessDayConvention" : "NONE",
+            "dateRelativeTo" : {
+              "globalReference" : "3eb050",
+              "externalReference" : "d4536d"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "b6bdbfc2",
+            "externalReference" : "party1"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "a14913ec",
+            "externalReference" : "party2"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "1f871427"
+      "globalKey" : "9fa50c10"
     }
   } ],
   "meta" : {
-    "globalKey" : "ddb07ec"
+    "globalKey" : "237d2d15"
   }
 }

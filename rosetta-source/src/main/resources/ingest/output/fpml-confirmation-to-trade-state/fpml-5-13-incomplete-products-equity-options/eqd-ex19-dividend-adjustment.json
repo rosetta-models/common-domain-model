@@ -343,55 +343,52 @@
   },
   "transferHistory" : [ {
     "transfer" : {
-      "quantity" : {
-        "value" : 405000,
-        "unit" : {
-          "currency" : {
-            "value" : "EUR"
-          }
-        }
-      },
-      "asset" : {
-        "Cash" : {
-          "identifier" : [ {
-            "identifier" : {
+      "UnscheduledTransfer" : {
+        "quantity" : {
+          "value" : 405000,
+          "unit" : {
+            "currency" : {
               "value" : "EUR"
-            },
-            "identifierType" : "CurrencyCode"
-          } ],
-          "assetType" : "Cash"
-        }
-      },
-      "settlementDate" : {
-        "unadjustedDate" : "2006-08-14",
-        "dateAdjustments" : {
-          "businessDayConvention" : "NONE",
-          "meta" : {
-            "globalKey" : "24a738"
+            }
           }
-        }
-      },
-      "payerReceiver" : {
-        "payerPartyReference" : {
-          "globalReference" : "33f59568",
-          "externalReference" : "PartyB"
         },
-        "receiverPartyReference" : {
-          "globalReference" : "33f59567",
-          "externalReference" : "jb2890"
-        }
-      },
-      "transferExpression" : {
-        "unscheduledTransfer" : {
-          "priceTransfer" : "Premium"
+        "asset" : {
+          "Cash" : {
+            "identifier" : [ {
+              "identifier" : {
+                "value" : "EUR"
+              },
+              "identifierType" : "CurrencyCode"
+            } ],
+            "assetType" : "Cash"
+          }
+        },
+        "settlementDate" : {
+          "unadjustedDate" : "2006-08-14",
+          "dateAdjustments" : {
+            "businessDayConvention" : "NONE",
+            "meta" : {
+              "globalKey" : "24a738"
+            }
+          }
+        },
+        "payerReceiver" : {
+          "payerPartyReference" : {
+            "globalReference" : "33f59568",
+            "externalReference" : "PartyB"
+          },
+          "receiverPartyReference" : {
+            "globalReference" : "33f59567",
+            "externalReference" : "jb2890"
+          }
         }
       }
     },
     "meta" : {
-      "globalKey" : "70bb3d9b"
+      "globalKey" : "42fa771c"
     }
   } ],
   "meta" : {
-    "globalKey" : "1c92c6cd"
+    "globalKey" : "c926a4ce"
   }
 }
