@@ -9,7 +9,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/bond-option.json",
     "assertions" : {
       "inputPathCount" : 65,
-      "outputPathCount" : 71,
+      "outputPathCount" : 72,
       "modelValidationFailures" : 4,
       "runtimeError" : false
     }
@@ -75,7 +75,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex04-arrears-stepup-fee-swap.json",
     "assertions" : {
       "inputPathCount" : 89,
-      "outputPathCount" : 112,
+      "outputPathCount" : 113,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -130,7 +130,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex09-euro-swaption-explicit.json",
     "assertions" : {
       "inputPathCount" : 106,
-      "outputPathCount" : 132,
+      "outputPathCount" : 133,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -141,7 +141,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex10-euro-swaption-relative.json",
     "assertions" : {
       "inputPathCount" : 113,
-      "outputPathCount" : 133,
+      "outputPathCount" : 134,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -152,7 +152,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex11-euro-swaption-partial-auto-ex.json",
     "assertions" : {
       "inputPathCount" : 111,
-      "outputPathCount" : 133,
+      "outputPathCount" : 134,
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
@@ -163,7 +163,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex12-euro-swaption-straddle-cash.json",
     "assertions" : {
       "inputPathCount" : 122,
-      "outputPathCount" : 145,
+      "outputPathCount" : 146,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }

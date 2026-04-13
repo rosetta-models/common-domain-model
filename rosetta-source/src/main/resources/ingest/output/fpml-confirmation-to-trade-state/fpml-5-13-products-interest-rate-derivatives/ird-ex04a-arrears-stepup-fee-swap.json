@@ -684,14 +684,15 @@
             "globalReference" : "eb26c8f",
             "externalReference" : "partyA"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "f6282a18"
+      "globalKey" : "ebd35d36"
     }
   } ],
   "meta" : {
-    "globalKey" : "cde56d96"
+    "globalKey" : "bbe8978"
   }
 }

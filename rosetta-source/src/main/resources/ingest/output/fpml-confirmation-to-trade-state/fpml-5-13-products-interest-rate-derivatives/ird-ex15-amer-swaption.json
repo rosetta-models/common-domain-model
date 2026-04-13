@@ -760,14 +760,15 @@
             "globalReference" : "33f59568",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "a2fe2e40"
+      "globalKey" : "d497f3f7"
     }
   } ],
   "meta" : {
-    "globalKey" : "d1a71c37"
+    "globalKey" : "7b0cc4e0"
   }
 }

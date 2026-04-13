@@ -800,14 +800,15 @@
             "globalReference" : "1b3745e1",
             "externalReference" : "partyB"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "a6670272"
+      "globalKey" : "3e49a605"
     }
   } ],
   "meta" : {
-    "globalKey" : "3b7b7952"
+    "globalKey" : "4bc40b25"
   }
 }

@@ -411,14 +411,15 @@
             "globalReference" : "ad2b4ce5",
             "externalReference" : "partyB"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "3e1e484a"
+      "globalKey" : "a2a10544"
     }
   } ],
   "meta" : {
-    "globalKey" : "2f123364"
+    "globalKey" : "d02a7d6a"
   }
 }

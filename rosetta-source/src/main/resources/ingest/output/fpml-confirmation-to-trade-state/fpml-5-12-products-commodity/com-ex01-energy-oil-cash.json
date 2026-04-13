@@ -437,14 +437,15 @@
             "globalReference" : "cb671845",
             "externalReference" : "PartyA"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "6d864fe6"
+      "globalKey" : "5b140711"
     }
   } ],
   "meta" : {
-    "globalKey" : "64cfafd9"
+    "globalKey" : "4cf6a57e"
   }
 }

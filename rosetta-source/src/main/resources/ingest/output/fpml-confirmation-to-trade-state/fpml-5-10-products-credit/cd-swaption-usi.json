@@ -664,14 +664,15 @@
             "globalReference" : "4abe1874",
             "externalReference" : "t76heo4"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "4670695b"
+      "globalKey" : "9f6d1c3c"
     }
   } ],
   "meta" : {
-    "globalKey" : "17f52e20"
+    "globalKey" : "fe80f017"
   }
 }

@@ -614,14 +614,15 @@
             "globalReference" : "33f59567",
             "externalReference" : "Party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "49fe7bde"
+      "globalKey" : "da15a19"
     }
   } ],
   "meta" : {
-    "globalKey" : "2b760462"
+    "globalKey" : "5b1ae215"
   }
 }

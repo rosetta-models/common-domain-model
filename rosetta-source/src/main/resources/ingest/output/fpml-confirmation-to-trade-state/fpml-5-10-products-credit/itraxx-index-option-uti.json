@@ -597,14 +597,15 @@
             "globalReference" : "a14913ec",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "9fa50c10"
+      "globalKey" : "6cccd027"
     }
   } ],
   "meta" : {
-    "globalKey" : "237d2d15"
+    "globalKey" : "63f8cfc2"
   }
 }

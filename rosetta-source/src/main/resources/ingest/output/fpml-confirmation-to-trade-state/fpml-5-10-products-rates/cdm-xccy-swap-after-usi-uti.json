@@ -1015,15 +1015,16 @@
             "globalReference" : "a14913ec",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "1c610c04",
+      "globalKey" : "8cb6b8ca",
       "externalKey" : "SDB123-AB5.EUR.20180209.0"
     }
   } ],
   "meta" : {
-    "globalKey" : "8ed69404"
+    "globalKey" : "68f230ca"
   }
 }

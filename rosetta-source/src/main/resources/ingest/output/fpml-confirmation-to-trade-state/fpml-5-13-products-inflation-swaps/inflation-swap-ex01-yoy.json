@@ -595,14 +595,15 @@
             "globalReference" : "312ceee",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "69a7b866"
+      "globalKey" : "e84598a8"
     }
   } ],
   "meta" : {
-    "globalKey" : "7551e685"
+    "globalKey" : "51e12e69"
   }
 }

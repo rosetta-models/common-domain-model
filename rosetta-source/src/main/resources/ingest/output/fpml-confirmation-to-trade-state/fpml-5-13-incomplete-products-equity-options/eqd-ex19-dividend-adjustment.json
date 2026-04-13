@@ -381,14 +381,15 @@
             "globalReference" : "33f59567",
             "externalReference" : "jb2890"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "42fa771c"
+      "globalKey" : "3424c69b"
     }
   } ],
   "meta" : {
-    "globalKey" : "c926a4ce"
+    "globalKey" : "737e4f29"
   }
 }

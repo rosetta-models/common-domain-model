@@ -448,15 +448,16 @@
                     "globalReference" : "be64334",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "28921214"
+              "globalKey" : "6a674ba"
             }
           } ],
           "meta" : {
-            "globalKey" : "c568049b"
+            "globalKey" : "48ed313"
           }
         }
       }
@@ -492,6 +493,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "dbba2bcb"
+    "globalKey" : "b5c9a6b5"
   }
 }

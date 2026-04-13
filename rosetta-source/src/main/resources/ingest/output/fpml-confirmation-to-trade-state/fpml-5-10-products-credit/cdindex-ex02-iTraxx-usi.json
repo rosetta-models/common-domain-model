@@ -245,14 +245,15 @@
             "globalReference" : "1dd5dd49",
             "externalReference" : "z45rdfg"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "e8ae37"
+      "globalKey" : "39235cf7"
     }
   } ],
   "meta" : {
-    "globalKey" : "cdee33e8"
+    "globalKey" : "cce8d66"
   }
 }

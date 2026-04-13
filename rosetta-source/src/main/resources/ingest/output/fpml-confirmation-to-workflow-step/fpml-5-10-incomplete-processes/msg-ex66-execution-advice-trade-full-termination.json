@@ -60,11 +60,12 @@
                     "globalReference" : "add77cf8",
                     "externalReference" : "SKY"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "97201887",
+              "globalKey" : "5adb533d",
               "externalKey" : "TERMINATION_FEE"
             }
           } ]
@@ -226,6 +227,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "9aa2f1ca"
+    "globalKey" : "6eb272d6"
   }
 }

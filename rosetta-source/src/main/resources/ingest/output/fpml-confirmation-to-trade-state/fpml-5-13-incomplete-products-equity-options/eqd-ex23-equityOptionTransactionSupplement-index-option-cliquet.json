@@ -350,14 +350,15 @@
             "globalReference" : "5d661eaa",
             "externalReference" : "Party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "42649b7e"
+      "globalKey" : "21ff2e79"
     }
   } ],
   "meta" : {
-    "globalKey" : "f5f87dfa"
+    "globalKey" : "e0e79b7d"
   }
 }

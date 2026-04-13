@@ -89,11 +89,12 @@
                     "globalReference" : "10fb089c",
                     "externalReference" : "partyA"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "3e1e4c0a",
+              "globalKey" : "93a3901a",
               "externalKey" : "TERMINATION_FEE"
             }
           } ]
@@ -528,6 +529,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "6da9ab53"
+    "globalKey" : "b0c2112b"
   }
 }

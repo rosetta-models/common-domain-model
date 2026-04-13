@@ -68,11 +68,12 @@
                     "globalReference" : "a9df3432",
                     "externalReference" : "_fund"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "686a3e22",
+              "globalKey" : "b2d5e102",
               "externalKey" : "TERMINATION_FEE"
             }
           } ]
@@ -214,6 +215,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "ceed9413"
+    "globalKey" : "c805b92b"
   }
 }

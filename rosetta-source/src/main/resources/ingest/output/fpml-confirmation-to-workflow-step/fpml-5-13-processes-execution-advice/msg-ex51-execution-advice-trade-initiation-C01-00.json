@@ -457,15 +457,16 @@
                     "globalReference" : "90c956c2",
                     "externalReference" : "_broker"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "b591a9c3"
+              "globalKey" : "1999d2eb"
             }
           } ],
           "meta" : {
-            "globalKey" : "1041eaf3"
+            "globalKey" : "14f1b7bb"
           }
         }
       }
@@ -501,6 +502,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "91e27512"
+    "globalKey" : "1cdd1ba"
   }
 }

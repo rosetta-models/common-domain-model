@@ -383,14 +383,15 @@
             "globalReference" : "500a9d84",
             "externalReference" : "Party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "de37d6c3"
+      "globalKey" : "935bd4"
     }
   } ],
   "meta" : {
-    "globalKey" : "307f298f"
+    "globalKey" : "f7366288"
   }
 }

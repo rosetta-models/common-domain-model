@@ -627,14 +627,15 @@
             "globalReference" : "b6bdbfc2",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "f712d5c9"
+      "globalKey" : "83e27a5"
     }
   } ],
   "meta" : {
-    "globalKey" : "bb3ef87c"
+    "globalKey" : "c9965b52"
   }
 }

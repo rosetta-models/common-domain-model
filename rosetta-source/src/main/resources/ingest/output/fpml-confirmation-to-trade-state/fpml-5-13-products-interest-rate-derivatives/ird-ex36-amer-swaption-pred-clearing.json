@@ -792,14 +792,15 @@
             "globalReference" : "33f59568",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "a2fe2e40"
+      "globalKey" : "d497f3f7"
     }
   } ],
   "meta" : {
-    "globalKey" : "e2d6b7c3"
+    "globalKey" : "8fd09ad4"
   }
 }

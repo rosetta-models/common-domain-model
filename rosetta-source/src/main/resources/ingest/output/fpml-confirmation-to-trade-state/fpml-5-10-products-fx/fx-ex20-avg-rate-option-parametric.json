@@ -368,14 +368,15 @@
             "globalReference" : "4a5d2d9f",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "210a77b4"
+      "globalKey" : "1814d903"
     }
   } ],
   "meta" : {
-    "globalKey" : "44fc8d1d"
+    "globalKey" : "726570ba"
   }
 }

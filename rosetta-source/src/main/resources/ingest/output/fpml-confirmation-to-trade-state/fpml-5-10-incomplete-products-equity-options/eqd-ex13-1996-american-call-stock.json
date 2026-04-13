@@ -389,14 +389,15 @@
             "globalReference" : "33f59567",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "59c24abf"
+      "globalKey" : "f6576758"
     }
   } ],
   "meta" : {
-    "globalKey" : "3d9829f7"
+    "globalKey" : "8d3d6f20"
   }
 }

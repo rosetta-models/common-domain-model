@@ -797,14 +797,15 @@
             "globalReference" : "cd70d9a6",
             "externalReference" : "counterpartyA"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "809f70db"
+      "globalKey" : "b044eed3"
     }
   } ],
   "meta" : {
-    "globalKey" : "7192edd0"
+    "globalKey" : "ddc1107e"
   }
 }

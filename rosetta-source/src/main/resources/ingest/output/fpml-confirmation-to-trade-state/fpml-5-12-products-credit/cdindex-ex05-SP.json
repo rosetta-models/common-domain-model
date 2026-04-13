@@ -388,14 +388,15 @@
             "globalReference" : "e57f0887",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "3e359ded"
+      "globalKey" : "a5746401"
     }
   } ],
   "meta" : {
-    "globalKey" : "552296f3"
+    "globalKey" : "6c268bbb"
   }
 }

@@ -51,11 +51,11 @@
                   }
                 }
               },
-              "transferType" : "Coupon"
+              "transferType" : "NetInterest"
             }
           },
           "meta" : {
-            "globalKey" : "18c73b2d"
+            "globalKey" : "99d9e6b3"
           }
         } ]
       }

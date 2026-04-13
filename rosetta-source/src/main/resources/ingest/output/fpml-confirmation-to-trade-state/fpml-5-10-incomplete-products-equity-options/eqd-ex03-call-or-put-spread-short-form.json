@@ -377,14 +377,15 @@
             "globalReference" : "33f59567",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "c58f6cb"
+      "globalKey" : "96963ccc"
     }
   } ],
   "meta" : {
-    "globalKey" : "83ac4cff"
+    "globalKey" : "9adad18"
   }
 }

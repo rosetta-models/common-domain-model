@@ -330,14 +330,15 @@
             "globalReference" : "67920033",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "b9ae0215"
+      "globalKey" : "990884d9"
     }
   } ],
   "meta" : {
-    "globalKey" : "ac60bdbf"
+    "globalKey" : "fcad3e6f"
   }
 }

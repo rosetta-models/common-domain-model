@@ -53,7 +53,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex04-arrears-stepup-fee-swap.json",
     "assertions" : {
       "inputPathCount" : 89,
-      "outputPathCount" : 112,
+      "outputPathCount" : 113,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -64,7 +64,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex04a-arrears-stepup-fee-swap.json",
     "assertions" : {
       "inputPathCount" : 106,
-      "outputPathCount" : 133,
+      "outputPathCount" : 134,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -185,7 +185,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex09-euro-swaption-explicit.json",
     "assertions" : {
       "inputPathCount" : 106,
-      "outputPathCount" : 132,
+      "outputPathCount" : 133,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -196,7 +196,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex09a-euro-swaption-explicit.json",
     "assertions" : {
       "inputPathCount" : 109,
-      "outputPathCount" : 143,
+      "outputPathCount" : 144,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -207,7 +207,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex10-euro-swaption-relative.json",
     "assertions" : {
       "inputPathCount" : 113,
-      "outputPathCount" : 133,
+      "outputPathCount" : 134,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -218,7 +218,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex11-euro-swaption-partial-auto-ex.json",
     "assertions" : {
       "inputPathCount" : 111,
-      "outputPathCount" : 133,
+      "outputPathCount" : 134,
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
@@ -229,7 +229,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex12-euro-swaption-straddle-cash.json",
     "assertions" : {
       "inputPathCount" : 122,
-      "outputPathCount" : 145,
+      "outputPathCount" : 146,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -240,7 +240,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex13-euro-swaption-cash-with-cfs.json",
     "assertions" : {
       "inputPathCount" : 221,
-      "outputPathCount" : 232,
+      "outputPathCount" : 233,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -251,7 +251,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex14-berm-swaption.json",
     "assertions" : {
       "inputPathCount" : 116,
-      "outputPathCount" : 142,
+      "outputPathCount" : 143,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -262,7 +262,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex15-amer-swaption.json",
     "assertions" : {
       "inputPathCount" : 120,
-      "outputPathCount" : 146,
+      "outputPathCount" : 147,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -493,7 +493,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex36-amer-swaption-pred-clearing.json",
     "assertions" : {
       "inputPathCount" : 126,
-      "outputPathCount" : 153,
+      "outputPathCount" : 154,
       "modelValidationFailures" : 2,
       "runtimeError" : false
     }
@@ -636,7 +636,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex49-rfr-euro-swaption-cash.json",
     "assertions" : {
       "inputPathCount" : 126,
-      "outputPathCount" : 154,
+      "outputPathCount" : 155,
       "modelValidationFailures" : 8,
       "runtimeError" : false
     }
@@ -647,7 +647,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-interest-rate-derivatives/ird-ex50-rfr-euro-swaption-cleared-physical_with_met.json",
     "assertions" : {
       "inputPathCount" : 131,
-      "outputPathCount" : 158,
+      "outputPathCount" : 159,
       "modelValidationFailures" : 8,
       "runtimeError" : false
     }

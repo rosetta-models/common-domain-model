@@ -439,14 +439,15 @@
             "globalReference" : "44706731",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "16fa9db6"
+      "globalKey" : "e0297341"
     }
   } ],
   "meta" : {
-    "globalKey" : "fbf2c8d9"
+    "globalKey" : "9a36ac7e"
   }
 }

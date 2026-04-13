@@ -839,14 +839,15 @@
             "globalReference" : "eb26c8f",
             "externalReference" : "partyA"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "126079c1"
+      "globalKey" : "517f1896"
     }
   } ],
   "meta" : {
-    "globalKey" : "15129ef2"
+    "globalKey" : "a5119985"
   }
 }

@@ -84,11 +84,12 @@
                     "globalReference" : "411c1995",
                     "externalReference" : "party1"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "f42c39c5"
+              "globalKey" : "ae514329"
             }
           }, {
             "transfer" : {
@@ -129,11 +130,12 @@
                     "globalReference" : "67e3087d",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "8c582a5"
+              "globalKey" : "2ce11649"
             }
           }, {
             "transfer" : {
@@ -174,11 +176,12 @@
                     "globalReference" : "411c1995",
                     "externalReference" : "party1"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "ff178e42"
+              "globalKey" : "f1d294e2"
             }
           } ]
         }
@@ -882,6 +885,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "d2d5a921"
+    "globalKey" : "620bb07b"
   }
 }

@@ -768,11 +768,12 @@
                     "globalReference" : "101de221",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "b7be73cf"
+              "globalKey" : "5d064a5f"
             }
           }, {
             "transfer" : {
@@ -824,15 +825,16 @@
                     "globalReference" : "6102be73",
                     "externalReference" : "party1"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "6b74988e"
+              "globalKey" : "2014bd80"
             }
           } ],
           "meta" : {
-            "globalKey" : "28290195"
+            "globalKey" : "e24f8739"
           }
         }
       }
@@ -865,6 +867,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "e0c0b481"
+    "globalKey" : "4c5bc1d"
   }
 }

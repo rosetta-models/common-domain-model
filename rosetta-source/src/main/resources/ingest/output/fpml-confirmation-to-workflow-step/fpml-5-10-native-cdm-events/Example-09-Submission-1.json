@@ -763,15 +763,16 @@
                     "globalReference" : "be64334",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Premium"
               }
             },
             "meta" : {
-              "globalKey" : "e7e5d325"
+              "globalKey" : "2ca4ebb2"
             }
           } ],
           "meta" : {
-            "globalKey" : "639a0b25"
+            "globalKey" : "2777b3b2"
           }
         }
       }
@@ -807,6 +808,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "900d8bc6"
+    "globalKey" : "62773673"
   }
 }

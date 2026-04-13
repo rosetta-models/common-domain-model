@@ -291,14 +291,15 @@
             "globalReference" : "a84be2ec",
             "externalReference" : "ruytb"
           }
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "d5a22af9"
+      "globalKey" : "fb997875"
     }
   } ],
   "meta" : {
-    "globalKey" : "132bbd77"
+    "globalKey" : "6f4235b7"
   }
 }

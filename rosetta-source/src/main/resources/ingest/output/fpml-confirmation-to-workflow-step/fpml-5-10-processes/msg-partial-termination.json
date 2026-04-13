@@ -69,11 +69,12 @@
                     "globalReference" : "67e3087d",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "ff178a82"
+              "globalKey" : "f1d220a2"
             }
           } ]
         }
@@ -794,6 +795,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "b7ae6ebf"
+    "globalKey" : "f21e1067"
   }
 }

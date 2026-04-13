@@ -536,14 +536,15 @@
             "globalReference" : "a14913ec",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "efbb4510"
+      "globalKey" : "1f7db727"
     }
   } ],
   "meta" : {
-    "globalKey" : "bb2713e0"
+    "globalKey" : "c18bc257"
   }
 }

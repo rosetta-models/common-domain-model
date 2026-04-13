@@ -392,14 +392,15 @@
             "globalReference" : "2fb569c6",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "b3416332"
+      "globalKey" : "ccbb5d45"
     }
   } ],
   "meta" : {
-    "globalKey" : "902aeeb5"
+    "globalKey" : "8d034222"
   }
 }

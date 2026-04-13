@@ -360,14 +360,15 @@
             "globalReference" : "d53e12f6",
             "externalReference" : "partyB"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "303c48e2"
+      "globalKey" : "ef1d2d95"
     }
   } ],
   "meta" : {
-    "globalKey" : "5b3cfc02"
+    "globalKey" : "2432de75"
   }
 }

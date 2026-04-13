@@ -380,14 +380,15 @@
             "globalReference" : "33f59567",
             "externalReference" : "party1"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "36a08bcd"
+      "globalKey" : "b541480a"
     }
   } ],
   "meta" : {
-    "globalKey" : "e5eb0120"
+    "globalKey" : "ef457d17"
   }
 }

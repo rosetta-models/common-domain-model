@@ -445,14 +445,15 @@
             "globalReference" : "f0466d0f",
             "externalReference" : "partyB"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "7f17cc17"
+      "globalKey" : "7bb21100"
     }
   } ],
   "meta" : {
-    "globalKey" : "3ea00a0c"
+    "globalKey" : "ad3191ab"
   }
 }

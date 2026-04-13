@@ -449,14 +449,15 @@
         },
         "settlementDate" : {
           "unadjustedDate" : "2007-12-03"
-        }
+        },
+        "transferType" : "Upfront"
       }
     },
     "meta" : {
-      "globalKey" : "c845deb9"
+      "globalKey" : "5d6c3cb5"
     }
   } ],
   "meta" : {
-    "globalKey" : "1d65d1f1"
+    "globalKey" : "ac4ab07d"
   }
 }

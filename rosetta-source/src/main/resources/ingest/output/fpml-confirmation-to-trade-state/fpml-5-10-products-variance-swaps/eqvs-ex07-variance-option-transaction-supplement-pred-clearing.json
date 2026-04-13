@@ -504,14 +504,15 @@
             "globalReference" : "7766c429",
             "externalReference" : "partyB"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "659d614b"
+      "globalKey" : "65df224c"
     }
   } ],
   "meta" : {
-    "globalKey" : "de1fa5"
+    "globalKey" : "32b62f32"
   }
 }

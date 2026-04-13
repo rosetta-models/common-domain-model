@@ -332,14 +332,15 @@
             "globalReference" : "2fb569c6",
             "externalReference" : "partyY"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "98ffe979"
+      "globalKey" : "9ecd9fde"
     }
   } ],
   "meta" : {
-    "globalKey" : "be2392f7"
+    "globalKey" : "1e1f2620"
   }
 }

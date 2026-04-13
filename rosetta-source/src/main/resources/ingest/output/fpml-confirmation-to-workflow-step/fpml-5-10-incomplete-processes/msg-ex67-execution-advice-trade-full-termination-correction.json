@@ -60,11 +60,12 @@
                     "globalReference" : "98985a5b",
                     "externalReference" : "FIRST"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "7fabdde8",
+              "globalKey" : "83c839fc",
               "externalKey" : "TERMINATION_FEE"
             }
           } ]
@@ -226,6 +227,6 @@
   } ],
   "action" : "Correct",
   "meta" : {
-    "globalKey" : "c1b06706"
+    "globalKey" : "47827870"
   }
 }

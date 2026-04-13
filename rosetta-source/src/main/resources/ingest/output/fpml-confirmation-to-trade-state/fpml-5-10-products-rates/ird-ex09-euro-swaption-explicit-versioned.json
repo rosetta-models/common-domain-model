@@ -661,14 +661,15 @@
             "globalReference" : "46e3b454",
             "externalReference" : "party2"
           }
-        }
+        },
+        "transferType" : "Premium"
       }
     },
     "meta" : {
-      "globalKey" : "a2fe2e40"
+      "globalKey" : "d497f3f7"
     }
   } ],
   "meta" : {
-    "globalKey" : "78533e8b"
+    "globalKey" : "a9e4ed0c"
   }
 }
