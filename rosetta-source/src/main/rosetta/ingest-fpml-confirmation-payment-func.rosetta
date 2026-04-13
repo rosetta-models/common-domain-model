@@ -158,15 +158,16 @@ func MapPaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapTransferQuantity(fpmlPayment -> paymentAmount),
-                    asset: MapTransferCashAsset(fpmlPayment -> paymentAmount),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlPayment -> payerReceiverModel
-                            ),
-                    settlementDate: MapAdjustableOrAdjustedDateToAdjustableOrAdjustedOrRelativeDate(
-                                fpmlPayment -> paymentDate
-                            ),
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapTransferQuantity(fpmlPayment -> paymentAmount),
+                            asset: MapTransferCashAsset(fpmlPayment -> paymentAmount),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlPayment -> payerReceiverModel
+                                    ),
+                            settlementDate: MapAdjustableOrAdjustedDateToAdjustableOrAdjustedOrRelativeDate(
+                                        fpmlPayment -> paymentDate
+                                    ),
                             transferType: transferType,
                             ...
                         },
@@ -200,17 +201,22 @@ func MapNonNegativePaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapTransferQuantity(fpmlNonNegativePayment -> paymentAmount),
-                    asset: MapTransferCashAsset(fpmlNonNegativePayment -> paymentAmount),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlNonNegativePayment -> payerReceiverModel
-                            ),
-                    settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
-                                fpmlNonNegativePayment -> paymentDate -> adjustableDate -> unadjustedDate -> value -> date,
-                                fpmlNonNegativePayment -> paymentDate -> adjustableDate,
-                                fpmlNonNegativePayment -> paymentDate -> relativeDate
-                            ),
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapTransferQuantity(
+                                        fpmlNonNegativePayment -> paymentAmount
+                                    ),
+                            asset: MapTransferCashAsset(
+                                        fpmlNonNegativePayment -> paymentAmount
+                                    ),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlNonNegativePayment -> payerReceiverModel
+                                    ),
+                            settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
+                                        fpmlNonNegativePayment -> paymentDate -> adjustableDate -> unadjustedDate -> value -> date,
+                                        fpmlNonNegativePayment -> paymentDate -> adjustableDate,
+                                        fpmlNonNegativePayment -> paymentDate -> relativeDate
+                                    ),
                             transferType: transferType,
                             ...
                         },
@@ -233,17 +239,20 @@ func MapSimplePaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapTransferQuantity(fpmlSimplePayment -> paymentAmount),
-                    asset: MapTransferCashAsset(fpmlSimplePayment -> paymentAmount),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlSimplePayment -> payerReceiverModel
-                            ),
-                    settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
-                                empty,
-                                fpmlSimplePayment -> paymentDate -> adjustableDate,
-                                fpmlSimplePayment -> paymentDate -> relativeDate
-                            ),
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapTransferQuantity(
+                                        fpmlSimplePayment -> paymentAmount
+                                    ),
+                            asset: MapTransferCashAsset(fpmlSimplePayment -> paymentAmount),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlSimplePayment -> payerReceiverModel
+                                    ),
+                            settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
+                                        empty,
+                                        fpmlSimplePayment -> paymentDate -> adjustableDate,
+                                        fpmlSimplePayment -> paymentDate -> relativeDate
+                                    ),
                             transferType: transferType,
                             ...
                         },
@@ -277,23 +286,24 @@ func MapReturnSwapAdditionalPaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapTransferQuantity(
-                                fpmlReturnSwapAdditionalPayment -> additionalPaymentAmount -> paymentAmount
-                            ),
-                    asset: MapTransferCashAsset(
-                                fpmlReturnSwapAdditionalPayment -> additionalPaymentAmount -> paymentAmount
-                            ),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlReturnSwapAdditionalPayment -> payerReceiverModel
-                            ),
-                    settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
-                                empty,
-                                fpmlReturnSwapAdditionalPayment -> additionalPaymentDate -> adjustableDate,
-                                fpmlReturnSwapAdditionalPayment -> additionalPaymentDate -> relativeDate
-                            ),
-                        transferType: transferType,
-                        ...
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapTransferQuantity(
+                                        fpmlReturnSwapAdditionalPayment -> additionalPaymentAmount -> paymentAmount
+                                    ),
+                            asset: MapTransferCashAsset(
+                                        fpmlReturnSwapAdditionalPayment -> additionalPaymentAmount -> paymentAmount
+                                    ),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlReturnSwapAdditionalPayment -> payerReceiverModel
+                                    ),
+                            settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
+                                        empty,
+                                        fpmlReturnSwapAdditionalPayment -> additionalPaymentDate -> adjustableDate,
+                                        fpmlReturnSwapAdditionalPayment -> additionalPaymentDate -> relativeDate
+                                    ),
+                            transferType: transferType,
+                            ...
                         },
                     ...
                 },
@@ -314,21 +324,24 @@ func MapInitialPaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapMoneyToTransferQuantity(
-                                fpmlInitialPayment -> paymentAmount
-                            ),
-                    asset: MapMoneyToTransferCashAsset(fpmlInitialPayment -> paymentAmount),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlInitialPayment -> payerReceiverModel
-                            ),
-                    settlementDate:
-                        AdjustableOrAdjustedOrRelativeDate {
-                            unadjustedDate: fpmlInitialPayment -> adjustablePaymentDate -> date,
-                            adjustedDate: fpmlInitialPayment -> adjustedPaymentDate -> date,
-                            ...
-                        },
-                        transferType: transferType,
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapMoneyToTransferQuantity(
+                                        fpmlInitialPayment -> paymentAmount
+                                    ),
+                            asset: MapMoneyToTransferCashAsset(
+                                        fpmlInitialPayment -> paymentAmount
+                                    ),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlInitialPayment -> payerReceiverModel
+                                    ),
+                            settlementDate:
+                                AdjustableOrAdjustedOrRelativeDate {
+                                    unadjustedDate: fpmlInitialPayment -> adjustablePaymentDate -> date,
+                                    adjustedDate: fpmlInitialPayment -> adjustedPaymentDate -> date,
+                                    ...
+                                },
+                            transferType: transferType,
                             ...
                         },
                     ...
@@ -359,17 +372,22 @@ func MapSinglePaymentToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapMoneyToTransferQuantity(fpmlSinglePayment -> fixedAmount),
-                    asset: MapMoneyToTransferCashAsset(fpmlSinglePayment -> fixedAmount),
-                    payerReceiver: empty,
-                    settlementDate:
-                        AdjustableOrAdjustedOrRelativeDate {
-                            unadjustedDate: fpmlSinglePayment -> adjustablePaymentDate -> date,
-                            adjustedDate: fpmlSinglePayment -> adjustedPaymentDate -> date,
-                            ...
-                        },
-                           transferType: transferType,
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapMoneyToTransferQuantity(
+                                        fpmlSinglePayment -> fixedAmount
+                                    ),
+                            asset: MapMoneyToTransferCashAsset(
+                                        fpmlSinglePayment -> fixedAmount
+                                    ),
+                            payerReceiver: empty,
+                            settlementDate:
+                                AdjustableOrAdjustedOrRelativeDate {
+                                    unadjustedDate: fpmlSinglePayment -> adjustablePaymentDate -> date,
+                                    adjustedDate: fpmlSinglePayment -> adjustedPaymentDate -> date,
+                                    ...
+                                },
+                            transferType: transferType,
                             ...
                         },
                     ...
@@ -433,19 +451,22 @@ func MapEquityPremiumToTransferState:
         then TransferState {
             transfer:
                 Transfer {
-                    UnscheduledTransfer: UnscheduledTransfer {
-                    quantity: MapTransferQuantity(fpmlEquityPremium -> paymentAmount),
-                    asset: MapTransferCashAsset(fpmlEquityPremium -> paymentAmount),
-                    payerReceiver: MapPaymentToPartyReferencePayerReceiver(
-                                fpmlEquityPremium -> payerReceiverModel
-                            ),
-                    settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
-                                MapZoneDateTimeToDate(
-                                        fpmlEquityPremium -> paymentDate -> unadjustedDate -> value
+                    UnscheduledTransfer:
+                        UnscheduledTransfer {
+                            quantity: MapTransferQuantity(
+                                        fpmlEquityPremium -> paymentAmount
                                     ),
-                                fpmlEquityPremium -> paymentDate,
-                                empty
-                            ),
+                            asset: MapTransferCashAsset(fpmlEquityPremium -> paymentAmount),
+                            payerReceiver: MapPaymentToPartyReferencePayerReceiver(
+                                        fpmlEquityPremium -> payerReceiverModel
+                                    ),
+                            settlementDate: MapAdjustableOrAdjustedOrRelativeDate(
+                                        MapZoneDateTimeToDate(
+                                                fpmlEquityPremium -> paymentDate -> unadjustedDate -> value
+                                            ),
+                                        fpmlEquityPremium -> paymentDate,
+                                        empty
+                                    ),
                             transferType: transferType,
                             ...
                         },

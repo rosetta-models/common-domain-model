@@ -255,10 +255,6 @@ func MapTerminationToPrimitiveInstruction:
 
     alias counterpartyList: MapCounterpartyList(fpmlTrade)
     alias terminationPayment: termination -> tradeAlterationPaymentModel -> payment
-    alias transferExpression:
-        if termination exists
-        then UnscheduledTransferEnum -> Termination
-        else empty
 
     set primitiveInstruction:
         PrimitiveInstruction {

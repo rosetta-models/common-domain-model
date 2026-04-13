@@ -2032,7 +2032,7 @@ func Create_OnDemandInterestPaymentPrimitiveInstruction: <"An instruction to mak
                 },
             settlementDate: settlementDate -> adjustableOrRelativeDate,
             payerReceiver: payerReceiver,
-            transferType: Coupon,
+            transferType: NetInterest,
             ...
         },
         ...
