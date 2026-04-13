@@ -152,7 +152,7 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
     condition PositiveAssetPrice: <"Requires that per FpML rules, the FX rate must be a positive value.">
         if (priceType = PriceTypeEnum -> ExchangeRate or priceType = PriceTypeEnum -> AssetPrice)
                 and arithmeticOperator is absent
-        then value > 0
+        then value > 0 or datedValue -> value all > 0
 
     condition PositiveSpotRate: <"Requires that per FpML rules, the spot rate must be a positive value, for example for FX or Commodities.">
         if (priceType = PriceTypeEnum -> ExchangeRate or priceType = PriceTypeEnum -> AssetPrice)
