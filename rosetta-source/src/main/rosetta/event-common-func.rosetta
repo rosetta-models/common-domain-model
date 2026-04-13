@@ -192,8 +192,7 @@ func InterestCashSettlementAmount: <"Defines the performance calculations releva
     set interestCashSettlementAmount -> ScheduledTransfer -> payerReceiver -> receiverPartyReference:
         if performance >= 0 then receiver else payer
 
-    set interestCashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate:
-        date
+    set interestCashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate: date
 
     set interestCashSettlementAmount -> ScheduledTransfer -> settlementOrigin: payout as-key
 
@@ -2010,34 +2009,33 @@ func Create_OnDemandInterestPaymentPrimitiveInstruction: <"An instruction to mak
 
     alias transfer: <"A fully structured Transfer or the following need to be provided to create a cashflow.">
         Transfer {
-            ScheduledTransfer:
-                ScheduledTransfer {
-                    quantity:
-                        NonNegativeQuantity {
-                            value: interestAmount -> value,
-                            unit: interestAmount -> unit,
-                            ...
-                        },
-                    asset:
-                        Asset {
-                            Cash:
-                                Cash {
-                                    identifier:
-                                        AssetIdentifier {
-                                            identifier: interestAmount -> unit -> currency,
-                                            identifierType: CurrencyCode
-                                        },
-                                    assetType: Cash,
-                                    ...
-                                },
-                            ...
-                        },
-                    settlementDate: settlementDate -> adjustableOrRelativeDate,
-                    payerReceiver: payerReceiver,
-                    transferType: Coupon,
+            ScheduledTransfer: ScheduledTransfer {
+            quantity:
+                NonNegativeQuantity {
+                    value: interestAmount -> value,
+                    unit: interestAmount -> unit,
                     ...
                 },
+            asset:
+                Asset {
+                    Cash:
+                        Cash {
+                            identifier:
+                                AssetIdentifier {
+                                    identifier: interestAmount -> unit -> currency,
+                                    identifierType: CurrencyCode
+                                },
+                            assetType: Cash,
+                            ...
+                        },
+                    ...
+                },
+            settlementDate: settlementDate -> adjustableOrRelativeDate,
+            payerReceiver: payerReceiver,
+            transferType: NetInterest,
             ...
+        },
+        ...
         }
 
     condition InterestRatePayoutExists: <"Only a contractual product with a single interest rate payout can have an on-demand interest payment.">
