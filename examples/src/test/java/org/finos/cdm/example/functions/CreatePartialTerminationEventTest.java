@@ -93,7 +93,11 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
         TransferInstruction transferInstruction = TransferInstruction.builder()
                 .addTransferState(TransferState.builder()
                         .setTransfer(Transfer.builder()
-                                .setScheduledTransfer(ScheduledTransfer.builder()
+                                .setUnscheduledTransfer(UnscheduledTransfer.builder()
+                                        .setTransferType(UnscheduledTransferEnum.PARTIAL_TERMINATION)
+                                        .setPayerReceiver(PartyReferencePayerReceiver.builder()
+                                                .setPayerPartyReference(payerPartyReference)
+                                                .setReceiverPartyReference(receiverPartyReference))
                                         .setQuantity(NonNegativeQuantity.builder()
                                                 .setValue(BigDecimal.valueOf(2000.00))
                                                 .setUnit(UnitType.builder()
@@ -101,13 +105,8 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
                                                                 .setValue("USD")
                                                                 .setMeta(MetaFields.builder().setScheme(CURRENCY_SCHEME)))))
                                         .setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                                                .setAdjustedDateValue(eventDate)))
-                                .setUnscheduledTransfer(UnscheduledTransfer.builder()
-                                        .setTransferType(UnscheduledTransferEnum.PARTIAL_TERMINATION)
-                                        .setPayerReceiver(PartyReferencePayerReceiver.builder()
-                                        .setPayerPartyReference(payerPartyReference)
-                                        .setReceiverPartyReference(receiverPartyReference))))
-                                );
+                                                .setAdjustedDateValue(eventDate))))
+                );
 
         // Create an Instruction that contains:
         // - before TradeState
@@ -174,7 +173,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
         // Assert transfer fee
         Transfer transfer = afterTradeState.getTransferHistory().get(0).getTransfer();
         assertEquals(UnscheduledTransferEnum.PARTIAL_TERMINATION, transfer.getUnscheduledTransfer());
-        assertEquals(new BigDecimal("2000.0"), transfer.getScheduledTransfer().getQuantity().getValue());
+        assertEquals(new BigDecimal("2000.0"), transfer.getUnscheduledTransfer().getQuantity().getValue());
     }
 
     private <T extends RosettaModelObject> T postProcess(T o) {
