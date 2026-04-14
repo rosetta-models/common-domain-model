@@ -105,8 +105,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
                                                                 .setValue("USD")
                                                                 .setMeta(MetaFields.builder().setScheme(CURRENCY_SCHEME)))))
                                         .setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                                                .setAdjustedDateValue(eventDate))))
-                );
+                                                .setAdjustedDateValue(eventDate)).build())));
 
         // Create an Instruction that contains:
         // - before TradeState
