@@ -36,6 +36,44 @@
             "globalKey" : "4542496"
           }
         } ]
+      },
+      "transfer" : {
+        "transferState" : [ {
+          "transfer" : {
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 2000,
+                "unit" : {
+                  "currency" : {
+                    "value" : "USD"
+                  }
+                }
+              },
+              "settlementDate" : {
+                "adjustedDate" : {
+                  "value" : "2001-09-24",
+                  "meta" : {
+                    "globalKey" : "3e8a58"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "33f59567",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "33f59568",
+                  "externalReference" : "party2"
+                }
+              },
+              "transferType" : "PartialTermination"
+            }
+          },
+          "meta" : {
+            "globalKey" : "b28388f6"
+          }
+        } ]
       }
     },
     "before" : {
@@ -1833,11 +1871,47 @@
         "globalKey" : "db28d257"
       }
     },
+    "transferHistory" : [ {
+      "transfer" : {
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 2000,
+            "unit" : {
+              "currency" : {
+                "value" : "USD"
+              }
+            }
+          },
+          "settlementDate" : {
+            "adjustedDate" : {
+              "value" : "2001-09-24",
+              "meta" : {
+                "globalKey" : "3e8a58"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "33f59567",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "33f59568",
+              "externalReference" : "party2"
+            }
+          },
+          "transferType" : "PartialTermination"
+        }
+      },
+      "meta" : {
+        "globalKey" : "b28388f6"
+      }
+    } ],
     "meta" : {
-      "globalKey" : "db28d257"
+      "globalKey" : "b61604bf"
     }
   } ],
   "meta" : {
-    "globalKey" : "e3582450"
+    "globalKey" : "e86cea1c"
   }
 }

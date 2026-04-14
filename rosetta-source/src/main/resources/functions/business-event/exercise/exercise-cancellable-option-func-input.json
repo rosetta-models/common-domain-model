@@ -56,11 +56,12 @@
                   "globalReference" : "be64334",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Exercise"
             }
           },
           "meta" : {
-            "globalKey" : "310ffa7b"
+            "globalKey" : "9a2646bd"
           }
         } ]
       }

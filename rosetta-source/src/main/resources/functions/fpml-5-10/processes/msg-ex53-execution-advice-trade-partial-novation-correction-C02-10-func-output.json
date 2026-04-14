@@ -57,6 +57,56 @@
                 }
               } ],
               "direction" : "Replace"
+            },
+            "transfer" : {
+              "transferState" : [ {
+                "transfer" : {
+                  "UnscheduledTransfer" : {
+                    "quantity" : {
+                      "value" : 53555,
+                      "unit" : {
+                        "currency" : {
+                          "value" : "USD"
+                        }
+                      }
+                    },
+                    "asset" : {
+                      "Cash" : {
+                        "identifier" : [ {
+                          "identifier" : {
+                            "value" : "USD"
+                          },
+                          "identifierType" : "CurrencyCode"
+                        } ],
+                        "assetType" : "Cash"
+                      }
+                    },
+                    "settlementDate" : {
+                      "adjustedDate" : {
+                        "value" : "2009-08-16",
+                        "meta" : {
+                          "globalKey" : "3eca10"
+                        }
+                      }
+                    },
+                    "payerReceiver" : {
+                      "payerPartyReference" : {
+                        "globalReference" : "7156036b",
+                        "externalReference" : "_broker2"
+                      },
+                      "receiverPartyReference" : {
+                        "globalReference" : "a2b7933d",
+                        "externalReference" : "_fund"
+                      }
+                    },
+                    "transferType" : "Novation"
+                  }
+                },
+                "meta" : {
+                  "globalKey" : "8e19e079",
+                  "externalKey" : "NOVATION_FEE"
+                }
+              } ]
             }
           }, {
             "quantityChange" : {
@@ -505,8 +555,47 @@
               "globalKey" : "af60b32a"
             }
           },
+          "transferHistory" : [ {
+            "transfer" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 387300,
+                  "unit" : {
+                    "currency" : {
+                      "value" : "USD"
+                    }
+                  }
+                },
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "a2b7933d",
+                    "externalReference" : "_fund"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "90c956c2",
+                    "externalReference" : "_broker"
+                  }
+                },
+                "transferType" : "Upfront"
+              }
+            },
+            "meta" : {
+              "globalKey" : "30ed8ad8"
+            }
+          } ],
           "meta" : {
-            "globalKey" : "af60b32a"
+            "globalKey" : "8c57376e"
           }
         }
       }
@@ -910,8 +999,56 @@
           "globalKey" : "3119272e"
         }
       },
+      "transferHistory" : [ {
+        "transfer" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 53555,
+              "unit" : {
+                "currency" : {
+                  "value" : "USD"
+                }
+              }
+            },
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "settlementDate" : {
+              "adjustedDate" : {
+                "value" : "2009-08-16",
+                "meta" : {
+                  "globalKey" : "3eca10"
+                }
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "7156036b",
+                "externalReference" : "_broker2"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "a2b7933d",
+                "externalReference" : "_fund"
+              }
+            },
+            "transferType" : "Novation"
+          }
+        },
+        "meta" : {
+          "globalKey" : "8e19e079",
+          "externalKey" : "NOVATION_FEE"
+        }
+      } ],
       "meta" : {
-        "globalKey" : "3119272e"
+        "globalKey" : "1388a7"
       }
     }, {
       "trade" : {
@@ -1331,16 +1468,55 @@
           "globalKey" : "ec8046d2"
         }
       },
+      "transferHistory" : [ {
+        "transfer" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 387300,
+              "unit" : {
+                "currency" : {
+                  "value" : "USD"
+                }
+              }
+            },
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "a2b7933d",
+                "externalReference" : "_fund"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "90c956c2",
+                "externalReference" : "_broker"
+              }
+            },
+            "transferType" : "Upfront"
+          }
+        },
+        "meta" : {
+          "globalKey" : "30ed8ad8"
+        }
+      } ],
       "meta" : {
-        "globalKey" : "ec8046d2"
+        "globalKey" : "99b3c2c6"
       }
     } ],
     "meta" : {
-      "globalKey" : "64a973d7"
+      "globalKey" : "3cb7d61b"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "8a69af3"
+    "globalReference" : "98074c4d"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1484,6 +1660,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "18cf1392"
+    "globalKey" : "1c7693d6"
   }
 }

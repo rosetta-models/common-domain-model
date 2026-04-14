@@ -563,6 +563,64 @@
             "globalKey" : "c5b44e33"
           }
         } ]
+      },
+      "transfer" : {
+        "transferState" : [ {
+          "transfer" : {
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 200,
+                "unit" : {
+                  "currency" : {
+                    "value" : "USD"
+                  }
+                }
+              },
+              "asset" : {
+                "Cash" : {
+                  "identifier" : [ {
+                    "identifier" : {
+                      "value" : "USD"
+                    },
+                    "identifierType" : "CurrencyCode"
+                  } ],
+                  "assetType" : "Cash"
+                }
+              },
+              "settlementDate" : {
+                "unadjustedDate" : "2018-02-22",
+                "dateAdjustments" : {
+                  "businessDayConvention" : "MODFOLLOWING",
+                  "businessCenters" : {
+                    "businessCenter" : [ {
+                      "value" : "GBLO"
+                    } ],
+                    "meta" : {
+                      "globalKey" : "21479e"
+                    }
+                  },
+                  "meta" : {
+                    "globalKey" : "365c4b6f"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "33f59557",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "33f59558",
+                  "externalReference" : "party2"
+                }
+              },
+              "transferType" : "Upfront"
+            }
+          },
+          "meta" : {
+            "globalKey" : "ac6b5bf5"
+          }
+        } ]
       }
     }
   } ],
@@ -1138,11 +1196,67 @@
     "state" : {
       "positionState" : "Executed"
     },
+    "transferHistory" : [ {
+      "transfer" : {
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 200,
+            "unit" : {
+              "currency" : {
+                "value" : "USD"
+              }
+            }
+          },
+          "asset" : {
+            "Cash" : {
+              "identifier" : [ {
+                "identifier" : {
+                  "value" : "USD"
+                },
+                "identifierType" : "CurrencyCode"
+              } ],
+              "assetType" : "Cash"
+            }
+          },
+          "settlementDate" : {
+            "unadjustedDate" : "2018-02-22",
+            "dateAdjustments" : {
+              "businessDayConvention" : "MODFOLLOWING",
+              "businessCenters" : {
+                "businessCenter" : [ {
+                  "value" : "GBLO"
+                } ],
+                "meta" : {
+                  "globalKey" : "21479e"
+                }
+              },
+              "meta" : {
+                "globalKey" : "365c4b6f"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "33f59557",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "33f59558",
+              "externalReference" : "party2"
+            }
+          },
+          "transferType" : "Upfront"
+        }
+      },
+      "meta" : {
+        "globalKey" : "ac6b5bf5"
+      }
+    } ],
     "meta" : {
-      "globalKey" : "dfa972a0"
+      "globalKey" : "b0a7fe95"
     }
   } ],
   "meta" : {
-    "globalKey" : "c01558bd"
+    "globalKey" : "df367e0d"
   }
 }

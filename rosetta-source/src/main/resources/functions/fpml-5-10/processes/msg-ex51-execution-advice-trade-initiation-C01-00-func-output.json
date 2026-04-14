@@ -426,8 +426,47 @@
               "globalKey" : "482e5419"
             }
           },
+          "transferHistory" : [ {
+            "transfer" : {
+              "UnscheduledTransfer" : {
+                "quantity" : {
+                  "value" : 387300,
+                  "unit" : {
+                    "currency" : {
+                      "value" : "USD"
+                    }
+                  }
+                },
+                "asset" : {
+                  "Cash" : {
+                    "identifier" : [ {
+                      "identifier" : {
+                        "value" : "USD"
+                      },
+                      "identifierType" : "CurrencyCode"
+                    } ],
+                    "assetType" : "Cash"
+                  }
+                },
+                "payerReceiver" : {
+                  "payerPartyReference" : {
+                    "globalReference" : "a2b7933d",
+                    "externalReference" : "_fund"
+                  },
+                  "receiverPartyReference" : {
+                    "globalReference" : "90c956c2",
+                    "externalReference" : "_broker"
+                  }
+                },
+                "transferType" : "Upfront"
+              }
+            },
+            "meta" : {
+              "globalKey" : "30ed8ad8"
+            }
+          } ],
           "meta" : {
-            "globalKey" : "482e5419"
+            "globalKey" : "22ab381f"
           }
         }
       }
@@ -854,16 +893,55 @@
       "state" : {
         "positionState" : "Formed"
       },
+      "transferHistory" : [ {
+        "transfer" : {
+          "UnscheduledTransfer" : {
+            "quantity" : {
+              "value" : 387300,
+              "unit" : {
+                "currency" : {
+                  "value" : "USD"
+                }
+              }
+            },
+            "asset" : {
+              "Cash" : {
+                "identifier" : [ {
+                  "identifier" : {
+                    "value" : "USD"
+                  },
+                  "identifierType" : "CurrencyCode"
+                } ],
+                "assetType" : "Cash"
+              }
+            },
+            "payerReceiver" : {
+              "payerPartyReference" : {
+                "globalReference" : "a2b7933d",
+                "externalReference" : "_fund"
+              },
+              "receiverPartyReference" : {
+                "globalReference" : "90c956c2",
+                "externalReference" : "_broker"
+              }
+            },
+            "transferType" : "Upfront"
+          }
+        },
+        "meta" : {
+          "globalKey" : "30ed8ad8"
+        }
+      } ],
       "meta" : {
-        "globalKey" : "fd633307"
+        "globalKey" : "a6a00271"
       }
     } ],
     "meta" : {
-      "globalKey" : "f888181"
+      "globalKey" : "dae50d93"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "e39c774e"
+    "globalReference" : "79d8b216"
   },
   "messageInformation" : {
     "messageId" : {
@@ -987,6 +1065,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "efe846c1"
+    "globalKey" : "b37b13ef"
   }
 }

@@ -561,6 +561,55 @@
             "globalKey" : "596a3734"
           }
         } ]
+      },
+      "transfer" : {
+        "transferState" : [ {
+          "transfer" : {
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 2500.4,
+                "unit" : {
+                  "currency" : {
+                    "value" : "USD"
+                  }
+                }
+              },
+              "asset" : {
+                "Cash" : {
+                  "identifier" : [ {
+                    "identifier" : {
+                      "value" : "USD"
+                    },
+                    "identifierType" : "CurrencyCode"
+                  } ],
+                  "assetType" : "Cash"
+                }
+              },
+              "settlementDate" : {
+                "adjustedDate" : {
+                  "value" : "1994-12-14",
+                  "meta" : {
+                    "globalKey" : "3e530e"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "9b11f66a",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "6c331c03",
+                  "externalReference" : "party3"
+                }
+              },
+              "transferType" : "Upfront"
+            }
+          },
+          "meta" : {
+            "globalKey" : "55fea324"
+          }
+        } ]
       }
     }
   } ],
@@ -1134,11 +1183,58 @@
     "state" : {
       "positionState" : "Executed"
     },
+    "transferHistory" : [ {
+      "transfer" : {
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 2500.4,
+            "unit" : {
+              "currency" : {
+                "value" : "USD"
+              }
+            }
+          },
+          "asset" : {
+            "Cash" : {
+              "identifier" : [ {
+                "identifier" : {
+                  "value" : "USD"
+                },
+                "identifierType" : "CurrencyCode"
+              } ],
+              "assetType" : "Cash"
+            }
+          },
+          "settlementDate" : {
+            "adjustedDate" : {
+              "value" : "1994-12-14",
+              "meta" : {
+                "globalKey" : "3e530e"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "9b11f66a",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "6c331c03",
+              "externalReference" : "party3"
+            }
+          },
+          "transferType" : "Upfront"
+        }
+      },
+      "meta" : {
+        "globalKey" : "55fea324"
+      }
+    } ],
     "meta" : {
-      "globalKey" : "281beba6"
+      "globalKey" : "5fec254a"
     }
   } ],
   "meta" : {
-    "globalKey" : "f241a8e7"
+    "globalKey" : "624fb805"
   }
 }

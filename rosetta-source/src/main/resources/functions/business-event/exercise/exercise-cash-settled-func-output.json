@@ -20,6 +20,47 @@
           }
         } ],
         "direction" : "Replace"
+      },
+      "transfer" : {
+        "transferState" : [ {
+          "transfer" : {
+            "ScheduledTransfer" : {
+              "quantity" : {
+                "value" : 2000,
+                "unit" : {
+                  "currency" : {
+                    "value" : "EUR",
+                    "meta" : {
+                      "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                    }
+                  }
+                }
+              },
+              "settlementDate" : {
+                "adjustedDate" : {
+                  "value" : "2019-04-03",
+                  "meta" : {
+                    "globalKey" : "3f1903"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "175cdec0",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "be64334",
+                  "externalReference" : "party2"
+                }
+              },
+              "transferType" : "Exercise"
+            }
+          },
+          "meta" : {
+            "globalKey" : "cb574e2f"
+          }
+        } ]
       }
     },
     "before" : {
@@ -769,12 +810,69 @@
             "globalKey" : "8157226c"
           }
         },
+        "transferHistory" : [ {
+          "transfer" : {
+            "UnscheduledTransfer" : {
+              "quantity" : {
+                "value" : 100000,
+                "unit" : {
+                  "currency" : {
+                    "value" : "EUR"
+                  }
+                }
+              },
+              "asset" : {
+                "Cash" : {
+                  "identifier" : [ {
+                    "identifier" : {
+                      "value" : "EUR"
+                    },
+                    "identifierType" : "CurrencyCode"
+                  } ],
+                  "assetType" : "Cash"
+                }
+              },
+              "settlementDate" : {
+                "unadjustedDate" : "2018-04-01",
+                "dateAdjustments" : {
+                  "businessDayConvention" : "FOLLOWING",
+                  "businessCenters" : {
+                    "businessCenter" : [ {
+                      "value" : "EUTA"
+                    } ],
+                    "meta" : {
+                      "globalKey" : "20a71d"
+                    }
+                  },
+                  "meta" : {
+                    "globalKey" : "211dc30c"
+                  }
+                }
+              },
+              "payerReceiver" : {
+                "payerPartyReference" : {
+                  "globalReference" : "175cdec0",
+                  "externalReference" : "party1"
+                },
+                "receiverPartyReference" : {
+                  "globalReference" : "be64334",
+                  "externalReference" : "party2"
+                }
+              },
+              "transferType" : "Premium"
+            }
+          },
+          "meta" : {
+            "globalKey" : "d9cad976"
+          }
+        } ],
         "meta" : {
-          "globalKey" : "8157226c"
+          "globalKey" : "e0b0438a"
         }
       }
     }
   } ],
+  "eventQualifier" : "Exercise",
   "after" : [ {
     "trade" : {
       "product" : {
@@ -1527,11 +1625,105 @@
       },
       "positionState" : "Closed"
     },
+    "transferHistory" : [ {
+      "transfer" : {
+        "UnscheduledTransfer" : {
+          "quantity" : {
+            "value" : 100000,
+            "unit" : {
+              "currency" : {
+                "value" : "EUR"
+              }
+            }
+          },
+          "asset" : {
+            "Cash" : {
+              "identifier" : [ {
+                "identifier" : {
+                  "value" : "EUR"
+                },
+                "identifierType" : "CurrencyCode"
+              } ],
+              "assetType" : "Cash"
+            }
+          },
+          "settlementDate" : {
+            "unadjustedDate" : "2018-04-01",
+            "dateAdjustments" : {
+              "businessDayConvention" : "FOLLOWING",
+              "businessCenters" : {
+                "businessCenter" : [ {
+                  "value" : "EUTA"
+                } ],
+                "meta" : {
+                  "globalKey" : "20a71d"
+                }
+              },
+              "meta" : {
+                "globalKey" : "211dc30c"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "175cdec0",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "be64334",
+              "externalReference" : "party2"
+            }
+          },
+          "transferType" : "Premium"
+        }
+      },
+      "meta" : {
+        "globalKey" : "d9cad976"
+      }
+    }, {
+      "transfer" : {
+        "ScheduledTransfer" : {
+          "quantity" : {
+            "value" : 2000,
+            "unit" : {
+              "currency" : {
+                "value" : "EUR",
+                "meta" : {
+                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
+                }
+              }
+            }
+          },
+          "settlementDate" : {
+            "adjustedDate" : {
+              "value" : "2019-04-03",
+              "meta" : {
+                "globalKey" : "3f1903"
+              }
+            }
+          },
+          "payerReceiver" : {
+            "payerPartyReference" : {
+              "globalReference" : "175cdec0",
+              "externalReference" : "party1"
+            },
+            "receiverPartyReference" : {
+              "globalReference" : "be64334",
+              "externalReference" : "party2"
+            }
+          },
+          "transferType" : "Exercise"
+        }
+      },
+      "meta" : {
+        "globalKey" : "cb574e2f"
+      }
+    } ],
     "meta" : {
-      "globalKey" : "5f8d655"
+      "globalKey" : "322f11c4"
     }
   } ],
   "meta" : {
-    "globalKey" : "524f3afe"
+    "globalKey" : "5982aace"
   }
 }
