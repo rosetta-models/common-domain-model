@@ -1470,93 +1470,8 @@
             "globalKey" : "699affaf"
           }
         },
-        "transferHistory" : [ {
-          "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
-                "value" : 100000.00,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2020-09-22",
-                  "meta" : {
-                    "globalKey" : "3f2256"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "7c311b30",
-                  "externalReference" : "Borrower"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "61517d75",
-                  "externalReference" : "Lender0"
-                }
-              },
-              "settlementOrigin" : {
-                "globalReference" : "b78e4420"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "2b3a9948"
-          }
-        }, {
-          "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
-                "value" : 200000,
-                "unit" : {
-                  "financialUnit" : "Share"
-                }
-              },
-              "asset" : {
-                "Instrument" : {
-                  "Security" : {
-                    "identifier" : [ {
-                      "identifier" : {
-                        "value" : "ST001"
-                      },
-                      "identifierType" : "SEDOL"
-                    } ]
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2020-09-22",
-                  "meta" : {
-                    "globalKey" : "3f2256"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "61517d75",
-                  "externalReference" : "Lender0"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "7c311b30",
-                  "externalReference" : "Borrower"
-                }
-              },
-              "settlementOrigin" : {
-                "globalReference" : "b78e4420"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "97c8c64d"
-          }
-        } ],
         "meta" : {
-          "globalKey" : "2814fd44"
+          "globalKey" : "699affaf"
         }
       }
     },
@@ -2213,90 +2128,6 @@
           "transfer" : {
             "ScheduledTransfer" : {
               "quantity" : {
-                "value" : 100000.00,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2020-09-22",
-                  "meta" : {
-                    "globalKey" : "3f2256"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "7c311b30",
-                  "externalReference" : "Borrower"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "61517d75",
-                  "externalReference" : "Lender0"
-                }
-              },
-              "settlementOrigin" : {
-                "globalReference" : "b78e4420"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "2b3a9948"
-          }
-        }, {
-          "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
-                "value" : 200000,
-                "unit" : {
-                  "financialUnit" : "Share"
-                }
-              },
-              "asset" : {
-                "Instrument" : {
-                  "Security" : {
-                    "identifier" : [ {
-                      "identifier" : {
-                        "value" : "ST001"
-                      },
-                      "identifierType" : "SEDOL"
-                    } ]
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2020-09-22",
-                  "meta" : {
-                    "globalKey" : "3f2256"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "61517d75",
-                  "externalReference" : "Lender0"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "7c311b30",
-                  "externalReference" : "Borrower"
-                }
-              },
-              "settlementOrigin" : {
-                "globalReference" : "b78e4420"
-              }
-            }
-          },
-          "meta" : {
-            "globalKey" : "97c8c64d"
-          }
-        }, {
-          "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
                 "value" : 25000.00,
                 "unit" : {
                   "currency" : {
@@ -2379,7 +2210,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "63c4f53e"
+          "globalKey" : "2d74e669"
         }
       }
     },

@@ -1079,56 +1079,8 @@
             "globalKey" : "dd83ef1e"
           }
         },
-        "transferHistory" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 5,
-                "unit" : {
-                  "currency" : {
-                    "value" : "EUR"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "EUR"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2018-02-09",
-                  "meta" : {
-                    "globalKey" : "3f1089"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "b6bdbfc2",
-                  "externalReference" : "party1"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "a14913ec",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferType" : "Upfront"
-            }
-          },
-          "meta" : {
-            "globalKey" : "c6e801aa",
-            "externalKey" : "SDB123-AB5.EUR.20180209.0"
-          }
-        } ],
         "meta" : {
-          "globalKey" : "5b0b39c8"
+          "globalKey" : "dd83ef1e"
         }
       }
     }
@@ -2100,59 +2052,11 @@
         "globalKey" : "f8485b66"
       }
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "UnscheduledTransfer" : {
-          "quantity" : {
-            "value" : 5,
-            "unit" : {
-              "currency" : {
-                "value" : "EUR"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
-                  "value" : "EUR"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "settlementDate" : {
-            "adjustedDate" : {
-              "value" : "2018-02-09",
-              "meta" : {
-                "globalKey" : "3f1089"
-              }
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "b6bdbfc2",
-              "externalReference" : "party1"
-            },
-            "receiverPartyReference" : {
-              "globalReference" : "a14913ec",
-              "externalReference" : "party2"
-            }
-          },
-          "transferType" : "Upfront"
-        }
-      },
-      "meta" : {
-        "globalKey" : "c6e801aa",
-        "externalKey" : "SDB123-AB5.EUR.20180209.0"
-      }
-    } ],
     "meta" : {
-      "globalKey" : "b83d2210"
+      "globalKey" : "f8485b66"
     }
   } ],
   "meta" : {
-    "globalKey" : "5cab8655"
+    "globalKey" : "1802ab01"
   }
 }

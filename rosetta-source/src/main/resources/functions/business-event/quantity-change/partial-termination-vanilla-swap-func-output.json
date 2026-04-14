@@ -22,47 +22,6 @@
           }
         } ],
         "direction" : "Decrease"
-      },
-      "transfer" : {
-        "transferState" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 2000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD",
-                    "meta" : {
-                      "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
-                    }
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2018-04-01",
-                  "meta" : {
-                    "globalKey" : "3f1101"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "35d0b164",
-                  "externalReference" : "party1"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "6f99094c",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferType" : "PartialTermination"
-            }
-          },
-          "meta" : {
-            "globalKey" : "fc103595"
-          }
-        } ]
       }
     },
     "before" : {
@@ -1391,50 +1350,11 @@
         "globalKey" : "e0cb8c41"
       }
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "UnscheduledTransfer" : {
-          "quantity" : {
-            "value" : 2000,
-            "unit" : {
-              "currency" : {
-                "value" : "USD",
-                "meta" : {
-                  "scheme" : "http://www.fpml.org/coding-scheme/external/iso4217"
-                }
-              }
-            }
-          },
-          "settlementDate" : {
-            "adjustedDate" : {
-              "value" : "2018-04-01",
-              "meta" : {
-                "globalKey" : "3f1101"
-              }
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "35d0b164",
-              "externalReference" : "party1"
-            },
-            "receiverPartyReference" : {
-              "globalReference" : "6f99094c",
-              "externalReference" : "party2"
-            }
-          },
-          "transferType" : "PartialTermination"
-        }
-      },
-      "meta" : {
-        "globalKey" : "fc103595"
-      }
-    } ],
     "meta" : {
-      "globalKey" : "13a46716"
+      "globalKey" : "e0cb8c41"
     }
   } ],
   "meta" : {
-    "globalKey" : "8be84609"
+    "globalKey" : "22960237"
   }
 }

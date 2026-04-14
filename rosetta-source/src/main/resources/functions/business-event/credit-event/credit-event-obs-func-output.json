@@ -316,45 +316,6 @@
             "globalKey" : "fbd11d9f"
           }
         },
-        "transferHistory" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 16000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "a14913ec",
-                  "externalReference" : "party2"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "b6bdbfc2",
-                  "externalReference" : "party1"
-                }
-              },
-              "transferType" : "Upfront"
-            }
-          },
-          "meta" : {
-            "globalKey" : "84c32828"
-          }
-        } ],
         "observationHistory" : [ {
           "creditEvent" : {
             "creditEventType" : "Bankruptcy",
@@ -383,7 +344,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "3bd359f0"
+          "globalKey" : "455042e6"
         }
       }
     }
@@ -671,45 +632,6 @@
         "globalKey" : "fbd11d9f"
       }
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "UnscheduledTransfer" : {
-          "quantity" : {
-            "value" : 16000,
-            "unit" : {
-              "currency" : {
-                "value" : "USD"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
-                  "value" : "USD"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "a14913ec",
-              "externalReference" : "party2"
-            },
-            "receiverPartyReference" : {
-              "globalReference" : "b6bdbfc2",
-              "externalReference" : "party1"
-            }
-          },
-          "transferType" : "Upfront"
-        }
-      },
-      "meta" : {
-        "globalKey" : "84c32828"
-      }
-    } ],
     "observationHistory" : [ {
       "creditEvent" : {
         "creditEventType" : "Bankruptcy",
@@ -764,10 +686,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "cf31e849"
+      "globalKey" : "c0d0eabf"
     }
   } ],
   "meta" : {
-    "globalKey" : "73f5f452"
+    "globalKey" : "86683572"
   }
 }

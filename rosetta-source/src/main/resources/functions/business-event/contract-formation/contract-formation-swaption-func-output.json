@@ -618,64 +618,8 @@
             "globalKey" : "6cc25529"
           }
         },
-        "transferHistory" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 100000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "EUR"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "EUR"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "unadjustedDate" : "2000-08-30",
-                "dateAdjustments" : {
-                  "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "value" : "EUTA"
-                    } ],
-                    "meta" : {
-                      "globalKey" : "20a71d"
-                    }
-                  },
-                  "meta" : {
-                    "globalKey" : "211dc30c"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "46e3b435",
-                  "externalReference" : "party1"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "46e3b454",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferType" : "Premium"
-            }
-          },
-          "meta" : {
-            "globalKey" : "550a0aec"
-          }
-        } ],
         "meta" : {
-          "globalKey" : "a38c3955"
+          "globalKey" : "6cc25529"
         }
       }
     }
@@ -1299,67 +1243,11 @@
     "state" : {
       "positionState" : "Formed"
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "UnscheduledTransfer" : {
-          "quantity" : {
-            "value" : 100000,
-            "unit" : {
-              "currency" : {
-                "value" : "EUR"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
-                  "value" : "EUR"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "settlementDate" : {
-            "unadjustedDate" : "2000-08-30",
-            "dateAdjustments" : {
-              "businessDayConvention" : "FOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "value" : "EUTA"
-                } ],
-                "meta" : {
-                  "globalKey" : "20a71d"
-                }
-              },
-              "meta" : {
-                "globalKey" : "211dc30c"
-              }
-            }
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "globalReference" : "46e3b435",
-              "externalReference" : "party1"
-            },
-            "receiverPartyReference" : {
-              "globalReference" : "46e3b454",
-              "externalReference" : "party2"
-            }
-          },
-          "transferType" : "Premium"
-        }
-      },
-      "meta" : {
-        "globalKey" : "550a0aec"
-      }
-    } ],
     "meta" : {
-      "globalKey" : "a17bcd38"
+      "globalKey" : "c1749b4c"
     }
   } ],
   "meta" : {
-    "globalKey" : "ecd460fd"
+    "globalKey" : "510885fd"
   }
 }

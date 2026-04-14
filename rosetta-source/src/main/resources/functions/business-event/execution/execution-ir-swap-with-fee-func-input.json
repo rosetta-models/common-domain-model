@@ -562,59 +562,9 @@
       },
       "transfer" : {
         "transferState" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 200.00,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "unadjustedDate" : "2018-02-22",
-                "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "value" : "GBLO"
-                    } ],
-                    "meta" : {
-                      "globalKey" : "21479e"
-                    }
-                  },
-                  "meta" : {
-                    "globalKey" : "365c4b6f"
-                  }
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "33f59557",
-                  "externalReference" : "party1"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "33f59558",
-                  "externalReference" : "party2"
-                }
-              },
-              "transferType" : "Upfront"
-            }
-          },
+          "transfer" : { },
           "meta" : {
-            "globalKey" : "de83dfc6"
+            "globalKey" : "b18ae1c6"
           }
         } ]
       }

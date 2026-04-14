@@ -1386,7 +1386,7 @@ public class FunctionInputCreator {
         Transfer.TransferBuilder transferBuilder = transferInstructionBuilder
                 .getOrCreateTransferState(0)
                 .getOrCreateTransfer();
-        TransferBase.TransferBaseBuilder transfer = transferBuilder.getScheduledTransfer();
+        TransferBase.TransferBaseBuilder transfer = transferBuilder.getUnscheduledTransfer();
         if (transfer != null) {
 
             transfer.getOrCreatePayerReceiver()
@@ -1405,14 +1405,14 @@ public class FunctionInputCreator {
             transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
                     .setAdjustedDateValue(Date.of(2019, 4, 3))
             );
-        } else if (transferBuilder.getUnscheduledTransfer() != null) {
-            transfer = transferBuilder.getUnscheduledTransfer();
+        } else {
+            TransferBase.TransferBaseBuilder scheduledTransfer = transferBuilder.getOrCreateScheduledTransfer();
 
-            transfer.getOrCreatePayerReceiver()
+            scheduledTransfer.getOrCreatePayerReceiver()
                     .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
                     .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
 
-            transfer.getOrCreateQuantity()
+            scheduledTransfer.getOrCreateQuantity()
                     .setValue(BigDecimal.valueOf(2000))
                     .setUnit(UnitType.builder()
                             .setCurrency(FieldWithMetaString.builder()
@@ -1421,7 +1421,7 @@ public class FunctionInputCreator {
                             )
                     );
 
-            transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
+            scheduledTransfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
                     .setAdjustedDateValue(Date.of(2019, 4, 3))
             );
         }

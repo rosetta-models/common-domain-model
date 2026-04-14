@@ -315,46 +315,13 @@
           }
         },
         "transferHistory" : [ {
-          "transfer" : {
-            "UnscheduledTransfer" : {
-              "quantity" : {
-                "value" : 16000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "USD"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "a14913ec",
-                  "externalReference" : "party2"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "b6bdbfc2",
-                  "externalReference" : "party1"
-                }
-              },
-              "transferType" : "Upfront"
-            }
-          },
+          "transfer" : { },
           "meta" : {
-            "globalKey" : "6a6e8fa"
+            "globalKey" : "5d106dfa"
           }
         } ],
         "meta" : {
-          "globalKey" : "4ed0103d"
+          "globalKey" : "77974dd"
         }
       }
     }

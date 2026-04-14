@@ -1004,56 +1004,8 @@
               "globalKey" : "eb0d5f87"
             }
           },
-          "transferHistory" : [ {
-            "transfer" : {
-              "UnscheduledTransfer" : {
-                "quantity" : {
-                  "value" : 1000,
-                  "unit" : {
-                    "currency" : {
-                      "value" : "USD"
-                    }
-                  }
-                },
-                "asset" : {
-                  "Cash" : {
-                    "identifier" : [ {
-                      "identifier" : {
-                        "value" : "USD"
-                      },
-                      "identifierType" : "CurrencyCode"
-                    } ],
-                    "assetType" : "Cash"
-                  }
-                },
-                "settlementDate" : {
-                  "unadjustedDate" : "2009-03-28",
-                  "adjustedDate" : {
-                    "value" : "2009-03-30",
-                    "meta" : {
-                      "globalKey" : "3ec8de"
-                    }
-                  }
-                },
-                "payerReceiver" : {
-                  "payerPartyReference" : {
-                    "globalReference" : "dd0bba9a",
-                    "externalReference" : "party1"
-                  },
-                  "receiverPartyReference" : {
-                    "globalReference" : "5da152cd",
-                    "externalReference" : "party2"
-                  }
-                },
-                "transferType" : "Upfront"
-              }
-            },
-            "meta" : {
-              "globalKey" : "83b94973"
-            }
-          } ],
           "meta" : {
-            "globalKey" : "3f3c4e8c"
+            "globalKey" : "eb0d5f87"
           }
         }
       }
@@ -2057,64 +2009,16 @@
       "state" : {
         "positionState" : "Formed"
       },
-      "transferHistory" : [ {
-        "transfer" : {
-          "UnscheduledTransfer" : {
-            "quantity" : {
-              "value" : 1000,
-              "unit" : {
-                "currency" : {
-                  "value" : "USD"
-                }
-              }
-            },
-            "asset" : {
-              "Cash" : {
-                "identifier" : [ {
-                  "identifier" : {
-                    "value" : "USD"
-                  },
-                  "identifierType" : "CurrencyCode"
-                } ],
-                "assetType" : "Cash"
-              }
-            },
-            "settlementDate" : {
-              "unadjustedDate" : "2009-03-28",
-              "adjustedDate" : {
-                "value" : "2009-03-30",
-                "meta" : {
-                  "globalKey" : "3ec8de"
-                }
-              }
-            },
-            "payerReceiver" : {
-              "payerPartyReference" : {
-                "globalReference" : "dd0bba9a",
-                "externalReference" : "party1"
-              },
-              "receiverPartyReference" : {
-                "globalReference" : "5da152cd",
-                "externalReference" : "party2"
-              }
-            },
-            "transferType" : "Upfront"
-          }
-        },
-        "meta" : {
-          "globalKey" : "83b94973"
-        }
-      } ],
       "meta" : {
-        "globalKey" : "d060eb9f"
+        "globalKey" : "ac8d3554"
       }
     } ],
     "meta" : {
-      "globalKey" : "9fbf209b"
+      "globalKey" : "ffa4979d"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "222ebba"
+    "globalReference" : "c38b4ca4"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2450,6 +2354,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "5c7275f"
+    "globalKey" : "65fc5c61"
   }
 }

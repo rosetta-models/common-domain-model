@@ -2,66 +2,6 @@
   "eventDate" : "2021-03-18",
   "effectiveDate" : "2021-03-18",
   "instruction" : [ {
-    "primitiveInstruction" : {
-      "transfer" : {
-        "transferState" : [ {
-          "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
-                "value" : 2000,
-                "unit" : {
-                  "currency" : {
-                    "value" : "GBP"
-                  }
-                }
-              },
-              "asset" : {
-                "Cash" : {
-                  "identifier" : [ {
-                    "identifier" : {
-                      "value" : "GBP"
-                    },
-                    "identifierType" : "CurrencyCode"
-                  } ],
-                  "assetType" : "Cash"
-                }
-              },
-              "settlementDate" : {
-                "unadjustedDate" : "2021-03-21"
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "value" : {
-                    "name" : {
-                      "value" : "Global Bank Inc"
-                    },
-                    "meta" : {
-                      "globalKey" : "296093b7",
-                      "externalKey" : "GlobalBank"
-                    }
-                  }
-                },
-                "receiverPartyReference" : {
-                  "value" : {
-                    "name" : {
-                      "value" : "UK Bank plc"
-                    },
-                    "meta" : {
-                      "globalKey" : "1ef4886d",
-                      "externalKey" : "UkBank"
-                    }
-                  }
-                }
-              },
-              "transferType" : "NetInterest"
-            }
-          },
-          "meta" : {
-            "globalKey" : "99d9e6b3"
-          }
-        } ]
-      }
-    },
     "before" : {
       "value" : {
         "trade" : {
@@ -887,67 +827,11 @@
     "state" : {
       "positionState" : "Executed"
     },
-    "transferHistory" : [ {
-      "transfer" : {
-        "ScheduledTransfer" : {
-          "quantity" : {
-            "value" : 2000,
-            "unit" : {
-              "currency" : {
-                "value" : "GBP"
-              }
-            }
-          },
-          "asset" : {
-            "Cash" : {
-              "identifier" : [ {
-                "identifier" : {
-                  "value" : "GBP"
-                },
-                "identifierType" : "CurrencyCode"
-              } ],
-              "assetType" : "Cash"
-            }
-          },
-          "settlementDate" : {
-            "unadjustedDate" : "2021-03-21"
-          },
-          "payerReceiver" : {
-            "payerPartyReference" : {
-              "value" : {
-                "name" : {
-                  "value" : "Global Bank Inc"
-                },
-                "meta" : {
-                  "globalKey" : "296093b7",
-                  "externalKey" : "GlobalBank"
-                }
-              }
-            },
-            "receiverPartyReference" : {
-              "value" : {
-                "name" : {
-                  "value" : "UK Bank plc"
-                },
-                "meta" : {
-                  "globalKey" : "1ef4886d",
-                  "externalKey" : "UkBank"
-                }
-              }
-            }
-          },
-          "transferType" : "NetInterest"
-        }
-      },
-      "meta" : {
-        "globalKey" : "99d9e6b3"
-      }
-    } ],
     "meta" : {
-      "globalKey" : "2f124484"
+      "globalKey" : "a00d98cf"
     }
   } ],
   "meta" : {
-    "globalKey" : "7db5b088"
+    "globalKey" : "2a91d99e"
   }
 }
