@@ -347,11 +347,12 @@
                   "globalReference" : "b6bdbfc2",
                   "externalReference" : "party1"
                 }
-              }
+              },
+              "transferType" : "Upfront"
             }
           },
           "meta" : {
-            "globalKey" : "877a38e6"
+            "globalKey" : "84c32828"
           }
         } ],
         "observationHistory" : [ {
@@ -382,7 +383,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "c802598c"
+          "globalKey" : "3bd359f0"
         }
       }
     }
@@ -701,11 +702,12 @@
               "globalReference" : "b6bdbfc2",
               "externalReference" : "party1"
             }
-          }
+          },
+          "transferType" : "Upfront"
         }
       },
       "meta" : {
-        "globalKey" : "877a38e6"
+        "globalKey" : "84c32828"
       }
     } ],
     "observationHistory" : [ {
@@ -762,10 +764,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "c36b66e5"
+      "globalKey" : "cf31e849"
     }
   } ],
   "meta" : {
-    "globalKey" : "28f48e32"
+    "globalKey" : "73f5f452"
   }
 }

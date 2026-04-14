@@ -53,11 +53,11 @@
                   }
                 }
               },
-              "transferType" : "Coupon"
+              "transferType" : "NetInterest"
             }
           },
           "meta" : {
-            "globalKey" : "18c73b2d"
+            "globalKey" : "99d9e6b3"
           }
         } ]
       }
@@ -478,7 +478,6 @@
       }
     }
   } ],
-  "eventQualifier" : "CashTransfer",
   "after" : [ {
     "trade" : {
       "product" : {
@@ -937,18 +936,18 @@
               }
             }
           },
-          "transferType" : "Coupon"
+          "transferType" : "NetInterest"
         }
       },
       "meta" : {
-        "globalKey" : "18c73b2d"
+        "globalKey" : "99d9e6b3"
       }
     } ],
     "meta" : {
-      "globalKey" : "adff98fe"
+      "globalKey" : "2f124484"
     }
   } ],
   "meta" : {
-    "globalKey" : "339c937c"
+    "globalKey" : "7db5b088"
   }
 }

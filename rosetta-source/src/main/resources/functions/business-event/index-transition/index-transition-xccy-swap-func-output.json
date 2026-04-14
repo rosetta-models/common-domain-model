@@ -1118,16 +1118,17 @@
                   "globalReference" : "a14913ec",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Upfront"
             }
           },
           "meta" : {
-            "globalKey" : "e4732724",
+            "globalKey" : "c6e801aa",
             "externalKey" : "SDB123-AB5.EUR.20180209.0"
           }
         } ],
         "meta" : {
-          "globalKey" : "65197346"
+          "globalKey" : "5b0b39c8"
         }
       }
     }
@@ -2138,19 +2139,20 @@
               "globalReference" : "a14913ec",
               "externalReference" : "party2"
             }
-          }
+          },
+          "transferType" : "Upfront"
         }
       },
       "meta" : {
-        "globalKey" : "e4732724",
+        "globalKey" : "c6e801aa",
         "externalKey" : "SDB123-AB5.EUR.20180209.0"
       }
     } ],
     "meta" : {
-      "globalKey" : "916561fe"
+      "globalKey" : "b83d2210"
     }
   } ],
   "meta" : {
-    "globalKey" : "7b8c41b5"
+    "globalKey" : "5cab8655"
   }
 }

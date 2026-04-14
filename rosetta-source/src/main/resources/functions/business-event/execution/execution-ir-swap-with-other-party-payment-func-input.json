@@ -598,11 +598,12 @@
                   "globalReference" : "6c331c03",
                   "externalReference" : "party3"
                 }
-              }
+              },
+              "transferType" : "Upfront"
             }
           },
           "meta" : {
-            "globalKey" : "5341d6d9"
+            "globalKey" : "31ef4895"
           }
         } ]
       }

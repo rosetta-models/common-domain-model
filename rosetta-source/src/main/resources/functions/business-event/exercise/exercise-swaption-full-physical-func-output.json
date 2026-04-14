@@ -702,15 +702,16 @@
                   "globalReference" : "46e3b454",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "a722e4ab"
+            "globalKey" : "550a0aec"
           }
         } ],
         "meta" : {
-          "globalKey" : "f2187188"
+          "globalKey" : "68c619af"
         }
       }
     }
@@ -1397,15 +1398,16 @@
               "globalReference" : "46e3b454",
               "externalReference" : "party2"
             }
-          }
+          },
+          "transferType" : "Premium"
         }
       },
       "meta" : {
-        "globalKey" : "a722e4ab"
+        "globalKey" : "550a0aec"
       }
     } ],
     "meta" : {
-      "globalKey" : "64e8741f"
+      "globalKey" : "4ff669f8"
     }
   }, {
     "trade" : {
@@ -1925,6 +1927,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "bd5c7e63"
+    "globalKey" : "95451b53"
   }
 }

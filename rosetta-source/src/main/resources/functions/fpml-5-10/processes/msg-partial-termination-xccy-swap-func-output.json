@@ -84,11 +84,12 @@
                     "globalReference" : "71969616",
                     "externalReference" : "party1"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "87e5ecb6"
+              "globalKey" : "91cdee58"
             }
           }, {
             "transfer" : {
@@ -129,11 +130,12 @@
                     "globalReference" : "67e3087d",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "6d7c170c"
+              "globalKey" : "5efd0ec2"
             }
           }, {
             "transfer" : {
@@ -174,11 +176,12 @@
                     "globalReference" : "71969616",
                     "externalReference" : "party1"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "341f4899"
+              "globalKey" : "5dc2256b"
             }
           } ]
         }
@@ -1551,11 +1554,12 @@
                 "globalReference" : "71969616",
                 "externalReference" : "party1"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "87e5ecb6"
+          "globalKey" : "91cdee58"
         }
       }, {
         "transfer" : {
@@ -1596,11 +1600,12 @@
                 "globalReference" : "67e3087d",
                 "externalReference" : "party2"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "6d7c170c"
+          "globalKey" : "5efd0ec2"
         }
       }, {
         "transfer" : {
@@ -1641,23 +1646,24 @@
                 "globalReference" : "71969616",
                 "externalReference" : "party1"
               }
-            }
+            },
+            "transferType" : "Termination"
           }
         },
         "meta" : {
-          "globalKey" : "341f4899"
+          "globalKey" : "5dc2256b"
         }
       } ],
       "meta" : {
-        "globalKey" : "108d8309"
+        "globalKey" : "814e3eff"
       }
     } ],
     "meta" : {
-      "globalKey" : "ab5d9e2e"
+      "globalKey" : "5afbea98"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "d2d5a921"
+    "globalReference" : "620bb07b"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1802,6 +1808,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "42c8149"
+    "globalKey" : "844bed1f"
   }
 }

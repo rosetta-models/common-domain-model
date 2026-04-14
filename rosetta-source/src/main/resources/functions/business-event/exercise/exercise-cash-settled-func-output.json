@@ -858,15 +858,16 @@
                   "globalReference" : "be64334",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "a3291ce1"
+            "globalKey" : "d9cad976"
           }
         } ],
         "meta" : {
-          "globalKey" : "aba4204d"
+          "globalKey" : "e0b0438a"
         }
       }
     }
@@ -1672,11 +1673,12 @@
               "globalReference" : "be64334",
               "externalReference" : "party2"
             }
-          }
+          },
+          "transferType" : "Premium"
         }
       },
       "meta" : {
-        "globalKey" : "a3291ce1"
+        "globalKey" : "d9cad976"
       }
     }, {
       "transfer" : {
@@ -1718,10 +1720,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "48a32043"
+      "globalKey" : "322f11c4"
     }
   } ],
   "meta" : {
-    "globalKey" : "99f85524"
+    "globalKey" : "5982aace"
   }
 }

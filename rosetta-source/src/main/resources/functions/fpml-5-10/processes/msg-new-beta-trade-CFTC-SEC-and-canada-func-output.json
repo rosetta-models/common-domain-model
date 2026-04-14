@@ -927,15 +927,16 @@
                     "globalReference" : "a3344cf2",
                     "externalReference" : "clearing-svc"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "34ae04b2"
+              "globalKey" : "7e08d5dc"
             }
           } ],
           "meta" : {
-            "globalKey" : "dbfb90ba"
+            "globalKey" : "c06ccad4"
           }
         }
       }
@@ -1862,23 +1863,24 @@
                 "globalReference" : "a3344cf2",
                 "externalReference" : "clearing-svc"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "34ae04b2"
+          "globalKey" : "7e08d5dc"
         }
       } ],
       "meta" : {
-        "globalKey" : "ca186f16"
+        "globalKey" : "95ebb7f8"
       }
     } ],
     "meta" : {
-      "globalKey" : "f7bcf053"
+      "globalKey" : "52848de7"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "f4ff35c"
+    "globalReference" : "87c18d9a"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2157,6 +2159,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "17d0072c"
+    "globalKey" : "83c85e18"
   }
 }

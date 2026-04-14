@@ -705,15 +705,16 @@
                   "globalReference" : "46e3b454",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "a2fe2e40"
+            "globalKey" : "d497f3f7"
           }
         } ],
         "meta" : {
-          "globalKey" : "dfdd35d3"
+          "globalKey" : "3399dec4"
         }
       }
     }

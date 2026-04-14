@@ -809,15 +809,16 @@
                   "globalReference" : "be64334",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "e7e5d325"
+            "globalKey" : "2ca4ebb2"
           }
         } ],
         "meta" : {
-          "globalKey" : "a04e913"
+          "globalKey" : "4e689384"
         }
       }
     }

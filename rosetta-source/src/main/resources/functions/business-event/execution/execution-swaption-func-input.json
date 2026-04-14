@@ -656,11 +656,12 @@
                   "globalReference" : "46e3b454",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "a2fe2e40"
+            "globalKey" : "d497f3f7"
           }
         } ]
       }

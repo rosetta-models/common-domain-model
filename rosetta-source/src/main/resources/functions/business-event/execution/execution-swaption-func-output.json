@@ -660,11 +660,12 @@
                   "globalReference" : "46e3b454",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "a722e4ab"
+            "globalKey" : "550a0aec"
           }
         } ]
       }
@@ -1337,18 +1338,19 @@
               "globalReference" : "46e3b454",
               "externalReference" : "party2"
             }
-          }
+          },
+          "transferType" : "Premium"
         }
       },
       "meta" : {
-        "globalKey" : "a722e4ab"
+        "globalKey" : "550a0aec"
       }
     } ],
     "meta" : {
-      "globalKey" : "dfd47933"
+      "globalKey" : "328b0764"
     }
   } ],
   "meta" : {
-    "globalKey" : "47cc9ead"
+    "globalKey" : "73e9bb07"
   }
 }

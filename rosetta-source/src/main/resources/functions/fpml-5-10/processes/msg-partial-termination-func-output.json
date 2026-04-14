@@ -69,11 +69,12 @@
                     "globalReference" : "67e3087d",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Termination"
               }
             },
             "meta" : {
-              "globalKey" : "1050538f"
+              "globalKey" : "7b27935"
             }
           } ]
         }
@@ -1480,23 +1481,24 @@
                 "globalReference" : "67e3087d",
                 "externalReference" : "party2"
               }
-            }
+            },
+            "transferType" : "Termination"
           }
         },
         "meta" : {
-          "globalKey" : "1050538f"
+          "globalKey" : "7b27935"
         }
       } ],
       "meta" : {
-        "globalKey" : "71f43298"
+        "globalKey" : "da8a7b4c"
       }
     } ],
     "meta" : {
-      "globalKey" : "5fda6d5c"
+      "globalKey" : "7bd63d26"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "b7ae6ebf"
+    "globalReference" : "f21e1067"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1641,6 +1643,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "aa20db"
+    "globalKey" : "ac14c551"
   }
 }

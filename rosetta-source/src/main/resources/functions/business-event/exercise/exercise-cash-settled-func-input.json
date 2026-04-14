@@ -861,15 +861,16 @@
                   "globalReference" : "be64334",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Premium"
             }
           },
           "meta" : {
-            "globalKey" : "84efbd63"
+            "globalKey" : "30d84934"
           }
         } ],
         "meta" : {
-          "globalKey" : "48aa7bcb"
+          "globalKey" : "e47557cc"
         }
       }
     }

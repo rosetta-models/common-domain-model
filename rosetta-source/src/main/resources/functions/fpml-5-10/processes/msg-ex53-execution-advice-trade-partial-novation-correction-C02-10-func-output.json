@@ -98,11 +98,12 @@
                         "globalReference" : "a2b7933d",
                         "externalReference" : "_fund"
                       }
-                    }
+                    },
+                    "transferType" : "Novation"
                   }
                 },
                 "meta" : {
-                  "globalKey" : "949451a7",
+                  "globalKey" : "8e19e079",
                   "externalKey" : "NOVATION_FEE"
                 }
               } ]
@@ -585,15 +586,16 @@
                     "globalReference" : "90c956c2",
                     "externalReference" : "_broker"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "f020c036"
+              "globalKey" : "30ed8ad8"
             }
           } ],
           "meta" : {
-            "globalKey" : "352428e0"
+            "globalKey" : "8c57376e"
           }
         }
       }
@@ -1036,16 +1038,17 @@
                 "globalReference" : "a2b7933d",
                 "externalReference" : "_fund"
               }
-            }
+            },
+            "transferType" : "Novation"
           }
         },
         "meta" : {
-          "globalKey" : "949451a7",
+          "globalKey" : "8e19e079",
           "externalKey" : "NOVATION_FEE"
         }
       } ],
       "meta" : {
-        "globalKey" : "c9cdebb9"
+        "globalKey" : "1388a7"
       }
     }, {
       "trade" : {
@@ -1496,23 +1499,24 @@
                 "globalReference" : "90c956c2",
                 "externalReference" : "_broker"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "f020c036"
+          "globalKey" : "30ed8ad8"
         }
       } ],
       "meta" : {
-        "globalKey" : "5edcd288"
+        "globalKey" : "99b3c2c6"
       }
     } ],
     "meta" : {
-      "globalKey" : "2777ec4d"
+      "globalKey" : "3cb7d61b"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "d74d6995"
+    "globalReference" : "98074c4d"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1656,6 +1660,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "cb79b108"
+    "globalKey" : "1c7693d6"
   }
 }

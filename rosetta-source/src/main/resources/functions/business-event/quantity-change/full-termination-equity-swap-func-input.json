@@ -26,31 +26,6 @@
       "transfer" : {
         "transferState" : [ {
           "transfer" : {
-            "ScheduledTransfer" : {
-              "quantity" : {
-                "value" : 2000.0,
-                "unit" : {
-                  "currency" : {
-                    "value" : "USD"
-                  }
-                }
-              },
-              "settlementDate" : {
-                "adjustedDate" : {
-                  "value" : "2001-09-24"
-                }
-              },
-              "payerReceiver" : {
-                "payerPartyReference" : {
-                  "globalReference" : "33f59567",
-                  "externalReference" : "party1"
-                },
-                "receiverPartyReference" : {
-                  "globalReference" : "33f59568",
-                  "externalReference" : "party2"
-                }
-              }
-            },
             "UnscheduledTransfer" : {
               "quantity" : {
                 "value" : 2000.0,
@@ -74,7 +49,8 @@
                   "globalReference" : "33f59568",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Termination"
             }
           }
         } ]

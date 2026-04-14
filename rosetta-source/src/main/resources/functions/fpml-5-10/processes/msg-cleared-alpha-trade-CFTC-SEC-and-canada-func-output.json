@@ -1044,15 +1044,16 @@
                     "globalReference" : "5da152cd",
                     "externalReference" : "party2"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "55e5423b"
+              "globalKey" : "83b94973"
             }
           } ],
           "meta" : {
-            "globalKey" : "d7d0b602"
+            "globalKey" : "3f3c4e8c"
           }
         }
       }
@@ -2096,23 +2097,24 @@
                 "globalReference" : "5da152cd",
                 "externalReference" : "party2"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "55e5423b"
+          "globalKey" : "83b94973"
         }
       } ],
       "meta" : {
-        "globalKey" : "89eaaa8f"
+        "globalKey" : "d060eb9f"
       }
     } ],
     "meta" : {
-      "globalKey" : "bf1b7ebd"
+      "globalKey" : "9fbf209b"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "a24c556a"
+    "globalReference" : "222ebba"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2448,6 +2450,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "ac982381"
+    "globalKey" : "5c7275f"
   }
 }

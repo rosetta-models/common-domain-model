@@ -345,11 +345,12 @@
                   "globalReference" : "b6bdbfc2",
                   "externalReference" : "party1"
                 }
-              }
+              },
+              "transferType" : "Upfront"
             }
           },
           "meta" : {
-            "globalKey" : "289215d4"
+            "globalKey" : "6a6e8fa"
           }
         } ],
         "observationHistory" : [ {
@@ -380,7 +381,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "34a637f8"
+          "globalKey" : "63ab4904"
         }
       }
     }

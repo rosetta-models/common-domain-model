@@ -448,15 +448,16 @@
                     "globalReference" : "90c956c2",
                     "externalReference" : "_broker"
                   }
-                }
+                },
+                "transferType" : "Upfront"
               }
             },
             "meta" : {
-              "globalKey" : "f020c036"
+              "globalKey" : "30ed8ad8"
             }
           } ],
           "meta" : {
-            "globalKey" : "a31dba5b"
+            "globalKey" : "dd8fd553"
           }
         }
       }
@@ -905,23 +906,24 @@
                 "globalReference" : "90c956c2",
                 "externalReference" : "_broker"
               }
-            }
+            },
+            "transferType" : "Upfront"
           }
         },
         "meta" : {
-          "globalKey" : "f020c036"
+          "globalKey" : "30ed8ad8"
         }
       } ],
       "meta" : {
-        "globalKey" : "75c22ea1"
+        "globalKey" : "5f79e9cd"
       }
     } ],
     "meta" : {
-      "globalKey" : "4e881a2d"
+      "globalKey" : "3c79dc4b"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "900c73e4"
+    "globalReference" : "4714aeda"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1045,6 +1047,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "79f92ccc"
+    "globalKey" : "718fbf6e"
   }
 }

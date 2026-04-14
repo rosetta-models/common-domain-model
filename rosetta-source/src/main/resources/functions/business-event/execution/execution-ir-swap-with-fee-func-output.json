@@ -613,11 +613,12 @@
                   "globalReference" : "33f59558",
                   "externalReference" : "party2"
                 }
-              }
+              },
+              "transferType" : "Upfront"
             }
           },
           "meta" : {
-            "globalKey" : "9945d779"
+            "globalKey" : "ac6b5bf5"
           }
         } ]
       }
@@ -1243,18 +1244,19 @@
               "globalReference" : "33f59558",
               "externalReference" : "party2"
             }
-          }
+          },
+          "transferType" : "Upfront"
         }
       },
       "meta" : {
-        "globalKey" : "9945d779"
+        "globalKey" : "ac6b5bf5"
       }
     } ],
     "meta" : {
-      "globalKey" : "5f9a60d9"
+      "globalKey" : "b0a7fe95"
     }
   } ],
   "meta" : {
-    "globalKey" : "7f402883"
+    "globalKey" : "df367e0d"
   }
 }
