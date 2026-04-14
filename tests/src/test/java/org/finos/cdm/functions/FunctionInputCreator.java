@@ -123,7 +123,7 @@ public class FunctionInputCreator {
         }
     }
 
-    public void run( Optional<Path> writeBasePath) throws Exception {
+    public void run(Optional<Path> writeBasePath) throws Exception {
         Module module = Modules.override(new CdmRuntimeModule())
                 .with(new AbstractModule() {
                     @Override
@@ -674,7 +674,6 @@ public class FunctionInputCreator {
                 .filter(unit -> unit.getCurrency() != null)
                 .findFirst()
                 .orElse(null);
-
         return TransferInstruction.builder()
                 .addTransferState(TransferState.builder()
                         .setTransfer(Transfer.builder()
@@ -1281,30 +1280,14 @@ public class FunctionInputCreator {
 
         TransferInstruction.TransferInstructionBuilder transferInstructionBuilder = TransferInstruction.builder();
 
-        TransferState.TransferStateBuilder transferStateBuilder = transferInstructionBuilder
-                .getOrCreateTransferState(0);
+        Transfer.TransferBuilder transferBuilder = transferInstructionBuilder
+                .getOrCreateTransferState(0)
+                .getOrCreateTransfer();
 
-        Transfer.TransferBuilder transferBuilder = transferStateBuilder.getOrCreateTransfer();
-
-        ScheduledTransfer.ScheduledTransferBuilder scheduledTransferBuilder = transferBuilder.getOrCreateScheduledTransfer();
-
-        scheduledTransferBuilder.getOrCreatePayerReceiver()
-                .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1").build())
-                .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2").build());
-
-        scheduledTransferBuilder.getOrCreateQuantity()
-                .setValue(BigDecimal.valueOf(2000))
-                .setUnit(UnitType.builder()
-                        .setCurrency(FieldWithMetaString.builder()
-                                .setValue("EUR")
-                                .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217").build())
-                                .build())
-                        .build());
-
-        scheduledTransferBuilder.getOrCreateSettlementDate()
-                .setAdjustedDateValue(Date.of(2019, 4, 3));
-
-        scheduledTransferBuilder.setTransferType(ScheduledTransferEnum.EXERCISE);
+        TransferBase.TransferBaseBuilder transfer = transferBuilder.getOrCreateScheduledTransfer();
+        getOrCreateTransfer(transfer);
+        transferBuilder.getOrCreateScheduledTransfer()
+                .setTransferType(ScheduledTransferEnum.EXERCISE);
 
         Instruction.InstructionBuilder instructions = Instruction.builder()
                 .setBeforeValue(afterTradeState)
@@ -1322,6 +1305,26 @@ public class FunctionInputCreator {
                 null);
 
         writeExpectation("functions/business-event/exercise/exercise-cash-settled-func-input.json", actual);
+    }
+
+    private static void getOrCreateTransfer(TransferBase.TransferBaseBuilder transfer) {
+
+        transfer.getOrCreatePayerReceiver()
+                .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1").build())
+                .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2").build());
+
+        transfer.getOrCreateQuantity()
+                .setValue(BigDecimal.valueOf(2000))
+                .setUnit(UnitType.builder()
+                        .setCurrency(FieldWithMetaString.builder()
+                                .setValue("EUR")
+                                .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217").build())
+                                .build())
+                        .build());
+
+        transfer.getOrCreateSettlementDate()
+                .setAdjustedDateValue(Date.of(2019, 4, 3));
+
     }
 
     private void updateExercisePartialExerciseInputJson() throws IOException {
@@ -1386,44 +1389,14 @@ public class FunctionInputCreator {
         Transfer.TransferBuilder transferBuilder = transferInstructionBuilder
                 .getOrCreateTransferState(0)
                 .getOrCreateTransfer();
-        TransferBase.TransferBaseBuilder transfer = transferBuilder.getUnscheduledTransfer();
-        if (transfer != null) {
-
-            transfer.getOrCreatePayerReceiver()
-                    .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
-                    .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
-
-            transfer.getOrCreateQuantity()
-                    .setValue(BigDecimal.valueOf(2000))
-                    .setUnit(UnitType.builder()
-                            .setCurrency(FieldWithMetaString.builder()
-                                    .setValue("EUR")
-                                    .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217"))
-                            )
-                    );
-
-            transfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                    .setAdjustedDateValue(Date.of(2019, 4, 3))
-            );
+        TransferBase.TransferBaseBuilder unscheduledTransfer = transferBuilder.getUnscheduledTransfer();
+        if (unscheduledTransfer != null) {
+            getOrCreateTransfer(unscheduledTransfer);
         } else {
-            TransferBase.TransferBaseBuilder scheduledTransfer = transferBuilder.getOrCreateScheduledTransfer();
-
-            scheduledTransfer.getOrCreatePayerReceiver()
-                    .setPayerPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party1"))
-                    .setReceiverPartyReference(ReferenceWithMetaParty.builder().setExternalReference("party2"));
-
-            scheduledTransfer.getOrCreateQuantity()
-                    .setValue(BigDecimal.valueOf(2000))
-                    .setUnit(UnitType.builder()
-                            .setCurrency(FieldWithMetaString.builder()
-                                    .setValue("EUR")
-                                    .setMeta(MetaFields.builder().setScheme("http://www.fpml.org/coding-scheme/external/iso4217"))
-                            )
-                    );
-
-            scheduledTransfer.setSettlementDate(AdjustableOrAdjustedOrRelativeDate.builder()
-                    .setAdjustedDateValue(Date.of(2019, 4, 3))
-            );
+            ScheduledTransfer.ScheduledTransferBuilder scheduledTransferBuilder = transferBuilder.getOrCreateScheduledTransfer();
+            getOrCreateTransfer(scheduledTransferBuilder);
+            transferBuilder.getOrCreateScheduledTransfer()
+                    .setTransferType(ScheduledTransferEnum.EXERCISE);
         }
 
         Instruction.InstructionBuilder instruction = Instruction.builder()
