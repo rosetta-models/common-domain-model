@@ -171,7 +171,7 @@ public class CreatePartialTerminationEventTest extends AbstractExampleTest {
 
         // Assert transfer fee
         Transfer transfer = afterTradeState.getTransferHistory().get(0).getTransfer();
-        assertEquals(UnscheduledTransferEnum.PARTIAL_TERMINATION, transfer.getUnscheduledTransfer());
+        assertEquals(UnscheduledTransferEnum.PARTIAL_TERMINATION, transfer.getUnscheduledTransfer().getTransferType());
         assertEquals(new BigDecimal("2000.0"), transfer.getUnscheduledTransfer().getQuantity().getValue());
     }
 
