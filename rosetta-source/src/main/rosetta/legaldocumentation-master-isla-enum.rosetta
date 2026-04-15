@@ -1,7 +1,7 @@
 namespace cdm.legaldocumentation.master.isla
 version "${project.version}"
 
-enum ApplicabilityOfGMSLAElectionEnum: <"The potential options for specifying whether a particular paragraph applies in a GMSLA">
+enum ApplicabilityOfElectionEnum: <"The potential options for specifying whether a particular paragraph applies in a GMSLA">
     Applicable <"The paragraph is applicable">
     NotApplicable <"The paragraph is not applicable">
     NotSpecified <"The applicability of the paragraph has not been specified">
