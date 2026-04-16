@@ -84,7 +84,7 @@ type CreditIndex extends IndexBase: <"Specification of an index based on credit 
     condition CreditAssetClass: <"The asset class must be Credit.">
         assetClass = AssetClassEnum -> Credit
 
-type EquityIndex extends IndexBase: <"Specification of an index based on equity securities, e.g. the S&P 500..">
+type EquityIndex extends IndexBase: <"Specification of an index based on equity securities, e.g. the S&P 500.">
 
     condition EquityAssetClass: <"The asset class must be Equity.">
         assetClass = AssetClassEnum -> Equity
