@@ -23,6 +23,8 @@ enum ExceptionEnum: <"Values to specify the normalized exceptions applicable to 
     Applicable <"The election is applicable.">
     NotApplicable <"The election is not applicable.">
     Other <"An alternative approach is described in the document as follows.">
+    Other2 <"">
+
 
 enum SensitivitiesEnum: <"Values to specify the methodology according to which sensitivities to (i) equity indices, funds and ETFs, and (ii) commodity indices are computed.">
     [docReference ISDA CSA_IM_2016 paragraph "13 General Principles" clause "(gg)(2)"]
