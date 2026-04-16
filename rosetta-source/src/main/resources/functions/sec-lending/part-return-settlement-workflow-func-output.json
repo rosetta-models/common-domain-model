@@ -2099,7 +2099,6 @@
           }
         }
       } ],
-      "eventQualifier" : "SecuritySettlement",
       "after" : [ {
         "trade" : {
           "product" : {
@@ -2801,7 +2800,7 @@
         }
       } ],
       "meta" : {
-        "globalKey" : "5a14899c"
+        "globalKey" : "a52aae71"
       }
     },
     "previousWorkflowStep" : {
@@ -2827,7 +2826,7 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "d1c93673"
+      "globalKey" : "3f032a7e"
     }
   } ]
 }
