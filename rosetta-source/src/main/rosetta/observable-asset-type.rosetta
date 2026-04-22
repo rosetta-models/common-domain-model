@@ -143,25 +143,24 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
     premiumType PremiumTypeEnum (0..1) <"(Optionally) Additional attribute that can further define any premium to the price.">
 
     condition UnitOfAmountExists: <"Requires that a unit of amount must be specified for price unless price type is Variance, Volatility or Correlation.">
-        if priceType = PriceTypeEnum -> Variance
-                or priceType = PriceTypeEnum -> Volatility
-                or priceType = PriceTypeEnum -> Correlation
+        if priceType = Variance
+                or priceType = Volatility
+                or priceType = Correlation
         then unit is absent and perUnitOf is absent
         else unit exists and perUnitOf exists
 
     condition PositiveAssetPrice: <"Requires that per FpML rules, the FX rate must be a positive value.">
-        if (priceType = PriceTypeEnum -> ExchangeRate or priceType = PriceTypeEnum -> AssetPrice)
+        if (priceType = ExchangeRate or priceType = AssetPrice)
                 and arithmeticOperator is absent
         then value > 0 or datedValue -> value all > 0
 
     condition PositiveSpotRate: <"Requires that per FpML rules, the spot rate must be a positive value, for example for FX or Commodities.">
-        if (priceType = PriceTypeEnum -> ExchangeRate or priceType = PriceTypeEnum -> AssetPrice)
+        if (priceType = ExchangeRate or priceType = AssetPrice)
                 and composite -> baseValue exists
         then composite -> baseValue > 0
 
     condition PositivePremium: <"Requires that any price expressed as a Premium must be positive">
-        if priceType = Premium
-        then value > 0
+        if priceType = Premium then value > 0
 
     condition CurrencyUnitForInterestRate: <"Requires that the unit of amount for an interest rate must be a currency.">
         if priceType = PriceTypeEnum -> InterestRate
@@ -174,21 +173,25 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
         if premiumType exists then priceType = Premium
 
     condition ArithmeticOperator: <"Operator must not be subtract or divide.">
-        arithmeticOperator <> ArithmeticOperationEnum -> Subtract
-            and arithmeticOperator <> ArithmeticOperationEnum -> Divide
+        arithmeticOperator <> Subtract
+            and arithmeticOperator <> Divide
 
     condition SpreadPrice: <"A spread type can only be specified when the price type is an asset price or an interest rate.">
-        if arithmeticOperator = ArithmeticOperationEnum -> Add
-        then priceType = PriceTypeEnum -> AssetPrice
-                or priceType = PriceTypeEnum -> InterestRate
+        if arithmeticOperator = Add
+        then priceType = AssetPrice
+                or priceType = InterestRate
 
     condition ForwardPoint: <"If composite operand type is ForwardPoint then the price type must be ExchangeRate.">
-        if composite -> operandType = PriceOperandEnum -> ForwardPoint
-        then priceType = PriceTypeEnum -> ExchangeRate
+        if composite -> operandType = ForwardPoint
+        then priceType = ExchangeRate
 
     condition AccruedInterest: <"If composite operand type is AccruedInterest then the price type must be AssetPrice.">
-        if composite -> operandType = PriceOperandEnum -> AccruedInterest
-        then priceType = PriceTypeEnum -> AssetPrice
+        if composite -> operandType = AccruedInterest
+        then priceType = AssetPrice
+
+    condition InterestRateFeeType: <"If a lending fee or rebate fee is specified then the price type must be InterestRate.">
+        if priceSubType = Fee or priceSubType = Rebate
+        then priceType = InterestRate
 
 type Price extends PriceSchedule: <"Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.">
 
