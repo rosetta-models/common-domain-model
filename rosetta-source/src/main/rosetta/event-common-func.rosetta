@@ -194,7 +194,7 @@ func InterestCashSettlementAmount: <"Defines the performance calculations releva
 
     set interestCashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate: date
 
-    set interestCashSettlementAmount -> ScheduledTransfer -> settlementOrigin: payout as-key
+    set interestCashSettlementAmount -> ScheduledTransfer -> payoutReference: payout as-key
 
 func ResolveReset: <"Defines the interface for adopters to resolve a reset, given a trade state and a date.">
     [codeImplementation]
@@ -323,7 +323,7 @@ func EquityCashSettlementAmount: <"Represents Part 1 Section 12 of the 2018 ISDA
         if equityPerformance >= 0 then receiver else payer
     set equityCashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate:
         ResolveCashSettlementDate(tradeState)
-    set equityCashSettlementAmount -> ScheduledTransfer -> settlementOrigin: payout as-key
+    set equityCashSettlementAmount -> ScheduledTransfer -> payoutReference: payout as-key
 
 func EquityPerformance: <"Part 1 Section 12 of the 2018 ISDA CDM Equity Confirmation for Security Equity Swap, Para 75. 'Equity Performance' means, in respect of an Equity Cash Settlement Date, an amount in the Settlement Currency determined by the Calculation Agent as of the Equity Valuation Date to which the Equity Cash Settlement Amount relates, pursuant to the following formula: Equity Performance = (Rate Of Return)  Equity Notional Amount.">
     inputs:
@@ -741,7 +741,7 @@ func Create_AssetTransfer: <"Defines how Transfer that represents an exchange of
 
     set transfer -> ScheduledTransfer -> settlementDate -> adjustedDate: instruction -> date
 
-    set transfer -> ScheduledTransfer -> settlementOrigin: payout as-key
+    set transfer -> ScheduledTransfer -> payoutReference: payout as-key
 
 func ResolveTransfer: <"Defines how to calculate the amount due to be transferred after a Reset Event.">
     inputs:
@@ -862,7 +862,7 @@ func SecurityFinanceCashSettlementAmount:
 
     set cashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate: date
 
-    set cashSettlementAmount -> ScheduledTransfer -> settlementOrigin: payout as-key
+    set cashSettlementAmount -> ScheduledTransfer -> payoutReference: payout as-key
 
 func Create_Split: <"Defines the logic for splitting a trade into separate copies. The split instruction contains a breakdown into N set of primitive instructions. Each set contains the primitive instructions to be applied to each post-split trade, eventually producing N trades. The split function underpins a number of business events such as clearing or allocation.">
     inputs:
