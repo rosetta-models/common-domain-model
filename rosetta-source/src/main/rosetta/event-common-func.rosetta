@@ -2395,3 +2395,101 @@ func InterestPayoutObligationsFulfilled: <"Determines whether the obligations de
         if cashTransferredQuantity = payoutQuantitySchedule
         then True
         else False
+
+func Create_AgreementEvent: <"Creates a agreement event from instructions containing primitive instructions covering term or party changes associated with an amendment agreement">
+    [creation AgreementEvent]
+    inputs:
+        agreementInstruction AgreementInstruction (1..*)
+        eventDate date (1..1)
+        effectiveDate date (1..1)
+    output:
+        agreementEvent AgreementEvent (1..1)
+    
+    add agreementEvent -> agreementInstruction: agreementInstruction
+
+    set agreementEvent -> agreementEventInstruction -> eventDate: eventDate
+
+    set agreementEvent -> agreementEventInstruction -> effectiveDate: effectiveDate
+
+    add agreementEvent -> afterAgreement:
+        agreementInstruction
+            extract 
+                if primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange exists
+                then Create_AgreementPartyChange(
+                        primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange,
+                        beforeAgreement
+                )
+
+func Create_LegalAgreement: <"Creates a Legal Agreement record based on a before legal agreement and the application of party and or term changes that are represented by a Legal agreement amendment).
+    The primitive instructions are applied in the following order:
+        Always first:
+            - party change
+            - terms change">
+    inputs:
+        primitiveInstruction AgreementPrimitiveInstruction (0..1) <"The set of primitive instructions to apply to the trade.">
+        before LegalAgreement (0..1) <"The original Legal agreement terms on which the primitive instructions are applied">
+    output:
+        after LegalAgreement (1..1) <"The returned Legal agreement terms representing the updated Legal agreement terms based on te application of the amended terms covered by a defined amendment agreement.">
+
+    alias VMCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
+        if primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange is absent
+        then before
+        else Create_AgreementPartyChange(primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange, after)
+
+    alias VMCSAAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
+        if primitiveInstruction -> vmCSAPrimitiveInstruction -> termsChange is absent
+        then before
+        else Create_VMAgreementTermsChange(primitiveInstruction -> vmCSAPrimitiveInstruction -> termsChange, after)
+
+    alias IMCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
+        if primitiveInstruction -> imCSAPrimitiveInstruction -> partyChange is absent
+        then before
+        else Create_AgreementPartyChange(primitiveInstruction -> imCSAPrimitiveInstruction -> partyChange, after)
+
+    alias imAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
+        if primitiveInstruction -> imCSAPrimitiveInstruction -> termsChange is absent
+        then before
+        else Create_IMAgreementTermsChange(primitiveInstruction -> imCSAPrimitiveInstruction -> termsChange, after)
+
+    alias LegacyCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
+        if primitiveInstruction -> legacyCSAPrimitiveInstruction -> partyChange is absent
+        then before
+        else Create_AgreementPartyChange(primitiveInstruction -> legacyCSAPrimitiveInstruction -> partyChange, after)
+
+    alias LegacyCSAAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
+        if primitiveInstruction -> legacyCSAPrimitiveInstruction -> termsChange is absent
+        then before
+        else Create_LegacyAgreementTermsChange(primitiveInstruction -> legacyCSAPrimitiveInstruction -> termsChange, after)
+
+func Create_AgreementPartyChange: <"Specifies the inputs, outputs and constraints when calculating the after agreementState based on a change to the parties.">
+    inputs:
+        agreementPartyChange AgreementPartyChangeInstruction (0..1) <"Instructions to be used as an input to the function when identifying party changes to the agreement.">
+        beforeAgreement LegalAgreement (1..1) <"States the current agreement parties to be amnended.">
+    output:
+        afterAgreement LegalAgreement (1..1) <"States the agreement parties after the amendment change has been processed">
+    
+    alias agtPartyChange: <"Create agreementpartychange if agreementPartyChangeInstruction exists, if not, then before must exist.">
+        if agreementPartyChange is absent
+        then beforeAgreement -> contractualParty
+        else agreementPartyChange
+
+func Create_VMAgreementTermsChange: <"Specifies the inputs, outputs and constraints when calculating the after agreementState based on a change in terms due to an amendment agreement.">
+    inputs:
+        agreementTermsChange VMAgreementTermsChangeInstruction (0..1) <"Instructions to be used as an input to the function when identifying Agreement Term changes.">
+        beforeAgreement LegalAgreement (1..1) <"States the current Agreement terms to be amended.">
+    output:
+        after LegalAgreement (1..1) <"States the Agreement terms after the AgreementTermsChangInstruction has been completed">
+
+func Create_IMAgreementTermsChange: <"Specifies the inputs, outputs and constraints when calculating the after agreementState based on a change in terms due to an amendment agreement.">
+    inputs:
+        agreementTermsChange IMAgreementTermsChangeInstruction (0..1) <"Instructions to be used as an input to the function when identifying Agreement Term changes.">
+        beforeAgreement LegalAgreement (1..1) <"States the current Agreement terms to be amended.">
+    output:
+        after LegalAgreement (1..1) <"States the Agreement terms after the AgreementTermsChangInstruction has been completed">
+
+func Create_LegacyAgreementTermsChange: <"Specifies the inputs, outputs and constraints when calculating the after agreementState based on a change in terms due to an amendment agreement.">
+    inputs:
+        agreementTermsChange LegacyAgreementTermsChangeInstruction (0..1) <"Instructions to be used as an input to the function when identifying Agreement Term changes.">
+        before LegalAgreement (1..1) <"States the current Agreement terms to be amended.">
+    output:
+        after LegalAgreement (1..1) <"States the Agreement terms after the AgreementTermsChangInstruction has been completed">
