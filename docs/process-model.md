@@ -589,7 +589,7 @@ func EquityCashSettlementAmount:
         if equityPerformance >= 0 then receiver else payer
     set equityCashSettlementAmount -> ScheduledTransfer -> settlementDate -> adjustedDate:
         ResolveCashSettlementDate(tradeState)
-    set equityCashSettlementAmount -> ScheduledTransfer -> settlementOrigin: payout as-key
+    set equityCashSettlementAmount -> ScheduledTransfer -> payoutReference: payout as-key
 ```
 
 ``` Haskell

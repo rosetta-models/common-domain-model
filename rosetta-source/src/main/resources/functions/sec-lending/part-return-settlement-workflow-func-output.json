@@ -566,7 +566,7 @@
                   "externalReference" : "Lender0"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }
@@ -613,7 +613,7 @@
                   "externalReference" : "Borrower"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }
@@ -688,7 +688,7 @@
                       "externalReference" : "Borrower"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -735,7 +735,7 @@
                       "externalReference" : "Lender0"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -1311,7 +1311,7 @@
                       "externalReference" : "Lender0"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -1358,7 +1358,7 @@
                       "externalReference" : "Borrower"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -1434,7 +1434,7 @@
                       "externalReference" : "Borrower"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -1481,7 +1481,7 @@
                       "externalReference" : "Lender0"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -2057,7 +2057,7 @@
                       "externalReference" : "Lender0"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -2104,7 +2104,7 @@
                       "externalReference" : "Borrower"
                     }
                   },
-                  "settlementOrigin" : {
+                  "payoutReference" : {
                     "globalReference" : "b78e4420"
                   }
                 }
@@ -2684,7 +2684,7 @@
                   "externalReference" : "Lender0"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }
@@ -2731,7 +2731,7 @@
                   "externalReference" : "Borrower"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }
@@ -2768,7 +2768,7 @@
                   "externalReference" : "Borrower"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }
@@ -2815,7 +2815,7 @@
                   "externalReference" : "Lender0"
                 }
               },
-              "settlementOrigin" : {
+              "payoutReference" : {
                 "globalReference" : "b78e4420"
               }
             }

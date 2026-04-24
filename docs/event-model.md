@@ -310,7 +310,7 @@ type UnscheduledTransfer extends TransferBase:
 type ScheduledTransfer extends TransferBase: 
     transferType ScheduledTransferEnum (1..1)
     corporateActionTransferType CorporateActionTypeEnum (0..1)
-    settlementOrigin Payout (0..1) 
+    payoutReference Payout (0..1) 
         [metadata reference]
 ```
 
