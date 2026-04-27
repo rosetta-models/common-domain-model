@@ -18,6 +18,5 @@ func ValidateFpMLCodingSchemeDomain: <"Validates an FpMLCodingScheme code agains
     alias codelist: LoadCodeList(domain)
 
     set isValid:
-        if codelist exists
-        then codelist -> codes -> value any = code
+        if codelist exists then codelist -> codes -> value any = code
         else False
