@@ -43,7 +43,7 @@ public class Fpml512IncompleteProductIngestionServiceTest extends IngestionTest<
         return readExpectationsFromPath(INCOMPLETE_BASE);
     }
 
-	public void run() {
+	public void updateExpectations() {
 
 		// Ensure environment is set up
 		setup();

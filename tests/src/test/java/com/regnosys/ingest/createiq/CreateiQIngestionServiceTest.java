@@ -138,7 +138,7 @@ public class CreateiQIngestionServiceTest extends IngestionTest<LegalAgreement> 
         return readExpectationsFromString(EXPECTATION_FILES);
     }
 
-    public void run() {
+    public void updateExpectations() {
 
         // Ensure environment is set up
         setup();

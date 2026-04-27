@@ -64,7 +64,7 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
         IngestionFactory.getInstance(ENV_INSTANCE_NAME).clear();
     }
 
-    public void run() {
+    public void updateExpectations() {
 
         // Ensure environment is set up
         setup();

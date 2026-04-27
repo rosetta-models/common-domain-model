@@ -49,7 +49,7 @@ public class CMESubmissionTest extends IngestionTest<WorkflowStep> {
         return readExpectationsFrom(EXPECTATION_FILES);
     }
 
-	public void run() {
+	public void updateExpectations() {
 
 		// Ensure environment is set up
 		setup();

@@ -50,7 +50,7 @@ public class Fpml510IncompleteProcessesIngestionServiceTest extends IngestionTes
         return readExpectationsFrom(EXPECTATION_FILES);
     }
 
-	public void run() {
+	public void updateExpectations() {
 
 		// Ensure environment is set up
 		setup();

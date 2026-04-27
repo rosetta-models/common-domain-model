@@ -43,7 +43,7 @@ public class Fpml513ProcessesIngestionServiceTest extends IngestionTest<Workflow
         return readExpectationsFromPath(BASE_DIR);
     }
 
-	public void run() {
+	public void updateExpectations() {
 
 		// Ensure environment is set up
 		setup();
