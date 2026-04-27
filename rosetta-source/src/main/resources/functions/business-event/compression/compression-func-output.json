@@ -1,6 +1,6 @@
 {
-  "intent" : "Compression",
   "eventDate" : "2018-04-03",
+  "intent" : "Compression",
   "instruction" : [ {
     "primitiveInstruction" : {
       "quantityChange" : {
@@ -5435,6 +5435,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "dcebc433"
+    "globalKey" : "6771d059"
   }
 }

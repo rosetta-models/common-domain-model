@@ -1,7 +1,7 @@
 {
   "proposedEvent" : {
-    "intent" : "Clearing",
     "eventDate" : "2011-02-04",
+    "intent" : "Clearing",
     "instruction" : [ {
       "before" : {
         "value" : {
@@ -671,6 +671,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "8a9e29e5"
+    "globalKey" : "1f6e3a7"
   }
 }

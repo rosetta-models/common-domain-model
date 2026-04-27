@@ -1,8 +1,8 @@
 {
   "proposedEvent" : {
-    "intent" : "Clearing",
     "eventDate" : "2011-06-01",
     "effectiveDate" : "2011-06-03",
+    "intent" : "Clearing",
     "instruction" : [ {
       "primitiveInstruction" : {
         "quantityChange" : {
@@ -486,6 +486,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "41405c20"
+    "globalKey" : "465d485c"
   }
 }

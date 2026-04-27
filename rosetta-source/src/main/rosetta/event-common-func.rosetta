@@ -2404,7 +2404,7 @@ func Create_AgreementEvent: <"Creates a agreement event from instructions contai
         effectiveDate date (1..1)
     output:
         agreementEvent AgreementEvent (1..1)
-    
+
     add agreementEvent -> agreementInstruction: agreementInstruction
 
     set agreementEvent -> agreementEventInstruction -> eventDate: eventDate
@@ -2413,12 +2413,12 @@ func Create_AgreementEvent: <"Creates a agreement event from instructions contai
 
     add agreementEvent -> afterAgreement:
         agreementInstruction
-            extract 
+            extract
                 if primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange exists
                 then Create_AgreementPartyChange(
-                        primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange,
-                        beforeAgreement
-                )
+                            primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange,
+                            beforeAgreement
+                        )
 
 func Create_LegalAgreement: <"Creates a Legal Agreement record based on a before legal agreement and the application of party and or term changes that are represented by a Legal agreement amendment).
     The primitive instructions are applied in the following order:
@@ -2434,32 +2434,50 @@ func Create_LegalAgreement: <"Creates a Legal Agreement record based on a before
     alias VMCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
         if primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange is absent
         then before
-        else Create_AgreementPartyChange(primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange, after)
+        else Create_AgreementPartyChange(
+                primitiveInstruction -> vmCSAPrimitiveInstruction -> partyChange,
+                after
+            )
 
     alias VMCSAAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
         if primitiveInstruction -> vmCSAPrimitiveInstruction -> termsChange is absent
         then before
-        else Create_VMAgreementTermsChange(primitiveInstruction -> vmCSAPrimitiveInstruction -> termsChange, after)
+        else Create_VMAgreementTermsChange(
+                primitiveInstruction -> vmCSAPrimitiveInstruction -> termsChange,
+                after
+            )
 
     alias IMCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
         if primitiveInstruction -> imCSAPrimitiveInstruction -> partyChange is absent
         then before
-        else Create_AgreementPartyChange(primitiveInstruction -> imCSAPrimitiveInstruction -> partyChange, after)
+        else Create_AgreementPartyChange(
+                primitiveInstruction -> imCSAPrimitiveInstruction -> partyChange,
+                after
+            )
 
     alias imAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
         if primitiveInstruction -> imCSAPrimitiveInstruction -> termsChange is absent
         then before
-        else Create_IMAgreementTermsChange(primitiveInstruction -> imCSAPrimitiveInstruction -> termsChange, after)
+        else Create_IMAgreementTermsChange(
+                primitiveInstruction -> imCSAPrimitiveInstruction -> termsChange,
+                after
+            )
 
     alias LegacyCSAAgreementPartyChange: <"Create execution if instruction exists. If not, then before must exist.">
         if primitiveInstruction -> legacyCSAPrimitiveInstruction -> partyChange is absent
         then before
-        else Create_AgreementPartyChange(primitiveInstruction -> legacyCSAPrimitiveInstruction -> partyChange, after)
+        else Create_AgreementPartyChange(
+                primitiveInstruction -> legacyCSAPrimitiveInstruction -> partyChange,
+                after
+            )
 
     alias LegacyCSAAgreementTermsChange: <"Create execution if instruction exists, if not, then before must exist.">
         if primitiveInstruction -> legacyCSAPrimitiveInstruction -> termsChange is absent
         then before
-        else Create_LegacyAgreementTermsChange(primitiveInstruction -> legacyCSAPrimitiveInstruction -> termsChange, after)
+        else Create_LegacyAgreementTermsChange(
+                primitiveInstruction -> legacyCSAPrimitiveInstruction -> termsChange,
+                after
+            )
 
 func Create_AgreementPartyChange: <"Specifies the inputs, outputs and constraints when calculating the after agreementState based on a change to the parties.">
     inputs:
@@ -2467,7 +2485,7 @@ func Create_AgreementPartyChange: <"Specifies the inputs, outputs and constraint
         beforeAgreement LegalAgreement (1..1) <"States the current agreement parties to be amnended.">
     output:
         afterAgreement LegalAgreement (1..1) <"States the agreement parties after the amendment change has been processed">
-    
+
     alias agtPartyChange: <"Create agreementpartychange if agreementPartyChangeInstruction exists, if not, then before must exist.">
         if agreementPartyChange is absent
         then beforeAgreement -> contractualParty

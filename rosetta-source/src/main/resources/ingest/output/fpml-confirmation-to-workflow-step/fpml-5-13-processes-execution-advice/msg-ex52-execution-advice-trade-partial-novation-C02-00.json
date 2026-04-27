@@ -1,8 +1,8 @@
 {
   "proposedEvent" : {
-    "intent" : "Novation",
     "eventDate" : "2009-06-16",
     "effectiveDate" : "2009-06-16",
+    "intent" : "Novation",
     "instruction" : [ {
       "primitiveInstruction" : {
         "split" : {
@@ -635,6 +635,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "81589bc5"
+    "globalKey" : "30b3efc5"
   }
 }

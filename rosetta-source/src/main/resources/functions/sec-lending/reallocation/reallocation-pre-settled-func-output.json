@@ -1,6 +1,6 @@
 {
-  "intent" : "Reallocation",
   "eventDate" : "2020-09-21",
+  "intent" : "Reallocation",
   "instruction" : [ {
     "primitiveInstruction" : {
       "split" : {
@@ -1842,6 +1842,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "127f414b"
+    "globalKey" : "d2d1858f"
   }
 }

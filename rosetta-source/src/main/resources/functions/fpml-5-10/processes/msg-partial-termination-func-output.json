@@ -1,8 +1,8 @@
 {
   "businessEvent" : {
-    "intent" : "Clearing",
     "eventDate" : "2011-06-01",
     "effectiveDate" : "2011-06-03",
+    "intent" : "Clearing",
     "instruction" : [ {
       "primitiveInstruction" : {
         "quantityChange" : {
@@ -1498,11 +1498,11 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "7ef5d6dc"
+      "globalKey" : "ce4b1818"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "c315865f"
+    "globalReference" : "b2fe289b"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1647,6 +1647,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "c26f275b"
+    "globalKey" : "7c33af9f"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "intent" : "Clearing",
   "eventDate" : "2018-04-01",
+  "intent" : "Clearing",
   "instruction" : [ {
     "primitiveInstruction" : {
       "split" : {
@@ -421,6 +421,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "bb6a7e40"
+    "globalKey" : "4a02c2a8"
   }
 }

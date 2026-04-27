@@ -1,7 +1,7 @@
 {
   "businessEvent" : {
-    "intent" : "ContractFormation",
     "eventDate" : "2011-02-04",
+    "intent" : "ContractFormation",
     "instruction" : [ {
       "primitiveInstruction" : {
         "contractFormation" : {
@@ -1880,11 +1880,11 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "7c1a8ea7"
+      "globalKey" : "7ebff4e7"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "3d0aabce"
+    "globalReference" : "c49d020e"
   },
   "messageInformation" : {
     "messageId" : {
@@ -2163,6 +2163,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "ad375558"
+    "globalKey" : "a2175718"
   }
 }

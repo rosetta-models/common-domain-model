@@ -1,6 +1,6 @@
 {
-  "intent" : "Allocation",
   "eventDate" : "2020-09-21",
+  "intent" : "Allocation",
   "instruction" : [ {
     "primitiveInstruction" : {
       "split" : {
@@ -2383,6 +2383,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "34fd1620"
+    "globalKey" : "7c695aaa"
   }
 }

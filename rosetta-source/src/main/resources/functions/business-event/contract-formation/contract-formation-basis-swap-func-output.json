@@ -1,6 +1,6 @@
 {
-  "intent" : "ContractFormation",
   "eventDate" : "2017-12-18",
+  "intent" : "ContractFormation",
   "instruction" : [ {
     "before" : {
       "value" : {
@@ -1460,6 +1460,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "157297b1"
+    "globalKey" : "36354d95"
   }
 }

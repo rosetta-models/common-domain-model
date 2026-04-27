@@ -973,12 +973,10 @@ Validation components are in place to check that the `businessEvent` and
 `proposedEvent` attributes are mutually exclusive.
 
 ``` Haskell
-type EventInstruction:
+type EventInstruction extends EventBase:
   intent EventIntentEnum (0..1)
   corporateActionIntent CorporateActionTypeEnum (0..1)
-  eventDate date (0..1)
   eventTime TimeZone (0..1)
-  effectiveDate date (0..1)
   effectiveTime TimeZone (0..1)
   packageInformation IdentifiedList (0..1)
   instruction Instruction (0..*)

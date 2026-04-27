@@ -1,7 +1,7 @@
 {
   "proposedEvent" : {
-    "intent" : "Allocation",
     "eventDate" : "2018-04-01",
+    "intent" : "Allocation",
     "instruction" : [ {
       "before" : {
         "value" : {
@@ -653,6 +653,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "4dbf68d7"
+    "globalKey" : "c64e9fb5"
   }
 }

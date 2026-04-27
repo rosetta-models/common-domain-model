@@ -1,7 +1,7 @@
 {
   "proposedEvent" : {
-    "intent" : "ContractFormation",
     "eventDate" : "2011-02-04",
+    "intent" : "ContractFormation",
     "instruction" : [ {
       "primitiveInstruction" : {
         "contractFormation" : {
@@ -1091,6 +1091,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "b006c92e"
+    "globalKey" : "19a06aee"
   }
 }

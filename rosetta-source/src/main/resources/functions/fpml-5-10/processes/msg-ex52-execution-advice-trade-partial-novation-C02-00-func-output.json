@@ -1,8 +1,8 @@
 {
   "businessEvent" : {
-    "intent" : "Novation",
     "eventDate" : "2009-06-16",
     "effectiveDate" : "2009-06-16",
+    "intent" : "Novation",
     "instruction" : [ {
       "primitiveInstruction" : {
         "split" : {
@@ -1520,11 +1520,11 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "7fb9032c"
+      "globalKey" : "1a89572c"
     }
   },
   "previousWorkflowStep" : {
-    "globalReference" : "791b6021"
+    "globalReference" : "2876b421"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1668,6 +1668,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "1266f045"
+    "globalKey" : "84d4445"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "intent" : "OptionExercise",
   "eventDate" : "2019-04-01",
+  "intent" : "OptionExercise",
   "instruction" : [ {
     "primitiveInstruction" : {
       "quantityChange" : {
@@ -1403,6 +1403,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "f58ff834"
+    "globalKey" : "b3da5852"
   }
 }

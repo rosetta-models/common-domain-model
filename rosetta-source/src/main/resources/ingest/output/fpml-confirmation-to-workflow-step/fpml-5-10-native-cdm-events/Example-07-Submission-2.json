@@ -1,7 +1,7 @@
 {
   "proposedEvent" : {
-    "intent" : "ContractFormation",
     "eventDate" : "2018-04-01",
+    "intent" : "ContractFormation",
     "instruction" : [ {
       "before" : {
         "value" : {
@@ -708,6 +708,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "73477223"
+    "globalKey" : "d6e7b9fd"
   }
 }

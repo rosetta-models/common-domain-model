@@ -1,6 +1,6 @@
 {
-  "intent" : "CorporateActionAdjustment",
   "eventDate" : "2001-11-01",
+  "intent" : "CorporateActionAdjustment",
   "instruction" : [ {
     "primitiveInstruction" : {
       "stockSplit" : {
@@ -1426,6 +1426,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "7f31fd3a"
+    "globalKey" : "aac1b510"
   }
 }

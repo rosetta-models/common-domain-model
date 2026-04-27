@@ -1,8 +1,8 @@
 {
   "proposedEvent" : {
-    "intent" : "PortfolioRebalancing",
     "eventDate" : "2009-05-25",
     "effectiveDate" : "2009-05-25",
+    "intent" : "PortfolioRebalancing",
     "instruction" : [ {
       "primitiveInstruction" : {
         "contractFormation" : {
@@ -531,6 +531,6 @@
   } ],
   "action" : "New",
   "meta" : {
-    "globalKey" : "9f1236e3"
+    "globalKey" : "4ab9f163"
   }
 }
