@@ -72,16 +72,10 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
             Object[] argsArray = e.get();
             String expectationFilePath = (String) argsArray[0];
             Expectation expectation = (Expectation) argsArray[1];
-            String expectationFileName = (String) argsArray[2];
             try {
-                if (writeActualExpectations) {
-                    writeIngestionExpectation(expectationFilePath, expectation, expectationFileName);
-                } else {
-                    ingest(expectationFilePath, expectation, expectationFileName);
-                }
-                tearDown();
+                writeIngestionExpectation(expectationFilePath, expectation);
+
             } catch (Throwable ex) {
-                tearDown();
                 throw new RuntimeException(ex);
             }
 
