@@ -1871,8 +1871,6 @@ func MapIdentifiedAssetToAssetListedDerivative:
     alias assetParty:
           fpmlExchangeId extract MapExchangeIdToAssetParty
 
-    alias relatedAssetParty:
-        fpmlRelatedExchangeId extract MapExchangeIdToAssetParty
 
     set asset:
         Asset {
@@ -1908,8 +1906,6 @@ func MapIdentifiedAssetToAssetLoan:
     alias assetParty:
           fpmlExchangeId extract MapExchangeIdToAssetParty
 
-    alias relatedAssetParty:
-        fpmlRelatedExchangeId extract MapExchangeIdToAssetParty
 
     set asset:
         Asset {
@@ -1970,8 +1966,6 @@ func MapIdentifiedAssetToSecurity:
     alias assetParty:
           fpmlExchangeId extract MapExchangeIdToAssetParty
 
-    alias relatedAssetParty:
-        fpmlRelatedExchangeId extract MapExchangeIdToAssetParty
 
     set security:
         Security {
