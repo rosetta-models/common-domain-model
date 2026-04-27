@@ -67,6 +67,15 @@
                 "globalKey" : "4cf"
               }
             },
+            "settlementTerms" : {
+              "settlementType" : "Cash",
+              "settlementCurrency" : {
+                "value" : "USD"
+              },
+              "meta" : {
+                "globalKey" : "7610bbd9"
+              }
+            },
             "valuationDates" : {
               "interimValuationDate" : {
                 "determinationMethod" : "ValuationTime",
@@ -238,7 +247,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "f795ca76"
+            "globalKey" : "a3fcf64f"
           }
         }, {
           "InterestRatePayout" : {
@@ -372,7 +381,7 @@
         } ]
       },
       "meta" : {
-        "globalKey" : "8c5945aa"
+        "globalKey" : "6bcbdc31"
       }
     },
     "tradeLot" : [ {
@@ -800,10 +809,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "40fae6d2"
+      "globalKey" : "da3fcab0"
     }
   },
   "meta" : {
-    "globalKey" : "40fae6d2"
+    "globalKey" : "da3fcab0"
   }
 }
