@@ -177,6 +177,15 @@
                 "externalKey" : "equityNotionalAmount"
               }
             },
+            "settlementTerms" : {
+              "settlementType" : "Cash",
+              "settlementCurrency" : {
+                "value" : "USD"
+              },
+              "meta" : {
+                "globalKey" : "7610bbd9"
+              }
+            },
             "valuationDates" : {
               "interimValuationDate" : {
                 "determinationMethod" : "ValuationTime",
@@ -265,12 +274,12 @@
             }
           },
           "meta" : {
-            "globalKey" : "2c91fe2d"
+            "globalKey" : "cc16ce06"
           }
         } ]
       },
       "meta" : {
-        "globalKey" : "c93c2058"
+        "globalKey" : "e53de2b1"
       }
     },
     "tradeLot" : [ {
@@ -592,10 +601,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "261c001"
+      "globalKey" : "194606da"
     }
   },
   "meta" : {
-    "globalKey" : "261c001"
+    "globalKey" : "194606da"
   }
 }
