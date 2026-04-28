@@ -1,10 +1,10 @@
 namespace cdm.legaldocumentation.master.isla
 version "${project.version}"
 
-import cdm.legaldocumentation.master.*
 import cdm.base.datetime.*
 import cdm.base.staticdata.asset.common.*
 import cdm.base.staticdata.party.*
+import cdm.legaldocumentation.master.*
 
 type GlobalMasterSecuritiesLendingAgreement extends MasterAgreementBase: <"The set of elections that define a GMSLA.">
     collateral Collateral (1..1) <"The definitions regarding collateral relating to the GMSLA.">
@@ -49,9 +49,3 @@ type Aggregation: <"The definitions for whether aggregation applies to the GMSLA
     aggregationType AggregationSpecificationEnum (1..1) <"How is the mark to market value determined?">
     loansCanBeGrouped boolean (1..1) <"The mark to market can be defined separately for different groups of loans.">
     otherDetails string (0..1) <"Any specfic elections that are not captured by the above options, such as grouping information.">
-
-
-
-
-
-
