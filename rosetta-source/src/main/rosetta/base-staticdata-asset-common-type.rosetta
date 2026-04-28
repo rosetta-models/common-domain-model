@@ -36,7 +36,7 @@ type AssetBase: <"The base data type to specify common attributes for all Assets
 
     condition LenderBorrower: <"If the asset type is a Loan then the role must be Lender.">
         if assetType = AssetTypeEnum.Loan
-            then partyRole -> role any =  Lender or partyRole -> role = Borrower
+            then partyRole -> role any =  Lender or partyRole -> role any = Borrower
 
 type AssetIdentifier: <"The unique identifier for an Asset, specified using an Asset Identifier Type enumerator.">
     identifier string (1..1) <"The identifier value.">

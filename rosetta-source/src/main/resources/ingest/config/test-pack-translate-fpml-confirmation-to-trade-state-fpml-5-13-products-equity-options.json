@@ -10,7 +10,7 @@
     "assertions" : {
       "inputPathCount" : 67,
       "outputPathCount" : 87,
-      "modelValidationFailures" : 11,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -21,7 +21,7 @@
     "assertions" : {
       "inputPathCount" : 67,
       "outputPathCount" : 87,
-      "modelValidationFailures" : 11,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -32,7 +32,7 @@
     "assertions" : {
       "inputPathCount" : 115,
       "outputPathCount" : 89,
-      "modelValidationFailures" : 9,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -43,7 +43,7 @@
     "assertions" : {
       "inputPathCount" : 94,
       "outputPathCount" : 93,
-      "modelValidationFailures" : 9,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -54,7 +54,7 @@
     "assertions" : {
       "inputPathCount" : 65,
       "outputPathCount" : 87,
-      "modelValidationFailures" : 11,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -65,7 +65,7 @@
     "assertions" : {
       "inputPathCount" : 62,
       "outputPathCount" : 92,
-      "modelValidationFailures" : 12,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
