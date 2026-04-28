@@ -7,7 +7,9 @@ import com.regnosys.ingest.test.framework.ingestor.IngestionTest;
 import com.regnosys.ingest.test.framework.ingestor.IngestionTestUtil;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionFactory;
 import com.regnosys.ingest.test.framework.ingestor.service.IngestionService;
+import com.regnosys.ingest.test.framework.ingestor.testing.Expectation;
 import org.finos.cdm.CdmRuntimeModule;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.provider.Arguments;
 
@@ -18,11 +20,11 @@ import java.util.stream.Stream;
 
 public class FisIngestionTest extends IngestionTest<WorkflowStep> {
 
-	private static final String ENV_INSTANCE_NAME = "target/ISLA";
-	private static final List<URL> ENV_FILE = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
-	private static final String SAMPLE_FILES_DIR = "cdm-sample-files/fis/";
+    private static final String ENV_INSTANCE_NAME = "target/ISLA";
+    private static final List<URL> ENV_FILE = Collections.singletonList(Resources.getResource("ingestions/isla-ingestions.json"));
+    private static final String SAMPLE_FILES_DIR = "cdm-sample-files/fis/";
 
-	private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
+    private static ImmutableList<URL> EXPECTATION_FILES = ImmutableList.<URL>builder()
             .add(Resources.getResource(SAMPLE_FILES_DIR + "expectations.json"))
             .build();
 
@@ -30,9 +32,10 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
 
     @BeforeAll
     static void setup() {
-		CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
+        CdmRuntimeModule runtimeModule = new CdmRuntimeModule();
         initialiseIngestionFactory(ENV_INSTANCE_NAME, ENV_FILE, runtimeModule, IngestionTestUtil.getPostProcessors(runtimeModule));
         ingestionService = IngestionFactory.getInstance(ENV_INSTANCE_NAME).getFis();
+
     }
 
     @Override
@@ -48,5 +51,39 @@ public class FisIngestionTest extends IngestionTest<WorkflowStep> {
     @SuppressWarnings("unused")//used by the junit parameterized test
     private static Stream<Arguments> fpMLFiles() {
         return readExpectationsFrom(EXPECTATION_FILES);
+    }
+
+    /**
+     * Even though this method static, junit calls this one instead of the super class tearDown.
+     * This override is necessary because the super class calls IngestionFactory.getInstance() (i.e. with no param)
+     * which throws an exception because no default instance exists.
+     */
+    @AfterAll
+    static void tearDown() {
+        IngestionFactory.getInstance(ENV_INSTANCE_NAME).clear();
+    }
+
+    public void run() {
+
+        // Ensure environment is set up
+        setup();
+        fpMLFiles().forEach(e -> {
+            Object[] argsArray = e.get();
+            String expectationFilePath = (String) argsArray[0];
+            Expectation expectation = (Expectation) argsArray[1];
+            String expectationFileName = (String) argsArray[2];
+            try {
+                if (writeActualExpectations) {
+                    writeIngestionExpectation(expectationFilePath, expectation, expectationFileName);
+                } else {
+                    ingest(expectationFilePath, expectation, expectationFileName);
+                }
+                tearDown();
+            } catch (Throwable ex) {
+                tearDown();
+                throw new RuntimeException(ex);
+            }
+
+        });
     }
 }

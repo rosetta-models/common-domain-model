@@ -89,20 +89,32 @@ func CheckCriteria: <"This function takes a single criteria and evaluates it aga
     set isEligible:
         inputCriteria switch
             // if AND/OR logic attribute used, recurse through criteria and evaluate all
-            AllCriteria then allCriteria extract CheckCriteria(item, query) then all = True,
-            AnyCriteria then anyCriteria extract CheckCriteria(item, query) then any = True,
+            AllCriteria then
+                allCriteria
+                    extract CheckCriteria(item, query)
+                    then all = True,
+            AnyCriteria then
+                anyCriteria
+                    extract CheckCriteria(item, query)
+                    then any = True,
             // reverse the inclusion if NOT logic used
             NegativeCriteria then CheckCriteria(negativeCriteria, query) = False,
             // otherwise evaluate each of the Criteria variables against the query
-            CollateralIssuerType then  CheckIssuerType(item, query),
+            CollateralIssuerType then CheckIssuerType(item, query),
             AssetType then CheckAssetType(item, query),
-            IssuerCountryOfOrigin then CheckCountryOfOrigin(item -> issuerCountryOfOrigin, query),
-            AssetCountryOfOrigin then CheckCountryOfOrigin(item -> assetCountryOfOrigin, query),
-            CurrencyCodeEnum then CheckDenominatedCurrency(item, query),
+            IssuerCountryOfOrigin then
+                CheckCountryOfOrigin(item -> issuerCountryOfOrigin, query),
+            AssetCountryOfOrigin then
+                CheckCountryOfOrigin(item -> assetCountryOfOrigin, query),
+            CurrencyCodeEnum then
+                CheckDenominatedCurrency(item, query),
             IssuerName then CheckIssuerName(item, query),
-            IssuerAgencyRating then CheckAgencyRating(item -> issuerAgencyRating, query),
-            SovereignAgencyRating then CheckAgencyRating(item -> sovereignAgencyRating, query),
-            AssetAgencyRating then CheckAgencyRating(item -> assetAgencyRating, query),
+            IssuerAgencyRating then
+                CheckAgencyRating(item -> issuerAgencyRating, query),
+            SovereignAgencyRating then
+                CheckAgencyRating(item -> sovereignAgencyRating, query),
+            AssetAgencyRating then
+                CheckAgencyRating(item -> assetAgencyRating, query),
             AssetMaturity then CheckMaturity(item, query),
             default False
 
@@ -152,9 +164,6 @@ func CheckAssetType:
         collateralAssetTypes is absent
             or (collateralAssetTypes
                 then filter assetType = query -> collateralAssetType -> assetType
-                then filter
-                    debtType is absent
-                        or debtType -> debtClass = query -> collateralAssetType -> debtType -> debtClass
                 then filter
                     securityType is absent
                         or securityType = query -> collateralAssetType -> securityType
@@ -214,10 +223,10 @@ func CheckIssuerType:
 
     set isEqual: issuerType is absent or issuerType contains query -> issuerType
 
-func CriteriaMatchesAssetType:
+func CriteriaMatchesSecurityType:
     inputs:
         inputCriteria CollateralCriteria (0..1)
-        assetType InstrumentTypeEnum (0..1)
+        securityType SecurityTypeEnum (0..1)
     output:
         matches boolean (1..1)
 
@@ -225,8 +234,17 @@ func CriteriaMatchesAssetType:
 
     set matches:
         inputCriteria switch
-            AssetType then securityType = assetType,
-            AllCriteria then allCriteria extract CriteriaMatchesAssetType(item, assetType) then all = True,
-            AnyCriteria then anyCriteria extract CriteriaMatchesAssetType(item, assetType) then any = True,
-            NegativeCriteria then CriteriaMatchesAssetType(negativeCriteria, assetType) = False,
+            AssetType then item -> securityType = securityType,
+            AllCriteria then
+                allCriteria
+                    extract CriteriaMatchesSecurityType(item, securityType)
+                    then all = True,
+            AnyCriteria then
+                anyCriteria
+                    extract CriteriaMatchesSecurityType(item, securityType)
+                    then any = True,
+            NegativeCriteria then CriteriaMatchesSecurityType(
+                        negativeCriteria,
+                        securityType
+                    ) = False,
             default False

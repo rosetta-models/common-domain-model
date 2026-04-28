@@ -289,7 +289,7 @@ type FxFixingDate extends Offset: <"Extends the Offset structure to specify an F
         optional choice businessCenters, businessCentersReference
 
     condition DateChoice: <"condition to represent an FpML choice construct.">
-        required choice dateRelativeToPaymentDates, dateRelativeToCalculationPeriodDates, dateRelativeToValuationDates, fxFixingDate
+        required choice dateRelativeToPaymentDates, dateRelativeToCalculationPeriodDates
 
 type SettlementTerms extends SettlementBase: <"Specifies the settlement terms, which can either be cash, physical, or fx-based cash-settlement. This class can be used for the settlement of options and forwards, cash transactions (e.g. securities or foreign exchange), or in case of credit event.">
     cashSettlementTerms CashSettlementTerms (0..*) <"Specifies the parameters associated with the cash settlement procedure.">
@@ -314,9 +314,11 @@ type FixedPrice: <"A predefined price accorded by the counterparties.">
         [metadata address "pointsTo"=PriceQuantity->price]
 
     condition NonNegativePrice_amount: <"For a non-negative price, the amount attribute must be positive.">
-        if price -> value exists
-        then price -> value >= 0.0 and if price -> datedValue exists
-                then price -> datedValue -> value all >= 0.0
+        if price -> value exists then price -> value >= 0.0
+
+    condition NonNegativePrice_datedValue: <"For a non-negative price, the amount attribute must be positive.">
+        if price -> datedValue exists
+        then price -> datedValue -> value all >= 0.0
 
 type PaymentDetail:
     [metadata key]

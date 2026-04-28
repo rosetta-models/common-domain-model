@@ -18,7 +18,7 @@ of one or more assets in the future - for instance, but not exclusively, future 
 when that asset is cash. These future transfers may be contingent on the future value
 or performance of that asset or other, as in the case of options.
 
-### Asset  {#asset}
+### Asset  
 
 :::tip Definition: Asset
 
@@ -140,22 +140,26 @@ for purposes of brevity.
 Security has a set of additional attributes, as shown below:
 
 ``` Haskell
-type Security extends InstrumentBase: 
+type Security extends InstrumentBase:
+    securityType SecurityTypeEnum (1..1) 
     debtType DebtType (0..1)
     equityType EquityType (0..1) 
     fundType FundProductTypeEnum (0..1)
 
     condition DebtSubType:
-        if instrumentType <> InstrumentTypeEnum -> Debt
+        if securityType <> Debt
         then debtType is absent
 
     condition EquitySubType:
-        if instrumentType <> InstrumentTypeEnum -> Equity
+        if securityType <> Equity
         then equityType is absent
 
     condition FundSubType:
-        if instrumentType <> InstrumentTypeEnum -> Fund
+        if securityType <> Fund
         then fundType is absent
+    
+    condition AssetType:
+        assetType = Security
 ```
 
 The asset identifier will uniquely identify the security. The
@@ -370,7 +374,9 @@ here in the interests of brevity.
 ``` Haskell
 type EconomicTerms:
   effectiveDate AdjustableOrRelativeDate (0..1)
+  effectiveTime DirectOrRelativeTime (0..1)
   terminationDate AdjustableOrRelativeDate (0..1)
+  terminationTime DirectOrRelativeTime (0..1)
   dateAdjustments BusinessDayAdjustments (0..1)
   payout Payout (1..*)
   terminationProvision TerminationProvision (0..1)
@@ -471,7 +477,7 @@ type CalculationPeriodDates:
   firstRegularPeriodStartDate date (0..1)
   firstCompoundingPeriodEndDate date (0..1)
   lastRegularPeriodEndDate date (0..1)
-  stubPeriodType StubPeriodTypeEnum (0..1)
+  stubPeriodType StubPeriodTypeEnum (0..2)
   calculationPeriodFrequency CalculationPeriodFrequency (0..1)
 ```
 
@@ -663,7 +669,7 @@ the underlying product may be.
 
 In its simplest form, that trade's terms will specify the settlement date
 in addition to the price and quantity and can be represented using the
-[`SettlementPayout`](#SettlementPayout).
+[`SettlementPayout`](#settlementpayout).
 
 A `TradableProduct` also provides a mechanism to trade indices that
 otherwise cannot be directly transfered. The `Payout` would define how
@@ -796,7 +802,7 @@ one for an upfront fee. By comparison, the purchase or sale of a
 security or listed derivative would typically have a single
 `PriceQuantity` instance in the trade lot.
 
-## PriceQuantity {#price-quantity}
+## PriceQuantity
 
 The price and quantity attributes of a trade, or of a leg of a trade in
 the case of composite products, are part of a data type called
@@ -948,10 +954,11 @@ which together further qualify the price.
 type PriceSchedule extends MeasureSchedule:
   perUnitOf UnitType (0..1)
   priceType PriceTypeEnum (1..1)
+  priceSubType PriceSubTypeEnum (0..1)
   priceExpression PriceExpressionEnum (0..1)
   composite PriceComposite (0..1)
   arithmeticOperator ArithmeticOperationEnum (0..1)
-  cashPrice CashPrice (0..1)
+  premiumType PremiumTypeEnum (0..1)
 ```
 
 Note that the conditions for this data type are excluded from the
@@ -1030,9 +1037,13 @@ type QuantitySchedule extends MeasureSchedule:
 ``` Haskell
 type NonNegativeQuantitySchedule extends QuantitySchedule:
 
-  condition NonNegativeQuantity_amount:
-    if value exists then value >= 0.0 and
-    if datedValue exists then datedValue -> value all >= 0.0
+    condition NonNegativeQuantity_value:
+        if value exists
+        then value >= 0.0
+
+    condition NonNegativeQuantity_datedValue:
+        if datedValue exists
+        then datedValue -> value all >= 0.0
 ```
 
 The inherited attributes of `value`, `unit` and `datedValue` (in case
