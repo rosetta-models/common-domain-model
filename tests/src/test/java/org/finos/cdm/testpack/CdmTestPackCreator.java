@@ -74,13 +74,13 @@ public class CdmTestPackCreator {
     private void runIngestion() {
 
         LOGGER.info(" ** Updating expectations for FisIngestion");
-        fisIngestionTest.run();
+        fisIngestionTest.updateExpectations();
 
         LOGGER.info(" ** Updating expectations for CreateiQIngestionServiceTest");
-        createiQIngestionServiceTest.run();
+        createiQIngestionServiceTest.updateExpectations();
 
         LOGGER.info(" ** Updating expectations for OreTradeTest");
-        oreTradeTest.run();
+        oreTradeTest.updateExpectations();
 
     }
 
