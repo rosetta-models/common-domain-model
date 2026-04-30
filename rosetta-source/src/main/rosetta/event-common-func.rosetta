@@ -984,11 +984,6 @@ func Create_QuantityChange: <"A specification of the inputs, outputs and constra
                 }
             )
 
-    condition AssetPriceOnly: <"Only termination where the termination price is specified as an asset price is supported for now.">
-        if instruction -> direction = Decrease
-                and instruction -> change -> price exists
-        then instruction -> change -> price -> priceType all = AssetPrice
-
     set quantityChange: tradeState
 
     // Update trade with new TradableProduct.
