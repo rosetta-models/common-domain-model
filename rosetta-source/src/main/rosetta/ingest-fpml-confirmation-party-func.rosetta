@@ -287,7 +287,6 @@ func MapParty:
             key: fpmlParty -> id
         }
 
-
 func MapPartyIdentifier:
     inputs:
         fpmlPartyIdentifier fpml.PartyId (0..1)
@@ -777,21 +776,21 @@ func MapExchangeIdToLegalEntity:
             ...
         }
 
- func MapExchangeIdToAssetParty:
-     inputs:
-         fpmlExchangeId fpml.ExchangeId (0..1)
-     output:
-         party Party (0..1)
+func MapExchangeIdToAssetParty:
+    inputs:
+        fpmlExchangeId fpml.ExchangeId (0..1)
+    output:
+        party Party (0..1)
 
-set party:
-    Party {
-        partyId: fpmlExchangeId extract MapPartyIdentifier2,
-        name: MapStringWithScheme(
-                    fpmlExchangeId -> value,
-                    fpmlExchangeId -> exchangeIdScheme
-                ),
-        ...
-    }
+    set party:
+        Party {
+            partyId: fpmlExchangeId extract MapPartyIdentifier2,
+            name: MapStringWithScheme(
+                        fpmlExchangeId -> value,
+                        fpmlExchangeId -> exchangeIdScheme
+                    ),
+            ...
+        }
 
 func MapPartyIdentifier2:
     inputs:
@@ -800,11 +799,7 @@ func MapPartyIdentifier2:
         partyId PartyIdentifier (1..1)
 
     set partyId -> identifier:
-        MapStringWithScheme(
-            fpmlExchangeId -> value,
-            fpmlExchangeId -> exchangeIdScheme
-        )
-
+        MapStringWithScheme(fpmlExchangeId -> value, fpmlExchangeId -> exchangeIdScheme)
 
 func MapAssetPartyRole:
     inputs:
@@ -812,10 +807,8 @@ func MapAssetPartyRole:
     output:
         assetPartyRole AssetPartyRole (1..1)
 
-    set assetPartyRole->partyReference:
-        party
-    set assetPartyRole->role:
-        AssetPartyRoleEnum->Exchange
+    set assetPartyRole -> partyReference: party
+    set assetPartyRole -> role: AssetPartyRoleEnum -> Exchange
 
 func MapAssetAncillaryPartyRole:
     inputs:
@@ -823,12 +816,9 @@ func MapAssetAncillaryPartyRole:
     output:
         assetAncillaryPartyRole AssetAncillaryPartyRole (0..1)
 
-    set assetAncillaryPartyRole->partyReference:
-        party
+    set assetAncillaryPartyRole -> partyReference: party
 
-    set assetAncillaryPartyRole->role:
-        AssetAncillaryPartyRoleEnum->RelatedExchange
-
+    set assetAncillaryPartyRole -> role: AssetAncillaryPartyRoleEnum -> RelatedExchange
 
 func MapPayerReceiver:
     inputs:
