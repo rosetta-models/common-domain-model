@@ -1,0 +1,32 @@
+namespace cdm.fixml.network.base : < "fixml definition" >
+version "${project.version}"
+
+type NtwkSysStatReq extends NetworkCounterpartySystemStatusRequest_message_t:
+
+type NtwkSysStatRsp extends NetworkCounterpartySystemStatusResponse_message_t:
+
+type NetworkCounterpartySystemStatusRequestElements:
+
+    cidReq cdm.fixml.components.base.CompIDReqGrp_Block_t (0..*)
+
+type NetworkCounterpartySystemStatusRequestAttributes:
+
+    networkCounterpartySystemStatusRequestAttributes NetworkCounterpartySystemStatusRequestAttributes (0..1)
+
+type NetworkCounterpartySystemStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NetworkCounterpartySystemStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg88">
+
+    networkCounterpartySystemStatusRequestElements NetworkCounterpartySystemStatusRequestElements (1..1)
+    networkCounterpartySystemStatusRequestAttributes NetworkCounterpartySystemStatusRequestAttributes (0..1)
+
+type NetworkCounterpartySystemStatusResponseElements:
+
+    cidStat cdm.fixml.components.base.CompIDStatGrp_Block_t (1..*)
+
+type NetworkCounterpartySystemStatusResponseAttributes:
+
+    networkCounterpartySystemStatusResponseAttributes NetworkCounterpartySystemStatusResponseAttributes (0..1)
+
+type NetworkCounterpartySystemStatusResponse_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NetworkCounterpartySystemStatusResponse can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg89">
+
+    networkCounterpartySystemStatusResponseElements NetworkCounterpartySystemStatusResponseElements (1..1)
+    networkCounterpartySystemStatusResponseAttributes NetworkCounterpartySystemStatusResponseAttributes (0..1)

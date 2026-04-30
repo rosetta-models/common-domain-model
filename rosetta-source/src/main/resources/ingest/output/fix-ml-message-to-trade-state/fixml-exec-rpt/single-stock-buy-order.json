@@ -1,0 +1,16 @@
+{
+  "trade" : {
+    "tradeDate" : {
+      "value" : "2026-04-30",
+      "meta" : {
+        "globalKey" : "3f511e"
+      }
+    },
+    "meta" : {
+      "globalKey" : "0"
+    }
+  },
+  "meta" : {
+    "globalKey" : "0"
+  }
+}

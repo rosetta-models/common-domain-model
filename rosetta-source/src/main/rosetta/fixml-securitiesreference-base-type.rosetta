@@ -1,0 +1,470 @@
+namespace cdm.fixml.securitiesreference.base : < "fixml definition" >
+version "${project.version}"
+
+type SecDefReq extends SecurityDefinitionRequest_message_t:
+
+type SecDef extends SecurityDefinition_message_t:
+
+type SecStatReq extends SecurityStatusRequest_message_t:
+
+type SecStat extends SecurityStatus_message_t:
+
+type SecTypReq extends SecurityTypeRequest_message_t:
+
+type SecTyps extends SecurityTypes_message_t:
+
+type SecListReq extends SecurityListRequest_message_t:
+
+type SecList extends SecurityList_message_t:
+
+type DerivSecListReq extends DerivativeSecurityListRequest_message_t:
+
+type DerivSecList extends DerivativeSecurityList_message_t:
+
+type SecDefUpd extends SecurityDefinitionUpdateReport_message_t:
+
+type SecListUpd extends SecurityListUpdateReport_message_t:
+
+type DerivSecListUpd extends DerivativeSecurityListUpdateReport_message_t:
+
+type SecMassStatReq extends SecurityMassStatusRequest_message_t:
+
+type SecMassStat extends SecurityMassStatus_message_t:
+
+type SecRiskMtrcsRpt extends SecurityRiskMetricsReport_message_t:
+
+type SecStatAck extends SecurityStatusAck_message_t:
+
+type SecurityDefinitionRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+
+type SecurityDefinitionRequestAttributes:
+
+    securityDefinitionRequestAttributes SecurityDefinitionRequestAttributes (0..1)
+
+type SecurityDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg36">
+
+    securityDefinitionRequestElements SecurityDefinitionRequestElements (1..1)
+    securityDefinitionRequestAttributes SecurityDefinitionRequestAttributes (0..1)
+
+type SecurityDefinitionElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    secClsfnGrp cdm.fixml.components.base.SecurityClassificationGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    mktSegGrp cdm.fixml.components.base.MarketSegmentGrp_Block_t (0..*)
+
+type SecurityDefinitionAttributes:
+
+    securityDefinitionAttributes SecurityDefinitionAttributes (0..1)
+
+type SecurityDefinition_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityDefinition can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg37">
+
+    securityDefinitionElements SecurityDefinitionElements (1..1)
+    securityDefinitionAttributes SecurityDefinitionAttributes (0..1)
+
+type SecurityStatusRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+
+type SecurityStatusRequestAttributes:
+
+    securityStatusRequestAttributes SecurityStatusRequestAttributes (0..1)
+
+type SecurityStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg38">
+
+    securityStatusRequestElements SecurityStatusRequestElements (1..1)
+    securityStatusRequestAttributes SecurityStatusRequestAttributes (0..1)
+
+type SecurityStatusElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    clrPxPrm cdm.fixml.components.base.ClearingPriceParametersGrp_Block_t (0..*)
+
+type SecurityStatusAttributes:
+
+    securityStatusAttributes SecurityStatusAttributes (0..1)
+
+type SecurityStatus_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityStatus can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg39">
+
+    securityStatusElements SecurityStatusElements (1..1)
+    securityStatusAttributes SecurityStatusAttributes (0..1)
+
+type SecurityTypeRequestElements:
+
+type SecurityTypeRequestAttributes:
+
+    securityTypeRequestAttributes SecurityTypeRequestAttributes (0..1)
+
+type SecurityTypeRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityTypeRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg55">
+
+    securityTypeRequestElements SecurityTypeRequestElements (1..1)
+    securityTypeRequestAttributes SecurityTypeRequestAttributes (0..1)
+
+type SecurityTypesElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    secT SecTypesGrp_Block_t (0..*)
+
+type SecurityTypesAttributes:
+
+    securityTypesAttributes SecurityTypesAttributes (0..1)
+
+type SecurityTypes_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityTypes can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg56">
+
+    securityTypesElements SecurityTypesElements (1..1)
+    securityTypesAttributes SecurityTypesAttributes (0..1)
+
+type SecurityListRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+
+type SecurityListRequestAttributes:
+
+    securityListRequestAttributes SecurityListRequestAttributes (0..1)
+
+type SecurityListRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityListRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg57">
+
+    securityListRequestElements SecurityListRequestElements (1..1)
+    securityListRequestAttributes SecurityListRequestAttributes (0..1)
+
+type SecurityListElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    secL SecListGrp_Block_t (0..*)
+
+type SecurityListAttributes:
+
+    securityListAttributes SecurityListAttributes (0..1)
+
+type SecurityList_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityList can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg58">
+
+    securityListElements SecurityListElements (1..1)
+    securityListAttributes SecurityListAttributes (0..1)
+
+type DerivativeSecurityListRequestElements:
+
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    derivInstrmt cdm.fixml.components.base.DerivativeInstrument_Block_t (0..1)
+
+type DerivativeSecurityListRequestAttributes:
+
+    derivativeSecurityListRequestAttributes DerivativeSecurityListRequestAttributes (0..1)
+
+type DerivativeSecurityListRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"DerivativeSecurityListRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg59">
+
+    derivativeSecurityListRequestElements DerivativeSecurityListRequestElements (1..1)
+    derivativeSecurityListRequestAttributes DerivativeSecurityListRequestAttributes (0..1)
+
+type DerivativeSecurityListElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    derivSecDef cdm.fixml.components.base.DerivativeSecurityDefinition_Block_t (0..1)
+    relSym RelSymDerivSecGrp_Block_t (0..*)
+
+type DerivativeSecurityListAttributes:
+
+    derivativeSecurityListAttributes DerivativeSecurityListAttributes (0..1)
+
+type DerivativeSecurityList_message_t extends cdm.fixml.components.base.Abstract_message_t: <"DerivativeSecurityList can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg60">
+
+    derivativeSecurityListElements DerivativeSecurityListElements (1..1)
+    derivativeSecurityListAttributes DerivativeSecurityListAttributes (0..1)
+
+type SecurityDefinitionUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    mktSegGrp cdm.fixml.components.base.MarketSegmentGrp_Block_t (0..*)
+
+type SecurityDefinitionUpdateReportAttributes:
+
+    securityDefinitionUpdateReportAttributes SecurityDefinitionUpdateReportAttributes (0..1)
+
+type SecurityDefinitionUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityDefinitionUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg95">
+
+    securityDefinitionUpdateReportElements SecurityDefinitionUpdateReportElements (1..1)
+    securityDefinitionUpdateReportAttributes SecurityDefinitionUpdateReportAttributes (0..1)
+
+type SecurityListUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    secL SecLstUpdRelSymGrp_Block_t (0..*)
+
+type SecurityListUpdateReportAttributes:
+
+    securityListUpdateReportAttributes SecurityListUpdateReportAttributes (0..1)
+
+type SecurityListUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityListUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg96">
+
+    securityListUpdateReportElements SecurityListUpdateReportElements (1..1)
+    securityListUpdateReportAttributes SecurityListUpdateReportAttributes (0..1)
+
+type DerivativeSecurityListUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    derivSecDef cdm.fixml.components.base.DerivativeSecurityDefinition_Block_t (0..1)
+    relSym cdm.fixml.components.base.RelSymDerivSecUpdGrp_Block_t (0..*)
+
+type DerivativeSecurityListUpdateReportAttributes:
+
+    derivativeSecurityListUpdateReportAttributes DerivativeSecurityListUpdateReportAttributes (0..1)
+
+type DerivativeSecurityListUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"DerivativeSecurityListUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg103">
+
+    derivativeSecurityListUpdateReportElements DerivativeSecurityListUpdateReportElements (1..1)
+    derivativeSecurityListUpdateReportAttributes DerivativeSecurityListUpdateReportAttributes (0..1)
+
+type SecurityMassStatusRequestElements:
+
+    instrmtScope cdm.fixml.components.base.InstrumentScope_Block_t (0..1)
+
+type SecurityMassStatusRequestAttributes:
+
+    securityMassStatusRequestAttributes SecurityMassStatusRequestAttributes (0..1)
+
+type SecurityMassStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityMassStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg125">
+
+    securityMassStatusRequestElements SecurityMassStatusRequestElements (1..1)
+    securityMassStatusRequestAttributes SecurityMassStatusRequestAttributes (0..1)
+
+type SecurityMassStatusElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmtScope cdm.fixml.components.base.InstrumentScope_Block_t (0..1)
+    secMassStat SecMassStatGrp_Block_t (0..*)
+
+type SecurityMassStatusAttributes:
+
+    securityMassStatusAttributes SecurityMassStatusAttributes (0..1)
+
+type SecurityMassStatus_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityMassStatus can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg126">
+
+    securityMassStatusElements SecurityMassStatusElements (1..1)
+    securityMassStatusAttributes SecurityMassStatusAttributes (0..1)
+
+type SecurityRiskMetricsReportElements:
+
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    secRiskMtrcs SecurityRiskMetricGrp_Block_t (0..*)
+
+type SecurityRiskMetricsReportAttributes:
+
+    securityRiskMetricsReportAttributes SecurityRiskMetricsReportAttributes (0..1)
+
+type SecurityRiskMetricsReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityRiskMetricsReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg169">
+
+    securityRiskMetricsReportElements SecurityRiskMetricsReportElements (1..1)
+    securityRiskMetricsReportAttributes SecurityRiskMetricsReportAttributes (0..1)
+
+type SecurityStatusAckElements:
+
+type SecurityStatusAckAttributes:
+
+    securityStatusAckAttributes SecurityStatusAckAttributes (0..1)
+
+type SecurityStatusAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SecurityStatusAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg180">
+
+    securityStatusAckElements SecurityStatusAckElements (1..1)
+    securityStatusAckAttributes SecurityStatusAckAttributes (0..1)
+
+type RelSymDerivSecGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    pxLmts2 cdm.fixml.components.base.SecondaryPriceLimits_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type RelSymDerivSecGrpAttributes:
+
+    relSymDerivSecGrpAttributes RelSymDerivSecGrpAttributes (0..1)
+
+type RelSymDerivSecGrp_Block_t:
+
+    relSymDerivSecGrpElements RelSymDerivSecGrpElements (1..1)
+    relSymDerivSecGrpAttributes RelSymDerivSecGrpAttributes (0..1)
+
+type SecListGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    secClsfnGrp cdm.fixml.components.base.SecurityClassificationGrp_Block_t (0..*)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    secTrdgRules cdm.fixml.components.base.SecurityTradingRules_Block_t (0..1)
+    strkRules cdm.fixml.components.base.StrikeRules_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    secL cdm.fixml.components.base.InstrmtLegSecListGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pxMvmnt PriceMovementGrp_Block_t (0..*)
+
+type SecListGrpAttributes:
+
+    secListGrpAttributes SecListGrpAttributes (0..1)
+
+type SecListGrp_Block_t:
+
+    secListGrpElements SecListGrpElements (1..1)
+    secListGrpAttributes SecListGrpAttributes (0..1)
+
+type SecTypesGrpElements:
+
+type SecTypesGrpAttributes:
+
+    secTypesGrpAttributes SecTypesGrpAttributes (0..1)
+
+type SecTypesGrp_Block_t:
+
+    secTypesGrpElements SecTypesGrpElements (1..1)
+    secTypesGrpAttributes SecTypesGrpAttributes (0..1)
+
+type SecLstUpdRelSymGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    secTrdgRules cdm.fixml.components.base.SecurityTradingRules_Block_t (0..1)
+    strkRules cdm.fixml.components.base.StrikeRules_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    secLstUpdRelSymsLegGrp SecLstUpdRelSymsLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+
+type SecLstUpdRelSymGrpAttributes:
+
+    secLstUpdRelSymGrpAttributes SecLstUpdRelSymGrpAttributes (0..1)
+
+type SecLstUpdRelSymGrp_Block_t:
+
+    secLstUpdRelSymGrpElements SecLstUpdRelSymGrpElements (1..1)
+    secLstUpdRelSymGrpAttributes SecLstUpdRelSymGrpAttributes (0..1)
+
+type SecLstUpdRelSymsLegGrpElements:
+
+    leg cdm.fixml.components.base.InstrumentLeg_Block_t (0..1)
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    bnchmkCurve cdm.fixml.components.base.LegBenchmarkCurveData_Block_t (0..1)
+
+type SecLstUpdRelSymsLegGrpAttributes:
+
+    secLstUpdRelSymsLegGrpAttributes SecLstUpdRelSymsLegGrpAttributes (0..1)
+
+type SecLstUpdRelSymsLegGrp_Block_t:
+
+    secLstUpdRelSymsLegGrpElements SecLstUpdRelSymsLegGrpElements (1..1)
+    secLstUpdRelSymsLegGrpAttributes SecLstUpdRelSymsLegGrpAttributes (0..1)
+
+type SecMassStatGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+
+type SecMassStatGrpAttributes:
+
+    secMassStatGrpAttributes SecMassStatGrpAttributes (0..1)
+
+type SecMassStatGrp_Block_t:
+
+    secMassStatGrpElements SecMassStatGrpElements (1..1)
+    secMassStatGrpAttributes SecMassStatGrpAttributes (0..1)
+
+type PriceMovementGrpElements:
+
+    pxMvmntValu PriceMovementValueGrp_Block_t (0..*)
+    clrAcctTyp ClearingAccountTypeGrp_Block_t (0..*)
+
+type PriceMovementGrpAttributes:
+
+    priceMovementGrpAttributes PriceMovementGrpAttributes (0..1)
+
+type PriceMovementGrp_Block_t:
+
+    priceMovementGrpElements PriceMovementGrpElements (1..1)
+    priceMovementGrpAttributes PriceMovementGrpAttributes (0..1)
+
+type PriceMovementValueGrpElements:
+
+type PriceMovementValueGrpAttributes:
+
+    priceMovementValueGrpAttributes PriceMovementValueGrpAttributes (0..1)
+
+type PriceMovementValueGrp_Block_t:
+
+    priceMovementValueGrpElements PriceMovementValueGrpElements (1..1)
+    priceMovementValueGrpAttributes PriceMovementValueGrpAttributes (0..1)
+
+type ClearingAccountTypeGrpElements:
+
+type ClearingAccountTypeGrpAttributes:
+
+    clearingAccountTypeGrpAttributes ClearingAccountTypeGrpAttributes (0..1)
+
+type ClearingAccountTypeGrp_Block_t:
+
+    clearingAccountTypeGrpElements ClearingAccountTypeGrpElements (1..1)
+    clearingAccountTypeGrpAttributes ClearingAccountTypeGrpAttributes (0..1)
+
+type SecurityRiskMetricGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    reltvVal cdm.fixml.components.base.RelativeValueGrp_Block_t (0..*)
+
+type SecurityRiskMetricGrpAttributes:
+
+    securityRiskMetricGrpAttributes SecurityRiskMetricGrpAttributes (0..1)
+
+type SecurityRiskMetricGrp_Block_t:
+
+    securityRiskMetricGrpElements SecurityRiskMetricGrpElements (1..1)
+    securityRiskMetricGrpAttributes SecurityRiskMetricGrpAttributes (0..1)

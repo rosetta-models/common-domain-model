@@ -1,0 +1,86 @@
+namespace cdm.fixml.application.base : < "fixml definition" >
+version "${project.version}"
+
+type ApplMsgReq extends ApplicationMessageRequest_message_t:
+
+type ApplMsgReqAck extends ApplicationMessageRequestAck_message_t:
+
+type ApplMsgRpt extends ApplicationMessageReport_message_t:
+
+type ApplicationMessageRequestElements:
+
+    applIDReqGrp ApplIDRequestGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type ApplicationMessageRequestAttributes:
+
+    applicationMessageRequestAttributes ApplicationMessageRequestAttributes (0..1)
+
+type ApplicationMessageRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ApplicationMessageRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg108">
+
+    applicationMessageRequestElements ApplicationMessageRequestElements (1..1)
+    applicationMessageRequestAttributes ApplicationMessageRequestAttributes (0..1)
+
+type ApplicationMessageRequestAckElements:
+
+    applIDReqAckGrp ApplIDRequestAckGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type ApplicationMessageRequestAckAttributes:
+
+    applicationMessageRequestAckAttributes ApplicationMessageRequestAckAttributes (0..1)
+
+type ApplicationMessageRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ApplicationMessageRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg109">
+
+    applicationMessageRequestAckElements ApplicationMessageRequestAckElements (1..1)
+    applicationMessageRequestAckAttributes ApplicationMessageRequestAckAttributes (0..1)
+
+type ApplicationMessageReportElements:
+
+    applIDRptGrp ApplIDReportGrp_Block_t (0..*)
+
+type ApplicationMessageReportAttributes:
+
+    applicationMessageReportAttributes ApplicationMessageReportAttributes (0..1)
+
+type ApplicationMessageReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ApplicationMessageReport can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg110">
+
+    applicationMessageReportElements ApplicationMessageReportElements (1..1)
+    applicationMessageReportAttributes ApplicationMessageReportAttributes (0..1)
+
+type ApplIDRequestGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type ApplIDRequestGrpAttributes:
+
+    applIDRequestGrpAttributes ApplIDRequestGrpAttributes (0..1)
+
+type ApplIDRequestGrp_Block_t:
+
+    applIDRequestGrpElements ApplIDRequestGrpElements (1..1)
+    applIDRequestGrpAttributes ApplIDRequestGrpAttributes (0..1)
+
+type ApplIDRequestAckGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type ApplIDRequestAckGrpAttributes:
+
+    applIDRequestAckGrpAttributes ApplIDRequestAckGrpAttributes (0..1)
+
+type ApplIDRequestAckGrp_Block_t:
+
+    applIDRequestAckGrpElements ApplIDRequestAckGrpElements (1..1)
+    applIDRequestAckGrpAttributes ApplIDRequestAckGrpAttributes (0..1)
+
+type ApplIDReportGrpElements:
+
+type ApplIDReportGrpAttributes:
+
+    applIDReportGrpAttributes ApplIDReportGrpAttributes (0..1)
+
+type ApplIDReportGrp_Block_t:
+
+    applIDReportGrpElements ApplIDReportGrpElements (1..1)
+    applIDReportGrpAttributes ApplIDReportGrpAttributes (0..1)

@@ -1,0 +1,373 @@
+namespace cdm.fixml.tradecapture.base : < "fixml definition" >
+version "${project.version}"
+
+type TrdCaptRptReq extends TradeCaptureReportRequest_message_t:
+
+type TrdCaptRpt extends TradeCaptureReport_message_t:
+
+type TrdCaptRptReqAck extends TradeCaptureReportRequestAck_message_t:
+
+type TrdCaptRptAck extends TradeCaptureReportAck_message_t:
+
+type TrdMtchRpt extends TradeMatchReport_message_t:
+
+type TrdMtchRptAck extends TradeMatchReportAck_message_t:
+
+type TradeCaptureReportRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    trdCapDt TrdCapDtGrp_Block_t (0..*)
+
+type TradeCaptureReportRequestAttributes:
+
+    tradeCaptureReportRequestAttributes TradeCaptureReportRequestAttributes (0..1)
+
+type TradeCaptureReportRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeCaptureReportRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg63">
+
+    tradeCaptureReportRequestElements TradeCaptureReportRequestElements (1..1)
+    tradeCaptureReportRequestAttributes TradeCaptureReportRequestAttributes (0..1)
+
+type TradeCaptureReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    trdTyp cdm.fixml.components.base.TradeTypeGrp_Block_t (0..*)
+    trdPxConds cdm.fixml.components.base.TradePriceConditionGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    pmt cdm.fixml.components.base.PaymentGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    collAmt cdm.fixml.components.base.CollateralAmountGrp_Block_t (0..*)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    txnAttrb cdm.fixml.components.base.TransactionAttributeGrp_Block_t (0..*)
+    avgPxDetl cdm.fixml.components.base.AveragePriceDetail_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    trdLeg TrdInstrmtLegGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    qty cdm.fixml.components.base.TradeQtyGrp_Block_t (0..*)
+    rptSide TrdCapRptSideGrp_Block_t (1..*)
+    trdRepIndicatorsGrp TrdRepIndicatorsGrp_Block_t (0..*)
+    trdRegPublctn cdm.fixml.components.base.TrdRegPublicationGrp_Block_t (0..*)
+    mandClrJrsdctn cdm.fixml.components.base.MandatoryClearingJurisdictionGrp_Block_t (0..*)
+    attchmnt cdm.fixml.components.base.AttachmentGrp_Block_t (0..*)
+
+type TradeCaptureReportAttributes:
+
+    tradeCaptureReportAttributes TradeCaptureReportAttributes (0..1)
+
+type TradeCaptureReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeCaptureReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg64">
+
+    tradeCaptureReportElements TradeCaptureReportElements (1..1)
+    tradeCaptureReportAttributes TradeCaptureReportAttributes (0..1)
+
+type TradeCaptureReportRequestAckElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type TradeCaptureReportRequestAckAttributes:
+
+    tradeCaptureReportRequestAckAttributes TradeCaptureReportRequestAckAttributes (0..1)
+
+type TradeCaptureReportRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeCaptureReportRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg76">
+
+    tradeCaptureReportRequestAckElements TradeCaptureReportRequestAckElements (1..1)
+    tradeCaptureReportRequestAckAttributes TradeCaptureReportRequestAckAttributes (0..1)
+
+type TradeCaptureReportAckElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    avgPxDetl cdm.fixml.components.base.AveragePriceDetail_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    trdRepIndicatorsGrp TrdRepIndicatorsGrp_Block_t (0..*)
+    trdLeg TrdInstrmtLegGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    qty cdm.fixml.components.base.TradeQtyGrp_Block_t (0..*)
+    rptSide TrdCapRptAckSideGrp_Block_t (0..*)
+
+type TradeCaptureReportAckAttributes:
+
+    tradeCaptureReportAckAttributes TradeCaptureReportAckAttributes (0..1)
+
+type TradeCaptureReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeCaptureReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg77">
+
+    tradeCaptureReportAckElements TradeCaptureReportAckElements (1..1)
+    tradeCaptureReportAckAttributes TradeCaptureReportAckAttributes (0..1)
+
+type TradeMatchReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmtMtchSide InstrmtMatchSideGrp_Block_t (0..*)
+
+type TradeMatchReportAttributes:
+
+    tradeMatchReportAttributes TradeMatchReportAttributes (0..1)
+
+type TradeMatchReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeMatchReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg139">
+
+    tradeMatchReportElements TradeMatchReportElements (1..1)
+    tradeMatchReportAttributes TradeMatchReportAttributes (0..1)
+
+type TradeMatchReportAckElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+
+type TradeMatchReportAckAttributes:
+
+    tradeMatchReportAckAttributes TradeMatchReportAckAttributes (0..1)
+
+type TradeMatchReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeMatchReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg140">
+
+    tradeMatchReportAckElements TradeMatchReportAckElements (1..1)
+    tradeMatchReportAckAttributes TradeMatchReportAckAttributes (0..1)
+
+type SideTrdRegTSElements:
+
+type SideTrdRegTSAttributes:
+
+    sideTrdRegTSAttributes SideTrdRegTSAttributes (0..1)
+
+type SideTrdRegTS_Block_t:
+
+    sideTrdRegTSElements SideTrdRegTSElements (1..1)
+    sideTrdRegTSAttributes SideTrdRegTSAttributes (0..1)
+
+type TrdAllocGrpElements:
+
+    regTrdID cdm.fixml.components.base.AllocRegulatoryTradeIDGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties2_Block_t (0..*)
+    amt cdm.fixml.components.base.TradeAllocAmtGrp_Block_t (0..*)
+    commData cdm.fixml.components.base.AllocCommissionDataGrp_Block_t (0..*)
+
+type TrdAllocGrpAttributes:
+
+    trdAllocGrpAttributes TrdAllocGrpAttributes (0..1)
+
+type TrdAllocGrp_Block_t:
+
+    trdAllocGrpElements TrdAllocGrpElements (1..1)
+    trdAllocGrpAttributes TrdAllocGrpAttributes (0..1)
+
+type TrdCapRptSideGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    lmtAmts cdm.fixml.components.base.LimitAmts_Block_t (0..*)
+    clrInst cdm.fixml.components.base.ClrInstGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.SideRegulatoryTradeIDGrp_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    contAmt cdm.fixml.components.base.ContAmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+    alloc TrdAllocGrp_Block_t (0..*)
+    trdRegTS SideTrdRegTS_Block_t (0..*)
+    settlDetails cdm.fixml.components.base.SettlDetails_Block_t (0..*)
+    trdRptOrdDetl TradeReportOrderDetail_Block_t (0..1)
+    qty cdm.fixml.components.base.TradePositionQty_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    reltdPos cdm.fixml.components.base.RelatedPositionGrp_Block_t (0..*)
+    collAmt cdm.fixml.components.base.SideCollateralAmountGrp_Block_t (0..*)
+
+type TrdCapRptSideGrpAttributes:
+
+    trdCapRptSideGrpAttributes TrdCapRptSideGrpAttributes (0..1)
+
+type TrdCapRptSideGrp_Block_t:
+
+    trdCapRptSideGrpElements TrdCapRptSideGrpElements (1..1)
+    trdCapRptSideGrpAttributes TrdCapRptSideGrpAttributes (0..1)
+
+type TrdInstrmtLegGrpElements:
+
+    leg cdm.fixml.components.base.InstrumentLeg_Block_t (0..1)
+    finDetls cdm.fixml.components.base.LegFinancingDetails_Block_t (0..1)
+    amt LegPositionAmountData_Block_t (0..*)
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    tradeCapLegUndlyGrp TradeCapLegUnderlyingsGrp_Block_t (0..*)
+
+type TrdInstrmtLegGrpAttributes:
+
+    trdInstrmtLegGrpAttributes TrdInstrmtLegGrpAttributes (0..1)
+
+type TrdInstrmtLegGrp_Block_t:
+
+    trdInstrmtLegGrpElements TrdInstrmtLegGrpElements (1..1)
+    trdInstrmtLegGrpAttributes TrdInstrmtLegGrpAttributes (0..1)
+
+type TrdCapDtGrpElements:
+
+type TrdCapDtGrpAttributes:
+
+    trdCapDtGrpAttributes TrdCapDtGrpAttributes (0..1)
+
+type TrdCapDtGrp_Block_t:
+
+    trdCapDtGrpElements TrdCapDtGrpElements (1..1)
+    trdCapDtGrpAttributes TrdCapDtGrpAttributes (0..1)
+
+type TrdCapRptAckSideGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    lmtAmts cdm.fixml.components.base.LimitAmts_Block_t (0..*)
+    clrInst cdm.fixml.components.base.ClrInstGrp_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    contAmt cdm.fixml.components.base.ContAmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+    settlDetails cdm.fixml.components.base.SettlDetails_Block_t (0..*)
+    alloc TrdAllocGrp_Block_t (0..*)
+    trdRptOrdDetl TradeReportOrderDetail_Block_t (0..1)
+    trdRegTS SideTrdRegTS_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    reltdPos cdm.fixml.components.base.RelatedPositionGrp_Block_t (0..*)
+
+type TrdCapRptAckSideGrpAttributes:
+
+    trdCapRptAckSideGrpAttributes TrdCapRptAckSideGrpAttributes (0..1)
+
+type TrdCapRptAckSideGrp_Block_t:
+
+    trdCapRptAckSideGrpElements TrdCapRptAckSideGrpElements (1..1)
+    trdCapRptAckSideGrpAttributes TrdCapRptAckSideGrpAttributes (0..1)
+
+type UnderlyingLegSecurityAltIDGrpElements:
+
+type UnderlyingLegSecurityAltIDGrpAttributes:
+
+    underlyingLegSecurityAltIDGrpAttributes UnderlyingLegSecurityAltIDGrpAttributes (0..1)
+
+type UnderlyingLegSecurityAltIDGrp_Block_t:
+
+    underlyingLegSecurityAltIDGrpElements UnderlyingLegSecurityAltIDGrpElements (1..1)
+    underlyingLegSecurityAltIDGrpAttributes UnderlyingLegSecurityAltIDGrpAttributes (0..1)
+
+type TradeCapLegUnderlyingsGrpElements:
+
+    instrmt UnderlyingLegInstrument_Block_t (0..1)
+
+type TradeCapLegUnderlyingsGrpAttributes:
+
+    tradeCapLegUnderlyingsGrpAttributes TradeCapLegUnderlyingsGrpAttributes (0..1)
+
+type TradeCapLegUnderlyingsGrp_Block_t:
+
+    tradeCapLegUnderlyingsGrpElements TradeCapLegUnderlyingsGrpElements (1..1)
+    tradeCapLegUnderlyingsGrpAttributes TradeCapLegUnderlyingsGrpAttributes (0..1)
+
+type TrdRepIndicatorsGrpElements:
+
+type TrdRepIndicatorsGrpAttributes:
+
+    trdRepIndicatorsGrpAttributes TrdRepIndicatorsGrpAttributes (0..1)
+
+type TrdRepIndicatorsGrp_Block_t:
+
+    trdRepIndicatorsGrpElements TrdRepIndicatorsGrpElements (1..1)
+    trdRepIndicatorsGrpAttributes TrdRepIndicatorsGrpAttributes (0..1)
+
+type UnderlyingLegInstrumentElements:
+
+    aid UnderlyingLegSecurityAltIDGrp_Block_t (0..*)
+
+type UnderlyingLegInstrumentAttributes:
+
+    underlyingLegInstrumentAttributes UnderlyingLegInstrumentAttributes (0..1)
+
+type UnderlyingLegInstrument_Block_t:
+
+    underlyingLegInstrumentElements UnderlyingLegInstrumentElements (1..1)
+    underlyingLegInstrumentAttributes UnderlyingLegInstrumentAttributes (0..1)
+
+type TradeReportOrderDetailElements:
+
+    reltdOrd cdm.fixml.components.base.RelatedOrderGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+
+type TradeReportOrderDetailAttributes:
+
+    tradeReportOrderDetailAttributes TradeReportOrderDetailAttributes (0..1)
+
+type TradeReportOrderDetail_Block_t:
+
+    tradeReportOrderDetailElements TradeReportOrderDetailElements (1..1)
+    tradeReportOrderDetailAttributes TradeReportOrderDetailAttributes (0..1)
+
+type LegPositionAmountDataElements:
+
+type LegPositionAmountDataAttributes:
+
+    legPositionAmountDataAttributes LegPositionAmountDataAttributes (0..1)
+
+type LegPositionAmountData_Block_t:
+
+    legPositionAmountDataElements LegPositionAmountDataElements (1..1)
+    legPositionAmountDataAttributes LegPositionAmountDataAttributes (0..1)
+
+type InstrmtMatchSideGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    trdMtchSide TrdMatchSideGrp_Block_t (0..*)
+
+type InstrmtMatchSideGrpAttributes:
+
+    instrmtMatchSideGrpAttributes InstrmtMatchSideGrpAttributes (0..1)
+
+type InstrmtMatchSideGrp_Block_t:
+
+    instrmtMatchSideGrpElements InstrmtMatchSideGrpElements (1..1)
+    instrmtMatchSideGrpAttributes InstrmtMatchSideGrpAttributes (0..1)
+
+type TrdMatchSideGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    alloc TrdAllocGrp_Block_t (0..*)
+    trdRptOrdDetl TradeReportOrderDetail_Block_t (0..1)
+    legExec TrdInstrmtLegExecGrp_Block_t (0..*)
+
+type TrdMatchSideGrpAttributes:
+
+    trdMatchSideGrpAttributes TrdMatchSideGrpAttributes (0..1)
+
+type TrdMatchSideGrp_Block_t:
+
+    trdMatchSideGrpElements TrdMatchSideGrpElements (1..1)
+    trdMatchSideGrpAttributes TrdMatchSideGrpAttributes (0..1)
+
+type TrdInstrmtLegExecGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties3_Block_t (0..*)
+
+type TrdInstrmtLegExecGrpAttributes:
+
+    trdInstrmtLegExecGrpAttributes TrdInstrmtLegExecGrpAttributes (0..1)
+
+type TrdInstrmtLegExecGrp_Block_t:
+
+    trdInstrmtLegExecGrpElements TrdInstrmtLegExecGrpElements (1..1)
+    trdInstrmtLegExecGrpAttributes TrdInstrmtLegExecGrpAttributes (0..1)

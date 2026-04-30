@@ -1,0 +1,239 @@
+namespace cdm.fixml.testing.base : < "fixml definition" >
+version "${project.version}"
+
+type AlgoCertReq extends AlgoCertificateRequest_message_t:
+
+type AlgoCertReqAck extends AlgoCertificateRequestAck_message_t:
+
+type AlgoCertRpt extends AlgoCertificateReport_message_t:
+
+type AlgoCertRptAck extends AlgoCertificateReportAck_message_t:
+
+type TstSteDefReq extends TestSuiteDefinitionRequest_message_t:
+
+type TstSteDefReqAck extends TestSuiteDefinitionRequestAck_message_t:
+
+type TstActnReq extends TestActionRequest_message_t:
+
+type TstActnReqAck extends TestActionRequestAck_message_t:
+
+type TstActnRpt extends TestActionReport_message_t:
+
+type AlgoCertificateRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    tstScnro TestScenarioGrp_Block_t (0..*)
+
+type AlgoCertificateRequestAttributes:
+
+    algoCertificateRequestAttributes AlgoCertificateRequestAttributes (0..1)
+
+type AlgoCertificateRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AlgoCertificateRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg170">
+
+    algoCertificateRequestElements AlgoCertificateRequestElements (1..1)
+    algoCertificateRequestAttributes AlgoCertificateRequestAttributes (0..1)
+
+type AlgoCertificateRequestAckElements:
+
+type AlgoCertificateRequestAckAttributes:
+
+    algoCertificateRequestAckAttributes AlgoCertificateRequestAckAttributes (0..1)
+
+type AlgoCertificateRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AlgoCertificateRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg171">
+
+    algoCertificateRequestAckElements AlgoCertificateRequestAckElements (1..1)
+    algoCertificateRequestAckAttributes AlgoCertificateRequestAckAttributes (0..1)
+
+type AlgoCertificateReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    algoSysModl AlgoSystemModuleGrp_Block_t (0..*)
+    tstScnro TestScenarioGrp_Block_t (0..*)
+
+type AlgoCertificateReportAttributes:
+
+    algoCertificateReportAttributes AlgoCertificateReportAttributes (0..1)
+
+type AlgoCertificateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AlgoCertificateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg172">
+
+    algoCertificateReportElements AlgoCertificateReportElements (1..1)
+    algoCertificateReportAttributes AlgoCertificateReportAttributes (0..1)
+
+type AlgoCertificateReportAckElements:
+
+type AlgoCertificateReportAckAttributes:
+
+    algoCertificateReportAckAttributes AlgoCertificateReportAckAttributes (0..1)
+
+type AlgoCertificateReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AlgoCertificateReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg173">
+
+    algoCertificateReportAckElements AlgoCertificateReportAckElements (1..1)
+    algoCertificateReportAckAttributes AlgoCertificateReportAckAttributes (0..1)
+
+type TestSuiteDefinitionRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    algoSysModl AlgoSystemModuleGrp_Block_t (0..*)
+    tstScnro TestScenarioGrp_Block_t (1..*)
+
+type TestSuiteDefinitionRequestAttributes:
+
+    testSuiteDefinitionRequestAttributes TestSuiteDefinitionRequestAttributes (0..1)
+
+type TestSuiteDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TestSuiteDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg174">
+
+    testSuiteDefinitionRequestElements TestSuiteDefinitionRequestElements (1..1)
+    testSuiteDefinitionRequestAttributes TestSuiteDefinitionRequestAttributes (0..1)
+
+type TestSuiteDefinitionRequestAckElements:
+
+    tstGtwyDetl TestGatewayDetailGrp_Block_t (0..*)
+
+type TestSuiteDefinitionRequestAckAttributes:
+
+    testSuiteDefinitionRequestAckAttributes TestSuiteDefinitionRequestAckAttributes (0..1)
+
+type TestSuiteDefinitionRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TestSuiteDefinitionRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg175">
+
+    testSuiteDefinitionRequestAckElements TestSuiteDefinitionRequestAckElements (1..1)
+    testSuiteDefinitionRequestAckAttributes TestSuiteDefinitionRequestAckAttributes (0..1)
+
+type TestActionRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tstScnro TestScenarioGrp_Block_t (0..*)
+
+type TestActionRequestAttributes:
+
+    testActionRequestAttributes TestActionRequestAttributes (0..1)
+
+type TestActionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TestActionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg176">
+
+    testActionRequestElements TestActionRequestElements (1..1)
+    testActionRequestAttributes TestActionRequestAttributes (0..1)
+
+type TestActionRequestAckElements:
+
+type TestActionRequestAckAttributes:
+
+    testActionRequestAckAttributes TestActionRequestAckAttributes (0..1)
+
+type TestActionRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TestActionRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg177">
+
+    testActionRequestAckElements TestActionRequestAckElements (1..1)
+    testActionRequestAckAttributes TestActionRequestAckAttributes (0..1)
+
+type TestActionReportElements:
+
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    algoSysModl AlgoSystemModuleGrp_Block_t (0..*)
+    tstScnro TestScenarioGrp_Block_t (0..*)
+
+type TestActionReportAttributes:
+
+    testActionReportAttributes TestActionReportAttributes (0..1)
+
+type TestActionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TestActionReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg178">
+
+    testActionReportElements TestActionReportElements (1..1)
+    testActionReportAttributes TestActionReportAttributes (0..1)
+
+type AlgoSystemModuleGrpElements:
+
+type AlgoSystemModuleGrpAttributes:
+
+    algoSystemModuleGrpAttributes AlgoSystemModuleGrpAttributes (0..1)
+
+type AlgoSystemModuleGrp_Block_t:
+
+    algoSystemModuleGrpElements AlgoSystemModuleGrpElements (1..1)
+    algoSystemModuleGrpAttributes AlgoSystemModuleGrpAttributes (0..1)
+
+type TestScenarioGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    instrmtScope cdm.fixml.components.base.InstrumentScopeGrp_Block_t (0..*)
+    tstStep TestStepGrp_Block_t (0..*)
+    tstSysModl TestSystemModuleGrp_Block_t (0..*)
+    tstMsr TestMeasureGrp_Block_t (0..*)
+    tstOrd TestOrderGrp_Block_t (0..*)
+
+type TestScenarioGrpAttributes:
+
+    testScenarioGrpAttributes TestScenarioGrpAttributes (0..1)
+
+type TestScenarioGrp_Block_t:
+
+    testScenarioGrpElements TestScenarioGrpElements (1..1)
+    testScenarioGrpAttributes TestScenarioGrpAttributes (0..1)
+
+type TestStepGrpElements:
+
+    tstStepPrm TestStepParameterGrp_Block_t (0..*)
+
+type TestStepGrpAttributes:
+
+    testStepGrpAttributes TestStepGrpAttributes (0..1)
+
+type TestStepGrp_Block_t:
+
+    testStepGrpElements TestStepGrpElements (1..1)
+    testStepGrpAttributes TestStepGrpAttributes (0..1)
+
+type TestStepParameterGrpElements:
+
+type TestStepParameterGrpAttributes:
+
+    testStepParameterGrpAttributes TestStepParameterGrpAttributes (0..1)
+
+type TestStepParameterGrp_Block_t:
+
+    testStepParameterGrpElements TestStepParameterGrpElements (1..1)
+    testStepParameterGrpAttributes TestStepParameterGrpAttributes (0..1)
+
+type TestSystemModuleGrpElements:
+
+type TestSystemModuleGrpAttributes:
+
+    testSystemModuleGrpAttributes TestSystemModuleGrpAttributes (0..1)
+
+type TestSystemModuleGrp_Block_t:
+
+    testSystemModuleGrpElements TestSystemModuleGrpElements (1..1)
+    testSystemModuleGrpAttributes TestSystemModuleGrpAttributes (0..1)
+
+type TestMeasureGrpElements:
+
+type TestMeasureGrpAttributes:
+
+    testMeasureGrpAttributes TestMeasureGrpAttributes (0..1)
+
+type TestMeasureGrp_Block_t:
+
+    testMeasureGrpElements TestMeasureGrpElements (1..1)
+    testMeasureGrpAttributes TestMeasureGrpAttributes (0..1)
+
+type TestOrderGrpElements:
+
+type TestOrderGrpAttributes:
+
+    testOrderGrpAttributes TestOrderGrpAttributes (0..1)
+
+type TestOrderGrp_Block_t:
+
+    testOrderGrpElements TestOrderGrpElements (1..1)
+    testOrderGrpAttributes TestOrderGrpAttributes (0..1)
+
+type TestGatewayDetailGrpElements:
+
+type TestGatewayDetailGrpAttributes:
+
+    testGatewayDetailGrpAttributes TestGatewayDetailGrpAttributes (0..1)
+
+type TestGatewayDetailGrp_Block_t:
+
+    testGatewayDetailGrpElements TestGatewayDetailGrpElements (1..1)
+    testGatewayDetailGrpAttributes TestGatewayDetailGrpAttributes (0..1)

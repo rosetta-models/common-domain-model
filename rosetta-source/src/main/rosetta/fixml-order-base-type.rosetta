@@ -1,0 +1,247 @@
+namespace cdm.fixml.order.base : < "fixml definition" >
+version "${project.version}"
+
+type ExecRpt extends ExecutionReport_message_t:
+
+type OrdCxlRej extends OrderCancelReject_message_t:
+
+type Order extends NewOrderSingle_message_t:
+
+type OrdCxlReq extends OrderCancelRequest_message_t:
+
+type OrdCxlRplcReq extends OrderCancelReplaceRequest_message_t:
+
+type OrdStatReq extends OrderStatusRequest_message_t:
+
+type DkTrd extends DontKnowTrade_message_t:
+
+type ExecAck extends ExecutionAck_message_t:
+
+type ExecutionReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    contra cdm.fixml.components.base.ContraGrp_Block_t (0..*)
+    trdTyp cdm.fixml.components.base.TradeTypeGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    preAll cdm.fixml.components.base.PreAllocGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    pmt cdm.fixml.components.base.PaymentGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    lmtAmts cdm.fixml.components.base.LimitAmts_Block_t (0..*)
+    fillsGrp FillsGrp_Block_t (0..*)
+    ordEvent OrderEventGrp_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    reltvVal cdm.fixml.components.base.RelativeValueGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    disclsrInst cdm.fixml.components.base.DisclosureInstructionGrp_Block_t (0..*)
+    contAmt cdm.fixml.components.base.ContAmtGrp_Block_t (0..*)
+    exec cdm.fixml.components.base.InstrmtLegExecGrp_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    trdRegPublctn cdm.fixml.components.base.TrdRegPublicationGrp_Block_t (0..*)
+    trdPxConds cdm.fixml.components.base.TradePriceConditionGrp_Block_t (0..*)
+    thrttlRsp cdm.fixml.components.base.ThrottleResponse_Block_t (0..1)
+    reltdOrd cdm.fixml.components.base.RelatedOrderGrp_Block_t (0..*)
+
+type ExecutionReportAttributes:
+
+    executionReportAttributes ExecutionReportAttributes (0..1)
+
+type ExecutionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ExecutionReport can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg9">
+
+    executionReportElements ExecutionReportElements (1..1)
+    executionReportAttributes ExecutionReportAttributes (0..1)
+
+type OrderCancelRejectElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type OrderCancelRejectAttributes:
+
+    orderCancelRejectAttributes OrderCancelRejectAttributes (0..1)
+
+type OrderCancelReject_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderCancelReject can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg10">
+
+    orderCancelRejectElements OrderCancelRejectElements (1..1)
+    orderCancelRejectAttributes OrderCancelRejectAttributes (0..1)
+
+type NewOrderSingleElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    preAll cdm.fixml.components.base.PreAllocGrp_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    disclsrInst cdm.fixml.components.base.DisclosureInstructionGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    trdRegPublctn cdm.fixml.components.base.TrdRegPublicationGrp_Block_t (0..*)
+
+type NewOrderSingleAttributes:
+
+    newOrderSingleAttributes NewOrderSingleAttributes (0..1)
+
+type NewOrderSingle_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NewOrderSingle can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg14">
+
+    newOrderSingleElements NewOrderSingleElements (1..1)
+    newOrderSingleAttributes NewOrderSingleAttributes (0..1)
+
+type OrderCancelRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+
+type OrderCancelRequestAttributes:
+
+    orderCancelRequestAttributes OrderCancelRequestAttributes (0..1)
+
+type OrderCancelRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderCancelRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg16">
+
+    orderCancelRequestElements OrderCancelRequestElements (1..1)
+    orderCancelRequestAttributes OrderCancelRequestAttributes (0..1)
+
+type OrderCancelReplaceRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    preAll cdm.fixml.components.base.PreAllocGrp_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    disclsrInst cdm.fixml.components.base.DisclosureInstructionGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+
+type OrderCancelReplaceRequestAttributes:
+
+    orderCancelReplaceRequestAttributes OrderCancelReplaceRequestAttributes (0..1)
+
+type OrderCancelReplaceRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderCancelReplaceRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg17">
+
+    orderCancelReplaceRequestElements OrderCancelReplaceRequestElements (1..1)
+    orderCancelReplaceRequestAttributes OrderCancelReplaceRequestAttributes (0..1)
+
+type OrderStatusRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type OrderStatusRequestAttributes:
+
+    orderStatusRequestAttributes OrderStatusRequestAttributes (0..1)
+
+type OrderStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg18">
+
+    orderStatusRequestElements OrderStatusRequestElements (1..1)
+    orderStatusRequestAttributes OrderStatusRequestAttributes (0..1)
+
+type DontKnowTradeElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+
+type DontKnowTradeAttributes:
+
+    dontKnowTradeAttributes DontKnowTradeAttributes (0..1)
+
+type DontKnowTrade_message_t extends cdm.fixml.components.base.Abstract_message_t: <"DontKnowTrade can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg25">
+
+    dontKnowTradeElements DontKnowTradeElements (1..1)
+    dontKnowTradeAttributes DontKnowTradeAttributes (0..1)
+
+type ExecutionAckElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+
+type ExecutionAckAttributes:
+
+    executionAckAttributes ExecutionAckAttributes (0..1)
+
+type ExecutionAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ExecutionAck can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg99">
+
+    executionAckElements ExecutionAckElements (1..1)
+    executionAckAttributes ExecutionAckAttributes (0..1)
+
+type FillsGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties4_Block_t (0..*)
+
+type FillsGrpAttributes:
+
+    fillsGrpAttributes FillsGrpAttributes (0..1)
+
+type FillsGrp_Block_t:
+
+    fillsGrpElements FillsGrpElements (1..1)
+    fillsGrpAttributes FillsGrpAttributes (0..1)
+
+type OrderEventGrpElements:
+
+type OrderEventGrpAttributes:
+
+    orderEventGrpAttributes OrderEventGrpAttributes (0..1)
+
+type OrderEventGrp_Block_t:
+
+    orderEventGrpElements OrderEventGrpElements (1..1)
+    orderEventGrpAttributes OrderEventGrpAttributes (0..1)

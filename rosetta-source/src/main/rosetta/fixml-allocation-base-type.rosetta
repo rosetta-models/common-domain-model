@@ -1,0 +1,239 @@
+namespace cdm.fixml.allocation.base : < "fixml definition" >
+version "${project.version}"
+
+type AllocInstrctn extends AllocationInstruction_message_t:
+
+type AllocInstrctnAck extends AllocationInstructionAck_message_t:
+
+type AllocRpt extends AllocationReport_message_t:
+
+type AllocRptAck extends AllocationReportAck_message_t:
+
+type AllocInstrAlert extends AllocationInstructionAlert_message_t:
+
+type AllocInstrAlertReq extends AllocationInstructionAlertRequest_message_t:
+
+type AllocInstrctnAlertReqAck extends AllocationInstructionAlertRequestAck_message_t:
+
+type AllocationInstructionElements:
+
+    ordAlloc cdm.fixml.components.base.OrdAllocGrp_Block_t (0..*)
+    allExc cdm.fixml.components.base.ExecAllocGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    alloc AllocGrp_Block_t (0..*)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+
+type AllocationInstructionAttributes:
+
+    allocationInstructionAttributes AllocationInstructionAttributes (0..1)
+
+type AllocationInstruction_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationInstruction can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg19">
+
+    allocationInstructionElements AllocationInstructionElements (1..1)
+    allocationInstructionAttributes AllocationInstructionAttributes (0..1)
+
+type AllocationInstructionAckElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    allocAck AllocAckGrp_Block_t (0..*)
+
+type AllocationInstructionAckAttributes:
+
+    allocationInstructionAckAttributes AllocationInstructionAckAttributes (0..1)
+
+type AllocationInstructionAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationInstructionAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg24">
+
+    allocationInstructionAckElements AllocationInstructionAckElements (1..1)
+    allocationInstructionAckAttributes AllocationInstructionAckAttributes (0..1)
+
+type AllocationReportElements:
+
+    ordAlloc cdm.fixml.components.base.OrdAllocGrp_Block_t (0..*)
+    allExc cdm.fixml.components.base.ExecAllocGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    alloc AllocGrp_Block_t (0..*)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+
+type AllocationReportAttributes:
+
+    allocationReportAttributes AllocationReportAttributes (0..1)
+
+type AllocationReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg78">
+
+    allocationReportElements AllocationReportElements (1..1)
+    allocationReportAttributes AllocationReportAttributes (0..1)
+
+type AllocationReportAckElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    allocAck AllocAckGrp_Block_t (0..*)
+
+type AllocationReportAckAttributes:
+
+    allocationReportAckAttributes AllocationReportAckAttributes (0..1)
+
+type AllocationReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg79">
+
+    allocationReportAckElements AllocationReportAckElements (1..1)
+    allocationReportAckAttributes AllocationReportAckAttributes (0..1)
+
+type AllocationInstructionAlertElements:
+
+    ordAlloc cdm.fixml.components.base.OrdAllocGrp_Block_t (0..*)
+    allExc cdm.fixml.components.base.ExecAllocGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    allocSubQty AllocGroupSubQtyGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    alloc AllocGrp_Block_t (0..*)
+
+type AllocationInstructionAlertAttributes:
+
+    allocationInstructionAlertAttributes AllocationInstructionAlertAttributes (0..1)
+
+type AllocationInstructionAlert_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationInstructionAlert can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg98">
+
+    allocationInstructionAlertElements AllocationInstructionAlertElements (1..1)
+    allocationInstructionAlertAttributes AllocationInstructionAlertAttributes (0..1)
+
+type AllocationInstructionAlertRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type AllocationInstructionAlertRequestAttributes:
+
+    allocationInstructionAlertRequestAttributes AllocationInstructionAlertRequestAttributes (0..1)
+
+type AllocationInstructionAlertRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationInstructionAlertRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg157">
+
+    allocationInstructionAlertRequestElements AllocationInstructionAlertRequestElements (1..1)
+    allocationInstructionAlertRequestAttributes AllocationInstructionAlertRequestAttributes (0..1)
+
+type AllocationInstructionAlertRequestAckElements:
+
+type AllocationInstructionAlertRequestAckAttributes:
+
+    allocationInstructionAlertRequestAckAttributes AllocationInstructionAlertRequestAckAttributes (0..1)
+
+type AllocationInstructionAlertRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AllocationInstructionAlertRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg158">
+
+    allocationInstructionAlertRequestAckElements AllocationInstructionAlertRequestAckElements (1..1)
+    allocationInstructionAlertRequestAckAttributes AllocationInstructionAlertRequestAckAttributes (0..1)
+
+type AllocAckGrpElements:
+
+    regTrdID cdm.fixml.components.base.AllocRegulatoryTradeIDGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type AllocAckGrpAttributes:
+
+    allocAckGrpAttributes AllocAckGrpAttributes (0..1)
+
+type AllocAckGrp_Block_t:
+
+    allocAckGrpElements AllocAckGrpElements (1..1)
+    allocAckGrpAttributes AllocAckGrpAttributes (0..1)
+
+type AllocGrpElements:
+
+    indAllocSubQtyAttr IndividualAllocSubQtyAttributeGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.AllocRegulatoryTradeIDGrp_Block_t (0..*)
+    trdRegTS AllocTrdRegTimestamps_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.AllocCommissionDataGrp_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+    clrInst cdm.fixml.components.base.ClrInstGrp_Block_t (0..*)
+    setInstr cdm.fixml.components.base.SettlInstructionsData_Block_t (0..1)
+    amt cdm.fixml.components.base.TradeAllocAmtGrp_Block_t (0..*)
+
+type AllocGrpAttributes:
+
+    allocGrpAttributes AllocGrpAttributes (0..1)
+
+type AllocGrp_Block_t:
+
+    allocGrpElements AllocGrpElements (1..1)
+    allocGrpAttributes AllocGrpAttributes (0..1)
+
+type AllocGroupSubQtyGrpElements:
+
+    allocSubQtyAttr AllocGroupSubQtyAttributeGrp_Block_t (0..*)
+
+type AllocGroupSubQtyGrpAttributes:
+
+    allocGroupSubQtyGrpAttributes AllocGroupSubQtyGrpAttributes (0..1)
+
+type AllocGroupSubQtyGrp_Block_t:
+
+    allocGroupSubQtyGrpElements AllocGroupSubQtyGrpElements (1..1)
+    allocGroupSubQtyGrpAttributes AllocGroupSubQtyGrpAttributes (0..1)
+
+type AllocGroupSubQtyAttributeGrpElements:
+
+type AllocGroupSubQtyAttributeGrpAttributes:
+
+    allocGroupSubQtyAttributeGrpAttributes AllocGroupSubQtyAttributeGrpAttributes (0..1)
+
+type AllocGroupSubQtyAttributeGrp_Block_t:
+
+    allocGroupSubQtyAttributeGrpElements AllocGroupSubQtyAttributeGrpElements (1..1)
+    allocGroupSubQtyAttributeGrpAttributes AllocGroupSubQtyAttributeGrpAttributes (0..1)
+
+type AllocTrdRegTimestampsElements:
+
+type AllocTrdRegTimestampsAttributes:
+
+    allocTrdRegTimestampsAttributes AllocTrdRegTimestampsAttributes (0..1)
+
+type AllocTrdRegTimestamps_Block_t:
+
+    allocTrdRegTimestampsElements AllocTrdRegTimestampsElements (1..1)
+    allocTrdRegTimestampsAttributes AllocTrdRegTimestampsAttributes (0..1)
+
+type IndividualAllocSubQtyAttributeGrpElements:
+
+type IndividualAllocSubQtyAttributeGrpAttributes:
+
+    individualAllocSubQtyAttributeGrpAttributes IndividualAllocSubQtyAttributeGrpAttributes (0..1)
+
+type IndividualAllocSubQtyAttributeGrp_Block_t:
+
+    individualAllocSubQtyAttributeGrpElements IndividualAllocSubQtyAttributeGrpElements (1..1)
+    individualAllocSubQtyAttributeGrpAttributes IndividualAllocSubQtyAttributeGrpAttributes (0..1)

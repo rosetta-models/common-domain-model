@@ -1,0 +1,124 @@
+namespace cdm.fixml.crossorders.base : < "fixml definition" >
+version "${project.version}"
+
+type NewOrdCrss extends NewOrderCross_message_t:
+
+type CrssOrdCxlRplcReq extends CrossOrderCancelReplaceRequest_message_t:
+
+type CrssOrdCxlReq extends CrossOrderCancelRequest_message_t:
+
+type NewOrderCrossElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    sideCrossMod SideCrossOrdModGrp_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+
+type NewOrderCrossAttributes:
+
+    newOrderCrossAttributes NewOrderCrossAttributes (0..1)
+
+type NewOrderCross_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NewOrderCross can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg52">
+
+    newOrderCrossElements NewOrderCrossElements (1..1)
+    newOrderCrossAttributes NewOrderCrossAttributes (0..1)
+
+type CrossOrderCancelReplaceRequestElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    sideCrossMod SideCrossOrdModGrp_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+
+type CrossOrderCancelReplaceRequestAttributes:
+
+    crossOrderCancelReplaceRequestAttributes CrossOrderCancelReplaceRequestAttributes (0..1)
+
+type CrossOrderCancelReplaceRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"CrossOrderCancelReplaceRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg53">
+
+    crossOrderCancelReplaceRequestElements CrossOrderCancelReplaceRequestElements (1..1)
+    crossOrderCancelReplaceRequestAttributes CrossOrderCancelReplaceRequestAttributes (0..1)
+
+type CrossOrderCancelRequestElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    sideCrossCxl SideCrossOrdCxlGrp_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type CrossOrderCancelRequestAttributes:
+
+    crossOrderCancelRequestAttributes CrossOrderCancelRequestAttributes (0..1)
+
+type CrossOrderCancelRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"CrossOrderCancelRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg54">
+
+    crossOrderCancelRequestElements CrossOrderCancelRequestElements (1..1)
+    crossOrderCancelRequestAttributes CrossOrderCancelRequestAttributes (0..1)
+
+type SideCrossOrdCxlGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+
+type SideCrossOrdCxlGrpAttributes:
+
+    sideCrossOrdCxlGrpAttributes SideCrossOrdCxlGrpAttributes (0..1)
+
+type SideCrossOrdCxlGrp_Block_t:
+
+    sideCrossOrdCxlGrpElements SideCrossOrdCxlGrpElements (1..1)
+    sideCrossOrdCxlGrpAttributes SideCrossOrdCxlGrpAttributes (0..1)
+
+type SideCrossOrdModGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    sideCrossLeg SideCrossLegGrp_Block_t (0..*)
+    preAll cdm.fixml.components.base.PreAllocGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+
+type SideCrossOrdModGrpAttributes:
+
+    sideCrossOrdModGrpAttributes SideCrossOrdModGrpAttributes (0..1)
+
+type SideCrossOrdModGrp_Block_t:
+
+    sideCrossOrdModGrpElements SideCrossOrdModGrpElements (1..1)
+    sideCrossOrdModGrpAttributes SideCrossOrdModGrpAttributes (0..1)
+
+type SideCrossLegGrpElements:
+
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    preAll cdm.fixml.components.base.LegPreAllocGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties3_Block_t (0..*)
+
+type SideCrossLegGrpAttributes:
+
+    sideCrossLegGrpAttributes SideCrossLegGrpAttributes (0..1)
+
+type SideCrossLegGrp_Block_t:
+
+    sideCrossLegGrpElements SideCrossLegGrpElements (1..1)
+    sideCrossLegGrpAttributes SideCrossLegGrpAttributes (0..1)

@@ -1,0 +1,77 @@
+namespace cdm.fixml.settlstatmgmt.base : < "fixml definition" >
+version "${project.version}"
+
+type SettlStatReq extends SettlementStatusRequest_message_t:
+
+type SettlStatReqAck extends SettlementStatusRequestAck_message_t:
+
+type SettlStatRpt extends SettlementStatusReport_message_t:
+
+type SettlStatRptAck extends SettlementStatusReportAck_message_t:
+
+type SettlementStatusRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    settlTrdDetls SettlTradeDetails_Block_t (0..1)
+
+type SettlementStatusRequestAttributes:
+
+    settlementStatusRequestAttributes SettlementStatusRequestAttributes (0..1)
+
+type SettlementStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg165">
+
+    settlementStatusRequestElements SettlementStatusRequestElements (1..1)
+    settlementStatusRequestAttributes SettlementStatusRequestAttributes (0..1)
+
+type SettlementStatusRequestAckElements:
+
+type SettlementStatusRequestAckAttributes:
+
+    settlementStatusRequestAckAttributes SettlementStatusRequestAckAttributes (0..1)
+
+type SettlementStatusRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementStatusRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg166">
+
+    settlementStatusRequestAckElements SettlementStatusRequestAckElements (1..1)
+    settlementStatusRequestAckAttributes SettlementStatusRequestAckAttributes (0..1)
+
+type SettlementStatusReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    settlTrdDetls SettlTradeDetails_Block_t (0..1)
+
+type SettlementStatusReportAttributes:
+
+    settlementStatusReportAttributes SettlementStatusReportAttributes (0..1)
+
+type SettlementStatusReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementStatusReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg167">
+
+    settlementStatusReportElements SettlementStatusReportElements (1..1)
+    settlementStatusReportAttributes SettlementStatusReportAttributes (0..1)
+
+type SettlementStatusReportAckElements:
+
+type SettlementStatusReportAckAttributes:
+
+    settlementStatusReportAckAttributes SettlementStatusReportAckAttributes (0..1)
+
+type SettlementStatusReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementStatusReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg168">
+
+    settlementStatusReportAckElements SettlementStatusReportAckElements (1..1)
+    settlementStatusReportAckAttributes SettlementStatusReportAckAttributes (0..1)
+
+type SettlTradeDetailsElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    setInstr cdm.fixml.components.base.SettlInstructionsData_Block_t (0..1)
+
+type SettlTradeDetailsAttributes:
+
+    settlTradeDetailsAttributes SettlTradeDetailsAttributes (0..1)
+
+type SettlTradeDetails_Block_t:
+
+    settlTradeDetailsElements SettlTradeDetailsElements (1..1)
+    settlTradeDetailsAttributes SettlTradeDetailsAttributes (0..1)

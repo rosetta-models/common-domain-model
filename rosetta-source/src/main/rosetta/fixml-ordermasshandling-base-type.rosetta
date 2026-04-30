@@ -1,0 +1,184 @@
+namespace cdm.fixml.ordermasshandling.base : < "fixml definition" >
+version "${project.version}"
+
+type OrdMassCxlReq extends OrderMassCancelRequest_message_t:
+
+type OrdMassCxlRpt extends OrderMassCancelReport_message_t:
+
+type OrdMassStatReq extends OrderMassStatusRequest_message_t:
+
+type OrdMassActRpt extends OrderMassActionReport_message_t:
+
+type OrdMassActReq extends OrderMassActionRequest_message_t:
+
+type MassOrder extends MassOrder_message_t:
+
+type MassOrderAck extends MassOrderAck_message_t:
+
+type OrderMassCancelRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+
+type OrderMassCancelRequestAttributes:
+
+    orderMassCancelRequestAttributes OrderMassCancelRequestAttributes (0..1)
+
+type OrderMassCancelRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderMassCancelRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg50">
+
+    orderMassCancelRequestElements OrderMassCancelRequestElements (1..1)
+    orderMassCancelRequestAttributes OrderMassCancelRequestAttributes (0..1)
+
+type OrderMassCancelReportElements:
+
+    afctdOrd AffectedOrdGrp_Block_t (0..*)
+    notAfctdOrd NotAffectedOrdGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+
+type OrderMassCancelReportAttributes:
+
+    orderMassCancelReportAttributes OrderMassCancelReportAttributes (0..1)
+
+type OrderMassCancelReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderMassCancelReport can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg51">
+
+    orderMassCancelReportElements OrderMassCancelReportElements (1..1)
+    orderMassCancelReportAttributes OrderMassCancelReportAttributes (0..1)
+
+type OrderMassStatusRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+
+type OrderMassStatusRequestAttributes:
+
+    orderMassStatusRequestAttributes OrderMassStatusRequestAttributes (0..1)
+
+type OrderMassStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderMassStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg65">
+
+    orderMassStatusRequestElements OrderMassStatusRequestElements (1..1)
+    orderMassStatusRequestAttributes OrderMassStatusRequestAttributes (0..1)
+
+type OrderMassActionReportElements:
+
+    afctdOrd AffectedOrdGrp_Block_t (0..*)
+    notAfctdOrd NotAffectedOrdGrp_Block_t (0..*)
+    afctdMktSeg cdm.fixml.components.base.AffectedMarketSegmentGrp_Block_t (0..*)
+    notAfctdMktSeg cdm.fixml.components.base.NotAffectedMarketSegmentGrp_Block_t (0..*)
+    tgtMktSeg cdm.fixml.components.base.TargetMarketSegmentGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+
+type OrderMassActionReportAttributes:
+
+    orderMassActionReportAttributes OrderMassActionReportAttributes (0..1)
+
+type OrderMassActionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderMassActionReport can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg111">
+
+    orderMassActionReportElements OrderMassActionReportElements (1..1)
+    orderMassActionReportAttributes OrderMassActionReportAttributes (0..1)
+
+type OrderMassActionRequestElements:
+
+    tgtMktSeg cdm.fixml.components.base.TargetMarketSegmentGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+
+type OrderMassActionRequestAttributes:
+
+    orderMassActionRequestAttributes OrderMassActionRequestAttributes (0..1)
+
+type OrderMassActionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"OrderMassActionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg112">
+
+    orderMassActionRequestElements OrderMassActionRequestElements (1..1)
+    orderMassActionRequestAttributes OrderMassActionRequestAttributes (0..1)
+
+type MassOrderElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    orderEntry OrderEntryGrp_Block_t (1..*)
+
+type MassOrderAttributes:
+
+    massOrderAttributes MassOrderAttributes (0..1)
+
+type MassOrder_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MassOrder can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg146">
+
+    massOrderElements MassOrderElements (1..1)
+    massOrderAttributes MassOrderAttributes (0..1)
+
+type MassOrderAckElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    thrttlRsp cdm.fixml.components.base.ThrottleResponse_Block_t (0..1)
+    orderEntryAck OrderEntryAckGrp_Block_t (0..*)
+
+type MassOrderAckAttributes:
+
+    massOrderAckAttributes MassOrderAckAttributes (0..1)
+
+type MassOrderAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MassOrderAck can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg147">
+
+    massOrderAckElements MassOrderAckElements (1..1)
+    massOrderAckAttributes MassOrderAckAttributes (0..1)
+
+type AffectedOrdGrpElements:
+
+type AffectedOrdGrpAttributes:
+
+    affectedOrdGrpAttributes AffectedOrdGrpAttributes (0..1)
+
+type AffectedOrdGrp_Block_t:
+
+    affectedOrdGrpElements AffectedOrdGrpElements (1..1)
+    affectedOrdGrpAttributes AffectedOrdGrpAttributes (0..1)
+
+type NotAffectedOrdGrpElements:
+
+type NotAffectedOrdGrpAttributes:
+
+    notAffectedOrdGrpAttributes NotAffectedOrdGrpAttributes (0..1)
+
+type NotAffectedOrdGrp_Block_t:
+
+    notAffectedOrdGrpElements NotAffectedOrdGrpElements (1..1)
+    notAffectedOrdGrpAttributes NotAffectedOrdGrpAttributes (0..1)
+
+type OrderEntryGrpElements:
+
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type OrderEntryGrpAttributes:
+
+    orderEntryGrpAttributes OrderEntryGrpAttributes (0..1)
+
+type OrderEntryGrp_Block_t:
+
+    orderEntryGrpElements OrderEntryGrpElements (1..1)
+    orderEntryGrpAttributes OrderEntryGrpAttributes (0..1)
+
+type OrderEntryAckGrpElements:
+
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type OrderEntryAckGrpAttributes:
+
+    orderEntryAckGrpAttributes OrderEntryAckGrpAttributes (0..1)
+
+type OrderEntryAckGrp_Block_t:
+
+    orderEntryAckGrpElements OrderEntryAckGrpElements (1..1)
+    orderEntryAckGrpAttributes OrderEntryAckGrpAttributes (0..1)

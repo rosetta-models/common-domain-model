@@ -1,0 +1,35 @@
+namespace cdm.fixml.trademanagement.base : < "fixml definition" >
+version "${project.version}"
+
+type TrdAggrtnReq extends TradeAggregationRequest_message_t:
+
+type TrdAggrtnRpt extends TradeAggregationReport_message_t:
+
+type TradeAggregationRequestElements:
+
+    ordAggrtn cdm.fixml.components.base.OrderAggregationGrp_Block_t (0..*)
+    execAggrtn cdm.fixml.components.base.ExecutionAggregationGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type TradeAggregationRequestAttributes:
+
+    tradeAggregationRequestAttributes TradeAggregationRequestAttributes (0..1)
+
+type TradeAggregationRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeAggregationRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg159">
+
+    tradeAggregationRequestElements TradeAggregationRequestElements (1..1)
+    tradeAggregationRequestAttributes TradeAggregationRequestAttributes (0..1)
+
+type TradeAggregationReportElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type TradeAggregationReportAttributes:
+
+    tradeAggregationReportAttributes TradeAggregationReportAttributes (0..1)
+
+type TradeAggregationReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradeAggregationReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg160">
+
+    tradeAggregationReportElements TradeAggregationReportElements (1..1)
+    tradeAggregationReportAttributes TradeAggregationReportAttributes (0..1)

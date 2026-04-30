@@ -1,0 +1,209 @@
+namespace cdm.fixml.listorders.base : < "fixml definition" >
+version "${project.version}"
+
+type NewOrdList extends NewOrderList_message_t:
+
+type ListCxlReq extends ListCancelRequest_message_t:
+
+type ListExct extends ListExecute_message_t:
+
+type ListStatReq extends ListStatusRequest_message_t:
+
+type ListStat extends ListStatus_message_t:
+
+type BidReq extends BidRequest_message_t:
+
+type BidRsp extends BidResponse_message_t:
+
+type ListStrkPx extends ListStrikePrice_message_t:
+
+type NewOrderListElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    ord ListOrdGrp_Block_t (1..*)
+
+type NewOrderListAttributes:
+
+    newOrderListAttributes NewOrderListAttributes (0..1)
+
+type NewOrderList_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NewOrderList can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg15">
+
+    newOrderListElements NewOrderListElements (1..1)
+    newOrderListAttributes NewOrderListAttributes (0..1)
+
+type ListCancelRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type ListCancelRequestAttributes:
+
+    listCancelRequestAttributes ListCancelRequestAttributes (0..1)
+
+type ListCancelRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ListCancelRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg20">
+
+    listCancelRequestElements ListCancelRequestElements (1..1)
+    listCancelRequestAttributes ListCancelRequestAttributes (0..1)
+
+type ListExecuteElements:
+
+type ListExecuteAttributes:
+
+    listExecuteAttributes ListExecuteAttributes (0..1)
+
+type ListExecute_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ListExecute can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg21">
+
+    listExecuteElements ListExecuteElements (1..1)
+    listExecuteAttributes ListExecuteAttributes (0..1)
+
+type ListStatusRequestElements:
+
+type ListStatusRequestAttributes:
+
+    listStatusRequestAttributes ListStatusRequestAttributes (0..1)
+
+type ListStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ListStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg22">
+
+    listStatusRequestElements ListStatusRequestElements (1..1)
+    listStatusRequestAttributes ListStatusRequestAttributes (0..1)
+
+type ListStatusElements:
+
+    listStat OrdListStatGrp_Block_t (1..*)
+
+type ListStatusAttributes:
+
+    listStatusAttributes ListStatusAttributes (0..1)
+
+type ListStatus_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ListStatus can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg23">
+
+    listStatusElements ListStatusElements (1..1)
+    listStatusAttributes ListStatusAttributes (0..1)
+
+type BidRequestElements:
+
+    descReq BidDescReqGrp_Block_t (0..*)
+    compReq BidCompReqGrp_Block_t (0..*)
+
+type BidRequestAttributes:
+
+    bidRequestAttributes BidRequestAttributes (0..1)
+
+type BidRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"BidRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg44">
+
+    bidRequestElements BidRequestElements (1..1)
+    bidRequestAttributes BidRequestAttributes (0..1)
+
+type BidResponseElements:
+
+    compRsp BidCompRspGrp_Block_t (1..*)
+
+type BidResponseAttributes:
+
+    bidResponseAttributes BidResponseAttributes (0..1)
+
+type BidResponse_message_t extends cdm.fixml.components.base.Abstract_message_t: <"BidResponse can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg45">
+
+    bidResponseElements BidResponseElements (1..1)
+    bidResponseAttributes BidResponseAttributes (0..1)
+
+type ListStrikePriceElements:
+
+    strkPX InstrmtStrkPxGrp_Block_t (1..*)
+
+type ListStrikePriceAttributes:
+
+    listStrikePriceAttributes ListStrikePriceAttributes (0..1)
+
+type ListStrikePrice_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ListStrikePrice can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg46">
+
+    listStrikePriceElements ListStrikePriceElements (1..1)
+    listStrikePriceAttributes ListStrikePriceAttributes (0..1)
+
+type BidCompReqGrpElements:
+
+type BidCompReqGrpAttributes:
+
+    bidCompReqGrpAttributes BidCompReqGrpAttributes (0..1)
+
+type BidCompReqGrp_Block_t:
+
+    bidCompReqGrpElements BidCompReqGrpElements (1..1)
+    bidCompReqGrpAttributes BidCompReqGrpAttributes (0..1)
+
+type BidCompRspGrpElements:
+
+    comm cdm.fixml.components.base.CommissionData_Block_t (1..1)
+
+type BidCompRspGrpAttributes:
+
+    bidCompRspGrpAttributes BidCompRspGrpAttributes (0..1)
+
+type BidCompRspGrp_Block_t:
+
+    bidCompRspGrpElements BidCompRspGrpElements (1..1)
+    bidCompRspGrpAttributes BidCompRspGrpAttributes (0..1)
+
+type BidDescReqGrpElements:
+
+type BidDescReqGrpAttributes:
+
+    bidDescReqGrpAttributes BidDescReqGrpAttributes (0..1)
+
+type BidDescReqGrp_Block_t:
+
+    bidDescReqGrpElements BidDescReqGrpElements (1..1)
+    bidDescReqGrpAttributes BidDescReqGrpAttributes (0..1)
+
+type InstrmtStrkPxGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type InstrmtStrkPxGrpAttributes:
+
+    instrmtStrkPxGrpAttributes InstrmtStrkPxGrpAttributes (0..1)
+
+type InstrmtStrkPxGrp_Block_t:
+
+    instrmtStrkPxGrpElements InstrmtStrkPxGrpElements (1..1)
+    instrmtStrkPxGrpAttributes InstrmtStrkPxGrpAttributes (0..1)
+
+type ListOrdGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    preAll cdm.fixml.components.base.PreAllocGrp_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (1..1)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+
+type ListOrdGrpAttributes:
+
+    listOrdGrpAttributes ListOrdGrpAttributes (0..1)
+
+type ListOrdGrp_Block_t:
+
+    listOrdGrpElements ListOrdGrpElements (1..1)
+    listOrdGrpAttributes ListOrdGrpAttributes (0..1)
+
+type OrdListStatGrpElements:
+
+type OrdListStatGrpAttributes:
+
+    ordListStatGrpAttributes OrdListStatGrpAttributes (0..1)
+
+type OrdListStatGrp_Block_t:
+
+    ordListStatGrpElements OrdListStatGrpElements (1..1)
+    ordListStatGrpAttributes OrdListStatGrpAttributes (0..1)

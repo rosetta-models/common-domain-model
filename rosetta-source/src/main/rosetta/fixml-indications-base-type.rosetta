@@ -1,0 +1,94 @@
+namespace cdm.fixml.indications.base : < "fixml definition" >
+version "${project.version}"
+
+type IOI extends IOI_message_t:
+
+type Adv extends Advertisement_message_t:
+
+type CrssReq extends CrossRequest_message_t:
+
+type CrssReqAck extends CrossRequestAck_message_t:
+
+type IOIElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    ioi cdm.fixml.components.base.InstrmtLegIOIGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    qual IOIQualGrp_Block_t (0..*)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    reltvVal cdm.fixml.components.base.RelativeValueGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+
+type IOIAttributes:
+
+    ioiAttributes IOIAttributes (0..1)
+
+type IOI_message_t extends cdm.fixml.components.base.Abstract_message_t: <"IOI can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg7">
+
+    ioiElements IOIElements (1..1)
+    ioiAttributes IOIAttributes (0..1)
+
+type AdvertisementElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+
+type AdvertisementAttributes:
+
+    advertisementAttributes AdvertisementAttributes (0..1)
+
+type Advertisement_message_t extends cdm.fixml.components.base.Abstract_message_t: <"Advertisement can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg8">
+
+    advertisementElements AdvertisementElements (1..1)
+    advertisementAttributes AdvertisementAttributes (0..1)
+
+type CrossRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+
+type CrossRequestAttributes:
+
+    crossRequestAttributes CrossRequestAttributes (0..1)
+
+type CrossRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"CrossRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg155">
+
+    crossRequestElements CrossRequestElements (1..1)
+    crossRequestAttributes CrossRequestAttributes (0..1)
+
+type CrossRequestAckElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+
+type CrossRequestAckAttributes:
+
+    crossRequestAckAttributes CrossRequestAckAttributes (0..1)
+
+type CrossRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"CrossRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg156">
+
+    crossRequestAckElements CrossRequestAckElements (1..1)
+    crossRequestAckAttributes CrossRequestAckAttributes (0..1)
+
+type IOIQualGrpElements:
+
+type IOIQualGrpAttributes:
+
+    ioiQualGrpAttributes IOIQualGrpAttributes (0..1)
+
+type IOIQualGrp_Block_t:
+
+    ioiQualGrpElements IOIQualGrpElements (1..1)
+    ioiQualGrpAttributes IOIQualGrpAttributes (0..1)

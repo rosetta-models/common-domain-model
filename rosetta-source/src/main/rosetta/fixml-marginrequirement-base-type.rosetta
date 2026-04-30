@@ -1,0 +1,66 @@
+namespace cdm.fixml.marginrequirement.base : < "fixml definition" >
+version "${project.version}"
+
+type MgnReqmtInq extends MarginRequirementInquiry_message_t:
+
+type MgnReqmtInqAck extends MarginRequirementInquiryAck_message_t:
+
+type MgnReqmtRpt extends MarginRequirementReport_message_t:
+
+type MarginRequirementInquiryElements:
+
+    mgnReqmtInqQual MarginReqmtInqQualGrp_Block_t (1..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type MarginRequirementInquiryAttributes:
+
+    marginRequirementInquiryAttributes MarginRequirementInquiryAttributes (0..1)
+
+type MarginRequirementInquiry_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarginRequirementInquiry can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg119">
+
+    marginRequirementInquiryElements MarginRequirementInquiryElements (1..1)
+    marginRequirementInquiryAttributes MarginRequirementInquiryAttributes (0..1)
+
+type MarginRequirementInquiryAckElements:
+
+    mgnReqmtInqQual MarginReqmtInqQualGrp_Block_t (1..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type MarginRequirementInquiryAckAttributes:
+
+    marginRequirementInquiryAckAttributes MarginRequirementInquiryAckAttributes (0..1)
+
+type MarginRequirementInquiryAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarginRequirementInquiryAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg120">
+
+    marginRequirementInquiryAckElements MarginRequirementInquiryAckElements (1..1)
+    marginRequirementInquiryAckAttributes MarginRequirementInquiryAckAttributes (0..1)
+
+type MarginRequirementReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    mgnAmt cdm.fixml.components.base.MarginAmount_Block_t (1..*)
+
+type MarginRequirementReportAttributes:
+
+    marginRequirementReportAttributes MarginRequirementReportAttributes (0..1)
+
+type MarginRequirementReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarginRequirementReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg121">
+
+    marginRequirementReportElements MarginRequirementReportElements (1..1)
+    marginRequirementReportAttributes MarginRequirementReportAttributes (0..1)
+
+type MarginReqmtInqQualGrpElements:
+
+type MarginReqmtInqQualGrpAttributes:
+
+    marginReqmtInqQualGrpAttributes MarginReqmtInqQualGrpAttributes (0..1)
+
+type MarginReqmtInqQualGrp_Block_t:
+
+    marginReqmtInqQualGrpElements MarginReqmtInqQualGrpElements (1..1)
+    marginReqmtInqQualGrpAttributes MarginReqmtInqQualGrpAttributes (0..1)

@@ -1,0 +1,45 @@
+namespace cdm.fixml.accountreporting.base : < "fixml definition" >
+version "${project.version}"
+
+type AcctSumRpt extends AccountSummaryReport_message_t:
+
+type AccountSummaryReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    settlAmt SettlementAmountGrp_Block_t (0..*)
+    mgnAmt cdm.fixml.components.base.MarginAmount_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    collAmt cdm.fixml.components.base.CollateralAmountGrp_Block_t (0..*)
+    payCol PayCollectGrp_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+
+type AccountSummaryReportAttributes:
+
+    accountSummaryReportAttributes AccountSummaryReportAttributes (0..1)
+
+type AccountSummaryReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AccountSummaryReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg127">
+
+    accountSummaryReportElements AccountSummaryReportElements (1..1)
+    accountSummaryReportAttributes AccountSummaryReportAttributes (0..1)
+
+type SettlementAmountGrpElements:
+
+type SettlementAmountGrpAttributes:
+
+    settlementAmountGrpAttributes SettlementAmountGrpAttributes (0..1)
+
+type SettlementAmountGrp_Block_t:
+
+    settlementAmountGrpElements SettlementAmountGrpElements (1..1)
+    settlementAmountGrpAttributes SettlementAmountGrpAttributes (0..1)
+
+type PayCollectGrpElements:
+
+type PayCollectGrpAttributes:
+
+    payCollectGrpAttributes PayCollectGrpAttributes (0..1)
+
+type PayCollectGrp_Block_t:
+
+    payCollectGrpElements PayCollectGrpElements (1..1)
+    payCollectGrpAttributes PayCollectGrpAttributes (0..1)

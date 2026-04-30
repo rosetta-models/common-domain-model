@@ -1,0 +1,418 @@
+namespace cdm.fixml.quotation.base : < "fixml definition" >
+version "${project.version}"
+
+type QuotReq extends QuoteRequest_message_t:
+
+type Quot extends Quote_message_t:
+
+type QuotCxl extends QuoteCancel_message_t:
+
+type QuotStatReq extends QuoteStatusRequest_message_t:
+
+type MassQuotAck extends MassQuoteAck_message_t:
+
+type MassQuot extends MassQuote_message_t:
+
+type QuotReqRej extends QuoteRequestReject_message_t:
+
+type RFQReq extends RFQRequest_message_t:
+
+type QuotStatRpt extends QuoteStatusReport_message_t:
+
+type QuotRsp extends QuoteResponse_message_t:
+
+type QuotAck extends QuoteAck_message_t:
+
+type QuoteRequestElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    quotReq QuotReqGrp_Block_t (1..*)
+
+type QuoteRequestAttributes:
+
+    quoteRequestAttributes QuoteRequestAttributes (0..1)
+
+type QuoteRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg26">
+
+    quoteRequestElements QuoteRequestElements (1..1)
+    quoteRequestAttributes QuoteRequestAttributes (0..1)
+
+type QuoteElements:
+
+    quotQual QuotQualGrp_Block_t (0..*)
+    qteAttrib cdm.fixml.components.base.QuoteAttributeGrp_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    quot LegQuotGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    reltvVal cdm.fixml.components.base.RelativeValueGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+
+type QuoteAttributes:
+
+    quoteAttributes QuoteAttributes (0..1)
+
+type Quote_message_t extends cdm.fixml.components.base.Abstract_message_t: <"Quote can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg27">
+
+    quoteElements QuoteElements (1..1)
+    quoteAttributes QuoteAttributes (0..1)
+
+type QuoteCancelElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    quotCxlEntry QuotCxlEntriesGrp_Block_t (0..*)
+
+type QuoteCancelAttributes:
+
+    quoteCancelAttributes QuoteCancelAttributes (0..1)
+
+type QuoteCancel_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteCancel can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg33">
+
+    quoteCancelElements QuoteCancelElements (1..1)
+    quoteCancelAttributes QuoteCancelAttributes (0..1)
+
+type QuoteStatusRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+
+type QuoteStatusRequestAttributes:
+
+    quoteStatusRequestAttributes QuoteStatusRequestAttributes (0..1)
+
+type QuoteStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg34">
+
+    quoteStatusRequestElements QuoteStatusRequestElements (1..1)
+    quoteStatusRequestAttributes QuoteStatusRequestAttributes (0..1)
+
+type MassQuoteAckElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    quotSetAck QuotSetAckGrp_Block_t (0..*)
+    thrttlRsp cdm.fixml.components.base.ThrottleResponse_Block_t (0..1)
+
+type MassQuoteAckAttributes:
+
+    massQuoteAckAttributes MassQuoteAckAttributes (0..1)
+
+type MassQuoteAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MassQuoteAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg35">
+
+    massQuoteAckElements MassQuoteAckElements (1..1)
+    massQuoteAckAttributes MassQuoteAckAttributes (0..1)
+
+type MassQuoteElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    quotSet QuotSetGrp_Block_t (1..*)
+
+type MassQuoteAttributes:
+
+    massQuoteAttributes MassQuoteAttributes (0..1)
+
+type MassQuote_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MassQuote can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg42">
+
+    massQuoteElements MassQuoteElements (1..1)
+    massQuoteAttributes MassQuoteAttributes (0..1)
+
+type QuoteRequestRejectElements:
+
+    pty cdm.fixml.components.base.RootParties_Block_t (0..*)
+    quotReqRej QuotReqRjctGrp_Block_t (1..*)
+
+type QuoteRequestRejectAttributes:
+
+    quoteRequestRejectAttributes QuoteRequestRejectAttributes (0..1)
+
+type QuoteRequestReject_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteRequestReject can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg66">
+
+    quoteRequestRejectElements QuoteRequestRejectElements (1..1)
+    quoteRequestRejectAttributes QuoteRequestRejectAttributes (0..1)
+
+type RFQRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    rfqReq RFQReqGrp_Block_t (1..*)
+
+type RFQRequestAttributes:
+
+    rfqRequestAttributes RFQRequestAttributes (0..1)
+
+type RFQRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"RFQRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg67">
+
+    rfqRequestElements RFQRequestElements (1..1)
+    rfqRequestAttributes RFQRequestAttributes (0..1)
+
+type QuoteStatusReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    quoteStat LegQuotStatGrp_Block_t (0..*)
+    quotQual QuotQualGrp_Block_t (0..*)
+    qteAttrib cdm.fixml.components.base.QuoteAttributeGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    thrttlRsp cdm.fixml.components.base.ThrottleResponse_Block_t (0..1)
+
+type QuoteStatusReportAttributes:
+
+    quoteStatusReportAttributes QuoteStatusReportAttributes (0..1)
+
+type QuoteStatusReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteStatusReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg68">
+
+    quoteStatusReportElements QuoteStatusReportElements (1..1)
+    quoteStatusReportAttributes QuoteStatusReportAttributes (0..1)
+
+type QuoteResponseElements:
+
+    quotQual QuotQualGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    quot LegQuotGrp_Block_t (0..*)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+
+type QuoteResponseAttributes:
+
+    quoteResponseAttributes QuoteResponseAttributes (0..1)
+
+type QuoteResponse_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteResponse can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg69">
+
+    quoteResponseElements QuoteResponseElements (1..1)
+    quoteResponseAttributes QuoteResponseAttributes (0..1)
+
+type QuoteAckElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    qteAttrib cdm.fixml.components.base.QuoteAttributeGrp_Block_t (0..*)
+
+type QuoteAckAttributes:
+
+    quoteAckAttributes QuoteAckAttributes (0..1)
+
+type QuoteAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"QuoteAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg133">
+
+    quoteAckElements QuoteAckElements (1..1)
+    quoteAckAttributes QuoteAckAttributes (0..1)
+
+type LegQuotGrpElements:
+
+    leg cdm.fixml.components.base.InstrumentLeg_Block_t (0..1)
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    bnchmkCurve cdm.fixml.components.base.LegBenchmarkCurveData_Block_t (0..1)
+
+type LegQuotGrpAttributes:
+
+    legQuotGrpAttributes LegQuotGrpAttributes (0..1)
+
+type LegQuotGrp_Block_t:
+
+    legQuotGrpElements LegQuotGrpElements (1..1)
+    legQuotGrpAttributes LegQuotGrpAttributes (0..1)
+
+type LegQuotStatGrpElements:
+
+    leg cdm.fixml.components.base.InstrumentLeg_Block_t (0..1)
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type LegQuotStatGrpAttributes:
+
+    legQuotStatGrpAttributes LegQuotStatGrpAttributes (0..1)
+
+type LegQuotStatGrp_Block_t:
+
+    legQuotStatGrpElements LegQuotStatGrpElements (1..1)
+    legQuotStatGrpAttributes LegQuotStatGrpAttributes (0..1)
+
+type QuotCxlEntriesGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type QuotCxlEntriesGrpAttributes:
+
+    quotCxlEntriesGrpAttributes QuotCxlEntriesGrpAttributes (0..1)
+
+type QuotCxlEntriesGrp_Block_t:
+
+    quotCxlEntriesGrpElements QuotCxlEntriesGrpElements (1..1)
+    quotCxlEntriesGrpAttributes QuotCxlEntriesGrpAttributes (0..1)
+
+type QuotEntryAckGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type QuotEntryAckGrpAttributes:
+
+    quotEntryAckGrpAttributes QuotEntryAckGrpAttributes (0..1)
+
+type QuotEntryAckGrp_Block_t:
+
+    quotEntryAckGrpElements QuotEntryAckGrpElements (1..1)
+    quotEntryAckGrpAttributes QuotEntryAckGrpAttributes (0..1)
+
+type QuotEntryGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type QuotEntryGrpAttributes:
+
+    quotEntryGrpAttributes QuotEntryGrpAttributes (0..1)
+
+type QuotEntryGrp_Block_t:
+
+    quotEntryGrpElements QuotEntryGrpElements (1..1)
+    quotEntryGrpAttributes QuotEntryGrpAttributes (0..1)
+
+type QuotQualGrpElements:
+
+type QuotQualGrpAttributes:
+
+    quotQualGrpAttributes QuotQualGrpAttributes (0..1)
+
+type QuotQualGrp_Block_t:
+
+    quotQualGrpElements QuotQualGrpElements (1..1)
+    quotQualGrpAttributes QuotQualGrpAttributes (0..1)
+
+type QuotReqGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    leg QuotReqLegsGrp_Block_t (0..*)
+    quotQual QuotQualGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type QuotReqGrpAttributes:
+
+    quotReqGrpAttributes QuotReqGrpAttributes (0..1)
+
+type QuotReqGrp_Block_t:
+
+    quotReqGrpElements QuotReqGrpElements (1..1)
+    quotReqGrpAttributes QuotReqGrpAttributes (0..1)
+
+type QuotReqLegsGrpElements:
+
+    leg cdm.fixml.components.base.InstrumentLeg_Block_t (0..1)
+    stip cdm.fixml.components.base.LegStipulations_Block_t (0..*)
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+    bnchmkCurve cdm.fixml.components.base.LegBenchmarkCurveData_Block_t (0..1)
+
+type QuotReqLegsGrpAttributes:
+
+    quotReqLegsGrpAttributes QuotReqLegsGrpAttributes (0..1)
+
+type QuotReqLegsGrp_Block_t:
+
+    quotReqLegsGrpElements QuotReqLegsGrpElements (1..1)
+    quotReqLegsGrpAttributes QuotReqLegsGrpAttributes (0..1)
+
+type QuotReqRjctGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    leg QuotReqLegsGrp_Block_t (0..*)
+    quotQual QuotQualGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type QuotReqRjctGrpAttributes:
+
+    quotReqRjctGrpAttributes QuotReqRjctGrpAttributes (0..1)
+
+type QuotReqRjctGrp_Block_t:
+
+    quotReqRjctGrpElements QuotReqRjctGrpElements (1..1)
+    quotReqRjctGrpAttributes QuotReqRjctGrpAttributes (0..1)
+
+type QuotSetAckGrpElements:
+
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    quotEntryAck QuotEntryAckGrp_Block_t (0..*)
+
+type QuotSetAckGrpAttributes:
+
+    quotSetAckGrpAttributes QuotSetAckGrpAttributes (0..1)
+
+type QuotSetAckGrp_Block_t:
+
+    quotSetAckGrpElements QuotSetAckGrpElements (1..1)
+    quotSetAckGrpAttributes QuotSetAckGrpAttributes (0..1)
+
+type QuotSetGrpElements:
+
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    quotEntry QuotEntryGrp_Block_t (1..*)
+
+type QuotSetGrpAttributes:
+
+    quotSetGrpAttributes QuotSetGrpAttributes (0..1)
+
+type QuotSetGrp_Block_t:
+
+    quotSetGrpElements QuotSetGrpElements (1..1)
+    quotSetGrpAttributes QuotSetGrpAttributes (0..1)
+
+type RFQReqGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+
+type RFQReqGrpAttributes:
+
+    rfqReqGrpAttributes RFQReqGrpAttributes (0..1)
+
+type RFQReqGrp_Block_t:
+
+    rfqReqGrpElements RFQReqGrpElements (1..1)
+    rfqReqGrpAttributes RFQReqGrpAttributes (0..1)

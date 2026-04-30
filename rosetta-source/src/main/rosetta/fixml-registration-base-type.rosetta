@@ -1,0 +1,58 @@
+namespace cdm.fixml.registration.base : < "fixml definition" >
+version "${project.version}"
+
+type RgstInstrctns extends RegistrationInstructions_message_t:
+
+type RgstInstrctnsRsp extends RegistrationInstructionsResponse_message_t:
+
+type RegistrationInstructionsElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    rgDtl RgstDtlsGrp_Block_t (0..*)
+    rgDtlInst RgstDistInstGrp_Block_t (0..*)
+
+type RegistrationInstructionsAttributes:
+
+    registrationInstructionsAttributes RegistrationInstructionsAttributes (0..1)
+
+type RegistrationInstructions_message_t extends cdm.fixml.components.base.Abstract_message_t: <"RegistrationInstructions can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg48">
+
+    registrationInstructionsElements RegistrationInstructionsElements (1..1)
+    registrationInstructionsAttributes RegistrationInstructionsAttributes (0..1)
+
+type RegistrationInstructionsResponseElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type RegistrationInstructionsResponseAttributes:
+
+    registrationInstructionsResponseAttributes RegistrationInstructionsResponseAttributes (0..1)
+
+type RegistrationInstructionsResponse_message_t extends cdm.fixml.components.base.Abstract_message_t: <"RegistrationInstructionsResponse can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg49">
+
+    registrationInstructionsResponseElements RegistrationInstructionsResponseElements (1..1)
+    registrationInstructionsResponseAttributes RegistrationInstructionsResponseAttributes (0..1)
+
+type RgstDistInstGrpElements:
+
+type RgstDistInstGrpAttributes:
+
+    rgstDistInstGrpAttributes RgstDistInstGrpAttributes (0..1)
+
+type RgstDistInstGrp_Block_t:
+
+    rgstDistInstGrpElements RgstDistInstGrpElements (1..1)
+    rgstDistInstGrpAttributes RgstDistInstGrpAttributes (0..1)
+
+type RgstDtlsGrpElements:
+
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type RgstDtlsGrpAttributes:
+
+    rgstDtlsGrpAttributes RgstDtlsGrpAttributes (0..1)
+
+type RgstDtlsGrp_Block_t:
+
+    rgstDtlsGrpElements RgstDtlsGrpElements (1..1)
+    rgstDtlsGrpAttributes RgstDtlsGrpAttributes (0..1)

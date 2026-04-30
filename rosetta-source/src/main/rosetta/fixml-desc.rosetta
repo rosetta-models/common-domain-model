@@ -1,0 +1,8 @@
+namespace cdm.fixml: <"fixml definition">
+version "${project.version}"
+
+body Source FIXTradingCommunity
+
+corpus Schema "FIXML" FIXML
+
+segment version

@@ -1,0 +1,54 @@
+namespace cdm.fixml.newsevents.base : < "fixml definition" >
+version "${project.version}"
+
+type News extends News_message_t:
+
+type Email extends Email_message_t:
+
+type NewsElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    refs NewsRefGrp_Block_t (0..*)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+    inst cdm.fixml.components.base.InstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    txtLn cdm.fixml.components.base.LinesOfTextGrp_Block_t (1..*)
+
+type NewsAttributes:
+
+    newsAttributes NewsAttributes (0..1)
+
+type News_message_t extends cdm.fixml.components.base.Abstract_message_t: <"News can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg12">
+
+    newsElements NewsElements (1..1)
+    newsAttributes NewsAttributes (0..1)
+
+type EmailElements:
+
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+    inst cdm.fixml.components.base.InstrmtGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    txtLn cdm.fixml.components.base.LinesOfTextGrp_Block_t (1..*)
+    attchmnt cdm.fixml.components.base.AttachmentGrp_Block_t (0..*)
+
+type EmailAttributes:
+
+    emailAttributes EmailAttributes (0..1)
+
+type Email_message_t extends cdm.fixml.components.base.Abstract_message_t: <"Email can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg13">
+
+    emailElements EmailElements (1..1)
+    emailAttributes EmailAttributes (0..1)
+
+type NewsRefGrpElements:
+
+type NewsRefGrpAttributes:
+
+    newsRefGrpAttributes NewsRefGrpAttributes (0..1)
+
+type NewsRefGrp_Block_t:
+
+    newsRefGrpElements NewsRefGrpElements (1..1)
+    newsRefGrpAttributes NewsRefGrpAttributes (0..1)

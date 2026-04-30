@@ -1,0 +1,489 @@
+namespace cdm.fixml.partiesreference.base : < "fixml definition" >
+version "${project.version}"
+
+type PtyDetlListReq extends PartyDetailsListRequest_message_t:
+
+type PtyDetlListRpt extends PartyDetailsListReport_message_t:
+
+type PtyDetlListUpd extends PartyDetailsListUpdateReport_message_t:
+
+type PtyRiskLmtReq extends PartyRiskLimitsRequest_message_t:
+
+type PtyRiskLmtRpt extends PartyRiskLimitsReport_message_t:
+
+type PtyRiskLmtUpd extends PartyRiskLimitsUpdateReport_message_t:
+
+type PtyRiskLmtDefReq extends PartyRiskLimitsDefinitionRequest_message_t:
+
+type PtyRiskLmtDefReqAck extends PartyRiskLimitsDefinitionRequestAck_message_t:
+
+type PtyEntlmntReq extends PartyEntitlementsRequest_message_t:
+
+type PtyEntlmntRpt extends PartyEntitlementsReport_message_t:
+
+type PtyDetlDefReq extends PartyDetailsDefinitionRequest_message_t:
+
+type PtyDetlDefReqAck extends PartyDetailsDefinitionRequestAck_message_t:
+
+type PtyEntlmntUpd extends PartyEntitlementsUpdateReport_message_t:
+
+type PtyEntlmntDefReq extends PartyEntitlementsDefinitionRequest_message_t:
+
+type PtyEntlmntDefReqAck extends PartyEntitlementsDefinitionRequestAck_message_t:
+
+type PtyRiskLmtRptAck extends PartyRiskLimitsReportAck_message_t:
+
+type PartyDetailsListRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    reqR RequestedPartyRoleGrp_Block_t (0..*)
+    rltnshp cdm.fixml.components.base.PartyRelationshipGrp_Block_t (0..*)
+
+type PartyDetailsListRequestAttributes:
+
+    partyDetailsListRequestAttributes PartyDetailsListRequestAttributes (0..1)
+
+type PartyDetailsListRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyDetailsListRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg117">
+
+    partyDetailsListRequestElements PartyDetailsListRequestElements (1..1)
+    partyDetailsListRequestAttributes PartyDetailsListRequestAttributes (0..1)
+
+type PartyDetailsListReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+
+type PartyDetailsListReportAttributes:
+
+    partyDetailsListReportAttributes PartyDetailsListReportAttributes (0..1)
+
+type PartyDetailsListReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyDetailsListReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg118">
+
+    partyDetailsListReportElements PartyDetailsListReportElements (1..1)
+    partyDetailsListReportAttributes PartyDetailsListReportAttributes (0..1)
+
+type PartyDetailsListUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyDetlUpd PartyDetailsUpdateGrp_Block_t (0..*)
+
+type PartyDetailsListUpdateReportAttributes:
+
+    partyDetailsListUpdateReportAttributes PartyDetailsListUpdateReportAttributes (0..1)
+
+type PartyDetailsListUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyDetailsListUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg122">
+
+    partyDetailsListUpdateReportElements PartyDetailsListUpdateReportElements (1..1)
+    partyDetailsListUpdateReportAttributes PartyDetailsListUpdateReportAttributes (0..1)
+
+type PartyRiskLimitsRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    reqR RequestedPartyRoleGrp_Block_t (0..*)
+    reqRiskLmtTyp RequestedRiskLimitTypesGrp_Block_t (0..*)
+    instrmtScope RiskInstrumentScopeGrp_Block_t (0..*)
+
+type PartyRiskLimitsRequestAttributes:
+
+    partyRiskLimitsRequestAttributes PartyRiskLimitsRequestAttributes (0..1)
+
+type PartyRiskLimitsRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg123">
+
+    partyRiskLimitsRequestElements PartyRiskLimitsRequestElements (1..1)
+    partyRiskLimitsRequestAttributes PartyRiskLimitsRequestAttributes (0..1)
+
+type PartyRiskLimitsReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    ptyRiskLmt PartyRiskLimitsGrp_Block_t (0..*)
+
+type PartyRiskLimitsReportAttributes:
+
+    partyRiskLimitsReportAttributes PartyRiskLimitsReportAttributes (0..1)
+
+type PartyRiskLimitsReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg124">
+
+    partyRiskLimitsReportElements PartyRiskLimitsReportElements (1..1)
+    partyRiskLimitsReportAttributes PartyRiskLimitsReportAttributes (0..1)
+
+type PartyRiskLimitsUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyRiskLmtUpdt PartyRiskLimitsUpdateGrp_Block_t (0..*)
+
+type PartyRiskLimitsUpdateReportAttributes:
+
+    partyRiskLimitsUpdateReportAttributes PartyRiskLimitsUpdateReportAttributes (0..1)
+
+type PartyRiskLimitsUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg128">
+
+    partyRiskLimitsUpdateReportElements PartyRiskLimitsUpdateReportElements (1..1)
+    partyRiskLimitsUpdateReportAttributes PartyRiskLimitsUpdateReportAttributes (0..1)
+
+type PartyRiskLimitsDefinitionRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyRiskLmtUpdt PartyRiskLimitsUpdateGrp_Block_t (0..*)
+
+type PartyRiskLimitsDefinitionRequestAttributes:
+
+    partyRiskLimitsDefinitionRequestAttributes PartyRiskLimitsDefinitionRequestAttributes (0..1)
+
+type PartyRiskLimitsDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg129">
+
+    partyRiskLimitsDefinitionRequestElements PartyRiskLimitsDefinitionRequestElements (1..1)
+    partyRiskLimitsDefinitionRequestAttributes PartyRiskLimitsDefinitionRequestAttributes (0..1)
+
+type PartyRiskLimitsDefinitionRequestAckElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyRiskLmtAck PartyRiskLimitsAckGrp_Block_t (0..*)
+
+type PartyRiskLimitsDefinitionRequestAckAttributes:
+
+    partyRiskLimitsDefinitionRequestAckAttributes PartyRiskLimitsDefinitionRequestAckAttributes (0..1)
+
+type PartyRiskLimitsDefinitionRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsDefinitionRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg130">
+
+    partyRiskLimitsDefinitionRequestAckElements PartyRiskLimitsDefinitionRequestAckElements (1..1)
+    partyRiskLimitsDefinitionRequestAckAttributes PartyRiskLimitsDefinitionRequestAckAttributes (0..1)
+
+type PartyEntitlementsRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    reqR RequestedPartyRoleGrp_Block_t (0..*)
+    entlmntTyp EntitlementTypeGrp_Block_t (0..*)
+    instrmtScope cdm.fixml.components.base.InstrumentScopeGrp_Block_t (0..*)
+    mktSegScope cdm.fixml.components.base.MarketSegmentScopeGrp_Block_t (0..*)
+
+type PartyEntitlementsRequestAttributes:
+
+    partyEntitlementsRequestAttributes PartyEntitlementsRequestAttributes (0..1)
+
+type PartyEntitlementsRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyEntitlementsRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg131">
+
+    partyEntitlementsRequestElements PartyEntitlementsRequestElements (1..1)
+    partyEntitlementsRequestAttributes PartyEntitlementsRequestAttributes (0..1)
+
+type PartyEntitlementsReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    ptyEntlmnt PartyEntitlementGrp_Block_t (0..*)
+
+type PartyEntitlementsReportAttributes:
+
+    partyEntitlementsReportAttributes PartyEntitlementsReportAttributes (0..1)
+
+type PartyEntitlementsReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyEntitlementsReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg132">
+
+    partyEntitlementsReportElements PartyEntitlementsReportElements (1..1)
+    partyEntitlementsReportAttributes PartyEntitlementsReportAttributes (0..1)
+
+type PartyDetailsDefinitionRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyDetlUpd PartyDetailsUpdateGrp_Block_t (1..*)
+
+type PartyDetailsDefinitionRequestAttributes:
+
+    partyDetailsDefinitionRequestAttributes PartyDetailsDefinitionRequestAttributes (0..1)
+
+type PartyDetailsDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyDetailsDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg134">
+
+    partyDetailsDefinitionRequestElements PartyDetailsDefinitionRequestElements (1..1)
+    partyDetailsDefinitionRequestAttributes PartyDetailsDefinitionRequestAttributes (0..1)
+
+type PartyDetailsDefinitionRequestAckElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyDetlAck PartyDetailAckGrp_Block_t (0..*)
+
+type PartyDetailsDefinitionRequestAckAttributes:
+
+    partyDetailsDefinitionRequestAckAttributes PartyDetailsDefinitionRequestAckAttributes (0..1)
+
+type PartyDetailsDefinitionRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyDetailsDefinitionRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg135">
+
+    partyDetailsDefinitionRequestAckElements PartyDetailsDefinitionRequestAckElements (1..1)
+    partyDetailsDefinitionRequestAckAttributes PartyDetailsDefinitionRequestAckAttributes (0..1)
+
+type PartyEntitlementsUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyEntlmntUpd PartyEntitlementUpdateGrp_Block_t (1..*)
+
+type PartyEntitlementsUpdateReportAttributes:
+
+    partyEntitlementsUpdateReportAttributes PartyEntitlementsUpdateReportAttributes (0..1)
+
+type PartyEntitlementsUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyEntitlementsUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg136">
+
+    partyEntitlementsUpdateReportElements PartyEntitlementsUpdateReportElements (1..1)
+    partyEntitlementsUpdateReportAttributes PartyEntitlementsUpdateReportAttributes (0..1)
+
+type PartyEntitlementsDefinitionRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyEntlmntUpd PartyEntitlementUpdateGrp_Block_t (1..*)
+
+type PartyEntitlementsDefinitionRequestAttributes:
+
+    partyEntitlementsDefinitionRequestAttributes PartyEntitlementsDefinitionRequestAttributes (0..1)
+
+type PartyEntitlementsDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyEntitlementsDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg137">
+
+    partyEntitlementsDefinitionRequestElements PartyEntitlementsDefinitionRequestElements (1..1)
+    partyEntitlementsDefinitionRequestAttributes PartyEntitlementsDefinitionRequestAttributes (0..1)
+
+type PartyEntitlementsDefinitionRequestAckElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    ptyEntlmntAck PartyEntitlementAckGrp_Block_t (0..*)
+
+type PartyEntitlementsDefinitionRequestAckAttributes:
+
+    partyEntitlementsDefinitionRequestAckAttributes PartyEntitlementsDefinitionRequestAckAttributes (0..1)
+
+type PartyEntitlementsDefinitionRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyEntitlementsDefinitionRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg138">
+
+    partyEntitlementsDefinitionRequestAckElements PartyEntitlementsDefinitionRequestAckElements (1..1)
+    partyEntitlementsDefinitionRequestAckAttributes PartyEntitlementsDefinitionRequestAckAttributes (0..1)
+
+type PartyRiskLimitsReportAckElements:
+
+    ptyRiskLmtUpdt PartyRiskLimitsUpdateGrp_Block_t (0..*)
+
+type PartyRiskLimitsReportAckAttributes:
+
+    partyRiskLimitsReportAckAttributes PartyRiskLimitsReportAckAttributes (0..1)
+
+type PartyRiskLimitsReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitsReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg141">
+
+    partyRiskLimitsReportAckElements PartyRiskLimitsReportAckElements (1..1)
+    partyRiskLimitsReportAckAttributes PartyRiskLimitsReportAckAttributes (0..1)
+
+type RequestedPartyRoleGrpElements:
+
+type RequestedPartyRoleGrpAttributes:
+
+    requestedPartyRoleGrpAttributes RequestedPartyRoleGrpAttributes (0..1)
+
+type RequestedPartyRoleGrp_Block_t:
+
+    requestedPartyRoleGrpElements RequestedPartyRoleGrpElements (1..1)
+    requestedPartyRoleGrpAttributes RequestedPartyRoleGrpAttributes (0..1)
+
+type RiskLimitTypesGrpElements:
+
+    warnLvl RiskWarningLevelGrp_Block_t (0..*)
+
+type RiskLimitTypesGrpAttributes:
+
+    riskLimitTypesGrpAttributes RiskLimitTypesGrpAttributes (0..1)
+
+type RiskLimitTypesGrp_Block_t:
+
+    riskLimitTypesGrpElements RiskLimitTypesGrpElements (1..1)
+    riskLimitTypesGrpAttributes RiskLimitTypesGrpAttributes (0..1)
+
+type RiskWarningLevelGrpElements:
+
+type RiskWarningLevelGrpAttributes:
+
+    riskWarningLevelGrpAttributes RiskWarningLevelGrpAttributes (0..1)
+
+type RiskWarningLevelGrp_Block_t:
+
+    riskWarningLevelGrpElements RiskWarningLevelGrpElements (1..1)
+    riskWarningLevelGrpAttributes RiskWarningLevelGrpAttributes (0..1)
+
+type RiskInstrumentScopeGrpElements:
+
+    instrumentScopeElements cdm.fixml.components.base.InstrumentScopeElements (1..1)
+
+type RiskInstrumentScopeGrpAttributes:
+
+    riskInstrumentScopeGrpAttributes RiskInstrumentScopeGrpAttributes (0..1)
+
+type RiskInstrumentScopeGrp_Block_t:
+
+    riskInstrumentScopeGrpElements RiskInstrumentScopeGrpElements (1..1)
+    riskInstrumentScopeGrpAttributes RiskInstrumentScopeGrpAttributes (0..1)
+
+type PartyDetailsUpdateGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+
+type PartyDetailsUpdateGrpAttributes:
+
+    partyDetailsUpdateGrpAttributes PartyDetailsUpdateGrpAttributes (0..1)
+
+type PartyDetailsUpdateGrp_Block_t:
+
+    partyDetailsUpdateGrpElements PartyDetailsUpdateGrpElements (1..1)
+    partyDetailsUpdateGrpAttributes PartyDetailsUpdateGrpAttributes (0..1)
+
+type RequestedRiskLimitTypesGrpElements:
+
+type RequestedRiskLimitTypesGrpAttributes:
+
+    requestedRiskLimitTypesGrpAttributes RequestedRiskLimitTypesGrpAttributes (0..1)
+
+type RequestedRiskLimitTypesGrp_Block_t:
+
+    requestedRiskLimitTypesGrpElements RequestedRiskLimitTypesGrpElements (1..1)
+    requestedRiskLimitTypesGrpAttributes RequestedRiskLimitTypesGrpAttributes (0..1)
+
+type PartyRiskLimitsGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    riskLmt RiskLimitsGrp_Block_t (0..*)
+
+type PartyRiskLimitsGrpAttributes:
+
+    partyRiskLimitsGrpAttributes PartyRiskLimitsGrpAttributes (0..1)
+
+type PartyRiskLimitsGrp_Block_t:
+
+    partyRiskLimitsGrpElements PartyRiskLimitsGrpElements (1..1)
+    partyRiskLimitsGrpAttributes PartyRiskLimitsGrpAttributes (0..1)
+
+type RiskLimitsGrpElements:
+
+    riskLmtTyp RiskLimitTypesGrp_Block_t (0..*)
+    instrmtScope RiskInstrumentScopeGrp_Block_t (0..*)
+
+type RiskLimitsGrpAttributes:
+
+    riskLimitsGrpAttributes RiskLimitsGrpAttributes (0..1)
+
+type RiskLimitsGrp_Block_t:
+
+    riskLimitsGrpElements RiskLimitsGrpElements (1..1)
+    riskLimitsGrpAttributes RiskLimitsGrpAttributes (0..1)
+
+type PartyRiskLimitsUpdateGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    riskLmt RiskLimitsGrp_Block_t (0..*)
+
+type PartyRiskLimitsUpdateGrpAttributes:
+
+    partyRiskLimitsUpdateGrpAttributes PartyRiskLimitsUpdateGrpAttributes (0..1)
+
+type PartyRiskLimitsUpdateGrp_Block_t:
+
+    partyRiskLimitsUpdateGrpElements PartyRiskLimitsUpdateGrpElements (1..1)
+    partyRiskLimitsUpdateGrpAttributes PartyRiskLimitsUpdateGrpAttributes (0..1)
+
+type PartyRiskLimitsAckGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    riskLmt RiskLimitsGrp_Block_t (0..*)
+
+type PartyRiskLimitsAckGrpAttributes:
+
+    partyRiskLimitsAckGrpAttributes PartyRiskLimitsAckGrpAttributes (0..1)
+
+type PartyRiskLimitsAckGrp_Block_t:
+
+    partyRiskLimitsAckGrpElements PartyRiskLimitsAckGrpElements (1..1)
+    partyRiskLimitsAckGrpAttributes PartyRiskLimitsAckGrpAttributes (0..1)
+
+type PartyEntitlementGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    entlmnt EntitlementGrp_Block_t (0..*)
+
+type PartyEntitlementGrpAttributes:
+
+    partyEntitlementGrpAttributes PartyEntitlementGrpAttributes (0..1)
+
+type PartyEntitlementGrp_Block_t:
+
+    partyEntitlementGrpElements PartyEntitlementGrpElements (1..1)
+    partyEntitlementGrpAttributes PartyEntitlementGrpAttributes (0..1)
+
+type EntitlementGrpElements:
+
+    attrib EntitlementAttribGrp_Block_t (0..*)
+    instrmtScope cdm.fixml.components.base.InstrumentScopeGrp_Block_t (0..*)
+    mktSegScope cdm.fixml.components.base.MarketSegmentScopeGrp_Block_t (0..*)
+
+type EntitlementGrpAttributes:
+
+    entitlementGrpAttributes EntitlementGrpAttributes (0..1)
+
+type EntitlementGrp_Block_t:
+
+    entitlementGrpElements EntitlementGrpElements (1..1)
+    entitlementGrpAttributes EntitlementGrpAttributes (0..1)
+
+type EntitlementAttribGrpElements:
+
+type EntitlementAttribGrpAttributes:
+
+    entitlementAttribGrpAttributes EntitlementAttribGrpAttributes (0..1)
+
+type EntitlementAttribGrp_Block_t:
+
+    entitlementAttribGrpElements EntitlementAttribGrpElements (1..1)
+    entitlementAttribGrpAttributes EntitlementAttribGrpAttributes (0..1)
+
+type PartyDetailAckGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+
+type PartyDetailAckGrpAttributes:
+
+    partyDetailAckGrpAttributes PartyDetailAckGrpAttributes (0..1)
+
+type PartyDetailAckGrp_Block_t:
+
+    partyDetailAckGrpElements PartyDetailAckGrpElements (1..1)
+    partyDetailAckGrpAttributes PartyDetailAckGrpAttributes (0..1)
+
+type PartyEntitlementUpdateGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    entlmnt EntitlementGrp_Block_t (0..*)
+
+type PartyEntitlementUpdateGrpAttributes:
+
+    partyEntitlementUpdateGrpAttributes PartyEntitlementUpdateGrpAttributes (0..1)
+
+type PartyEntitlementUpdateGrp_Block_t:
+
+    partyEntitlementUpdateGrpElements PartyEntitlementUpdateGrpElements (1..1)
+    partyEntitlementUpdateGrpAttributes PartyEntitlementUpdateGrpAttributes (0..1)
+
+type PartyEntitlementAckGrpElements:
+
+    ptyDetl cdm.fixml.components.base.PartyDetailGrp_Block_t (0..*)
+    entlmnt EntitlementGrp_Block_t (0..*)
+
+type PartyEntitlementAckGrpAttributes:
+
+    partyEntitlementAckGrpAttributes PartyEntitlementAckGrpAttributes (0..1)
+
+type PartyEntitlementAckGrp_Block_t:
+
+    partyEntitlementAckGrpElements PartyEntitlementAckGrpElements (1..1)
+    partyEntitlementAckGrpAttributes PartyEntitlementAckGrpAttributes (0..1)
+
+type EntitlementTypeGrpElements:
+
+type EntitlementTypeGrpAttributes:
+
+    entitlementTypeGrpAttributes EntitlementTypeGrpAttributes (0..1)
+
+type EntitlementTypeGrp_Block_t:
+
+    entitlementTypeGrpElements EntitlementTypeGrpElements (1..1)
+    entitlementTypeGrpAttributes EntitlementTypeGrpAttributes (0..1)

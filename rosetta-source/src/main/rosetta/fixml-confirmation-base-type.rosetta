@@ -1,0 +1,80 @@
+namespace cdm.fixml.confirmation.base : < "fixml definition" >
+version "${project.version}"
+
+type Cnfm extends Confirmation_message_t:
+
+type CnfmAck extends ConfirmationAck_message_t:
+
+type CnfmReq extends ConfirmationRequest_message_t:
+
+type ConfirmationElements:
+
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    ordAlloc cdm.fixml.components.base.OrdAllocGrp_Block_t (0..*)
+    allExc cdm.fixml.components.base.ExecAllocGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    cpcty CpctyConfGrp_Block_t (1..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    setInstr cdm.fixml.components.base.SettlInstructionsData_Block_t (0..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    stip cdm.fixml.components.base.Stipulations_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+    mtchExcptn cdm.fixml.components.base.MatchExceptionGrp_Block_t (0..*)
+    mtchDataPnt cdm.fixml.components.base.MatchingDataPointGrp_Block_t (0..*)
+
+type ConfirmationAttributes:
+
+    confirmationAttributes ConfirmationAttributes (0..1)
+
+type Confirmation_message_t extends cdm.fixml.components.base.Abstract_message_t: <"Confirmation can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg70">
+
+    confirmationElements ConfirmationElements (1..1)
+    confirmationAttributes ConfirmationAttributes (0..1)
+
+type ConfirmationAckElements:
+
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    mtchExcptn cdm.fixml.components.base.MatchExceptionGrp_Block_t (0..*)
+    mtchDataPnt cdm.fixml.components.base.MatchingDataPointGrp_Block_t (0..*)
+
+type ConfirmationAckAttributes:
+
+    confirmationAckAttributes ConfirmationAckAttributes (0..1)
+
+type ConfirmationAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ConfirmationAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg80">
+
+    confirmationAckElements ConfirmationAckElements (1..1)
+    confirmationAckAttributes ConfirmationAckAttributes (0..1)
+
+type ConfirmationRequestElements:
+
+    ordAlloc cdm.fixml.components.base.OrdAllocGrp_Block_t (0..*)
+
+type ConfirmationRequestAttributes:
+
+    confirmationRequestAttributes ConfirmationRequestAttributes (0..1)
+
+type ConfirmationRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ConfirmationRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg93">
+
+    confirmationRequestElements ConfirmationRequestElements (1..1)
+    confirmationRequestAttributes ConfirmationRequestAttributes (0..1)
+
+type CpctyConfGrpElements:
+
+type CpctyConfGrpAttributes:
+
+    cpctyConfGrpAttributes CpctyConfGrpAttributes (0..1)
+
+type CpctyConfGrp_Block_t:
+
+    cpctyConfGrpElements CpctyConfGrpElements (1..1)
+    cpctyConfGrpAttributes CpctyConfGrpAttributes (0..1)

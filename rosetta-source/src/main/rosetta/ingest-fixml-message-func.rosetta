@@ -1,0 +1,42 @@
+namespace cdm.ingest.fpml.confirmation.message
+version "${project.version}"
+
+import cdm.base.datetime.*
+import cdm.event.common.*
+import cdm.event.workflow.*
+import cdm.fixml.components.base.* as fixml
+import cdm.fixml.order.base.* as fixml
+import cdm.ingest.fpml.confirmation.common.*
+import cdm.ingest.fpml.confirmation.tradestate.*
+import cdm.ingest.fpml.confirmation.workflowstep.*
+
+func Ingest_FixML_MessageToTradeState:
+    [ingest XML]
+    inputs:
+        fixmlExecRpt fixml.ExecRpt (0..1)
+    output:
+        tradeState TradeState (0..1)
+
+    set tradeState:
+        TradeState {
+            trade: MapTrade(fixmlExecRpt),
+            ...
+        }
+
+func MapTrade:
+    inputs:
+        fixmlExecRpt fixml.ExecRpt (0..1)
+    output:
+        trade Trade (0..1)
+
+    set trade:
+        Trade {
+            product: empty,
+            tradeLot: empty,
+            counterparty: empty,
+            tradeIdentifier: empty,
+            tradeDate: Today,
+            party: empty,
+            partyRole: empty,
+            ...
+        }

@@ -1,0 +1,14 @@
+{
+  "id" : "pipeline-translate-fix-ml-message-to-trade-state",
+  "name" : "Fix Ml Message To Trade State",
+  "transform" : {
+    "type" : "TRANSLATE",
+    "function" : "cdm.ingest.fpml.confirmation.message.functions.Ingest_FixML_MessageToTradeState",
+    "inputType" : "cdm.fixml.order.base.ExecRpt",
+    "outputType" : "cdm.event.common.TradeState"
+  },
+  "inputSerialisation" : {
+    "format" : "XML",
+    "configPath" : "xml-config/fixml-xml-config.json"
+  }
+}

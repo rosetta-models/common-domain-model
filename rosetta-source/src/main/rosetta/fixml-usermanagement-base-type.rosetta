@@ -1,0 +1,57 @@
+namespace cdm.fixml.usermanagement.base : < "fixml definition" >
+version "${project.version}"
+
+type UserReq extends UserRequest_message_t:
+
+type UserRsp extends UserResponse_message_t:
+
+type UserNotifctn extends UserNotification_message_t:
+
+type UserRequestElements:
+
+type UserRequestAttributes:
+
+    userRequestAttributes UserRequestAttributes (0..1)
+
+type UserRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"UserRequest can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg90">
+
+    userRequestElements UserRequestElements (1..1)
+    userRequestAttributes UserRequestAttributes (0..1)
+
+type UserResponseElements:
+
+    thrttlPrm cdm.fixml.components.base.ThrottleParamsGrp_Block_t (0..*)
+
+type UserResponseAttributes:
+
+    userResponseAttributes UserResponseAttributes (0..1)
+
+type UserResponse_message_t extends cdm.fixml.components.base.Abstract_message_t: <"UserResponse can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg91">
+
+    userResponseElements UserResponseElements (1..1)
+    userResponseAttributes UserResponseAttributes (0..1)
+
+type UserNotificationElements:
+
+    userGrp UsernameGrp_Block_t (0..*)
+    thrttlPrm cdm.fixml.components.base.ThrottleParamsGrp_Block_t (0..*)
+
+type UserNotificationAttributes:
+
+    userNotificationAttributes UserNotificationAttributes (0..1)
+
+type UserNotification_message_t extends cdm.fixml.components.base.Abstract_message_t: <"UserNotification can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg113">
+
+    userNotificationElements UserNotificationElements (1..1)
+    userNotificationAttributes UserNotificationAttributes (0..1)
+
+type UsernameGrpElements:
+
+type UsernameGrpAttributes:
+
+    usernameGrpAttributes UsernameGrpAttributes (0..1)
+
+type UsernameGrp_Block_t:
+
+    usernameGrpElements UsernameGrpElements (1..1)
+    usernameGrpAttributes UsernameGrpAttributes (0..1)

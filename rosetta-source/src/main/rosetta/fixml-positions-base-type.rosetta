@@ -1,0 +1,264 @@
+namespace cdm.fixml.positions.base : < "fixml definition" >
+version "${project.version}"
+
+type PosMntReq extends PositionMaintenanceRequest_message_t:
+
+type PosMntRpt extends PositionMaintenanceReport_message_t:
+
+type ReqForPoss extends RequestForPositions_message_t:
+
+type ReqForPossAck extends RequestForPositionsAck_message_t:
+
+type PosRpt extends PositionReport_message_t:
+
+type AsgnRpt extends AssignmentReport_message_t:
+
+type ContIntRpt extends ContraryIntentionReport_message_t:
+
+type AdjPosRep extends AdjustedPositionReport_message_t:
+
+type PosXferInstrctn extends PositionTransferInstruction_message_t:
+
+type PosXferInstrctnAck extends PositionTransferInstructionAck_message_t:
+
+type PosXferRpt extends PositionTransferReport_message_t:
+
+type PositionMaintenanceRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (1..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+
+type PositionMaintenanceRequestAttributes:
+
+    positionMaintenanceRequestAttributes PositionMaintenanceRequestAttributes (0..1)
+
+type PositionMaintenanceRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionMaintenanceRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg71">
+
+    positionMaintenanceRequestElements PositionMaintenanceRequestElements (1..1)
+    positionMaintenanceRequestAttributes PositionMaintenanceRequestAttributes (0..1)
+
+type PositionMaintenanceReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pmt cdm.fixml.components.base.PaymentGrp_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+
+type PositionMaintenanceReportAttributes:
+
+    positionMaintenanceReportAttributes PositionMaintenanceReportAttributes (0..1)
+
+type PositionMaintenanceReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionMaintenanceReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg72">
+
+    positionMaintenanceReportElements PositionMaintenanceReportElements (1..1)
+    positionMaintenanceReportAttributes PositionMaintenanceReportAttributes (0..1)
+
+type RequestForPositionsElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+
+type RequestForPositionsAttributes:
+
+    requestForPositionsAttributes RequestForPositionsAttributes (0..1)
+
+type RequestForPositions_message_t extends cdm.fixml.components.base.Abstract_message_t: <"RequestForPositions can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg73">
+
+    requestForPositionsElements RequestForPositionsElements (1..1)
+    requestForPositionsAttributes RequestForPositionsAttributes (0..1)
+
+type RequestForPositionsAckElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type RequestForPositionsAckAttributes:
+
+    requestForPositionsAckAttributes RequestForPositionsAckAttributes (0..1)
+
+type RequestForPositionsAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"RequestForPositionsAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg74">
+
+    requestForPositionsAckElements RequestForPositionsAckElements (1..1)
+    requestForPositionsAckAttributes RequestForPositionsAckAttributes (0..1)
+
+type PositionReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    txnAttrb cdm.fixml.components.base.TransactionAttributeGrp_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    collAmt cdm.fixml.components.base.CollateralAmountGrp_Block_t (0..*)
+    posUnd PosUndInstrmtGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pmt cdm.fixml.components.base.PaymentGrp_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+
+type PositionReportAttributes:
+
+    positionReportAttributes PositionReportAttributes (0..1)
+
+type PositionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg75">
+
+    positionReportElements PositionReportElements (1..1)
+    positionReportAttributes PositionReportAttributes (0..1)
+
+type AssignmentReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+
+type AssignmentReportAttributes:
+
+    assignmentReportAttributes AssignmentReportAttributes (0..1)
+
+type AssignmentReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AssignmentReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg82">
+
+    assignmentReportElements AssignmentReportElements (1..1)
+    assignmentReportAttributes AssignmentReportAttributes (0..1)
+
+type ContraryIntentionReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    qty ExpirationQty_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type ContraryIntentionReportAttributes:
+
+    contraryIntentionReportAttributes ContraryIntentionReportAttributes (0..1)
+
+type ContraryIntentionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"ContraryIntentionReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg94">
+
+    contraryIntentionReportElements ContraryIntentionReportElements (1..1)
+    contraryIntentionReportAttributes ContraryIntentionReportAttributes (0..1)
+
+type AdjustedPositionReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (1..*)
+    inst cdm.fixml.components.base.InstrmtGrp_Block_t (0..*)
+
+type AdjustedPositionReportAttributes:
+
+    adjustedPositionReportAttributes AdjustedPositionReportAttributes (0..1)
+
+type AdjustedPositionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"AdjustedPositionReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg97">
+
+    adjustedPositionReportElements AdjustedPositionReportElements (1..1)
+    adjustedPositionReportAttributes AdjustedPositionReportAttributes (0..1)
+
+type PositionTransferInstructionElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+
+type PositionTransferInstructionAttributes:
+
+    positionTransferInstructionAttributes PositionTransferInstructionAttributes (0..1)
+
+type PositionTransferInstruction_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionTransferInstruction can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg148">
+
+    positionTransferInstructionElements PositionTransferInstructionElements (1..1)
+    positionTransferInstructionAttributes PositionTransferInstructionAttributes (0..1)
+
+type PositionTransferInstructionAckElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+
+type PositionTransferInstructionAckAttributes:
+
+    positionTransferInstructionAckAttributes PositionTransferInstructionAckAttributes (0..1)
+
+type PositionTransferInstructionAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionTransferInstructionAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg149">
+
+    positionTransferInstructionAckElements PositionTransferInstructionAckElements (1..1)
+    positionTransferInstructionAckAttributes PositionTransferInstructionAckAttributes (0..1)
+
+type PositionTransferReportElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (1..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    qty cdm.fixml.components.base.PositionQty_Block_t (0..*)
+    amt cdm.fixml.components.base.PositionAmountData_Block_t (0..*)
+
+type PositionTransferReportAttributes:
+
+    positionTransferReportAttributes PositionTransferReportAttributes (0..1)
+
+type PositionTransferReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PositionTransferReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg150">
+
+    positionTransferReportElements PositionTransferReportElements (1..1)
+    positionTransferReportAttributes PositionTransferReportAttributes (0..1)
+
+type UnderlyingAmountElements:
+
+type UnderlyingAmountAttributes:
+
+    underlyingAmountAttributes UnderlyingAmountAttributes (0..1)
+
+type UnderlyingAmount_Block_t:
+
+    underlyingAmountElements UnderlyingAmountElements (1..1)
+    underlyingAmountAttributes UnderlyingAmountAttributes (0..1)
+
+type ExpirationQtyElements:
+
+type ExpirationQtyAttributes:
+
+    expirationQtyAttributes ExpirationQtyAttributes (0..1)
+
+type ExpirationQty_Block_t:
+
+    expirationQtyElements ExpirationQtyElements (1..1)
+    expirationQtyAttributes ExpirationQtyAttributes (0..1)
+
+type PosUndInstrmtGrpElements:
+
+    undly cdm.fixml.components.base.UnderlyingInstrument_Block_t (0..1)
+    undDlvAmt UnderlyingAmount_Block_t (0..*)
+
+type PosUndInstrmtGrpAttributes:
+
+    posUndInstrmtGrpAttributes PosUndInstrmtGrpAttributes (0..1)
+
+type PosUndInstrmtGrp_Block_t:
+
+    posUndInstrmtGrpElements PosUndInstrmtGrpElements (1..1)
+    posUndInstrmtGrpAttributes PosUndInstrmtGrpAttributes (0..1)

@@ -1,0 +1,403 @@
+namespace cdm.fixml.marketdata.base : < "fixml definition" >
+version "${project.version}"
+
+type MktDataReq extends MarketDataRequest_message_t:
+
+type MktDataFull extends MarketDataSnapshotFullRefresh_message_t:
+
+type MktDataInc extends MarketDataIncrementalRefresh_message_t:
+
+type MktDataReqRej extends MarketDataRequestReject_message_t:
+
+type StrmAsgnReq extends StreamAssignmentRequest_message_t:
+
+type StrmAsgnRpt extends StreamAssignmentReport_message_t:
+
+type StrmAsgnRptACK extends StreamAssignmentReportACK_message_t:
+
+type MDStatsReq extends MarketDataStatisticsRequest_message_t:
+
+type MDStatsRpt extends MarketDataStatisticsReport_message_t:
+
+type MktDataRpt extends MarketDataReport_message_t:
+
+type MDAck extends MarketDataAck_message_t:
+
+type MarketDataRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    req MDReqGrp_Block_t (1..*)
+    mktSegScope cdm.fixml.components.base.MarketSegmentScopeGrp_Block_t (0..*)
+    instReq cdm.fixml.components.base.InstrmtMDReqGrp_Block_t (1..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+
+type MarketDataRequestAttributes:
+
+    marketDataRequestAttributes MarketDataRequestAttributes (0..1)
+
+type MarketDataRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg29">
+
+    marketDataRequestElements MarketDataRequestElements (1..1)
+    marketDataRequestAttributes MarketDataRequestAttributes (0..1)
+
+type MarketDataSnapshotFullRefreshElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (1..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    full MDFullGrp_Block_t (1..*)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+
+type MarketDataSnapshotFullRefreshAttributes:
+
+    marketDataSnapshotFullRefreshAttributes MarketDataSnapshotFullRefreshAttributes (0..1)
+
+type MarketDataSnapshotFullRefresh_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataSnapshotFullRefresh can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg30">
+
+    marketDataSnapshotFullRefreshElements MarketDataSnapshotFullRefreshElements (1..1)
+    marketDataSnapshotFullRefreshAttributes MarketDataSnapshotFullRefreshAttributes (0..1)
+
+type MarketDataIncrementalRefreshElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    inc MDIncGrp_Block_t (1..*)
+    rtg cdm.fixml.components.base.RoutingGrp_Block_t (0..*)
+
+type MarketDataIncrementalRefreshAttributes:
+
+    marketDataIncrementalRefreshAttributes MarketDataIncrementalRefreshAttributes (0..1)
+
+type MarketDataIncrementalRefresh_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataIncrementalRefresh can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg31">
+
+    marketDataIncrementalRefreshElements MarketDataIncrementalRefreshElements (1..1)
+    marketDataIncrementalRefreshAttributes MarketDataIncrementalRefreshAttributes (0..1)
+
+type MarketDataRequestRejectElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    rjct MDRjctGrp_Block_t (0..*)
+
+type MarketDataRequestRejectAttributes:
+
+    marketDataRequestRejectAttributes MarketDataRequestRejectAttributes (0..1)
+
+type MarketDataRequestReject_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataRequestReject can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg32">
+
+    marketDataRequestRejectElements MarketDataRequestRejectElements (1..1)
+    marketDataRequestRejectAttributes MarketDataRequestRejectAttributes (0..1)
+
+type StreamAssignmentRequestElements:
+
+    reqs StrmAsgnReqGrp_Block_t (1..*)
+
+type StreamAssignmentRequestAttributes:
+
+    streamAssignmentRequestAttributes StreamAssignmentRequestAttributes (0..1)
+
+type StreamAssignmentRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"StreamAssignmentRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg114">
+
+    streamAssignmentRequestElements StreamAssignmentRequestElements (1..1)
+    streamAssignmentRequestAttributes StreamAssignmentRequestAttributes (0..1)
+
+type StreamAssignmentReportElements:
+
+    rpts StrmAsgnRptGrp_Block_t (0..*)
+
+type StreamAssignmentReportAttributes:
+
+    streamAssignmentReportAttributes StreamAssignmentReportAttributes (0..1)
+
+type StreamAssignmentReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"StreamAssignmentReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg115">
+
+    streamAssignmentReportElements StreamAssignmentReportElements (1..1)
+    streamAssignmentReportAttributes StreamAssignmentReportAttributes (0..1)
+
+type StreamAssignmentReportACKElements:
+
+type StreamAssignmentReportACKAttributes:
+
+    streamAssignmentReportACKAttributes StreamAssignmentReportACKAttributes (0..1)
+
+type StreamAssignmentReportACK_message_t extends cdm.fixml.components.base.Abstract_message_t: <"StreamAssignmentReportACK can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg116">
+
+    streamAssignmentReportACKElements StreamAssignmentReportACKElements (1..1)
+    streamAssignmentReportACKAttributes StreamAssignmentReportACKAttributes (0..1)
+
+type MarketDataStatisticsRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    statsReq MDStatisticReqGrp_Block_t (1..*)
+
+type MarketDataStatisticsRequestAttributes:
+
+    marketDataStatisticsRequestAttributes MarketDataStatisticsRequestAttributes (0..1)
+
+type MarketDataStatisticsRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataStatisticsRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg151">
+
+    marketDataStatisticsRequestElements MarketDataStatisticsRequestElements (1..1)
+    marketDataStatisticsRequestAttributes MarketDataStatisticsRequestAttributes (0..1)
+
+type MarketDataStatisticsReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    statsRpt MDStatisticRptGrp_Block_t (1..*)
+
+type MarketDataStatisticsReportAttributes:
+
+    marketDataStatisticsReportAttributes MarketDataStatisticsReportAttributes (0..1)
+
+type MarketDataStatisticsReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataStatisticsReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg152">
+
+    marketDataStatisticsReportElements MarketDataStatisticsReportElements (1..1)
+    marketDataStatisticsReportAttributes MarketDataStatisticsReportAttributes (0..1)
+
+type MarketDataReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+
+type MarketDataReportAttributes:
+
+    marketDataReportAttributes MarketDataReportAttributes (0..1)
+
+type MarketDataReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg154">
+
+    marketDataReportElements MarketDataReportElements (1..1)
+    marketDataReportAttributes MarketDataReportAttributes (0..1)
+
+type MarketDataAckElements:
+
+    mdAck MDAckGrp_Block_t (0..*)
+    txtLn cdm.fixml.components.base.LinesOfTextGrp_Block_t (0..*)
+
+type MarketDataAckAttributes:
+
+    marketDataAckAttributes MarketDataAckAttributes (0..1)
+
+type MarketDataAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDataAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg179">
+
+    marketDataAckElements MarketDataAckElements (1..1)
+    marketDataAckAttributes MarketDataAckAttributes (0..1)
+
+type MDFullGrpElements:
+
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    secSizesGrp SecSizesGrp_Block_t (0..*)
+    trdPxConds cdm.fixml.components.base.TradePriceConditionGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    trdTyp cdm.fixml.components.base.TradeTypeGrp_Block_t (0..*)
+    trdRegPublctn cdm.fixml.components.base.TrdRegPublicationGrp_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    pxLmts cdm.fixml.components.base.PriceLimits_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+
+type MDFullGrpAttributes:
+
+    mdFullGrpAttributes MDFullGrpAttributes (0..1)
+
+type MDFullGrp_Block_t:
+
+    mdFullGrpElements MDFullGrpElements (1..1)
+    mdFullGrpAttributes MDFullGrpAttributes (0..1)
+
+type MDIncGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    instrmtExt cdm.fixml.components.base.InstrumentExtension_Block_t (0..1)
+    finDetls cdm.fixml.components.base.FinancingDetails_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    leg cdm.fixml.components.base.InstrmtLegGrp_Block_t (0..*)
+    reltdInstrmt cdm.fixml.components.base.RelatedInstrumentGrp_Block_t (0..*)
+    pxQual cdm.fixml.components.base.PriceQualifierGrp_Block_t (0..*)
+    yield cdm.fixml.components.base.YieldData_Block_t (0..1)
+    sprdBnchmkCurve cdm.fixml.components.base.SpreadOrBenchmarkCurveData_Block_t (0..1)
+    rtSrc cdm.fixml.components.base.RateSource_Block_t (0..*)
+    secSizesGrp SecSizesGrp_Block_t (0..*)
+    trdPxConds cdm.fixml.components.base.TradePriceConditionGrp_Block_t (0..*)
+    trdTyp cdm.fixml.components.base.TradeTypeGrp_Block_t (0..*)
+    trdRegPublctn cdm.fixml.components.base.TrdRegPublicationGrp_Block_t (0..*)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    regTrdID cdm.fixml.components.base.RegulatoryTradeIDGrp_Block_t (0..*)
+    pxLmts cdm.fixml.components.base.PriceLimits_Block_t (0..1)
+    trdRegTS cdm.fixml.components.base.TrdRegTimestamps_Block_t (0..*)
+    statsIndGrp StatsIndGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type MDIncGrpAttributes:
+
+    mdIncGrpAttributes MDIncGrpAttributes (0..1)
+
+type MDIncGrp_Block_t:
+
+    mdIncGrpElements MDIncGrpElements (1..1)
+    mdIncGrpAttributes MDIncGrpAttributes (0..1)
+
+type MDReqGrpElements:
+
+type MDReqGrpAttributes:
+
+    mdReqGrpAttributes MDReqGrpAttributes (0..1)
+
+type MDReqGrp_Block_t:
+
+    mdReqGrpElements MDReqGrpElements (1..1)
+    mdReqGrpAttributes MDReqGrpAttributes (0..1)
+
+type MDRjctGrpElements:
+
+type MDRjctGrpAttributes:
+
+    mdRjctGrpAttributes MDRjctGrpAttributes (0..1)
+
+type MDRjctGrp_Block_t:
+
+    mdRjctGrpElements MDRjctGrpElements (1..1)
+    mdRjctGrpAttributes MDRjctGrpAttributes (0..1)
+
+type SecSizesGrpElements:
+
+type SecSizesGrpAttributes:
+
+    secSizesGrpAttributes SecSizesGrpAttributes (0..1)
+
+type SecSizesGrp_Block_t:
+
+    secSizesGrpElements SecSizesGrpElements (1..1)
+    secSizesGrpAttributes SecSizesGrpAttributes (0..1)
+
+type StatsIndGrpElements:
+
+type StatsIndGrpAttributes:
+
+    statsIndGrpAttributes StatsIndGrpAttributes (0..1)
+
+type StatsIndGrp_Block_t:
+
+    statsIndGrpElements StatsIndGrpElements (1..1)
+    statsIndGrpAttributes StatsIndGrpAttributes (0..1)
+
+type StrmAsgnReqGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmts StrmAsgnReqInstrmtGrp_Block_t (0..*)
+
+type StrmAsgnReqGrpAttributes:
+
+    strmAsgnReqGrpAttributes StrmAsgnReqGrpAttributes (0..1)
+
+type StrmAsgnReqGrp_Block_t:
+
+    strmAsgnReqGrpElements StrmAsgnReqGrpElements (1..1)
+    strmAsgnReqGrpAttributes StrmAsgnReqGrpAttributes (0..1)
+
+type StrmAsgnRptGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    instrmts StrmAsgnRptInstrmtGrp_Block_t (0..*)
+
+type StrmAsgnRptGrpAttributes:
+
+    strmAsgnRptGrpAttributes StrmAsgnRptGrpAttributes (0..1)
+
+type StrmAsgnRptGrp_Block_t:
+
+    strmAsgnRptGrpElements StrmAsgnRptGrpElements (1..1)
+    strmAsgnRptGrpAttributes StrmAsgnRptGrpAttributes (0..1)
+
+type StrmAsgnReqInstrmtGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type StrmAsgnReqInstrmtGrpAttributes:
+
+    strmAsgnReqInstrmtGrpAttributes StrmAsgnReqInstrmtGrpAttributes (0..1)
+
+type StrmAsgnReqInstrmtGrp_Block_t:
+
+    strmAsgnReqInstrmtGrpElements StrmAsgnReqInstrmtGrpElements (1..1)
+    strmAsgnReqInstrmtGrpAttributes StrmAsgnReqInstrmtGrpAttributes (0..1)
+
+type StrmAsgnRptInstrmtGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type StrmAsgnRptInstrmtGrpAttributes:
+
+    strmAsgnRptInstrmtGrpAttributes StrmAsgnRptInstrmtGrpAttributes (0..1)
+
+type StrmAsgnRptInstrmtGrp_Block_t:
+
+    strmAsgnRptInstrmtGrpElements StrmAsgnRptInstrmtGrpElements (1..1)
+    strmAsgnRptInstrmtGrpAttributes StrmAsgnRptInstrmtGrpAttributes (0..1)
+
+type MDStatisticReqGrpElements:
+
+    statsPrm MDStatisticParameters_Block_t (0..1)
+
+type MDStatisticReqGrpAttributes:
+
+    mdStatisticReqGrpAttributes MDStatisticReqGrpAttributes (0..1)
+
+type MDStatisticReqGrp_Block_t:
+
+    mdStatisticReqGrpElements MDStatisticReqGrpElements (1..1)
+    mdStatisticReqGrpAttributes MDStatisticReqGrpAttributes (0..1)
+
+type MDStatisticRptGrpElements:
+
+    statsPrm MDStatisticParameters_Block_t (0..1)
+
+type MDStatisticRptGrpAttributes:
+
+    mdStatisticRptGrpAttributes MDStatisticRptGrpAttributes (0..1)
+
+type MDStatisticRptGrp_Block_t:
+
+    mdStatisticRptGrpElements MDStatisticRptGrpElements (1..1)
+    mdStatisticRptGrpAttributes MDStatisticRptGrpAttributes (0..1)
+
+type MDStatisticParametersElements:
+
+    pty cdm.fixml.components.base.NestedParties_Block_t (0..*)
+
+type MDStatisticParametersAttributes:
+
+    mdStatisticParametersAttributes MDStatisticParametersAttributes (0..1)
+
+type MDStatisticParameters_Block_t:
+
+    mdStatisticParametersElements MDStatisticParametersElements (1..1)
+    mdStatisticParametersAttributes MDStatisticParametersAttributes (0..1)
+
+type MDAckGrpElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type MDAckGrpAttributes:
+
+    mdAckGrpAttributes MDAckGrpAttributes (0..1)
+
+type MDAckGrp_Block_t:
+
+    mdAckGrpElements MDAckGrpElements (1..1)
+    mdAckGrpAttributes MDAckGrpAttributes (0..1)

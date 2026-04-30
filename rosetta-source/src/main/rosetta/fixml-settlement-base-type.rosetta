@@ -1,0 +1,77 @@
+namespace cdm.fixml.settlement.base : < "fixml definition" >
+version "${project.version}"
+
+type SettlInstrctns extends SettlementInstructions_message_t:
+
+type SettlInstrctnReq extends SettlementInstructionRequest_message_t:
+
+type SettlObligation extends SettlementObligationReport_message_t:
+
+type SettlementInstructionsElements:
+
+    setInst SettlInstGrp_Block_t (0..*)
+
+type SettlementInstructionsAttributes:
+
+    settlementInstructionsAttributes SettlementInstructionsAttributes (0..1)
+
+type SettlementInstructions_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementInstructions can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg28">
+
+    settlementInstructionsElements SettlementInstructionsElements (1..1)
+    settlementInstructionsAttributes SettlementInstructionsAttributes (0..1)
+
+type SettlementInstructionRequestElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type SettlementInstructionRequestAttributes:
+
+    settlementInstructionRequestAttributes SettlementInstructionRequestAttributes (0..1)
+
+type SettlementInstructionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementInstructionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg81">
+
+    settlementInstructionRequestElements SettlementInstructionRequestElements (1..1)
+    settlementInstructionRequestAttributes SettlementInstructionRequestAttributes (0..1)
+
+type SettlementObligationReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    settlObligInst SettlObligationInstructions_Block_t (1..*)
+
+type SettlementObligationReportAttributes:
+
+    settlementObligationReportAttributes SettlementObligationReportAttributes (0..1)
+
+type SettlementObligationReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"SettlementObligationReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg102">
+
+    settlementObligationReportElements SettlementObligationReportElements (1..1)
+    settlementObligationReportAttributes SettlementObligationReportAttributes (0..1)
+
+type SettlInstGrpElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    setInstr cdm.fixml.components.base.SettlInstructionsData_Block_t (0..1)
+
+type SettlInstGrpAttributes:
+
+    settlInstGrpAttributes SettlInstGrpAttributes (0..1)
+
+type SettlInstGrp_Block_t:
+
+    settlInstGrpElements SettlInstGrpElements (1..1)
+    settlInstGrpAttributes SettlInstGrpAttributes (0..1)
+
+type SettlObligationInstructionsElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    settlDetails cdm.fixml.components.base.SettlDetails_Block_t (0..*)
+
+type SettlObligationInstructionsAttributes:
+
+    settlObligationInstructionsAttributes SettlObligationInstructionsAttributes (0..1)
+
+type SettlObligationInstructions_Block_t:
+
+    settlObligationInstructionsElements SettlObligationInstructionsElements (1..1)
+    settlObligationInstructionsAttributes SettlObligationInstructionsAttributes (0..1)

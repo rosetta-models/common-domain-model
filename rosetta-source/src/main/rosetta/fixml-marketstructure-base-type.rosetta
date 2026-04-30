@@ -1,0 +1,155 @@
+namespace cdm.fixml.marketstructure.base : < "fixml definition" >
+version "${project.version}"
+
+type TrdgSesStatReq extends TradingSessionStatusRequest_message_t:
+
+type TrdgSesStat extends TradingSessionStatus_message_t:
+
+type TradSessList extends TradingSessionList_message_t:
+
+type TradSessListReq extends TradingSessionListRequest_message_t:
+
+type TrdgSesListUpd extends TradingSessionListUpdateReport_message_t:
+
+type MktDefReq extends MarketDefinitionRequest_message_t:
+
+type MktDef extends MarketDefinition_message_t:
+
+type MktDefUpd extends MarketDefinitionUpdateReport_message_t:
+
+type TrdgSesStatAck extends TradingSessionStatusAck_message_t:
+
+type TradingSessionStatusRequestElements:
+
+type TradingSessionStatusRequestAttributes:
+
+    tradingSessionStatusRequestAttributes TradingSessionStatusRequestAttributes (0..1)
+
+type TradingSessionStatusRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionStatusRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg40">
+
+    tradingSessionStatusRequestElements TradingSessionStatusRequestElements (1..1)
+    tradingSessionStatusRequestAttributes TradingSessionStatusRequestAttributes (0..1)
+
+type TradingSessionStatusElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+
+type TradingSessionStatusAttributes:
+
+    tradingSessionStatusAttributes TradingSessionStatusAttributes (0..1)
+
+type TradingSessionStatus_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionStatus can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg41">
+
+    tradingSessionStatusElements TradingSessionStatusElements (1..1)
+    tradingSessionStatusAttributes TradingSessionStatusAttributes (0..1)
+
+type TradingSessionListElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    trdSessLstGrp cdm.fixml.components.base.TrdSessLstGrp_Block_t (1..*)
+
+type TradingSessionListAttributes:
+
+    tradingSessionListAttributes TradingSessionListAttributes (0..1)
+
+type TradingSessionList_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionList can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg100">
+
+    tradingSessionListElements TradingSessionListElements (1..1)
+    tradingSessionListAttributes TradingSessionListAttributes (0..1)
+
+type TradingSessionListRequestElements:
+
+type TradingSessionListRequestAttributes:
+
+    tradingSessionListRequestAttributes TradingSessionListRequestAttributes (0..1)
+
+type TradingSessionListRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionListRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg101">
+
+    tradingSessionListRequestElements TradingSessionListRequestElements (1..1)
+    tradingSessionListRequestAttributes TradingSessionListRequestAttributes (0..1)
+
+type TradingSessionListUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    trdSessLstGrp cdm.fixml.components.base.TrdSessLstGrp_Block_t (1..*)
+
+type TradingSessionListUpdateReportAttributes:
+
+    tradingSessionListUpdateReportAttributes TradingSessionListUpdateReportAttributes (0..1)
+
+type TradingSessionListUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionListUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg104">
+
+    tradingSessionListUpdateReportElements TradingSessionListUpdateReportElements (1..1)
+    tradingSessionListUpdateReportAttributes TradingSessionListUpdateReportAttributes (0..1)
+
+type MarketDefinitionRequestElements:
+
+type MarketDefinitionRequestAttributes:
+
+    marketDefinitionRequestAttributes MarketDefinitionRequestAttributes (0..1)
+
+type MarketDefinitionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDefinitionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg105">
+
+    marketDefinitionRequestElements MarketDefinitionRequestElements (1..1)
+    marketDefinitionRequestAttributes MarketDefinitionRequestAttributes (0..1)
+
+type MarketDefinitionElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmtScope cdm.fixml.components.base.InstrumentScopeGrp_Block_t (0..*)
+    reltdMktSeg cdm.fixml.components.base.RelatedMarketSegmentGrp_Block_t (0..*)
+    baseTrdgRules cdm.fixml.components.base.BaseTradingRules_Block_t (0..1)
+    ordTypRules cdm.fixml.components.base.OrdTypeRules_Block_t (0..*)
+    tmInForceRules cdm.fixml.components.base.TimeInForceRules_Block_t (0..*)
+    execInstRules cdm.fixml.components.base.ExecInstRules_Block_t (0..*)
+    auctTypRule cdm.fixml.components.base.AuctionTypeRuleGrp_Block_t (0..*)
+    mdFeedTyps cdm.fixml.components.base.MarketDataFeedTypes_Block_t (0..*)
+    mtchRules cdm.fixml.components.base.MatchRules_Block_t (0..*)
+    flexProdElig cdm.fixml.components.base.FlexProductEligibilityGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    miscFees cdm.fixml.components.base.MiscFeesGrp_Block_t (0..*)
+
+type MarketDefinitionAttributes:
+
+    marketDefinitionAttributes MarketDefinitionAttributes (0..1)
+
+type MarketDefinition_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDefinition can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg106">
+
+    marketDefinitionElements MarketDefinitionElements (1..1)
+    marketDefinitionAttributes MarketDefinitionAttributes (0..1)
+
+type MarketDefinitionUpdateReportElements:
+
+    applSeqCtrl cdm.fixml.components.base.ApplicationSequenceControl_Block_t (0..1)
+    instrmtScope cdm.fixml.components.base.InstrumentScopeGrp_Block_t (0..*)
+    reltdMktSeg cdm.fixml.components.base.RelatedMarketSegmentGrp_Block_t (0..*)
+    baseTrdgRules cdm.fixml.components.base.BaseTradingRules_Block_t (0..1)
+    ordTypRules cdm.fixml.components.base.OrdTypeRules_Block_t (0..*)
+    tmInForceRules cdm.fixml.components.base.TimeInForceRules_Block_t (0..*)
+    execInstRules cdm.fixml.components.base.ExecInstRules_Block_t (0..*)
+    auctTypRule cdm.fixml.components.base.AuctionTypeRuleGrp_Block_t (0..*)
+    mdFeedTyps cdm.fixml.components.base.MarketDataFeedTypes_Block_t (0..*)
+    mtchRules cdm.fixml.components.base.MatchRules_Block_t (0..*)
+    flexProdElig cdm.fixml.components.base.FlexProductEligibilityGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+
+type MarketDefinitionUpdateReportAttributes:
+
+    marketDefinitionUpdateReportAttributes MarketDefinitionUpdateReportAttributes (0..1)
+
+type MarketDefinitionUpdateReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MarketDefinitionUpdateReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg107">
+
+    marketDefinitionUpdateReportElements MarketDefinitionUpdateReportElements (1..1)
+    marketDefinitionUpdateReportAttributes MarketDefinitionUpdateReportAttributes (0..1)
+
+type TradingSessionStatusAckElements:
+
+type TradingSessionStatusAckAttributes:
+
+    tradingSessionStatusAckAttributes TradingSessionStatusAckAttributes (0..1)
+
+type TradingSessionStatusAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"TradingSessionStatusAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg181">
+
+    tradingSessionStatusAckElements TradingSessionStatusAckElements (1..1)
+    tradingSessionStatusAckAttributes TradingSessionStatusAckAttributes (0..1)

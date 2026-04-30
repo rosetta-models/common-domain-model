@@ -1,0 +1,77 @@
+namespace cdm.fixml.paymgt.base : < "fixml definition" >
+version "${project.version}"
+
+type PayMgmtRpt extends PayManagementReport_message_t:
+
+type PayMgmtRptAck extends PayManagementReportAck_message_t:
+
+type PayMgmtReq extends PayManagementRequest_message_t:
+
+type PayMgmtReqAck extends PayManagementRequestAck_message_t:
+
+type PayManagementReportElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    postTrdPmt PostTradePayment_Block_t (1..1)
+    settlDetails cdm.fixml.components.base.SettlDetails_Block_t (0..*)
+
+type PayManagementReportAttributes:
+
+    payManagementReportAttributes PayManagementReportAttributes (0..1)
+
+type PayManagementReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PayManagementReport can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg161">
+
+    payManagementReportElements PayManagementReportElements (1..1)
+    payManagementReportAttributes PayManagementReportAttributes (0..1)
+
+type PayManagementReportAckElements:
+
+type PayManagementReportAckAttributes:
+
+    payManagementReportAckAttributes PayManagementReportAckAttributes (0..1)
+
+type PayManagementReportAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PayManagementReportAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg162">
+
+    payManagementReportAckElements PayManagementReportAckElements (1..1)
+    payManagementReportAckAttributes PayManagementReportAckAttributes (0..1)
+
+type PayManagementRequestElements:
+
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    reltdTrd cdm.fixml.components.base.RelatedTradeGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    postTrdPmt PostTradePayment_Block_t (1..1)
+    settlDetails cdm.fixml.components.base.SettlDetails_Block_t (0..*)
+
+type PayManagementRequestAttributes:
+
+    payManagementRequestAttributes PayManagementRequestAttributes (0..1)
+
+type PayManagementRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PayManagementRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg163">
+
+    payManagementRequestElements PayManagementRequestElements (1..1)
+    payManagementRequestAttributes PayManagementRequestAttributes (0..1)
+
+type PayManagementRequestAckElements:
+
+type PayManagementRequestAckAttributes:
+
+    payManagementRequestAckAttributes PayManagementRequestAckAttributes (0..1)
+
+type PayManagementRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PayManagementRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PostTrade#msg164">
+
+    payManagementRequestAckElements PayManagementRequestAckElements (1..1)
+    payManagementRequestAckAttributes PayManagementRequestAckAttributes (0..1)
+
+type PostTradePaymentElements:
+
+type PostTradePaymentAttributes:
+
+    postTradePaymentAttributes PostTradePaymentAttributes (0..1)
+
+type PostTradePayment_Block_t:
+
+    postTradePaymentElements PostTradePaymentElements (1..1)
+    postTradePaymentAttributes PostTradePaymentAttributes (0..1)

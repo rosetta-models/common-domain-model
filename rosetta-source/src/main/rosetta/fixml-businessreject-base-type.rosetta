@@ -1,0 +1,15 @@
+namespace cdm.fixml.businessreject.base : < "fixml definition" >
+version "${project.version}"
+
+type BizMsgRej extends BusinessMessageReject_message_t:
+
+type BusinessMessageRejectElements:
+
+type BusinessMessageRejectAttributes:
+
+    businessMessageRejectAttributes BusinessMessageRejectAttributes (0..1)
+
+type BusinessMessageReject_message_t extends cdm.fixml.components.base.Abstract_message_t: <"BusinessMessageReject can be found at   https://www.fixtrading.org/online-specification/business-area-Infrastructure#msg43">
+
+    businessMessageRejectElements BusinessMessageRejectElements (1..1)
+    businessMessageRejectAttributes BusinessMessageRejectAttributes (0..1)

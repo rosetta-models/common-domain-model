@@ -1,0 +1,17 @@
+{
+  "id" : "test-pack-translate-fix-ml-message-to-trade-state-fixml-exec-rpt",
+  "pipelineId" : "pipeline-translate-fix-ml-message-to-trade-state",
+  "name" : "Fixml exec rpt",
+  "samples" : [ {
+    "id" : "single-stock-buy-order",
+    "name" : "single stock buy order",
+    "inputPath" : "ingest/input/fixml-exec-rpt/single-stock-buy-order.xml",
+    "outputPath" : "ingest/output/fix-ml-message-to-trade-state/fixml-exec-rpt/single-stock-buy-order.json",
+    "assertions" : {
+      "inputPathCount" : 0,
+      "outputPathCount" : 1,
+      "modelValidationFailures" : 4,
+      "runtimeError" : false
+    }
+  } ]
+}

@@ -1,0 +1,18 @@
+<FIXML v="5.0SP2" s="20160515" r="20140101" a="1">
+    <ExecRpt ID="EXEC_ID_1"
+             ExecID="12345"
+             ExecTyp="1"
+             OrdStat="1"
+             Side="1"
+             Qty="100"
+             LastQty="50"
+             LastPx="150.25"
+             AvgPx="150.25"
+             CumQty="50"
+             LeavesQty="50"
+             ClOrdID="CLIENT_ORD_1"
+             TrdDt="2026-04-30"
+             TxnTm="2026-04-30T10:00:00.000Z">
+        <Instrmt Sym="AAPL"/>
+    </ExecRpt>
+</FIXML>

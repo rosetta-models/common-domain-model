@@ -1,0 +1,78 @@
+namespace cdm.fixml.partiesaction.base : < "fixml definition" >
+version "${project.version}"
+
+type PtyRiskLmtChkReq extends PartyRiskLimitCheckRequest_message_t:
+
+type PtyRiskLmtChkReqAck extends PartyRiskLimitCheckRequestAck_message_t:
+
+type PtyActReq extends PartyActionRequest_message_t:
+
+type PtyActRpt extends PartyActionReport_message_t:
+
+type PartyRiskLimitCheckRequestElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    reltdPtyDetl cdm.fixml.components.base.RelatedPartyDetailGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    ord cdm.fixml.components.base.LegOrdGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type PartyRiskLimitCheckRequestAttributes:
+
+    partyRiskLimitCheckRequestAttributes PartyRiskLimitCheckRequestAttributes (0..1)
+
+type PartyRiskLimitCheckRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitCheckRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg142">
+
+    partyRiskLimitCheckRequestElements PartyRiskLimitCheckRequestElements (1..1)
+    partyRiskLimitCheckRequestAttributes PartyRiskLimitCheckRequestAttributes (0..1)
+
+type PartyRiskLimitCheckRequestAckElements:
+
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    reltdPtyDetl cdm.fixml.components.base.RelatedPartyDetailGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    ord cdm.fixml.components.base.LegOrdGrp_Block_t (0..*)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+
+type PartyRiskLimitCheckRequestAckAttributes:
+
+    partyRiskLimitCheckRequestAckAttributes PartyRiskLimitCheckRequestAckAttributes (0..1)
+
+type PartyRiskLimitCheckRequestAck_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyRiskLimitCheckRequestAck can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg143">
+
+    partyRiskLimitCheckRequestAckElements PartyRiskLimitCheckRequestAckElements (1..1)
+    partyRiskLimitCheckRequestAckAttributes PartyRiskLimitCheckRequestAckAttributes (0..1)
+
+type PartyActionRequestElements:
+
+    instrmtScope cdm.fixml.components.base.InstrumentScope_Block_t (0..1)
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    reltdPtyDetl cdm.fixml.components.base.RelatedPartyDetailGrp_Block_t (0..*)
+
+type PartyActionRequestAttributes:
+
+    partyActionRequestAttributes PartyActionRequestAttributes (0..1)
+
+type PartyActionRequest_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyActionRequest can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg144">
+
+    partyActionRequestElements PartyActionRequestElements (1..1)
+    partyActionRequestAttributes PartyActionRequestAttributes (0..1)
+
+type PartyActionReportElements:
+
+    instrmtScope cdm.fixml.components.base.InstrumentScope_Block_t (0..1)
+    reqPty cdm.fixml.components.base.RequestingPartyGrp_Block_t (0..*)
+    pty cdm.fixml.components.base.Parties_Block_t (1..*)
+    reltdPtyDetl cdm.fixml.components.base.RelatedPartyDetailGrp_Block_t (0..*)
+
+type PartyActionReportAttributes:
+
+    partyActionReportAttributes PartyActionReportAttributes (0..1)
+
+type PartyActionReport_message_t extends cdm.fixml.components.base.Abstract_message_t: <"PartyActionReport can be found at   https://www.fixtrading.org/online-specification/business-area-PreTrade#msg145">
+
+    partyActionReportElements PartyActionReportElements (1..1)
+    partyActionReportAttributes PartyActionReportAttributes (0..1)

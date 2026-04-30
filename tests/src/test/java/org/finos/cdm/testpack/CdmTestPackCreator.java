@@ -1,9 +1,15 @@
 package org.finos.cdm.testpack;
 
+import cdm.fixml.components.base.Abstract_message_t;
+import cdm.fixml.order.base.ExecRpt;
+import cdm.ingest.fpml.confirmation.message.functions.Ingest_FixML_MessageToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToWorkflowStep;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.inject.Injector;
+import com.regnosys.rosetta.common.transform.PipelineModel;
+import fpml.consolidated.doc.Document;
 import org.finos.cdm.functions.FunctionCreator;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.runefpml.RuneFpmlModelConfig;
@@ -20,6 +26,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+
+import static com.regnosys.testing.pipeline.PipelineFilter.startsWith;
 
 public class CdmTestPackCreator {
 
@@ -46,9 +55,9 @@ public class CdmTestPackCreator {
             Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
             injector.injectMembers(testPackConfigCreator);
 
-            testPackConfigCreator.run();
+            testPackConfigCreator.runIngest();
 
-            testPackConfigCreator.runFunctionCreators();
+            //testPackConfigCreator.runFunctionCreators();
 
             System.exit(0);
         } catch (Exception e) {
@@ -73,22 +82,26 @@ public class CdmTestPackCreator {
         functionCreator.run();
     }
 
-    private void run() throws IOException {
-        pipelineConfigWriter.writePipelinesAndTestPacks(createTreeConfig());
+    private void runIngest() throws IOException {
+        //pipelineConfigWriter.writePipelinesAndTestPacks(createFpmlConfig());
+        pipelineConfigWriter.writePipelinesAndTestPacks(createFixmlConfig());
     }
 
-    private PipelineTreeConfig createTreeConfig() {
+    private PipelineTreeConfig createFpmlConfig() {
         PipelineTestPackFilter filter = PipelineTestPackFilter.create()
                 .withTestPacksSpecificToFunctions(getEventsTestPackFilter());
 
-        return new PipelineTreeConfig()
-                .starting(TransformType.TRANSLATE, Ingest_FpmlConfirmationToTradeState.class)
-                .starting(TransformType.TRANSLATE, Ingest_FpmlConfirmationToWorkflowStep.class)
-                .withInputSerialisationFormatMap(RuneFpmlModelConfig.TYPE_TO_FORMAT_MAP)
-                .withXmlConfigMap(RuneFpmlModelConfig.TYPE_TO_XML_CONFIG_MAP)
+        return addXMLAndSchemaMap(new PipelineTreeConfig()
+                .withTestPackIdFilter(startsWith("fpml"))
                 .withTestPackFilter(filter)
-                .strictUniqueIds()
-                .withSortJsonPropertiesAlphabetically(false);
+                .starting(TransformType.TRANSLATE, Ingest_FpmlConfirmationToTradeState.class)
+                .starting(TransformType.TRANSLATE, Ingest_FpmlConfirmationToWorkflowStep.class));
+    }
+
+    private PipelineTreeConfig createFixmlConfig() {
+        return addXMLAndSchemaMap(new PipelineTreeConfig()
+                .withTestPackIdFilter(startsWith("fixml"))
+                .starting(TransformType.TRANSLATE, Ingest_FixML_MessageToTradeState.class));
     }
 
     private ImmutableMultimap<String, Class<?>> getEventsTestPackFilter() {
@@ -97,5 +110,30 @@ public class CdmTestPackCreator {
             builder.put(key, Ingest_FpmlConfirmationToWorkflowStep.class);
         }
         return builder.build();
+    }
+
+    private PipelineTreeConfig addXMLAndSchemaMap(PipelineTreeConfig pipelineTreeConfig) {
+        ImmutableMap<Class<?>, String> fixmlTypeToXmlConfigMap = ImmutableMap.<Class<?>, String>builder()
+//                .put(Abstract_message_t.class, "xml-config/fixml-xml-config.json")
+                .put(ExecRpt.class, "xml-config/fixml-xml-config.json")
+                .build();
+        ImmutableMap<Class<?>, PipelineModel.Serialisation.Format> fixmlTypeToFormatMap = ImmutableMap.<Class<?>, PipelineModel.Serialisation.Format>builder()
+//                .put(Abstract_message_t.class, PipelineModel.Serialisation.Format.XML)
+                .put(ExecRpt.class, PipelineModel.Serialisation.Format.XML)
+                .build();
+
+        return pipelineTreeConfig
+                .withXmlConfigMap(mergeMaps(fixmlTypeToXmlConfigMap, RuneFpmlModelConfig.TYPE_TO_XML_CONFIG_MAP))
+                .withXmlSchemaMap(RuneFpmlModelConfig.TYPE_TO_SCHEMA_MAP)
+                .withInputSerialisationFormatMap(mergeMaps(fixmlTypeToFormatMap, RuneFpmlModelConfig.TYPE_TO_FORMAT_MAP))
+                .withSortJsonPropertiesAlphabetically(false)
+                .strictUniqueIds();
+    }
+
+    private static <T> ImmutableMap<Class<?>, T> mergeMaps(Map<Class<?>, ? extends T> map1, Map<Class<?>, ? extends T> map2) {
+        return ImmutableMap.<Class<?>, T>builder()
+                .putAll(map1)
+                .putAll(map2)
+                .build();
     }
 }

@@ -1,0 +1,5976 @@
+namespace cdm.fixml.fields.impl : < "fixml definition" >
+version "${project.version}"
+
+enum SecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum IOIQty_t:
+
+    S
+    M
+    L
+    U
+
+enum SettlType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    B
+    C
+
+enum AllocRejCode_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _99 displayName "99"
+
+enum CxlRejReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _18 displayName "18"
+    _99 displayName "99"
+
+enum OrdRejReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _99 displayName "99"
+
+enum QuoteCancelType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+
+enum QuoteRejectReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _99 displayName "99"
+
+enum UnderlyingSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum SecurityTradingStatus_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+
+enum HaltReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+
+enum TradingSessionID_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+
+enum TradSesStatus_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+
+enum QuoteEntryRejectReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _99 displayName "99"
+
+enum ExecRestatementReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _99 displayName "99"
+
+enum SecurityAltIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingSecurityAltIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum DistribPaymentMethod_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _999 displayName "999"
+
+enum PaymentMethod_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _999 displayName "999"
+
+enum TaxAdvantageType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _999 displayName "999"
+
+enum RegistRejReasonCode_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _99 displayName "99"
+
+enum MassCancelRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _99 displayName "99"
+
+enum TradSesStatusRejReason_t:
+
+    _1 displayName "1"
+    _99 displayName "99"
+
+enum ClearingInstruction_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+
+enum MassStatusReqType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+
+enum LegSettlType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    B
+    C
+
+enum LegSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegSecurityAltIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum TradingSessionSubID_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _99 displayName "99"
+
+enum QuoteRequestRejectReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _99 displayName "99"
+
+enum AcctIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _99 displayName "99"
+
+enum LegIOIQty_t:
+
+    S
+    M
+    L
+    U
+
+enum PosMaintResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _99 displayName "99"
+
+enum PosReqResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _99 displayName "99"
+
+enum TradeRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum TradeReportRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _99 displayName "99"
+
+enum BenchmarkSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum ConfirmRejReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _99 displayName "99"
+
+enum SettlPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum SettlInstReqRejCode_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _99 displayName "99"
+
+enum AllocCancReplaceReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _99 displayName "99"
+
+enum PartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum NestedPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum Nested2PartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum TrdType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _22 displayName "22"
+    _23 displayName "23"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+
+enum TrdSubType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+
+enum TargetStrategy_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum EventType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _99 displayName "99"
+
+enum InstrAttribType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _99 displayName "99"
+
+enum CPProgram_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _99 displayName "99"
+
+enum UnderlyingCPProgram_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _99 displayName "99"
+
+enum CollAsgnRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _99 displayName "99"
+
+enum CollInquiryResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum Nested3PartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum InstrumentPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum UnderlyingInstrumentPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum PegSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum TriggerSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum TriggerTradingSessionID_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+
+enum TriggerTradingSessionSubID_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _99 displayName "99"
+
+enum RootPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum SecurityTradingEvent_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+
+enum MDSecSizeType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum ExerciseStyle_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _99 displayName "99"
+
+enum DerivativeSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum DerivativeSecurityAltIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum DerivativeInstrumentPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum TradSesEvent_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum MassActionScope_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+
+enum MassActionRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _99 displayName "99"
+
+enum ContingencyType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+
+enum ListRejectReason_t:
+
+    _0 displayName "0"
+    _2 displayName "2"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _11 displayName "11"
+    _99 displayName "99"
+
+enum SessionStatus_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+
+enum Nested4PartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum OrderDelayUnit_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+
+enum RefOrdIDReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+
+enum FlowScheduleType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum LegFlowScheduleType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum UnderlyingFlowScheduleType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum DerivativeFlowScheduleType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _99 displayName "99"
+
+enum SecurityListType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+
+enum SecurityListTypeSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum NewsCategory_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _99 displayName "99"
+
+enum NewsRefType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum StrikePriceDeterminationMethod_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+
+enum StreamAsgnRejReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _99 displayName "99"
+
+enum RequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _99 displayName "99"
+
+enum PartyRelationship_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+
+enum PartyDetailAltSubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum RiskLimitType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+
+enum InstrumentScopeSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum InstrumentScopeSecurityAltIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum InstrumentScopeSettlType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    B
+    C
+
+enum RelatedPartyDetailSubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum RelatedPartyDetailAltSubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum SecurityClassificationReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+
+enum PosAmtReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+
+enum LegPosAmtReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+
+enum SecurityRejectReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+
+enum LimitAmtType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+
+enum MarginReqmtInqResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _99 displayName "99"
+
+enum MarginAmtType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+
+enum RelatedSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum RequestingPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum PartyDetailSubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum RiskLimitRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _98 displayName "98"
+    _99 displayName "99"
+
+enum EntitlementType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+
+enum OrderEventType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+
+enum OrderEventReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+
+enum AuctionType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+
+enum DisclosureType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+
+enum TradeAllocAmtReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+
+enum PartyDetailRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _98 displayName "98"
+    _99 displayName "99"
+
+enum EntitlementRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _98 displayName "98"
+    _99 displayName "99"
+
+enum TradeMatchRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _99 displayName "99"
+
+enum TradeClearingInstruction_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+
+enum RegulatoryReportType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+
+enum TradeContinuation_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _99 displayName "99"
+
+enum AssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum CouponDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum ConvertibleBondEquityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum SecondaryAssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum UnderlyingCouponDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum UnderlyingObligationIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingEquityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingAssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum LegAssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum LegSecondaryAssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum UnderlyingSecondaryAssetSubClass_t:
+
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _3 displayName "3"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _1 displayName "1"
+    _2 displayName "2"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _8 displayName "8"
+    _47 displayName "47"
+    _48 displayName "48"
+
+enum AttachmentEncodingType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+
+enum NegotiationMethod_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+
+enum LegCouponDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum LegConvertibleBondEquityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegCPProgram_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _99 displayName "99"
+
+enum LegInstrumentPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum EntitlementSubType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+
+enum RelatedToSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum MassOrderRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _99 displayName "99"
+
+enum ExecTypeReason_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+
+enum TargetPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum TransferRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _99 displayName "99"
+
+enum SettlPriceDeterminationMethod_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+
+enum MDStatisticType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+
+enum MDStatisticScope_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+
+enum MDStatisticSubScope_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+
+enum MDStatisticScopeType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+
+enum MDStatisticRequestResult_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _99 displayName "99"
+
+enum CollRptRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _99 displayName "99"
+
+enum RelativeValueType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+
+enum MarketSegmentSubType_t:
+
+    _1 displayName "1"
+
+enum MarketSegmentRelationship_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum SettlSubMethod_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _99 displayName "99"
+
+enum OrderAttributeType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+
+enum UnderlyingFutureIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum MassActionReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _99 displayName "99"
+
+enum NotAffectedReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+
+enum FloatingRateIndexIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum MatchExceptionType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _99 displayName "99"
+
+enum MatchExceptionElementType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+
+enum MatchingDataPointType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+
+enum TradeAggregationRejectReason_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _99 displayName "99"
+
+enum CollateralReinvestmentType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+
+enum FundingSource_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _99 displayName "99"
+
+enum SideCollateralReinvestmentType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+
+enum TertiaryTrdType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _22 displayName "22"
+    _23 displayName "23"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+
+enum AllocGroupSubQtyType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum TradeType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _22 displayName "22"
+    _23 displayName "23"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+
+enum TradeSubType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+
+enum TestMeasureType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+
+enum TestGatewayDetailType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+
+enum IndividualAllocSubQtyType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+
+enum AdditionalTermBondSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum AdditionalTermBondDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum ProvisionOptionExerciseStyle_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _99 displayName "99"
+
+enum ProvisionPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum PaymentType_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _99 displayName "99"
+
+enum PaymentSettlPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum LegPaymentStreamDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum LegPaymentStreamDiscountRateDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum LegProvisionOptionExerciseStyle_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _99 displayName "99"
+
+enum LegProvisionPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum UnderlyingPaymentStreamDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum UnderlyingPaymentStreamDiscountRateDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum PaymentStreamDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum PaymentStreamDiscountRateDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum MarketDisruptionFallbackUnderlierSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum StreamCommoditySecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegAdditionalTermBondSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegAdditionalTermBondDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum LegMarketDisruptionFallbackUnderlierSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegStreamCommoditySecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingAdditionalTermBondSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingMarketDisruptionFallbackUnderlierSecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingStreamCommoditySecurityIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingAdditionalTermBondDayCount_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _99 displayName "99"
+
+enum UnderlyingProvisionOptionExerciseStyle_t:
+
+    _0 displayName "0"
+    _1 displayName "1"
+    _2 displayName "2"
+    _99 displayName "99"
+
+enum UnderlyingProvisionPartySubIDType_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    _10 displayName "10"
+    _11 displayName "11"
+    _12 displayName "12"
+    _13 displayName "13"
+    _14 displayName "14"
+    _15 displayName "15"
+    _16 displayName "16"
+    _17 displayName "17"
+    _18 displayName "18"
+    _19 displayName "19"
+    _20 displayName "20"
+    _21 displayName "21"
+    _22 displayName "22"
+    _23 displayName "23"
+    _24 displayName "24"
+    _25 displayName "25"
+    _26 displayName "26"
+    _27 displayName "27"
+    _28 displayName "28"
+    _29 displayName "29"
+    _30 displayName "30"
+    _31 displayName "31"
+    _32 displayName "32"
+    _33 displayName "33"
+    _34 displayName "34"
+    _35 displayName "35"
+    _36 displayName "36"
+    _37 displayName "37"
+    _38 displayName "38"
+    _39 displayName "39"
+    _40 displayName "40"
+    _41 displayName "41"
+    _42 displayName "42"
+    _43 displayName "43"
+    _44 displayName "44"
+    _45 displayName "45"
+    _46 displayName "46"
+    _47 displayName "47"
+    _48 displayName "48"
+    _49 displayName "49"
+    _50 displayName "50"
+    _51 displayName "51"
+    _52 displayName "52"
+    _53 displayName "53"
+    _54 displayName "54"
+    _55 displayName "55"
+    _56 displayName "56"
+    _57 displayName "57"
+    _58 displayName "58"
+    _59 displayName "59"
+    _60 displayName "60"
+    _61 displayName "61"
+    _62 displayName "62"
+    _63 displayName "63"
+    _64 displayName "64"
+    _65 displayName "65"
+    _66 displayName "66"
+    _67 displayName "67"
+    _68 displayName "68"
+    _69 displayName "69"
+    _70 displayName "70"
+    _71 displayName "71"
+    _72 displayName "72"
+    _73 displayName "73"
+    _74 displayName "74"
+    _75 displayName "75"
+    _76 displayName "76"
+    _77 displayName "77"
+    _78 displayName "78"
+    _79 displayName "79"
+    _80 displayName "80"
+    _81 displayName "81"
+    _82 displayName "82"
+    _83 displayName "83"
+    _84 displayName "84"
+    _85 displayName "85"
+    _86 displayName "86"
+    _87 displayName "87"
+
+enum LegPaymentStreamRateIndexIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum PaymentStreamRateIndexIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingPaymentStreamRateIndexIDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum PaymentStreamRateIndex2IDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum LegPaymentStreamRateIndex2IDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y
+
+enum UnderlyingPaymentStreamRateIndex2IDSource_t:
+
+    _1 displayName "1"
+    _2 displayName "2"
+    _3 displayName "3"
+    _4 displayName "4"
+    _5 displayName "5"
+    _6 displayName "6"
+    _7 displayName "7"
+    _8 displayName "8"
+    _9 displayName "9"
+    A
+    B
+    C
+    D
+    ^E
+    F
+    G
+    H
+    I
+    J
+    K
+    L
+    M
+    N
+    P
+    Q
+    R
+    S
+    T
+    U
+    V
+    W
+    X
+    Y

@@ -1,0 +1,4519 @@
+namespace cdm.fixml.fields.impl : < "fixml definition" >
+version "${project.version}"
+
+typeAlias AdvSide_t: cdm.fixml.fields.base.AdvSide_enum_t
+
+typeAlias AdvTransType_t: cdm.fixml.fields.base.AdvTransType_enum_t
+
+typeAlias CommType_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias ExecInst_t: cdm.fixml.fields.base.ExecInst_enum_t
+
+typeAlias HandlInst_t: cdm.fixml.fields.base.HandlInst_enum_t
+
+typeAlias IOIQltyInd_t: cdm.fixml.fields.base.IOIQltyInd_enum_t
+
+typeAlias IOITransType_t: cdm.fixml.fields.base.IOITransType_enum_t
+
+typeAlias LastCapacity_t: cdm.fixml.fields.base.LastCapacity_enum_t
+
+typeAlias MsgType_t: cdm.fixml.fields.base.MsgType_enum_t
+
+typeAlias OrdStatus_t: cdm.fixml.fields.base.OrdStatus_enum_t
+
+typeAlias OrdType_t: cdm.fixml.fields.base.OrdType_enum_t
+
+typeAlias PossDupFlag_t: cdm.fixml.fields.base.PossDupFlag_enum_t
+
+typeAlias Side_t: cdm.fixml.fields.base.Side_enum_t
+
+typeAlias TimeInForce_t: cdm.fixml.fields.base.TimeInForce_enum_t
+
+typeAlias Urgency_t: cdm.fixml.fields.base.Urgency_enum_t
+
+typeAlias SymbolSfx_t: cdm.fixml.fields.base.SymbolSfx_enum_t
+
+typeAlias AllocTransType_t: cdm.fixml.fields.base.AllocTransType_enum_t
+
+typeAlias PositionEffect_t: cdm.fixml.fields.base.PositionEffect_enum_t
+
+typeAlias ProcessCode_t: cdm.fixml.fields.base.ProcessCode_enum_t
+
+typeAlias AllocStatus_t: cdm.fixml.fields.base.AllocStatus_enum_t
+
+typeAlias EmailType_t: cdm.fixml.fields.base.EmailType_enum_t
+
+typeAlias PossResend_t: cdm.fixml.fields.base.PossResend_enum_t
+
+typeAlias IOIQualifier_t: cdm.fixml.fields.base.IOIQualifier_enum_t
+
+typeAlias ReportToExch_t: cdm.fixml.fields.base.ReportToExch_enum_t
+
+typeAlias LocateReqd_t: cdm.fixml.fields.base.LocateReqd_enum_t
+
+typeAlias ForexReq_t: cdm.fixml.fields.base.ForexReq_enum_t
+
+typeAlias DKReason_t: cdm.fixml.fields.base.DKReason_enum_t
+
+typeAlias IOINaturalFlag_t: cdm.fixml.fields.base.IOINaturalFlag_enum_t
+
+typeAlias MiscFeeType_t: cdm.fixml.fields.base.MiscFeeType_enum_t
+
+typeAlias ExecType_t: cdm.fixml.fields.base.ExecType_enum_t
+
+typeAlias SettlCurrFxRateCalc_t: cdm.fixml.fields.base.SettlCurrFxRateCalc_enum_t
+
+typeAlias SettlInstMode_t: cdm.fixml.fields.base.SettlInstMode_enum_t
+
+typeAlias SettlInstTransType_t: cdm.fixml.fields.base.SettlInstTransType_enum_t
+
+typeAlias SettlInstSource_t: cdm.fixml.fields.base.SettlInstSource_enum_t
+
+typeAlias SecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias StandInstDbType_t: cdm.fixml.fields.base.StandInstDbType_enum_t
+
+typeAlias SettlDeliveryType_t: cdm.fixml.fields.base.SettlDeliveryType_enum_t
+
+typeAlias AllocLinkType_t: cdm.fixml.fields.base.AllocLinkType_enum_t
+
+typeAlias PutOrCall_t: cdm.fixml.fields.base.PutOrCall_enum_t
+
+typeAlias CoveredOrUncovered_t: cdm.fixml.fields.base.CoveredOrUncovered_enum_t
+
+typeAlias NotifyBrokerOfCredit_t: cdm.fixml.fields.base.NotifyBrokerOfCredit_enum_t
+
+typeAlias AllocHandlInst_t: cdm.fixml.fields.base.AllocHandlInst_enum_t
+
+typeAlias RoutingType_t: cdm.fixml.fields.base.RoutingType_enum_t
+
+typeAlias BenchmarkCurveName_t: cdm.fixml.fields.base.BenchmarkCurveName_enum_t
+
+typeAlias StipulationType_t: cdm.fixml.fields.base.StipulationType_enum_t
+
+typeAlias YieldType_t: cdm.fixml.fields.base.YieldType_enum_t
+
+typeAlias TradedFlatSwitch_t: cdm.fixml.fields.base.TradedFlatSwitch_enum_t
+
+typeAlias SubscriptionRequestType_t: cdm.fixml.fields.base.SubscriptionRequestType_enum_t
+
+typeAlias MDUpdateType_t: cdm.fixml.fields.base.MDUpdateType_enum_t
+
+typeAlias AggregatedBook_t: cdm.fixml.fields.base.AggregatedBook_enum_t
+
+typeAlias MDEntryType_t: cdm.fixml.fields.base.MDEntryType_enum_t
+
+typeAlias TickDirection_t: cdm.fixml.fields.base.TickDirection_enum_t
+
+typeAlias QuoteCondition_t: cdm.fixml.fields.base.QuoteCondition_enum_t
+
+typeAlias TradeCondition_t: cdm.fixml.fields.base.TradeCondition_enum_t
+
+typeAlias MDUpdateAction_t: cdm.fixml.fields.base.MDUpdateAction_enum_t
+
+typeAlias MDReqRejReason_t: cdm.fixml.fields.base.MDReqRejReason_enum_t
+
+typeAlias DeleteReason_t: cdm.fixml.fields.base.DeleteReason_enum_t
+
+typeAlias OpenCloseSettlFlag_t: cdm.fixml.fields.base.OpenCloseSettlFlag_enum_t
+
+typeAlias FinancialStatus_t: cdm.fixml.fields.base.FinancialStatus_enum_t
+
+typeAlias CorporateAction_t: cdm.fixml.fields.base.CorporateAction_enum_t
+
+typeAlias QuoteStatus_t: cdm.fixml.fields.base.QuoteStatus_enum_t
+
+typeAlias QuoteResponseLevel_t: cdm.fixml.fields.base.QuoteResponseLevel_enum_t
+
+typeAlias QuoteRequestType_t: cdm.fixml.fields.base.QuoteRequestType_enum_t
+
+typeAlias UnderlyingSecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias UnderlyingSymbolSfx_t: cdm.fixml.fields.base.SymbolSfx_enum_t
+
+typeAlias UnderlyingPutOrCall_t: cdm.fixml.fields.base.PutOrCall_enum_t
+
+typeAlias SecurityRequestType_t: cdm.fixml.fields.base.SecurityRequestType_enum_t
+
+typeAlias SecurityResponseType_t: cdm.fixml.fields.base.SecurityResponseType_enum_t
+
+typeAlias UnsolicitedIndicator_t: cdm.fixml.fields.base.UnsolicitedIndicator_enum_t
+
+typeAlias InViewOfCommon_t: cdm.fixml.fields.base.InViewOfCommon_enum_t
+
+typeAlias DueToRelated_t: cdm.fixml.fields.base.DueToRelated_enum_t
+
+typeAlias Adjustment_t: cdm.fixml.fields.base.Adjustment_enum_t
+
+typeAlias TradSesMethod_t: cdm.fixml.fields.base.TradSesMethod_enum_t
+
+typeAlias TradSesMode_t: cdm.fixml.fields.base.TradSesMode_enum_t
+
+typeAlias RefMsgType_t: cdm.fixml.fields.base.MsgType_enum_t
+
+typeAlias BidRequestTransType_t: cdm.fixml.fields.base.BidRequestTransType_enum_t
+
+typeAlias SolicitedFlag_t: cdm.fixml.fields.base.SolicitedFlag_enum_t
+
+typeAlias BusinessRejectReason_t: cdm.fixml.fields.base.BusinessRejectReason_enum_t
+
+typeAlias MsgDirection_t: cdm.fixml.fields.base.MsgDirection_enum_t
+
+typeAlias DiscretionInst_t: cdm.fixml.fields.base.DiscretionInst_enum_t
+
+typeAlias BidType_t: cdm.fixml.fields.base.BidType_enum_t
+
+typeAlias BidDescriptorType_t: cdm.fixml.fields.base.BidDescriptorType_enum_t
+
+typeAlias SideValueInd_t: cdm.fixml.fields.base.SideValueInd_enum_t
+
+typeAlias LiquidityIndType_t: cdm.fixml.fields.base.LiquidityIndType_enum_t
+
+typeAlias ExchangeForPhysical_t: cdm.fixml.fields.base.ExchangeForPhysical_enum_t
+
+typeAlias ProgRptReqs_t: cdm.fixml.fields.base.ProgRptReqs_enum_t
+
+typeAlias IncTaxInd_t: cdm.fixml.fields.base.IncTaxInd_enum_t
+
+typeAlias BidTradeType_t: cdm.fixml.fields.base.BidTradeType_enum_t
+
+typeAlias BasisPxType_t: cdm.fixml.fields.base.BasisPxType_enum_t
+
+typeAlias PriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias GTBookingInst_t: cdm.fixml.fields.base.GTBookingInst_enum_t
+
+typeAlias ListStatusType_t: cdm.fixml.fields.base.ListStatusType_enum_t
+
+typeAlias NetGrossInd_t: cdm.fixml.fields.base.NetGrossInd_enum_t
+
+typeAlias ListOrderStatus_t: cdm.fixml.fields.base.ListOrderStatus_enum_t
+
+typeAlias ListExecInstType_t: cdm.fixml.fields.base.ListExecInstType_enum_t
+
+typeAlias CxlRejResponseTo_t: cdm.fixml.fields.base.CxlRejResponseTo_enum_t
+
+typeAlias MultiLegReportingType_t: cdm.fixml.fields.base.MultiLegReportingType_enum_t
+
+typeAlias PartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias PartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias Product_t: cdm.fixml.fields.base.Product_enum_t
+
+typeAlias UnderlyingProduct_t: cdm.fixml.fields.base.Product_enum_t
+
+typeAlias RoundingDirection_t: cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias CancellationRights_t: cdm.fixml.fields.base.CancellationRights_enum_t
+
+typeAlias MoneyLaunderingStatus_t: cdm.fixml.fields.base.MoneyLaunderingStatus_enum_t
+
+typeAlias ExecPriceType_t: cdm.fixml.fields.base.ExecPriceType_enum_t
+
+typeAlias TradeReportTransType_t: cdm.fixml.fields.base.TradeReportTransType_enum_t
+
+typeAlias FundRenewWaiv_t: cdm.fixml.fields.base.FundRenewWaiv_enum_t
+
+typeAlias RegistStatus_t: cdm.fixml.fields.base.RegistStatus_enum_t
+
+typeAlias RegistTransType_t: cdm.fixml.fields.base.RegistTransType_enum_t
+
+typeAlias OwnershipType_t: cdm.fixml.fields.base.OwnershipType_enum_t
+
+typeAlias ContAmtType_t: cdm.fixml.fields.base.ContAmtType_enum_t
+
+typeAlias OwnerType_t: cdm.fixml.fields.base.OwnerType_enum_t
+
+typeAlias NestedPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias OrderCapacity_t: cdm.fixml.fields.base.OrderCapacity_enum_t
+
+typeAlias OrderRestrictions_t: cdm.fixml.fields.base.OrderRestrictions_enum_t
+
+typeAlias MassCancelRequestType_t: cdm.fixml.fields.base.MassCancelRequestType_enum_t
+
+typeAlias MassCancelResponse_t: cdm.fixml.fields.base.MassCancelResponse_enum_t
+
+typeAlias QuoteType_t: cdm.fixml.fields.base.QuoteType_enum_t
+
+typeAlias NestedPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias CashMargin_t: cdm.fixml.fields.base.CashMargin_enum_t
+
+typeAlias Scope_t: cdm.fixml.fields.base.Scope_enum_t
+
+typeAlias MDImplicitDelete_t: cdm.fixml.fields.base.MDImplicitDelete_enum_t
+
+typeAlias CrossType_t: cdm.fixml.fields.base.CrossType_enum_t
+
+typeAlias CrossPrioritization_t: cdm.fixml.fields.base.CrossPrioritization_enum_t
+
+typeAlias SecurityListRequestType_t: cdm.fixml.fields.base.SecurityListRequestType_enum_t
+
+typeAlias SecurityRequestResult_t: cdm.fixml.fields.base.SecurityRequestResult_enum_t
+
+typeAlias MultiLegRptTypeReq_t: cdm.fixml.fields.base.MultiLegRptTypeReq_enum_t
+
+typeAlias LegPositionEffect_t: cdm.fixml.fields.base.PositionEffect_enum_t
+
+typeAlias LegCoveredOrUncovered_t: cdm.fixml.fields.base.CoveredOrUncovered_enum_t
+
+typeAlias TradeRequestType_t: cdm.fixml.fields.base.TradeRequestType_enum_t
+
+typeAlias PreviouslyReported_t: cdm.fixml.fields.base.PreviouslyReported_enum_t
+
+typeAlias MatchStatus_t: cdm.fixml.fields.base.MatchStatus_enum_t
+
+typeAlias MatchType_t: cdm.fixml.fields.base.MatchType_enum_t
+
+typeAlias OddLot_t: cdm.fixml.fields.base.OddLot_enum_t
+
+typeAlias AccountType_t: cdm.fixml.fields.base.AccountType_enum_t
+
+typeAlias CustOrderCapacity_t: cdm.fixml.fields.base.CustOrderCapacity_enum_t
+
+typeAlias DayBookingInst_t: cdm.fixml.fields.base.DayBookingInst_enum_t
+
+typeAlias BookingUnit_t: cdm.fixml.fields.base.BookingUnit_enum_t
+
+typeAlias PreallocMethod_t: cdm.fixml.fields.base.PreallocMethod_enum_t
+
+typeAlias LegSymbolSfx_t: cdm.fixml.fields.base.SymbolSfx_enum_t
+
+typeAlias LegProduct_t: cdm.fixml.fields.base.Product_enum_t
+
+typeAlias LegSecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias LegSide_t: cdm.fixml.fields.base.Side_enum_t
+
+typeAlias AllocType_t: cdm.fixml.fields.base.AllocType_enum_t
+
+typeAlias ClearingFeeIndicator_t: cdm.fixml.fields.base.ClearingFeeIndicator_enum_t
+
+typeAlias WorkingIndicator_t: cdm.fixml.fields.base.WorkingIndicator_enum_t
+
+typeAlias PriorityIndicator_t: cdm.fixml.fields.base.PriorityIndicator_enum_t
+
+typeAlias LegalConfirm_t: cdm.fixml.fields.base.LegalConfirm_enum_t
+
+typeAlias AllocAcctIDSource_t: cdm.fixml.fields.base.AcctIDSource_enum_t
+
+typeAlias BenchmarkPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias ConfirmStatus_t: cdm.fixml.fields.base.ConfirmStatus_enum_t
+
+typeAlias ConfirmTransType_t: cdm.fixml.fields.base.ConfirmTransType_enum_t
+
+typeAlias DeliveryForm_t: cdm.fixml.fields.base.DeliveryForm_enum_t
+
+typeAlias LegAllocAcctIDSource_t: cdm.fixml.fields.base.AcctIDSource_enum_t
+
+typeAlias LegBenchmarkCurveName_t: cdm.fixml.fields.base.BenchmarkCurveName_enum_t
+
+typeAlias LegBenchmarkPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias LegPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias LegStipulationType_t: cdm.fixml.fields.base.StipulationType_enum_t
+
+typeAlias LegSwapType_t: cdm.fixml.fields.base.LegSwapType_enum_t
+
+typeAlias QuotePriceType_t: cdm.fixml.fields.base.QuotePriceType_enum_t
+
+typeAlias QuoteRespType_t: cdm.fixml.fields.base.QuoteRespType_enum_t
+
+typeAlias QuoteQualifier_t: cdm.fixml.fields.base.IOIQualifier_enum_t
+
+typeAlias YieldRedemptionPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias PosType_t: cdm.fixml.fields.base.PosType_enum_t
+
+typeAlias PosQtyStatus_t: cdm.fixml.fields.base.PosQtyStatus_enum_t
+
+typeAlias PosAmtType_t: cdm.fixml.fields.base.PosAmtType_enum_t
+
+typeAlias PosTransType_t: cdm.fixml.fields.base.PosTransType_enum_t
+
+typeAlias PosMaintAction_t: cdm.fixml.fields.base.PosMaintAction_enum_t
+
+typeAlias SettlSessID_t: cdm.fixml.fields.base.SettlSessID_enum_t
+
+typeAlias AdjustmentType_t: cdm.fixml.fields.base.AdjustmentType_enum_t
+
+typeAlias PosMaintStatus_t: cdm.fixml.fields.base.PosMaintStatus_enum_t
+
+typeAlias PosReqType_t: cdm.fixml.fields.base.PosReqType_enum_t
+
+typeAlias ResponseTransportType_t: cdm.fixml.fields.base.ResponseTransportType_enum_t
+
+typeAlias PosReqStatus_t: cdm.fixml.fields.base.PosReqStatus_enum_t
+
+typeAlias SettlPriceType_t: cdm.fixml.fields.base.SettlPriceType_enum_t
+
+typeAlias UnderlyingSettlPriceType_t: cdm.fixml.fields.base.SettlPriceType_enum_t
+
+typeAlias AssignmentMethod_t: cdm.fixml.fields.base.AssignmentMethod_enum_t
+
+typeAlias ExerciseMethod_t: cdm.fixml.fields.base.ExerciseMethod_enum_t
+
+typeAlias TradeRequestStatus_t: cdm.fixml.fields.base.TradeRequestStatus_enum_t
+
+typeAlias SideMultiLegReportingType_t:
+    cdm.fixml.fields.base.SideMultiLegReportingType_enum_t
+
+typeAlias Nested2PartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias Nested2PartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias TrdRegTimestampType_t: cdm.fixml.fields.base.TrdRegTimestampType_enum_t
+
+typeAlias ConfirmType_t: cdm.fixml.fields.base.ConfirmType_enum_t
+
+typeAlias BookingType_t: cdm.fixml.fields.base.BookingType_enum_t
+
+typeAlias IndividualAllocRejCode_t: cdm.fixml.fields.base.AllocRejCode_enum_t
+
+typeAlias AllocSettlInstType_t: cdm.fixml.fields.base.AllocSettlInstType_enum_t
+
+typeAlias SettlPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias SettlPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias DlvyInstType_t: cdm.fixml.fields.base.DlvyInstType_enum_t
+
+typeAlias TerminationType_t: cdm.fixml.fields.base.TerminationType_enum_t
+
+typeAlias AllocReportType_t: cdm.fixml.fields.base.AllocReportType_enum_t
+
+typeAlias AllocAccountType_t: cdm.fixml.fields.base.AllocAccountType_enum_t
+
+typeAlias AllocIntermedReqType_t: cdm.fixml.fields.base.AllocIntermedReqType_enum_t
+
+typeAlias ApplQueueResolution_t: cdm.fixml.fields.base.ApplQueueResolution_enum_t
+
+typeAlias ApplQueueAction_t: cdm.fixml.fields.base.ApplQueueAction_enum_t
+
+typeAlias AvgPxIndicator_t: cdm.fixml.fields.base.AvgPxIndicator_enum_t
+
+typeAlias TradeAllocIndicator_t: cdm.fixml.fields.base.TradeAllocIndicator_enum_t
+
+typeAlias ExpirationCycle_t: cdm.fixml.fields.base.ExpirationCycle_enum_t
+
+typeAlias PegMoveType_t: cdm.fixml.fields.base.PegMoveType_enum_t
+
+typeAlias PegOffsetType_t: cdm.fixml.fields.base.PegOffsetType_enum_t
+
+typeAlias PegLimitType_t: cdm.fixml.fields.base.PegLimitType_enum_t
+
+typeAlias PegRoundDirection_t: cdm.fixml.fields.base.PegRoundDirection_enum_t
+
+typeAlias PegScope_t: cdm.fixml.fields.base.PegScope_enum_t
+
+typeAlias DiscretionMoveType_t: cdm.fixml.fields.base.DiscretionMoveType_enum_t
+
+typeAlias DiscretionOffsetType_t: cdm.fixml.fields.base.DiscretionOffsetType_enum_t
+
+typeAlias DiscretionLimitType_t: cdm.fixml.fields.base.DiscretionLimitType_enum_t
+
+typeAlias DiscretionRoundDirection_t: cdm.fixml.fields.base.DiscretionRoundDirection_enum_t
+
+typeAlias DiscretionScope_t: cdm.fixml.fields.base.DiscretionScope_enum_t
+
+typeAlias LastLiquidityInd_t: cdm.fixml.fields.base.LastLiquidityInd_enum_t
+
+typeAlias PublishTrdIndicator_t: cdm.fixml.fields.base.PublishTrdIndicator_enum_t
+
+typeAlias ShortSaleReason_t: cdm.fixml.fields.base.ShortSaleReason_enum_t
+
+typeAlias QtyType_t: cdm.fixml.fields.base.QtyType_enum_t
+
+typeAlias SecondaryTrdType_t: cdm.fixml.fields.base.TrdType_enum_t
+
+typeAlias TradeReportType_t: cdm.fixml.fields.base.TradeReportType_enum_t
+
+typeAlias AllocNoOrdersType_t: cdm.fixml.fields.base.AllocNoOrdersType_enum_t
+
+typeAlias UnderlyingStipType_t: cdm.fixml.fields.base.StipulationType_enum_t
+
+typeAlias MiscFeeBasis_t: cdm.fixml.fields.base.MiscFeeBasis_enum_t
+
+typeAlias LastFragment_t: cdm.fixml.fields.base.LastFragment_enum_t
+
+typeAlias CollAsgnReason_t: cdm.fixml.fields.base.CollAsgnReason_enum_t
+
+typeAlias CollInquiryQualifier_t: cdm.fixml.fields.base.CollInquiryQualifier_enum_t
+
+typeAlias CollAsgnTransType_t: cdm.fixml.fields.base.CollAsgnTransType_enum_t
+
+typeAlias CollAsgnRespType_t: cdm.fixml.fields.base.CollAsgnRespType_enum_t
+
+typeAlias CollStatus_t: cdm.fixml.fields.base.CollStatus_enum_t
+
+typeAlias LastRptRequested_t: cdm.fixml.fields.base.LastRptRequested_enum_t
+
+typeAlias DeliveryType_t: cdm.fixml.fields.base.DeliveryType_enum_t
+
+typeAlias UserRequestType_t: cdm.fixml.fields.base.UserRequestType_enum_t
+
+typeAlias UserStatus_t: cdm.fixml.fields.base.UserStatus_enum_t
+
+typeAlias StatusValue_t: cdm.fixml.fields.base.StatusValue_enum_t
+
+typeAlias NetworkRequestType_t: cdm.fixml.fields.base.NetworkRequestType_enum_t
+
+typeAlias NetworkStatusResponseType_t:
+    cdm.fixml.fields.base.NetworkStatusResponseType_enum_t
+
+typeAlias TrdRptStatus_t: cdm.fixml.fields.base.TrdRptStatus_enum_t
+
+typeAlias AffirmStatus_t: cdm.fixml.fields.base.AffirmStatus_enum_t
+
+typeAlias CollAction_t: cdm.fixml.fields.base.CollAction_enum_t
+
+typeAlias CollInquiryStatus_t: cdm.fixml.fields.base.CollInquiryStatus_enum_t
+
+typeAlias Nested3PartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias Nested3PartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias StrategyParameterType_t: cdm.fixml.fields.base.StrategyParameterType_enum_t
+
+typeAlias SecurityStatus_t: cdm.fixml.fields.base.SecurityStatus_enum_t
+
+typeAlias UnderlyingCashType_t: cdm.fixml.fields.base.UnderlyingCashType_enum_t
+
+typeAlias UnderlyingSettlementType_t: cdm.fixml.fields.base.UnderlyingSettlementType_enum_t
+
+typeAlias SecurityUpdateAction_t: cdm.fixml.fields.base.SecurityUpdateAction_enum_t
+
+typeAlias ExpirationQtyType_t: cdm.fixml.fields.base.ExpirationQtyType_enum_t
+
+typeAlias IndividualAllocType_t: cdm.fixml.fields.base.IndividualAllocType_enum_t
+
+typeAlias UnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias TimeUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias UnderlyingUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingTimeUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias LegTimeUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias AllocMethod_t: cdm.fixml.fields.base.AllocMethod_enum_t
+
+typeAlias SideTrdSubType_t: cdm.fixml.fields.base.TrdSubType_enum_t
+
+typeAlias SideTrdRegTimestampType_t: cdm.fixml.fields.base.TrdRegTimestampType_enum_t
+
+typeAlias AsOfIndicator_t: cdm.fixml.fields.base.AsOfIndicator_enum_t
+
+typeAlias MDBookType_t: cdm.fixml.fields.base.MDBookType_enum_t
+
+typeAlias MDOriginType_t: cdm.fixml.fields.base.MDOriginType_enum_t
+
+typeAlias CustOrderHandlingInst_t: cdm.fixml.fields.base.CustOrderHandlingInst_enum_t
+
+typeAlias OrderHandlingInstSource_t: cdm.fixml.fields.base.OrderHandlingInstSource_enum_t
+
+typeAlias DeskType_t: cdm.fixml.fields.base.DeskType_enum_t
+
+typeAlias DeskTypeSource_t: cdm.fixml.fields.base.DeskTypeSource_enum_t
+
+typeAlias DeskOrderHandlingInst_t: cdm.fixml.fields.base.CustOrderHandlingInst_enum_t
+
+typeAlias ExecAckStatus_t: cdm.fixml.fields.base.ExecAckStatus_enum_t
+
+typeAlias UnderlyingSettlMethod_t: cdm.fixml.fields.base.SettlMethod_enum_t
+
+typeAlias CollApplType_t: cdm.fixml.fields.base.CollApplType_enum_t
+
+typeAlias UnderlyingFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias AllocPositionEffect_t: cdm.fixml.fields.base.AllocPositionEffect_enum_t
+
+typeAlias DealingCapacity_t: cdm.fixml.fields.base.DealingCapacity_enum_t
+
+typeAlias InstrmtAssignmentMethod_t: cdm.fixml.fields.base.InstrmtAssignmentMethod_enum_t
+
+typeAlias InstrumentPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias InstrumentPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias AggressorIndicator_t: cdm.fixml.fields.base.AggressorIndicator_enum_t
+
+typeAlias UnderlyingInstrumentPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias UnderlyingInstrumentPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias MDQuoteType_t: cdm.fixml.fields.base.QuoteType_enum_t
+
+typeAlias RefOrderIDSource_t: cdm.fixml.fields.base.RefOrderIDSource_enum_t
+
+typeAlias DisplayWhen_t: cdm.fixml.fields.base.DisplayWhen_enum_t
+
+typeAlias DisplayMethod_t: cdm.fixml.fields.base.DisplayMethod_enum_t
+
+typeAlias PriceProtectionScope_t: cdm.fixml.fields.base.PriceProtectionScope_enum_t
+
+typeAlias LotType_t: cdm.fixml.fields.base.LotType_enum_t
+
+typeAlias PegPriceType_t: cdm.fixml.fields.base.PegPriceType_enum_t
+
+typeAlias TriggerType_t: cdm.fixml.fields.base.TriggerType_enum_t
+
+typeAlias TriggerAction_t: cdm.fixml.fields.base.TriggerAction_enum_t
+
+typeAlias TriggerPriceType_t: cdm.fixml.fields.base.TriggerPriceType_enum_t
+
+typeAlias TriggerPriceTypeScope_t: cdm.fixml.fields.base.TriggerPriceTypeScope_enum_t
+
+typeAlias TriggerPriceDirection_t: cdm.fixml.fields.base.TriggerPriceDirection_enum_t
+
+typeAlias TriggerOrderType_t: cdm.fixml.fields.base.TriggerOrderType_enum_t
+
+typeAlias OrderCategory_t: cdm.fixml.fields.base.OrderCategory_enum_t
+
+typeAlias RootPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias RootPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias TradeHandlingInstr_t: cdm.fixml.fields.base.TradeHandlingInstr_enum_t
+
+typeAlias OrigTradeHandlingInstr_t: cdm.fixml.fields.base.TradeHandlingInstr_enum_t
+
+typeAlias ApplVerID_t: cdm.fixml.fields.base.ApplVerID_enum_t
+
+typeAlias RefApplVerID_t: cdm.fixml.fields.base.ApplVerID_enum_t
+
+typeAlias ExDestinationIDSource_t: cdm.fixml.fields.base.ExDestinationIDSource_enum_t
+
+typeAlias DefaultApplVerID_t: cdm.fixml.fields.base.ApplVerID_enum_t
+
+typeAlias ImpliedMarketIndicator_t: cdm.fixml.fields.base.ImpliedMarketIndicator_enum_t
+
+typeAlias SettlObligMode_t: cdm.fixml.fields.base.SettlObligMode_enum_t
+
+typeAlias SettlObligTransType_t: cdm.fixml.fields.base.SettlObligTransType_enum_t
+
+typeAlias SettlObligSource_t: cdm.fixml.fields.base.SettlObligSource_enum_t
+
+typeAlias QuoteEntryStatus_t: cdm.fixml.fields.base.QuoteEntryStatus_enum_t
+
+typeAlias PrivateQuote_t: cdm.fixml.fields.base.PrivateQuote_enum_t
+
+typeAlias RespondentType_t: cdm.fixml.fields.base.RespondentType_enum_t
+
+typeAlias StatsType_t: cdm.fixml.fields.base.StatsType_enum_t
+
+typeAlias PriceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias SettlMethod_t: cdm.fixml.fields.base.SettlMethod_enum_t
+
+typeAlias PriceQuoteMethod_t: cdm.fixml.fields.base.PriceQuoteMethod_enum_t
+
+typeAlias ValuationMethod_t: cdm.fixml.fields.base.ValuationMethod_enum_t
+
+typeAlias ListMethod_t: cdm.fixml.fields.base.ListMethod_enum_t
+
+typeAlias TickRuleType_t: cdm.fixml.fields.base.TickRuleType_enum_t
+
+typeAlias NestedInstrAttribType_t: cdm.fixml.fields.base.InstrAttribType_enum_t
+
+typeAlias DerivativeSymbolSfx_t: cdm.fixml.fields.base.SymbolSfx_enum_t
+
+typeAlias CommUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DerivativeProduct_t: cdm.fixml.fields.base.Product_enum_t
+
+typeAlias DerivativeSecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias DerivativeInstrmtAssignmentMethod_t:
+    cdm.fixml.fields.base.InstrmtAssignmentMethod_enum_t
+
+typeAlias DerivativeSecurityStatus_t: cdm.fixml.fields.base.SecurityStatus_enum_t
+
+typeAlias DerivativeUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DerivativeTimeUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias DerivativeEventType_t: cdm.fixml.fields.base.EventType_enum_t
+
+typeAlias DerivativeInstrumentPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias DerivativeInstrumentPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias DerivativeExerciseStyle_t: cdm.fixml.fields.base.ExerciseStyle_enum_t
+
+typeAlias MaturityMonthYearIncrementUnits_t:
+    cdm.fixml.fields.base.MaturityMonthYearIncrementUnits_enum_t
+
+typeAlias MaturityMonthYearFormat_t: cdm.fixml.fields.base.MaturityMonthYearFormat_enum_t
+
+typeAlias StrikeExerciseStyle_t: cdm.fixml.fields.base.ExerciseStyle_enum_t
+
+typeAlias SecondaryPriceLimitType_t: cdm.fixml.fields.base.PriceLimitType_enum_t
+
+typeAlias PriceLimitType_t: cdm.fixml.fields.base.PriceLimitType_enum_t
+
+typeAlias ExecInstValue_t: cdm.fixml.fields.base.ExecInst_enum_t
+
+typeAlias DerivativeInstrAttribType_t: cdm.fixml.fields.base.InstrAttribType_enum_t
+
+typeAlias DerivativePriceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DerivativeSettlMethod_t: cdm.fixml.fields.base.SettlMethod_enum_t
+
+typeAlias DerivativePriceQuoteMethod_t: cdm.fixml.fields.base.PriceQuoteMethod_enum_t
+
+typeAlias DerivativeValuationMethod_t: cdm.fixml.fields.base.ValuationMethod_enum_t
+
+typeAlias DerivativeListMethod_t: cdm.fixml.fields.base.ListMethod_enum_t
+
+typeAlias DerivativePutOrCall_t: cdm.fixml.fields.base.PutOrCall_enum_t
+
+typeAlias ListUpdateAction_t: cdm.fixml.fields.base.ListUpdateAction_enum_t
+
+typeAlias TradSesUpdateAction_t: cdm.fixml.fields.base.SecurityUpdateAction_enum_t
+
+typeAlias ApplReqType_t: cdm.fixml.fields.base.ApplReqType_enum_t
+
+typeAlias ApplResponseType_t: cdm.fixml.fields.base.ApplResponseType_enum_t
+
+typeAlias ApplResponseError_t: cdm.fixml.fields.base.ApplResponseError_enum_t
+
+typeAlias LegPutOrCall_t: cdm.fixml.fields.base.PutOrCall_enum_t
+
+typeAlias MassActionType_t: cdm.fixml.fields.base.MassActionType_enum_t
+
+typeAlias MassActionResponse_t: cdm.fixml.fields.base.MassActionResponse_enum_t
+
+typeAlias MultilegModel_t: cdm.fixml.fields.base.MultilegModel_enum_t
+
+typeAlias MultilegPriceMethod_t: cdm.fixml.fields.base.MultilegPriceMethod_enum_t
+
+typeAlias LegExecInst_t: cdm.fixml.fields.base.ExecInst_enum_t
+
+typeAlias TrdRepPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias TradePublishIndicator_t: cdm.fixml.fields.base.TradePublishIndicator_enum_t
+
+typeAlias MarketUpdateAction_t: cdm.fixml.fields.base.SecurityUpdateAction_enum_t
+
+typeAlias Nested4PartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias Nested4PartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias UnderlyingExerciseStyle_t: cdm.fixml.fields.base.ExerciseStyle_enum_t
+
+typeAlias LegExerciseStyle_t: cdm.fixml.fields.base.ExerciseStyle_enum_t
+
+typeAlias LegPriceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPriceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias ApplReportType_t: cdm.fixml.fields.base.ApplReportType_enum_t
+
+typeAlias VenueType_t: cdm.fixml.fields.base.VenueType_enum_t
+
+typeAlias OrigCustOrderCapacity_t: cdm.fixml.fields.base.OrigCustOrderCapacity_enum_t
+
+typeAlias ModelType_t: cdm.fixml.fields.base.ModelType_enum_t
+
+typeAlias ContractMultiplierUnit_t: cdm.fixml.fields.base.ContractMultiplierUnit_enum_t
+
+typeAlias LegContractMultiplierUnit_t: cdm.fixml.fields.base.ContractMultiplierUnit_enum_t
+
+typeAlias UnderlyingContractMultiplierUnit_t:
+    cdm.fixml.fields.base.ContractMultiplierUnit_enum_t
+
+typeAlias DerivativeContractMultiplierUnit_t:
+    cdm.fixml.fields.base.ContractMultiplierUnit_enum_t
+
+typeAlias FillLiquidityInd_t: cdm.fixml.fields.base.LastLiquidityInd_enum_t
+
+typeAlias SideLiquidityInd_t: cdm.fixml.fields.base.LastLiquidityInd_enum_t
+
+typeAlias RateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias RateSourceType_t: cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias RestructuringType_t: cdm.fixml.fields.base.RestructuringType_enum_t
+
+typeAlias Seniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias UnderlyingRestructuringType_t: cdm.fixml.fields.base.RestructuringType_enum_t
+
+typeAlias UnderlyingSeniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias TargetPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias TargetPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias StrikePriceBoundaryMethod_t:
+    cdm.fixml.fields.base.StrikePriceBoundaryMethod_enum_t
+
+typeAlias UnderlyingPriceDeterminationMethod_t:
+    cdm.fixml.fields.base.UnderlyingPriceDeterminationMethod_enum_t
+
+typeAlias OptPayoutType_t: cdm.fixml.fields.base.OptPayoutType_enum_t
+
+typeAlias ComplexEventType_t: cdm.fixml.fields.base.ComplexEventType_enum_t
+
+typeAlias ComplexEventPriceBoundaryMethod_t:
+    cdm.fixml.fields.base.ComplexEventPriceBoundaryMethod_enum_t
+
+typeAlias ComplexEventPriceTimeType_t:
+    cdm.fixml.fields.base.ComplexEventPriceTimeType_enum_t
+
+typeAlias ComplexEventCondition_t: cdm.fixml.fields.base.ComplexEventCondition_enum_t
+
+typeAlias StreamAsgnReqType_t: cdm.fixml.fields.base.StreamAsgnReqType_enum_t
+
+typeAlias StreamAsgnAckType_t: cdm.fixml.fields.base.StreamAsgnAckType_enum_t
+
+typeAlias RequestedPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias PartyDetailAltIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias TrdAckStatus_t: cdm.fixml.fields.base.TrdAckStatus_enum_t
+
+typeAlias InstrumentScopeOperator_t: cdm.fixml.fields.base.InstrumentScopeOperator_enum_t
+
+typeAlias InstrumentScopeSymbolSfx_t: cdm.fixml.fields.base.SymbolSfx_enum_t
+
+typeAlias InstrumentScopeProduct_t: cdm.fixml.fields.base.Product_enum_t
+
+typeAlias InstrumentScopeSecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias InstrumentScopePutOrCall_t: cdm.fixml.fields.base.PutOrCall_enum_t
+
+typeAlias RelatedPartyDetailIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias RelatedPartyDetailRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias RelatedPartyDetailAltIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias SwapSubClass_t: cdm.fixml.fields.base.SwapSubClass_enum_t
+
+typeAlias LegPosAmtType_t: cdm.fixml.fields.base.PosAmtType_enum_t
+
+typeAlias LegQtyType_t: cdm.fixml.fields.base.QtyType_enum_t
+
+typeAlias SideClearingTradePriceType_t:
+    cdm.fixml.fields.base.SideClearingTradePriceType_enum_t
+
+typeAlias ThrottleStatus_t: cdm.fixml.fields.base.ThrottleStatus_enum_t
+
+typeAlias ThrottleAction_t: cdm.fixml.fields.base.ThrottleAction_enum_t
+
+typeAlias ThrottleType_t: cdm.fixml.fields.base.ThrottleType_enum_t
+
+typeAlias ThrottleTimeUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias StreamAsgnType_t: cdm.fixml.fields.base.StreamAsgnType_enum_t
+
+typeAlias ThrottleMsgType_t: cdm.fixml.fields.base.MsgType_enum_t
+
+typeAlias MatchInst_t: cdm.fixml.fields.base.MatchInst_enum_t
+
+typeAlias TriggerScope_t: cdm.fixml.fields.base.TriggerScope_enum_t
+
+typeAlias MarginReqmtInqQualifier_t: cdm.fixml.fields.base.MarginReqmtInqQualifier_enum_t
+
+typeAlias MarginReqmtRptType_t: cdm.fixml.fields.base.MarginReqmtRptType_enum_t
+
+typeAlias MarginReqmtInqStatus_t: cdm.fixml.fields.base.CollInquiryStatus_enum_t
+
+typeAlias RelatedInstrumentType_t: cdm.fixml.fields.base.RelatedInstrumentType_enum_t
+
+typeAlias RelatedSecurityType_t: cdm.fixml.fields.base.SecurityType_enum_t
+
+typeAlias MarketMakerActivity_t: cdm.fixml.fields.base.MarketMakerActivity_enum_t
+
+typeAlias RequestingPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias RequestingPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias PartyDetailStatus_t: cdm.fixml.fields.base.PartyDetailStatus_enum_t
+
+typeAlias PartyDetailRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias RelatedPartyDetailRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias SecurityMassTradingStatus_t: cdm.fixml.fields.base.SecurityTradingStatus_enum_t
+
+typeAlias SecurityMassTradingEvent_t: cdm.fixml.fields.base.SecurityTradingEvent_enum_t
+
+typeAlias MassHaltReason_t: cdm.fixml.fields.base.HaltReason_enum_t
+
+typeAlias MDSecurityTradingStatus_t: cdm.fixml.fields.base.SecurityTradingStatus_enum_t
+
+typeAlias MDHaltReason_t: cdm.fixml.fields.base.HaltReason_enum_t
+
+typeAlias ThrottleInst_t: cdm.fixml.fields.base.ThrottleInst_enum_t
+
+typeAlias ThrottleCountIndicator_t: cdm.fixml.fields.base.ThrottleCountIndicator_enum_t
+
+typeAlias ShortSaleRestriction_t: cdm.fixml.fields.base.ShortSaleRestriction_enum_t
+
+typeAlias ShortSaleExemptionReason_t: cdm.fixml.fields.base.ShortSaleExemptionReason_enum_t
+
+typeAlias LegShortSaleExemptionReason_t:
+    cdm.fixml.fields.base.ShortSaleExemptionReason_enum_t
+
+typeAlias SideShortSaleExemptionReason_t:
+    cdm.fixml.fields.base.ShortSaleExemptionReason_enum_t
+
+typeAlias PartyDetailIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias PartyDetailRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias StrikeUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias OrderOrigination_t: cdm.fixml.fields.base.OrderOrigination_enum_t
+
+typeAlias AllocationRollupInstruction_t:
+    cdm.fixml.fields.base.AllocationRollupInstruction_enum_t
+
+typeAlias AllocReversalStatus_t: cdm.fixml.fields.base.AllocReversalStatus_enum_t
+
+typeAlias ObligationType_t: cdm.fixml.fields.base.ObligationType_enum_t
+
+typeAlias TradePriceNegotiationMethod_t:
+    cdm.fixml.fields.base.TradePriceNegotiationMethod_enum_t
+
+typeAlias UpfrontPriceType_t: cdm.fixml.fields.base.UpfrontPriceType_enum_t
+
+typeAlias RiskLimitRequestType_t: cdm.fixml.fields.base.RiskLimitRequestType_enum_t
+
+typeAlias RiskLimitRequestStatus_t: cdm.fixml.fields.base.PartyDetailRequestStatus_enum_t
+
+typeAlias RiskLimitStatus_t: cdm.fixml.fields.base.PartyDetailDefinitionStatus_enum_t
+
+typeAlias RiskLimitResult_t: cdm.fixml.fields.base.RiskLimitRequestResult_enum_t
+
+typeAlias RiskLimitAction_t: cdm.fixml.fields.base.RiskLimitAction_enum_t
+
+typeAlias RiskWarningLevelAction_t: cdm.fixml.fields.base.RiskLimitAction_enum_t
+
+typeAlias EntitlementAttribDatatype_t:
+    cdm.fixml.fields.base.EntitlementAttribDatatype_enum_t
+
+typeAlias TradSesControl_t: cdm.fixml.fields.base.TradSesControl_enum_t
+
+typeAlias TradeVolType_t: cdm.fixml.fields.base.TradeVolType_enum_t
+
+typeAlias OrderEventLiquidityIndicator_t: cdm.fixml.fields.base.LastLiquidityInd_enum_t
+
+typeAlias AuctionInstruction_t: cdm.fixml.fields.base.AuctionInstruction_enum_t
+
+typeAlias LockType_t: cdm.fixml.fields.base.LockType_enum_t
+
+typeAlias ReleaseInstruction_t: cdm.fixml.fields.base.ReleaseInstruction_enum_t
+
+typeAlias DisclosureInstruction_t: cdm.fixml.fields.base.DisclosureInstruction_enum_t
+
+typeAlias TradingCapacity_t: cdm.fixml.fields.base.TradingCapacity_enum_t
+
+typeAlias ClearingAccountType_t: cdm.fixml.fields.base.ClearingAccountType_enum_t
+
+typeAlias LegClearingAccountType_t: cdm.fixml.fields.base.ClearingAccountType_enum_t
+
+typeAlias TargetPartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias RelatedPriceSource_t: cdm.fixml.fields.base.RelatedPriceSource_enum_t
+
+typeAlias MinQtyMethod_t: cdm.fixml.fields.base.MinQtyMethod_enum_t
+
+typeAlias Triggered_t: cdm.fixml.fields.base.Triggered_enum_t
+
+typeAlias EventTimeUnit_t: cdm.fixml.fields.base.EventTimeUnit_enum_t
+
+typeAlias ClearedIndicator_t: cdm.fixml.fields.base.ClearedIndicator_enum_t
+
+typeAlias ContractRefPosType_t: cdm.fixml.fields.base.ContractRefPosType_enum_t
+
+typeAlias PositionCapacity_t: cdm.fixml.fields.base.PositionCapacity_enum_t
+
+typeAlias PosQtyUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias TradePriceCondition_t: cdm.fixml.fields.base.TradePriceCondition_enum_t
+
+typeAlias TradeAllocStatus_t: cdm.fixml.fields.base.TradeAllocStatus_enum_t
+
+typeAlias TradeQtyType_t: cdm.fixml.fields.base.TradeQtyType_enum_t
+
+typeAlias TradeAllocAmtType_t: cdm.fixml.fields.base.PosAmtType_enum_t
+
+typeAlias TradeAllocGroupInstruction_t:
+    cdm.fixml.fields.base.TradeAllocGroupInstruction_enum_t
+
+typeAlias OffsetInstruction_t: cdm.fixml.fields.base.OffsetInstruction_enum_t
+
+typeAlias SideAvgPxIndicator_t: cdm.fixml.fields.base.AvgPxIndicator_enum_t
+
+typeAlias RelatedTradeIDSource_t: cdm.fixml.fields.base.RelatedTradeIDSource_enum_t
+
+typeAlias RelatedPositionIDSource_t: cdm.fixml.fields.base.RelatedPositionIDSource_enum_t
+
+typeAlias QuoteAckStatus_t: cdm.fixml.fields.base.QuoteAckStatus_enum_t
+
+typeAlias ValueCheckType_t: cdm.fixml.fields.base.ValueCheckType_enum_t
+
+typeAlias ValueCheckAction_t: cdm.fixml.fields.base.ValueCheckAction_enum_t
+
+typeAlias PartyDetailRequestStatus_t: cdm.fixml.fields.base.PartyDetailRequestStatus_enum_t
+
+typeAlias PartyDetailDefinitionStatus_t:
+    cdm.fixml.fields.base.PartyDetailDefinitionStatus_enum_t
+
+typeAlias PartyDetailDefinitionResult_t:
+    cdm.fixml.fields.base.PartyDetailRequestResult_enum_t
+
+typeAlias EntitlementRequestStatus_t: cdm.fixml.fields.base.PartyDetailRequestStatus_enum_t
+
+typeAlias EntitlementStatus_t: cdm.fixml.fields.base.EntitlementStatus_enum_t
+
+typeAlias EntitlementResult_t: cdm.fixml.fields.base.EntitlementRequestResult_enum_t
+
+typeAlias SettlPriceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias TradeMatchAckStatus_t: cdm.fixml.fields.base.TradeMatchAckStatus_enum_t
+
+typeAlias SideVenueType_t: cdm.fixml.fields.base.VenueType_enum_t
+
+typeAlias RegulatoryTradeIDEvent_t: cdm.fixml.fields.base.RegulatoryTradeIDEvent_enum_t
+
+typeAlias RegulatoryTradeIDSource_t: cdm.fixml.fields.base.RegulatoryTradeIDSource_enum_t
+
+typeAlias RegulatoryTradeIDType_t: cdm.fixml.fields.base.RegulatoryTradeIDType_enum_t
+
+typeAlias AllocRegulatoryTradeIDSource_t:
+    cdm.fixml.fields.base.RegulatoryTradeIDSource_enum_t
+
+typeAlias AllocRegulatoryTradeIDEvent_t: cdm.fixml.fields.base.RegulatoryTradeIDEvent_enum_t
+
+typeAlias AllocRegulatoryTradeIDType_t: cdm.fixml.fields.base.RegulatoryTradeIDType_enum_t
+
+typeAlias ExposureDurationUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias PriceMovementType_t: cdm.fixml.fields.base.PriceMovementType_enum_t
+
+typeAlias ClearingIntention_t: cdm.fixml.fields.base.ClearingIntention_enum_t
+
+typeAlias ConfirmationMethod_t: cdm.fixml.fields.base.ConfirmationMethod_enum_t
+
+typeAlias VerificationMethod_t: cdm.fixml.fields.base.VerificationMethod_enum_t
+
+typeAlias ClearingRequirementException_t:
+    cdm.fixml.fields.base.ClearingRequirementException_enum_t
+
+typeAlias IRSDirection_t: cdm.fixml.fields.base.IRSDirection_enum_t
+
+typeAlias TradeCollateralization_t: cdm.fixml.fields.base.TradeCollateralization_enum_t
+
+typeAlias AssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias SwapClass_t: cdm.fixml.fields.base.SwapClass_enum_t
+
+typeAlias CouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias CouponFrequencyUnit_t: cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LienSeniority_t: cdm.fixml.fields.base.LienSeniority_enum_t
+
+typeAlias LoanFacility_t: cdm.fixml.fields.base.LoanFacility_enum_t
+
+typeAlias ReferenceEntityType_t: cdm.fixml.fields.base.ReferenceEntityType_enum_t
+
+typeAlias SideRegulatoryTradeIDSource_t:
+    cdm.fixml.fields.base.RegulatoryTradeIDSource_enum_t
+
+typeAlias SideRegulatoryTradeIDEvent_t: cdm.fixml.fields.base.RegulatoryTradeIDEvent_enum_t
+
+typeAlias SideRegulatoryTradeIDType_t: cdm.fixml.fields.base.RegulatoryTradeIDType_enum_t
+
+typeAlias SecondaryAssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias BlockTrdAllocIndicator_t: cdm.fixml.fields.base.BlockTrdAllocIndicator_enum_t
+
+typeAlias UnderlyingEventType_t: cdm.fixml.fields.base.EventType_enum_t
+
+typeAlias UnderlyingCouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias UnderlyingCouponFrequencyUnit_t: cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingLienSeniority_t: cdm.fixml.fields.base.LienSeniority_enum_t
+
+typeAlias UnderlyingLoanFacility_t: cdm.fixml.fields.base.LoanFacility_enum_t
+
+typeAlias UnderlyingReferenceEntityType_t: cdm.fixml.fields.base.ReferenceEntityType_enum_t
+
+typeAlias UnderlyingAssignmentMethod_t: cdm.fixml.fields.base.InstrmtAssignmentMethod_enum_t
+
+typeAlias UnderlyingSecurityStatus_t: cdm.fixml.fields.base.SecurityStatus_enum_t
+
+typeAlias UnderlyingObligationType_t: cdm.fixml.fields.base.UnderlyingObligationType_enum_t
+
+typeAlias UnderlyingAssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias UnderlyingSwapClass_t: cdm.fixml.fields.base.SwapClass_enum_t
+
+typeAlias UnderlyingStrikePriceDeterminationMethod_t:
+    cdm.fixml.fields.base.StrikePriceDeterminationMethod_enum_t
+
+typeAlias UnderlyingStrikePriceBoundaryMethod_t:
+    cdm.fixml.fields.base.StrikePriceBoundaryMethod_enum_t
+
+typeAlias UnderlyingOptPayoutType_t: cdm.fixml.fields.base.OptPayoutType_enum_t
+
+typeAlias UnderlyingPriceQuoteMethod_t: cdm.fixml.fields.base.PriceQuoteMethod_enum_t
+
+typeAlias UnderlyingValuationMethod_t: cdm.fixml.fields.base.ValuationMethod_enum_t
+
+typeAlias UnderlyingListMethod_t: cdm.fixml.fields.base.ListMethod_enum_t
+
+typeAlias UnderlyingShortSaleRestriction_t:
+    cdm.fixml.fields.base.ShortSaleRestriction_enum_t
+
+typeAlias UnderlyingComplexEventType_t: cdm.fixml.fields.base.ComplexEventType_enum_t
+
+typeAlias UnderlyingComplexEventPriceBoundaryMethod_t:
+    cdm.fixml.fields.base.ComplexEventPriceBoundaryMethod_enum_t
+
+typeAlias UnderlyingComplexEventPriceTimeType_t:
+    cdm.fixml.fields.base.ComplexEventPriceTimeType_enum_t
+
+typeAlias UnderlyingComplexEventCondition_t:
+    cdm.fixml.fields.base.ComplexEventCondition_enum_t
+
+typeAlias LegEventType_t: cdm.fixml.fields.base.EventType_enum_t
+
+typeAlias LegEventTimeUnit_t: cdm.fixml.fields.base.EventTimeUnit_enum_t
+
+typeAlias LegAssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias LegSwapClass_t: cdm.fixml.fields.base.SwapClass_enum_t
+
+typeAlias LegSecondaryAssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias UnderlyingSecondaryAssetClass_t: cdm.fixml.fields.base.AssetClass_enum_t
+
+typeAlias MarginAmtFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias CollateralFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias PayCollectFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias PositionFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias ComplexOptPayoutPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias ComplexOptPayoutReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias ComplexOptPayoutTime_t: cdm.fixml.fields.base.ComplexOptPayoutTime_enum_t
+
+typeAlias ComplexEventQuoteBasis_t: cdm.fixml.fields.base.ComplexEventQuoteBasis_enum_t
+
+typeAlias ComplexEventCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias ComplexEventCreditEventNotifyingParty_t:
+    cdm.fixml.fields.base.ComplexEventCreditEventNotifyingParty_enum_t
+
+typeAlias StrategyType_t: cdm.fixml.fields.base.StrategyType_enum_t
+
+typeAlias SettlDisruptionProvision_t: cdm.fixml.fields.base.SettlDisruptionProvision_enum_t
+
+typeAlias InstrumentRoundingDirection_t: cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias LegInstrmtAssignmentMethod_t: cdm.fixml.fields.base.InstrmtAssignmentMethod_enum_t
+
+typeAlias LegSecurityStatus_t: cdm.fixml.fields.base.SecurityStatus_enum_t
+
+typeAlias LegRestructuringType_t: cdm.fixml.fields.base.RestructuringType_enum_t
+
+typeAlias LegSeniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias LegObligationType_t: cdm.fixml.fields.base.ObligationType_enum_t
+
+typeAlias LegSwapSubClass_t: cdm.fixml.fields.base.SwapSubClass_enum_t
+
+typeAlias LegCouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias LegCouponFrequencyUnit_t: cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegLienSeniority_t: cdm.fixml.fields.base.LienSeniority_enum_t
+
+typeAlias LegLoanFacility_t: cdm.fixml.fields.base.LoanFacility_enum_t
+
+typeAlias LegReferenceEntityType_t: cdm.fixml.fields.base.ReferenceEntityType_enum_t
+
+typeAlias LegStrikeUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegStrikePriceDeterminationMethod_t:
+    cdm.fixml.fields.base.StrikePriceDeterminationMethod_enum_t
+
+typeAlias LegStrikePriceBoundaryMethod_t:
+    cdm.fixml.fields.base.StrikePriceBoundaryMethod_enum_t
+
+typeAlias LegUnderlyingPriceDeterminationMethod_t:
+    cdm.fixml.fields.base.UnderlyingPriceDeterminationMethod_enum_t
+
+typeAlias LegSettlMethod_t: cdm.fixml.fields.base.SettlMethod_enum_t
+
+typeAlias LegOptPayoutType_t: cdm.fixml.fields.base.OptPayoutType_enum_t
+
+typeAlias LegPriceQuoteMethod_t: cdm.fixml.fields.base.PriceQuoteMethod_enum_t
+
+typeAlias LegValuationMethod_t: cdm.fixml.fields.base.ValuationMethod_enum_t
+
+typeAlias LegListMethod_t: cdm.fixml.fields.base.ListMethod_enum_t
+
+typeAlias LegShortSaleRestriction_t: cdm.fixml.fields.base.ShortSaleRestriction_enum_t
+
+typeAlias AssetGroup_t: cdm.fixml.fields.base.AssetGroup_enum_t
+
+typeAlias LegStrategyType_t: cdm.fixml.fields.base.StrategyType_enum_t
+
+typeAlias LegSettlDisruptionProvision_t:
+    cdm.fixml.fields.base.SettlDisruptionProvision_enum_t
+
+typeAlias LegInstrumentRoundingDirection_t: cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias LegComplexEventType_t: cdm.fixml.fields.base.ComplexEventType_enum_t
+
+typeAlias LegComplexOptPayoutPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegComplexOptPayoutReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegComplexOptPayoutTime_t: cdm.fixml.fields.base.ComplexOptPayoutTime_enum_t
+
+typeAlias LegComplexEventPriceBoundaryMethod_t:
+    cdm.fixml.fields.base.ComplexEventPriceBoundaryMethod_enum_t
+
+typeAlias LegComplexEventPriceTimeType_t:
+    cdm.fixml.fields.base.ComplexEventPriceTimeType_enum_t
+
+typeAlias LegComplexEventCondition_t: cdm.fixml.fields.base.ComplexEventCondition_enum_t
+
+typeAlias LegComplexEventQuoteBasis_t: cdm.fixml.fields.base.ComplexEventQuoteBasis_enum_t
+
+typeAlias LegComplexEventCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias LegComplexEventCreditEventNotifyingParty_t:
+    cdm.fixml.fields.base.ComplexEventCreditEventNotifyingParty_enum_t
+
+typeAlias LegInstrumentPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias LegInstrumentPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias UnderlyingComplexOptPayoutPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingComplexOptPayoutReceiveSide_t:
+    cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingComplexOptPayoutTime_t:
+    cdm.fixml.fields.base.ComplexOptPayoutTime_enum_t
+
+typeAlias UnderlyingComplexEventQuoteBasis_t:
+    cdm.fixml.fields.base.ComplexEventQuoteBasis_enum_t
+
+typeAlias UnderlyingComplexEventCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias UnderlyingComplexEventCreditEventNotifyingParty_t:
+    cdm.fixml.fields.base.ComplexEventCreditEventNotifyingParty_enum_t
+
+typeAlias UnderlyingSwapSubClass_t: cdm.fixml.fields.base.SwapSubClass_enum_t
+
+typeAlias UnderlyingStrikeUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingStrategyType_t: cdm.fixml.fields.base.StrategyType_enum_t
+
+typeAlias UnderlyingSettlDisruptionProvision_t:
+    cdm.fixml.fields.base.SettlDisruptionProvision_enum_t
+
+typeAlias UnderlyingInstrumentRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias RiskLimitReportStatus_t: cdm.fixml.fields.base.RiskLimitReportStatus_enum_t
+
+typeAlias RiskLimitReportRejectReason_t:
+    cdm.fixml.fields.base.RiskLimitReportRejectReason_enum_t
+
+typeAlias RiskLimitCheckTransType_t: cdm.fixml.fields.base.RiskLimitCheckTransType_enum_t
+
+typeAlias RiskLimitCheckType_t: cdm.fixml.fields.base.RiskLimitCheckType_enum_t
+
+typeAlias RiskLimitCheckRequestType_t:
+    cdm.fixml.fields.base.RiskLimitCheckRequestType_enum_t
+
+typeAlias RiskLimitCheckRequestStatus_t:
+    cdm.fixml.fields.base.RiskLimitCheckRequestStatus_enum_t
+
+typeAlias RiskLimitCheckRequestResult_t:
+    cdm.fixml.fields.base.RiskLimitCheckRequestResult_enum_t
+
+typeAlias PartyActionType_t: cdm.fixml.fields.base.PartyActionType_enum_t
+
+typeAlias PartyActionResponse_t: cdm.fixml.fields.base.PartyActionResponse_enum_t
+
+typeAlias PartyActionRejectReason_t: cdm.fixml.fields.base.PartyActionRejectReason_enum_t
+
+typeAlias RefRiskLimitCheckIDType_t: cdm.fixml.fields.base.RefRiskLimitCheckIDType_enum_t
+
+typeAlias RiskLimitVelocityUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias RequestingPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias RiskLimitCheckModelType_t: cdm.fixml.fields.base.RiskLimitCheckModelType_enum_t
+
+typeAlias RiskLimitCheckStatus_t: cdm.fixml.fields.base.RiskLimitCheckStatus_enum_t
+
+typeAlias SideRiskLimitCheckStatus_t: cdm.fixml.fields.base.RiskLimitCheckStatus_enum_t
+
+typeAlias RegulatoryTransactionType_t:
+    cdm.fixml.fields.base.RegulatoryTransactionType_enum_t
+
+typeAlias LegAssetGroup_t: cdm.fixml.fields.base.AssetGroup_enum_t
+
+typeAlias PartyRiskLimitStatus_t: cdm.fixml.fields.base.PartyRiskLimitStatus_enum_t
+
+typeAlias RemunerationIndicator_t: cdm.fixml.fields.base.RemunerationIndicator_enum_t
+
+typeAlias PosReportAction_t: cdm.fixml.fields.base.PosMaintAction_enum_t
+
+typeAlias SettlPriceFxRateCalc_t: cdm.fixml.fields.base.SettlCurrFxRateCalc_enum_t
+
+typeAlias TaxonomyType_t: cdm.fixml.fields.base.TaxonomyType_enum_t
+
+typeAlias PartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias DerivativeInstrumentPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias InstrumentPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias LegInstrumentPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias LegProvisionPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias Nested2PartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias Nested3PartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias Nested4PartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias NestedPartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias ProvisionPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias RequestedPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias TradeContingency_t: cdm.fixml.fields.base.TradeContingency_enum_t
+
+typeAlias RootPartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias SettlPartyRoleQualifier_t: cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias UnderlyingInstrumentPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias AllocRefRiskLimitCheckIDType_t:
+    cdm.fixml.fields.base.RefRiskLimitCheckIDType_enum_t
+
+typeAlias LimitRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias RegulatoryTradeIDScope_t: cdm.fixml.fields.base.RegulatoryTradeIDScope_enum_t
+
+typeAlias SideRegulatoryTradeIDScope_t: cdm.fixml.fields.base.RegulatoryTradeIDScope_enum_t
+
+typeAlias AllocRegulatoryTradeIDScope_t: cdm.fixml.fields.base.RegulatoryTradeIDScope_enum_t
+
+typeAlias QuoteModelType_t: cdm.fixml.fields.base.QuoteModelType_enum_t
+
+typeAlias ExecMethod_t: cdm.fixml.fields.base.ExecMethod_enum_t
+
+typeAlias MassOrderRequestStatus_t: cdm.fixml.fields.base.MassOrderRequestStatus_enum_t
+
+typeAlias OrderResponseLevel_t: cdm.fixml.fields.base.OrderResponseLevel_enum_t
+
+typeAlias OrderEntryAction_t: cdm.fixml.fields.base.OrderEntryAction_enum_t
+
+typeAlias TransferTransType_t: cdm.fixml.fields.base.TransferTransType_enum_t
+
+typeAlias TransferType_t: cdm.fixml.fields.base.TransferType_enum_t
+
+typeAlias TransferScope_t: cdm.fixml.fields.base.TransferScope_enum_t
+
+typeAlias TransferStatus_t: cdm.fixml.fields.base.TransferStatus_enum_t
+
+typeAlias TransferReportType_t: cdm.fixml.fields.base.TransferReportType_enum_t
+
+typeAlias AggressorSide_t: cdm.fixml.fields.base.Side_enum_t
+
+typeAlias MDStatisticFrequencyUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias MDStatisticDelayUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias MDStatisticIntervalType_t: cdm.fixml.fields.base.MDStatisticIntervalType_enum_t
+
+typeAlias MDStatisticIntervalTypeUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias MDStatisticIntervalUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias MDStatisticRatioType_t: cdm.fixml.fields.base.MDStatisticRatioType_enum_t
+
+typeAlias MDStatisticStatus_t: cdm.fixml.fields.base.MDStatisticStatus_enum_t
+
+typeAlias MDStatisticValueType_t: cdm.fixml.fields.base.MDStatisticValueType_enum_t
+
+typeAlias MDStatisticValueUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias AllocRiskLimitCheckStatus_t: cdm.fixml.fields.base.RiskLimitCheckStatus_enum_t
+
+typeAlias CollRptStatus_t: cdm.fixml.fields.base.CollRptStatus_enum_t
+
+typeAlias UnderlyingAssetGroup_t: cdm.fixml.fields.base.AssetGroup_enum_t
+
+typeAlias LegDeliveryType_t: cdm.fixml.fields.base.DeliveryType_enum_t
+
+typeAlias LegTerminationType_t: cdm.fixml.fields.base.TerminationType_enum_t
+
+typeAlias CrossedIndicator_t: cdm.fixml.fields.base.CrossedIndicator_enum_t
+
+typeAlias TradeReportingIndicator_t: cdm.fixml.fields.base.TradeReportingIndicator_enum_t
+
+typeAlias RelativeValueSide_t: cdm.fixml.fields.base.RelativeValueSide_enum_t
+
+typeAlias MDReportEvent_t: cdm.fixml.fields.base.MDReportEvent_enum_t
+
+typeAlias MarketSegmentStatus_t: cdm.fixml.fields.base.MarketSegmentStatus_enum_t
+
+typeAlias MarketSegmentType_t: cdm.fixml.fields.base.MarketSegmentType_enum_t
+
+typeAlias QuoteSideIndicator_t: cdm.fixml.fields.base.QuoteSideIndicator_enum_t
+
+typeAlias MarketDepthTimeIntervalUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias MDRecoveryTimeIntervalUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias CustomerPriority_t: cdm.fixml.fields.base.CustomerPriority_enum_t
+
+typeAlias BusinessDayType_t: cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias CalculationMethod_t: cdm.fixml.fields.base.CalculationMethod_enum_t
+
+typeAlias ComplexEventPVFinalPriceElectionFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias StrikeIndexQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias ExtraordinaryEventAdjustmentMethod_t:
+    cdm.fixml.fields.base.ExtraordinaryEventAdjustmentMethod_enum_t
+
+typeAlias LegStrikeIndexQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias LegExtraordinaryEventAdjustmentMethod_t:
+    cdm.fixml.fields.base.ExtraordinaryEventAdjustmentMethod_enum_t
+
+typeAlias LegComplexEventPVFinalPriceElectionFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias UnderlyingComplexEventPVFinalPriceElectionFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias UnderlyingNotionalAdjustments_t:
+    cdm.fixml.fields.base.UnderlyingNotionalAdjustments_enum_t
+
+typeAlias UnderlyingStrikeIndexQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias UnderlyingExtraordinaryEventAdjustmentMethod_t:
+    cdm.fixml.fields.base.ExtraordinaryEventAdjustmentMethod_enum_t
+
+typeAlias CollateralAmountType_t: cdm.fixml.fields.base.CollateralAmountType_enum_t
+
+typeAlias CommissionAmountType_t: cdm.fixml.fields.base.CommissionAmountType_enum_t
+
+typeAlias CommissionBasis_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias CommissionUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias AllocCommissionAmountType_t: cdm.fixml.fields.base.CommissionAmountType_enum_t
+
+typeAlias AllocCommissionBasis_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias AllocCommissionUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias AlgorithmicTradeIndicator_t:
+    cdm.fixml.fields.base.AlgorithmicTradeIndicator_enum_t
+
+typeAlias TrdRegPublicationType_t: cdm.fixml.fields.base.TrdRegPublicationType_enum_t
+
+typeAlias TrdRegPublicationReason_t: cdm.fixml.fields.base.TrdRegPublicationReason_enum_t
+
+typeAlias SideTradeReportingIndicator_t:
+    cdm.fixml.fields.base.TradeReportingIndicator_enum_t
+
+typeAlias OrderOwnershipIndicator_t: cdm.fixml.fields.base.OrderOwnershipIndicator_enum_t
+
+typeAlias InTheMoneyCondition_t: cdm.fixml.fields.base.InTheMoneyCondition_enum_t
+
+typeAlias LegInTheMoneyCondition_t: cdm.fixml.fields.base.InTheMoneyCondition_enum_t
+
+typeAlias UnderlyingInTheMoneyCondition_t: cdm.fixml.fields.base.InTheMoneyCondition_enum_t
+
+typeAlias DerivativeInTheMoneyCondition_t: cdm.fixml.fields.base.InTheMoneyCondition_enum_t
+
+typeAlias SideCollateralAmountType_t: cdm.fixml.fields.base.CollateralAmountType_enum_t
+
+typeAlias SideCollateralFXRateCalc_t: cdm.fixml.fields.base.UnderlyingFXRateCalc_enum_t
+
+typeAlias ExDestinationType_t: cdm.fixml.fields.base.ExDestinationType_enum_t
+
+typeAlias MarketCondition_t: cdm.fixml.fields.base.MarketCondition_enum_t
+
+typeAlias QuoteAttributeType_t: cdm.fixml.fields.base.QuoteAttributeType_enum_t
+
+typeAlias PriceQualifier_t: cdm.fixml.fields.base.PriceQualifier_enum_t
+
+typeAlias MDValueTier_t: cdm.fixml.fields.base.MDValueTier_enum_t
+
+typeAlias MiscFeeQualifier_t: cdm.fixml.fields.base.MiscFeeQualifier_enum_t
+
+typeAlias UnderlyingIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias CommissionAmountSubType_t: cdm.fixml.fields.base.CommissionAmountSubType_enum_t
+
+typeAlias AllocCommissionAmountSubType_t:
+    cdm.fixml.fields.base.CommissionAmountSubType_enum_t
+
+typeAlias FloatingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias CommodityFinalPriceType_t: cdm.fixml.fields.base.CommodityFinalPriceType_enum_t
+
+typeAlias ReferenceDataDateType_t: cdm.fixml.fields.base.ReferenceDataDateType_enum_t
+
+typeAlias ReturnTrigger_t: cdm.fixml.fields.base.ReturnTrigger_enum_t
+
+typeAlias LegReturnTrigger_t: cdm.fixml.fields.base.ReturnTrigger_enum_t
+
+typeAlias UnderlyingReturnTrigger_t: cdm.fixml.fields.base.ReturnTrigger_enum_t
+
+typeAlias AveragePriceType_t: cdm.fixml.fields.base.AveragePriceType_enum_t
+
+typeAlias AllocGroupStatus_t: cdm.fixml.fields.base.AllocGroupStatus_enum_t
+
+typeAlias AllocRequestStatus_t: cdm.fixml.fields.base.AllocRequestStatus_enum_t
+
+typeAlias AllocAvgPxIndicator_t: cdm.fixml.fields.base.AvgPxIndicator_enum_t
+
+typeAlias MatchExceptionToleranceValueType_t:
+    cdm.fixml.fields.base.MatchExceptionToleranceValueType_enum_t
+
+typeAlias MatchingDataPointIndicator_t:
+    cdm.fixml.fields.base.MatchingDataPointIndicator_enum_t
+
+typeAlias TradeAggregationTransType_t:
+    cdm.fixml.fields.base.TradeAggregationTransType_enum_t
+
+typeAlias TradeAggregationRequestStatus_t:
+    cdm.fixml.fields.base.TradeAggregationRequestStatus_enum_t
+
+typeAlias OffshoreIndicator_t: cdm.fixml.fields.base.OffshoreIndicator_enum_t
+
+typeAlias PayReportTransType_t: cdm.fixml.fields.base.PayReportTransType_enum_t
+
+typeAlias PayReportStatus_t: cdm.fixml.fields.base.PayReportStatus_enum_t
+
+typeAlias PayRequestTransType_t: cdm.fixml.fields.base.PayRequestTransType_enum_t
+
+typeAlias PayRequestStatus_t: cdm.fixml.fields.base.PayRequestStatus_enum_t
+
+typeAlias PostTradePaymentDebitOrCredit_t:
+    cdm.fixml.fields.base.PostTradePaymentDebitOrCredit_enum_t
+
+typeAlias PostTradePaymentStatus_t: cdm.fixml.fields.base.PostTradePaymentStatus_enum_t
+
+typeAlias DuplicateClOrdIDIndicator_t:
+    cdm.fixml.fields.base.DuplicateClOrdIDIndicator_enum_t
+
+typeAlias EventInitiatorType_t: cdm.fixml.fields.base.EventInitiatorType_enum_t
+
+typeAlias NBBOEntryType_t: cdm.fixml.fields.base.NBBOEntryType_enum_t
+
+typeAlias NBBOSource_t: cdm.fixml.fields.base.NBBOSource_enum_t
+
+typeAlias SingleQuoteIndicator_t: cdm.fixml.fields.base.SingleQuoteIndicator_enum_t
+
+typeAlias TrdRegTimestampManualIndicator_t:
+    cdm.fixml.fields.base.TrdRegTimestampManualIndicator_enum_t
+
+typeAlias MarginDirection_t: cdm.fixml.fields.base.MarginDirection_enum_t
+
+typeAlias TransactionAttributeType_t: cdm.fixml.fields.base.TransactionAttributeType_enum_t
+
+typeAlias PosAmtPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias ContraOrderOrigination_t: cdm.fixml.fields.base.OrderOrigination_enum_t
+
+typeAlias RoutingArrangementIndicator_t:
+    cdm.fixml.fields.base.RoutingArrangementIndicator_enum_t
+
+typeAlias ContraRoutingArrangementIndicator_t:
+    cdm.fixml.fields.base.RoutingArrangementIndicator_enum_t
+
+typeAlias RelatedOrderIDSource_t: cdm.fixml.fields.base.RelatedOrderIDSource_enum_t
+
+typeAlias OrderRelationship_t: cdm.fixml.fields.base.OrderRelationship_enum_t
+
+typeAlias CurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SettlCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegSettlCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SideCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SideSettlCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SettlementAmountCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias StrikeCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnitOfMeasureCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PriceUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PriceQuoteCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegStrikeCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegPriceUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegPriceQuoteCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias DerivativeStrikeCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias DerivativeUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias DerivativePriceUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias DerivativePriceQuoteCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingStrikeCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingPriceUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingPriceQuoteCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingNotionalCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias CommCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias CommissionCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias CommissionUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias AllocCommissionCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias AllocCommissionUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias AllocSettlCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegAllocSettlCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias CollateralCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SideCollateralCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias CollateralReinvestmentCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SideCollateralReinvestmentCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias TradeAllocCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias TradingCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LimitAmtCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PosQtyUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PositionCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegPosCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias RiskLimitCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias EntitlementAttribCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias ComplexOptPayoutCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias ComplexEventCurrencyOneCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias ComplexEventCurrencyTwoCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegComplexOptPayoutCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegComplexEventCurrencyOneCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegComplexEventCurrencyTwoCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingComplexOptPayoutCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingComplexEventCurrencyOneCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias UnderlyingComplexEventCurrencyTwoCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias BenchmarkCurveCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegBenchmarkCurveCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias AgreementCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias LegAgreementCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias FundingSourceCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PayCollectCurrencyCodeSource_t: cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias PostTradePaymentCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias SettlPriceUnitOfMeasureCurrencyCodeSource_t:
+    cdm.fixml.fields.base.CurrencyCodeSource_enum_t
+
+typeAlias MultiJurisdictionReportingIndicator_t:
+    cdm.fixml.fields.base.MultiJurisdictionReportingIndicator_enum_t
+
+typeAlias SelfMatchPreventionInstruction_t:
+    cdm.fixml.fields.base.SelfMatchPreventionInstruction_enum_t
+
+typeAlias SettlStatusRequestStatus_t: cdm.fixml.fields.base.SettlStatusRequestStatus_enum_t
+
+typeAlias SettlStatusReportStatus_t: cdm.fixml.fields.base.SettlStatusReportStatus_enum_t
+
+typeAlias MaturityFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias UnderlyingMaturityFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias LegMaturityFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias MetricsCalculationPriceSource_t:
+    cdm.fixml.fields.base.MetricsCalculationPriceSource_enum_t
+
+typeAlias AssetValuationModel_t: cdm.fixml.fields.base.AssetValuationModel_enum_t
+
+typeAlias AllocTrdRegTimestampType_t: cdm.fixml.fields.base.TrdRegTimestampType_enum_t
+
+typeAlias AlgoCertificateRequestTransType_t:
+    cdm.fixml.fields.base.AlgoCertificateRequestTransType_enum_t
+
+typeAlias AlgoCertificateRequestStatus_t:
+    cdm.fixml.fields.base.AlgoCertificateRequestStatus_enum_t
+
+typeAlias AlgoCertificateReportTransType_t:
+    cdm.fixml.fields.base.AlgoCertificateReportTransType_enum_t
+
+typeAlias AlgoCertificateReportStatus_t:
+    cdm.fixml.fields.base.AlgoCertificateReportStatus_enum_t
+
+typeAlias AlgoCertificateStatus_t: cdm.fixml.fields.base.AlgoCertificateStatus_enum_t
+
+typeAlias TestScenarioStatus_t: cdm.fixml.fields.base.TestSuiteStatus_enum_t
+
+typeAlias TestStepStartOffsetUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias TestStepEndOffsetUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias TestStepParameterType_t: cdm.fixml.fields.base.StrategyParameterType_enum_t
+
+typeAlias TestMeasureResult_t: cdm.fixml.fields.base.TestSuiteStatus_enum_t
+
+typeAlias TestThresholdType_t: cdm.fixml.fields.base.TestThresholdType_enum_t
+
+typeAlias TestSuiteRequestTransType_t:
+    cdm.fixml.fields.base.TestSuiteRequestTransType_enum_t
+
+typeAlias TestSuiteRequestStatus_t: cdm.fixml.fields.base.TestSuiteRequestStatus_enum_t
+
+typeAlias TestActionType_t: cdm.fixml.fields.base.TestActionType_enum_t
+
+typeAlias TestActionRequestStatus_t: cdm.fixml.fields.base.TestActionRequestStatus_enum_t
+
+typeAlias TestSuiteActivityState_t: cdm.fixml.fields.base.TestSuiteActivityState_enum_t
+
+typeAlias TestSuiteStatus_t: cdm.fixml.fields.base.TestSuiteStatus_enum_t
+
+typeAlias FXBenchmark_t: cdm.fixml.fields.base.FXBenchmark_enum_t
+
+typeAlias AlgoCertificateRequestType_t:
+    cdm.fixml.fields.base.AlgoCertificateRequestType_enum_t
+
+typeAlias AlgoCertificateReportType_t:
+    cdm.fixml.fields.base.AlgoCertificateReportType_enum_t
+
+typeAlias TestOrderPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias TestOrderOffsetUnit_t: cdm.fixml.fields.base.OrderDelayUnit_enum_t
+
+typeAlias MDQualityIndicator_t: cdm.fixml.fields.base.MDQualityIndicator_enum_t
+
+typeAlias MDEntryStatus_t: cdm.fixml.fields.base.MDEntryStatus_enum_t
+
+typeAlias ReportStatus_t: cdm.fixml.fields.base.ReportStatus_enum_t
+
+typeAlias AdditionalTermBondSeniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias AdditionalTermBondCouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias AdditionalTermBondCouponFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias CashSettlQuoteMethod_t: cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias CashSettlValuationMethod_t: cdm.fixml.fields.base.CashSettlValuationMethod_enum_t
+
+typeAlias StreamType_t: cdm.fixml.fields.base.StreamType_enum_t
+
+typeAlias StreamPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias StreamReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingStreamEffectiveDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamEffectiveDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingStreamEffectiveDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias StreamTerminationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamTerminationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias StreamTerminationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias StreamCalculationPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamFirstPeriodStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamCalculationFrequencyUnit_t: cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias StreamCalculationRollConvention_t: cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegPaymentStreamNonDeliverableSettlRateSource_t:
+    cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias SettlRatePostponementCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias ProvisionType_t: cdm.fixml.fields.base.ProvisionType_enum_t
+
+typeAlias ProvisionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionDateTenorUnit_t: cdm.fixml.fields.base.ProvisionDateTenorUnit_enum_t
+
+typeAlias ProvisionCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias ProvisionOptionSinglePartyBuyerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias ProvisionOptionSinglePartySellerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias ProvisionCashSettlMethod_t: cdm.fixml.fields.base.ProvisionCashSettlMethod_enum_t
+
+typeAlias ProvisionCashSettlQuoteType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlQuoteType_enum_t
+
+typeAlias ProvisionCashSettlQuoteSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias ProvisionCashSettlValueDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionCashSettlValueDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ProvisionCashSettlValueDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionOptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionOptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias ProvisionOptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias ProvisionOptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ProvisionOptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionOptionExerciseFixedDateType_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseFixedDateType_enum_t
+
+typeAlias ProvisionOptionExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionOptionExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ProvisionOptionExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionOptionRelevantUnderlyingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionOptionRelevantUnderlyingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ProvisionOptionRelevantUnderlyingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionCashSettlPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ProvisionCashSettlPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ProvisionCashSettlPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionCashSettlPaymentDateType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlPaymentDateType_enum_t
+
+typeAlias ProvisionPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias ProvisionPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias ProtectionTermEventUnit_t: cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias ProtectionTermEventDayType_t:
+    cdm.fixml.fields.base.ProtectionTermEventDayType_enum_t
+
+typeAlias ProtectionTermEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias PaymentPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias PaymentReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias PaymentBusinessDayConvention_t: cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentSettlStyle_t: cdm.fixml.fields.base.PaymentSettlStyle_enum_t
+
+typeAlias PaymentSettlPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias PaymentSettlPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias PaymentSettlPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias LegStreamType_t: cdm.fixml.fields.base.StreamType_enum_t
+
+typeAlias LegStreamPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegStreamReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegStreamEffectiveDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamEffectiveDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegStreamEffectiveDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegStreamTerminationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamTerminationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegStreamTerminationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegStreamCalculationPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamFirstPeriodStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamCalculationFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegStreamCalculationRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegPaymentStreamType_t: cdm.fixml.fields.base.PaymentStreamType_enum_t
+
+typeAlias LegPaymentStreamDiscountType_t:
+    cdm.fixml.fields.base.PaymentStreamDiscountType_enum_t
+
+typeAlias LegPaymentStreamCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias LegPaymentStreamPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamPaymentFrequencyUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentFrequencyUnit_enum_t
+
+typeAlias LegPaymentStreamPaymentRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegPaymentStreamPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamResetDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamResetFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegPaymentStreamResetWeeklyRollConvention_t:
+    cdm.fixml.fields.base.PaymentStreamResetWeeklyRollConvention_enum_t
+
+typeAlias LegPaymentStreamInitialFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamInitialFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamInitialFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamRateCutoffDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamRateCutoffDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamRateIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegPaymentStreamRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegPaymentStreamRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegPaymentStreamRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegPaymentStreamCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStreamCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStreamFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStreamFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStreamFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias LegPaymentStreamAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias LegPaymentStreamNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias LegPaymentStreamInflationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias LegPaymentStreamInflationLagDayType_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagDayType_enum_t
+
+typeAlias LegPaymentStreamInflationInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias LegPaymentStreamInflationIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegPaymentStreamFRADiscounting_t:
+    cdm.fixml.fields.base.PaymentStreamFRADiscounting_enum_t
+
+typeAlias LegPaymentStreamNonDeliverableFixingDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamNonDeliverableFixingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamNonDeliverableFixingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegSettlRateFallbackRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegNonDeliverableFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias PaymentStreamNonDeliverableSettlRateSource_t:
+    cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias SettlRateFallbackRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegPaymentScheduleType_t: cdm.fixml.fields.base.PaymentScheduleType_enum_t
+
+typeAlias LegPaymentScheduleStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias LegPaymentSchedulePaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegPaymentScheduleReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegPaymentScheduleRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegPaymentScheduleRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegPaymentScheduleStepFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegPaymentScheduleStepRelativeTo_t:
+    cdm.fixml.fields.base.PaymentScheduleStepRelativeTo_enum_t
+
+typeAlias LegPaymentScheduleFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentScheduleFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentScheduleFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentScheduleInterimExchangeDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentScheduleInterimExchangeDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentScheduleInterimExchangeDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentScheduleRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegPaymentScheduleRateSourceType_t: cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias LegPaymentStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias LegPaymentStubLength_t: cdm.fixml.fields.base.PaymentStubLength_enum_t
+
+typeAlias LegPaymentStubIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegPaymentStubIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegPaymentStubIndexRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegPaymentStubIndexRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegPaymentStubIndexCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStubIndexCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStubIndexFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStubIndexFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStubIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegPaymentStubIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegPaymentStubIndex2RateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegPaymentStubIndex2RateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegProvisionType_t: cdm.fixml.fields.base.ProvisionType_enum_t
+
+typeAlias LegProvisionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionDateTenorUnit_t: cdm.fixml.fields.base.ProvisionDateTenorUnit_enum_t
+
+typeAlias LegProvisionCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias LegProvisionOptionSinglePartyBuyerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias LegProvisionOptionSinglePartySellerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias LegProvisionCashSettlMethod_t:
+    cdm.fixml.fields.base.ProvisionCashSettlMethod_enum_t
+
+typeAlias LegProvisionCashSettlQuoteType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlQuoteType_enum_t
+
+typeAlias LegProvisionCashSettlQuoteSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegProvisionCashSettlPaymentDateType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlPaymentDateType_enum_t
+
+typeAlias LegProvisionOptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionOptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias LegProvisionOptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegProvisionOptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegProvisionOptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionOptionExerciseFixedDateType_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseFixedDateType_enum_t
+
+typeAlias LegProvisionOptionExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionOptionExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegProvisionOptionExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionOptionRelevantUnderlyingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionOptionRelevantUnderlyingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegProvisionOptionRelevantUnderlyingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionCashSettlPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionCashSettlPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegProvisionCashSettlPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionCashSettlValueDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProvisionCashSettlValueDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegProvisionCashSettlValueDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias LegProvisionPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias UnderlyingStreamType_t: cdm.fixml.fields.base.StreamType_enum_t
+
+typeAlias UnderlyingStreamPaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingStreamReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingStreamTerminationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamTerminationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingStreamTerminationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingStreamCalculationPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamFirstPeriodStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamCalculationFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingStreamCalculationRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamType_t: cdm.fixml.fields.base.PaymentStreamType_enum_t
+
+typeAlias UnderlyingPaymentStreamDiscountType_t:
+    cdm.fixml.fields.base.PaymentStreamDiscountType_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentFrequencyUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentFrequencyUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamResetDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamResetFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamResetWeeklyRollConvention_t:
+    cdm.fixml.fields.base.PaymentStreamResetWeeklyRollConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamInitialFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamInitialFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamInitialFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamRateCutoffDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamRateCutoffDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamRateIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingPaymentStreamRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingPaymentStreamRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentStreamCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias UnderlyingPaymentStreamAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentStreamInflationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamInflationLagDayType_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamInflationInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamInflationIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingPaymentStreamFRADiscounting_t:
+    cdm.fixml.fields.base.PaymentStreamFRADiscounting_enum_t
+
+typeAlias UnderlyingPaymentStreamNonDeliverableFixingDatesBizDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingNonDeliverableFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias UnderlyingPaymentStreamNonDeliverableSettlRateSource_t:
+    cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias UnderlyingSettlRatePostponementCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias UnderlyingPaymentScheduleType_t: cdm.fixml.fields.base.PaymentScheduleType_enum_t
+
+typeAlias UnderlyingPaymentScheduleStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias UnderlyingPaymentSchedulePaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingPaymentScheduleReceiveSide_t:
+    cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentScheduleStepFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingPaymentScheduleStepRelativeTo_t:
+    cdm.fixml.fields.base.PaymentScheduleStepRelativeTo_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingDateBusinessDayCnvtn_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentScheduleInterimExchangeDatesBizDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentScheduleInterimExchangeDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentScheduleInterimExchangeDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateSourceType_t:
+    cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias UnderlyingPaymentStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias UnderlyingPaymentStubLength_t: cdm.fixml.fields.base.PaymentStubLength_enum_t
+
+typeAlias UnderlyingPaymentStubIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingPaymentStubIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingPaymentStubIndexRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingPaymentStubIndexRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentStubIndexCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStubIndexCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStubIndexFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStubIndexFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStubIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingPaymentStubIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingPaymentStubIndex2RateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingPaymentStubIndex2RateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias PaymentStreamType_t: cdm.fixml.fields.base.PaymentStreamType_enum_t
+
+typeAlias PaymentStreamDiscountType_t:
+    cdm.fixml.fields.base.PaymentStreamDiscountType_enum_t
+
+typeAlias PaymentStreamCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias PaymentStreamPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamPaymentFrequencyUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentFrequencyUnit_enum_t
+
+typeAlias PaymentStreamPaymentRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias PaymentStreamPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamResetDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamResetFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias PaymentStreamResetWeeklyRollConvention_t:
+    cdm.fixml.fields.base.PaymentStreamResetWeeklyRollConvention_enum_t
+
+typeAlias PaymentStreamInitialFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamInitialFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamInitialFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamRateCutoffDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamRateCutoffDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamRateIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias PaymentStreamRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStreamRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias PaymentStreamRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias PaymentStreamCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStreamCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStreamFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStreamFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStreamFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias PaymentStreamAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias PaymentStreamNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias PaymentStreamInflationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias PaymentStreamInflationLagDayType_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagDayType_enum_t
+
+typeAlias PaymentStreamInflationInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias PaymentStreamInflationIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias PaymentStreamFRADiscounting_t:
+    cdm.fixml.fields.base.PaymentStreamFRADiscounting_enum_t
+
+typeAlias PaymentStreamNonDeliverableFixingDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamNonDeliverableFixingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamNonDeliverableFixingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias NonDeliverableFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias PaymentScheduleType_t: cdm.fixml.fields.base.PaymentScheduleType_enum_t
+
+typeAlias PaymentScheduleStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias PaymentSchedulePaySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias PaymentScheduleReceiveSide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias PaymentScheduleRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias PaymentScheduleRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias PaymentScheduleStepFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias PaymentScheduleStepRelativeTo_t:
+    cdm.fixml.fields.base.PaymentScheduleStepRelativeTo_enum_t
+
+typeAlias PaymentScheduleFixingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentScheduleFixingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentScheduleFixingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentScheduleInterimExchangeDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentScheduleInterimExchangeDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentScheduleInterimExchangeDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentScheduleRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias PaymentScheduleRateSourceType_t: cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias PaymentStubType_t: cdm.fixml.fields.base.PaymentStubType_enum_t
+
+typeAlias PaymentStubLength_t: cdm.fixml.fields.base.PaymentStubLength_enum_t
+
+typeAlias PaymentStubIndexSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias PaymentStubIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStubIndexRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias PaymentStubIndexRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias PaymentStubIndexCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStubIndexCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStubIndexFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStubIndexFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStubIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias PaymentStubIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStubIndex2RateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias PaymentStubIndex2RateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingSettlRateFallbackRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegSettlRatePostponementCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias StreamEffectiveDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamEffectiveDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias StreamEffectiveDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionPartyRoleQualifier_t:
+    cdm.fixml.fields.base.PartyDetailRoleQualifier_enum_t
+
+typeAlias PaymentPriceType_t: cdm.fixml.fields.base.PriceType_enum_t
+
+typeAlias PaymentStreamPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias BusinessDayConvention_t: cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias DateRollConvention_t: cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegBusinessDayConvention_t: cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegDateRollConvention_t: cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingDateRollConvention_t: cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias PaymentSubType_t: cdm.fixml.fields.base.PaymentSubType_enum_t
+
+typeAlias ComplexEventCreditEventUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias ComplexEventCreditEventDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias ComplexEventCreditEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias ComplexEventPeriodType_t: cdm.fixml.fields.base.ComplexEventPeriodType_enum_t
+
+typeAlias ComplexEventRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias ComplexEventRateSourceType_t: cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias ComplexEventDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ComplexEventDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias ComplexEventDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ComplexEventScheduleFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias ComplexEventScheduleRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias DeliveryScheduleType_t: cdm.fixml.fields.base.DeliveryScheduleType_enum_t
+
+typeAlias DeliveryScheduleNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DeliveryScheduleNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias DeliveryScheduleToleranceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DeliveryScheduleToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias DeliveryScheduleSettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias DeliveryScheduleSettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias DeliveryScheduleSettlDay_t: cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias DeliveryScheduleSettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias DeliveryStreamType_t: cdm.fixml.fields.base.DeliveryStreamType_enum_t
+
+typeAlias DeliveryStreamDeliveryRestriction_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryRestriction_enum_t
+
+typeAlias DeliveryStreamDeliveryContingentPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias DeliveryStreamTitleTransferCondition_t:
+    cdm.fixml.fields.base.DeliveryStreamTitleTransferCondition_enum_t
+
+typeAlias DeliveryStreamToleranceUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias DeliveryStreamToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias DeliveryStreamToleranceOptionSide_t:
+    cdm.fixml.fields.base.DeliveryStreamToleranceOptionSide_enum_t
+
+typeAlias DeliveryStreamElectingPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias MarketDisruptionProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionProvision_enum_t
+
+typeAlias MarketDisruptionFallbackProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackProvision_enum_t
+
+typeAlias MarketDisruptionFallbackUnderlierType_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackUnderlierType_enum_t
+
+typeAlias ExerciseConfirmationMethod_t:
+    cdm.fixml.fields.base.ExerciseConfirmationMethod_enum_t
+
+typeAlias OptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias OptionExerciseEarliestDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias OptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias OptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias OptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias OptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias OptionExerciseDateType_t: cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias OptionExerciseExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias OptionExerciseExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias OptionExerciseExpirationFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias OptionExerciseExpirationRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias OptionExerciseExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias OptionExerciseExpirationDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias PaymentUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentDateOffsetDayType_t: cdm.fixml.fields.base.PaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentForwardStartType_t: cdm.fixml.fields.base.PaymentForwardStartType_enum_t
+
+typeAlias PaymentScheduleFixingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias PaymentScheduleRateUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentScheduleRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias PaymentScheduleSettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentScheduleStepUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentScheduleFixingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias PaymentScheduleFixingLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias PaymentScheduleFixingFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamFixedAmountUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentStreamRateIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStreamRateIndexUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentStreamSettlLevel_t: cdm.fixml.fields.base.PaymentStreamSettlLevel_enum_t
+
+typeAlias PaymentStreamReferenceLevelUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentStreamRateSpreadUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias PaymentStreamRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias PaymentStreamCalculationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias PaymentStreamFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamPricingDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamPricingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias PaymentStreamPricingBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamPaymentDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias PaymentStreamPricingDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias PaymentStreamPricingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias PricingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamCalculationPeriodDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias StreamCalculationCorrectionUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias StreamCommodityUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias StreamCommodityNearbySettlDayUnit_t:
+    cdm.fixml.fields.base.StreamCommodityNearbySettlDayUnit_enum_t
+
+typeAlias StreamCommoditySettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamCommoditySettlDateRollUnit_t:
+    cdm.fixml.fields.base.StreamCommoditySettlDateRollUnit_enum_t
+
+typeAlias StreamCommoditySettlDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias StreamCommodityDataSourceIDType_t:
+    cdm.fixml.fields.base.StreamCommodityDataSourceIDType_enum_t
+
+typeAlias StreamCommoditySettlDay_t: cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias StreamCommoditySettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias StreamCommoditySettlPeriodNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias StreamCommoditySettlPeriodFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias StreamCommoditySettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias StreamCommoditySettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias StreamNotionalFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias StreamNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias StreamNotionalUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias StreamTotalNotionalUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegAdditionalTermBondSeniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias LegAdditionalTermBondCouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias LegAdditionalTermBondCouponFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegCashSettlQuoteMethod_t: cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias LegCashSettlValuationMethod_t:
+    cdm.fixml.fields.base.CashSettlValuationMethod_enum_t
+
+typeAlias LegComplexEventCreditEventUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegComplexEventCreditEventDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegComplexEventCreditEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias LegComplexEventPeriodType_t: cdm.fixml.fields.base.ComplexEventPeriodType_enum_t
+
+typeAlias LegComplexEventRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegComplexEventRateSourceType_t: cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias LegComplexEventDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegComplexEventDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegComplexEventDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegComplexEventScheduleFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegComplexEventScheduleRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegDeliveryScheduleType_t: cdm.fixml.fields.base.DeliveryScheduleType_enum_t
+
+typeAlias LegDeliveryScheduleNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegDeliveryScheduleNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias LegDeliveryScheduleToleranceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegDeliveryScheduleToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias LegDeliveryScheduleSettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias LegDeliveryScheduleSettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias LegDeliveryScheduleSettlDay_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias LegDeliveryScheduleSettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias LegDeliveryStreamType_t: cdm.fixml.fields.base.DeliveryStreamType_enum_t
+
+typeAlias LegDeliveryStreamDeliveryRestriction_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryRestriction_enum_t
+
+typeAlias LegDeliveryStreamDeliveryContingentPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias LegDeliveryStreamTitleTransferCondition_t:
+    cdm.fixml.fields.base.DeliveryStreamTitleTransferCondition_enum_t
+
+typeAlias LegDeliveryStreamToleranceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegDeliveryStreamToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias LegDeliveryStreamToleranceOptionSide_t:
+    cdm.fixml.fields.base.DeliveryStreamToleranceOptionSide_enum_t
+
+typeAlias LegDeliveryStreamElectingPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias LegMarketDisruptionProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionProvision_enum_t
+
+typeAlias LegMarketDisruptionFallbackProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackProvision_enum_t
+
+typeAlias LegMarketDisruptionFallbackUnderlierType_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackUnderlierType_enum_t
+
+typeAlias LegExerciseConfirmationMethod_t:
+    cdm.fixml.fields.base.ExerciseConfirmationMethod_enum_t
+
+typeAlias LegOptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegOptionExerciseEarliestDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegOptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias LegOptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegOptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegOptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegOptionExerciseDateType_t: cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias LegOptionExerciseExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegOptionExerciseExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegOptionExerciseExpirationFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegOptionExerciseExpirationRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegOptionExerciseExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegOptionExerciseExpirationDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias LegPaymentScheduleFixingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias LegPaymentScheduleRateUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentScheduleRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias LegPaymentScheduleSettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentScheduleStepUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentScheduleFixingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias LegPaymentScheduleFixingLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias LegPaymentScheduleFixingFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamFixedAmountUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentStreamRateIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegPaymentStreamRateIndexUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentStreamSettlLevel_t: cdm.fixml.fields.base.PaymentStreamSettlLevel_enum_t
+
+typeAlias LegPaymentStreamReferenceLevelUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentStreamRateSpreadUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegPaymentStreamRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias LegPaymentStreamCalculationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias LegPaymentStreamFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamPricingDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamPricingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias LegPaymentStreamPricingBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias StreamCommoditySettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias LegPaymentStreamPaymentDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias LegPaymentStreamPricingDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias LegPaymentStreamPricingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias LegPricingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegProtectionTermEventUnit_t: cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegProtectionTermEventDayType_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagDayType_enum_t
+
+typeAlias LegProtectionTermEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias LegStreamCalculationPeriodDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias LegStreamCalculationCorrectionUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegStreamCommodityUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegStreamCommodityNearbySettlDayUnit_t:
+    cdm.fixml.fields.base.StreamCommodityNearbySettlDayUnit_enum_t
+
+typeAlias LegStreamCommoditySettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamCommoditySettlDateRollUnit_t:
+    cdm.fixml.fields.base.StreamCommoditySettlDateRollUnit_enum_t
+
+typeAlias LegStreamCommoditySettlDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias LegStreamCommodityDataSourceIDType_t:
+    cdm.fixml.fields.base.StreamCommodityDataSourceIDType_enum_t
+
+typeAlias LegStreamCommoditySettlDay_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias LegStreamCommoditySettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias LegStreamCommoditySettlPeriodNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegStreamCommoditySettlPeriodFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias LegStreamCommoditySettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegStreamCommoditySettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias LegStreamNotionalFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias LegStreamNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias LegStreamNotionalUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias LegStreamTotalNotionalUnitOfMeasure_t: cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingComplexEventCreditEventUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingComplexEventCreditEventDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingComplexEventCreditEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias UnderlyingComplexEventPeriodType_t:
+    cdm.fixml.fields.base.ComplexEventPeriodType_enum_t
+
+typeAlias UnderlyingComplexEventRateSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias UnderlyingComplexEventRateSourceType_t:
+    cdm.fixml.fields.base.RateSourceType_enum_t
+
+typeAlias UnderlyingComplexEventDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingComplexEventDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingComplexEventDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingComplexEventScheduleFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingComplexEventScheduleRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingDeliveryScheduleType_t:
+    cdm.fixml.fields.base.DeliveryScheduleType_enum_t
+
+typeAlias UnderlyingDeliveryScheduleNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingDeliveryScheduleNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias UnderlyingDeliveryScheduleToleranceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingDeliveryScheduleToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias UnderlyingDeliveryScheduleSettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias UnderlyingDeliveryScheduleSettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias UnderlyingDeliveryScheduleSettlDay_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias UnderlyingDeliveryScheduleSettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias UnderlyingDeliveryStreamType_t: cdm.fixml.fields.base.DeliveryStreamType_enum_t
+
+typeAlias UnderlyingDeliveryStreamDeliveryRestriction_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryRestriction_enum_t
+
+typeAlias UnderlyingDeliveryStreamDeliveryContingentPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias UnderlyingDeliveryStreamTitleTransferCondition_t:
+    cdm.fixml.fields.base.DeliveryStreamTitleTransferCondition_enum_t
+
+typeAlias UnderlyingDeliveryStreamToleranceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingDeliveryStreamToleranceType_t:
+    cdm.fixml.fields.base.DeliveryScheduleToleranceType_enum_t
+
+typeAlias UnderlyingDeliveryStreamToleranceOptionSide_t:
+    cdm.fixml.fields.base.DeliveryStreamToleranceOptionSide_enum_t
+
+typeAlias UnderlyingDeliveryStreamElectingPartySide_t:
+    cdm.fixml.fields.base.DeliveryStreamElectingPartySide_enum_t
+
+typeAlias UnderlyingExerciseConfirmationMethod_t:
+    cdm.fixml.fields.base.ExerciseConfirmationMethod_enum_t
+
+typeAlias UnderlyingOptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingOptionExerciseEarliestDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingOptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias UnderlyingOptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingOptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingOptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingOptionExerciseDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingOptionExerciseExpirationDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias UnderlyingMarketDisruptionProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionProvision_enum_t
+
+typeAlias UnderlyingMarketDisruptionFallbackProvision_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackProvision_enum_t
+
+typeAlias UnderlyingMarketDisruptionFallbackUnderlierType_t:
+    cdm.fixml.fields.base.MarketDisruptionFallbackUnderlierType_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentScheduleRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias UnderlyingPaymentScheduleSettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentScheduleStepUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias UnderlyingPaymentScheduleFixingFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamFixedAmountUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentStreamRateIndex2CurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamRateIndexUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentStreamSettlLevel_t:
+    cdm.fixml.fields.base.PaymentStreamSettlLevel_enum_t
+
+typeAlias UnderlyingPaymentStreamReferenceLevelUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentStreamRateSpreadUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingPaymentStreamRateSpreadType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadType_enum_t
+
+typeAlias UnderlyingPaymentStreamCalculationLagUnit_t:
+    cdm.fixml.fields.base.PaymentStreamInflationLagUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamFirstObservationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamPricingDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamPricingDayDistribution_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayDistribution_enum_t
+
+typeAlias UnderlyingPaymentStreamPricingBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegStreamCommoditySettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlTimeType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlTimeType_enum_t
+
+typeAlias UnderlyingPaymentStreamPaymentDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias UnderlyingPaymentStreamPricingDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias UnderlyingPaymentStreamPricingDayOfWeek_t:
+    cdm.fixml.fields.base.PaymentStreamPricingDayOfWeek_enum_t
+
+typeAlias UnderlyingPricingDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamCalculationPeriodDateType_t:
+    cdm.fixml.fields.base.OptionExerciseDateType_enum_t
+
+typeAlias UnderlyingStreamCalculationCorrectionUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingStreamCommodityUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingStreamCommodityNearbySettlDayUnit_t:
+    cdm.fixml.fields.base.StreamCommodityNearbySettlDayUnit_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlDateRollUnit_t:
+    cdm.fixml.fields.base.StreamCommoditySettlDateRollUnit_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlDayType_t:
+    cdm.fixml.fields.base.ComplexEventDateOffsetDayType_enum_t
+
+typeAlias UnderlyingStreamCommodityDataSourceIDType_t:
+    cdm.fixml.fields.base.StreamCommodityDataSourceIDType_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlDay_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlDay_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlFlowType_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlFlowType_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlPeriodNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlPeriodFrequencyUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlPeriodPriceUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingStreamCommoditySettlHolidaysProcessingInstruction_t:
+    cdm.fixml.fields.base.DeliveryScheduleSettlHolidaysProcessingInstruction_enum_t
+
+typeAlias UnderlyingStreamNotionalFrequencyUnit_t: cdm.fixml.fields.base.TimeUnit_enum_t
+
+typeAlias UnderlyingStreamNotionalCommodityFrequency_t:
+    cdm.fixml.fields.base.StreamNotionalCommodityFrequency_enum_t
+
+typeAlias UnderlyingStreamNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingStreamTotalNotionalUnitOfMeasure_t:
+    cdm.fixml.fields.base.UnitOfMeasure_enum_t
+
+typeAlias UnderlyingAdditionalTermBondSeniority_t: cdm.fixml.fields.base.Seniority_enum_t
+
+typeAlias UnderlyingAdditionalTermBondCouponType_t: cdm.fixml.fields.base.CouponType_enum_t
+
+typeAlias UnderlyingAdditionalTermBondCouponFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingCashSettlQuoteMethod_t:
+    cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias UnderlyingCashSettlValuationMethod_t:
+    cdm.fixml.fields.base.CashSettlValuationMethod_enum_t
+
+typeAlias UnderlyingProtectionTermEventUnit_t:
+    cdm.fixml.fields.base.ProtectionTermEventUnit_enum_t
+
+typeAlias UnderlyingProtectionTermEventDayType_t:
+    cdm.fixml.fields.base.ProtectionTermEventDayType_enum_t
+
+typeAlias UnderlyingProtectionTermEventQualifier_t:
+    cdm.fixml.fields.base.ProtectionTermEventQualifier_enum_t
+
+typeAlias UnderlyingProvisionCashSettlPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionCashSettlPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionCashSettlPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionCashSettlPaymentDateType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlPaymentDateType_enum_t
+
+typeAlias UnderlyingProvisionCashSettlQuoteSource_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingProvisionCashSettlValueDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionCashSettlValueDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionCashSettlValueDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseFixedDateType_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseFixedDateType_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseEarliestDateOffsetUnit_t:
+    cdm.fixml.fields.base.ProvisionOptionExerciseEarliestDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionOptionExerciseStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionOptionExpirationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionOptionExpirationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionOptionExpirationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionOptionRelevantUnderlyingDateBizDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionOptionRelevantUnderlyingDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingProvisionOptionRelevantUnderlyingDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionType_t: cdm.fixml.fields.base.ProvisionType_enum_t
+
+typeAlias UnderlyingProvisionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingProvisionDateTenorUnit_t:
+    cdm.fixml.fields.base.ProvisionDateTenorUnit_enum_t
+
+typeAlias UnderlyingProvisionCalculationAgent_t:
+    cdm.fixml.fields.base.ProvisionCalculationAgent_enum_t
+
+typeAlias UnderlyingProvisionOptionSinglePartyBuyerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias UnderlyingProvisionOptionSinglePartySellerSide_t:
+    cdm.fixml.fields.base.ProvisionOptionSinglePartyBuyerSide_enum_t
+
+typeAlias UnderlyingProvisionCashSettlMethod_t:
+    cdm.fixml.fields.base.ProvisionCashSettlMethod_enum_t
+
+typeAlias UnderlyingProvisionCashSettlQuoteType_t:
+    cdm.fixml.fields.base.ProvisionCashSettlQuoteType_enum_t
+
+typeAlias UnderlyingProvisionPartyIDSource_t: cdm.fixml.fields.base.PartyIDSource_enum_t
+
+typeAlias UnderlyingProvisionPartyRole_t: cdm.fixml.fields.base.PartyRole_enum_t
+
+typeAlias DeliveryStreamDeliveryPointSource_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryPointSource_enum_t
+
+typeAlias LegDeliveryStreamDeliveryPointSource_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryPointSource_enum_t
+
+typeAlias UnderlyingDeliveryStreamDeliveryPointSource_t:
+    cdm.fixml.fields.base.DeliveryStreamDeliveryPointSource_enum_t
+
+typeAlias CashSettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias CashSettlDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias CashSettlDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias CashSettlPriceDefault_t: cdm.fixml.fields.base.CashSettlPriceDefault_enum_t
+
+typeAlias DividendFloatingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias DividendFloatingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias DividendFloatingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias DividendCapRateBuySide_t: cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias DividendCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias DividendFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias DividendFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias DividendFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias DividendAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias DividendNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias DividendAccrualPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias DividendAccrualPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias DividendAccrualPaymeentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias DividendEntitlementEvent_t: cdm.fixml.fields.base.DividendEntitlementEvent_enum_t
+
+typeAlias DividendAmountType_t: cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias ExtraordinaryDividendPartySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias ExtraordinaryDividendAmountType_t: cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias DividendCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias NonCashDividendTreatment_t: cdm.fixml.fields.base.NonCashDividendTreatment_enum_t
+
+typeAlias DividendComposition_t: cdm.fixml.fields.base.DividendComposition_enum_t
+
+typeAlias DividendFXTriggerDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias DividendFXTriggerDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias DividendFXTriggerDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias DividendPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias DividendPeriodValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias DividendPeriodValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias DividendPeriodPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias DividendPeriodPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegCashSettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegCashSettlDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegCashSettlDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegCashSettlPriceDefault_t: cdm.fixml.fields.base.CashSettlPriceDefault_enum_t
+
+typeAlias LegDividendFloatingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegDividendFloatingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegDividendFloatingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegDividendCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegDividendCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegDividendFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegDividendFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegDividendFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias LegDividendAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias LegDividendNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias LegDividendAccrualPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegDividendAccrualPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegDividendAccrualPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegDividendEntitlementEvent_t:
+    cdm.fixml.fields.base.DividendEntitlementEvent_enum_t
+
+typeAlias LegDividendAmountType_t: cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias LegExtraordinaryDividendPartySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegExtraordinaryDividendAmountType_t:
+    cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias LegDividendCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias LegNonCashDividendTreatment_t:
+    cdm.fixml.fields.base.NonCashDividendTreatment_enum_t
+
+typeAlias LegDividendComposition_t: cdm.fixml.fields.base.DividendComposition_enum_t
+
+typeAlias LegDividendFXTriggerDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegDividendFXTriggerDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegDividendFXTriggerDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegDividendPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegDividendPeriodValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegDividendPeriodValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegDividendPeriodPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegDividendPeriodPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegSettlMethodElectingPartySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias LegMakeWholeBenchmarkQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias LegMakeWholeInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias LegPaymentStreamInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias LegPaymentStreamInterpolationPeriod_t:
+    cdm.fixml.fields.base.PaymentStreamInterpolationPeriod_enum_t
+
+typeAlias LegPaymentStreamCompoundingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias LegPaymentStreamCompoundingDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStreamCompoundingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamCompoundingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamCompoundingFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegPaymentStreamCompoundingRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegPaymentStreamCompoundingEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamCompoundingEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamCompoundingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias LegPaymentStreamCompoundingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias LegPaymentStreamCompoundingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias LegPaymentStreamCompoundingCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStreamCompoundingCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias LegPaymentStreamCompoundingFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStreamCompoundingFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias LegPaymentStreamCompoundingFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias LegPaymentStreamCompoundingAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias LegPaymentStreamCompoundingNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias LegPaymentStreamCompoundingStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamCompoundingStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamFinalPricePaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStreamFinalPricePaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias LegPaymentStreamFirstObservationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStreamLinkStrikePriceType_t:
+    cdm.fixml.fields.base.PaymentStreamLinkStrikePriceType_enum_t
+
+typeAlias LegPaymentStreamRealizedVarianceMethod_t:
+    cdm.fixml.fields.base.PaymentStreamRealizedVarianceMethod_enum_t
+
+typeAlias LegPaymentStubEndDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStubEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStubEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegPaymentStubStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegPaymentStubStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegPaymentStubStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegProvisionBreakFeeElection_t:
+    cdm.fixml.fields.base.ProvisionBreakFeeElection_enum_t
+
+typeAlias LegReturnRateDateMode_t: cdm.fixml.fields.base.ReturnRateDateMode_enum_t
+
+typeAlias LegReturnRateValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegReturnRateValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegReturnRateValuationStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegReturnRateValuationStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegReturnRateValuationEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegReturnRateValuationEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegReturnRateValuationFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias LegReturnRateValuationFrequencyRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias LegReturnRateValuationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegReturnRateFXRateCalc_t: cdm.fixml.fields.base.SettlCurrFxRateCalc_enum_t
+
+typeAlias LegReturnRatePriceSequence_t: cdm.fixml.fields.base.ReturnRatePriceSequence_enum_t
+
+typeAlias LegReturnRateCommissionBasis_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias LegReturnRateQuoteMethod_t: cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias LegReturnRateQuoteTimeType_t: cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias LegReturnRateValuationTimeType_t:
+    cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias LegReturnRateValuationPriceOption_t:
+    cdm.fixml.fields.base.ReturnRateValuationPriceOption_enum_t
+
+typeAlias LegReturnRateFinalPriceFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias LegReturnRateInformationSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias LegReturnRatePriceBasis_t: cdm.fixml.fields.base.ReturnRatePriceBasis_enum_t
+
+typeAlias LegReturnRatePriceType_t: cdm.fixml.fields.base.ReturnRatePriceType_enum_t
+
+typeAlias LegReturnRateValuationDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias LegSettlMethodElectionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias LegSettlMethodElectionDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias LegSettlMethodElectionDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias LegStreamNotionalAdjustments_t:
+    cdm.fixml.fields.base.StreamNotionalAdjustments_enum_t
+
+typeAlias SettlMethodElectingPartySide_t: cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias MakeWholeBenchmarkQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias MakeWholeInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias PaymentStreamInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias PaymentStreamInterpolationPeriod_t:
+    cdm.fixml.fields.base.PaymentStreamInterpolationPeriod_enum_t
+
+typeAlias PaymentStreamCompoundingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias PaymentStreamCompoundingDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStreamCompoundingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamCompoundingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamCompoundingFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias PaymentStreamCompoundingRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias PaymentStreamCompoundingEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamCompoundingEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamCompoundingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStreamCompoundingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias PaymentStreamCompoundingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias PaymentStreamCompoundingCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStreamCompoundingCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias PaymentStreamCompoundingFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStreamCompoundingFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias PaymentStreamCompoundingFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias PaymentStreamCompoundingAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias PaymentStreamCompoundingNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias PaymentStreamCompoundingStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamCompoundingStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamFinalPricePaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStreamFinalPricePaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias PaymentStreamFirstObservationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStreamLinkStrikePriceType_t:
+    cdm.fixml.fields.base.PaymentStreamLinkStrikePriceType_enum_t
+
+typeAlias PaymentStreamRealizedVarianceMethod_t:
+    cdm.fixml.fields.base.PaymentStreamRealizedVarianceMethod_enum_t
+
+typeAlias PaymentStubEndDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStubEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStubEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias PaymentStubStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias PaymentStubStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias PaymentStubStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ProvisionBreakFeeElection_t:
+    cdm.fixml.fields.base.ProvisionBreakFeeElection_enum_t
+
+typeAlias ReturnRateDateMode_t: cdm.fixml.fields.base.ReturnRateDateMode_enum_t
+
+typeAlias ReturnRateValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ReturnRateValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ReturnRateValuationStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ReturnRateValuationStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ReturnRateValuationEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias ReturnRateValuationEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias ReturnRateValuationFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias ReturnRateValuationFrequencyRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias ReturnRateValuationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias ReturnRateFXRateCalc_t: cdm.fixml.fields.base.SettlCurrFxRateCalc_enum_t
+
+typeAlias ReturnRatePriceSequence_t: cdm.fixml.fields.base.ReturnRatePriceSequence_enum_t
+
+typeAlias ReturnRateCommissionBasis_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias ReturnRateQuoteMethod_t: cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias ReturnRateQuoteTimeType_t: cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias ReturnRateValuationTimeType_t:
+    cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias ReturnRateValuationPriceOption_t:
+    cdm.fixml.fields.base.ReturnRateValuationPriceOption_enum_t
+
+typeAlias ReturnRateFinalPriceFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias ReturnRateInformationSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias ReturnRatePriceBasis_t: cdm.fixml.fields.base.ReturnRatePriceBasis_enum_t
+
+typeAlias ReturnRatePriceType_t: cdm.fixml.fields.base.ReturnRatePriceType_enum_t
+
+typeAlias ReturnRateValuationDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias SettlMethodElectionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias SettlMethodElectionDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias SettlMethodElectionDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias StreamNotionalAdjustments_t:
+    cdm.fixml.fields.base.StreamNotionalAdjustments_enum_t
+
+typeAlias UnderlyingCashSettlDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingCashSettlDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingCashSettlDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingCashSettlPriceDefault_t:
+    cdm.fixml.fields.base.CashSettlPriceDefault_enum_t
+
+typeAlias UnderlyingDividendFloatingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingDividendFloatingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingDividendFloatingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingDividendCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingDividendCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingDividendFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingDividendFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingDividendFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias UnderlyingDividendAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias UnderlyingDividendNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias UnderlyingDividendAccrualPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingDividendAccrualPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingDividendAccrualPaymentDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingDividendEntitlementEvent_t:
+    cdm.fixml.fields.base.DividendEntitlementEvent_enum_t
+
+typeAlias UnderlyingDividendAmountType_t: cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias UnderlyingExtraordinaryDividendPartySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingExtraordinaryDividendAmountType_t:
+    cdm.fixml.fields.base.DividendAmountType_enum_t
+
+typeAlias UnderlyingDividendCompoundingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamCompoundingMethod_enum_t
+
+typeAlias UnderlyingNonCashDividendTreatment_t:
+    cdm.fixml.fields.base.NonCashDividendTreatment_enum_t
+
+typeAlias UnderlyingDividendComposition_t: cdm.fixml.fields.base.DividendComposition_enum_t
+
+typeAlias UnderlyingDividendFXTriggerDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingDividendFXTriggerDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingDividendFXTriggerDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingDividendPeriodBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingDividendPeriodValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingDividendPeriodValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingDividendPeriodPaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingDividendPeriodPaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingSettlMethodElectingPartySide_t:
+    cdm.fixml.fields.base.PaymentPaySide_enum_t
+
+typeAlias UnderlyingMakeWholeBenchmarkQuote_t: cdm.fixml.fields.base.StrikeIndexQuote_enum_t
+
+typeAlias UnderlyingMakeWholeInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamInterpolationMethod_t:
+    cdm.fixml.fields.base.PaymentStreamInflationInterpolationMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamInterpolationPeriod_t:
+    cdm.fixml.fields.base.PaymentStreamInterpolationPeriod_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingDatesBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingDatesOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingDatesOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingRateSpreadPositionType_t:
+    cdm.fixml.fields.base.PaymentStreamRateSpreadPositionType_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingCapRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingCapRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamCapRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingFloorRateBuySide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingFloorRateSellSide_t:
+    cdm.fixml.fields.base.PaymentStreamFloorRateBuySide_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingFinalRateRoundingDirection_t:
+    cdm.fixml.fields.base.RoundingDirection_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingAveragingMethod_t:
+    cdm.fixml.fields.base.PaymentStreamAveragingMethod_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingNegativeRateTreatment_t:
+    cdm.fixml.fields.base.PaymentStreamNegativeRateTreatment_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamCompoundingStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamFinalPricePaymentDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStreamFinalPricePaymentDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamFixingDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias UnderlyingPaymentStreamFirstObservationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStreamLinkStrikePriceType_t:
+    cdm.fixml.fields.base.PaymentStreamLinkStrikePriceType_enum_t
+
+typeAlias UnderlyingPaymentStreamRealizedVarianceMethod_t:
+    cdm.fixml.fields.base.PaymentStreamRealizedVarianceMethod_enum_t
+
+typeAlias UnderlyingPaymentStubEndDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStubEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStubEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingPaymentStubStartDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingPaymentStubStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingPaymentStubStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingProvisionBreakFeeElection_t:
+    cdm.fixml.fields.base.ProvisionBreakFeeElection_enum_t
+
+typeAlias UnderlyingReturnRateDateMode_t: cdm.fixml.fields.base.ReturnRateDateMode_enum_t
+
+typeAlias UnderlyingReturnRateValuationDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingReturnRateValuationDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingReturnRateValuationStartDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingReturnRateValuationStartDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingReturnRateValuationEndDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingReturnRateValuationEndDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingReturnRateValuationFrequencyUnit_t:
+    cdm.fixml.fields.base.CouponFrequencyUnit_enum_t
+
+typeAlias UnderlyingReturnRateValuationFrequencyRollConvention_t:
+    cdm.fixml.fields.base.DateRollConvention_enum_t
+
+typeAlias UnderlyingReturnRateValuationDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingReturnRateFXRateCalc_t: cdm.fixml.fields.base.SettlCurrFxRateCalc_enum_t
+
+typeAlias UnderlyingReturnRatePriceSequence_t:
+    cdm.fixml.fields.base.ReturnRatePriceSequence_enum_t
+
+typeAlias UnderlyingReturnRateCommissionBasis_t: cdm.fixml.fields.base.CommType_enum_t
+
+typeAlias UnderlyingReturnRateQuoteMethod_t:
+    cdm.fixml.fields.base.CashSettlQuoteMethod_enum_t
+
+typeAlias UnderlyingReturnRateQuoteTimeType_t:
+    cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias UnderlyingReturnRateValuationTimeType_t:
+    cdm.fixml.fields.base.ReturnRateQuoteTimeType_enum_t
+
+typeAlias UnderlyingReturnRateValuationPriceOption_t:
+    cdm.fixml.fields.base.ReturnRateValuationPriceOption_enum_t
+
+typeAlias UnderlyingReturnRateFinalPriceFallback_t:
+    cdm.fixml.fields.base.ComplexEventPVFinalPriceElectionFallback_enum_t
+
+typeAlias UnderlyingReturnRateInformationSource_t: cdm.fixml.fields.base.RateSource_enum_t
+
+typeAlias UnderlyingReturnRatePriceBasis_t:
+    cdm.fixml.fields.base.ReturnRatePriceBasis_enum_t
+
+typeAlias UnderlyingReturnRatePriceType_t: cdm.fixml.fields.base.ReturnRatePriceType_enum_t
+
+typeAlias UnderlyingReturnRateValuationDateType_t:
+    cdm.fixml.fields.base.NonDeliverableFixingDateType_enum_t
+
+typeAlias UnderlyingSettlMethodElectionDateBusinessDayConvention_t:
+    cdm.fixml.fields.base.BusinessDayConvention_enum_t
+
+typeAlias UnderlyingSettlMethodElectionDateOffsetUnit_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetUnit_enum_t
+
+typeAlias UnderlyingSettlMethodElectionDateOffsetDayType_t:
+    cdm.fixml.fields.base.PaymentStreamPaymentDateOffsetDayType_enum_t
+
+typeAlias UnderlyingStreamNotionalAdjustments_t:
+    cdm.fixml.fields.base.StreamNotionalAdjustments_enum_t
+
+typeAlias PaymentFloatingRateIndexCurveUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentFrequencyUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentRateResetFrequencyUnit_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexCurveUnit_enum_t
+
+typeAlias PaymentStreamRateIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias LegPaymentStreamRateIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias UnderlyingPaymentStreamRateIndex2Source_t:
+    cdm.fixml.fields.base.PaymentStreamRateIndexSource_enum_t
+
+typeAlias BatchProcessMode_t: cdm.fixml.fields.base.BatchProcessMode_enum_t

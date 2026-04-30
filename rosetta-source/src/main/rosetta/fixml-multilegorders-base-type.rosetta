@@ -1,0 +1,68 @@
+namespace cdm.fixml.multilegorders.base : < "fixml definition" >
+version "${project.version}"
+
+type NewOrdMleg extends NewOrderMultileg_message_t:
+
+type MlegOrdCxlRplc extends MultilegOrderCancelReplace_message_t:
+
+type NewOrderMultilegElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    preAllocMleg cdm.fixml.components.base.PreAllocMlegGrp_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    disclsrInst cdm.fixml.components.base.DisclosureInstructionGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ord cdm.fixml.components.base.LegOrdGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+
+type NewOrderMultilegAttributes:
+
+    newOrderMultilegAttributes NewOrderMultilegAttributes (0..1)
+
+type NewOrderMultileg_message_t extends cdm.fixml.components.base.Abstract_message_t: <"NewOrderMultileg can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg61">
+
+    newOrderMultilegElements NewOrderMultilegElements (1..1)
+    newOrderMultilegAttributes NewOrderMultilegAttributes (0..1)
+
+type MultilegOrderCancelReplaceElements:
+
+    pty cdm.fixml.components.base.Parties_Block_t (0..*)
+    tgtPty cdm.fixml.components.base.TargetParties_Block_t (0..*)
+    preAllocMleg cdm.fixml.components.base.PreAllocMlegGrp_Block_t (0..*)
+    valuChk cdm.fixml.components.base.ValueChecksGrp_Block_t (0..*)
+    mtchgInst cdm.fixml.components.base.MatchingInstructions_Block_t (0..*)
+    dsplyInstr cdm.fixml.components.base.DisplayInstruction_Block_t (0..1)
+    disclsrInst cdm.fixml.components.base.DisclosureInstructionGrp_Block_t (0..*)
+    trdSes cdm.fixml.components.base.TrdgSesGrp_Block_t (0..*)
+    instrmt cdm.fixml.components.base.Instrument_Block_t (0..1)
+    undly cdm.fixml.components.base.UndInstrmtGrp_Block_t (0..*)
+    ord cdm.fixml.components.base.LegOrdGrp_Block_t (0..*)
+    ordQty cdm.fixml.components.base.OrderQtyData_Block_t (0..1)
+    trgrInstr cdm.fixml.components.base.TriggeringInstruction_Block_t (0..1)
+    comm cdm.fixml.components.base.CommissionData_Block_t (0..1)
+    commData cdm.fixml.components.base.CommissionDataGrp_Block_t (0..*)
+    ordAttrib cdm.fixml.components.base.OrderAttributeGrp_Block_t (0..*)
+    pegInstr cdm.fixml.components.base.PegInstructions_Block_t (0..1)
+    discInstr cdm.fixml.components.base.DiscretionInstructions_Block_t (0..1)
+    strtPrmGrp cdm.fixml.components.base.StrategyParametersGrp_Block_t (0..*)
+
+type MultilegOrderCancelReplaceAttributes:
+
+    multilegOrderCancelReplaceAttributes MultilegOrderCancelReplaceAttributes (0..1)
+
+type MultilegOrderCancelReplace_message_t extends cdm.fixml.components.base.Abstract_message_t: <"MultilegOrderCancelReplace can be found at   https://www.fixtrading.org/online-specification/business-area-Trade#msg62">
+
+    multilegOrderCancelReplaceElements MultilegOrderCancelReplaceElements (1..1)
+    multilegOrderCancelReplaceAttributes MultilegOrderCancelReplaceAttributes (0..1)
