@@ -43,7 +43,7 @@ public class SynonymIngestExpectationTest {
                 .map(RESOURCES_FOLDER::relativize)
                 .map(UrlUtils::toPortableString)
                 .collect(Collectors.toSet());
-        
+
         assertThat(filesInDir, Matchers.containsInAnyOrder(filesListedInExpectationsFile.toArray()));
     }
 
