@@ -287,6 +287,7 @@ func MapParty:
             key: fpmlParty -> id
         }
 
+
 func MapPartyIdentifier:
     inputs:
         fpmlPartyIdentifier fpml.PartyId (0..1)

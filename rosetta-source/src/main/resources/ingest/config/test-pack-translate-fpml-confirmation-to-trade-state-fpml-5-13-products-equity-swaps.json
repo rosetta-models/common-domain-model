@@ -10,7 +10,7 @@
     "assertions" : {
       "inputPathCount" : 165,
       "outputPathCount" : 171,
-      "modelValidationFailures" : 12,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -21,7 +21,7 @@
     "assertions" : {
       "inputPathCount" : 198,
       "outputPathCount" : 253,
-      "modelValidationFailures" : 46,
+      "modelValidationFailures" : 22,
       "runtimeError" : false
     }
   }, {
@@ -32,7 +32,7 @@
     "assertions" : {
       "inputPathCount" : 168,
       "outputPathCount" : 214,
-      "modelValidationFailures" : 21,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -43,7 +43,7 @@
     "assertions" : {
       "inputPathCount" : 145,
       "outputPathCount" : 164,
-      "modelValidationFailures" : 9,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -65,7 +65,7 @@
     "assertions" : {
       "inputPathCount" : 222,
       "outputPathCount" : 291,
-      "modelValidationFailures" : 46,
+      "modelValidationFailures" : 22,
       "runtimeError" : false
     }
   }, {
@@ -75,7 +75,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex09-compounding-swap.json",
     "assertions" : {
       "inputPathCount" : 90,
-      "outputPathCount" : 108,
+      "outputPathCount" : 118,
       "modelValidationFailures" : 3,
       "runtimeError" : false
     }
@@ -86,8 +86,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex10-short-form-interestLeg-driving-schedule-dates.json",
     "assertions" : {
       "inputPathCount" : 100,
-      "outputPathCount" : 118,
-      "modelValidationFailures" : 2,
+      "outputPathCount" : 125,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   }, {
@@ -98,7 +98,7 @@
     "assertions" : {
       "inputPathCount" : 138,
       "outputPathCount" : 167,
-      "modelValidationFailures" : 11,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -108,7 +108,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex12-on-european-index-underlyer-short-form.json",
     "assertions" : {
       "inputPathCount" : 140,
-      "outputPathCount" : 163,
+      "outputPathCount" : 170,
       "modelValidationFailures" : 4,
       "runtimeError" : false
     }
@@ -120,7 +120,7 @@
     "assertions" : {
       "inputPathCount" : 164,
       "outputPathCount" : 186,
-      "modelValidationFailures" : 10,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -131,7 +131,7 @@
     "assertions" : {
       "inputPathCount" : 159,
       "outputPathCount" : 171,
-      "modelValidationFailures" : 10,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -142,7 +142,7 @@
     "assertions" : {
       "inputPathCount" : 154,
       "outputPathCount" : 164,
-      "modelValidationFailures" : 13,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -153,7 +153,7 @@
     "assertions" : {
       "inputPathCount" : 161,
       "outputPathCount" : 177,
-      "modelValidationFailures" : 8,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   }, {
@@ -163,8 +163,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/eqs-ex17-cfd.json",
     "assertions" : {
       "inputPathCount" : 106,
-      "outputPathCount" : 116,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 123,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -175,7 +175,7 @@
     "assertions" : {
       "inputPathCount" : 145,
       "outputPathCount" : 158,
-      "modelValidationFailures" : 12,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -186,7 +186,7 @@
     "assertions" : {
       "inputPathCount" : 144,
       "outputPathCount" : 157,
-      "modelValidationFailures" : 13,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -197,7 +197,7 @@
     "assertions" : {
       "inputPathCount" : 157,
       "outputPathCount" : 162,
-      "modelValidationFailures" : 12,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -207,8 +207,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-equity-swaps/trs-ex02-single-equity.json",
     "assertions" : {
       "inputPathCount" : 179,
-      "outputPathCount" : 145,
-      "modelValidationFailures" : 3,
+      "outputPathCount" : 152,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -219,7 +219,7 @@
     "assertions" : {
       "inputPathCount" : 185,
       "outputPathCount" : 175,
-      "modelValidationFailures" : 12,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -241,7 +241,7 @@
     "assertions" : {
       "inputPathCount" : 127,
       "outputPathCount" : 134,
-      "modelValidationFailures" : 4,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   } ]
