@@ -2,7 +2,7 @@ package org.finos.cdm.testpack;
 
 import cdm.fixml.components.base.Abstract_message_t;
 import cdm.fixml.order.base.ExecRpt;
-import cdm.ingest.fpml.confirmation.message.functions.Ingest_FixML_MessageToTradeState;
+import cdm.ingest.fixml.message.functions.Ingest_FixML_MessageToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToTradeState;
 import cdm.ingest.fpml.confirmation.message.functions.Ingest_FpmlConfirmationToWorkflowStep;
 import com.google.common.collect.ImmutableMap;

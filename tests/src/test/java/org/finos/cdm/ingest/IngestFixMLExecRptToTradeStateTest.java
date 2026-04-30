@@ -1,6 +1,6 @@
 package org.finos.cdm.ingest;
 
-import cdm.ingest.fpml.confirmation.message.functions.Ingest_FixML_MessageToTradeState;
+import cdm.ingest.fixml.message.functions.Ingest_FixML_MessageToTradeState;
 import com.regnosys.rosetta.common.transform.TestPackModel;
 import com.regnosys.testing.transform.TransformTestExtension;
 import org.finos.cdm.CdmRuntimeModuleTesting;

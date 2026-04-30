@@ -1,4 +1,4 @@
-namespace cdm.ingest.fpml.confirmation.message
+namespace cdm.ingest.fixml.message
 version "${project.version}"
 
 import cdm.base.datetime.*
