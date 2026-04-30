@@ -654,18 +654,7 @@
                         "identifierType" : "Name"
                       } ],
                       "isExchangeListed" : true,
-                      "party" : [ {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XEUR",
-                            "meta" : {
-                              "scheme" : "http://www.fpml.org/exchange-id"
-                            }
-                          },
-                          "meta" : {
-                            "globalKey" : "290e4a"
-                          }
-                        } ],
+                      "exchange" : {
                         "name" : {
                           "value" : "XEUR",
                           "meta" : {
@@ -673,35 +662,8 @@
                           }
                         },
                         "meta" : {
-                          "globalKey" : "9a47b214"
+                          "globalKey" : "290e4a"
                         }
-                      } ],
-                      "partyRole" : {
-                        "partyReference" : {
-                          "value" : {
-                            "partyId" : [ {
-                              "identifier" : {
-                                "value" : "XEUR",
-                                "meta" : {
-                                  "scheme" : "http://www.fpml.org/exchange-id"
-                                }
-                              },
-                              "meta" : {
-                                "globalKey" : "290e4a"
-                              }
-                            } ],
-                            "name" : {
-                              "value" : "XEUR",
-                              "meta" : {
-                                "scheme" : "http://www.fpml.org/exchange-id"
-                              }
-                            },
-                            "meta" : {
-                              "globalKey" : "9a47b214"
-                            }
-                          }
-                        },
-                        "role" : "Exchange"
                       },
                       "assetType" : "Other",
                       "name" : {
@@ -719,7 +681,7 @@
                 }
               },
               "meta" : {
-                "globalKey" : "d71da3b6"
+                "globalKey" : "aad8ec47"
               }
             } ]
           } ],
@@ -866,11 +828,11 @@
             }
           },
           "meta" : {
-            "globalKey" : "115db12c"
+            "globalKey" : "f3ce003b"
           }
         },
         "meta" : {
-          "globalKey" : "115db12c"
+          "globalKey" : "f3ce003b"
         }
       }
     }
@@ -1516,18 +1478,7 @@
                     "identifierType" : "Name"
                   } ],
                   "isExchangeListed" : true,
-                  "party" : [ {
-                    "partyId" : [ {
-                      "identifier" : {
-                        "value" : "XEUR",
-                        "meta" : {
-                          "scheme" : "http://www.fpml.org/exchange-id"
-                        }
-                      },
-                      "meta" : {
-                        "globalKey" : "290e4a"
-                      }
-                    } ],
+                  "exchange" : {
                     "name" : {
                       "value" : "XEUR",
                       "meta" : {
@@ -1535,35 +1486,8 @@
                       }
                     },
                     "meta" : {
-                      "globalKey" : "9a47b214"
+                      "globalKey" : "290e4a"
                     }
-                  } ],
-                  "partyRole" : {
-                    "partyReference" : {
-                      "value" : {
-                        "partyId" : [ {
-                          "identifier" : {
-                            "value" : "XEUR",
-                            "meta" : {
-                              "scheme" : "http://www.fpml.org/exchange-id"
-                            }
-                          },
-                          "meta" : {
-                            "globalKey" : "290e4a"
-                          }
-                        } ],
-                        "name" : {
-                          "value" : "XEUR",
-                          "meta" : {
-                            "scheme" : "http://www.fpml.org/exchange-id"
-                          }
-                        },
-                        "meta" : {
-                          "globalKey" : "9a47b214"
-                        }
-                      }
-                    },
-                    "role" : "Exchange"
                   },
                   "assetType" : "Other",
                   "name" : {
@@ -1581,7 +1505,7 @@
             }
           },
           "meta" : {
-            "globalKey" : "d71da3b6"
+            "globalKey" : "aad8ec47"
           }
         } ]
       } ],
@@ -1728,7 +1652,7 @@
         }
       },
       "meta" : {
-        "globalKey" : "115db12c"
+        "globalKey" : "f3ce003b"
       }
     },
     "observationHistory" : [ {
@@ -1739,10 +1663,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "a1ed6a5"
+      "globalKey" : "162098f6"
     }
   } ],
   "meta" : {
-    "globalKey" : "af4d6dc2"
+    "globalKey" : "fb7b1322"
   }
 }
