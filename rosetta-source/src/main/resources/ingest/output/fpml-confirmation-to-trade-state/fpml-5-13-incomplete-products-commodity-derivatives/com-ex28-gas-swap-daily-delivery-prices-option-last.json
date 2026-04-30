@@ -220,7 +220,8 @@
                 "value" : "USD"
               }
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -264,7 +265,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "fe4fe9ab"
+          "globalKey" : "29e79d02"
         }
       }, {
         "price" : [ {
@@ -517,10 +518,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "2e233696"
+      "globalKey" : "eba5bceb"
     }
   },
   "meta" : {
-    "globalKey" : "2e233696"
+    "globalKey" : "eba5bceb"
   }
 }

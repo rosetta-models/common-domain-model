@@ -83,7 +83,8 @@
             "perUnitOf" : {
               "capacityUnit" : "MT"
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -93,7 +94,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "ee98bc82"
+          "globalKey" : "17054433"
         }
       } ]
     } ],
@@ -215,10 +216,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "d9914526"
+      "globalKey" : "d92885d7"
     }
   },
   "meta" : {
-    "globalKey" : "d9914526"
+    "globalKey" : "d92885d7"
   }
 }

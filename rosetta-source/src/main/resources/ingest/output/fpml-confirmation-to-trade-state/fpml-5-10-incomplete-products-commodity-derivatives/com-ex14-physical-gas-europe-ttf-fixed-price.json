@@ -83,7 +83,8 @@
             "perUnitOf" : {
               "capacityUnit" : "USTHM"
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -93,7 +94,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "53c6efce"
+          "globalKey" : "579d7a67"
         }
       } ]
     } ],
@@ -240,10 +241,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "38e65386"
+      "globalKey" : "ce5abfcd"
     }
   },
   "meta" : {
-    "globalKey" : "38e65386"
+    "globalKey" : "ce5abfcd"
   }
 }

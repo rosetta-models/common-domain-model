@@ -74,7 +74,8 @@
       "priceQuantity" : [ {
         "price" : [ {
           "value" : {
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -84,7 +85,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "a8feac46"
+          "globalKey" : "a95d4cef"
         }
       } ]
     } ],
@@ -206,10 +207,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "4e2f2c0c"
+      "globalKey" : "f8477bb1"
     }
   },
   "meta" : {
-    "globalKey" : "4e2f2c0c"
+    "globalKey" : "f8477bb1"
   }
 }

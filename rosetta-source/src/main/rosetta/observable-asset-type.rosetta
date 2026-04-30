@@ -139,9 +139,7 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
     premiumType PremiumTypeEnum (0..1) <"(Optionally) Additional attribute that can further define any premium to the price.">
 
     condition UnitOfAmountExists: <"Requires that a unit of amount must be specified for price unless price type is Variance, Volatility or Correlation.">
-        if priceType = Variance
-                or priceType = Volatility
-                or priceType = Correlation
+        if priceType = Variance or priceType = Volatility or priceType = Correlation
         then unit is absent and perUnitOf is absent
         else unit exists and perUnitOf exists
 
@@ -169,13 +167,11 @@ type PriceSchedule extends MeasureSchedule: <"Specifies the price of a financial
         if premiumType exists then priceType = Premium
 
     condition ArithmeticOperator: <"Operator must not be subtract or divide.">
-        arithmeticOperator <> Subtract
-            and arithmeticOperator <> Divide
+        arithmeticOperator <> Subtract and arithmeticOperator <> Divide
 
     condition SpreadPrice: <"A spread type can only be specified when the price type is an asset price or an interest rate.">
         if arithmeticOperator = Add
-        then priceType = AssetPrice
-                or priceType = InterestRate
+        then priceType = AssetPrice or priceType = InterestRate
 
     condition ForwardPoint: <"If composite operand type is ForwardPoint then the price type must be ExchangeRate.">
         if composite -> operandType = ForwardPoint

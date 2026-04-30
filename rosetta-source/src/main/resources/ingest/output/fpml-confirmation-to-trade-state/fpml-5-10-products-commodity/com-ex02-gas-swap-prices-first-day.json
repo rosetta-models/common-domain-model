@@ -205,7 +205,8 @@
             "perUnitOf" : {
               "capacityUnit" : "USMMBTU"
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -249,7 +250,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "9c2df0a"
+          "globalKey" : "6fdf1325"
         }
       }, {
         "price" : [ {
@@ -493,10 +494,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "d73b0205"
+      "globalKey" : "81bc13ba"
     }
   },
   "meta" : {
-    "globalKey" : "d73b0205"
+    "globalKey" : "81bc13ba"
   }
 }

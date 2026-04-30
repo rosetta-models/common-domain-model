@@ -80,7 +80,8 @@
                 "value" : "EUR"
               }
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -90,7 +91,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "65bd64d3"
+          "globalKey" : "8475a602"
         }
       } ]
     } ],
@@ -237,10 +238,10 @@
       }
     },
     "meta" : {
-      "globalKey" : "7ead4fa1"
+      "globalKey" : "41734712"
     }
   },
   "meta" : {
-    "globalKey" : "7ead4fa1"
+    "globalKey" : "41734712"
   }
 }

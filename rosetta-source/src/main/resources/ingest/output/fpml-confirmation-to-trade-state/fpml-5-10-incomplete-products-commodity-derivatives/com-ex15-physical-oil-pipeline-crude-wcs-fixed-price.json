@@ -103,7 +103,8 @@
             "perUnitOf" : {
               "capacityUnit" : "USGAL"
             },
-            "priceType" : "AssetPrice"
+            "priceType" : "InterestRate",
+            "priceSubType" : "Fee"
           },
           "meta" : {
             "location" : [ {
@@ -113,7 +114,7 @@
           }
         } ],
         "meta" : {
-          "globalKey" : "ecec0be3"
+          "globalKey" : "e31be0f2"
         }
       } ]
     } ],
@@ -235,10 +236,10 @@
       }
     } ],
     "meta" : {
-      "globalKey" : "5ecc40a4"
+      "globalKey" : "fb4cfa19"
     }
   },
   "meta" : {
-    "globalKey" : "5ecc40a4"
+    "globalKey" : "fb4cfa19"
   }
 }
