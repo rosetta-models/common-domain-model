@@ -13,7 +13,6 @@ import com.regnosys.ingest.fpml.*;
 import com.regnosys.ingest.ore.OreTradeTest;
 import com.regnosys.rosetta.common.transform.TransformType;
 import com.regnosys.runefpml.RuneFpmlModelConfig;
-import com.regnosys.testing.TestingExpectationUtil;
 import com.regnosys.testing.pipeline.PipelineConfigWriter;
 import com.regnosys.testing.pipeline.PipelineTestPackFilter;
 import com.regnosys.testing.pipeline.PipelineTreeConfig;
@@ -97,13 +96,10 @@ public class CdmTestPackCreator {
             Injector injector = new CdmRuntimeModuleTesting.InjectorProvider().getInjector();
             injector.injectMembers(testPackConfigCreator);
 
-            testPackConfigCreator.runIngestion();
+            testPackConfigCreator.runSynonymIngest();
+            testPackConfigCreator.runFunctionIngestAndDiagnostics();
 
             testPackConfigCreator.runFunctionCreators();
-
-            testPackConfigCreator.run();
-
-
             System.exit(0);
         } catch (Exception e) {
             LOGGER.error("Error executing {}.main()", CdmTestPackCreator.class.getName(), e);
@@ -111,8 +107,7 @@ public class CdmTestPackCreator {
         }
     }
 
-    private void runIngestion() {
-
+    private void runSynonymIngest() {
         LOGGER.info(" ** Updating expectations for cmeClearedConfirmTest");
         cmeClearedConfirmTest.updateExpectations();
         LOGGER.info(" ** Updating expectations for cmeSubmissionTest");
@@ -159,11 +154,9 @@ public class CdmTestPackCreator {
 
         LOGGER.info(" ** Updating expectations for OreTradeTest");
         oreTradeTest.updateExpectations();
-
     }
 
     private void runFunctionCreators() throws Exception {
-
         LOGGER.info(" ** Updating Function Input Samples");
 
         FunctionInputCreator functionInputCreator = new FunctionInputCreator();
@@ -178,7 +171,7 @@ public class CdmTestPackCreator {
         functionCreator.run();
     }
 
-    private void run() throws IOException {
+    private void runFunctionIngestAndDiagnostics() throws IOException {
         pipelineConfigWriter.writePipelinesAndTestPacks(createTreeConfig());
         new IngestBasicDiagnosticsCreator().generateIngestBasicDiagnostics();
         new IngestExpectationDiffCreator().generateIngestExpectationDiffs();
