@@ -148,7 +148,7 @@ func MapCreditDefaultSwapOptionPayout:
                                 fpmlCreditDefaultSwapOption,
                                 fpmlCreditDefaultSwapOption -> strike -> spread,
                                 empty,
-                                fpmlCreditDefaultSwapOption -> creditDefaultSwap -> protectionTerms -> calculationAmount -> currency
+                                fpmlCreditDefaultSwapOption -> creditDefaultSwap -> protectionTerms -> calculationAmount -> currency first
                             )
                 },
             ...
@@ -248,14 +248,14 @@ func MapCreditEventsReferenceWithReference:
         CreditEvents {
             failureToPay:
                 FailureToPay {
-                    applicable: creditEvents -> failureToPay -> applicable,
+                    applicable: creditEvents -> failureToPay -> applicable first,
                     paymentRequirement:
                         Money {
-                            value: creditEvents -> failureToPay -> paymentRequirement -> amount,
+                            value: creditEvents -> failureToPay -> paymentRequirement -> amount first,
                             unit:
                                 UnitType {
                                     currency: MapCurrency(
-                                                creditEvents -> failureToPay -> paymentRequirement -> currency
+                                                creditEvents -> failureToPay -> paymentRequirement -> currency first
                                             ),
                                     ...
                                 },
@@ -265,16 +265,16 @@ func MapCreditEventsReferenceWithReference:
                 },
             restructuring:
                 Restructuring {
-                    applicable: creditEvents -> restructuring -> applicable,
+                    applicable: creditEvents -> restructuring -> applicable first,
                     ...
                 },
             defaultRequirement:
                 Money {
-                    value: creditEvents -> defaultRequirement -> amount,
+                    value: creditEvents -> defaultRequirement -> amount first,
                     unit:
                         UnitType {
                             currency: MapCurrency(
-                                        creditEvents -> defaultRequirement -> currency
+                                        creditEvents -> defaultRequirement -> currency first
                                     ),
                             ...
                         },
@@ -283,14 +283,14 @@ func MapCreditEventsReferenceWithReference:
             creditEventNotice:
                 CreditEventNotice {
                     notifyingParty: MapMultipleCounterpartyRoleEnum(
-                                creditEvents -> creditEventNotice -> notifyingParty -> buyerPartyReference -> href,
-                                creditEvents -> creditEventNotice -> notifyingParty -> sellerPartyReference -> href,
+                                creditEvents -> creditEventNotice -> notifyingParty -> buyerPartyReference -> href first,
+                                creditEvents -> creditEventNotice -> notifyingParty -> sellerPartyReference -> href first,
                                 cdmCounterpartyList
                             ),
                     publiclyAvailableInformation:
                         PubliclyAvailableInformation {
                             publicSource: creditEvents -> creditEventNotice -> publiclyAvailableInformation -> publicSource,
-                            specifiedNumber: creditEvents -> creditEventNotice -> publiclyAvailableInformation -> specifiedNumber,
+                            specifiedNumber: creditEvents -> creditEventNotice -> publiclyAvailableInformation -> specifiedNumber first,
                             ...
                         },
                     ...
