@@ -275,13 +275,6 @@
         "globalKey" : "e0602f0d"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2006-08-14",
-      "meta" : {
-        "globalKey" : "3eb20e",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

@@ -509,12 +509,6 @@
         "globalKey" : "d11100e"
       }
     } ],
-    "tradeDate" : {
-      "value" : "1994-12-12",
-      "meta" : {
-        "globalKey" : "3e530c"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

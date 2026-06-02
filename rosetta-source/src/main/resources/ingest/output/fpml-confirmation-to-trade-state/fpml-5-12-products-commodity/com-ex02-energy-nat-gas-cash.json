@@ -443,12 +443,6 @@
         "globalKey" : "df7005b3"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2022-03-17",
-      "meta" : {
-        "globalKey" : "3f30d1"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

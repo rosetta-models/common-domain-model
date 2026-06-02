@@ -523,12 +523,6 @@
         "globalKey" : "f1ff252a"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2018-02-20",
-      "meta" : {
-        "globalKey" : "3f1094"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

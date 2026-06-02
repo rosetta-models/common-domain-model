@@ -596,12 +596,6 @@
       },
       "identifierType" : "UniqueSwapIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2001-01-09",
-      "meta" : {
-        "globalKey" : "3e8849"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

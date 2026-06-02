@@ -296,7 +296,6 @@
                   "dayType" : "ExchangeBusiness",
                   "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
-                    "globalReference" : "3e91d1",
                     "externalReference" : "TradeDate"
                   }
                 },
@@ -775,13 +774,6 @@
         "globalKey" : "9593dbb6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2002-07-17",
-      "meta" : {
-        "globalKey" : "3e91d1",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

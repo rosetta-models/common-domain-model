@@ -499,12 +499,6 @@
         "globalKey" : "40565867"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2023-02-14",
-      "meta" : {
-        "globalKey" : "3f388e"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

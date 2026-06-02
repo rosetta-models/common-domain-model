@@ -20,8 +20,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-incomplete-processes-execution-advice/msg-ex61-execution-advice-trade-change-F03-00.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 102,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -31,8 +31,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-incomplete-processes-execution-advice/msg-ex62-execution-advice-trade-change-correction-F03-10.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 102,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -75,8 +75,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-incomplete-processes-execution-advice/msg-ex68-execution-advice-warrant.json",
     "assertions" : {
       "inputPathCount" : 74,
-      "outputPathCount" : 42,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 41,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   } ]

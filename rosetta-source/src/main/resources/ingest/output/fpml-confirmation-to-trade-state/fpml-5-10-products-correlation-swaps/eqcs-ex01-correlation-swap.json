@@ -444,12 +444,6 @@
         "globalKey" : "ef1edd3e"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2007-01-05",
-      "meta" : {
-        "globalKey" : "3eb845"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

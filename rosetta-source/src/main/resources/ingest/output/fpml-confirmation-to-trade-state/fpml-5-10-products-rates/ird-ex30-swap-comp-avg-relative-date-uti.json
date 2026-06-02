@@ -75,7 +75,6 @@
                     }
                   },
                   "dateRelativeTo" : {
-                    "globalReference" : "3ea9df",
                     "externalReference" : "tradeDate"
                   },
                   "relativeDateAdjustments" : {
@@ -309,7 +308,6 @@
                     }
                   },
                   "dateRelativeTo" : {
-                    "globalReference" : "3ea9df",
                     "externalReference" : "tradeDate"
                   },
                   "relativeDateAdjustments" : {
@@ -881,13 +879,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2005-07-31",
-      "meta" : {
-        "globalKey" : "3ea9df",
-        "externalKey" : "tradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

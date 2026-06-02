@@ -34,13 +34,6 @@
         "globalKey" : "98447e48"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2014-09-16",
-      "meta" : {
-        "globalKey" : "3ef250",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

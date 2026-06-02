@@ -238,12 +238,6 @@
         "globalKey" : "ec309d09"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2008-10-27",
-      "meta" : {
-        "globalKey" : "3ec29b"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

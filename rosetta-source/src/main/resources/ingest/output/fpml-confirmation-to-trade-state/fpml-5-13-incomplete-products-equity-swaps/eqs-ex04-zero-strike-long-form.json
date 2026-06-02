@@ -171,7 +171,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3e9291",
                       "externalReference" : "TradeDate"
                     }
                   },
@@ -397,13 +396,6 @@
         "globalKey" : "9593dbb6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2002-10-17",
-      "meta" : {
-        "globalKey" : "3e9291",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

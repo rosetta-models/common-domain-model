@@ -540,12 +540,6 @@
         "globalKey" : "67d36ed5"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2005-02-20",
-      "meta" : {
-        "globalKey" : "3ea894"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

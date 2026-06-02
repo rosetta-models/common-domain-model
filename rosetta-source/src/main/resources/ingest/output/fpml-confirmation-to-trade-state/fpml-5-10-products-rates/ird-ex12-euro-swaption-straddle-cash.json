@@ -622,12 +622,6 @@
         "globalKey" : "a68fd2c2"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2000-08-30",
-      "meta" : {
-        "globalKey" : "3e821e"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

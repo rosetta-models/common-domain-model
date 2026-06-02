@@ -256,12 +256,6 @@
         "globalKey" : "67fde5d3"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2021-12-06",
-      "meta" : {
-        "globalKey" : "3f2b06"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

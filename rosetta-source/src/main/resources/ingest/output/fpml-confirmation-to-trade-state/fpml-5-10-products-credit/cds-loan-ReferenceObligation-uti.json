@@ -380,12 +380,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-10-26",
-      "meta" : {
-        "globalKey" : "3eb29a"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

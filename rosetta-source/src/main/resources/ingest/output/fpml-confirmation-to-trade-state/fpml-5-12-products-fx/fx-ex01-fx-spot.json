@@ -185,12 +185,6 @@
         "globalKey" : "ac6412bc"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-10-23",
-      "meta" : {
-        "globalKey" : "3e8a97"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

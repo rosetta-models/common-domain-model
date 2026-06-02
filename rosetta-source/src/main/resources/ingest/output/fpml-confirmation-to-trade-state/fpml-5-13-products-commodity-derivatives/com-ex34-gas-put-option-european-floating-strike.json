@@ -263,12 +263,6 @@
         "globalKey" : "ca865982"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-04-10",
-      "meta" : {
-        "globalKey" : "3ee10a"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

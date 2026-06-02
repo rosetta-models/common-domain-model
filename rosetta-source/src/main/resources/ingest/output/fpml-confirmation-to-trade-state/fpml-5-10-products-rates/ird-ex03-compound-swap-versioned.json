@@ -719,12 +719,6 @@
         "globalKey" : "77651afa"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2000-04-25",
-      "meta" : {
-        "globalKey" : "3e8119"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

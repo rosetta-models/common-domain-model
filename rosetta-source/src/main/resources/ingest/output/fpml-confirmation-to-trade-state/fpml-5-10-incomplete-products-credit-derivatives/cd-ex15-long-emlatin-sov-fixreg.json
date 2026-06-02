@@ -433,12 +433,6 @@
         "globalKey" : "98636346"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2002-11-22",
-      "meta" : {
-        "globalKey" : "3e92d6"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

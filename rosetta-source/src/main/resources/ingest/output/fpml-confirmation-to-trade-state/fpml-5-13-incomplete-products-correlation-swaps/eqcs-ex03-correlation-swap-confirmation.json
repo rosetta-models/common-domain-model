@@ -491,12 +491,6 @@
         "globalKey" : "fde00dd4"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2005-11-07",
-      "meta" : {
-        "globalKey" : "3eaac7"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

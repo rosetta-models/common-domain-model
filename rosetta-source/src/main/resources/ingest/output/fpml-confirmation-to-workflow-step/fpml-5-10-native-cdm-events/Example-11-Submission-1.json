@@ -490,12 +490,6 @@
               },
               "identifierType" : "UniqueTransactionIdentifier"
             } ],
-            "tradeDate" : {
-              "value" : "2018-04-01",
-              "meta" : {
-                "globalKey" : "3f1101"
-              }
-            },
             "party" : [ {
               "partyId" : [ {
                 "identifier" : {

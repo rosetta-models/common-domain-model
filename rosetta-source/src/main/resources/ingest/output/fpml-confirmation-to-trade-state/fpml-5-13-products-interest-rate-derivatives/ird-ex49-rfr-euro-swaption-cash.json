@@ -620,12 +620,6 @@
         "globalKey" : "3160a419"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2021-08-30",
-      "meta" : {
-        "globalKey" : "3f2a1e"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

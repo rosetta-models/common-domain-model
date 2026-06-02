@@ -17,13 +17,6 @@
         "globalKey" : "32a17ae8"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-05-20",
-      "meta" : {
-        "globalKey" : "3ee154",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

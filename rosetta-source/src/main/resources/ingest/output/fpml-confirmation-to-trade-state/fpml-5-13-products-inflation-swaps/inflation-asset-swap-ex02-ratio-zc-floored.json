@@ -710,12 +710,6 @@
         "globalKey" : "d041a96"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2014-12-05",
-      "meta" : {
-        "globalKey" : "3ef305"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

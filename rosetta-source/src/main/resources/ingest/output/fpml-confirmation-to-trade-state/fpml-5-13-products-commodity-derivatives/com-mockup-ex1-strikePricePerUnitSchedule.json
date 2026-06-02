@@ -336,12 +336,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2021-12-03",
-      "meta" : {
-        "globalKey" : "3f2b03"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

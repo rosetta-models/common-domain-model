@@ -73,7 +73,6 @@
                     },
                     "businessDayConvention" : "NotApplicable",
                     "dateRelativeTo" : {
-                      "globalReference" : "3e924a",
                       "externalReference" : "TradeDate"
                     }
                   },
@@ -194,7 +193,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3e924a",
                       "externalReference" : "TradeDate"
                     }
                   },
@@ -530,13 +528,6 @@
         "globalKey" : "9593e6f9"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2002-09-10",
-      "meta" : {
-        "globalKey" : "3e924a",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

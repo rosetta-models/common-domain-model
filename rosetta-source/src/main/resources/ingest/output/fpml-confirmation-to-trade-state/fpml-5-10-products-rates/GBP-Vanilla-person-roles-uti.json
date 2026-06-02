@@ -505,12 +505,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2017-12-18",
-      "meta" : {
-        "globalKey" : "3f0b12"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

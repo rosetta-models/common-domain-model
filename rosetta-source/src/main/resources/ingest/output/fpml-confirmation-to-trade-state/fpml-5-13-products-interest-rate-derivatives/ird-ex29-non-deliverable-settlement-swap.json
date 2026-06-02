@@ -616,12 +616,6 @@
         "globalKey" : "9591fab6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "1994-12-12",
-      "meta" : {
-        "globalKey" : "3e530c"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

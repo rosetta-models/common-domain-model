@@ -295,13 +295,6 @@
       },
       "identifierType" : "UniqueSwapIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-01-16",
-      "meta" : {
-        "globalKey" : "3eb050",
-        "externalKey" : "uyrt76w4"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

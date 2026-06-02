@@ -573,12 +573,6 @@
         "globalKey" : "b3cab002"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2018-11-14",
-      "meta" : {
-        "globalKey" : "3f12ce"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

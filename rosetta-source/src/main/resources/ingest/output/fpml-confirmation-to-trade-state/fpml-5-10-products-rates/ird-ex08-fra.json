@@ -427,12 +427,6 @@
         "globalKey" : "814acd2"
       }
     } ],
-    "tradeDate" : {
-      "value" : "1991-05-14",
-      "meta" : {
-        "globalKey" : "3e394e"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

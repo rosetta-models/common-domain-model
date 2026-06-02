@@ -462,13 +462,6 @@
         "globalKey" : "5c8ba844"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2006-01-16",
-      "meta" : {
-        "globalKey" : "3eb050",
-        "externalKey" : "TRADEDATE"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
@@ -538,7 +531,6 @@
             "dayType" : "Business",
             "businessDayConvention" : "NONE",
             "dateRelativeTo" : {
-              "globalReference" : "3eb050",
               "externalReference" : "TRADEDATE"
             }
           }

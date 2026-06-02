@@ -271,12 +271,6 @@
         "globalKey" : "9591fab6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-09-04",
-      "meta" : {
-        "globalKey" : "3e8a44"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

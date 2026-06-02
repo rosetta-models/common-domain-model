@@ -277,12 +277,6 @@
         "globalKey" : "bcd0b3e2"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-01-15",
-      "meta" : {
-        "globalKey" : "3e884f"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

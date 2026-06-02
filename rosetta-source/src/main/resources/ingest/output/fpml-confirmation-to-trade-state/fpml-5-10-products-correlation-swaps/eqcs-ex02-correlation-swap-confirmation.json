@@ -476,13 +476,6 @@
         "globalKey" : "fde00dd4"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2007-05-01",
-      "meta" : {
-        "globalKey" : "3eb941",
-        "externalKey" : "td9202"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

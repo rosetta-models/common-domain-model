@@ -576,12 +576,6 @@
         "globalKey" : "b3cab003"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2019-02-28",
-      "meta" : {
-        "globalKey" : "3f189c"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

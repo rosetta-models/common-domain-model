@@ -211,12 +211,6 @@
         "globalKey" : "16dc98d0"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2006-11-14",
-      "meta" : {
-        "globalKey" : "3eb2ce"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

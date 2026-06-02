@@ -609,12 +609,6 @@
         "globalKey" : "62bf9b5d"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2022-06-13",
-      "meta" : {
-        "globalKey" : "3f318d"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

@@ -444,12 +444,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-01-09",
-      "meta" : {
-        "globalKey" : "3eb049"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

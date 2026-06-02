@@ -127,7 +127,6 @@
                         }
                       },
                       "dateRelativeTo" : {
-                        "globalReference" : "3e819c",
                         "externalReference" : "td"
                       }
                     },
@@ -551,13 +550,6 @@
         "globalKey" : "877e757d"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2000-06-28",
-      "meta" : {
-        "globalKey" : "3e819c",
-        "externalKey" : "td"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

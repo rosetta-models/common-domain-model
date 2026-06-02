@@ -603,12 +603,6 @@
         "globalKey" : "ebf17cb7"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2008-06-02",
-      "meta" : {
-        "globalKey" : "3ec182"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

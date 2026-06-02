@@ -356,13 +356,6 @@
         "globalKey" : "95944c36"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2007-01-05",
-      "meta" : {
-        "globalKey" : "3eb845",
-        "externalKey" : "d989"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

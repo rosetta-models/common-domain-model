@@ -256,13 +256,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-05-10",
-      "meta" : {
-        "globalKey" : "3eb14a",
-        "externalKey" : "TRADEDATE"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

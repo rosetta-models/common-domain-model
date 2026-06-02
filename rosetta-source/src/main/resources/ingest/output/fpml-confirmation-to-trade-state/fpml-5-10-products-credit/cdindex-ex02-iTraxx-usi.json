@@ -130,12 +130,6 @@
       },
       "identifierType" : "UniqueSwapIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2004-11-03",
-      "meta" : {
-        "globalKey" : "3ea2c3"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

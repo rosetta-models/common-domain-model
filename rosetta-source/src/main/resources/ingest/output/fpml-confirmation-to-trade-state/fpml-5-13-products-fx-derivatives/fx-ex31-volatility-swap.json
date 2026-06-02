@@ -267,13 +267,6 @@
         "globalKey" : "984bc438"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2011-03-01",
-      "meta" : {
-        "globalKey" : "3ed8c1",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

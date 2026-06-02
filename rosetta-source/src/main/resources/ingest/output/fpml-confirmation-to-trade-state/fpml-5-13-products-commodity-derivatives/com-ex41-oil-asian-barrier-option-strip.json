@@ -262,13 +262,6 @@
         "globalKey" : "f758c676"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-11-15",
-      "meta" : {
-        "globalKey" : "3ee2cf",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
@@ -355,7 +348,6 @@
               }
             },
             "dateRelativeTo" : {
-              "globalReference" : "3ee2cf",
               "externalReference" : "TradeDate"
             }
           }

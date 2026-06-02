@@ -9,8 +9,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/AdditionalFixedPayments_mortgages.json",
     "assertions" : {
       "inputPathCount" : 76,
-      "outputPathCount" : 91,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 90,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -20,8 +20,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/BasketReferenceInformation_nameOrId.json",
     "assertions" : {
       "inputPathCount" : 60,
-      "outputPathCount" : 88,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 87,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -31,8 +31,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/BasketReferenceInformation_nthToDefault_mthToDefault.json",
     "assertions" : {
       "inputPathCount" : 64,
-      "outputPathCount" : 90,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 89,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -42,8 +42,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CalculationPeriod_choice4.json",
     "assertions" : {
       "inputPathCount" : 193,
-      "outputPathCount" : 213,
-      "modelValidationFailures" : 0,
+      "outputPathCount" : 212,
+      "modelValidationFailures" : 1,
       "runtimeError" : false
     }
   }, {
@@ -53,8 +53,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CalculationPeriodDates_firstCompoundingPeriodEndDate.json",
     "assertions" : {
       "inputPathCount" : 95,
-      "outputPathCount" : 119,
-      "modelValidationFailures" : 3,
+      "outputPathCount" : 118,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   }, {
@@ -64,8 +64,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CreditEvents_mortgages.json",
     "assertions" : {
       "inputPathCount" : 69,
-      "outputPathCount" : 81,
-      "modelValidationFailures" : 9,
+      "outputPathCount" : 80,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   }, {
@@ -75,8 +75,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CreditEvents_physicalSettlementMatrix-1.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 102,
-      "modelValidationFailures" : 9,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   }, {
@@ -86,8 +86,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/CreditEvents_physicalSettlementMatrix-2.json",
     "assertions" : {
       "inputPathCount" : 65,
-      "outputPathCount" : 88,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 87,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -97,8 +97,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/DeliverableObligations_physicalSettlementMatrix-1.json",
     "assertions" : {
       "inputPathCount" : 77,
-      "outputPathCount" : 96,
-      "modelValidationFailures" : 9,
+      "outputPathCount" : 95,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   }, {
@@ -108,8 +108,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/DeliverableObligations_physicalSettlementMatrix-2.json",
     "assertions" : {
       "inputPathCount" : 76,
-      "outputPathCount" : 95,
-      "modelValidationFailures" : 8,
+      "outputPathCount" : 94,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
@@ -119,8 +119,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FloatingAmountEvents_mortgages.json",
     "assertions" : {
       "inputPathCount" : 77,
-      "outputPathCount" : 92,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 91,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -130,8 +130,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_12.json",
     "assertions" : {
       "inputPathCount" : 76,
-      "outputPathCount" : 112,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 111,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -141,8 +141,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_19.json",
     "assertions" : {
       "inputPathCount" : 78,
-      "outputPathCount" : 114,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 113,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -152,8 +152,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_26_28.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 108,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 107,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -163,8 +163,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_27-1.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 108,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 107,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -174,8 +174,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_27-2.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 110,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 109,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -185,8 +185,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_27-3.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 110,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 109,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -196,8 +196,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_30-1.json",
     "assertions" : {
       "inputPathCount" : 85,
-      "outputPathCount" : 121,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 120,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -207,8 +207,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_30-2.json",
     "assertions" : {
       "inputPathCount" : 85,
-      "outputPathCount" : 121,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 120,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -218,8 +218,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_34.json",
     "assertions" : {
       "inputPathCount" : 75,
-      "outputPathCount" : 97,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 96,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -229,8 +229,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_37.json",
     "assertions" : {
       "inputPathCount" : 68,
-      "outputPathCount" : 90,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 89,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -240,8 +240,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_41.json",
     "assertions" : {
       "inputPathCount" : 78,
-      "outputPathCount" : 113,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 112,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -251,8 +251,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_42.json",
     "assertions" : {
       "inputPathCount" : 78,
-      "outputPathCount" : 113,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 112,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -262,8 +262,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_cd_44.json",
     "assertions" : {
       "inputPathCount" : 98,
-      "outputPathCount" : 127,
-      "modelValidationFailures" : 12,
+      "outputPathCount" : 126,
+      "modelValidationFailures" : 13,
       "runtimeError" : false
     }
   }, {
@@ -273,8 +273,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_14.json",
     "assertions" : {
       "inputPathCount" : 35,
-      "outputPathCount" : 61,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 60,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -284,8 +284,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_21_economicTermsEffectiveDate.json",
     "assertions" : {
       "inputPathCount" : 77,
-      "outputPathCount" : 113,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 112,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -295,8 +295,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_21_payoutEffectiveDate.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 100,
-      "modelValidationFailures" : 2,
+      "outputPathCount" : 99,
+      "modelValidationFailures" : 3,
       "runtimeError" : false
     }
   }, {
@@ -306,8 +306,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_29.json",
     "assertions" : {
       "inputPathCount" : 83,
-      "outputPathCount" : 104,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 103,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {
@@ -317,8 +317,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_29_FpML_ird_9.json",
     "assertions" : {
       "inputPathCount" : 83,
-      "outputPathCount" : 104,
-      "modelValidationFailures" : 3,
+      "outputPathCount" : 103,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   }, {
@@ -328,8 +328,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_30.json",
     "assertions" : {
       "inputPathCount" : 192,
-      "outputPathCount" : 212,
-      "modelValidationFailures" : 0,
+      "outputPathCount" : 211,
+      "modelValidationFailures" : 1,
       "runtimeError" : false
     }
   }, {
@@ -339,8 +339,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_35_cd_31.json",
     "assertions" : {
       "inputPathCount" : 77,
-      "outputPathCount" : 98,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 97,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -350,8 +350,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_35_cd_31-1.json",
     "assertions" : {
       "inputPathCount" : 71,
-      "outputPathCount" : 107,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 106,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -361,8 +361,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_35_cd_31-2.json",
     "assertions" : {
       "inputPathCount" : 71,
-      "outputPathCount" : 107,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 106,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -372,8 +372,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_6.json",
     "assertions" : {
       "inputPathCount" : 77,
-      "outputPathCount" : 98,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 97,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -383,8 +383,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_7_1.json",
     "assertions" : {
       "inputPathCount" : 84,
-      "outputPathCount" : 105,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 104,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -394,8 +394,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_7_2-distinct-within-the-leg.json",
     "assertions" : {
       "inputPathCount" : 83,
-      "outputPathCount" : 104,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 103,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -405,8 +405,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_8.json",
     "assertions" : {
       "inputPathCount" : 35,
-      "outputPathCount" : 57,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 56,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -416,8 +416,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/FpML_ird_9_ResetDates_interestRateSwap.json",
     "assertions" : {
       "inputPathCount" : 137,
-      "outputPathCount" : 158,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 157,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -427,8 +427,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/Obligations_physicalSettlementMatrix-1.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 101,
-      "modelValidationFailures" : 9,
+      "outputPathCount" : 100,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   }, {
@@ -438,8 +438,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/Obligations_physicalSettlementMatrix-2.json",
     "assertions" : {
       "inputPathCount" : 82,
-      "outputPathCount" : 102,
-      "modelValidationFailures" : 8,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
@@ -449,8 +449,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/PaymentDates_paymentDaysOffset.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 100,
-      "modelValidationFailures" : 1,
+      "outputPathCount" : 99,
+      "modelValidationFailures" : 2,
       "runtimeError" : false
     }
   }, {
@@ -460,8 +460,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-invalid-products/Tranche_dataRules.json",
     "assertions" : {
       "inputPathCount" : 63,
-      "outputPathCount" : 89,
-      "modelValidationFailures" : 9,
+      "outputPathCount" : 88,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   } ]

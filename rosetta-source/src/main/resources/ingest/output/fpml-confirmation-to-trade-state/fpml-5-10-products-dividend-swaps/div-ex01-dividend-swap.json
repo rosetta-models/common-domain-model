@@ -413,13 +413,6 @@
         "globalKey" : "ef1e6c61"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2002-07-19",
-      "meta" : {
-        "globalKey" : "3e91d3",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

@@ -80,7 +80,6 @@
                       }
                     },
                     "dateRelativeTo" : {
-                      "globalReference" : "3f10d3",
                       "externalReference" : "tradeDate"
                     }
                   },
@@ -118,7 +117,6 @@
                       }
                     },
                     "dateRelativeTo" : {
-                      "globalReference" : "3f10d3",
                       "externalReference" : "tradeDate"
                     }
                   }
@@ -898,13 +896,6 @@
       },
       "identifierType" : "UniqueSwapIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2018-03-19",
-      "meta" : {
-        "globalKey" : "3f10d3",
-        "externalKey" : "tradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

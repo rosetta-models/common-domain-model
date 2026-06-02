@@ -558,12 +558,6 @@
         "globalKey" : "d041a96"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2018-09-17",
-      "meta" : {
-        "globalKey" : "3f1251"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

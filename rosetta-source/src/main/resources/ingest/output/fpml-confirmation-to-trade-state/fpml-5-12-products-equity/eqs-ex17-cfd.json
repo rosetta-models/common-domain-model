@@ -172,7 +172,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3eca5e",
                       "externalReference" : "TradeDate__CFD123456789"
                     }
                   },
@@ -590,13 +589,6 @@
         "globalKey" : "db6f30f4"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2009-09-30",
-      "meta" : {
-        "globalKey" : "3eca5e",
-        "externalKey" : "TradeDate__CFD123456789"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

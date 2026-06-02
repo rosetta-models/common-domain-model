@@ -17,12 +17,6 @@
         "globalKey" : "b634801"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2011-09-20",
-      "meta" : {
-        "globalKey" : "3eda54"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

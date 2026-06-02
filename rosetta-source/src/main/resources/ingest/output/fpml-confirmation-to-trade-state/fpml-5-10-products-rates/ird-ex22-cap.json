@@ -360,12 +360,6 @@
         "globalKey" : "a68fd2c2"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-04-29",
-      "meta" : {
-        "globalKey" : "3e891d"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

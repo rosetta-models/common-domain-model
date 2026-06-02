@@ -556,12 +556,6 @@
         "globalKey" : "e8e476ad"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2021-08-18",
-      "meta" : {
-        "globalKey" : "3f2a12"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

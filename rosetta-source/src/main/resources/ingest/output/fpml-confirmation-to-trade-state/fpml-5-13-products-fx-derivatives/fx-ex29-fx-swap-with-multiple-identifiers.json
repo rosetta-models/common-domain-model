@@ -365,12 +365,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2012-01-01",
-      "meta" : {
-        "globalKey" : "3ee041"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

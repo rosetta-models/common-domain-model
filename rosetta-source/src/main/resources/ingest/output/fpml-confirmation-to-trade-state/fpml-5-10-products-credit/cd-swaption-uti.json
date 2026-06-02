@@ -457,13 +457,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-12-05",
-      "meta" : {
-        "globalKey" : "3eb305",
-        "externalKey" : "ruytof"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
@@ -599,7 +592,6 @@
               }
             },
             "dateRelativeTo" : {
-              "globalReference" : "3eb305",
               "externalReference" : "ruytof"
             }
           }

@@ -23,7 +23,6 @@
             "dayType" : "ExchangeBusiness",
             "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
-              "globalReference" : "3e8a58",
               "externalReference" : "TradeDate"
             }
           },
@@ -212,7 +211,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3e8a58",
                       "externalReference" : "TradeDate"
                     }
                   },
@@ -290,7 +288,6 @@
                   "dayType" : "ExchangeBusiness",
                   "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
-                    "globalReference" : "3e8a58",
                     "externalReference" : "TradeDate"
                   }
                 },
@@ -630,13 +627,6 @@
         "globalKey" : "95944c36"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-09-24",
-      "meta" : {
-        "globalKey" : "3e8a58",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

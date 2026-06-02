@@ -592,12 +592,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2010-07-06",
-      "meta" : {
-        "globalKey" : "3ed1c6"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

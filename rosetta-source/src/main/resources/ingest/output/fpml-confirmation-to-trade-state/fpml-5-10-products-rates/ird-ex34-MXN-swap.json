@@ -488,12 +488,6 @@
         "globalKey" : "4d7c7218"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2010-12-12",
-      "meta" : {
-        "globalKey" : "3ed30c"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

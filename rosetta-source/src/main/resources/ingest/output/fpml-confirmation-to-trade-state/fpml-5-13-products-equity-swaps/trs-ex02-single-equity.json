@@ -218,7 +218,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3ea28a",
                       "externalReference" : "trs-eq1-TradeDate"
                     }
                   },
@@ -648,13 +647,6 @@
         "globalKey" : "eb1954ba"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2004-10-10",
-      "meta" : {
-        "globalKey" : "3ea28a",
-        "externalKey" : "trs-eq1-TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

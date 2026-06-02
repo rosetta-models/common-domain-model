@@ -550,12 +550,6 @@
         "globalKey" : "9591fab6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2003-11-15",
-      "meta" : {
-        "globalKey" : "3e9acf"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

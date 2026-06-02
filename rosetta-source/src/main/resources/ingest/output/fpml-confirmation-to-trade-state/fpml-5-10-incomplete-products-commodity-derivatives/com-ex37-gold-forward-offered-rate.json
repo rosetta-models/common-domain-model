@@ -616,12 +616,6 @@
         "globalKey" : "a0b08a1c"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-01-01",
-      "meta" : {
-        "globalKey" : "3ee041"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

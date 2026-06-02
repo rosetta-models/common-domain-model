@@ -553,12 +553,6 @@
         "globalKey" : "fe236bca"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2021-04-07",
-      "meta" : {
-        "globalKey" : "3f2907"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

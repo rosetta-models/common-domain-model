@@ -588,12 +588,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2014-11-17",
-      "meta" : {
-        "globalKey" : "3ef2d1"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

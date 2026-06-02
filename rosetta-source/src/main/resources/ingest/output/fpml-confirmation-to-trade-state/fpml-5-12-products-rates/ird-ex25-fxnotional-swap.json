@@ -590,12 +590,6 @@
         "globalKey" : "957bb0a6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-01-09",
-      "meta" : {
-        "globalKey" : "3e8849"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

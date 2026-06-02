@@ -501,13 +501,6 @@
       },
       "identifierType" : "UniqueSwapIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-06-27",
-      "meta" : {
-        "globalKey" : "3eb19b",
-        "externalKey" : "t56r3w"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
@@ -637,7 +630,6 @@
               }
             },
             "dateRelativeTo" : {
-              "globalReference" : "3eb19b",
               "externalReference" : "t56r3w"
             }
           }

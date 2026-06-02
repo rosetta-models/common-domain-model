@@ -9,8 +9,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-commodity/com-ex01-energy-oil-cash.json",
     "assertions" : {
       "inputPathCount" : 194,
-      "outputPathCount" : 99,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 98,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   }, {
@@ -20,8 +20,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-commodity/com-ex02-energy-nat-gas-cash.json",
     "assertions" : {
       "inputPathCount" : 136,
-      "outputPathCount" : 121,
-      "modelValidationFailures" : 14,
+      "outputPathCount" : 120,
+      "modelValidationFailures" : 15,
       "runtimeError" : false
     }
   }, {
@@ -31,8 +31,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-commodity/com-ex1-gas-swap-daily-delivery-prices-last.json",
     "assertions" : {
       "inputPathCount" : 67,
-      "outputPathCount" : 98,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 97,
+      "modelValidationFailures" : 8,
       "runtimeError" : false
     }
   }, {
@@ -42,8 +42,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-commodity/com-ex5-gas-v-electricity-spark-spread.json",
     "assertions" : {
       "inputPathCount" : 73,
-      "outputPathCount" : 111,
-      "modelValidationFailures" : 8,
+      "outputPathCount" : 110,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -53,8 +53,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-commodity/com-ex8-oil-call-option-strip.json",
     "assertions" : {
       "inputPathCount" : 65,
-      "outputPathCount" : 85,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 84,
+      "modelValidationFailures" : 7,
       "runtimeError" : false
     }
   } ]

@@ -281,12 +281,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2005-01-24",
-      "meta" : {
-        "globalKey" : "3ea858"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

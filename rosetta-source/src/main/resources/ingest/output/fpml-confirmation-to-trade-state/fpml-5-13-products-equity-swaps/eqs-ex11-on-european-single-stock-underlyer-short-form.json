@@ -23,7 +23,6 @@
             "dayType" : "ExchangeBusiness",
             "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
-              "globalReference" : "3eba58",
               "externalReference" : "TradeDate"
             }
           },
@@ -106,7 +105,6 @@
                   "dayType" : "ExchangeBusiness",
                   "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
-                    "globalReference" : "3eba58",
                     "externalReference" : "TradeDate"
                   }
                 },
@@ -614,13 +612,6 @@
         "globalKey" : "95944c36"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2007-09-24",
-      "meta" : {
-        "globalKey" : "3eba58",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

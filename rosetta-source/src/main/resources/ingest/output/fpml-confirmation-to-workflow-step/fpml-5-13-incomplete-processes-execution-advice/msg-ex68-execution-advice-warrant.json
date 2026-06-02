@@ -32,12 +32,6 @@
                 "globalKey" : "5c0cc9d5"
               }
             } ],
-            "tradeDate" : {
-              "value" : "2016-08-25",
-              "meta" : {
-                "globalKey" : "3f0219"
-              }
-            },
             "party" : [ {
               "partyId" : [ {
                 "identifier" : {

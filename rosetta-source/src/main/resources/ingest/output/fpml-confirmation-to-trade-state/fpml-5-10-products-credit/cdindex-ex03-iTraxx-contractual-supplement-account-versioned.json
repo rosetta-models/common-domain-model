@@ -132,12 +132,6 @@
         "globalKey" : "36c7fbdc"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2005-11-03",
-      "meta" : {
-        "globalKey" : "3eaac3"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

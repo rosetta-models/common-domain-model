@@ -256,12 +256,6 @@
         "globalKey" : "1983e26b"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2015-03-30",
-      "meta" : {
-        "globalKey" : "3ef8de"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

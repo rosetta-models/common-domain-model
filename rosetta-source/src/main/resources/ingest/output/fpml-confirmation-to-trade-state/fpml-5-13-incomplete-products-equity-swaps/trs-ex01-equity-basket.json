@@ -227,7 +227,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3ea30c",
                       "externalReference" : "r13"
                     }
                   },
@@ -736,13 +735,6 @@
         "globalKey" : "eb1954bb"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2004-12-12",
-      "meta" : {
-        "globalKey" : "3ea30c",
-        "externalKey" : "r13"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

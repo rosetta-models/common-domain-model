@@ -185,12 +185,6 @@
         "globalKey" : "9a8224ba"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-11-12",
-      "meta" : {
-        "globalKey" : "3e8acc"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

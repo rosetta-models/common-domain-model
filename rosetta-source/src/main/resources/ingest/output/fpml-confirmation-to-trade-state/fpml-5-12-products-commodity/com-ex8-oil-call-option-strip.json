@@ -268,12 +268,6 @@
         "globalKey" : "9599b8e6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2008-02-05",
-      "meta" : {
-        "globalKey" : "3ec085"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

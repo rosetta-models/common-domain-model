@@ -829,12 +829,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2018-01-30",
-      "meta" : {
-        "globalKey" : "3f105e"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

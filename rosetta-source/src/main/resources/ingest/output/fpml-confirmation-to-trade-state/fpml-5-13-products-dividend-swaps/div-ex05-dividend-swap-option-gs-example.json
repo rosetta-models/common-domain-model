@@ -466,12 +466,6 @@
         "globalKey" : "ec31fda8"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-01-27",
-      "meta" : {
-        "globalKey" : "3ee05b"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

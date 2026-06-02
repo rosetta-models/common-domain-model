@@ -353,13 +353,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-01-16",
-      "meta" : {
-        "globalKey" : "3eb050",
-        "externalKey" : "TRADEDATE"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {
@@ -515,7 +508,6 @@
               }
             },
             "dateRelativeTo" : {
-              "globalReference" : "3eb050",
               "externalReference" : "TRADEDATE"
             }
           }

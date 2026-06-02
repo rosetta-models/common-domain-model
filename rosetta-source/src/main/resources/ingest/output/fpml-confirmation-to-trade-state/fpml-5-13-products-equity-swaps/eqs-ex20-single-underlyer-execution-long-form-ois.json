@@ -23,7 +23,6 @@
             "dayType" : "ExchangeBusiness",
             "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
-              "globalReference" : "3f2a12",
               "externalReference" : "TradeDate"
             }
           },
@@ -212,7 +211,6 @@
                 "dividendPeriod" : [ {
                   "startDate" : {
                     "dividendDate" : {
-                      "globalReference" : "3f2a12",
                       "externalReference" : "TradeDate"
                     }
                   },
@@ -290,7 +288,6 @@
                   "dayType" : "ExchangeBusiness",
                   "businessDayConvention" : "NotApplicable",
                   "dateRelativeTo" : {
-                    "globalReference" : "3f2a12",
                     "externalReference" : "TradeDate"
                   }
                 },
@@ -623,13 +620,6 @@
         "globalKey" : "95944c36"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2021-08-18",
-      "meta" : {
-        "globalKey" : "3f2a12",
-        "externalKey" : "TradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

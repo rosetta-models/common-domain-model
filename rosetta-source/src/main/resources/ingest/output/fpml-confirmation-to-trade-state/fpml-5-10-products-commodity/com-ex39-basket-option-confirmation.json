@@ -33,12 +33,6 @@
         "globalKey" : "cfd508"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2013-04-01",
-      "meta" : {
-        "globalKey" : "3ee901"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

@@ -549,12 +549,6 @@
         "globalKey" : "957bb0a6"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2001-04-29",
-      "meta" : {
-        "globalKey" : "3e891d"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

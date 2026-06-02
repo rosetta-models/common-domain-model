@@ -365,12 +365,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2006-12-01",
-      "meta" : {
-        "globalKey" : "3eb301"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

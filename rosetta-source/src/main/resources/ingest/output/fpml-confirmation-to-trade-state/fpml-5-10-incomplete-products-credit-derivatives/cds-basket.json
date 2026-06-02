@@ -354,12 +354,6 @@
         "globalKey" : "ce5186a4"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2004-01-24",
-      "meta" : {
-        "globalKey" : "3ea058"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

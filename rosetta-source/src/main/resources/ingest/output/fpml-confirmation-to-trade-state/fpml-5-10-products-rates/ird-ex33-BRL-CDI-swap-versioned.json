@@ -601,12 +601,6 @@
         "globalKey" : "bfc36804"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2012-06-29",
-      "meta" : {
-        "globalKey" : "3ee19d"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

@@ -627,12 +627,6 @@
         "globalKey" : "ee0b3014"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2010-09-10",
-      "meta" : {
-        "globalKey" : "3ed24a"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

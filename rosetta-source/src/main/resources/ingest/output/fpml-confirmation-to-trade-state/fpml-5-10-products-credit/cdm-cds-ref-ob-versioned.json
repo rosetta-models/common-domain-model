@@ -442,13 +442,6 @@
         "globalKey" : "da91262d"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2018-10-02",
-      "meta" : {
-        "globalKey" : "3f1282",
-        "externalKey" : "tradeDate"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

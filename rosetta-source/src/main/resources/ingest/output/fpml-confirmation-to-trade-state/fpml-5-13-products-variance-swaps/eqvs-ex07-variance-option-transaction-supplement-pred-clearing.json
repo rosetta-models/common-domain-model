@@ -396,12 +396,6 @@
         "globalKey" : "ec31fda8"
       }
     } ],
-    "tradeDate" : {
-      "value" : "2009-01-27",
-      "meta" : {
-        "globalKey" : "3ec85b"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

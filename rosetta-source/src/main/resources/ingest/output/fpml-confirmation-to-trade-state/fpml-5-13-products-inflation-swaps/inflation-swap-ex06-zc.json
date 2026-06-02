@@ -532,12 +532,6 @@
       },
       "identifierType" : "UniqueTransactionIdentifier"
     } ],
-    "tradeDate" : {
-      "value" : "2019-09-23",
-      "meta" : {
-        "globalKey" : "3f1a57"
-      }
-    },
     "party" : [ {
       "partyId" : [ {
         "identifier" : {

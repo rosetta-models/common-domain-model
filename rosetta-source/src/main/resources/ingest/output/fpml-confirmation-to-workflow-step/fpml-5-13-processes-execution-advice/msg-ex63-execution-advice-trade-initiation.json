@@ -499,12 +499,6 @@
                 "globalKey" : "afb2105a"
               }
             } ],
-            "tradeDate" : {
-              "value" : "2007-07-27",
-              "meta" : {
-                "globalKey" : "3eb9db"
-              }
-            },
             "party" : [ {
               "partyId" : [ {
                 "identifier" : {
