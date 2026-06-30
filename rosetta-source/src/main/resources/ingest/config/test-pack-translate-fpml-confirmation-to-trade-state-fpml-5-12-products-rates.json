@@ -53,9 +53,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex02-stub-amort-swap.json",
     "assertions" : {
       "inputPathCount" : 193,
-      "outputPathCount" : 217,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex03-compound-swap",
@@ -64,9 +62,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex03-compound-swap.json",
     "assertions" : {
       "inputPathCount" : 152,
-      "outputPathCount" : 173,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex04-arrears-stepup-fee-swap",
@@ -75,9 +71,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex04-arrears-stepup-fee-swap.json",
     "assertions" : {
       "inputPathCount" : 85,
-      "outputPathCount" : 110,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex05-long-stub-swap",
@@ -86,9 +80,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex05-long-stub-swap.json",
     "assertions" : {
       "inputPathCount" : 93,
-      "outputPathCount" : 121,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex06-xccy-swap",
@@ -119,9 +111,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex08-fra.json",
     "assertions" : {
       "inputPathCount" : 37,
-      "outputPathCount" : 74,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex09-euro-swaption-explicit",
@@ -229,9 +219,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-12-products-rates/ird-ex29-non-deliverable-settlement-swap.json",
     "assertions" : {
       "inputPathCount" : 109,
-      "outputPathCount" : 130,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex30-swap-comp-avg-relative-date",

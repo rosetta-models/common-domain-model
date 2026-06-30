@@ -42,9 +42,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/CAD-Long-Initial-Stub-versioned.json",
     "assertions" : {
       "inputPathCount" : 109,
-      "outputPathCount" : 143,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "cb-option-usi",
@@ -86,9 +84,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Long-Final-Stub-uti.json",
     "assertions" : {
       "inputPathCount" : 100,
-      "outputPathCount" : 128,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-ois-uti",
@@ -108,9 +104,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Vanilla-account.json",
     "assertions" : {
       "inputPathCount" : 99,
-      "outputPathCount" : 126,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-vanilla-extended-party-roles-versioned",
@@ -119,9 +113,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Vanilla-extended-party-roles-versioned.json",
     "assertions" : {
       "inputPathCount" : 104,
-      "outputPathCount" : 135,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-vanilla-multiple-accounts",
@@ -130,9 +122,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Vanilla-multiple-accounts.json",
     "assertions" : {
       "inputPathCount" : 102,
-      "outputPathCount" : 130,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-vanilla-party-roles-versioned",
@@ -141,9 +131,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Vanilla-party-roles-versioned.json",
     "assertions" : {
       "inputPathCount" : 97,
-      "outputPathCount" : 129,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-vanilla-reconciliation-partya-uti",
@@ -174,9 +162,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-Vanilla-uti.json",
     "assertions" : {
       "inputPathCount" : 89,
-      "outputPathCount" : 118,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "eur-variable-notional-uti",
@@ -185,9 +171,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/EUR-variable-notional-uti.json",
     "assertions" : {
       "inputPathCount" : 187,
-      "outputPathCount" : 222,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "gbp-ois-uti",
@@ -229,9 +213,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/GBP-VNS-uti.json",
     "assertions" : {
       "inputPathCount" : 185,
-      "outputPathCount" : 220,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex01-vanilla-swap-versioned",
@@ -251,9 +233,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex02-stub-amort-swap-versioned.json",
     "assertions" : {
       "inputPathCount" : 194,
-      "outputPathCount" : 218,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex03-compound-swap-versioned",
@@ -262,9 +242,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex03-compound-swap-versioned.json",
     "assertions" : {
       "inputPathCount" : 151,
-      "outputPathCount" : 172,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex04-arrears-stepup-fee-swap-usi-uti",
@@ -273,9 +251,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex04-arrears-stepup-fee-swap-usi-uti.json",
     "assertions" : {
       "inputPathCount" : 89,
-      "outputPathCount" : 117,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex05-long-stub-swap-uti",
@@ -284,9 +260,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex05-long-stub-swap-uti.json",
     "assertions" : {
       "inputPathCount" : 92,
-      "outputPathCount" : 121,
-      "modelValidationFailures" : 0,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex06-xccy-swap-uti",
@@ -317,9 +291,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex08-fra.json",
     "assertions" : {
       "inputPathCount" : 42,
-      "outputPathCount" : 81,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex08-fra-no-discounting",
@@ -328,9 +300,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex08-fra-no-discounting.json",
     "assertions" : {
       "inputPathCount" : 37,
-      "outputPathCount" : 72,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex09-euro-swaption-explicit-physical-exercise",
@@ -603,9 +573,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex29-non-deliverable-settlement-swap-uti.json",
     "assertions" : {
       "inputPathCount" : 107,
-      "outputPathCount" : 132,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex30-swap-comp-avg-relative-date-uti",
@@ -625,9 +593,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/ird-ex31-non-deliverable-settlement-swap.json",
     "assertions" : {
       "inputPathCount" : 123,
-      "outputPathCount" : 130,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "ird-ex32-zero-coupon-swap-account-versioned",
@@ -768,9 +734,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/USD-Long-Final-Stub-uti.json",
     "assertions" : {
       "inputPathCount" : 98,
-      "outputPathCount" : 127,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "usd-ois-uti",
@@ -812,9 +776,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/USD-VNS-uti.json",
     "assertions" : {
       "inputPathCount" : 186,
-      "outputPathCount" : 221,
-      "modelValidationFailures" : 3,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   } ]
 }

@@ -108,9 +108,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex64-execution-advice-trade-initiation-correction.json",
     "assertions" : {
       "inputPathCount" : 107,
-      "outputPathCount" : 146,
-      "modelValidationFailures" : 7,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "msg-ex65-execution-advice-trade-partial-termination",

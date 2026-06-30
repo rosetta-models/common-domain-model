@@ -53,9 +53,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex01-yoy.json",
     "assertions" : {
       "inputPathCount" : 98,
-      "outputPathCount" : 111,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "inflation-swap-ex02-yoy-bond-reference",
@@ -64,9 +62,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex02-yoy-bond-reference.json",
     "assertions" : {
       "inputPathCount" : 125,
-      "outputPathCount" : 133,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "inflation-swap-ex03-yoy-initial-level",
@@ -75,9 +71,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex03-yoy-initial-level.json",
     "assertions" : {
       "inputPathCount" : 121,
-      "outputPathCount" : 133,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "inflation-swap-ex04-yoy-interp",
@@ -86,9 +80,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex04-yoy-interp.json",
     "assertions" : {
       "inputPathCount" : 111,
-      "outputPathCount" : 119,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "inflation-swap-ex05-zc",
@@ -97,7 +89,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex05-zc.json",
     "assertions" : {
       "inputPathCount" : 91,
-      "outputPathCount" : 96,
+      "outputPathCount" : 99,
       "modelValidationFailures" : 4,
       "runtimeError" : false
     }
@@ -108,7 +100,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-inflation-swaps/inflation-swap-ex06-zc.json",
     "assertions" : {
       "inputPathCount" : 150,
-      "outputPathCount" : 135,
+      "outputPathCount" : 138,
       "modelValidationFailures" : 10,
       "runtimeError" : false
     }

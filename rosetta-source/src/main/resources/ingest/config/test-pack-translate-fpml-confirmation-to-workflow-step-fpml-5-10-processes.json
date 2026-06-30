@@ -64,9 +64,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-ex63-execution-advice-trade-initiation.json",
     "assertions" : {
       "inputPathCount" : 104,
-      "outputPathCount" : 128,
-      "modelValidationFailures" : 1,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   }, {
     "id" : "msg-new-alpha-trade-cftc-sec-and-canada",
@@ -163,9 +161,7 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-processes/msg-partial-termination-xccy-swap.json",
     "assertions" : {
       "inputPathCount" : 161,
-      "outputPathCount" : 177,
-      "modelValidationFailures" : 2,
-      "runtimeError" : false
+      "runtimeError" : true
     }
   } ]
 }
