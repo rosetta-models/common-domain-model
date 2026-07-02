@@ -169,7 +169,7 @@ func MapGenericProductPriceQuantityList:
                                 empty,
                                 currency,
                                 empty
-                            ),
+                            ) then only-element,
             observable: fpmlGenericProduct -> underlyer -> underlyingAsset
                     first
                     then extract MapAssetToObservableWithLocation,

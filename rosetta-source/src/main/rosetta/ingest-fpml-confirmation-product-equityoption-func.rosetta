@@ -214,12 +214,25 @@ func MapEquityOptionPriceQuantityList:
 
     add priceQuantityList:
         PriceQuantity {
-            quantity: MapEquityDerivativeBaseQuantityListWithLocation(
+            price:PriceSchedule{priceType:empty,derivedQuantity:MapEquityDerivativeBaseQuantityListWithLocation(
                         fpmlEquityOption,
                         fpmlEquityOption -> numberOfOptions,
                         fpmlEquityOption -> optionEntitlement,
-                        fpmlEquityOption -> underlyer -> singleUnderlyer -> openUnits
-                    ),
+                        empty
+                    ),...},
+            quantity:  if fpmlEquityOption -> numberOfOptions exists or 
+                        fpmlEquityOption -> optionEntitlement exists
+        then CreateQuantityWithLocation(
+                    MapNumberOfOptionsAndOptionEntitlementToQuantity(
+                            fpmlEquityOption -> numberOfOptions,
+                            GetMultiplierUnitTypeUnderlyingAsset(
+                                    fpmlEquityOption -> underlyer -> singleUnderlyer -> underlyingAsset
+                                ) -> financialUnit,
+                            fpmlEquityOption -> optionEntitlement,
+                            fpmlEquityOption -> notional -> currency
+                        ),
+                    CreateQuantityKey("numberOfOptions", empty)
+                ),
             observable: MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer),
             ...
         }
