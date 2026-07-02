@@ -281,7 +281,9 @@ func MapNumberOfOptionsAndOptionEntitlementToQuantity:
                                 financialUnit: if fpmlFinancialUnit exists
                                         then fpmlFinancialUnit,
                                 ...
-                },...},
+                            },
+                        ...
+                    },
                 ...
             }
 
@@ -465,18 +467,16 @@ func MapOptionBaseExtendedQuantityListWithLocation:
     inputs:
         fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)
     output:
-        quantityList NonNegativeQuantitySchedule (0..*)
+        quantityList NonNegativeQuantitySchedule (0..1)
             [metadata location]
 
-    add quantityList:
+    set quantityList:
         if fpmlOptionBaseExtended -> notionalAmount exists
         then CreateQuantityWithLocation(
                     MapMoneyToQuantity(fpmlOptionBaseExtended -> notionalAmount),
                     CreateQuantityKey("notionalAmount", empty)
                 )
-
-    add quantityList:
-        if fpmlOptionBaseExtended -> numberOfOptions exists
+        else if fpmlOptionBaseExtended -> numberOfOptions exists
         then CreateQuantityWithLocation(
                     MapNumberOfOptionsAndOptionEntitlementToQuantity(
                             fpmlOptionBaseExtended -> numberOfOptions,
@@ -500,30 +500,31 @@ func MapOptionBaseExtendedQuantityListWithAddress:
         else if fpmlOptionBaseExtended -> numberOfOptions exists
         then CreateQuantityWithAddress(CreateQuantityKey("numberOfOptions", empty))
 
-func MapEquityDerivativeBaseQuantityListWithLocation:
+func MapEquityDerivativeBaseQuantityWithLocation:
     inputs:
         fpmlEquityDerivativeBase fpml.EquityDerivativeBase (0..1)
         fpmlNumberOfOptions fpml.NonNegativeDecimal (0..1)
         fpmlOptionEntitlement fpml.PositiveDecimal (0..1)
         fpmlOpenUnits fpml.NonNegativeDecimal (0..1)
     output:
-        quantityList NonNegativeQuantitySchedule (0..*)
+        quantity NonNegativeQuantitySchedule (0..1)
             [metadata location]
 
-    add quantityList:
-        if fpmlEquityDerivativeBase -> notional exists
+    set quantity:
+        if fpmlEquityDerivativeBase -> underlyer -> singleUnderlyer exists then
+        (if fpmlNumberOfOptions exists or fpmlOptionEntitlement exists
         then CreateQuantityWithLocation(
-                    MapCurrencyAmountToQuantity(
-                            fpmlEquityDerivativeBase -> notional -> amount,
-                            empty,
-                            fpmlEquityDerivativeBase -> notional -> currency,
-                            empty
+                    MapNumberOfOptionsAndOptionEntitlementToQuantity(
+                            fpmlNumberOfOptions,
+                            GetMultiplierUnitTypeUnderlyingAsset(
+                                    fpmlEquityDerivativeBase -> underlyer -> singleUnderlyer -> underlyingAsset
+                                ) -> financialUnit,
+                            fpmlOptionEntitlement,
+                            fpmlEquityDerivativeBase -> notional -> currency
                         ),
-                    CreateQuantityKey("notional", empty)
+                    CreateQuantityKey("numberOfOptions", empty)
                 )
-
-    add quantityList:
-        if fpmlOpenUnits exists
+        else if fpmlOpenUnits exists
         then CreateQuantityWithLocation(
                     MapOpenUnitsToQuantity(
                             fpmlOpenUnits,
@@ -533,7 +534,26 @@ func MapEquityDerivativeBaseQuantityListWithLocation:
                             empty
                         ),
                     CreateQuantityKey("openUnits", empty)
-                )
+                ))
+        else if fpmlEquityDerivativeBase -> notional exists
+        then MapEquityDerivativeBaseNotionalQuantityLocation(fpmlEquityDerivativeBase)
+
+func MapEquityDerivativeBaseNotionalQuantityLocation:
+    inputs:
+        fpmlEquityDerivativeBase fpml.EquityDerivativeBase (0..1)
+    output:
+        quantity NonNegativeQuantitySchedule (0..1)
+            [metadata location]
+    set quantity:
+        CreateQuantityWithLocation(
+                MapCurrencyAmountToQuantity(
+                        fpmlEquityDerivativeBase -> notional -> amount,
+                        empty,
+                        fpmlEquityDerivativeBase -> notional -> currency,
+                        empty
+                    ),
+                CreateQuantityKey("notional", empty)
+            )
 
 func MapEquityDerivativeBaseQuantityListWithAddress:
     inputs:
@@ -685,7 +705,6 @@ func MapCommodityNotionalQuantityToQuantityListWithLocation:
                     ) -> value
             )
 
-
 func MapCommodityNotionalQuantityToQuantityWithAddress:
     inputs:
         totalNotionalQuantity number (0..1)
@@ -829,7 +848,7 @@ func MapQuantityUnitAmountToQuantity:
                                     fpmlFrequency -> value
                                 )
                     },
-                    total:
+                total:
                     NonNegativeSchedule {
                         value: fpmlTotalNotionalAmount,
                         ...
@@ -1265,7 +1284,7 @@ func MapNetPriceToPriceListWithLocation:
             ...
         }
 
-func MapFxCoreDetailsModelPriceQuantityList:
+func MapFxCoreDetailsModelPriceQuantity:
     inputs:
         fpmlExchangeRate fpml.ExchangeRate (0..1)
         fpmlExchangedCurrency1 fpml.Payment (0..1)
