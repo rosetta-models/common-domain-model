@@ -3,11 +3,11 @@
     "primitiveInstruction" : {
       "execution" : {
         "product" : {
-          "@key" : "a314fba4",
+          "@key" : "b7919021",
           "economicTerms" : {
             "payout" : [ {
               "@type" : "cdm.product.template.SettlementPayout",
-              "@key" : "a314fba4",
+              "@key" : "b7919021",
               "payerReceiver" : {
                 "payer" : "Party1",
                 "receiver" : "Party2"
@@ -28,8 +28,7 @@
                       "@data" : "2020-09-24"
                     }
                   }
-                },
-                "settlementCentre" : "EuroclearBank"
+                }
               },
               "underlier" : {
                 "@type" : "cdm.observable.asset.Observable",

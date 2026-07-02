@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e221765d",
+  "@key" : "8245158d",
   "eventDate" : "2020-09-22",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -31,8 +31,7 @@
                       "@data" : "2020-09-24"
                     }
                   }
-                },
-                "settlementCentre" : "EuroclearBank"
+                }
               },
               "underlier" : {
                 "@type" : "cdm.observable.asset.Observable",
@@ -167,8 +166,7 @@
                     "@data" : "2020-09-24"
                   }
                 }
-              },
-              "settlementCentre" : "EuroclearBank"
+              }
             },
             "underlier" : {
               "@type" : "cdm.observable.asset.Observable",
