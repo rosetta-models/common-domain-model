@@ -95,7 +95,7 @@ func MapEquityOptionTransactionSupplementPayout:
                             ),
                     priceQuantity:
                         ResolvablePriceQuantity {
-                            quantitySchedule: MapEquityDerivativeBaseQuantityListWithAddress(
+                            quantitySchedule: MapEquityDerivativeBaseQuantityWithAddress(
                                         fpmlEquityOptionTransactionSupplement,
                                         fpmlEquityOptionTransactionSupplement -> numberOfOptions
                                     ),

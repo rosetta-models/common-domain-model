@@ -559,10 +559,10 @@ func MapReturnLegToPriceQuantity:
 
     set priceQuantity:
         PriceQuantity {
-            price: MapNetPriceToPriceListWithLocation(
+            price: [MapNetPriceToPriceWithLocation(
                         fpmlReturnLeg -> rateOfReturn -> initialPrice,
                         fpmlReturnLeg
-                    ),
+                    )],
             quantity: 
                     MapNotionalAmountWithIdToQuantityWithLocation(
                             fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,

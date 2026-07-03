@@ -552,19 +552,19 @@ func MapEquityDerivativeBaseNotionalQuantityLocation:
                 CreateQuantityKey("notional", empty)
             )
 
-func MapEquityDerivativeBaseQuantityListWithAddress:
+func MapEquityDerivativeBaseQuantityWithAddress:
     inputs:
         fpmlEquityDerivativeBase fpml.EquityDerivativeBase (0..1)
         fpmlNumberOfOptions fpml.NonNegativeDecimal (0..1)
     output:
-        quantityList NonNegativeQuantitySchedule (0..1)
+        quantity NonNegativeQuantitySchedule (0..1)
             [metadata address]
 
-    set quantityList:
+    set quantity:
         if fpmlNumberOfOptions exists
         then CreateQuantityWithAddress(CreateQuantityKey("numberOfOptions", empty))
 
-func MapFxCoreDetailsModelQuantityListWithLocation:
+func MapFxCoreDetailsModelQuantityWithLocation:
     inputs:
         fpmlExchangeRate fpml.ExchangeRate (0..1)
         fpmlExchangedCurrency1 fpml.Payment (1..1)
@@ -1233,17 +1233,17 @@ func MapOptionStrikeReferenceSwapCurve:
             ...
         }
 
-func MapNetPriceToPriceListWithLocation:
+func MapNetPriceToPriceWithLocation:
     inputs:
         fpmlPrice fpml.Price (0..1)
         fpmlReturnLeg fpml.ReturnLeg (0..1)
     output:
-        priceSchedules PriceSchedule (0..*)
+        priceSchedules PriceSchedule (0..1)
             [metadata location]
 
     alias fpmlNetPrice: fpmlPrice -> netPrice
 
-    add priceSchedules:
+    set priceSchedules:
         if fpmlNetPrice exists
         then CreatePriceWithLocation(
                     PriceSchedule {
@@ -1288,7 +1288,7 @@ func MapFxCoreDetailsModelPriceQuantity:
         fpmlExchangedCurrency2 fpml.Payment (0..1)
         fpmlLeg fpml.Leg (0..1)
     output:
-        priceQuantityList PriceQuantity (0..*)
+        priceQuantityList PriceQuantity (0..1)
 
     alias exchangedCurrency:
         GetFpmlExchangedCurrency(
@@ -1297,15 +1297,15 @@ func MapFxCoreDetailsModelPriceQuantity:
                 fpmlExchangedCurrency2
             )
 
-    add priceQuantityList:
+    set priceQuantityList:
         PriceQuantity {
-            price: MapFxCoreDetailsModelPriceListWithLocation(
+            price: [MapFxCoreDetailsModelPriceWithLocation(
                         fpmlExchangeRate,
                         fpmlExchangedCurrency1,
                         fpmlExchangedCurrency2,
                         fpmlLeg
-                    ),
-            quantity: MapFxCoreDetailsModelQuantityListWithLocation(
+                    )],
+            quantity: MapFxCoreDetailsModelQuantityWithLocation(
                         fpmlExchangeRate,
                         fpmlExchangedCurrency1,
                         fpmlExchangedCurrency2,
@@ -1318,17 +1318,17 @@ func MapFxCoreDetailsModelPriceQuantity:
             ...
         }
 
-func MapFxCoreDetailsModelPriceListWithLocation:
+func MapFxCoreDetailsModelPriceWithLocation:
     inputs:
         fpmlExchangeRate fpml.ExchangeRate (0..1)
         fpmlExchangedCurrency1 fpml.Payment (0..1)
         fpmlExchangedCurrency2 fpml.Payment (0..1)
         fpmlLeg fpml.Leg (0..1)
     output:
-        priceList PriceSchedule (0..*)
+        priceList PriceSchedule (0..1)
             [metadata location]
 
-    add priceList:
+    set priceList:
         if fpmlExchangeRate exists
         then CreatePriceWithLocation(
                     MapExchangeRateToPrice(
@@ -1366,7 +1366,7 @@ func MapExchangeRateToPrice:
     alias forwardPoints: fpmlExchangeRate -> forwardPoints
     alias quotedCurrencyPair: fpmlExchangeRate -> quotedCurrencyPair
 
-    alias monetaryQuantity:
+    alias derivedQuantity:
         [fpmlExchangedCurrency1, fpmlExchangedCurrency2]
             extract paymentAmount
             then filter currency = fpmlPerCurrency
@@ -1406,13 +1406,13 @@ func MapExchangeRateToPrice:
                         },
                 derivedQuantity: CreateQuantityWithLocation(
                             MapCurrencyAmountToQuantity(
-                                    monetaryQuantity -> amount,
+                                    derivedQuantity -> amount,
                                     empty,
-                                    monetaryQuantity -> currency,
+                                    derivedQuantity -> currency,
                                     empty
                                 ),
                             CreateQuantityKey(
-                                    monetaryQuantity -> currency -> value,
+                                    derivedQuantity -> currency -> value,
                                     fpmlLeg
                                 )
                         ),
