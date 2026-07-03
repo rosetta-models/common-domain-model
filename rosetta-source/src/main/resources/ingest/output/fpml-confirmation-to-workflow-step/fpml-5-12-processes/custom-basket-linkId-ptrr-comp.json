@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "1eb6055",
+  "@key" : "f902aaaf",
   "proposedEvent" : {
     "intent" : "ContractFormation",
     "instruction" : [ {
@@ -457,6 +457,13 @@
     "assignedIdentifier" : [ {
       "identifier" : {
         "@data" : "GW:0EB40A0q"
+      }
+    } ]
+  }, {
+    "assignedIdentifier" : [ {
+      "identifier" : {
+        "@scheme" : "http://www.fpml.org/coding-scheme/external/esma-ptrr-compression",
+        "@data" : "USDINDEX"
       }
     } ]
   } ],

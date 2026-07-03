@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "1eb6055",
+  "@key" : "b2442241",
   "proposedEvent" : {
     "intent" : "ContractFormation",
     "instruction" : [ {
@@ -380,6 +380,11 @@
               "identifier" : {
                 "@scheme" : "http://www.barclaysglobal.com/partners/schema/v1-1/schemes/tradeID",
                 "@data" : "DJITRAXXUSDMS5Y"
+              }
+            }, {
+              "identifier" : {
+                "@scheme" : "http://www.fpml.org/coding-scheme/external/esma-report-tracking-number",
+                "@data" : "USDINDEX"
               }
             } ]
           } ],
