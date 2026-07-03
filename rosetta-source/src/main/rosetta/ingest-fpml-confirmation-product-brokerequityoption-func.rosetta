@@ -139,13 +139,15 @@ func MapBrokerEquityOptionPriceQuantityList:
         fpmlBrokerEquityOption fpml.BrokerEquityOption (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-
+    alias observable: MapUnderlyerToObservableWithLocation(
+                        fpmlBrokerEquityOption -> underlyer
+                    )
     add priceQuantityList:
         PriceQuantity {
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: if fpmlBrokerEquityOption -> underlyer -> singleUnderlyer exists
+                    derivedQuantity: if fpmlBrokerEquityOption -> underlyer -> singleUnderlyer exists and observable as Index is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlBrokerEquityOption
                                 ),
