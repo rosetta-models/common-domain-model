@@ -511,8 +511,7 @@ func MapEquityDerivativeBaseQuantityWithLocation:
             [metadata location]
 
     set quantity:
-        if fpmlEquityDerivativeBase -> underlyer -> singleUnderlyer exists then
-        (if fpmlNumberOfOptions exists or fpmlOptionEntitlement exists
+        if fpmlNumberOfOptions exists or fpmlOptionEntitlement exists
         then CreateQuantityWithLocation(
                     MapNumberOfOptionsAndOptionEntitlementToQuantity(
                             fpmlNumberOfOptions,
@@ -534,9 +533,7 @@ func MapEquityDerivativeBaseQuantityWithLocation:
                             empty
                         ),
                     CreateQuantityKey("openUnits", empty)
-                ))
-        else if fpmlEquityDerivativeBase -> notional exists
-        then MapEquityDerivativeBaseNotionalQuantityLocation(fpmlEquityDerivativeBase)
+                )
 
 func MapEquityDerivativeBaseNotionalQuantityLocation:
     inputs:

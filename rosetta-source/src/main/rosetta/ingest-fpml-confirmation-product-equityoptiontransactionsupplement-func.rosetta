@@ -10,7 +10,6 @@ import cdm.ingest.fpml.confirmation.settlement.*
 import cdm.observable.asset.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
-
 import fpml.consolidated.* as fpml
 import fpml.consolidated.eqd.* as fpml
 
@@ -145,15 +144,18 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
         fpmlEquityOptionTransactionSupplement fpml.EquityOptionTransactionSupplement (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-    alias observable: MapUnderlyerToObservableWithLocation(
-                        fpmlEquityOptionTransactionSupplement -> underlyer
-                    )
+
+    alias observable:
+        MapUnderlyerToObservableWithLocation(
+                fpmlEquityOptionTransactionSupplement -> underlyer
+            )
+
     add priceQuantityList:
         PriceQuantity {
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: if fpmlEquityOptionTransactionSupplement -> underlyer -> singleUnderlyer exists and observable as Index is absent
+                    derivedQuantity: if observable as Asset is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOptionTransactionSupplement
                                 ),
@@ -164,7 +166,13 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
                         fpmlEquityOptionTransactionSupplement -> numberOfOptions,
                         fpmlEquityOptionTransactionSupplement -> optionEntitlement,
                         empty
+                    )
+                    default if observable as Asset exists
+                        then MapEquityDerivativeBaseNotionalQuantityLocation(
+                                    fpmlEquityOptionTransactionSupplement
+                                ),
+            observable: MapUnderlyerToObservableWithLocation(
+                        fpmlEquityOptionTransactionSupplement -> underlyer
                     ),
-            observable: observable,
             ...
         }

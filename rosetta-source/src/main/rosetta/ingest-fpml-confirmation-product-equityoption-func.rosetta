@@ -13,7 +13,6 @@ import cdm.observable.event.*
 import cdm.product.common.schedule.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
-
 import fpml.consolidated.* as fpml
 import fpml.consolidated.eqd.* as fpml
 import fpml.consolidated.option.shared.* as fpml
@@ -211,15 +210,15 @@ func MapEquityOptionPriceQuantityList:
         fpmlEquityOption fpml.EquityOption (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-    alias observable: MapUnderlyerToObservableWithLocation(
-                        fpmlEquityOption -> underlyer
-                    )
+
+    alias observable: MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer)
+
     add priceQuantityList:
         PriceQuantity {
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: if fpmlEquityOption -> underlyer -> singleUnderlyer exists and observable as Index is absent
+                    derivedQuantity: if observable as Asset is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOption
                                 ),
@@ -230,7 +229,11 @@ func MapEquityOptionPriceQuantityList:
                         fpmlEquityOption -> numberOfOptions,
                         fpmlEquityOption -> optionEntitlement,
                         fpmlEquityOption -> underlyer -> singleUnderlyer -> openUnits
-                    ),
+                    )
+                    default if observable as Asset exists
+                        then MapEquityDerivativeBaseNotionalQuantityLocation(
+                                    fpmlEquityOption
+                                ),
             observable: MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer),
             ...
         }
