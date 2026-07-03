@@ -463,7 +463,7 @@ func MapFixedOrFloatingCalculationAmountToQuantityListWithAddress:
                     fpmlLeg
                 )
 
-func MapOptionBaseExtendedQuantityListWithLocation:
+func MapOptionBaseExtendedQuantityWithLocation:
     inputs:
         fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)
     output:
@@ -1288,7 +1288,7 @@ func MapFxCoreDetailsModelPriceQuantity:
         fpmlExchangedCurrency2 fpml.Payment (0..1)
         fpmlLeg fpml.Leg (0..1)
     output:
-        priceQuantityList PriceQuantity (0..1)
+        priceQuantity PriceQuantity (0..1)
 
     alias exchangedCurrency:
         GetFpmlExchangedCurrency(
@@ -1297,7 +1297,7 @@ func MapFxCoreDetailsModelPriceQuantity:
                 fpmlExchangedCurrency2
             )
 
-    set priceQuantityList:
+    set priceQuantity:
         PriceQuantity {
             price: [MapFxCoreDetailsModelPriceWithLocation(
                         fpmlExchangeRate,
@@ -1325,10 +1325,10 @@ func MapFxCoreDetailsModelPriceWithLocation:
         fpmlExchangedCurrency2 fpml.Payment (0..1)
         fpmlLeg fpml.Leg (0..1)
     output:
-        priceList PriceSchedule (0..1)
+        price PriceSchedule (0..1)
             [metadata location]
 
-    set priceList:
+    set price:
         if fpmlExchangeRate exists
         then CreatePriceWithLocation(
                     MapExchangeRateToPrice(
