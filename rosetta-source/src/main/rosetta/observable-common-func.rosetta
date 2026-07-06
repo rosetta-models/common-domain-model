@@ -22,15 +22,6 @@ func PriceQuantityTriangulation: <"Checks the relationship between price, multip
     output:
         success boolean (1..1)
 
-    alias assetPrice:
-        price
-            filter priceType = AssetPrice or priceType = ExchangeRate
-            then value
-            then only-element
-
-    alias notional:
-        quantity -> value
-
     alias noOfUnits:
         quantity
             extract
@@ -39,6 +30,9 @@ func PriceQuantityTriangulation: <"Checks the relationship between price, multip
                 else value
 
     set success:
-        if assetPrice exists and noOfUnits exists and notional exists
-        then assetPrice * noOfUnits = notional
-        else True
+        price
+            filter priceType = AssetPrice or priceType = ExchangeRate
+            then extract
+                if value exists and noOfUnits exists and derivedQuantity -> value exists
+                then value * noOfUnits = derivedQuantity -> value
+            then if any = False then False else True
