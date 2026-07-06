@@ -1369,7 +1369,7 @@ func MapExchangeRateToPrice:
     alias derivedQuantity:
         [fpmlExchangedCurrency1, fpmlExchangedCurrency2]
             extract paymentAmount
-            then filter currency = fpmlPerCurrency
+            then filter currency = fpmlCurrency
             then only-element
 
     alias fpmlCurrency:
