@@ -62,11 +62,6 @@ class FxMarkToMarketTest extends AbstractFunctionTest {
                 .setUnit(UnitType.builder()
                         .setCurrency(FieldWithMetaString.builder()
                                 .setValue(curr1)));
-        NonNegativeQuantitySchedule.NonNegativeQuantityScheduleBuilder quantity2 = NonNegativeQuantitySchedule.builder()
-                .setValue(BigDecimal.valueOf(quantityAmount2))
-                .setUnit(UnitType.builder()
-                        .setCurrency(FieldWithMetaString.builder()
-                                .setValue(curr2)));
         return Trade.builder()
                 .setProduct(NonTransferableProduct.builder()
                         .setEconomicTerms(EconomicTerms.builder()
@@ -74,8 +69,7 @@ class FxMarkToMarketTest extends AbstractFunctionTest {
                                         .setSettlementPayout(SettlementPayout.builder()))))
                 .addTradeLot(TradeLot.builder()
                         .addPriceQuantity(PriceQuantity.builder()
-                                .addQuantityValue(quantity1)
-                                .addQuantityValue(quantity2)
+                                .setQuantityValue(quantity1)
                                 .addPriceValue(Price.builder()
                                         .setValue(BigDecimal.valueOf(1.234))
                                         .setUnit(UnitType.builder().setCurrencyValue(curr1))
