@@ -81,7 +81,7 @@ The serialized form contains the model, version and fully qualified type name. T
 | `@version` | `"@version": "1.2.3"` | This is the release of the model, as defined by the [GitHub Release](https://github.com/finos/common-domain-model/releases) | 
 | `@type` | `"@type": "cdm.event.common.TradeState"` | This is formatted as the namespace followed by the type name in the CDM with the case matching the model (AKA "Fully Qualified Type Name") | 
 
-``` Javascript
+``` JSON
 {
   "@model": "cdm",
   "@version": "1.2.3",
@@ -93,7 +93,7 @@ The serialized form contains the model, version and fully qualified type name. T
 
 When required, for example when a Choice type or Base class is used as an attribute, serialization includes `@type` to determine the subclass/choice.
 
-``` Javascript
+``` JSON
 {
   "Payout": {
      "FixedPricePayout": {
@@ -130,7 +130,7 @@ type Trade:
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
    "trade": {
      "tradeDate": {
         "value": "2017-12-18",
@@ -143,7 +143,7 @@ type Trade:
 
 **From CDMV7 onwards**
 
-``` Javascript
+``` JSON
    "trade": {
      "tradeDate": {
         "@key": "3f0b12",
@@ -180,7 +180,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
     "party": {
       "meta": {
         "globalKey": "b6bdbfc2",
@@ -192,7 +192,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **From CDMV7 onwards**
 
-``` Javascript
+``` JSON
     "party": {
       "@key": "b6bdbfc2",
       "@key:external": "party1",
