@@ -81,7 +81,7 @@ The serialized form contains the model, version and fully qualified type name. T
 | `@version` | `"@version": "1.2.3"` | This is the release of the model, as defined by the [GitHub Release](https://github.com/finos/common-domain-model/releases) | 
 | `@type` | `"@type": "cdm.event.common.TradeState"` | This is formatted as the namespace followed by the type name in the CDM with the case matching the model (AKA "Fully Qualified Type Name") | 
 
-``` JSON
+``` json
 {
   "@model": "cdm",
   "@version": "1.2.3",
@@ -93,7 +93,7 @@ The serialized form contains the model, version and fully qualified type name. T
 
 When required, for example when a Choice type or Base class is used as an attribute, serialization includes `@type` to determine the subclass/choice.
 
-``` JSON
+``` json
 {
   "Payout": {
      "FixedPricePayout": {
@@ -130,7 +130,7 @@ type Trade:
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
    "trade": {
      "tradeDate": {
         "value": "2017-12-18",
@@ -143,7 +143,7 @@ type Trade:
 
 **From CDMV7 onwards**
 
-``` JSON
+``` json
    "trade": {
      "tradeDate": {
         "@key": "3f0b12",
@@ -180,7 +180,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
     "party": {
       "meta": {
         "globalKey": "b6bdbfc2",
@@ -192,7 +192,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **From CDMV7 onwards**
 
-``` JSON
+``` json
     "party": {
       "@key": "b6bdbfc2",
       "@key:external": "party1",
@@ -204,7 +204,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
     "partyReference": {
       "globalReference": "b6bdbfc2",
       "externalReference": "party1"
@@ -213,7 +213,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **From CDMV7 onwards**
     
-``` JSON
+``` json
     "partyReference": {
       "@ref": "b6bdbfc2",
       "@ref:external": "party1"
@@ -255,7 +255,7 @@ enum FinancialUnitEnum:
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
    "quantity": [ {
      "value": {
        "value": 150000,
@@ -274,7 +274,7 @@ enum FinancialUnitEnum:
 
 **From CDMV7 onwards**
 
-``` JSON
+``` json
    "quantity": [
      {
        "@key:scoped": "quantity-9",
@@ -290,7 +290,7 @@ enum FinancialUnitEnum:
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
    "priceQuantity": {
      "quantitySchedule": {
        "address": {
@@ -303,7 +303,7 @@ enum FinancialUnitEnum:
 
 **From CDMV7 onwards**
 
-``` JSON
+``` json
    "priceQuantity": {
      "quantitySchedule": {
        "@ref:scoped": "quantity-1"
@@ -318,7 +318,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 **Prior to CDMV7**
 
-``` JSON
+``` json
    "issuer": {
      "value": "54930084UKLVMY22DS16",
      "meta": {
@@ -329,7 +329,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 **From CDMV7 onwards**
 
-``` JSON
+``` json
    "issuer": {
      "@scheme": "http://www.fpml.org/coding-scheme/external/iso17442",
      "@data": "54930084UKLVMY22DS16"
@@ -338,7 +338,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 ##### 4.4.3.2 Multiple cardinality (List) attribute, some with scheme
 
-``` JSON
+``` json
    "issuer": [
      {
       "@scheme": "http://www.fpml.org/coding-scheme/external/iso17442",
@@ -535,7 +535,7 @@ type Party:
 
 **CDMV7 onwards Serialized JSON format**
 
-``` JSON
+``` json
 {
   "@model": "cdm",
   "@version": "1.2.3",
