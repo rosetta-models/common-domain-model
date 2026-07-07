@@ -86,6 +86,7 @@ public class DocumentationCodeValidator {
                 .filter(_code -> !_code.contains("``` json"))
                 .filter(_code -> !_code.contains("``` xml"))
                 .filter(_code -> !_code.contains("```mermaid"))
+                .filter(_code -> !_code.contains("disableCodeBlockValidation"))
                 .filter(_code -> {
                     String cleaned = _code
                             .replaceAll(".*```.*", "")

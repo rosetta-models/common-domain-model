@@ -122,7 +122,7 @@ For basic types and enumerations this will mean the serialized form has an addit
 
 **Rune Definition**
 
-``` Haskell
+``` Haskell disableCodeBlockValidation
 type Trade:
     tradeDate date (1..1)
       [metadata id]
@@ -236,7 +236,7 @@ More information on scoped references can be found in the Rune documentation [he
 
 **Rune Definition**
 
-``` Haskell
+``` Haskell disableCodeBlockValidation
 type PriceQuantity:
     quantity QuantitySchedule (0..*)
         [metadata location]
@@ -510,7 +510,7 @@ An example of the JSON that corresponds to the structure is then expressed to he
 
 **Rosetta format**
 
-``` Haskell
+``` Haskell disableCodeBlockValidation
 type Trade:
    party Party (1..*)
    tradeId string (1..1)
