@@ -559,19 +559,19 @@ func MapReturnLegToPriceQuantity:
 
     set priceQuantity:
         PriceQuantity {
-            price: [MapNetPriceToPriceWithLocation(
-                        fpmlReturnLeg -> rateOfReturn -> initialPrice,
-                        fpmlReturnLeg
-                    )],
-            quantity: 
-                    MapNotionalAmountWithIdToQuantityWithLocation(
-                            fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,
-                            empty,
-                            fpmlReturnLeg -> notional -> notionalAmount -> currency,
-                            "openUnits",
+            price: [
+                    MapNetPriceToPriceWithLocation(
+                            fpmlReturnLeg -> rateOfReturn -> initialPrice,
                             fpmlReturnLeg
-                        ),
+                        )
+                ],
+            quantity: MapNotionalAmountWithIdToQuantityWithLocation(
+                        fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,
+                        empty,
+                        fpmlReturnLeg -> notional -> notionalAmount -> currency,
+                        "openUnits",
+                        fpmlReturnLeg
+                    ),
             observable: MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer),
             ...
         }
-

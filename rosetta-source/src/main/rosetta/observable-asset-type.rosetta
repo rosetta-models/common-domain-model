@@ -105,7 +105,9 @@ type PriceQuantity: <"Defines a settlement as an exchange between two parties of
     effectiveDate AdjustableOrRelativeDate (0..1) <"Specifies the date at which the price and quantity become effective. This day may be subject to adjustment in accordance with a business day convention, or could be specified as relative to a trade date, for instance. Optional cardinality, as the effective date is usually specified in the product definition, so it may only need to be specified as part of the PriceQuantity in an increase/decrease scenario for an existing trade.">
 
     condition NonCurrencyQuantities: <"There should be at most one quantity which is not a currency, except for commodities where there may be two.">
-        (quantity count - quantity -> unit -> currency count) <= 1 or (observable as Commodity exists
+        (quantity count - quantity -> unit -> currency count) <= 1 or (observable
+            as Commodity
+            exists
             and quantity -> unit -> capacityUnit exists and (quantity count - quantity -> unit -> currency count) <= 2)
 
     condition ArithmeticOperator: <"When observable is InterestRateIndex, and price exists, then price should have an arithmetic operator.">
@@ -116,7 +118,7 @@ type PriceQuantity: <"Defines a settlement as an exchange between two parties of
         InterestRateObservableCondition
 
     condition PriceQuantityTriangulation: <"Check price quantity triangulation.">
-        PriceQuantityTriangulation(price, quantity) = True 
+        PriceQuantityTriangulation(price, quantity) = True
 
 type PriceComposite: <"Defines the inputs required to calculate a price as a simple composite of 2 other values. The inputs consist of 2 numbers and a simple arithmetic operator. This generic data type applies to a variety of use cases where a price is obtained by simple composition, e.g. dirty = clean + accrued (Bond), forward rate = spot rate + forward point (FX) etc.">
     baseValue number (1..1) <"The 1st value in the arithmetic operation, which may be non-commutative in some cases: Subtract, Divide). This 1st operand is called 'baseValue' as it refers to the price anchor in the arithmetic operation: e.g. the clean price (Bond) or the spot rate (FX).">
@@ -192,10 +194,12 @@ type PriceSchedule extends MeasureBase: <"Specifies the price of a financial ins
         derivedQuantity -> multiplier is absent
 
     condition DerivedQuantityUnit: <"Where derivedQuantity specifies a unit, the derivedQuantity unit must match the parent quantity unit.">
-        if derivedQuantity exists and unit exists then derivedQuantity -> unit = unit
+        if derivedQuantity exists and unit exists
+        then derivedQuantity -> unit = unit
 
     condition DerivedQuantityCurrency: <"Where a derivedQuantity exists and no parent quantity unit is present, the derivedQuantity must specify a currency-denominated unit.">
-        if derivedQuantity exists and unit is absent then derivedQuantity -> unit -> currency exists
+        if derivedQuantity exists and unit is absent
+        then derivedQuantity -> unit -> currency exists
 
 type Price extends PriceSchedule: <"Specifies a price as a single value to be associated to a financial product. This data type extends PriceSchedule and requires that only the amount value exists.">
 
