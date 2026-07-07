@@ -204,7 +204,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
     "partyReference": {
       "globalReference": "b6bdbfc2",
       "externalReference": "party1"
@@ -213,7 +213,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 **From CDMV7 onwards**
     
-``` Javascript
+``` JSON
     "partyReference": {
       "@ref": "b6bdbfc2",
       "@ref:external": "party1"
@@ -255,7 +255,7 @@ enum FinancialUnitEnum:
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
    "quantity": [ {
      "value": {
        "value": 150000,
@@ -274,7 +274,7 @@ enum FinancialUnitEnum:
 
 **From CDMV7 onwards**
 
-``` Javascript
+``` JSON
    "quantity": [
      {
        "@key:scoped": "quantity-9",
@@ -290,7 +290,7 @@ enum FinancialUnitEnum:
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
    "priceQuantity": {
      "quantitySchedule": {
        "address": {
@@ -303,7 +303,7 @@ enum FinancialUnitEnum:
 
 **From CDMV7 onwards**
 
-``` Javascript
+``` JSON
    "priceQuantity": {
      "quantitySchedule": {
        "@ref:scoped": "quantity-1"
@@ -318,7 +318,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 **Prior to CDMV7**
 
-``` Javascript
+``` JSON
    "issuer": {
      "value": "54930084UKLVMY22DS16",
      "meta": {
@@ -329,7 +329,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 **From CDMV7 onwards**
 
-``` Javascript
+``` JSON
    "issuer": {
      "@scheme": "http://www.fpml.org/coding-scheme/external/iso17442",
      "@data": "54930084UKLVMY22DS16"
@@ -338,7 +338,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 ##### 4.4.3.2 Multiple cardinality (List) attribute, some with scheme
 
-``` Javascript
+``` JSON
    "issuer": [
      {
       "@scheme": "http://www.fpml.org/coding-scheme/external/iso17442",
@@ -535,7 +535,7 @@ type Party:
 
 **CDMV7 onwards Serialized JSON format**
 
-``` Javascript
+``` JSON
 {
   "@model": "cdm",
   "@version": "1.2.3",
