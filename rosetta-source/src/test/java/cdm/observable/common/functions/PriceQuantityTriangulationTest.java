@@ -56,12 +56,12 @@ public class PriceQuantityTriangulationTest extends AbstractFunctionTest {
 		TradableProduct tradableProduct = tradeState.getTrade();
 
 		List<? extends PriceQuantity> priceQuantity = tradableProduct.getTradeLot().get(0).getPriceQuantity();
-    NonNegativeQuantitySchedule quantity = priceQuantity.stream()
+		NonNegativeQuantitySchedule quantity = priceQuantity.stream()
 				.map(PriceQuantity::getQuantity)
 				.filter(Objects::nonNull)
 				.map(FieldWithMetaNonNegativeQuantitySchedule::getValue)
 				.filter(Objects::nonNull)
-				.collect(Collectors.toList()).get(0);
+				.findFirst().orElse(null);
 		List<? extends PriceSchedule> price = priceQuantity.stream()
 				.map(PriceQuantity::getPrice)
 				.filter(Objects::nonNull)

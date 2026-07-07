@@ -9,8 +9,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-products-bond-options/bond-option.json",
     "assertions" : {
       "inputPathCount" : 63,
-      "outputPathCount" : 69,
-      "modelValidationFailures" : 2,
+      "outputPathCount" : 62,
+      "modelValidationFailures" : 4,
       "runtimeError" : false
     }
   }, {

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "b18c2635",
+  "@key" : "3528cbf3",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -306,9 +306,17 @@
             "financialUnit" : "Share"
           },
           "priceType" : "AssetPrice",
-          "priceExpression" : "AbsoluteTerms"
+          "priceExpression" : "AbsoluteTerms",
+          "derivedQuantity" : {
+            "value" : 1000000,
+            "unit" : {
+              "currency" : {
+                "@data" : "EUR"
+              }
+            }
+          }
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 100000,
           "unit" : {
@@ -316,15 +324,7 @@
               "@data" : "EUR"
             }
           }
-        }, {
-          "@key:scoped" : "quantity-1",
-          "value" : 1000000,
-          "unit" : {
-            "currency" : {
-              "@data" : "EUR"
-            }
-          }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {

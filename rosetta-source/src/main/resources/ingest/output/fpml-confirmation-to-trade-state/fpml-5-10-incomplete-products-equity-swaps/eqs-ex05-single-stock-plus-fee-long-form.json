@@ -221,10 +221,10 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 18388000
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {

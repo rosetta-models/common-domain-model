@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "ebddcfb2",
+  "@key" : "afbe97eb",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -95,25 +95,10 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
-          "@key:scoped" : "quantity-1",
-          "value" : 10000000000,
-          "unit" : {
-            "currency" : {
-              "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217",
-              "@data" : "JPY"
-            }
-          }
-        }, {
-          "@key:scoped" : "quantity-2",
-          "value" : 1,
-          "unit" : {
-            "financialUnit" : "Contract"
-          },
-          "multiplier" : {
+        "price" : [ {
+          "derivedQuantity" : {
             "value" : 10000000000,
             "unit" : {
-              "financialUnit" : "Contract",
               "currency" : {
                 "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217",
                 "@data" : "JPY"
