@@ -17,7 +17,6 @@ import cdm.product.asset.*
 import cdm.product.common.schedule.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
-
 import fpml.consolidated.* as fpml
 import fpml.consolidated.asset.* as fpml
 import fpml.consolidated.cd.* as fpml
@@ -676,14 +675,29 @@ func MapProtectionTermsToPriceQuantity:
 
     set priceQuantity:
         PriceQuantity {
-            quantity: fpmlProtectionTermsList
-                    extract
-                        MapNotionalAmountToQuantityWithLocation(
-                                calculationAmount -> amount,
-                                empty,
-                                calculationAmount -> currency,
-                                empty
-                            )
-                    then only-element,
+            quantity: empty,
+            observable:
+                Observable {
+                    Basket:
+                        Basket {
+                            identifier: empty,
+                            assetType: empty,
+                            basketConstituent:
+                                BasketConstituent {
+                                    observable: empty,
+                                    quantity: fpmlProtectionTermsList
+                                            extract
+                                                MapNotionalAmountToQuantityWithLocation(
+                                                        calculationAmount -> amount,
+                                                        empty,
+                                                        calculationAmount -> currency,
+                                                        empty
+                                                    ),
+                                    ...
+                                },
+                            ...
+                        },
+                    ...
+                },
             ...
         }
