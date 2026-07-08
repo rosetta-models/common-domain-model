@@ -145,7 +145,7 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
     output:
         priceQuantityList PriceQuantity (0..*)
 
-    alias observable:
+    alias observableFromUnderlyer:
         MapUnderlyerToObservableWithLocation(
                 fpmlEquityOptionTransactionSupplement -> underlyer
             )
@@ -155,7 +155,7 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: if observable as Asset is absent
+                    derivedQuantity: if observableFromUnderlyer as Asset is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOptionTransactionSupplement
                                 ),
@@ -167,7 +167,7 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
                         fpmlEquityOptionTransactionSupplement -> optionEntitlement,
                         empty
                     )
-                    default if observable as Asset exists
+                    default if observableFromUnderlyer as Asset exists
                         then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOptionTransactionSupplement
                                 ),
