@@ -671,7 +671,7 @@ func MapProtectionTermsToPriceQuantity:
     inputs:
         fpmlProtectionTermsList fpml.ProtectionTerms (0..*)
     output:
-        priceQuantity PriceQuantity (0..1)
+        priceQuantity PriceQuantity (0..*)
 
     set priceQuantity:
         PriceQuantity {
