@@ -33,7 +33,7 @@ Principles of the design.
 
 - **interoperability**: users of the same version of the model should be able to exchange data regardless of their programming language
 - **completeness**: ability to represent the entire model
-- **readibility**: serialized data should be human readible
+- **readibility**: serialized data should be human readable
 - **compactness**: serialized data should be as compact as possible
 
 ### 2.2 Design reference point
