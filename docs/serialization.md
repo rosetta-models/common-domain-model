@@ -95,13 +95,12 @@ When required, for example when a Choice type or Base class is used as an attrib
 
 ``` json
 {
-  "Payout": {
-     "FixedPricePayout": {
-       "paymentDates": {...},
-       "fixedPrice": {...},
-       "schedule": {...},
-     },
-     "@type": "cdm.product.template.FixedPricePayout"
+  "payout": {
+    "@type": "cdm.product.template.FixedPricePayout",
+    "payerReceiver": {...},
+    "priceQuantity": {...},
+    "paymentDates": {...},
+    "fixedPrice": {...}
   }
 }
 ```
@@ -238,19 +237,10 @@ More information on scoped references can be found in the Rune documentation [he
 
 ``` Haskell disableCodeBlockValidation
 type PriceQuantity:
-    quantity QuantitySchedule (0..*)
+    ...
+    quantity NonNegativeQuantitySchedule (0..*)
         [metadata location]
-
-type QuantitySchedule:
-    value number (0..1) 
-    unit UnitType (0..1) 
-
-type UnitType:
-    financialUnit FinancialUnitEnum (0..1) 
-
-enum FinancialUnitEnum:
-    Share
-
+    ...
 ```
 
 **Prior to CDMV7**
