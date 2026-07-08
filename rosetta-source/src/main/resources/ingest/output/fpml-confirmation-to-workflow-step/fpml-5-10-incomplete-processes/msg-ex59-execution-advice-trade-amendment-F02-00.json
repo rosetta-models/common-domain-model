@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "a37074e1",
+  "@key" : "a62d421b",
   "proposedEvent" : {
     "intent" : "ContractTermsAmendment",
     "eventDate" : "2009-09-08",
@@ -181,13 +181,19 @@
                 "priceType" : "InterestRate"
               } ]
             }, {
-              "quantity" : {
-                "@key:scoped" : "quantity-1",
-                "value" : 70000000.00,
-                "unit" : {
-                  "currency" : {
-                    "@data" : "USD"
-                  }
+              "observable" : {
+                "@data" : {
+                  "@type" : "cdm.observable.asset.Basket",
+                  "basketConstituent" : [ {
+                    "quantity" : [ {
+                      "value" : 70000000.00,
+                      "unit" : {
+                        "currency" : {
+                          "@data" : "USD"
+                        }
+                      }
+                    } ]
+                  } ]
                 }
               }
             } ]

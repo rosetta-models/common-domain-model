@@ -152,8 +152,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-native-cdm-events/Example-12-Submission-1.json",
     "assertions" : {
       "inputPathCount" : 95,
-      "outputPathCount" : 109,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 108,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   }, {
@@ -163,8 +163,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-native-cdm-events/Example-12-Submission-2.json",
     "assertions" : {
       "inputPathCount" : 95,
-      "outputPathCount" : 109,
-      "modelValidationFailures" : 7,
+      "outputPathCount" : 108,
+      "modelValidationFailures" : 11,
       "runtimeError" : false
     }
   } ]

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "8126eec3",
+  "@key" : "7e3ab04f",
   "proposedEvent" : {
     "intent" : "ContractFormation",
     "instruction" : [ {
@@ -339,6 +339,29 @@
                   "currency" : {
                     "@data" : "USD"
                   }
+                }
+              }
+            }, {
+              "observable" : {
+                "@data" : {
+                  "@type" : "cdm.observable.asset.Basket",
+                  "basketConstituent" : [ {
+                    "quantity" : [ {
+                      "value" : 25000000,
+                      "unit" : {
+                        "currency" : {
+                          "@data" : "USD"
+                        }
+                      }
+                    }, {
+                      "value" : 10000000,
+                      "unit" : {
+                        "currency" : {
+                          "@data" : "EUR"
+                        }
+                      }
+                    } ]
+                  } ]
                 }
               }
             } ]

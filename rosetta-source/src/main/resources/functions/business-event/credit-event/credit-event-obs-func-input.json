@@ -28,9 +28,9 @@
       }
     },
     "before" : {
-      "@key" : "e954286a",
+      "@key" : "53112f10",
       "trade" : {
-        "@key" : "125d2737",
+        "@key" : "6c62fa51",
         "product" : {
           "@key" : "c5ec818b",
           "taxonomy" : [ {
@@ -131,14 +131,20 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "@key" : "a8bdc3dd",
-            "quantity" : {
-              "@key:scoped" : "quantity-1",
-              "value" : 25000000,
-              "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+            "@key" : "2ebbcc83",
+            "observable" : {
+              "@data" : {
+                "@type" : "cdm.observable.asset.Basket",
+                "basketConstituent" : [ {
+                  "quantity" : [ {
+                    "value" : 25000000,
+                    "unit" : {
+                      "currency" : {
+                        "@data" : "USD"
+                      }
+                    }
+                  } ]
+                } ]
               }
             }
           } ]

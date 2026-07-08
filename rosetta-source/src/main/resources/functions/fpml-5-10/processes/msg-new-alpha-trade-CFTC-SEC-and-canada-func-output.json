@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "b9a65eb6",
+  "@key" : "f196a776",
   "businessEvent" : {
     "intent" : "ContractFormation",
     "eventDate" : "2011-02-12",
@@ -248,13 +248,19 @@
                 "priceType" : "InterestRate"
               } ]
             }, {
-              "quantity" : {
-                "@key:scoped" : "quantity-1",
-                "value" : 5000000,
-                "unit" : {
-                  "currency" : {
-                    "@data" : "USD"
-                  }
+              "observable" : {
+                "@data" : {
+                  "@type" : "cdm.observable.asset.Basket",
+                  "basketConstituent" : [ {
+                    "quantity" : [ {
+                      "value" : 5000000,
+                      "unit" : {
+                        "currency" : {
+                          "@data" : "USD"
+                        }
+                      }
+                    } ]
+                  } ]
                 }
               }
             } ]
@@ -878,13 +884,19 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "quantity" : {
-              "@key:scoped" : "quantity-1",
-              "value" : 5000000,
-              "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+            "observable" : {
+              "@data" : {
+                "@type" : "cdm.observable.asset.Basket",
+                "basketConstituent" : [ {
+                  "quantity" : [ {
+                    "value" : 5000000,
+                    "unit" : {
+                      "currency" : {
+                        "@data" : "USD"
+                      }
+                    }
+                  } ]
+                } ]
               }
             }
           } ]
@@ -1425,7 +1437,7 @@
     } ]
   },
   "previousWorkflowStep" : {
-    "@ref" : "bc018d9e"
+    "@ref" : "e6f8b20"
   },
   "messageInformation" : {
     "messageId" : {

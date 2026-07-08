@@ -232,13 +232,19 @@
             }
           }
         }, {
-          "quantity" : {
-            "@key:scoped" : "quantity-1",
-            "value" : 500000000.0,
-            "unit" : {
-              "currency" : {
-                "@data" : "JPY"
-              }
+          "observable" : {
+            "@data" : {
+              "@type" : "cdm.observable.asset.Basket",
+              "basketConstituent" : [ {
+                "quantity" : [ {
+                  "value" : 500000000.0,
+                  "unit" : {
+                    "currency" : {
+                      "@data" : "JPY"
+                    }
+                  }
+                } ]
+              } ]
             }
           }
         } ],

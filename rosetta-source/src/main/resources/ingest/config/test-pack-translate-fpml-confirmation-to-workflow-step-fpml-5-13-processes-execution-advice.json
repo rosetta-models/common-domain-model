@@ -9,8 +9,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex51-execution-advice-trade-initiation-C01-00.json",
     "assertions" : {
       "inputPathCount" : 64,
-      "outputPathCount" : 91,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 90,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
@@ -20,8 +20,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex52-execution-advice-trade-partial-novation-C02-00.json",
     "assertions" : {
       "inputPathCount" : 95,
-      "outputPathCount" : 115,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 114,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -31,8 +31,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex53-execution-advice-trade-partial-novation-correction-C02-10.json",
     "assertions" : {
       "inputPathCount" : 95,
-      "outputPathCount" : 115,
-      "modelValidationFailures" : 5,
+      "outputPathCount" : 114,
+      "modelValidationFailures" : 9,
       "runtimeError" : false
     }
   }, {
@@ -86,8 +86,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex58-execution-advice-trade-initiation-F01-00.json",
     "assertions" : {
       "inputPathCount" : 63,
-      "outputPathCount" : 95,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 94,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
@@ -97,8 +97,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex59-execution-advice-trade-amendment-F02-00.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 101,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 100,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
@@ -108,8 +108,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-13-processes-execution-advice/msg-ex60-execution-advice-trade-amendment-correction-F02-10.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 101,
-      "modelValidationFailures" : 6,
+      "outputPathCount" : 100,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {
