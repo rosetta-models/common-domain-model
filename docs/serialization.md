@@ -128,7 +128,7 @@ type Trade extends TradableProduct:
       [metadata id]
 ```
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
    "trade": {
@@ -141,7 +141,7 @@ type Trade extends TradableProduct:
     }
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
 
 ``` json
    "trade": {
@@ -156,7 +156,7 @@ type Trade extends TradableProduct:
 
 The referencing mechanism in the Rune definitions of CDM uses keywords for keys and references. The following table compares these keywords across versions:
 
-| Prior to CDM 7 Serialised Key / Reference | From CDM 7 onwards Serialised Key / Reference  |
+| Prior to CDM v7 Serialised Key / Reference | From CDM v7 onwards Serialised Key / Reference  |
 | --- | --- |
 | `globalKey` / `globalReference` | `@key` /  `@ref` |
 | `location, scope` / `address, scope`  | `@key:scoped`  / `@ref:scoped` |
@@ -164,13 +164,13 @@ The referencing mechanism in the Rune definitions of CDM uses keywords for keys 
 
 > NOTE 1: Where a key is required for a basic type the `id` annotation is used instead of `key` i.e. `[metadata id]` instead of `[metadata key]`. Both `id` and `key` annotations will result in `@key` being put into the serialized form.
 
-> NOTE 2: From CDM 7 onwards the `location`, `address` and `scope` annotations now all converge on the use of `@key:scoped` and `@ref:scoped`. The external keys and refs (`@key:external` and `@ref:external`) will remain for now, but may also be able to be replaced by `@key` and `@ref` in the future. Serialization needs to support existing behaviour, whilst paving a way forward so all Rune referencing mechanisms can be unified.
+> NOTE 2: From CDM v7 onwards the `location`, `address` and `scope` annotations now all converge on the use of `@key:scoped` and `@ref:scoped`. The external keys and refs (`@key:external` and `@ref:external`) will remain for now, but may also be able to be replaced by `@key` and `@ref` in the future. Serialization needs to support existing behaviour, whilst paving a way forward so all Rune referencing mechanisms can be unified.
 
 #### 4.4.1 Global/External References 
 
 References and external references follow the structure and naming in the model.
 
-In the default implementation `@key` is a generated hash (as `globalKey` is for versions prior to CDM 7) which is intended to be an identifier unique within the document. However, the implementation of `globalKey`/`@key` (i.e. how it is generated) can be overridden by the user application.
+In the default implementation `@key` is a generated hash (as `globalKey` is for versions prior to CDM v7) which is intended to be an identifier unique within the document. However, the implementation of `globalKey`/`@key` (i.e. how it is generated) can be overridden by the user application.
 
 The external references i.e. `externalKey`/`@key:external` are user defined data, from another source.
 
@@ -178,7 +178,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 ##### 4.4.1.1 Global key
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
     "party": {
@@ -190,7 +190,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
     }
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
 
 ``` json
     "party": {
@@ -202,7 +202,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 ##### 4.4.1.2 Global reference
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
     "partyReference": {
@@ -211,7 +211,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
     }
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
     
 ``` json
     "partyReference": {
@@ -224,7 +224,7 @@ Serialization is just taking the data in these _special_ attributes, not definin
 
 Scoped references also follow the structure in the model, and use `@key:scoped` and `@ref:scoped`.
 
-Scoped references allow specific sections of a document to be referenced. For versions prior to CDM 7 the supported scoped references are:
+Scoped references allow specific sections of a document to be referenced. For versions prior to CDM v7 the supported scoped references are:
 - `location` - Specifies this is the target of an internal reference i.e. this is the key `@key:scoped`
 - `address` - Specifies that this is an internal reference to an object that appears elsewhere i.e. this is the reference `@ref:scoped`
 
@@ -244,7 +244,7 @@ type PriceQuantity:
     ...
 ```
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
    "quantity": [ {
@@ -263,7 +263,7 @@ type PriceQuantity:
    } ]
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
 
 ``` json
    "quantity": [
@@ -279,7 +279,7 @@ type PriceQuantity:
     
 ##### 4.4.2.2 Address (reference)
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
    "priceQuantity": {
@@ -292,7 +292,7 @@ type PriceQuantity:
    }
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
 
 ``` json
    "priceQuantity": {
@@ -307,7 +307,7 @@ Scheme gives control over the set of values that an attribute can take, without 
 
 ##### 4.4.3.1 Single cardinality attribute with scheme
 
-**Prior to CDM 7**
+**Prior to CDM v7**
 
 ``` json
    "issuer": {
@@ -318,7 +318,7 @@ Scheme gives control over the set of values that an attribute can take, without 
    }
 ```
 
-**From CDM 7 onwards**
+**From CDM v7 onwards**
 
 ``` json
    "issuer": {
@@ -414,7 +414,7 @@ Deserialization will provide a warning and discard any attributes that do not co
 
 By default, input data must conform to the constraints a model places on attribute values if and when those constraints exist.  There is now a configuration option to relax this requirement in a manner which preserves the Robustness Principle.
 
-The process prior to CDM 7 either fails (Python) or does not give a warning (Java) when it finds non-conforming attributes.
+The process prior to CDM v7 either fails (Python) or does not give a warning (Java) when it finds non-conforming attributes.
 
 ```mermaid
 ---
@@ -460,7 +460,7 @@ end
 
 Following the Robustness Principle to enable interoperability, by default an entity must be valid prior to serialization.
 
-Since the process prior to CDM 7 can be less strict, there is now a configuration option to relax this constraint.  This option will be marked as deprecated in a timeframe TBD.
+Since the process prior to CDM v7 can be less strict, there is now a configuration option to relax this constraint.  This option will be marked as deprecated in a timeframe TBD.
 
 ```mermaid
 ---
@@ -524,7 +524,7 @@ type Party:
 
 ```
 
-**CDM 7 onwards Serialized JSON format**
+**CDM v7 onwards Serialized JSON format**
 
 ``` json
 {
