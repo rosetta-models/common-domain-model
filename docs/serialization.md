@@ -495,19 +495,19 @@ Errors and warnings from serialization/deserialization will be logged.
 
 ## 6. Examples
 
-An example of a dummy Rosetta structure that includes the meta and referencing described in the previous sections is provided below. 
+An example of a dummy Rune structure that includes the meta and referencing described in the previous sections is provided below. 
 
 An example of the JSON that corresponds to the structure is then expressed to help illustrate how the serialized version would look.
 
-**Rosetta format**
+**Rune Definition**
 
 ``` Haskell disableCodeBlockValidation
 type Example:
-   party Party (1..*)
-   tradeId string (1..1)
+    party Party (1..*)
+    tradeId string (1..1)
       [metadata id]
-   links Link (1..1)
-   primaryPartyReference Party (1..1)
+    links Link (1..1)
+    primaryPartyReference Party (1..1)
       [metadata reference]
 
 type Link:
