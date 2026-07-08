@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "7d1abfa3",
+  "@key" : "e51878a3",
   "intent" : "ContractFormation",
   "eventDate" : "2002-12-04",
   "instruction" : [ {
@@ -239,13 +239,19 @@
               }
             }
           }, {
-            "quantity" : {
-              "@key:scoped" : "quantity-1",
-              "value" : 500000000.0,
-              "unit" : {
-                "currency" : {
-                  "@data" : "JPY"
-                }
+            "observable" : {
+              "@data" : {
+                "@type" : "cdm.observable.asset.Basket",
+                "basketConstituent" : [ {
+                  "quantity" : [ {
+                    "value" : 500000000.0,
+                    "unit" : {
+                      "currency" : {
+                        "@data" : "JPY"
+                      }
+                    }
+                  } ]
+                } ]
               }
             }
           } ]
@@ -590,13 +596,19 @@
             }
           }
         }, {
-          "quantity" : {
-            "@key:scoped" : "quantity-1",
-            "value" : 500000000.0,
-            "unit" : {
-              "currency" : {
-                "@data" : "JPY"
-              }
+          "observable" : {
+            "@data" : {
+              "@type" : "cdm.observable.asset.Basket",
+              "basketConstituent" : [ {
+                "quantity" : [ {
+                  "value" : 500000000.0,
+                  "unit" : {
+                    "currency" : {
+                      "@data" : "JPY"
+                    }
+                  }
+                } ]
+              } ]
             }
           }
         } ]

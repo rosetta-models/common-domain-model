@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "a939ea49",
+  "@key" : "11fb8bd1",
   "eventDate" : "2002-12-04",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -237,13 +237,19 @@
             }
           }
         }, {
-          "quantity" : {
-            "@key:scoped" : "quantity-1",
-            "value" : 500000000.0,
-            "unit" : {
-              "currency" : {
-                "@data" : "JPY"
-              }
+          "observable" : {
+            "@data" : {
+              "@type" : "cdm.observable.asset.Basket",
+              "basketConstituent" : [ {
+                "quantity" : [ {
+                  "value" : 500000000.0,
+                  "unit" : {
+                    "currency" : {
+                      "@data" : "JPY"
+                    }
+                  }
+                } ]
+              } ]
             }
           }
         } ],
@@ -541,13 +547,19 @@
             }
           }
         }, {
-          "quantity" : {
-            "@key:scoped" : "quantity-1",
-            "value" : 500000000.0,
-            "unit" : {
-              "currency" : {
-                "@data" : "JPY"
-              }
+          "observable" : {
+            "@data" : {
+              "@type" : "cdm.observable.asset.Basket",
+              "basketConstituent" : [ {
+                "quantity" : [ {
+                  "value" : 500000000.0,
+                  "unit" : {
+                    "currency" : {
+                      "@data" : "JPY"
+                    }
+                  }
+                } ]
+              } ]
             }
           }
         } ]
