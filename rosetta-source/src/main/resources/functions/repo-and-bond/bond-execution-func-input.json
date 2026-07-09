@@ -3,11 +3,11 @@
     "primitiveInstruction" : {
       "execution" : {
         "product" : {
-          "@key" : "b7919021",
+          "@key" : "3b6a16ce",
           "economicTerms" : {
             "payout" : [ {
               "@type" : "cdm.product.template.SettlementPayout",
-              "@key" : "b7919021",
+              "@key" : "3b6a16ce",
               "payerReceiver" : {
                 "payer" : "Party1",
                 "receiver" : "Party2"
@@ -37,8 +37,7 @@
                 "@ref:scoped" : "observable-1"
               }
             } ]
-          },
-          "productPartyRole" : "Party1"
+          }
         },
         "priceQuantity" : [ {
           "@key" : "4062b7ba",
