@@ -559,20 +559,26 @@ func MapReturnLegToPriceQuantity:
 
     set priceQuantity:
         PriceQuantity {
-            price: [MapNetPriceToPriceWithLocation(
-                        fpmlReturnLeg -> rateOfReturn -> initialPrice,
-                        fpmlReturnLeg
-                    )],
-            quantity: 
-                    MapNotionalAmountWithIdToQuantityWithLocation(
-                            fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,
-                            empty,
-                            fpmlReturnLeg -> notional -> notionalAmount -> currency,
-                            "openUnits",
-                            fpmlReturnLeg,
-                            if MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer) as Asset as Instrument as Security exists then Share
-                        ),
+            price: [
+                    MapNetPriceToPriceWithLocation(
+                            fpmlReturnLeg -> rateOfReturn -> initialPrice,
+                            fpmlReturnLeg
+                        )
+                ],
+            quantity: MapNotionalAmountWithIdToQuantityWithLocation(
+                        fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,
+                        empty,
+                        fpmlReturnLeg -> notional -> notionalAmount -> currency,
+                        "openUnits",
+                        fpmlReturnLeg,
+                        if MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer)
+                                as Security
+                                exists
+                                and fpmlReturnLeg -> underlyer -> singleUnderlyer -> underlyingAsset
+                                    as fpml.Equity
+                                    exists
+                        then Share
+                    ),
             observable: MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer),
             ...
         }
-
