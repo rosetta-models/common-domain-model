@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "b249b1a1",
+  "@key" : "e03a30ff",
   "eventDate" : "2021-11-11",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -315,7 +315,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "financialUnit" : "Contract"
+                "financialUnit" : "Share"
               }
             },
             "observable" : {
@@ -510,6 +510,7 @@
       }
     }
   } ],
+  "eventQualifier" : "Termination",
   "after" : [ {
     "trade" : {
       "product" : {
@@ -776,9 +777,9 @@
           } ],
           "quantity" : {
             "@key:scoped" : "quantity-2",
-            "value" : 760400,
+            "value" : 0,
             "unit" : {
-              "financialUnit" : "Contract"
+              "financialUnit" : "Share"
             }
           },
           "observable" : {
@@ -970,6 +971,12 @@
           "@data" : "GBEN"
         }
       }
+    },
+    "state" : {
+      "closedState" : {
+        "state" : "Terminated"
+      },
+      "positionState" : "Closed"
     },
     "transferHistory" : [ {
       "transfer" : {

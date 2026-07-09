@@ -518,7 +518,14 @@ public class BusinessEventExecutionTest extends AbstractExampleTest {
         Trade beforeTrade = beforeTradeState.getTrade();
         Trade afterTrade = ws.getBusinessEvent().getAfter().get(0).getTrade();
 
-        assertEquals(beforeTrade.getTradeLot().get(0).getPriceQuantity().get(0).getQuantity().getValue().getValue(), afterTrade.getTradeLot().get(0).getPriceQuantity().get(0).getQuantity().getValue().getValue(), "The before and the after trade must have the same quantity in te price quantity of the trade");
+        BigDecimal beforeShares = beforeTrade.getTradeLot().get(0).getPriceQuantity().get(0).getQuantity().getValue().getValue();
+        BigDecimal afterShares = afterTrade.getTradeLot().get(0).getPriceQuantity().get(0).getQuantity().getValue().getValue();
+        assertEquals(0, beforeShares.multiply(adjustmentRatio).compareTo(afterShares), "The after trade must have the number of shares adjusted by the stock split ratio");
+
+        BigDecimal beforeNotional = beforeTrade.getTradeLot().get(0).getPriceQuantity().get(0).getPrice().get(0).getValue().getDerivedQuantity().getValue();
+        BigDecimal afterNotional = afterTrade.getTradeLot().get(0).getPriceQuantity().get(0).getPrice().get(0).getValue().getDerivedQuantity().getValue();
+        assertEquals(0, beforeNotional.compareTo(afterNotional), "The before and the after trade must have the same notional (derived quantity) in the price quantity of the trade");
+
         assertNotEquals(beforeTrade.getTradeLot().get(0).getPriceQuantity().get(0).getPrice().get(0).getValue().getValue(), afterTrade.getTradeLot().get(0).getPriceQuantity().get(0).getPrice().get(0).getValue().getValue(), "The before and the after trade must have a different price in the price quantity of the trade");
 
         FinancialUnitEnum beforeFinancialUnit = beforeTrade.getTradeLot().get(0).getPriceQuantity().get(0).getPrice().get(0).getValue().getPerUnitOf().getFinancialUnit();

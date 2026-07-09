@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "26ee8b3b",
+  "@key" : "210b2ee1",
   "eventDate" : "2021-11-11",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -398,7 +398,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "financialUnit" : "Contract"
+                "financialUnit" : "Share"
               }
             },
             "observable" : {
@@ -869,7 +869,7 @@
             "@key:scoped" : "quantity-2",
             "value" : 760400,
             "unit" : {
-              "financialUnit" : "Contract"
+              "financialUnit" : "Share"
             }
           },
           "observable" : {

@@ -43,7 +43,7 @@
       }
     },
     "before" : {
-      "@key" : "cd77b44d",
+      "@key" : "235ef580",
       "trade" : {
         "product" : {
           "taxonomy" : [ {
@@ -311,7 +311,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "financialUnit" : "Contract"
+                "financialUnit" : "Share"
               }
             },
             "observable" : {

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "169e756c",
+  "@key" : "136634ff",
   "intent" : "CorporateActionAdjustment",
   "eventDate" : "2001-11-01",
   "instruction" : [ {
@@ -280,7 +280,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "financialUnit" : "Contract"
+                "financialUnit" : "Share"
               }
             },
             "observable" : {
@@ -741,9 +741,9 @@
           } ],
           "quantity" : {
             "@key:scoped" : "quantity-2",
-            "value" : 760400,
+            "value" : 1520800.0,
             "unit" : {
-              "financialUnit" : "Contract"
+              "financialUnit" : "Share"
             }
           },
           "observable" : {
