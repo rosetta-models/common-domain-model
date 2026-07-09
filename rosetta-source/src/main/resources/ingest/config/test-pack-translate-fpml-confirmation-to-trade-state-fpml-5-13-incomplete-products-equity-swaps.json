@@ -20,8 +20,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-incomplete-products-equity-swaps/eqs-ex05-single-stock-plus-fee-long-form.json",
     "assertions" : {
       "inputPathCount" : 160,
-      "outputPathCount" : 150,
-      "modelValidationFailures" : 11,
+      "outputPathCount" : 151,
+      "modelValidationFailures" : 10,
       "runtimeError" : false
     }
   }, {

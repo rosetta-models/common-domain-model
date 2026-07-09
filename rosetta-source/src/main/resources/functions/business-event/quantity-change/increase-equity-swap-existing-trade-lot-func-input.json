@@ -67,9 +67,9 @@
       }
     },
     "before" : {
-      "@key" : "7f1a2230",
+      "@key" : "9bc772e",
       "trade" : {
-        "@key" : "7f1a2230",
+        "@key" : "9bc772e",
         "product" : {
           "@key" : "bd25bb9b",
           "taxonomy" : [ {
@@ -329,7 +329,7 @@
             } ]
           } ],
           "priceQuantity" : [ {
-            "@key" : "6a6ab422",
+            "@key" : "38fffaa6",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 37.44,
@@ -356,9 +356,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Contract"
               }
             },
             "observable" : {
@@ -463,7 +461,7 @@
             } ]
           } ],
           "priceQuantity" : [ {
-            "@key" : "6a6ab422",
+            "@key" : "38fffaa6",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 37.44,
@@ -490,9 +488,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Contract"
               }
             },
             "observable" : {

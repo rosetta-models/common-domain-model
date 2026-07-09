@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "aed957a1",
+  "@key" : "808e5244",
   "eventDate" : "2021-11-11",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -343,9 +343,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Contract"
               }
             },
             "observable" : {
@@ -474,9 +472,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Contract"
               }
             },
             "observable" : {
@@ -946,9 +942,7 @@
             "@key:scoped" : "quantity-2",
             "value" : 760400,
             "unit" : {
-              "currency" : {
-                "@data" : "USD"
-              }
+              "financialUnit" : "Contract"
             }
           },
           "observable" : {
@@ -1075,11 +1069,9 @@
           } ],
           "quantity" : {
             "@key:scoped" : "quantity-2",
-            "value" : 8260400,
+            "value" : 760400,
             "unit" : {
-              "currency" : {
-                "@data" : "USD"
-              }
+              "financialUnit" : "Contract"
             }
           },
           "observable" : {

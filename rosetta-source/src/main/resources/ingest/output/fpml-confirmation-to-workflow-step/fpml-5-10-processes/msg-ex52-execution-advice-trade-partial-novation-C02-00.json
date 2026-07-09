@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e50fed2c",
+  "@key" : "b7da5326",
   "proposedEvent" : {
     "intent" : "Novation",
     "eventDate" : "2009-06-16",
@@ -238,19 +238,13 @@
                 "priceType" : "InterestRate"
               } ]
             }, {
-              "observable" : {
-                "@data" : {
-                  "@type" : "cdm.observable.asset.Basket",
-                  "basketConstituent" : [ {
-                    "quantity" : [ {
-                      "value" : 70000000.00,
-                      "unit" : {
-                        "currency" : {
-                          "@data" : "USD"
-                        }
-                      }
-                    } ]
-                  } ]
+              "quantity" : {
+                "@key:scoped" : "quantity-1",
+                "value" : 70000000.00,
+                "unit" : {
+                  "currency" : {
+                    "@data" : "USD"
+                  }
                 }
               }
             } ]

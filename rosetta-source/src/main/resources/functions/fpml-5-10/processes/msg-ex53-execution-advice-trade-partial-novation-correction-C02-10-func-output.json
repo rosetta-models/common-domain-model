@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "aeff2324",
+  "@key" : "a33b588",
   "businessEvent" : {
     "intent" : "Novation",
     "eventDate" : "2009-06-16",
@@ -238,19 +238,13 @@
                 "priceType" : "InterestRate"
               } ]
             }, {
-              "observable" : {
-                "@data" : {
-                  "@type" : "cdm.observable.asset.Basket",
-                  "basketConstituent" : [ {
-                    "quantity" : [ {
-                      "value" : 70000000.00,
-                      "unit" : {
-                        "currency" : {
-                          "@data" : "USD"
-                        }
-                      }
-                    } ]
-                  } ]
+              "quantity" : {
+                "@key:scoped" : "quantity-1",
+                "value" : 70000000.00,
+                "unit" : {
+                  "currency" : {
+                    "@data" : "USD"
+                  }
                 }
               }
             } ]
@@ -383,6 +377,7 @@
         } ]
       }
     } ],
+    "eventQualifier" : "PartialNovation",
     "after" : [ {
       "trade" : {
         "product" : {
@@ -520,19 +515,13 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "observable" : {
-              "@data" : {
-                "@type" : "cdm.observable.asset.Basket",
-                "basketConstituent" : [ {
-                  "quantity" : [ {
-                    "value" : 70000000.00,
-                    "unit" : {
-                      "currency" : {
-                        "@data" : "USD"
-                      }
-                    }
-                  } ]
-                } ]
+            "quantity" : {
+              "@key:scoped" : "quantity-1",
+              "value" : 25000000.00,
+              "unit" : {
+                "currency" : {
+                  "@data" : "USD"
+                }
               }
             }
           } ]
@@ -811,19 +800,13 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "observable" : {
-              "@data" : {
-                "@type" : "cdm.observable.asset.Basket",
-                "basketConstituent" : [ {
-                  "quantity" : [ {
-                    "value" : 70000000.00,
-                    "unit" : {
-                      "currency" : {
-                        "@data" : "USD"
-                      }
-                    }
-                  } ]
-                } ]
+            "quantity" : {
+              "@key:scoped" : "quantity-1",
+              "value" : 45000000.00,
+              "unit" : {
+                "currency" : {
+                  "@data" : "USD"
+                }
               }
             }
           } ]
@@ -957,7 +940,7 @@
     } ]
   },
   "previousWorkflowStep" : {
-    "@ref" : "274a693e"
+    "@ref" : "1d65c738"
   },
   "messageInformation" : {
     "messageId" : {

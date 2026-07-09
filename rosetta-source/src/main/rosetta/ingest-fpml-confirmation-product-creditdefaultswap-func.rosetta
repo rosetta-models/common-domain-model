@@ -605,7 +605,7 @@ func MapCreditDefaultSwapPriceQuantityList:
         fpmlCreditDefaultSwap fpml.CreditDefaultSwap (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-    alias protectionTermsList: fpmlCreditDefaultSwap -> protectionTerms count = 1 
+    alias protectionTermsList: fpmlCreditDefaultSwap -> protectionTerms count = 1
     add priceQuantityList:
         MapFeeLegToPriceQuantity(
                 fpmlCreditDefaultSwap -> feeLeg,
@@ -613,8 +613,11 @@ func MapCreditDefaultSwapPriceQuantityList:
             )
 
     add priceQuantityList:
-        if fpmlCreditDefaultSwap -> protectionTerms count > 1 then MapProtectionTermsToBasket(fpmlCreditDefaultSwap -> protectionTerms)
-        else MapProtectionTermsToQuantity(fpmlCreditDefaultSwap -> protectionTerms only-element)
+        if fpmlCreditDefaultSwap -> protectionTerms count > 1
+        then MapProtectionTermsToBasket(fpmlCreditDefaultSwap -> protectionTerms)
+        else MapProtectionTermsToQuantity(
+                fpmlCreditDefaultSwap -> protectionTerms only-element
+            )
 
 func MapFeeLegToPriceQuantity:
     inputs:
@@ -687,7 +690,6 @@ func MapProtectionTermsToQuantity:
                             ),
             ...
         }
-
 
 func MapProtectionTermsToBasket:
     inputs:

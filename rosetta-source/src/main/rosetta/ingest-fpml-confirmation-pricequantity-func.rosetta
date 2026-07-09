@@ -479,7 +479,6 @@ func MapOptionBaseExtendedDervivedQuantityWithLocation:
                     CreateQuantityKey("notionalAmount", empty)
                 )
 
-
 func MapOptionBaseExtendedQuantityWithLocation:
     inputs:
         fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)

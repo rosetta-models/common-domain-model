@@ -644,11 +644,27 @@ public class FunctionInputCreator {
                 .map(TradeLot::getPriceQuantity)
                 .flatMap(Collection::stream)
                 .map(PriceQuantity::getQuantity)
+                .filter(Objects::nonNull)
                 .map(FieldWithMetaNonNegativeQuantitySchedule::getValue)
                 .map(NonNegativeQuantitySchedule::getUnit)
                 .filter(unit -> unit.getCurrency() != null)
                 .findFirst()
-                .orElse(null);
+                // Fall back to the price's derived quantity for the currency unit: after the
+                // PriceQuantity.quantity (0..1) change, an equity swap's notional currency lives on
+                // price -> derivedQuantity rather than on quantity (whose unit is a financial unit).
+                .orElseGet(() -> trade.getTradeLot().stream()
+                        .map(TradeLot::getPriceQuantity)
+                        .flatMap(Collection::stream)
+                        .map(PriceQuantity::getPrice)
+                        .filter(Objects::nonNull)
+                        .flatMap(Collection::stream)
+                        .map(FieldWithMetaPriceSchedule::getValue)
+                        .map(PriceSchedule::getDerivedQuantity)
+                        .filter(Objects::nonNull)
+                        .map(NonNegativeQuantitySchedule::getUnit)
+                        .filter(unit -> unit.getCurrency() != null)
+                        .findFirst()
+                        .orElse(null));
         return TransferInstruction.builder()
                 .addTransferState(TransferState.builder()
                         .setTransfer(Transfer.builder()

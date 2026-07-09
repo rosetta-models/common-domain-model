@@ -9,8 +9,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex19-cds-execution-allocations.json",
     "assertions" : {
       "inputPathCount" : 138,
-      "outputPathCount" : 162,
-      "modelValidationFailures" : 16,
+      "outputPathCount" : 163,
+      "modelValidationFailures" : 12,
       "runtimeError" : false
     }
   }, {
@@ -64,8 +64,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex59-execution-advice-trade-amendment-F02-00.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 100,
-      "modelValidationFailures" : 10,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -75,8 +75,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex60-execution-advice-trade-amendment-correction-F02-10.json",
     "assertions" : {
       "inputPathCount" : 79,
-      "outputPathCount" : 100,
-      "modelValidationFailures" : 10,
+      "outputPathCount" : 101,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -86,8 +86,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex61-execution-advice-trade-change-F03-00.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 94,
-      "modelValidationFailures" : 10,
+      "outputPathCount" : 95,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {
@@ -97,8 +97,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-workflow-step/fpml-5-10-incomplete-processes/msg-ex62-execution-advice-trade-change-correction-F03-10.json",
     "assertions" : {
       "inputPathCount" : 81,
-      "outputPathCount" : 94,
-      "modelValidationFailures" : 10,
+      "outputPathCount" : 95,
+      "modelValidationFailures" : 6,
       "runtimeError" : false
     }
   }, {

@@ -1,7 +1,7 @@
 {
   "instruction" : [ {
     "before" : {
-      "@key" : "4da83412",
+      "@key" : "81be4cd6",
       "trade" : {
         "product" : {
           "taxonomy" : [ {
@@ -234,19 +234,13 @@
               }
             }
           }, {
-            "observable" : {
-              "@data" : {
-                "@type" : "cdm.observable.asset.Basket",
-                "basketConstituent" : [ {
-                  "quantity" : [ {
-                    "value" : 500000000.0,
-                    "unit" : {
-                      "currency" : {
-                        "@data" : "JPY"
-                      }
-                    }
-                  } ]
-                } ]
+            "quantity" : {
+              "@key:scoped" : "quantity-1",
+              "value" : 500000000.0,
+              "unit" : {
+                "currency" : {
+                  "@data" : "JPY"
+                }
               }
             }
           } ]

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "12b5d214",
+  "@key" : "2015b992",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -108,20 +108,14 @@
           "priceType" : "InterestRate"
         } ]
       }, {
-        "observable" : {
-          "@data" : {
-            "@type" : "cdm.observable.asset.Basket",
-            "basketConstituent" : [ {
-              "quantity" : [ {
-                "value" : 5000000,
-                "unit" : {
-                  "currency" : {
-                    "@scheme" : "http://www.fpml.org/ext/iso4217",
-                    "@data" : "USD"
-                  }
-                }
-              } ]
-            } ]
+        "quantity" : {
+          "@key:scoped" : "quantity-1",
+          "value" : 5000000,
+          "unit" : {
+            "currency" : {
+              "@scheme" : "http://www.fpml.org/ext/iso4217",
+              "@data" : "USD"
+            }
           }
         }
       } ]

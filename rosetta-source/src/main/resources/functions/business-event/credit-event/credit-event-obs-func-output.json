@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e0e188ca",
+  "@key" : "7579d87e",
   "eventDate" : "2023-02-02",
   "effectiveDate" : "2023-02-02",
   "instruction" : [ {
@@ -125,19 +125,13 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "observable" : {
-              "@data" : {
-                "@type" : "cdm.observable.asset.Basket",
-                "basketConstituent" : [ {
-                  "quantity" : [ {
-                    "value" : 25000000,
-                    "unit" : {
-                      "currency" : {
-                        "@data" : "USD"
-                      }
-                    }
-                  } ]
-                } ]
+            "quantity" : {
+              "@key:scoped" : "quantity-1",
+              "value" : 25000000,
+              "unit" : {
+                "currency" : {
+                  "@data" : "USD"
+                }
               }
             }
           } ]
@@ -363,19 +357,13 @@
             "priceType" : "InterestRate"
           } ]
         }, {
-          "observable" : {
-            "@data" : {
-              "@type" : "cdm.observable.asset.Basket",
-              "basketConstituent" : [ {
-                "quantity" : [ {
-                  "value" : 25000000,
-                  "unit" : {
-                    "currency" : {
-                      "@data" : "USD"
-                    }
-                  }
-                } ]
-              } ]
+          "quantity" : {
+            "@key:scoped" : "quantity-1",
+            "value" : 25000000,
+            "unit" : {
+              "currency" : {
+                "@data" : "USD"
+              }
             }
           }
         } ]

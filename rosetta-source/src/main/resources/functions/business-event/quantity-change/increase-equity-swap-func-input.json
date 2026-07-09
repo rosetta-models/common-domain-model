@@ -125,9 +125,9 @@
       }
     },
     "before" : {
-      "@key" : "3ecaf2d5",
+      "@key" : "9168efcd",
       "trade" : {
-        "@key" : "3ecaf2d5",
+        "@key" : "9168efcd",
         "product" : {
           "@key" : "bd25bb9b",
           "taxonomy" : [ {
@@ -387,7 +387,7 @@
             } ]
           } ],
           "priceQuantity" : [ {
-            "@key" : "6a6ab422",
+            "@key" : "38fffaa6",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 37.44,
@@ -414,9 +414,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Contract"
               }
             },
             "observable" : {

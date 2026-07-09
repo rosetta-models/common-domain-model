@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "2059647d",
+  "@key" : "47947e4d",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -245,10 +245,7 @@
           "@key:scoped" : "quantity-2",
           "value" : 760400,
           "unit" : {
-            "currency" : {
-              "@scheme" : "http://www.fpml.org/coding-scheme/external/iso4217-2001-08-15",
-              "@data" : "USD"
-            }
+            "financialUnit" : "Contract"
           }
         },
         "observable" : {

@@ -31,8 +31,8 @@
     "outputPath" : "ingest/output/fpml-confirmation-to-trade-state/fpml-5-10-products-rates/bond-option-uti.json",
     "assertions" : {
       "inputPathCount" : 54,
-      "outputPathCount" : 70,
-      "modelValidationFailures" : 4,
+      "outputPathCount" : 77,
+      "modelValidationFailures" : 5,
       "runtimeError" : false
     }
   }, {

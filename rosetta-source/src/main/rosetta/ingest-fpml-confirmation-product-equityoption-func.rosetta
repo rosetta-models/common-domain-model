@@ -212,7 +212,8 @@ func MapEquityOptionPriceQuantityList:
     output:
         priceQuantityList PriceQuantity (0..*)
 
-    alias observableFromUnderlyer: MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer)
+    alias observableFromUnderlyer:
+        MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer)
 
     add priceQuantityList:
         PriceQuantity {
