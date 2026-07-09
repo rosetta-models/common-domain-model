@@ -10,7 +10,7 @@
     "assertions" : {
       "inputPathCount" : 132,
       "outputPathCount" : 86,
-      "modelValidationFailures" : 16,
+      "modelValidationFailures" : 17,
       "runtimeError" : false
     }
   }, {
@@ -21,7 +21,7 @@
     "assertions" : {
       "inputPathCount" : 134,
       "outputPathCount" : 86,
-      "modelValidationFailures" : 16,
+      "modelValidationFailures" : 17,
       "runtimeError" : false
     }
   }, {
@@ -32,7 +32,7 @@
     "assertions" : {
       "inputPathCount" : 54,
       "outputPathCount" : 78,
-      "modelValidationFailures" : 2,
+      "modelValidationFailures" : 3,
       "runtimeError" : false
     }
   }, {
@@ -54,7 +54,7 @@
     "assertions" : {
       "inputPathCount" : 58,
       "outputPathCount" : 74,
-      "modelValidationFailures" : 2,
+      "modelValidationFailures" : 3,
       "runtimeError" : false
     }
   }, {

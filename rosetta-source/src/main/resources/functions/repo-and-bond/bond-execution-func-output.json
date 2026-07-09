@@ -43,7 +43,7 @@
                 },
                 "securitySettlementCentre" : "SecuritySettlementCentre",
                 "cashSettlementCentre" : "CashSettlementCentre"
-            },
+              },
               "underlier" : {
                 "@type" : "cdm.observable.asset.Observable",
                 "@ref:scoped" : "observable-1"
@@ -190,7 +190,7 @@
               },
               "securitySettlementCentre" : "SecuritySettlementCentre",
               "cashSettlementCentre" : "CashSettlementCentre"
-          },
+            },
             "underlier" : {
               "@type" : "cdm.observable.asset.Observable",
               "@ref:scoped" : "observable-1"
