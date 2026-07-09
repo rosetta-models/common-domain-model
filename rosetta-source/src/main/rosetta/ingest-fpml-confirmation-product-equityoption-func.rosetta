@@ -221,21 +221,28 @@ func MapEquityOptionPriceQuantityList:
                 PriceSchedule {
                     priceType: empty,
                     derivedQuantity: if observableFromUnderlyer as Asset is absent
+                                and observableFromUnderlyer as Index is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOption
                                 ),
                     ...
                 },
-            quantity: MapEquityDerivativeBaseQuantityWithLocation(
+            quantity: if (observableFromUnderlyer as Asset exists
+                        or observableFromUnderlyer as Index exists)
+                        or MapEquityDerivativeBaseQuantityWithLocation(
+                                fpmlEquityOption,
+                                fpmlEquityOption -> numberOfOptions,
+                                fpmlEquityOption -> optionEntitlement,
+                                fpmlEquityOption -> underlyer -> singleUnderlyer -> openUnits
+                            )
+                            is absent
+                    then MapEquityDerivativeBaseNotionalQuantityLocation(fpmlEquityOption)
+                else MapEquityDerivativeBaseQuantityWithLocation(
                         fpmlEquityOption,
                         fpmlEquityOption -> numberOfOptions,
                         fpmlEquityOption -> optionEntitlement,
                         fpmlEquityOption -> underlyer -> singleUnderlyer -> openUnits
-                    )
-                    default if observableFromUnderlyer as Asset exists
-                        then MapEquityDerivativeBaseNotionalQuantityLocation(
-                                    fpmlEquityOption
-                                ),
+                    ),
             observable: MapUnderlyerToObservableWithLocation(fpmlEquityOption -> underlyer),
             ...
         }
