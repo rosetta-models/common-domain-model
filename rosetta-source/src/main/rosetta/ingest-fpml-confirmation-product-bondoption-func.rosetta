@@ -168,7 +168,7 @@ func MapBondOptionPriceQuantityList:
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: MapOptionBaseExtendedQuantityWithLocation(
+                    derivedQuantity: MapOptionBaseExtendedDervivedQuantityWithLocation(
                                 fpmlBondOption
                             )
                             filter unit -> currency exists,

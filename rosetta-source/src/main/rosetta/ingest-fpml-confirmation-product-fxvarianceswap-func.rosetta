@@ -144,6 +144,7 @@ func MapFxVarianceSwapPriceQuantityList:
                                 empty,
                                 fpmlFxVarianceSwap -> vegaNotional -> currency,
                                 "vegaNotional",
+                                empty,
                                 empty
                             ),
                     ...
@@ -153,6 +154,7 @@ func MapFxVarianceSwapPriceQuantityList:
                         empty,
                         fpmlFxVarianceSwap -> notional -> currency,
                         "notional",
+                        empty,
                         empty
                     ),
             observable: MapQuotedCurrencyPairToObservableWithLocation(
