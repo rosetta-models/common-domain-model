@@ -156,21 +156,30 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
                 PriceSchedule {
                     priceType: empty,
                     derivedQuantity: if observableFromUnderlyer as Asset is absent
+                                and observableFromUnderlyer as Index is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlEquityOptionTransactionSupplement
                                 ),
                     ...
                 },
-            quantity: MapEquityDerivativeBaseQuantityWithLocation(
+            quantity: if (observableFromUnderlyer as Asset exists
+                        or observableFromUnderlyer as Index exists)
+                        or MapEquityDerivativeBaseQuantityWithLocation(
+                                fpmlEquityOptionTransactionSupplement,
+                                fpmlEquityOptionTransactionSupplement -> numberOfOptions,
+                                fpmlEquityOptionTransactionSupplement -> optionEntitlement,
+                                empty
+                            )
+                            is absent
+                    then MapEquityDerivativeBaseNotionalQuantityLocation(
+                            fpmlEquityOptionTransactionSupplement
+                        )
+                else MapEquityDerivativeBaseQuantityWithLocation(
                         fpmlEquityOptionTransactionSupplement,
                         fpmlEquityOptionTransactionSupplement -> numberOfOptions,
                         fpmlEquityOptionTransactionSupplement -> optionEntitlement,
                         empty
-                    )
-                    default if observableFromUnderlyer as Asset exists
-                        then MapEquityDerivativeBaseNotionalQuantityLocation(
-                                    fpmlEquityOptionTransactionSupplement
-                                ),
+                    ),
             observable: MapUnderlyerToObservableWithLocation(
                         fpmlEquityOptionTransactionSupplement -> underlyer
                     ),
