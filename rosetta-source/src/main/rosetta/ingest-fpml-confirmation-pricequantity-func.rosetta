@@ -160,6 +160,7 @@ func MapNotionalAmountWithIdToQuantityWithLocation:
         fpmlCurrency fpml.Currency (0..1)
         id string (0..1)
         fpmlLeg fpml.Leg (0..1)
+        fpmlFinancialUnit FinancialUnitEnum (0..1)
     output:
         nonNegativeQuantitySchedule NonNegativeQuantitySchedule (0..1)
             [metadata location]
@@ -171,7 +172,7 @@ func MapNotionalAmountWithIdToQuantityWithLocation:
                             fpmlNotionalAmount,
                             fpmlStepList,
                             fpmlCurrency,
-                            empty
+                            fpmlFinancialUnit
                         ),
                     CreateQuantityKey(id, fpmlLeg)
                 )
@@ -205,7 +206,8 @@ func MapNotionalAmountToQuantityWithLocation:
                 fpmlStepList,
                 fpmlCurrency,
                 "notionalAmount",
-                fpmlLeg
+                fpmlLeg,
+                empty
             )
 
 func MapNotionalAmountToQuantityWithAddress:
@@ -233,14 +235,14 @@ func MapCurrencyAmountToQuantity:
         nonNegativeQuantitySchedule NonNegativeQuantitySchedule (0..1)
 
     alias mappedUnit:
-        if fpmlCurrency exists
-        then UnitType {
-                currency: MapCurrency(fpmlCurrency),
-                ...
-            }
-        else if fpmlFinancialUnit exists
+        if fpmlFinancialUnit exists
         then UnitType {
                 financialUnit: fpmlFinancialUnit,
+                ...
+            }
+        else if fpmlCurrency exists
+        then UnitType {
+                currency: MapCurrency(fpmlCurrency),
                 ...
             }
 
@@ -463,7 +465,7 @@ func MapFixedOrFloatingCalculationAmountToQuantityListWithAddress:
                     fpmlLeg
                 )
 
-func MapOptionBaseExtendedQuantityWithLocation:
+func MapOptionBaseExtendedDervivedQuantityWithLocation:
     inputs:
         fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)
     output:
@@ -476,7 +478,17 @@ func MapOptionBaseExtendedQuantityWithLocation:
                     MapMoneyToQuantity(fpmlOptionBaseExtended -> notionalAmount),
                     CreateQuantityKey("notionalAmount", empty)
                 )
-        else if fpmlOptionBaseExtended -> numberOfOptions exists
+
+
+func MapOptionBaseExtendedQuantityWithLocation:
+    inputs:
+        fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)
+    output:
+        quantityList NonNegativeQuantitySchedule (0..1)
+            [metadata location]
+
+    set quantityList:
+        if fpmlOptionBaseExtended -> numberOfOptions exists
         then CreateQuantityWithLocation(
                     MapNumberOfOptionsAndOptionEntitlementToQuantity(
                             fpmlOptionBaseExtended -> numberOfOptions,
@@ -1260,11 +1272,11 @@ func MapNetPriceToPriceWithLocation:
                             },
                         priceExpression: fpmlPrice -> netPrice -> priceExpression to-enum PriceExpressionEnum,
                         priceType: AssetPrice,
-                        derivedQuantity: MapNotionalAmountToQuantityWithLocation(
+                        derivedQuantity: MapCurrencyAmountToQuantity(
                                     fpmlReturnLeg -> notional -> notionalAmount -> amount,
                                     empty,
                                     fpmlReturnLeg -> notional -> notionalAmount -> currency,
-                                    fpmlReturnLeg
+                                    empty
                                 ),
                         ...
                     },

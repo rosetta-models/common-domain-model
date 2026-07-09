@@ -605,7 +605,7 @@ func MapCreditDefaultSwapPriceQuantityList:
         fpmlCreditDefaultSwap fpml.CreditDefaultSwap (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-
+    alias protectionTermsList: fpmlCreditDefaultSwap -> protectionTerms count = 1 
     add priceQuantityList:
         MapFeeLegToPriceQuantity(
                 fpmlCreditDefaultSwap -> feeLeg,
@@ -613,7 +613,8 @@ func MapCreditDefaultSwapPriceQuantityList:
             )
 
     add priceQuantityList:
-        MapProtectionTermsToPriceQuantity(fpmlCreditDefaultSwap -> protectionTerms)
+        if fpmlCreditDefaultSwap -> protectionTerms count > 1 then MapProtectionTermsToBasket(fpmlCreditDefaultSwap -> protectionTerms)
+        else MapProtectionTermsToQuantity(fpmlCreditDefaultSwap -> protectionTerms only-element)
 
 func MapFeeLegToPriceQuantity:
     inputs:
@@ -668,7 +669,27 @@ func MapFixedOrFloatingAmountCalculationToPriceListWithLocation:
                     fpmlLeg
                 )
 
-func MapProtectionTermsToPriceQuantity:
+func MapProtectionTermsToQuantity:
+    inputs:
+        fpmlProtectionTerms fpml.ProtectionTerms (0..1)
+    output:
+        priceQuantity PriceQuantity (0..1)
+
+    set priceQuantity:
+        PriceQuantity {
+            quantity: fpmlProtectionTerms
+                    extract
+                        MapNotionalAmountToQuantityWithLocation(
+                                calculationAmount -> amount,
+                                empty,
+                                calculationAmount -> currency,
+                                empty
+                            ),
+            ...
+        }
+
+
+func MapProtectionTermsToBasket:
     inputs:
         fpmlProtectionTermsList fpml.ProtectionTerms (0..*)
     output:
@@ -688,7 +709,7 @@ func MapProtectionTermsToPriceQuantity:
                                     observable: empty,
                                     quantity: fpmlProtectionTermsList
                                             extract
-                                                MapNotionalAmountToQuantityWithLocation(
+                                                MapCurrencyAmountToQuantity(
                                                         calculationAmount -> amount,
                                                         empty,
                                                         calculationAmount -> currency,
