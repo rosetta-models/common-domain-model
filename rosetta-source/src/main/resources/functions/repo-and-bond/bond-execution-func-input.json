@@ -28,14 +28,17 @@
                       "@data" : "2020-09-24"
                     }
                   }
-                }
+                },
+                "securitySettlementCentre" : "SecuritySettlementCentre",
+                "cashSettlementCentre" : "CashSettlementCentre"
               },
               "underlier" : {
                 "@type" : "cdm.observable.asset.Observable",
                 "@ref:scoped" : "observable-1"
               }
             } ]
-          }
+          },
+          "productPartyRole" : "Party1"
         },
         "priceQuantity" : [ {
           "@key" : "4062b7ba",
