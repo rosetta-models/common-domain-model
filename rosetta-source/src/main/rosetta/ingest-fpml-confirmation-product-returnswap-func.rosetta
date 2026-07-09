@@ -570,7 +570,7 @@ func MapReturnLegToPriceQuantity:
                             fpmlReturnLeg -> notional -> notionalAmount -> currency,
                             "openUnits",
                             fpmlReturnLeg,
-                            if MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer) as Asset as Instrument as Security exists then Contract
+                            if MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer) as Asset as Instrument as Security exists then Share
                         ),
             observable: MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer),
             ...
