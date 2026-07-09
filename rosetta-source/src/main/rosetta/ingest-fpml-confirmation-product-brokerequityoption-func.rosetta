@@ -150,24 +150,25 @@ func MapBrokerEquityOptionPriceQuantityList:
                 PriceSchedule {
                     priceType: empty,
                     derivedQuantity: if observableFromUnderlyer as Asset is absent
-                            and observableFromUnderlyer as Index is absent
+                                and observableFromUnderlyer as Index is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlBrokerEquityOption
                                 ),
                     ...
                 },
-            quantity:  if (observableFromUnderlyer as Asset exists
-                        or observableFromUnderlyer as Index exists)
+            quantity: if (observableFromUnderlyer as Asset exists
+                            or observableFromUnderlyer as Index exists)
                         and MapEquityDerivativeBaseQuantityWithLocation(
-                        fpmlBrokerEquityOption,
-                        fpmlBrokerEquityOption -> numberOfOptions,
-                        empty,
-                        empty
-                    ) is absent 
-                        then MapEquityDerivativeBaseNotionalQuantityLocation(
-                                    fpmlBrokerEquityOption
-                                )
-                    else MapEquityDerivativeBaseQuantityWithLocation(
+                                fpmlBrokerEquityOption,
+                                fpmlBrokerEquityOption -> numberOfOptions,
+                                empty,
+                                empty
+                            )
+                            is absent
+                    then MapEquityDerivativeBaseNotionalQuantityLocation(
+                            fpmlBrokerEquityOption
+                        )
+                else MapEquityDerivativeBaseQuantityWithLocation(
                         fpmlBrokerEquityOption,
                         fpmlBrokerEquityOption -> numberOfOptions,
                         empty,

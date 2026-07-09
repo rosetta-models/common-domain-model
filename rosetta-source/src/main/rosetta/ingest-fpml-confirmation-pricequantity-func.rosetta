@@ -280,7 +280,8 @@ func MapNumberOfOptionsAndOptionEntitlementToQuantity:
                             UnitType {
                                 currency: if fpmlOptionEntitlement exists
                                         then MapCurrency(fpmlCurrency),
-                                financialUnit: if fpmlFinancialUnit exists and fpmlOptionEntitlement is absent
+                                financialUnit: if fpmlFinancialUnit exists
+                                            and fpmlOptionEntitlement is absent
                                         then fpmlFinancialUnit,
                                 ...
                             },

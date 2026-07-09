@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "9d7f2130",
+  "@key" : "23e47fe3",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -228,7 +228,7 @@
           "@key:scoped" : "quantity-3",
           "value" : 212000.0000,
           "unit" : {
-            "financialUnit" : "Contract"
+            "financialUnit" : "Share"
           }
         },
         "observable" : {
