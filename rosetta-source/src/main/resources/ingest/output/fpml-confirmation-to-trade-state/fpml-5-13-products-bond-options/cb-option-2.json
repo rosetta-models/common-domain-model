@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "4ecf3326",
+  "@key" : "5c3834a2",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -130,7 +130,6 @@
           "multiplier" : {
             "value" : 10000000,
             "unit" : {
-              "financialUnit" : "Contract",
               "currency" : {
                 "@data" : "JPY"
               }
