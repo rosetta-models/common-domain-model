@@ -10,9 +10,10 @@ import cdm.ingest.fpml.confirmation.settlement.*
 import cdm.observable.asset.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
+
 import fpml.consolidated.* as fpml
-import fpml.consolidated.eqd.* as fpml
 import fpml.consolidated.asset.* as fpml
+import fpml.consolidated.eqd.* as fpml
 
 func MapBrokerEquityOptionCounterpartyList:
     inputs:
@@ -143,44 +144,44 @@ func MapBrokerEquityOptionPriceQuantityList:
 
     alias observableFromUnderlyer:
         MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
-    alias financialUnit:if (MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
-                                as Security
-                                exists
-                                and fpmlBrokerEquityOption -> underlyer -> singleUnderlyer -> underlyingAsset
-                                    as fpml.Equity
-                                    exists)
-                        then FinancialUnitEnum -> Share
-                        else if MapUnderlyerToObservableWithLocation(
-                                fpmlBrokerEquityOption -> underlyer
-                            )
-                            as Index
-                            exists
-                        then IndexUnit
+    alias financialUnit:
+        if (MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
+                as Security
+                exists
+                and fpmlBrokerEquityOption -> underlyer -> singleUnderlyer -> underlyingAsset
+                    as fpml.Equity
+                    exists)
+        then FinancialUnitEnum -> Share
+        else if MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
+            as Index
+            exists
+        then IndexUnit
     add priceQuantityList:
         PriceQuantity {
             price:
                 PriceSchedule {
                     priceType: empty,
                     derivedQuantity: if observableFromUnderlyer as Asset is absent
-                            and observableFromUnderlyer as Index is absent
+                                and observableFromUnderlyer as Index is absent
                             then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlBrokerEquityOption
                                 ),
                     ...
                 },
-            quantity:  if (observableFromUnderlyer as Asset exists
-                        or observableFromUnderlyer as Index exists)
+            quantity: if (observableFromUnderlyer as Asset exists
+                            or observableFromUnderlyer as Index exists)
                         and MapEquityDerivativeBaseQuantityWithLocation(
-                        fpmlBrokerEquityOption,
-                        fpmlBrokerEquityOption -> numberOfOptions,
-                        empty,
-                        empty,
-                        financialUnit
-                    ) is absent 
-                        then MapEquityDerivativeBaseNotionalQuantityLocation(
-                                    fpmlBrokerEquityOption
-                                )
-                    else MapEquityDerivativeBaseQuantityWithLocation(
+                                fpmlBrokerEquityOption,
+                                fpmlBrokerEquityOption -> numberOfOptions,
+                                empty,
+                                empty,
+                                financialUnit
+                            )
+                            is absent
+                    then MapEquityDerivativeBaseNotionalQuantityLocation(
+                            fpmlBrokerEquityOption
+                        )
+                else MapEquityDerivativeBaseQuantityWithLocation(
                         fpmlBrokerEquityOption,
                         fpmlBrokerEquityOption -> numberOfOptions,
                         empty,

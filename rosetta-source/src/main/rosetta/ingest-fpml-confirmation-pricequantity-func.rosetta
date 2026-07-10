@@ -19,12 +19,12 @@ import fpml.consolidated.asset.* as fpml
 import fpml.consolidated.bond.option.* as fpml
 import fpml.consolidated.cd.* as fpml
 import fpml.consolidated.com.* as fpml
+import fpml.consolidated.eq.shared.* as fpml
 import fpml.consolidated.eqd.* as fpml
 import fpml.consolidated.fx.* as fpml
 import fpml.consolidated.ird.* as fpml
 import fpml.consolidated.option.shared.* as fpml
 import fpml.consolidated.shared.* as fpml
-import fpml.consolidated.eq.shared.* as fpml
 
 func CreateKey:
     [codeImplementation]
@@ -280,7 +280,9 @@ func MapNumberOfOptionsAndOptionEntitlementToQuantity:
                             UnitType {
                                 currency: if fpmlOptionEntitlement exists
                                         then MapCurrency(fpmlCurrency),
-                                financialUnit: if fpmlFinancialUnit exists and fpmlOptionEntitlement is absent and fpmlNumberOfOptions is absent
+                                financialUnit: if fpmlFinancialUnit exists
+                                            and fpmlOptionEntitlement is absent
+                                            and fpmlNumberOfOptions is absent
                                         then fpmlFinancialUnit,
                                 ...
                             },
@@ -479,7 +481,6 @@ func MapOptionBaseExtendedDervivedQuantityWithLocation:
                     CreateQuantityKey("notionalAmount", empty)
                 )
 
-
 func MapOptionBaseExtendedQuantityWithLocation:
     inputs:
         fpmlOptionBaseExtended fpml.OptionBaseExtended (0..1)
@@ -536,11 +537,7 @@ func MapEquityDerivativeBaseQuantityWithLocation:
                 )
         else if fpmlOpenUnits exists
         then CreateQuantityWithLocation(
-                    MapOpenUnitsToQuantity(
-                            fpmlOpenUnits,
-                            fpmlFinancialUnit,
-                            empty
-                        ),
+                    MapOpenUnitsToQuantity(fpmlOpenUnits, fpmlFinancialUnit, empty),
                     CreateQuantityKey("openUnits", empty)
                 )
 
@@ -1308,12 +1305,14 @@ func MapFxCoreDetailsModelPriceQuantity:
 
     set priceQuantity:
         PriceQuantity {
-            price: [MapFxCoreDetailsModelPriceWithLocation(
-                        fpmlExchangeRate,
-                        fpmlExchangedCurrency1,
-                        fpmlExchangedCurrency2,
-                        fpmlLeg
-                    )],
+            price: [
+                    MapFxCoreDetailsModelPriceWithLocation(
+                            fpmlExchangeRate,
+                            fpmlExchangedCurrency1,
+                            fpmlExchangedCurrency2,
+                            fpmlLeg
+                        )
+                ],
             quantity: MapFxCoreDetailsModelQuantityWithLocation(
                         fpmlExchangeRate,
                         fpmlExchangedCurrency1,
@@ -1420,10 +1419,7 @@ func MapExchangeRateToPrice:
                                     derivedQuantity -> currency,
                                     empty
                                 ),
-                            CreateQuantityKey(
-                                    derivedQuantity -> currency -> value,
-                                    fpmlLeg
-                                )
+                            CreateQuantityKey(derivedQuantity -> currency -> value, fpmlLeg)
                         ),
                 ...
             }
