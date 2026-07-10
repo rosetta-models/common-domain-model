@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e221765d",
+  "@key" : "d1ad41ad",
   "eventDate" : "2020-09-22",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -32,7 +32,8 @@
                     }
                   }
                 },
-                "settlementCentre" : "EuroclearBank"
+                "securitySettlementCentre" : "SecuritySettlementCentre",
+                "cashSettlementCentre" : "CashSettlementCentre"
               },
               "underlier" : {
                 "@type" : "cdm.observable.asset.Observable",
@@ -168,7 +169,8 @@
                   }
                 }
               },
-              "settlementCentre" : "EuroclearBank"
+              "securitySettlementCentre" : "SecuritySettlementCentre",
+              "cashSettlementCentre" : "CashSettlementCentre"
             },
             "underlier" : {
               "@type" : "cdm.observable.asset.Observable",
