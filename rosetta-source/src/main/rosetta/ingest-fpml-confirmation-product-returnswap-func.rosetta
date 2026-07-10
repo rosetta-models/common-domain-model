@@ -573,7 +573,8 @@ func MapReturnLegToPriceQuantity:
             price: [
                     MapNetPriceToPriceWithLocation(
                             fpmlReturnLeg -> rateOfReturn -> initialPrice,
-                            fpmlReturnLeg
+                            fpmlReturnLeg,
+                            financialUnit
                         )
                 ],
             quantity: if fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits exists
