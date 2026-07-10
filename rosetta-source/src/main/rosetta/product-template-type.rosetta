@@ -188,9 +188,9 @@ type OptionPayout extends PayoutBase: <" The option payout specification terms. 
         then optionType exists
 
     condition SettlementCentreRequired: <"SettlementCentre required where underlier is a security.">
-            if underlier as Security exists
-                then (settlementTerms -> securitySettlementCentre exists
-                 and settlementTerms -> cashSettlementCentre exists)
+        if underlier as Security exists
+        then (settlementTerms -> securitySettlementCentre exists
+                and settlementTerms -> cashSettlementCentre exists)
 
 type ReturnTerms: <"Specifies the type of return of a performance payout.">
 
@@ -426,9 +426,9 @@ type SettlementPayout extends PayoutBase: <"Represents a forward settling payout
         if underlier as Cash exists then settlementTerms exists
 
     condition SettlementCentreRequired: <"SettlementCentre required where underlier is a security.">
-            if underlier as Security exists
-                then (settlementTerms -> securitySettlementCentre exists
-                 and settlementTerms -> cashSettlementCentre exists)
+        if underlier as Security exists
+        then (settlementTerms -> securitySettlementCentre exists
+                and settlementTerms -> cashSettlementCentre exists)
 
     condition DeliveryCapacity: <"Checks that only one of the representations of delivery capacity is present simultaneously.">
         if delivery -> deliveryCapacity exists
@@ -877,9 +877,9 @@ type AssetPayout extends PayoutBase: <"Security finance payout specification in 
         underlier as Cash is absent
 
     condition SettlementCentreRequired: <"SettlementCentre required where underlier is a security.">
-            if underlier as Security exists
-                then (settlementTerms -> securitySettlementCentre exists
-                 and settlementTerms -> cashSettlementCentre exists)
+        if underlier as Security exists
+        then (settlementTerms -> securitySettlementCentre exists
+                and settlementTerms -> cashSettlementCentre exists)
 
 type DividendTerms: <"Information related to dividends and payments.">
     manufacturedIncomeRequirement DividendPayoutRatio (1..1) <"Specifies the proportion of the value of the dividend on the borrowed shares that the borrower is legally obligated to return to the lender.">
