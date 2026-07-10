@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "d1a9d2bd",
+  "@key" : "544f2e2f",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -135,6 +135,7 @@
           "multiplier" : {
             "value" : 1100000,
             "unit" : {
+              "financialUnit" : "Contract",
               "currency" : {
                 "@data" : "CHF"
               }

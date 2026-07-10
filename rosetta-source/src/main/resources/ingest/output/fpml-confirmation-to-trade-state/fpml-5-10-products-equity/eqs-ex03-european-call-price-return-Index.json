@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "13a3348d",
+  "@key" : "800211bb",
   "trade" : {
     "product" : {
       "identifier" : [ {
@@ -111,10 +111,13 @@
           "@key:scoped" : "quantity-1",
           "value" : 10000,
           "unit" : {
-            "financialUnit" : "IndexUnit"
+            "financialUnit" : "Contract"
           },
           "multiplier" : {
-            "value" : 1
+            "value" : 1,
+            "unit" : {
+              "financialUnit" : "IndexUnit"
+            }
           }
         },
         "observable" : {
