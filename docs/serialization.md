@@ -59,3 +59,7 @@ For example, `Trade`'s `tradeDate` attribute, which is annotated with `[metadata
 The serialization standard is defined by the Rune DSL and applies to all Rune-based models, including the CDM. The full specification — covering the design principles, the complete set of special attributes, generation, ingestion and validation behaviour, and worked examples — is documented on the Rune DSL website:
 
 - [Rune Serialization documentation](https://rune.finos.org/docs/serialization)
+
+## Acknowledgements
+
+ISLA would like to thank the following individuals and firms for drawing up this document: Minesh Patel and Hugo Hills, REGnosys; Daniel Schwartz, FTAdvisory; Plamen Neykov, CLOUDRISK; and Jason Polis, ISDA
