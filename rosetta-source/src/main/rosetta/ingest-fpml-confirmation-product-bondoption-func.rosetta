@@ -13,6 +13,7 @@ import cdm.product.template.*
 
 import fpml.consolidated.* as fpml
 import fpml.consolidated.bond.option.* as fpml
+import fpml.consolidated.asset.* as fpml
 
 func MapBondOptionCounterpartyList:
     inputs:
