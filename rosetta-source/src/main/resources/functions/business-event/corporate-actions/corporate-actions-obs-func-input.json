@@ -12,9 +12,9 @@
       }
     },
     "before" : {
-      "@key" : "e24a2c88",
+      "@key" : "8d57501d",
       "trade" : {
-        "@key" : "e1d6f969",
+        "@key" : "73ad2cb4",
         "product" : {
           "@key" : "883618ff",
           "taxonomy" : [ {
@@ -329,7 +329,7 @@
               }
             }
           }, {
-            "@key" : "ed338690",
+            "@key" : "139f38d9",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 100,
@@ -356,9 +356,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 100000,
               "unit" : {
-                "currency" : {
-                  "@data" : "EUR"
-                }
+                "financialUnit" : "IndexUnit"
               }
             },
             "observable" : {

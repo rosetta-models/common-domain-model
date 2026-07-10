@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e80a4a88",
+  "@key" : "523b0cb8",
   "eventDate" : "2009-02-13",
   "effectiveDate" : "2009-02-13",
   "instruction" : [ {
@@ -349,9 +349,7 @@
               "@key:scoped" : "quantity-2",
               "value" : 100000,
               "unit" : {
-                "currency" : {
-                  "@data" : "EUR"
-                }
+                "financialUnit" : "IndexUnit"
               }
             },
             "observable" : {
@@ -827,9 +825,7 @@
             "@key:scoped" : "quantity-2",
             "value" : 100000,
             "unit" : {
-              "currency" : {
-                "@data" : "EUR"
-              }
+              "financialUnit" : "IndexUnit"
             }
           },
           "observable" : {
