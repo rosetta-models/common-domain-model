@@ -12,6 +12,7 @@ import cdm.product.common.settlement.*
 import cdm.product.template.*
 import fpml.consolidated.* as fpml
 import fpml.consolidated.eqd.* as fpml
+import fpml.consolidated.asset.* as fpml
 
 func MapBrokerEquityOptionCounterpartyList:
     inputs:
@@ -142,7 +143,19 @@ func MapBrokerEquityOptionPriceQuantityList:
 
     alias observableFromUnderlyer:
         MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
-
+    alias financialUnit:if (MapUnderlyerToObservableWithLocation(fpmlBrokerEquityOption -> underlyer)
+                                as Security
+                                exists
+                                and fpmlBrokerEquityOption -> underlyer -> singleUnderlyer -> underlyingAsset
+                                    as fpml.Equity
+                                    exists)
+                        then FinancialUnitEnum -> Share
+                        else if MapUnderlyerToObservableWithLocation(
+                                fpmlBrokerEquityOption -> underlyer
+                            )
+                            as Index
+                            exists
+                        then IndexUnit
     add priceQuantityList:
         PriceQuantity {
             price:
@@ -161,7 +174,8 @@ func MapBrokerEquityOptionPriceQuantityList:
                         fpmlBrokerEquityOption,
                         fpmlBrokerEquityOption -> numberOfOptions,
                         empty,
-                        empty
+                        empty,
+                        financialUnit
                     ) is absent 
                         then MapEquityDerivativeBaseNotionalQuantityLocation(
                                     fpmlBrokerEquityOption
@@ -170,7 +184,8 @@ func MapBrokerEquityOptionPriceQuantityList:
                         fpmlBrokerEquityOption,
                         fpmlBrokerEquityOption -> numberOfOptions,
                         empty,
-                        empty
+                        empty,
+                        financialUnit
                     ),
             observable: MapUnderlyerToObservableWithLocation(
                         fpmlBrokerEquityOption -> underlyer

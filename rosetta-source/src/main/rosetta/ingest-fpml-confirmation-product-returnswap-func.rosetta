@@ -16,7 +16,6 @@ import cdm.product.asset.*
 import cdm.product.common.schedule.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
-
 import fpml.consolidated.* as fpml
 import fpml.consolidated.asset.* as fpml
 import fpml.consolidated.eq.shared.* as fpml
@@ -556,7 +555,19 @@ func MapReturnLegToPriceQuantity:
         priceQuantity PriceQuantity (0..1)
 
     alias notionalAmount: fpmlReturnLeg -> notional -> notionalAmount
-
+    alias financialUnit: if (MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer)
+                                as Security
+                                exists
+                                and fpmlReturnLeg -> underlyer -> singleUnderlyer -> underlyingAsset
+                                    as fpml.Equity
+                                    exists)
+                        then FinancialUnitEnum -> Share
+                        else if MapUnderlyerToObservableWithLocation(
+                                fpmlReturnLeg -> underlyer
+                            )
+                            as Index
+                            exists
+                        then IndexUnit
     set priceQuantity:
         PriceQuantity {
             price: [
@@ -565,20 +576,16 @@ func MapReturnLegToPriceQuantity:
                             fpmlReturnLeg
                         )
                 ],
-            quantity: MapNotionalAmountWithIdToQuantityWithLocation(
+            quantity: 
+            if fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits exists then 
+                MapNotionalAmountWithIdToQuantityWithLocation(
                         fpmlReturnLeg -> underlyer -> singleUnderlyer -> openUnits,
                         empty,
-                        fpmlReturnLeg -> notional -> notionalAmount -> currency,
+                        empty,
                         "openUnits",
-                        fpmlReturnLeg,
-                        if MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer)
-                                as Security
-                                exists
-                                and fpmlReturnLeg -> underlyer -> singleUnderlyer -> underlyingAsset
-                                    as fpml.Equity
-                                    exists
-                        then Share
-                    ),
+                        empty,
+                        financialUnit)
+                    ,
             observable: MapUnderlyerToObservableWithLocation(fpmlReturnLeg -> underlyer),
             ...
         }

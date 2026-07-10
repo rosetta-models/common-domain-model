@@ -12,6 +12,7 @@ import cdm.product.common.settlement.*
 import cdm.product.template.*
 import fpml.consolidated.* as fpml
 import fpml.consolidated.eqd.* as fpml
+import fpml.consolidated.asset.* as fpml
 
 func MapEquityOptionTransactionSupplementCounterpartyList:
     inputs:
@@ -144,7 +145,22 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
         fpmlEquityOptionTransactionSupplement fpml.EquityOptionTransactionSupplement (0..1)
     output:
         priceQuantityList PriceQuantity (0..*)
-
+    alias financialUnit:
+        if (MapUnderlyerToObservableWithLocation(
+                    fpmlEquityOptionTransactionSupplement -> underlyer
+                )
+                as Security
+                exists
+                and fpmlEquityOptionTransactionSupplement -> underlyer -> singleUnderlyer -> underlyingAsset
+                    as fpml.Equity
+                    exists)
+        then FinancialUnitEnum -> Share
+        else if MapUnderlyerToObservableWithLocation(
+                fpmlEquityOptionTransactionSupplement -> underlyer
+            )
+            as Index
+            exists
+        then IndexUnit
     alias observableFromUnderlyer:
         MapUnderlyerToObservableWithLocation(
                 fpmlEquityOptionTransactionSupplement -> underlyer
@@ -155,31 +171,24 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
             price:
                 PriceSchedule {
                     priceType: empty,
-                    derivedQuantity: if observableFromUnderlyer as Asset is absent
-                                and observableFromUnderlyer as Index is absent
-                            then MapEquityDerivativeBaseNotionalQuantityLocation(
-                                    fpmlEquityOptionTransactionSupplement
-                                ),
+                    derivedQuantity: MapEquityDerivativeBaseNotionalQuantityLocation(
+                                fpmlEquityOptionTransactionSupplement
+                            ),
                     ...
                 },
-            quantity: if (observableFromUnderlyer as Asset exists
-                        or observableFromUnderlyer as Index exists)
-                        or MapEquityDerivativeBaseQuantityWithLocation(
-                                fpmlEquityOptionTransactionSupplement,
-                                fpmlEquityOptionTransactionSupplement -> numberOfOptions,
-                                fpmlEquityOptionTransactionSupplement -> optionEntitlement,
-                                empty
+            quantity: if financialUnit exists
+                        or MapUnderlyerToObservableWithLocation(
+                                fpmlEquityOptionTransactionSupplement -> underlyer
                             )
-                            is absent
-                    then MapEquityDerivativeBaseNotionalQuantityLocation(
-                            fpmlEquityOptionTransactionSupplement
-                        )
-                else MapEquityDerivativeBaseQuantityWithLocation(
-                        fpmlEquityOptionTransactionSupplement,
-                        fpmlEquityOptionTransactionSupplement -> numberOfOptions,
-                        fpmlEquityOptionTransactionSupplement -> optionEntitlement,
-                        empty
-                    ),
+                            as Basket
+                            exists
+                    then MapEquityDerivativeBaseQuantityWithLocation(
+                            fpmlEquityOptionTransactionSupplement,
+                            fpmlEquityOptionTransactionSupplement -> numberOfOptions,
+                            fpmlEquityOptionTransactionSupplement -> optionEntitlement,
+                            fpmlEquityOptionTransactionSupplement -> underlyer -> singleUnderlyer -> openUnits,
+                            financialUnit
+                        ),
             observable: MapUnderlyerToObservableWithLocation(
                         fpmlEquityOptionTransactionSupplement -> underlyer
                     ),
