@@ -10,9 +10,10 @@ import cdm.ingest.fpml.confirmation.settlement.*
 import cdm.observable.asset.*
 import cdm.product.common.settlement.*
 import cdm.product.template.*
+
 import fpml.consolidated.* as fpml
-import fpml.consolidated.eqd.* as fpml
 import fpml.consolidated.asset.* as fpml
+import fpml.consolidated.eqd.* as fpml
 
 func MapBrokerEquityOptionCounterpartyList:
     inputs:

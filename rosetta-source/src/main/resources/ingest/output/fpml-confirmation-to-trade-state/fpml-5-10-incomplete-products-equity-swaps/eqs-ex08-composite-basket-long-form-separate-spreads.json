@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "71eacf7a",
+  "@key" : "36cb14d9",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -256,9 +256,6 @@
             "currency" : {
               "@data" : "EUR"
             }
-          },
-          "perUnitOf" : {
-            "financialUnit" : "Share"
           },
           "priceType" : "AssetPrice",
           "priceExpression" : "AbsoluteTerms",
