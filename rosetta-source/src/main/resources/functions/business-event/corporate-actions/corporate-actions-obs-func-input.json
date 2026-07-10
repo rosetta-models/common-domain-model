@@ -12,9 +12,9 @@
       }
     },
     "before" : {
-      "@key" : "8d57501d",
+      "@key" : "5531ad2b",
       "trade" : {
-        "@key" : "73ad2cb4",
+        "@key" : "53d45ee6",
         "product" : {
           "@key" : "883618ff",
           "taxonomy" : [ {
@@ -329,7 +329,7 @@
               }
             }
           }, {
-            "@key" : "139f38d9",
+            "@key" : "fa3e1567",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 100,
@@ -339,7 +339,7 @@
                 }
               },
               "perUnitOf" : {
-                "financialUnit" : "Share"
+                "financialUnit" : "IndexUnit"
               },
               "priceType" : "AssetPrice",
               "priceExpression" : "AbsoluteTerms",
