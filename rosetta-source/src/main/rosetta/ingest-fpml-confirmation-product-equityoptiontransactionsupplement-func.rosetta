@@ -177,9 +177,7 @@ func MapEquityOptionTransactionSupplementPriceQuantityList:
                     ...
                 },
             quantity: if financialUnit exists
-                        or MapUnderlyerToObservableWithLocation(
-                                fpmlEquityOptionTransactionSupplement -> underlyer
-                            )
+                        or observableFromUnderlyer
                             as Basket
                             exists
                     then MapEquityDerivativeBaseQuantityWithLocation(

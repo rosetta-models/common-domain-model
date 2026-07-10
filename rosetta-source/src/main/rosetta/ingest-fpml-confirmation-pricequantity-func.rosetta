@@ -1246,6 +1246,7 @@ func MapNetPriceToPriceWithLocation:
     inputs:
         fpmlPrice fpml.Price (0..1)
         fpmlReturnLeg fpml.ReturnLeg (0..1)
+        fpmlFinancialUnit FinancialUnitEnum (0..1)
     output:
         priceSchedules PriceSchedule (0..1)
             [metadata location]
@@ -1264,7 +1265,7 @@ func MapNetPriceToPriceWithLocation:
                             },
                         perUnitOf:
                             UnitType {
-                                financialUnit: Share,
+                                financialUnit: fpmlFinancialUnit,
                                 ...
                             },
                         priceExpression: fpmlPrice -> netPrice -> priceExpression to-enum PriceExpressionEnum,
