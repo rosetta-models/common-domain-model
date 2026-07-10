@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "8bd94e1a",
+  "@key" : "a75f0c36",
   "eventDate" : "2009-02-01",
   "effectiveDate" : "2009-02-01",
   "instruction" : [ {
@@ -332,7 +332,7 @@
                 }
               },
               "perUnitOf" : {
-                "financialUnit" : "Share"
+                "financialUnit" : "IndexUnit"
               },
               "priceType" : "AssetPrice",
               "priceExpression" : "AbsoluteTerms",
@@ -801,7 +801,7 @@
               }
             },
             "perUnitOf" : {
-              "financialUnit" : "Share"
+              "financialUnit" : "IndexUnit"
             },
             "priceType" : "AssetPrice",
             "priceExpression" : "AbsoluteTerms",
