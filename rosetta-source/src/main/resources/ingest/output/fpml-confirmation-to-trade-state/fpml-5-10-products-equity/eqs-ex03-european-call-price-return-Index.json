@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "aea1344c",
+  "@key" : "800211bb",
   "trade" : {
     "product" : {
       "identifier" : [ {
@@ -114,7 +114,10 @@
             "financialUnit" : "Contract"
           },
           "multiplier" : {
-            "value" : 1
+            "value" : 1,
+            "unit" : {
+              "financialUnit" : "IndexUnit"
+            }
           }
         },
         "observable" : {
