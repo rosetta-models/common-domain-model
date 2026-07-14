@@ -85,7 +85,7 @@ func MapTradeState:
                         fpmlQuoteList,
                         fpmlAdditionalPartyTradeIdentifierList
                     ),
-            transferHistory: MapTransferStateList(fpmlTrade),
+            transferHistory: empty, //MapTransferStateList(fpmlTrade),
             ...
         }
 

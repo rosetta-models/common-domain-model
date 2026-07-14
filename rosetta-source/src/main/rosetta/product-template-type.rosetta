@@ -465,7 +465,7 @@ type CancelableProvision extends BuyerSeller: <"A data defining:  the right of a
     followUpConfirmation boolean (1..1) <"A flag to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.">
     cancelableProvisionAdjustedDates CancelableProvisionAdjustedDates (0..1) <"The adjusted dates associated with a cancelable provision. These dates have been adjusted for any applicable business day convention.">
     finalCalculationPeriodDateAdjustment FinalCalculationPeriodDateAdjustment (0..*) <"Business date convention adjustment to final payment period per leg (swapStream) upon exercise event. The adjustments can be made in-line with leg level BDC's or they can be specified separately.">
-    initialFee Transfer (0..1) <"An initial fee for the cancelable option.">
+    initialFee PartyTransfer (0..1) <"An initial fee for the cancelable option.">
     callingParty CallingPartyEnum (0..1) <"The party with right to exercise a cancellation. Allows for buyer, seller or either.">
     earliestDate AdjustableOrRelativeDate (0..1) <"The first day when cancelation is permitted to take effect. A party may give notice prior to this date and taken together with the effective period would be necessary to cancel on this date.">
     expirationDate AdjustableOrRelativeDate (0..1) <"The last day within the term of the contract that cancelation is allowed.">

@@ -138,7 +138,7 @@ type QuantityChangeInstruction: <"Instructions required to create a Quantity Cha
 type IndexTransitionInstruction: <"Defines the information needed to create a Index Transition Business Event.">
     priceQuantity PriceQuantity (1..*) <"Specifies both new floating rate index and spread adjustment for each leg to be updated.  The spread adjustment accounts for the difference between the old floating rate index relative to the new one. This spread amount is added to the existing spread to determine the new spread, which is applied from the specified effective date forward. In the case of the IBOR Fallback Rate Adjustments, the adjustment spread (also known as the Fallback Adjustment) accounts for two distinctions: i) the fact that the replacement Risk-Free Rate is an overnight rate while IBORs have term structures (e.g., 1, 3, 6-month LIBOR); and (ii) the historical spread differential between IBORs and their term equivalent Overnight Risk-Free Rate compounded rates.">
     effectiveDate date (1..1) <"Specifies the effective date of the index transition event. This is first date on which the floating rate calculation will use the new floating rate index and adjusted spread in the floating rate calculation.">
-    cashTransfer Transfer (0..1) <"Specifies the cash transfer that can optionally be tied to an index transition event.">
+    cashTransfer PartyTransfer (0..1) <"Specifies the cash transfer that can optionally be tied to an index transition event.">
 
     condition PriceQuantity:
         priceQuantity -> price -> priceType contains PriceTypeEnum -> InterestRate
@@ -211,35 +211,35 @@ type State: <"Defines the state of a trade at a point in the Trade's life cycle.
 type TransferState: <"Defines the fundamental financial information associated with a Transfer event. Each TransferState specifies where a Transfer is in its life-cycle. TransferState is a root type and as such, can be created independently to any other CDM data type, but can also be used as part of the CDM Event Model.">
     [metadata key]
     [rootType]
-    transfer Transfer (1..1) <"Represents the Transfer that has been effected by a business or life-cycle event.">
+    transfer PartyTransfer (1..1) <"Represents the transfer that has been effected by a business or life-cycle event.">
     transferStatus TransferStatusEnum (0..1) <"Represents the State of the Transfer through its life-cycle.">
 
-choice Transfer: <"The type of transfer.">
-    ScheduledTransfer <"A transfer created from a scheduled event on a contract, e.g. Coupon, Dividend Return, Fixed Rate Return">
-    UnscheduledTransfer <"An ad-hoc transfer instigated by a party to the contract e.g. Recall, Return.">
-    ContingentTransfer <"A transfer created from a contingent event on a contract, e.g. Corporate Action, Credit Event or Exercise">
+choice PartyTransfer: <"A transfer where the parties are specified.">
+    ScheduledPartyTransfer <"A transfer created from a scheduled event on a contract, e.g. Coupon, Dividend Return, Fixed Rate Return">
+    UnscheduledPartyTransfer <"An ad-hoc transfer instigated by a party to the contract e.g. Recall, Return.">
+    ContingentPartyTransfer <"A transfer created from a contingent event on a contract, e.g. Corporate Action, Credit Event or Exercise">
 
-type UnscheduledTransfer extends TransferBase: <"An ad-hoc transfer instigated by a party to the contract.">
-    transferType UnscheduledTransferEnum (0..1) <"Specifies the type of unscheduled transfer.">
+type PartyTransferBase extends settlement.TransferBase: <"An ad-hoc transfer instigated by a party to the contract.">
+    identifier Identifier (0..*) <"Represents a unique reference to the transfer.">
+        [metadata scheme]
+    payerReceiver PartyReferencePayerReceiver (1..1) <"Represents the parties to the transfer and their role.">
 
-type ScheduledTransfer extends TransferBase: <"A scheduled transfer built into the contract.">
-    transferType ScheduledTransferEnum (1..1) <"Specifies the type of scheduled transfer.">
-    payoutReference Payout (0..1) <"Represents the origin to the transfer as a reference for lineage purposes, whether it originated from trade level settlement terms or from payment terms on an economic payout.">
+type UnscheduledPartyTransfer extends PartyTransferBase: <"An ad-hoc transfer instigated by a party to the contract.">
+    transferType UnscheduledTransferEnum (1..1) <"Specifies the type of unscheduled transfer.">
+
+type ScheduledPartyTransfer extends PartyTransferBase: <"A scheduled transfer built into the contract.">
+    transferType ScheduledTransferEnum (1..1) <"Type of transfer corresponding to a scheduled event.">
+    payoutReference Payout (1..1) <"Represents the origin to the transfer as a reference for lineage purposes, whether it originated from trade level settlement terms or from payment terms on an economic payout.">
         [metadata reference]
 
-type ContingentTransfer extends TransferBase: <"Specifies a transfer created from a trade contingent upon a specific, uncertain event on a contract">
-    transferType ContingentTransferEnum (0..1) <"Specifies the type of contingent transfer.">
-    payoutReference Payout (0..1) <"Represents the origin to the transfer as a reference for lineage purposes, whether it originated from trade level settlement terms or from payment terms on an economic payout.">
+type ContingentPartyTransfer extends PartyTransferBase: <"Specifies a transfer created from a trade contingent upon a specific, uncertain event on a contract">
+    transferType ContingentTransferEnum (1..1) <"Specifies the type of contingent transfer.">
+    payoutReference Payout (1..1) <"Represents the origin to the transfer as a reference for lineage purposes, whether it originated from trade level settlement terms or from payment terms on an economic payout.">
     corporateActionTransferType CorporateActionTypeEnum (0..1) <" A transfer corresponding to a corporate action event">
 
     condition CorporateActionTransferTypeExists: <"When a Contingent Transfer is a Corporate Action the type of event must be specified.">
         if transferType = CorporateAction
         then corporateActionTransferType exists
-
-type TransferBase extends AssetFlowBase: <"Defines the movement of an Asset (eg cash, securities or commodities) between two parties on a date.">
-    identifier Identifier (0..*) <"Represents a unique reference to the transfer.">
-        [metadata scheme]
-    payerReceiver PartyReferencePayerReceiver (1..1) <"Represents the parties to the transfer and their role.">
 
 type TradeIdentifier extends Identifier: <"Defines a trade identifier as a special case of the generic identifier type, that also includes the trade identifier class.">
     identifierType TradeIdentifierTypeEnum (0..1) <"The enumerated classification of the identifier. Optional as a trade identifier may be party-specific, in which case it may not correspond to any established classification.">
@@ -646,13 +646,13 @@ type BillingSummaryInstruction: <"Specifies the instructions for creation of a b
 type BillingRecord: <"Specifies individual records within a billing invoice.">
     tradeState TradeState (1..1) <"The trade for the individual billing record.">
         [metadata reference]
-    recordTransfer Transfer (1..1) <"The settlement terms for the billing record">
+    recordTransfer PartyTransfer (1..1) <"The settlement terms for the billing record">
     recordStartDate date (1..1) <"The starting date of the period described by this record">
     recordEndDate date (1..1) <"The ending date of the period described by this record">
     minimumFee Money (0..1) <"Indicates the minimum fee amount applied to the billing record, if any.">
 
 type BillingSummary: <"Specifies individual summaries within a billing invoice.">
-    summaryTransfer Transfer (0..1) <"The settlement terms for the billing summary">
+    summaryTransfer PartyTransfer (0..1) <"The settlement terms for the billing summary">
     summaryAmountType RecordAmountTypeEnum (1..1) <"The account level for the billing summary.">
 
     condition GrandTotal:

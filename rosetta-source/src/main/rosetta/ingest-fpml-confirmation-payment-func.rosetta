@@ -154,9 +154,9 @@ func MapPaymentToTransferState:
         if fpmlPayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapTransferQuantity(fpmlPayment -> paymentAmount),
                             asset: MapTransferCashAsset(fpmlPayment -> paymentAmount),
                             payerReceiver: MapPaymentToPartyReferencePayerReceiver(
@@ -198,9 +198,9 @@ func MapNonNegativePaymentToTransferState:
         if fpmlNonNegativePayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapTransferQuantity(
                                         fpmlNonNegativePayment -> paymentAmount
                                     ),
@@ -237,9 +237,9 @@ func MapSimplePaymentToTransferState:
         if fpmlSimplePayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapTransferQuantity(
                                         fpmlSimplePayment -> paymentAmount
                                     ),
@@ -285,9 +285,9 @@ func MapReturnSwapAdditionalPaymentToTransferState:
         if fpmlReturnSwapAdditionalPayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapTransferQuantity(
                                         fpmlReturnSwapAdditionalPayment -> additionalPaymentAmount -> paymentAmount
                                     ),
@@ -324,9 +324,9 @@ func MapInitialPaymentToTransferState:
         if fpmlInitialPayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapMoneyToTransferQuantity(
                                         fpmlInitialPayment -> paymentAmount
                                     ),
@@ -373,9 +373,9 @@ func MapSinglePaymentToTransferState:
         if fpmlSinglePayment exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapMoneyToTransferQuantity(
                                         fpmlSinglePayment -> fixedAmount
                                     ),
@@ -452,9 +452,9 @@ func MapEquityPremiumToTransferState:
         if fpmlEquityPremium exists
         then TransferState {
             transfer:
-                Transfer {
-                    UnscheduledTransfer:
-                        UnscheduledTransfer {
+                PartyTransfer {
+                    UnscheduledPartyTransfer:
+                        UnscheduledPartyTransfer {
                             quantity: MapTransferQuantity(
                                         fpmlEquityPremium -> paymentAmount
                                     ),
