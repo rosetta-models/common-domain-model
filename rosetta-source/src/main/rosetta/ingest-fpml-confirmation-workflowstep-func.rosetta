@@ -113,11 +113,7 @@ func MapEventIdentifier:
 
     add eventIdentifier:
         Identifier {
-            assignedIdentifier:
-                AssignedIdentifier {
-                    identifier: fpmlMessageId -> value,
-                    ...
-                },
+            identifier: fpmlMessageId -> value,
             ...
         }
 
@@ -125,10 +121,10 @@ func MapEventIdentifier:
         fpmlTradeEvent -> eventIdentifier
             extract
                 Identifier {
-                    assignedIdentifier:
-                        AssignedIdentifier {
+                    versionedIdentifier:
+                        VersionedIdentifier {
                             identifier: eventId -> value,
-                            ...
+                            version: empty,
                         },
                     issuerReference: MapPartyReference(partyReference -> href),
                     ...
