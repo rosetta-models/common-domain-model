@@ -121,11 +121,7 @@ func MapEventIdentifier:
         fpmlTradeEvent -> eventIdentifier
             extract
                 Identifier {
-                    versionedIdentifier:
-                        VersionedIdentifier {
-                            identifier: eventId -> value,
-                            version: empty,
-                        },
+                    identifier: eventId -> value,
                     issuerReference: MapPartyReference(partyReference -> href),
                     ...
                 }

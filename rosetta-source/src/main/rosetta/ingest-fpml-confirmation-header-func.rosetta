@@ -118,7 +118,6 @@ func MapIssuerTradeIdModelToIdentifier:
             ...
         }
 
-
 func MapTradeIdToIdentifier:
     inputs:
         fpmlTradeId fpml.TradeId (0..1)
@@ -128,8 +127,6 @@ func MapTradeIdToIdentifier:
     set cdmIdentifier:
         MapStringWithScheme(fpmlTradeId -> value, fpmlTradeId -> tradeIdScheme)
             
-        
-
 func MapTradeIdToVersionedIdentifier:
     inputs:
         fpmlTradeId fpml.TradeId (0..1)
