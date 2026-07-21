@@ -10,36 +10,3 @@
 +                          "value" : "FTSE/Xinhua China 25 Index"
 +                        },
 +                        "identifierType" : "Name"
-@@ -139,1 +141,9 @@
--                  }
-+                  },
-+                  "quantity" : [ {
-+                    "value" : {
-+                      "value" : 0.50,
-+                      "unit" : {
-+                        "financialUnit" : "Weight"
-+                      }
-+                    }
-+                  } ]
-@@ -175,1 +185,9 @@
--                  }
-+                  },
-+                  "quantity" : [ {
-+                    "value" : {
-+                      "value" : 0.25,
-+                      "unit" : {
-+                        "financialUnit" : "Weight"
-+                      }
-+                    }
-+                  } ]
-@@ -211,1 +229,9 @@
--                  }
-+                  },
-+                  "quantity" : [ {
-+                    "value" : {
-+                      "value" : 0.25,
-+                      "unit" : {
-+                        "financialUnit" : "Weight"
-+                      }
-+                    }
-+                  } ]
