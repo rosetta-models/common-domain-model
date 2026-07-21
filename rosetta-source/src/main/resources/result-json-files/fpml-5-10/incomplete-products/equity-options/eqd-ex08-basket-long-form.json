@@ -150,15 +150,7 @@
                         "instrumentType" : "Equity"
                       }
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 0.40,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -200,15 +192,7 @@
                         "instrumentType" : "Equity"
                       }
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 0.60,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -227,7 +211,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "dc4ebab7"
+          "globalKey" : "18f8c071"
         }
       } ]
     } ],
@@ -358,7 +342,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "8a655103"
+      "globalKey" : "96a4adfd"
     }
   },
   "transferHistory" : [ {
@@ -409,6 +393,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "a489e957"
+    "globalKey" : "16a07851"
   }
 }

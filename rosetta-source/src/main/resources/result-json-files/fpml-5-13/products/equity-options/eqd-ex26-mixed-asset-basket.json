@@ -169,15 +169,7 @@
                       },
                       "assetClass" : "Equity"
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 3,
-                      "unit" : {
-                        "financialUnit" : "IndexUnit"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -209,15 +201,7 @@
                         }
                       }
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 1,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -249,15 +233,7 @@
                         }
                       }
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 1,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -289,15 +265,7 @@
                         }
                       }
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 1,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
@@ -316,7 +284,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "35b03d48"
+          "globalKey" : "51065007"
         }
       } ]
     } ],
@@ -428,7 +396,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "341595a6"
+      "globalKey" : "a8dbb0c7"
     }
   },
   "transferHistory" : [ {
@@ -479,6 +447,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "a91aa627"
+    "globalKey" : "ce39ae48"
   }
 }

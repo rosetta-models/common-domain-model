@@ -169,37 +169,12 @@
                       },
                       "assetClass" : "Equity"
                     }
-                  },
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 0.50,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
+                  }
                 },
                 "meta" : {
                   "location" : [ {
                     "scope" : "DOCUMENT",
                     "value" : "basketConstituent-1"
-                  } ]
-                }
-              }, {
-                "value" : {
-                  "quantity" : [ {
-                    "value" : {
-                      "value" : 0.50,
-                      "unit" : {
-                        "financialUnit" : "Weight"
-                      }
-                    }
-                  } ]
-                },
-                "meta" : {
-                  "location" : [ {
-                    "scope" : "DOCUMENT",
-                    "value" : "basketConstituent-2"
                   } ]
                 }
               } ]
@@ -213,7 +188,7 @@
           }
         },
         "meta" : {
-          "globalKey" : "8cf336bb"
+          "globalKey" : "d8d692ed"
         }
       } ]
     } ],
@@ -343,7 +318,7 @@
       }
     },
     "meta" : {
-      "globalKey" : "e11e8c2d"
+      "globalKey" : "9e32da3"
     }
   },
   "transferHistory" : [ {
@@ -394,6 +369,6 @@
     }
   } ],
   "meta" : {
-    "globalKey" : "dd9a37ae"
+    "globalKey" : "490f5724"
   }
 }

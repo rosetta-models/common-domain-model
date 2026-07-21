@@ -75,92 +75,26 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -415,9 +354,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 432000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -428,1 +359,1 @@
+@@ -420,1 +359,1 @@
 -                    "value" : "basketConstituent-6"
 +                    "value" : "basketConstituent-1"
-@@ -462,9 +393,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 227000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -475,1 +398,1 @@
+@@ -459,1 +398,1 @@
 -                    "value" : "basketConstituent-1"
 +                    "value" : "basketConstituent-2"
-@@ -509,9 +432,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 783000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -522,1 +437,1 @@
+@@ -498,1 +437,1 @@
 -                    "value" : "basketConstituent-2"
 +                    "value" : "basketConstituent-3"
-@@ -556,9 +471,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 344000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -569,1 +476,1 @@
+@@ -537,1 +476,1 @@
 -                    "value" : "basketConstituent-3"
 +                    "value" : "basketConstituent-4"
-@@ -603,9 +510,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 340000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -616,1 +515,1 @@
+@@ -576,1 +515,1 @@
 -                    "value" : "basketConstituent-4"
 +                    "value" : "basketConstituent-5"
-@@ -650,9 +549,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 2486000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -663,1 +554,1 @@
+@@ -615,1 +554,1 @@
 -                    "value" : "basketConstituent-5"
 +                    "value" : "basketConstituent-6"
-@@ -696,1 +587,1 @@
+@@ -648,1 +587,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -712,0 +603,1 @@
+@@ -664,0 +603,1 @@
 +                    "assetClass" : "InterestRate",

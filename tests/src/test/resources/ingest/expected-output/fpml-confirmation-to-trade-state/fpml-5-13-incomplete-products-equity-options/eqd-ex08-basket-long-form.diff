@@ -1,0 +1,24 @@
+--- rosetta-source/src/main/resources/result-json-files/fpml-5-13/incomplete-products/equity-options/eqd-ex08-basket-long-form.json
++++ rosetta-source/src/main/resources/ingest/output/fpml-confirmation-to-trade-state/fpml-5-13-incomplete-products-equity-options/eqd-ex08-basket-long-form.json
+@@ -126,1 +126,9 @@
+-                  }
++                  },
++                  "quantity" : [ {
++                    "value" : {
++                      "value" : 0.40,
++                      "unit" : {
++                        "financialUnit" : "Weight"
++                      }
++                    }
++                  } ]
+@@ -165,1 +173,9 @@
+-                  }
++                  },
++                  "quantity" : [ {
++                    "value" : {
++                      "value" : 0.60,
++                      "unit" : {
++                        "financialUnit" : "Weight"
++                      }
++                    }
++                  } ]

@@ -42,27 +42,16 @@
 -                            }
 -                          }
 -                        },
-@@ -337,9 +330,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 432000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -350,1 +335,1 @@
+@@ -342,1 +335,1 @@
 -                    "value" : "basketConstituent-7"
 +                    "value" : "basketConstituent-1"
-@@ -366,0 +351,5 @@
+@@ -358,0 +351,5 @@
 +                        }, {
 +                          "identifier" : {
 +                            "value" : "Nokya Oyj"
 +                          },
 +                          "identifierType" : "Name"
-@@ -367,9 +357,0 @@
+@@ -359,9 +357,0 @@
 -                        "isExchangeListed" : true,
 -                        "exchange" : {
 -                          "name" : {
@@ -72,27 +61,16 @@
 -                            }
 -                          }
 -                        },
-@@ -379,9 +360,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 227000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -392,1 +365,1 @@
+@@ -376,1 +365,1 @@
 -                    "value" : "basketConstituent-1"
 +                    "value" : "basketConstituent-2"
-@@ -408,0 +381,5 @@
+@@ -392,0 +381,5 @@
 +                        }, {
 +                          "identifier" : {
 +                            "value" : "Telecom Italia Mobile spa"
 +                          },
 +                          "identifierType" : "Name"
-@@ -409,9 +387,0 @@
+@@ -393,9 +387,0 @@
 -                        "isExchangeListed" : true,
 -                        "exchange" : {
 -                          "name" : {
@@ -102,27 +80,16 @@
 -                            }
 -                          }
 -                        },
-@@ -421,9 +390,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 783000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -434,1 +395,1 @@
+@@ -410,1 +395,1 @@
 -                    "value" : "basketConstituent-2"
 +                    "value" : "basketConstituent-3"
-@@ -450,0 +411,5 @@
+@@ -426,0 +411,5 @@
 +                        }, {
 +                          "identifier" : {
 +                            "value" : "Telefonica de Espana"
 +                          },
 +                          "identifierType" : "Name"
-@@ -451,9 +417,0 @@
+@@ -427,9 +417,0 @@
 -                        "isExchangeListed" : true,
 -                        "exchange" : {
 -                          "name" : {
@@ -132,27 +99,16 @@
 -                            }
 -                          }
 -                        },
-@@ -463,9 +420,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 344000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -476,1 +425,1 @@
+@@ -444,1 +425,1 @@
 -                    "value" : "basketConstituent-3"
 +                    "value" : "basketConstituent-4"
-@@ -492,0 +441,5 @@
+@@ -460,0 +441,5 @@
 +                        }, {
 +                          "identifier" : {
 +                            "value" : "Portugal Telecom SA"
 +                          },
 +                          "identifierType" : "Name"
-@@ -493,9 +447,0 @@
+@@ -461,9 +447,0 @@
 -                        "isExchangeListed" : true,
 -                        "exchange" : {
 -                          "name" : {
@@ -162,27 +118,16 @@
 -                            }
 -                          }
 -                        },
-@@ -505,9 +450,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 340000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -518,1 +455,1 @@
+@@ -478,1 +455,1 @@
 -                    "value" : "basketConstituent-4"
 +                    "value" : "basketConstituent-5"
-@@ -534,0 +471,5 @@
+@@ -494,0 +471,5 @@
 +                        }, {
 +                          "identifier" : {
 +                            "value" : "Vodafone Group"
 +                          },
 +                          "identifierType" : "Name"
-@@ -535,9 +477,0 @@
+@@ -495,9 +477,0 @@
 -                        "isExchangeListed" : true,
 -                        "exchange" : {
 -                          "name" : {
@@ -192,28 +137,17 @@
 -                            }
 -                          }
 -                        },
-@@ -547,9 +480,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 2486000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -560,1 +485,1 @@
+@@ -512,1 +485,1 @@
 -                    "value" : "basketConstituent-5"
 +                    "value" : "basketConstituent-6"
-@@ -575,0 +500,5 @@
+@@ -527,0 +500,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "MSCI World Government Bond Index."
 +                        },
 +                        "identifierType" : "Name"
-@@ -586,1 +516,1 @@
+@@ -538,1 +516,1 @@
 -                    "value" : "basketConstituent-6"
 +                    "value" : "basketConstituent-7"
-@@ -635,0 +565,1 @@
+@@ -587,0 +565,1 @@
 +                    "assetClass" : "InterestRate",

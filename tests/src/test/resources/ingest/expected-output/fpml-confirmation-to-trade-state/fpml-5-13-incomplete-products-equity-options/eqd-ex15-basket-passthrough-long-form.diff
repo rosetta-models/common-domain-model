@@ -22,3 +22,25 @@
 -                } ]
 -              }
 -            },
+@@ -140,1 +126,9 @@
+-                  }
++                  },
++                  "quantity" : [ {
++                    "value" : {
++                      "value" : 0.40,
++                      "unit" : {
++                        "financialUnit" : "Weight"
++                      }
++                    }
++                  } ]
+@@ -179,1 +173,9 @@
+-                  }
++                  },
++                  "quantity" : [ {
++                    "value" : {
++                      "value" : 0.60,
++                      "unit" : {
++                        "financialUnit" : "Weight"
++                      }
++                    }
++                  } ]

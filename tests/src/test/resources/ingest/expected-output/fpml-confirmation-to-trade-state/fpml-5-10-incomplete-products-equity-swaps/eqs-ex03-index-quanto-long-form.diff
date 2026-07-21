@@ -31,53 +31,20 @@
 +                          "value" : "France CAC 40 Index"
 +                        },
 +                        "identifierType" : "Name"
-@@ -374,9 +367,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 960,
--                      "unit" : {
--                        "financialUnit" : "IndexUnit"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -402,0 +387,5 @@
+@@ -394,0 +387,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "IBEX 35"
 +                        },
 +                        "identifierType" : "Name"
-@@ -417,9 +407,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 260,
--                      "unit" : {
--                        "financialUnit" : "IndexUnit"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -445,0 +427,5 @@
+@@ -429,0 +427,5 @@
 +                      }, {
 +                        "identifier" : {
 +                          "value" : "Hong Kong Hang Seng Index"
 +                        },
 +                        "identifierType" : "Name"
-@@ -460,9 +447,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 580,
--                      "unit" : {
--                        "financialUnit" : "IndexUnit"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -506,1 +485,1 @@
+@@ -482,1 +485,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -522,0 +501,1 @@
+@@ -498,0 +501,1 @@
 +                    "assetClass" : "InterestRate",

@@ -51,29 +51,7 @@
 -          }
 -        }, {
 -          "value" : {
-@@ -373,9 +340,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 432000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -420,9 +379,1 @@
--                  },
--                  "quantity" : [ {
--                    "value" : {
--                      "value" : 227000,
--                      "unit" : {
--                        "financialUnit" : "Share"
--                      }
--                    }
--                  } ]
-+                  }
-@@ -450,0 +401,10 @@
+@@ -434,0 +401,10 @@
 +            "unit" : {
 +              "currency" : {
 +                "value" : "EUR"
@@ -84,12 +62,12 @@
 +                "value" : "EUR"
 +              }
 +            },
-@@ -456,1 +417,1 @@
+@@ -440,1 +417,1 @@
 -              "value" : "price-2"
 +              "value" : "price-1"
-@@ -488,0 +449,1 @@
+@@ -472,0 +449,1 @@
 +                    "assetClass" : "InterestRate",
-@@ -590,32 +552,1 @@
+@@ -574,32 +552,1 @@
 -    } ],
 -    "collateral" : {
 -      "independentAmount" : {
