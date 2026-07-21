@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "57df027",
+  "@key" : "be6afae9",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -49,22 +49,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2015-12-14",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "MXMC"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "calculationPeriodDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             },
             "calculationPeriodFrequency" : {
               "periodMultiplier" : 28,
@@ -79,12 +69,7 @@
             },
             "payRelativeTo" : "CalculationPeriodEndDate",
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           },
           "resetDates" : {
@@ -98,13 +83,8 @@
               "period" : "D",
               "dayType" : "Business",
               "businessDayConvention" : "NONE",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              },
               "dateRelativeTo" : {
-                "@ref" : "ea9690ae",
+                "@ref" : "62743ce",
                 "@ref:external" : "resetDates"
               }
             },
@@ -113,12 +93,7 @@
               "period" : "D"
             },
             "resetDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         }, {
@@ -157,22 +132,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2015-12-14",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "MXMC"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "calculationPeriodDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             },
             "calculationPeriodFrequency" : {
               "periodMultiplier" : 28,
@@ -187,12 +152,7 @@
             },
             "payRelativeTo" : "CalculationPeriodEndDate",
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "MXMC"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         } ]
@@ -200,7 +160,7 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 50000000.00,
           "unit" : {
@@ -208,7 +168,7 @@
               "@data" : "MXN"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {
@@ -250,7 +210,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 50000000.00,
           "unit" : {
@@ -258,7 +218,7 @@
               "@data" : "MXN"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {

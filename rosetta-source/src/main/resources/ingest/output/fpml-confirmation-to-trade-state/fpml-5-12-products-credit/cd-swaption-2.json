@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "39f9199",
+  "@key" : "edea1284",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -73,14 +73,7 @@
                 }
               },
               "dateAdjustments" : {
-                "businessDayConvention" : "FOLLOWING",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  }, {
-                    "@data" : "USNY"
-                  } ]
-                }
+                "businessDayConvention" : "FOLLOWING"
               },
               "payout" : [ {
                 "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -248,14 +241,7 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2006-09-20",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    }, {
-                      "@data" : "USNY"
-                    } ]
-                  }
+                  "businessDayConvention" : "FOLLOWING"
                 }
               }
             } ],
@@ -299,7 +285,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 10000000,
           "unit" : {
@@ -307,9 +293,9 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       }, {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 10000000,
           "unit" : {
@@ -317,7 +303,7 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {
@@ -432,13 +418,6 @@
           "period" : "D",
           "dayType" : "Business",
           "businessDayConvention" : "NONE",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "@data" : "USNY"
-            }, {
-              "@data" : "GBLO"
-            } ]
-          },
           "dateRelativeTo" : {
             "@ref:external" : "TRADEDATE"
           }

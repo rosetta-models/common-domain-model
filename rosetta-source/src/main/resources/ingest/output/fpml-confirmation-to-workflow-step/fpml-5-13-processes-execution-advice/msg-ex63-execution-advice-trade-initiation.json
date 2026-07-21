@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "d082b8b8",
+  "@key" : "3d476c0c",
   "proposedEvent" : {
     "intent" : "ContractFormation",
     "instruction" : [ {
@@ -60,17 +60,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2037-07-30",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "MODFOLLOWING",
-                        "businessCenters" : {
-                          "@key:external" : "BCT1",
-                          "businessCenter" : [ {
-                            "@data" : "USNY"
-                          }, {
-                            "@data" : "GBLO"
-                          }, {
-                            "@data" : "JPTO"
-                          } ]
-                        }
+                        "businessDayConvention" : "MODFOLLOWING"
                       }
                     }
                   },
@@ -229,7 +219,7 @@
                 },
                 "priceType" : "InterestRate"
               } ],
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-1",
                 "value" : 12300000000,
                 "unit" : {
@@ -237,9 +227,9 @@
                     "@data" : "JPY"
                   }
                 }
-              } ]
+              }
             }, {
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-2",
                 "value" : 12300000000,
                 "unit" : {
@@ -247,7 +237,7 @@
                     "@data" : "JPY"
                   }
                 }
-              } ],
+              },
               "observable" : {
                 "@key:scoped" : "observable-1",
                 "@data" : {
@@ -348,29 +338,6 @@
             } ],
             "name" : {
               "@data" : "First International Bank, MozartStrasse, Frankfurt"
-            }
-          } ],
-          "account" : [ {
-            "@key:external" : "AMAGINTAC1",
-            "accountNumber" : {
-              "@data" : "1234"
-            },
-            "accountName" : {
-              "@data" : "SkyAccount"
-            },
-            "accountBeneficiary" : {
-              "@ref:external" : "SKY"
-            }
-          }, {
-            "@key:external" : "CSTGEN478",
-            "accountNumber" : {
-              "@data" : "47896325"
-            },
-            "accountName" : {
-              "@data" : "Sky General Account"
-            },
-            "accountBeneficiary" : {
-              "@ref:external" : "SKY"
             }
           } ]
         }

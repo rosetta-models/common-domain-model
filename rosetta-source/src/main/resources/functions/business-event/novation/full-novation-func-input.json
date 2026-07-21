@@ -41,7 +41,7 @@
           "quantityChange" : {
             "change" : [ {
               "@key" : "171b36",
-              "quantity" : [ {
+              "quantity" : {
                 "value" : 0.0,
                 "unit" : {
                   "currency" : {
@@ -49,7 +49,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ]
+              }
             } ],
             "direction" : "Replace"
           }
@@ -57,11 +57,11 @@
       }
     },
     "before" : {
-      "@key" : "71aa1a62",
+      "@key" : "1ff0fb23",
       "trade" : {
-        "@key" : "71aa1a62",
+        "@key" : "1ff0fb23",
         "product" : {
-          "@key" : "eb1bdcee",
+          "@key" : "7a36e7ef",
           "taxonomy" : [ {
             "primaryAssetClass" : {
               "@data" : "InterestRate"
@@ -86,7 +86,7 @@
           "economicTerms" : {
             "payout" : [ {
               "@type" : "cdm.product.asset.InterestRatePayout",
-              "@key" : "a10e1f98",
+              "@key" : "1b787d19",
               "payerReceiver" : {
                 "payer" : "Party1",
                 "receiver" : "Party2"
@@ -119,13 +119,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2026-02-08",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "MODFOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "primaryBusinessCenters",
-                        "businessCenter" : [ {
-                          "@data" : "USNY"
-                        } ]
-                      }
+                      "businessDayConvention" : "MODFOLLOWING"
                     }
                   }
                 },
@@ -169,13 +163,8 @@
                   "period" : "D",
                   "dayType" : "Business",
                   "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    } ]
-                  },
                   "dateRelativeTo" : {
-                    "@ref" : "e7268bcb",
+                    "@ref" : "563a7295",
                     "@ref:external" : "resetDates4"
                   }
                 },
@@ -232,7 +221,6 @@
                       "businessDayConvention" : "MODFOLLOWING",
                       "businessCenters" : {
                         "businessCentersReference" : {
-                          "@ref" : "27e4e9",
                           "@ref:external" : "primaryBusinessCenters"
                         }
                       }
@@ -243,7 +231,6 @@
                   "businessDayConvention" : "MODFOLLOWING",
                   "businessCenters" : {
                     "businessCentersReference" : {
-                      "@ref" : "27e4e9",
                       "@ref:external" : "primaryBusinessCenters"
                     }
                   }
@@ -264,7 +251,6 @@
                   "businessDayConvention" : "MODFOLLOWING",
                   "businessCenters" : {
                     "businessCentersReference" : {
-                      "@ref" : "27e4e9",
                       "@ref:external" : "primaryBusinessCenters"
                     }
                   }
@@ -277,7 +263,7 @@
         "tradeLot" : [ {
           "priceQuantity" : [ {
             "@key" : "33dc370e",
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 10000.00,
               "unit" : {
@@ -286,7 +272,7 @@
                   "@data" : "USD"
                 }
               }
-            } ],
+            },
             "observable" : {
               "@key:scoped" : "observable-1",
               "@data" : {
@@ -331,7 +317,7 @@
               },
               "priceType" : "InterestRate"
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 10000.00,
               "unit" : {
@@ -340,7 +326,7 @@
                   "@data" : "USD"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {

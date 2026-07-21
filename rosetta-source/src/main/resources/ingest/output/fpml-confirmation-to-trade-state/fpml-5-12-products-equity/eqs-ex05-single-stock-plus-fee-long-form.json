@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "84e242b5",
+  "@key" : "3425f299",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -38,7 +38,7 @@
             "period" : "D",
             "businessDayConvention" : "NotApplicable",
             "dateRelativeTo" : {
-              "@ref" : "23cbca9b",
+              "@ref" : "c59a9a5e",
               "@ref:external" : "FinalEquityPaymentDate"
             }
           }
@@ -94,14 +94,6 @@
                   "period" : "D",
                   "dayType" : "CurrencyBusiness",
                   "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "@key:external" : "PrimaryBusinessCenter",
-                    "businessCenter" : [ {
-                      "@data" : "USNY"
-                    }, {
-                      "@data" : "TWTA"
-                    } ]
-                  },
                   "dateRelativeTo" : {
                     "@ref" : "b9c8415a",
                     "@ref:external" : "FinalValuationDate"
@@ -190,7 +182,7 @@
                 "period" : "D",
                 "businessDayConvention" : "NotApplicable",
                 "dateRelativeTo" : {
-                  "@ref" : "23cbca9b",
+                  "@ref" : "c59a9a5e",
                   "@ref:external" : "FinalEquityPaymentDate"
                 }
               }
@@ -229,10 +221,13 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
-          "value" : 18388000
-        } ],
+          "value" : 18388000,
+          "unit" : {
+            "financialUnit" : "Share"
+          }
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {

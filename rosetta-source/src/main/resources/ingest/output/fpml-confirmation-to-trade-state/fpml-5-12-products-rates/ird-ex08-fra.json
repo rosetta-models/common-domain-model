@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "e6d3a30a",
+  "@key" : "ba04e81c",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -63,12 +63,7 @@
           "paymentDate" : {
             "unadjustedDate" : "1991-07-17",
             "dateAdjustments" : {
-              "businessDayConvention" : "FOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "CHZU"
-                } ]
-              }
+              "businessDayConvention" : "FOLLOWING"
             }
           },
           "discountingMethod" : {
@@ -114,12 +109,7 @@
           "paymentDate" : {
             "unadjustedDate" : "1991-07-17",
             "dateAdjustments" : {
-              "businessDayConvention" : "FOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "CHZU"
-                } ]
-              }
+              "businessDayConvention" : "FOLLOWING"
             }
           },
           "resetDates" : {
@@ -128,11 +118,6 @@
               "period" : "D",
               "dayType" : "Business",
               "businessDayConvention" : "NONE",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                } ]
-              },
               "dateRelativeTo" : {
                 "@ref" : "0",
                 "@ref:external" : "resetDate"
@@ -162,7 +147,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 25000000.00,
           "unit" : {
@@ -170,9 +155,9 @@
               "@data" : "CHF"
             }
           }
-        } ]
+        }
       }, {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 25000000.00,
           "unit" : {
@@ -180,7 +165,7 @@
               "@data" : "CHF"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "3f1bd7cd",
+  "@key" : "781a1e0f",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -98,12 +98,6 @@
                   "period" : "D",
                   "dayType" : "CurrencyBusiness",
                   "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "@key:external" : "primaryBusinessCenter",
-                    "businessCenter" : [ {
-                      "@data" : "USNY"
-                    } ]
-                  },
                   "dateRelativeTo" : {
                     "@ref" : "252fbafc",
                     "@ref:external" : "InterimValuationDate"
@@ -263,18 +257,14 @@
               "@data" : "EUR"
             }
           },
-          "perUnitOf" : {
-            "financialUnit" : "Share"
-          },
           "priceType" : "AssetPrice",
-          "priceExpression" : "AbsoluteTerms"
-        } ],
-        "quantity" : [ {
-          "@key:scoped" : "quantity-1",
-          "value" : 19785157.16,
-          "unit" : {
-            "currency" : {
-              "@data" : "EUR"
+          "priceExpression" : "AbsoluteTerms",
+          "derivedQuantity" : {
+            "value" : 19785157.16,
+            "unit" : {
+              "currency" : {
+                "@data" : "EUR"
+              }
             }
           }
         } ],

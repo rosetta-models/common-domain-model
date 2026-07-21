@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "f46304bc",
+  "@key" : "b7f0c57c",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -35,11 +35,6 @@
                   "period" : "D",
                   "dayType" : "Business",
                   "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "USNY"
-                    } ]
-                  },
                   "dateRelativeTo" : {
                     "@ref" : "eb9b0479",
                     "@ref:external" : "vs8292"
@@ -108,7 +103,7 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 350000,
           "unit" : {
@@ -116,7 +111,7 @@
               "@data" : "USD"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {
@@ -372,16 +367,6 @@
       "governingLaw" : {
         "@data" : "USNY"
       }
-    },
-    "account" : [ {
-      "@key:external" : "gh4903-uw2992",
-      "accountNumber" : {
-        "@scheme" : "http://www.partyA.com/coding-scheme/account-id",
-        "@data" : "4345334"
-      },
-      "servicingParty" : {
-        "@ref:external" : "gh4903"
-      }
-    } ]
+    }
   }
 }

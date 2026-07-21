@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "f6095ed",
+  "@key" : "3a3103ed",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -27,26 +27,12 @@
           "adjustableDate" : {
             "unadjustedDate" : "2008-01-15",
             "dateAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                }, {
-                  "@data" : "EUTA"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         },
         "dateAdjustments" : {
-          "businessDayConvention" : "MODFOLLOWING",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "@data" : "GBLO"
-            }, {
-              "@data" : "EUTA"
-            } ]
-          }
+          "businessDayConvention" : "MODFOLLOWING"
         },
         "payout" : [ {
           "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -217,10 +203,7 @@
           }
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CalculationAgentIndependent",
-          "calculationAgentBusinessCenter" : {
-            "@data" : "GBLO"
-          }
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       }
     },
@@ -241,7 +224,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 5000000.0,
           "unit" : {
@@ -249,9 +232,9 @@
               "@data" : "EUR"
             }
           }
-        } ]
+        }
       }, {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 5000000.0,
           "unit" : {
@@ -259,7 +242,7 @@
               "@data" : "EUR"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {

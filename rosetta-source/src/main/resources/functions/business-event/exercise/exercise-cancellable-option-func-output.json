@@ -2,21 +2,21 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "f2ecbbc2",
+  "@key" : "981e82",
   "intent" : "OptionExercise",
   "eventDate" : "2019-04-01",
   "instruction" : [ {
     "primitiveInstruction" : {
       "quantityChange" : {
         "change" : [ {
-          "quantity" : [ {
+          "quantity" : {
             "value" : 12000,
             "unit" : {
               "currency" : {
                 "@data" : "EUR"
               }
             }
-          } ]
+          }
         } ],
         "direction" : "Replace"
       },
@@ -100,13 +100,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2026-08-30",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "MODFOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "accrualBusinessCenters0",
-                        "businessCenter" : [ {
-                          "@data" : "EUTA"
-                        } ]
-                      }
+                      "businessDayConvention" : "MODFOLLOWING"
                     }
                   }
                 },
@@ -131,13 +125,7 @@
                 },
                 "payRelativeTo" : "CalculationPeriodEndDate",
                 "paymentDatesAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "@key:external" : "paymentBusinessCenters0",
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             }, {
@@ -174,13 +162,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2026-08-30",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "MODFOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "accrualBusinessCenters1",
-                        "businessCenter" : [ {
-                          "@data" : "EUTA"
-                        } ]
-                      }
+                      "businessDayConvention" : "MODFOLLOWING"
                     }
                   }
                 },
@@ -205,13 +187,7 @@
                 },
                 "payRelativeTo" : "CalculationPeriodEndDate",
                 "paymentDatesAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "@key:external" : "paymentBusinessCenters1",
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               },
               "resetDates" : {
@@ -225,14 +201,8 @@
                   "period" : "D",
                   "dayType" : "Business",
                   "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "@key:external" : "fixingBusinessCenters0",
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  },
                   "dateRelativeTo" : {
-                    "@ref" : "3ab5f4ad",
+                    "@ref" : "b93c80ca",
                     "@ref:external" : "resetDates0"
                   }
                 },
@@ -266,14 +236,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2026-08-15",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "FOLLOWING",
-                        "businessCenters" : {
-                          "businessCenter" : [ {
-                            "@data" : "GBLO"
-                          }, {
-                            "@data" : "EUTA"
-                          } ]
-                        }
+                        "businessDayConvention" : "FOLLOWING"
                       }
                     }
                   } ],
@@ -313,7 +276,7 @@
               },
               "priceType" : "InterestRate"
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 16000,
               "unit" : {
@@ -321,9 +284,9 @@
                   "@data" : "EUR"
                 }
               }
-            } ]
+            }
           }, {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 16000,
               "unit" : {
@@ -331,7 +294,7 @@
                   "@data" : "EUR"
                 }
               }
-            } ],
+            },
             "observable" : {
               "@key:scoped" : "observable-1",
               "@data" : {
@@ -525,13 +488,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2026-08-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "MODFOLLOWING",
-                    "businessCenters" : {
-                      "@key:external" : "accrualBusinessCenters0",
-                      "businessCenter" : [ {
-                        "@data" : "EUTA"
-                      } ]
-                    }
+                    "businessDayConvention" : "MODFOLLOWING"
                   }
                 }
               },
@@ -556,13 +513,7 @@
               },
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "MODFOLLOWING",
-                "businessCenters" : {
-                  "@key:external" : "paymentBusinessCenters0",
-                  "businessCenter" : [ {
-                    "@data" : "EUTA"
-                  } ]
-                }
+                "businessDayConvention" : "MODFOLLOWING"
               }
             }
           }, {
@@ -599,13 +550,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2026-08-30",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "MODFOLLOWING",
-                    "businessCenters" : {
-                      "@key:external" : "accrualBusinessCenters1",
-                      "businessCenter" : [ {
-                        "@data" : "EUTA"
-                      } ]
-                    }
+                    "businessDayConvention" : "MODFOLLOWING"
                   }
                 }
               },
@@ -630,13 +575,7 @@
               },
               "payRelativeTo" : "CalculationPeriodEndDate",
               "paymentDatesAdjustments" : {
-                "businessDayConvention" : "MODFOLLOWING",
-                "businessCenters" : {
-                  "@key:external" : "paymentBusinessCenters1",
-                  "businessCenter" : [ {
-                    "@data" : "EUTA"
-                  } ]
-                }
+                "businessDayConvention" : "MODFOLLOWING"
               }
             },
             "resetDates" : {
@@ -650,14 +589,8 @@
                 "period" : "D",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
-                "businessCenters" : {
-                  "@key:external" : "fixingBusinessCenters0",
-                  "businessCenter" : [ {
-                    "@data" : "EUTA"
-                  } ]
-                },
                 "dateRelativeTo" : {
-                  "@ref" : "3ab5f4ad",
+                  "@ref" : "b93c80ca",
                   "@ref:external" : "resetDates0"
                 }
               },
@@ -691,14 +624,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2026-08-15",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "FOLLOWING",
-                      "businessCenters" : {
-                        "businessCenter" : [ {
-                          "@data" : "GBLO"
-                        }, {
-                          "@data" : "EUTA"
-                        } ]
-                      }
+                      "businessDayConvention" : "FOLLOWING"
                     }
                   }
                 } ],
@@ -738,7 +664,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 12000,
             "unit" : {
@@ -746,9 +672,9 @@
                 "@data" : "EUR"
               }
             }
-          } ]
+          }
         }, {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 12000,
             "unit" : {
@@ -756,7 +682,7 @@
                 "@data" : "EUR"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {

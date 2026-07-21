@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "2b322041",
+  "@key" : "50720636",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -49,15 +49,7 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2002-04-27",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "@key:external" : "primaryBusinessCenters",
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    }, {
-                      "@data" : "USNY"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
@@ -106,13 +98,8 @@
               "period" : "D",
               "dayType" : "Business",
               "businessDayConvention" : "NONE",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                } ]
-              },
               "dateRelativeTo" : {
-                "@ref" : "924ca9c3",
+                "@ref" : "160908d",
                 "@ref:external" : "resetDates"
               }
             },
@@ -214,7 +201,7 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 100000000,
           "unit" : {
@@ -222,7 +209,7 @@
               "@data" : "USD"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {
@@ -264,7 +251,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 100000000,
           "unit" : {
@@ -272,7 +259,7 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "3b0a8343",
+  "@key" : "d6d7a7f1",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -65,12 +65,7 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2036-11-22",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
@@ -91,12 +86,7 @@
             },
             "payRelativeTo" : "CalculationPeriodEndDate",
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "FOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                } ]
-              }
+              "businessDayConvention" : "FOLLOWING"
             }
           }
         }, {
@@ -140,22 +130,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2036-11-22",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "calculationPeriodDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             },
             "calculationPeriodFrequency" : {
               "periodMultiplier" : 6,
@@ -171,12 +151,7 @@
             },
             "payRelativeTo" : "CalculationPeriodEndDate",
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         } ]
@@ -184,7 +159,7 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 100000000,
           "unit" : {
@@ -192,7 +167,7 @@
               "@data" : "GBP"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {
@@ -224,7 +199,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 100000000,
           "unit" : {
@@ -232,7 +207,7 @@
               "@data" : "GBP"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {
@@ -451,12 +426,7 @@
       "settlementDate" : {
         "unadjustedDate" : "2019-11-22",
         "dateAdjustments" : {
-          "businessDayConvention" : "MODFOLLOWING",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "@data" : "GBLO"
-            } ]
-          }
+          "businessDayConvention" : "MODFOLLOWING"
         }
       },
       "payerReceiver" : {

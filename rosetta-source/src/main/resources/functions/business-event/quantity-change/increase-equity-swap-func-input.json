@@ -17,13 +17,13 @@
             },
             "priceType" : "AssetPrice"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 250000,
             "unit" : {
               "financialUnit" : "Share"
             }
-          } ],
+          },
           "observable" : {
             "@data" : {
               "@type" : "cdm.base.staticdata.asset.common.Security",
@@ -55,7 +55,7 @@
             "priceType" : "InterestRate",
             "arithmeticOperator" : "Add"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 7500000,
             "unit" : {
@@ -63,7 +63,7 @@
                 "@data" : "USD"
               }
             }
-          } ],
+          },
           "observable" : {
             "@data" : {
               "@type" : "cdm.observable.asset.InterestRateIndex",
@@ -125,11 +125,11 @@
       }
     },
     "before" : {
-      "@key" : "37b04500",
+      "@key" : "e7503100",
       "trade" : {
-        "@key" : "37b04500",
+        "@key" : "e7503100",
         "product" : {
-          "@key" : "87789130",
+          "@key" : "bd25bb9b",
           "taxonomy" : [ {
             "source" : "Other",
             "value" : {
@@ -178,7 +178,7 @@
             },
             "payout" : [ {
               "@type" : "cdm.product.template.PerformancePayout",
-              "@key" : "4420f960",
+              "@key" : "db36263b",
               "payerReceiver" : {
                 "payer" : "Party1",
                 "receiver" : "Party2"
@@ -232,12 +232,6 @@
                       "period" : "D",
                       "dayType" : "CurrencyBusiness",
                       "businessDayConvention" : "FOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "PrimaryBusinessCenter",
-                        "businessCenter" : [ {
-                          "@data" : "USNY"
-                        } ]
-                      },
                       "dateRelativeTo" : {
                         "@ref" : "e80e5233",
                         "@ref:external" : "InterimValuationDate"
@@ -393,7 +387,7 @@
             } ]
           } ],
           "priceQuantity" : [ {
-            "@key" : "543451f8",
+            "@key" : "9681ed99",
             "price" : [ {
               "@key:scoped" : "price-2",
               "value" : 37.44,
@@ -406,25 +400,23 @@
                 "financialUnit" : "Share"
               },
               "priceType" : "AssetPrice",
-              "priceExpression" : "AbsoluteTerms"
+              "priceExpression" : "AbsoluteTerms",
+              "derivedQuantity" : {
+                "value" : 28469376,
+                "unit" : {
+                  "currency" : {
+                    "@data" : "USD"
+                  }
+                }
+              }
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 760400,
               "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
+                "financialUnit" : "Share"
               }
-            }, {
-              "@key:scoped" : "quantity-1",
-              "value" : 28469376,
-              "unit" : {
-                "currency" : {
-                  "@data" : "USD"
-                }
-              }
-            } ],
+            },
             "observable" : {
               "@key:scoped" : "observable-1",
               "@data" : {

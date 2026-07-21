@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "aaf81b13",
+  "@key" : "222f3915",
   "proposedEvent" : {
     "eventDate" : "2011-06-01",
     "effectiveDate" : "2011-06-03",
@@ -10,7 +10,7 @@
       "primitiveInstruction" : {
         "quantityChange" : {
           "change" : [ {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 5000000,
               "unit" : {
@@ -18,7 +18,7 @@
                   "@data" : "USD"
                 }
               }
-            } ]
+            }
           } ],
           "direction" : "Replace"
         },
@@ -127,15 +127,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2016-02-08",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "MODFOLLOWING",
-                        "businessCenters" : {
-                          "@key:external" : "primaryBusinessCenters",
-                          "businessCenter" : [ {
-                            "@data" : "USNY"
-                          }, {
-                            "@data" : "USLA"
-                          } ]
-                        }
+                        "businessDayConvention" : "MODFOLLOWING"
                       }
                     }
                   },
@@ -179,13 +171,8 @@
                     "period" : "D",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
-                    "businessCenters" : {
-                      "businessCenter" : [ {
-                        "@data" : "GBLO"
-                      } ]
-                    },
                     "dateRelativeTo" : {
-                      "@ref" : "924ca9c3",
+                      "@ref" : "160908d",
                       "@ref:external" : "resetDates"
                     }
                   },
@@ -282,7 +269,7 @@
           },
           "tradeLot" : [ {
             "priceQuantity" : [ {
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-1",
                 "value" : 7500000.00,
                 "unit" : {
@@ -291,7 +278,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ],
+              },
               "observable" : {
                 "@key:scoped" : "observable-1",
                 "@data" : {
@@ -335,7 +322,7 @@
                 },
                 "priceType" : "InterestRate"
               } ],
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-2",
                 "value" : 7500000.00,
                 "unit" : {
@@ -344,7 +331,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ]
+              }
             } ]
           } ],
           "counterparty" : [ {

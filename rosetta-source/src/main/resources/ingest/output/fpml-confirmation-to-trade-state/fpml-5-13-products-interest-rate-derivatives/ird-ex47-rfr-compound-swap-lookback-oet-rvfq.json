@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "367bbe1c",
+  "@key" : "6e764d18",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -48,12 +48,7 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2021-08-16",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "NONE"
                 }
               }
             },
@@ -61,22 +56,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2024-08-16",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "calculationPeriodDatesAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "EUTA"
-                } ]
-              }
+              "businessDayConvention" : "NONE"
             },
             "calculationPeriodFrequency" : {
               "periodMultiplier" : 1,
@@ -96,12 +81,7 @@
               "dayType" : "Business"
             },
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "EUTA"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         }, {
@@ -132,12 +112,7 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2021-08-16",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "NONE"
                 }
               }
             },
@@ -145,22 +120,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2024-08-16",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "calculationPeriodDatesAdjustments" : {
-              "businessDayConvention" : "NONE",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "EUTA"
-                } ]
-              }
+              "businessDayConvention" : "NONE"
             },
             "calculationPeriodFrequency" : {
               "periodMultiplier" : 1,
@@ -180,12 +145,7 @@
               "dayType" : "Business"
             },
             "paymentDatesAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "EUTA"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             }
           }
         } ],
@@ -218,13 +178,6 @@
                       "period" : "D",
                       "dayType" : "Business",
                       "businessDayConvention" : "NONE",
-                      "businessCenters" : {
-                        "businessCenter" : [ {
-                          "@data" : "GBLO"
-                        }, {
-                          "@data" : "EUTA"
-                        } ]
-                      },
                       "dateRelativeTo" : {
                         "@ref:external" : "cashSettlementPayment0"
                       }
@@ -246,13 +199,6 @@
                     "period" : "D",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
-                    "businessCenters" : {
-                      "businessCenter" : [ {
-                        "@data" : "EUTA"
-                      }, {
-                        "@data" : "GBLO"
-                      } ]
-                    },
                     "dateRelativeTo" : {
                       "@ref:external" : "cashSettlementPayment0"
                     }
@@ -282,7 +228,7 @@
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 3672000000,
           "unit" : {
@@ -290,7 +236,7 @@
               "@data" : "EUR"
             }
           }
-        } ],
+        },
         "observable" : {
           "@key:scoped" : "observable-1",
           "@data" : {
@@ -328,7 +274,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 3672000000,
           "unit" : {
@@ -336,7 +282,7 @@
               "@data" : "EUR"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {

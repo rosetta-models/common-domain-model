@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "67c1a623",
+  "@key" : "7d1abfa3",
   "intent" : "ContractFormation",
   "eventDate" : "2002-12-04",
   "instruction" : [ {
@@ -31,30 +31,12 @@
               "adjustableDate" : {
                 "unadjustedDate" : "2007-12-05",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "MODFOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    }, {
-                      "@data" : "USNY"
-                    }, {
-                      "@data" : "JPTO"
-                    } ]
-                  }
+                  "businessDayConvention" : "MODFOLLOWING"
                 }
               }
             },
             "dateAdjustments" : {
-              "businessDayConvention" : "MODFOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                }, {
-                  "@data" : "USNY"
-                }, {
-                  "@data" : "JPTO"
-                } ]
-              }
+              "businessDayConvention" : "MODFOLLOWING"
             },
             "payout" : [ {
               "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -226,10 +208,7 @@
               }
             } ],
             "calculationAgent" : {
-              "calculationAgentParty" : "CalculationAgentIndependent",
-              "calculationAgentBusinessCenter" : {
-                "@data" : "GBLO"
-              }
+              "calculationAgentParty" : "CalculationAgentIndependent"
             }
           }
         },
@@ -250,7 +229,7 @@
               },
               "priceType" : "InterestRate"
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 500000000.0,
               "unit" : {
@@ -258,9 +237,9 @@
                   "@data" : "JPY"
                 }
               }
-            } ]
+            }
           }, {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 500000000.0,
               "unit" : {
@@ -268,7 +247,7 @@
                   "@data" : "JPY"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {
@@ -403,30 +382,12 @@
             "adjustableDate" : {
               "unadjustedDate" : "2007-12-05",
               "dateAdjustments" : {
-                "businessDayConvention" : "MODFOLLOWING",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  }, {
-                    "@data" : "USNY"
-                  }, {
-                    "@data" : "JPTO"
-                  } ]
-                }
+                "businessDayConvention" : "MODFOLLOWING"
               }
             }
           },
           "dateAdjustments" : {
-            "businessDayConvention" : "MODFOLLOWING",
-            "businessCenters" : {
-              "businessCenter" : [ {
-                "@data" : "GBLO"
-              }, {
-                "@data" : "USNY"
-              }, {
-                "@data" : "JPTO"
-              } ]
-            }
+            "businessDayConvention" : "MODFOLLOWING"
           },
           "payout" : [ {
             "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -598,10 +559,7 @@
             }
           } ],
           "calculationAgent" : {
-            "calculationAgentParty" : "CalculationAgentIndependent",
-            "calculationAgentBusinessCenter" : {
-              "@data" : "GBLO"
-            }
+            "calculationAgentParty" : "CalculationAgentIndependent"
           }
         }
       },
@@ -622,7 +580,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 500000000.0,
             "unit" : {
@@ -630,9 +588,9 @@
                 "@data" : "JPY"
               }
             }
-          } ]
+          }
         }, {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 500000000.0,
             "unit" : {
@@ -640,7 +598,7 @@
                 "@data" : "JPY"
               }
             }
-          } ]
+          }
         } ]
       } ],
       "counterparty" : [ {

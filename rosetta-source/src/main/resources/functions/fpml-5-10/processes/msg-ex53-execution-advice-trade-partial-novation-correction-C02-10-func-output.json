@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "26b61948",
+  "@key" : "a33b588",
   "businessEvent" : {
     "intent" : "Novation",
     "eventDate" : "2009-06-16",
@@ -33,14 +33,14 @@
             },
             "quantityChange" : {
               "change" : [ {
-                "quantity" : [ {
+                "quantity" : {
                   "value" : 25000000.00,
                   "unit" : {
                     "currency" : {
                       "@data" : "USD"
                     }
                   }
-                } ]
+                }
               } ],
               "direction" : "Replace"
             },
@@ -87,14 +87,14 @@
           }, {
             "quantityChange" : {
               "change" : [ {
-                "quantity" : [ {
+                "quantity" : {
                   "value" : 25000000.00,
                   "unit" : {
                     "currency" : {
                       "@data" : "USD"
                     }
                   }
-                } ]
+                }
               } ],
               "direction" : "Decrease"
             }
@@ -238,7 +238,7 @@
                 "priceType" : "InterestRate"
               } ]
             }, {
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-1",
                 "value" : 70000000.00,
                 "unit" : {
@@ -246,7 +246,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ]
+              }
             } ]
           } ],
           "counterparty" : [ {
@@ -341,26 +341,7 @@
                 "@ref:external" : "_broker"
               } ]
             } ]
-          },
-          "account" : [ {
-            "@key:external" : "_FUNDACCT",
-            "accountNumber" : {
-              "@scheme" : "http://www.imgr.com/schemes/account-id",
-              "@data" : "FUND100"
-            },
-            "accountBeneficiary" : {
-              "@ref:external" : "_fund"
-            }
-          }, {
-            "@key:external" : "_CUSTACCT",
-            "accountNumber" : {
-              "@scheme" : "http://www.custodian.com/account-id",
-              "@data" : "98765"
-            },
-            "accountBeneficiary" : {
-              "@ref:external" : "_cust"
-            }
-          } ]
+          }
         },
         "transferHistory" : [ {
           "transfer" : {
@@ -534,7 +515,7 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 25000000.00,
               "unit" : {
@@ -542,7 +523,7 @@
                   "@data" : "USD"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {
@@ -642,26 +623,7 @@
               } ]
             }
           } ]
-        },
-        "account" : [ {
-          "@key:external" : "_FUNDACCT",
-          "accountNumber" : {
-            "@scheme" : "http://www.imgr.com/schemes/account-id",
-            "@data" : "FUND100"
-          },
-          "accountBeneficiary" : {
-            "@ref:external" : "_fund"
-          }
-        }, {
-          "@key:external" : "_CUSTACCT",
-          "accountNumber" : {
-            "@scheme" : "http://www.custodian.com/account-id",
-            "@data" : "98765"
-          },
-          "accountBeneficiary" : {
-            "@ref:external" : "_cust"
-          }
-        } ]
+        }
       },
       "transferHistory" : [ {
         "@key:external" : "NOVATION_FEE",
@@ -838,7 +800,7 @@
               "priceType" : "InterestRate"
             } ]
           }, {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 45000000.00,
               "unit" : {
@@ -846,7 +808,7 @@
                   "@data" : "USD"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {
@@ -941,26 +903,7 @@
               "@ref:external" : "_broker"
             } ]
           } ]
-        },
-        "account" : [ {
-          "@key:external" : "_FUNDACCT",
-          "accountNumber" : {
-            "@scheme" : "http://www.imgr.com/schemes/account-id",
-            "@data" : "FUND100"
-          },
-          "accountBeneficiary" : {
-            "@ref:external" : "_fund"
-          }
-        }, {
-          "@key:external" : "_CUSTACCT",
-          "accountNumber" : {
-            "@scheme" : "http://www.custodian.com/account-id",
-            "@data" : "98765"
-          },
-          "accountBeneficiary" : {
-            "@ref:external" : "_cust"
-          }
-        } ]
+        }
       },
       "transferHistory" : [ {
         "transfer" : {
@@ -997,7 +940,7 @@
     } ]
   },
   "previousWorkflowStep" : {
-    "@ref" : "d7082511"
+    "@ref" : "1d65c738"
   },
   "messageInformation" : {
     "messageId" : {
@@ -1070,25 +1013,6 @@
     } ],
     "name" : {
       "@data" : "Custodian"
-    }
-  } ],
-  "account" : [ {
-    "@key:external" : "_FUNDACCT",
-    "accountNumber" : {
-      "@scheme" : "http://www.imgr.com/schemes/account-id",
-      "@data" : "FUND100"
-    },
-    "accountBeneficiary" : {
-      "@ref:external" : "_fund"
-    }
-  }, {
-    "@key:external" : "_CUSTACCT",
-    "accountNumber" : {
-      "@scheme" : "http://www.custodian.com/account-id",
-      "@data" : "98765"
-    },
-    "accountBeneficiary" : {
-      "@ref:external" : "_cust"
     }
   } ]
 }

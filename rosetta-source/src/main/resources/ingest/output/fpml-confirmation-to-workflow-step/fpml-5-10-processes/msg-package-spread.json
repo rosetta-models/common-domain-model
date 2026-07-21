@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.workflow.WorkflowStep",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "1436982b",
+  "@key" : "131e00fc",
   "proposedEvent" : {
     "intent" : "Clearing",
     "eventDate" : "2011-02-04",
@@ -54,13 +54,7 @@
                     "adjustableDate" : {
                       "unadjustedDate" : "2024-01-17",
                       "dateAdjustments" : {
-                        "businessDayConvention" : "MODFOLLOWING",
-                        "businessCenters" : {
-                          "@key:external" : "primaryBusinessCenters1",
-                          "businessCenter" : [ {
-                            "@data" : "USNY"
-                          } ]
-                        }
+                        "businessDayConvention" : "MODFOLLOWING"
                       }
                     }
                   },
@@ -104,15 +98,8 @@
                     "period" : "D",
                     "dayType" : "Business",
                     "businessDayConvention" : "NONE",
-                    "businessCenters" : {
-                      "businessCenter" : [ {
-                        "@data" : "GBLO"
-                      }, {
-                        "@data" : "USNY"
-                      } ]
-                    },
                     "dateRelativeTo" : {
-                      "@ref" : "9cca214f",
+                      "@ref" : "2bce120a",
                       "@ref:external" : "resetDates1"
                     }
                   },
@@ -209,7 +196,7 @@
           },
           "tradeLot" : [ {
             "priceQuantity" : [ {
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-1",
                 "value" : 25000000.00,
                 "unit" : {
@@ -218,7 +205,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ],
+              },
               "observable" : {
                 "@key:scoped" : "observable-1",
                 "@data" : {
@@ -262,7 +249,7 @@
                 },
                 "priceType" : "InterestRate"
               } ],
-              "quantity" : [ {
+              "quantity" : {
                 "@key:scoped" : "quantity-2",
                 "value" : 25000000.00,
                 "unit" : {
@@ -271,7 +258,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ]
+              }
             } ]
           } ],
           "counterparty" : [ {
@@ -389,22 +376,7 @@
                 "arithmeticOperator" : "Add"
               }
             }
-          },
-          "account" : [ {
-            "@key:external" : "party1acct",
-            "partyReference" : {
-              "@ref:external" : "fcm1"
-            },
-            "accountNumber" : {
-              "@data" : "1111"
-            },
-            "accountBeneficiary" : {
-              "@ref:external" : "party1"
-            },
-            "servicingParty" : {
-              "@ref:external" : "fcm1"
-            }
-          } ]
+          }
         }
       }
     } ]

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "19057580",
+  "@key" : "af6f3e4b",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -19,14 +19,7 @@
           "adjustableDate" : {
             "unadjustedDate" : "2006-11-17",
             "dateAdjustments" : {
-              "businessDayConvention" : "FOLLOWING",
-              "businessCenters" : {
-                "businessCenter" : [ {
-                  "@data" : "GBLO"
-                }, {
-                  "@data" : "USNY"
-                } ]
-              }
+              "businessDayConvention" : "FOLLOWING"
             }
           }
         },
@@ -39,14 +32,7 @@
           }
         },
         "dateAdjustments" : {
-          "businessDayConvention" : "FOLLOWING",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "@data" : "GBLO"
-            }, {
-              "@data" : "USNY"
-            } ]
-          }
+          "businessDayConvention" : "FOLLOWING"
         },
         "payout" : [ {
           "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -99,16 +85,13 @@
           }
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CalculationAgentIndependent",
-          "calculationAgentBusinessCenter" : {
-            "@data" : "USNY"
-          }
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       }
     },
     "tradeLot" : [ {
       "priceQuantity" : [ {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 15000000.00,
           "unit" : {
@@ -116,7 +99,7 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {

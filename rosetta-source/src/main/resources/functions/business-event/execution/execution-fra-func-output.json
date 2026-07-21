@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "cb6e2799",
+  "@key" : "1af46c31",
   "eventDate" : "1991-05-14",
   "instruction" : [ {
     "primitiveInstruction" : {
@@ -85,12 +85,7 @@
               "paymentDate" : {
                 "unadjustedDate" : "1991-07-17",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "CHZU"
-                    } ]
-                  }
+                  "businessDayConvention" : "FOLLOWING"
                 }
               },
               "discountingMethod" : {
@@ -136,12 +131,7 @@
               "paymentDate" : {
                 "unadjustedDate" : "1991-07-17",
                 "dateAdjustments" : {
-                  "businessDayConvention" : "FOLLOWING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "CHZU"
-                    } ]
-                  }
+                  "businessDayConvention" : "FOLLOWING"
                 }
               },
               "resetDates" : {
@@ -150,11 +140,6 @@
                   "period" : "D",
                   "dayType" : "Business",
                   "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    } ]
-                  },
                   "dateRelativeTo" : {
                     "@ref" : "0",
                     "@ref:external" : "resetDate"
@@ -183,7 +168,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 25000000.00,
             "unit" : {
@@ -191,9 +176,9 @@
                 "@data" : "CHF"
               }
             }
-          } ]
+          }
         }, {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 25000000.00,
             "unit" : {
@@ -201,7 +186,7 @@
                 "@data" : "CHF"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {
@@ -366,12 +351,7 @@
             "paymentDate" : {
               "unadjustedDate" : "1991-07-17",
               "dateAdjustments" : {
-                "businessDayConvention" : "FOLLOWING",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "CHZU"
-                  } ]
-                }
+                "businessDayConvention" : "FOLLOWING"
               }
             },
             "discountingMethod" : {
@@ -417,12 +397,7 @@
             "paymentDate" : {
               "unadjustedDate" : "1991-07-17",
               "dateAdjustments" : {
-                "businessDayConvention" : "FOLLOWING",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "CHZU"
-                  } ]
-                }
+                "businessDayConvention" : "FOLLOWING"
               }
             },
             "resetDates" : {
@@ -431,11 +406,6 @@
                 "period" : "D",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  } ]
-                },
                 "dateRelativeTo" : {
                   "@ref" : "0",
                   "@ref:external" : "resetDate"
@@ -465,7 +435,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 25000000.00,
             "unit" : {
@@ -473,9 +443,9 @@
                 "@data" : "CHF"
               }
             }
-          } ]
+          }
         }, {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 25000000.00,
             "unit" : {
@@ -483,7 +453,7 @@
                 "@data" : "CHF"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {

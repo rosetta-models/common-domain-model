@@ -1,7 +1,7 @@
 {
   "instruction" : [ {
     "before" : {
-      "@key" : "81c29ff0",
+      "@key" : "4cfdb86c",
       "trade" : {
         "product" : {
           "taxonomy" : [ {
@@ -48,13 +48,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2001-04-29",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "MODFOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "primaryBusinessCenters",
-                        "businessCenter" : [ {
-                          "@data" : "EUTA"
-                        } ]
-                      }
+                      "businessDayConvention" : "MODFOLLOWING"
                     }
                   }
                 },
@@ -102,13 +96,8 @@
                   "periodMultiplier" : 0,
                   "period" : "D",
                   "businessDayConvention" : "PRECEDING",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "EUTA"
-                    } ]
-                  },
                   "dateRelativeTo" : {
-                    "@ref" : "a7a9427d",
+                    "@ref" : "43a082c0",
                     "@ref:external" : "resetDates"
                   }
                 },
@@ -207,7 +196,7 @@
         },
         "tradeLot" : [ {
           "priceQuantity" : [ {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 100000000.00,
               "unit" : {
@@ -215,7 +204,7 @@
                   "@data" : "EUR"
                 }
               }
-            } ],
+            },
             "observable" : {
               "@key:scoped" : "observable-1",
               "@data" : {
@@ -253,7 +242,7 @@
               },
               "priceType" : "InterestRate"
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 100000000.00,
               "unit" : {
@@ -261,7 +250,7 @@
                   "@data" : "EUR"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {

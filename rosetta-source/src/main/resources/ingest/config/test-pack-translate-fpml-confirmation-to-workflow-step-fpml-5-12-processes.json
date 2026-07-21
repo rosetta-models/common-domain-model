@@ -10,7 +10,7 @@
     "assertions" : {
       "inputPathCount" : 113,
       "outputPathCount" : 141,
-      "modelValidationFailures" : 10,
+      "modelValidationFailures" : 15,
       "runtimeError" : false
     }
   }, {
@@ -21,7 +21,7 @@
     "assertions" : {
       "inputPathCount" : 114,
       "outputPathCount" : 141,
-      "modelValidationFailures" : 10,
+      "modelValidationFailures" : 14,
       "runtimeError" : false
     }
   } ]

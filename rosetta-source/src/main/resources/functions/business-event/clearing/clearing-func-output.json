@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.BusinessEvent",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "f43812b7",
+  "@key" : "1d580599",
   "intent" : "Clearing",
   "eventDate" : "2018-04-01",
   "instruction" : [ {
@@ -75,7 +75,7 @@
         }, {
           "quantityChange" : {
             "change" : [ {
-              "quantity" : [ {
+              "quantity" : {
                 "value" : 0.0,
                 "unit" : {
                   "currency" : {
@@ -83,7 +83,7 @@
                     "@data" : "USD"
                   }
                 }
-              } ]
+              }
             } ],
             "direction" : "Replace"
           }
@@ -149,13 +149,7 @@
                   "adjustableDate" : {
                     "unadjustedDate" : "2026-02-08",
                     "dateAdjustments" : {
-                      "businessDayConvention" : "MODFOLLOWING",
-                      "businessCenters" : {
-                        "@key:external" : "primaryBusinessCenters",
-                        "businessCenter" : [ {
-                          "@data" : "USNY"
-                        } ]
-                      }
+                      "businessDayConvention" : "MODFOLLOWING"
                     }
                   }
                 },
@@ -199,13 +193,8 @@
                   "period" : "D",
                   "dayType" : "Business",
                   "businessDayConvention" : "NONE",
-                  "businessCenters" : {
-                    "businessCenter" : [ {
-                      "@data" : "GBLO"
-                    } ]
-                  },
                   "dateRelativeTo" : {
-                    "@ref" : "faf69cd",
+                    "@ref" : "7ec35097",
                     "@ref:external" : "resetDates6"
                   }
                 },
@@ -302,7 +291,7 @@
         },
         "tradeLot" : [ {
           "priceQuantity" : [ {
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-1",
               "value" : 10000.00,
               "unit" : {
@@ -311,7 +300,7 @@
                   "@data" : "USD"
                 }
               }
-            } ],
+            },
             "observable" : {
               "@key:scoped" : "observable-1",
               "@data" : {
@@ -355,7 +344,7 @@
               },
               "priceType" : "InterestRate"
             } ],
-            "quantity" : [ {
+            "quantity" : {
               "@key:scoped" : "quantity-2",
               "value" : 10000.00,
               "unit" : {
@@ -364,7 +353,7 @@
                   "@data" : "USD"
                 }
               }
-            } ]
+            }
           } ]
         } ],
         "counterparty" : [ {
@@ -543,13 +532,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2026-02-08",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "MODFOLLOWING",
-                    "businessCenters" : {
-                      "@key:external" : "primaryBusinessCenters",
-                      "businessCenter" : [ {
-                        "@data" : "USNY"
-                      } ]
-                    }
+                    "businessDayConvention" : "MODFOLLOWING"
                   }
                 }
               },
@@ -593,13 +576,8 @@
                 "period" : "D",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  } ]
-                },
                 "dateRelativeTo" : {
-                  "@ref" : "faf69cd",
+                  "@ref" : "7ec35097",
                   "@ref:external" : "resetDates6"
                 }
               },
@@ -696,7 +674,7 @@
       },
       "tradeLot" : [ {
         "priceQuantity" : [ {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 10000.00,
             "unit" : {
@@ -705,7 +683,7 @@
                 "@data" : "USD"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {
@@ -749,7 +727,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 10000.00,
             "unit" : {
@@ -758,7 +736,7 @@
                 "@data" : "USD"
               }
             }
-          } ]
+          }
         } ]
       } ],
       "counterparty" : [ {
@@ -922,13 +900,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2026-02-08",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "MODFOLLOWING",
-                    "businessCenters" : {
-                      "@key:external" : "primaryBusinessCenters",
-                      "businessCenter" : [ {
-                        "@data" : "USNY"
-                      } ]
-                    }
+                    "businessDayConvention" : "MODFOLLOWING"
                   }
                 }
               },
@@ -972,13 +944,8 @@
                 "period" : "D",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  } ]
-                },
                 "dateRelativeTo" : {
-                  "@ref" : "faf69cd",
+                  "@ref" : "7ec35097",
                   "@ref:external" : "resetDates6"
                 }
               },
@@ -1075,7 +1042,7 @@
       },
       "tradeLot" : [ {
         "priceQuantity" : [ {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 10000.00,
             "unit" : {
@@ -1084,7 +1051,7 @@
                 "@data" : "USD"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {
@@ -1128,7 +1095,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 10000.00,
             "unit" : {
@@ -1137,7 +1104,7 @@
                 "@data" : "USD"
               }
             }
-          } ]
+          }
         } ]
       } ],
       "counterparty" : [ {
@@ -1281,13 +1248,7 @@
                 "adjustableDate" : {
                   "unadjustedDate" : "2026-02-08",
                   "dateAdjustments" : {
-                    "businessDayConvention" : "MODFOLLOWING",
-                    "businessCenters" : {
-                      "@key:external" : "primaryBusinessCenters",
-                      "businessCenter" : [ {
-                        "@data" : "USNY"
-                      } ]
-                    }
+                    "businessDayConvention" : "MODFOLLOWING"
                   }
                 }
               },
@@ -1331,13 +1292,8 @@
                 "period" : "D",
                 "dayType" : "Business",
                 "businessDayConvention" : "NONE",
-                "businessCenters" : {
-                  "businessCenter" : [ {
-                    "@data" : "GBLO"
-                  } ]
-                },
                 "dateRelativeTo" : {
-                  "@ref" : "faf69cd",
+                  "@ref" : "7ec35097",
                   "@ref:external" : "resetDates6"
                 }
               },
@@ -1434,7 +1390,7 @@
       },
       "tradeLot" : [ {
         "priceQuantity" : [ {
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-1",
             "value" : 0.0,
             "unit" : {
@@ -1443,7 +1399,7 @@
                 "@data" : "USD"
               }
             }
-          } ],
+          },
           "observable" : {
             "@key:scoped" : "observable-1",
             "@data" : {
@@ -1487,7 +1443,7 @@
             },
             "priceType" : "InterestRate"
           } ],
-          "quantity" : [ {
+          "quantity" : {
             "@key:scoped" : "quantity-2",
             "value" : 0.0,
             "unit" : {
@@ -1496,7 +1452,7 @@
                 "@data" : "USD"
               }
             }
-          } ]
+          }
         } ]
       } ],
       "counterparty" : [ {

@@ -2,7 +2,7 @@
   "@model" : "cdm",
   "@type" : "cdm.event.common.TradeState",
   "@version" : "0.0.0.master-SNAPSHOT",
-  "@key" : "ac64ecf6",
+  "@key" : "36e7ff0",
   "trade" : {
     "product" : {
       "taxonomy" : [ {
@@ -32,14 +32,7 @@
           }
         },
         "dateAdjustments" : {
-          "businessDayConvention" : "FOLLOWING",
-          "businessCenters" : {
-            "businessCenter" : [ {
-              "@data" : "GBLO"
-            }, {
-              "@data" : "USNY"
-            } ]
-          }
+          "businessDayConvention" : "FOLLOWING"
         },
         "payout" : [ {
           "@type" : "cdm.product.asset.CreditDefaultPayout",
@@ -174,10 +167,7 @@
           }
         } ],
         "calculationAgent" : {
-          "calculationAgentParty" : "CalculationAgentIndependent",
-          "calculationAgentBusinessCenter" : {
-            "@data" : "USNY"
-          }
+          "calculationAgentParty" : "CalculationAgentIndependent"
         }
       }
     },
@@ -198,7 +188,7 @@
           },
           "priceType" : "InterestRate"
         } ],
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-2",
           "value" : 5000000,
           "unit" : {
@@ -206,9 +196,9 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       }, {
-        "quantity" : [ {
+        "quantity" : {
           "@key:scoped" : "quantity-1",
           "value" : 5000000,
           "unit" : {
@@ -216,7 +206,7 @@
               "@data" : "USD"
             }
           }
-        } ]
+        }
       } ]
     } ],
     "counterparty" : [ {
