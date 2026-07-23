@@ -1227,7 +1227,7 @@ func Qualify_Transaction_ZeroCoupon: <"Qualifies a product as having the Transac
         //The maturity date equals the effective date plus the longest payment frequency period
         AddPeriod(
                 effectiveDate,
-                economicTerms -> payout -> InterestRatePayout -> paymentDates -> paymentFrequency
+                economicTerms -> payout as InterestRatePayout -> paymentDates -> paymentFrequency
                     then max [
                         PeriodCalculation(
                                 item -> period to-enum PeriodEnum,
