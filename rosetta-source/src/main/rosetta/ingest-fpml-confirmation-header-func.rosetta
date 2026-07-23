@@ -146,7 +146,7 @@ func MapTradeIdToVersionedIdentifier:
 
     set cdmVersionedIdentifier:
         VersionedIdentifier {
-            versionedIdentifierValue: MapStringWithScheme(
+            value: MapStringWithScheme(
                         fpmlTradeId -> value,
                         fpmlTradeId -> tradeIdScheme
                     ),
