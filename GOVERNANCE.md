@@ -20,6 +20,8 @@ CDM's main code branch by the CDM Maintainers.
 
 This document provides the governance policy for specifications and other documents developed using the Community Specification process in a repository (each a “Working Group”). Each [Working Group](working-groups.md) must adhere to the requirements.
 
+Click [here](cdm-org-structure.md) to view the diagram showing the Working Groups' organisational structure. 
+
 ## 1. Roles
 
 Each Working Group may include the following roles. Additional roles may be adopted and documented by the Working Group.
@@ -36,7 +38,7 @@ Each Working Group may include the following roles. Additional roles may be adop
   
 * 1.3. Participants. “Participants” are those that have made Contributions to the Working Group subject to the [Community Specification License](LICENSE.md). Participants are automatically abiding by the IP policy of the standard by just participating in a meeting or by actively "enrolling" in the standard.
 
-* 1.4. Discussion Groups. The Working Group may form one or more "Discussion Groups" to organize collaboration around a particular aspect of a specification. Discussion Groups are for discussion only -- Approval of all portions of a specification is subject to the consensus-based decision making process.
+* 1.4. Taskforces. The Working Group may form one or more "Taskforces" to organize collaboration around a particular aspect of a specification. Taskforces are for discussion only -- Approval of all portions of a specification is subject to the consensus-based decision making process.
 
 
 ## 2. Decision Making
@@ -104,11 +106,6 @@ The [change control guidelines](change-control-guidelines.md) discusses how chan
 
 
 
-
-
-
-
 ## 9.0 Release Build Approval Guidelines
 
 The [Maintenance and Release](docs/maintenance-and-release.md) page covers scheduling of minor, development, patch releases, and approvals for all builds and releases.
-
