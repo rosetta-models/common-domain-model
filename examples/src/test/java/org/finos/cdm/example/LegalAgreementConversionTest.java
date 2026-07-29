@@ -1,7 +1,6 @@
 package org.finos.cdm.example;
 
-import cdm.product.collateral.EligibleCollateralSpecification;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import cdm.legaldocumentation.common.LegalAgreement;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.regnosys.rosetta.common.serialisation.RosettaObjectMapper;
 import com.regnosys.rosetta.common.util.ClassPathUtils;
@@ -19,41 +18,31 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-/**
- * Ensures all EligibleCollateralSpecification samples are in Rune JSON format.
- * Automatically converts Legacy JSON samples to Rune JSON.
- */
-public class EligibleCollateralSpecificationConversionTest {
+public class LegalAgreementConversionTest {
+    private static final Logger LOGGER = LoggerFactory.getLogger(LegalAgreementConversionTest.class);
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(EligibleCollateralSpecificationConversionTest.class);
+    private static final String SAMPLES_PATH = "legal-agreements/Isda-Credit-Support-Annex-Docs";
 
-    private static final String SAMPLES_PATH = "legal-agreements/eligible-collateral-schedules";
-
-    private static final ObjectMapper LEGACY_JSON_OBJECT_MAPPER =
-            RosettaObjectMapper.getNewMinimalRosettaObjectMapper();
-
-    private static final RuneJsonObjectMapper RUNE_JSON_OBJECT_MAPPER =
-            new RuneJsonObjectMapper();
+    private static final LegalAgreementConverter CONVERTER = new LegalAgreementConverter();
 
     @ParameterizedTest(name = "{0}")
-    @MethodSource("collateralSchedules")
+    @MethodSource("legalAgreements")
     void shouldBeInRuneJsonFormat(String fileName, Path path, String content) throws IOException {
-        if (!content.contains("\"@type\"")) {
-            content = convertToRuneJson(fileName, path, content);
+        if (!CONVERTER.isRuneJson(content)) {
+            content = convertAndPersist(fileName, path, content);
         }
 
-        EligibleCollateralSpecification deserialized = RUNE_JSON_OBJECT_MAPPER.readValue(content, EligibleCollateralSpecification.class);
+        LegalAgreement deserialized = CONVERTER.deserializeRune(content);
         assertNotNull(deserialized);
 
-        String serialized = RUNE_JSON_OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(deserialized);
+        String serialized = CONVERTER.serializeRune(deserialized);
         assertEquals(content, serialized, "JSON content should be stable and in Rune format. " +
                 "If this fails, it might be due to formatting differences. The file has been updated.");
     }
 
-    private String convertToRuneJson(String fileName, Path path, String content) throws IOException {
+    private String convertAndPersist(String fileName, Path path, String content) throws IOException {
         LOGGER.info("Converting {} to Rune JSON format", fileName);
-        EligibleCollateralSpecification original = LEGACY_JSON_OBJECT_MAPPER.readValue(content, EligibleCollateralSpecification.class);
-        String runeJson = RUNE_JSON_OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(original);
+        String runeJson = CONVERTER.convertToRuneJson(content);
 
         // Try to write to source directory to persist changes
         String sourcePath = path.toAbsolutePath().toString().replace("/target/test-classes/", "/samples/");
@@ -67,19 +56,34 @@ public class EligibleCollateralSpecificationConversionTest {
         return runeJson;
     }
 
-    private static Stream<Object[]> collateralSchedules() {
-        return ClassPathUtils
-                .loadFromClasspath(SAMPLES_PATH, EligibleCollateralSpecificationConversionTest.class.getClassLoader())
-                .flatMap(path -> {
-                    try {
-                        return Files.walk(path);
-                    } catch (IOException e) {
-                        LOGGER.error("Failed to walk path {}", path, e);
-                        return Stream.empty();
-                    }
-                })
+    private static Stream<Object[]> legalAgreements() throws IOException {
+        Path samplesDirectory = findSamplesDirectory();
+        LOGGER.info("Loading samples from {}", samplesDirectory.toAbsolutePath());
+
+        return Files.walk(samplesDirectory)
                 .filter(path -> path.getFileName().toString().endsWith(".json"))
-                .map(EligibleCollateralSpecificationConversionTest::readJson);
+                .map(LegalAgreementConversionTest::readJson);
+    }
+
+    private static Path findSamplesDirectory() {
+        // Try various relative paths depending on where the test is executed from
+        Path[] possiblePaths = {
+                Path.of("samples").resolve(SAMPLES_PATH),
+                Path.of("examples/samples").resolve(SAMPLES_PATH),
+                Path.of("common-domain-model/examples/samples").resolve(SAMPLES_PATH)
+        };
+
+        for (Path path : possiblePaths) {
+            if (Files.exists(path)) {
+                return path;
+            }
+        }
+
+        // Try classpath as a fallback
+        return ClassPathUtils.loadFromClasspath(SAMPLES_PATH, LegalAgreementConversionTest.class.getClassLoader())
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Could not find samples directory at any of the expected locations. " +
+                        "Please ensure the 'examples/samples' directory exists."));
     }
 
     private static Object[] readJson(Path path) {
@@ -95,5 +99,4 @@ public class EligibleCollateralSpecificationConversionTest {
             throw new RuntimeException("Failed to read JSON from " + path, e);
         }
     }
-
 }
