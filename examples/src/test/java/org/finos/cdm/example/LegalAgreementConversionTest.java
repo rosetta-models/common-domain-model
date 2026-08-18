@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class LegalAgreementConversionTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(LegalAgreementConversionTest.class);
 
-    private static final String SAMPLES_PATH = "legal-agreements/Isda-Credit-Support-Annex-Docs";
+    private static final String SAMPLES_PATH = "temp-samples";
 
     private static final LegalAgreementConverter CONVERTER = new LegalAgreementConverter();
 

@@ -1,0 +1,5 @@
+{
+  "@model" : "cdm",
+  "@type" : "cdm.legaldocumentation.common.LegalAgreement",
+  "@version" : "0.0.0.master-SNAPSHOT"
+}
